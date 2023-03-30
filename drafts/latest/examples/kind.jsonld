@@ -1,0 +1,65 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Naf35178329994d00a0cfd1a985427c70",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:N2d5be33b849044faa13bb5b4ce30f8c4"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasTelephone": [
+      {
+      "@id": "tel:+451234567890"
+      }
+    ]
+    },
+    {
+    "@id": "_:N2d5be33b849044faa13bb5b4ce30f8c4",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Address"
+    ],
+    "http://www.w3.org/2006/vcard/ns#country-name": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#locality": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#postal-code": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#region": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#street-address": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/kind.rdf"
+  }
+]

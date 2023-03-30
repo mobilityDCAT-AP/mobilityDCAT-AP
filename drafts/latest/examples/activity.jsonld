@@ -1,0 +1,86 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "http://data.europa.eu/eli/reg/2010/1089",
+    "@type": [
+      "http://purl.org/dc/terms/Standard",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2010-12-08"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "\n    Commission Regulation (EU) No 1089/2010 of 23 November 2010 \n    implementing Directive 2007/2/EC of the European Parliament \n    and of the Council as regards interoperability of spatial \n    data sets and services\n  "
+      }
+    ]
+    },
+    {
+    "@id": "_:Nac98b949cf6346da85f4c77edb222ad4",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#generated": [
+      {
+      "@id": "_:N018f25c19d1843558281d2adc9a7bbef"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:Ne89990d64da34954b3949c203e798e84"
+      }
+    ],
+    "http://www.w3.org/ns/prov#used": [
+      {
+      "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne89990d64da34954b3949c203e798e84",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:Nf384b9be4f0e4169a399aca0152aa02b"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nf384b9be4f0e4169a399aca0152aa02b",
+    "@type": [
+      "http://www.w3.org/ns/prov#Plan"
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+      "@id": "http://data.europa.eu/eli/reg/2010/1089"
+      }
+    ]
+    },
+    {
+    "@id": "_:N018f25c19d1843558281d2adc9a7bbef",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+      "@language": "en",
+      "@value": "See the referenced specification"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/activity.rdf"
+  }
+]

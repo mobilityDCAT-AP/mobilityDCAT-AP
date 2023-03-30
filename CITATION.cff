@@ -1,0 +1,17 @@
+cff-version: 1.1
+authors:
+- name: "European Commission"
+title: "Repository of the mobility extension to DCAT-AP (mobilityDCAT-AP)"
+version: 1.1
+date-released: "2023-03-30"
+url: "https://w3id.org/mobilitydcatap"
+preferred-citation:
+  type: standard
+  authors:
+  - name: "European Commission"
+  title: "mobilityDCAT-AP: A mobility extension for the DCAT application profile for data portals in Europe"
+  version: 1.1
+  date-released: "2023-03-30"
+  institution:
+    name: "European Commission"
+  url: "https://w3id.org/mobilitydcatap/releases/"

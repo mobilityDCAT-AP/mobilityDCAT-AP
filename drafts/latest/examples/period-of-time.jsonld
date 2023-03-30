@@ -1,0 +1,25 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N04f9ebcaded44ccebf8125df36515611",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/ns/dcat#endDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-12-31"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#startDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-01-01"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/period-of-time.rdf"
+  }
+]

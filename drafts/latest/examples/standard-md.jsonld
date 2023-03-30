@@ -1,0 +1,25 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N0cb3d83baa4b46aea1fe325e4bbb7a2b",
+    "@type": [
+      "http://purl.org/dc/terms/Standard"
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "ISO 19119/19139"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+      "@language": "en",
+      "@value": "1.0"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/standard-md.rdf"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N8df84c8c88994b3184834051712aa516",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Address"
+    ],
+    "http://www.w3.org/2006/vcard/ns#country-name": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#locality": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#postal-code": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#region": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#street-address": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/address-kind.rdf"
+  }
+]

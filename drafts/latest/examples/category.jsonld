@@ -1,0 +1,42 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N17cec721880441ea9e59c4c0e7f41908",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+      "@id": "_:N8106f703beec47cb979e9e1971dfbf8a"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+      "@language": "en",
+      "@value": "geospatial data"
+      }
+    ]
+    },
+    {
+    "@id": "_:N8106f703beec47cb979e9e1971dfbf8a",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2010-07-06"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "EEA categories"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/category.rdf"
+  }
+]
