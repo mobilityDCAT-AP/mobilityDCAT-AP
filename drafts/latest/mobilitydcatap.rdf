@@ -13,17 +13,15 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="http://w3id.org/mobilitydcatap">
-        <owl:versionIRI rdf:resource="http://w3id.org/mobilitydcatap/1.1/"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
-        <terms:contributor rdf:resource="http://w3id.org/mobilitydcatap#haustild"/>
-        <terms:contributor rdf:resource="http://w3id.org/mobilitydcatap#plubrich"/>
+    <owl:Ontology rdf:about="https://w3id.org/mobilitydcatap">
+        <owl:versionIRI rdf:resource="https://w3id.org/mobilitydcatap/releases/1.0.."/>
         <terms:contributor rdf:resource="https://github.com/lcomet"/>
         <terms:contributor rdf:resource="https://github.com/marioscrock"/>
         <terms:contributor rdf:resource="https://github.com/orgs/mobilityDCAT-AP/people/jonas-jaderberg"/>
+        <terms:contributor rdf:resource="https://w3id.org/mobilitydcatap#haustild"/>
+        <terms:contributor rdf:resource="https://w3id.org/mobilitydcatap#plubrich"/>
         <terms:creator xml:lang="en">NAPCORE SWG 4.4.</terms:creator>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
-        <terms:modified>2023-03-30</terms:modified>
         <vann:preferredNamespacePrefix>http://w3id.org/mobilitydcatap</vann:preferredNamespacePrefix>
         <vann:preferredNamespacePrefix>mobilitydcatap</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="nl">Deze woordenlijst definieert de essentiële metadata-elementen die overeenkomen met het conceptuele model van het mobilityDCAT-AP.</rdfs:comment>
@@ -68,15 +66,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatformEntry"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
@@ -92,6 +81,12 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#component -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#component"/>
     
 
 
@@ -112,25 +107,196 @@
     
 
 
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Frequency"/>
+        <rdfs:comment xml:lang="en">Describes how often the delivered content is updated. This information tells a person who finds a data set or service, how often it is updated on the system, so this person might align the frequency of data retrieval to this data. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the change frequency (see “Changed on” above). The frequency might be a specific time interval or a general remark such as “updated on occurrence”.</rdfs:comment>
+        <rdfs:label xml:lang="en">frequency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/dc/terms/Standard"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">conforms to</rdfs:label>
+        <prov:component xml:lang="en">An established standard to which the described resource conforms.</prov:component>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mobilitydcatap#DataModelSchema"/>
+                    <rdf:Description rdf:about="https://w3id.org/mobilitydcatap#DataModelTypes"/>
+                    <rdf:Description rdf:about="https://w3id.org/mobilitydcatap#EncodingTypes"/>
+                    <rdf:Description rdf:about="https://w3id.org/mobilitydcatap#MobilityGrammarTypes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/language -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#CatalogRecord"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.org/dc/terms/publisher -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/publisher">
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatform"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label>publisher</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#dataContentCategory -->
+    <!-- http://purl.org/dc/terms/spatial -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#dataContentCategory">
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/spatial">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+        <rdfs:comment xml:lang="en">Describes the geographical extent covered by the delivered content.  Data can be valid for more than one region, so a multiple choice should be applied. As a reference system, the NUTS (Nomenclature des unités territoriales statistiques) is recommended. The “NUTS Level” defines a possible selection of area level (city, district, and region). Alternative geocodes instead or in addition to NUTS, e.g., local codes or EU codes, are allowed.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatial coverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/temporal">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#endDate"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#startDate"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">For data which cannot be downloaded directly: provides a link to a service or a website which enables access to the data, e.g., a website where a data feed or a data download can be applied for.</rdfs:comment>
+        <rdfs:label xml:lang="en">access url</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdfs:comment xml:lang="en">Describes an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry, for example.This information is mandatory when the metadata is natively created in a data platform. It should correspond to the entity that is registered to the data platform and has the role of a metadata creator. This information is optional, when metadata is harvested from other portals, and the point of contact is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity.  The metadata point of contact might be identical to the “Publisher”.</rdfs:comment>
+        <rdfs:label>data platform entry contact point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Provides a link for direct download of the complete data set.</rdfs:comment>
+        <rdfs:label xml:lang="en">download url</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#theme">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#applicationLayerProtocol -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#applicationLayerProtocol">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Describes the transmitting channel, i.e., the Application Layer Protocol, of the data set or service. There are predefined tags of common access interfaces.</rdfs:comment>
+        <rdfs:label xml:lang="en">application layer protocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#communicationMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#communicationMethod">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">For data services, e.g., data feeds: indicates if the data interface of the data provider system functions in a push or pull mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">communication method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#coordinateReferenceSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#coordinateReferenceSystem">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Standard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataContentCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataContentCategory">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#theme"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -142,9 +308,9 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#dataContentCategoryDetailed -->
+    <!-- https://w3id.org/mobilitydcatap#dataContentCategoryDetailed -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#dataContentCategoryDetailed">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataContentCategoryDetailed">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#theme"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -156,9 +322,87 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#dataOwner -->
+    <!-- https://w3id.org/mobilitydcatap#dataFormatDataModel -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#dataOwner">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatDataModel">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobilitydcatap#DataModelTypes"/>
+        <rdfs:comment xml:lang="en">Describes the used data model of the delivered content. There are predefined tags of common data formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">data format data model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatDataModelSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatDataModelSchema">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobilitydcatap#DataModelSchema"/>
+        <rdfs:comment xml:lang="en">Describes the used data schema applied for the “Data model” (see above). The schema can be individually determined by the data provider (e.g., a stakeholder-based DATEX II profile) or a prescribed by other institutions (e.g., a DATEX II recommended reference profile).</rdfs:comment>
+        <rdfs:label xml:lang="en">data model schema</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatEncoding -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatEncoding">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobilitydcatap#EncodingTypes"/>
+        <rdfs:comment xml:lang="en">Describes the technical encoding format of the delivered content. There are predefined values of common data formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">data format encoding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatGrammar -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatGrammar">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobilitydcatap#MobilityGrammarTypes"/>
+        <rdfs:comment xml:lang="en">Describes the technical data grammar format of the delivered content. There are predefined tags of common data formats.</rdfs:comment>
+        <rdfs:comment xml:lang="en">data format grammar</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatNotes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatNotes">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatSyntax -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatSyntax">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+        <rdfs:comment xml:lang="en">Describes the technical syntax of the delivered content. There are predefined tags of the common data formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">data format syntax</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatVersion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatVersion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataOwner">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment xml:lang="en">Describes the entity that legally owns the data provided in a dataset or service. This entity is responsible for the content of the data, in particular, that the data fulfilles quality criteria (if applicable, see “Quality description” below) and/or corresponds to legal frameworks (if applicable, see “Legal frameworks” below).  The “Data Owner” will be in many cases identical with the “Publisher”. In this case, the contact data will be copied from the “Publisher” entry.  There might be also cases where one or several “Data Owners” contract a third-party “Publisher” (e.g., an IT service company) to host and publish a data set.  This entity is the direct contact for the platform operator or data-consuming  users, who have questions or issues about the contents of a dataset, for example. The Data owner might be identical to the &quot;Metadata Point of Contact&quot; (see above) and/or  the “Publisher” (see above). This information is optional, when metadata is harvested from other portals, and the data owner is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity.</rdfs:comment>
@@ -167,11 +411,11 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#dataPlatformEntryLanguage -->
+    <!-- https://w3id.org/mobilitydcatap#dataPlatformEntryLanguage -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#dataPlatformEntryLanguage">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataPlatformEntryLanguage">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatformEntry"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
         <rdfs:comment xml:lang="en">This element indicates the language in which the metadata is described. Next to the national operators and publishers there are international operators which use their own language for descriptions. According to the ISO 639 standard part 2, there is a 3 letter code for 24 EU languages, which should be used.  At least one language has to be set, but it should be possible to select more than one language.</rdfs:comment>
         <rdfs:label>data platform entry language</rdfs:label>
@@ -179,21 +423,21 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#dataPlatformPublisher -->
+    <!-- https://w3id.org/mobilitydcatap#dataPlatformPublisher -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#dataPlatformPublisher">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#dataPlatformPublisher">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/publisher"/>
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatform"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment xml:lang="en">Describes an organisation, if applicable a person, which is responsible for creation and maintenance of the data platform. This person or company is the direct contact for platform users, who have questions or issues about the platform system, for example. This information is mandatory and should correspond to the information in the disclaimer of the platform website.</rdfs:comment>
-        <rdfs:label>data platform publisher</rdfs:label>
+        <rdfs:label>data platform point of contact</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#datasetLanguage -->
+    <!-- https://w3id.org/mobilitydcatap#datasetLanguage -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#datasetLanguage">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#datasetLanguage">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
@@ -203,9 +447,9 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#datasetPublisher -->
+    <!-- https://w3id.org/mobilitydcatap#datasetPublisher -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#datasetPublisher">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#datasetPublisher">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/publisher"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -215,9 +459,102 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#serviceTypeCategory -->
+    <!-- https://w3id.org/mobilitydcatap#georeferencing_method -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#serviceTypeCategory">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#georeferencing_method">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Due to the different existing and used georeferencing systems it is essential to describe it in a separate meta data field. This field contains frequently used methods as a controlled vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">georeferencing method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#legalFramework -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#legalFramework">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">References to one or several legal frameworks being relevant for the data set or service, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponing data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations.</rdfs:comment>
+        <rdfs:label xml:lang="en">legal framework</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#nationalBodyAssessmentReport -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#nationalBodyAssessmentReport">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Describes the draft result of the last validation process by the national body, in form of a URL to external details or results.</rdfs:comment>
+        <rdfs:label xml:lang="en">national body assessment report</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#nationalBodyAssessmentResult -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#nationalBodyAssessmentResult">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobilitydcatap#NBAssessmentResult"/>
+        <rdfs:comment xml:lang="en">Describes the draft result of the last validation process by the national body, in form of a textual description.</rdfs:comment>
+        <rdfs:label xml:lang="en">national body assessment result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#networkCoverage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#networkCoverage">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Describes the part of the transport network that is covered by the delivered content.  
+For road traffic: network typology for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended, to allow data search across different countries. In addition, national classifications are allowed.  
+For other transport modes: information which physical infrastructure is used by the services covered by the data. 
+For all modes: Information if the data covers the TEN network.</rdfs:comment>
+        <rdfs:label xml:lang="en">network coverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#publishedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#publishedFrom">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#startDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the beginning of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform.  This field can be set optional for the user input, but for the data base it is mandatory. If there is no entry it means that the publication gets valid immediately and the timestamp is the same as the metadata timestamp.</rdfs:comment>
+        <rdfs:label xml:lang="en">published from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#publishedUntil -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#publishedUntil">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#endDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform. This field is optional, if there is no entry it means that the publication does not expire.</rdfs:comment>
+        <rdfs:label xml:lang="en">published until</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#serviceTypeCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#serviceTypeCategory">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This element is only relevant for EC Delegated Regulation 2017/1926 and shows the distinction between the different service categories related to the data set use.</rdfs:comment>
@@ -226,9 +563,54 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#visibility -->
+    <!-- https://w3id.org/mobilitydcatap#transportationMode -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcatap#visibility">
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#transportationMode">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Describes the transportation mode that is covered by by the delivered content. Data can be valid for more than one transportation mode, so a multiple choice should be applied.</rdfs:comment>
+        <rdfs:label xml:lang="en">transportation mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#validFrom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#validFrom">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#startDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the beginning of the time reference of the delivered content (e.g., validity time of a public-transport time table). This date may differ from &quot;Published from” (see above).</rdfs:comment>
+        <rdfs:label xml:lang="en">valid from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#validTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#validTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#endDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the  end of the time reference of the delivered content (e.g., validity time of a public-transport time table). This date may differ from &quot;Published until” (see above).</rdfs:comment>
+        <rdfs:label xml:lang="en">valid to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#visibility -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#visibility">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">Describes the visibility status of a data set or data service publication on the data platform interface. It is used only for internal usage or administration via predefined keys such as “public” or “private”. “Public” means that the dataset or service can be retrieved by external data platform users, or that that the corresponding metadata can be exchanged. “Private” means that the dataset, the service and the metadata are only visible to the original data provider and the data platform operator; this might be the case for test publications, for example.</rdfs:comment>
@@ -237,20 +619,14 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
-    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+    <!-- https://w3id.org/mobilitydcatap#adms:sample -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint">
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatformEntry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-        <rdfs:comment xml:lang="en">Describes an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry, for example.This information is mandatory when the metadata is natively created in a data platform. It should correspond to the entity that is registered to the data platform and has the role of a metadata creator. This information is optional, when metadata is harvested from other portals, and the point of contact is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity.  The metadata point of contact might be identical to the “Publisher”.</rdfs:comment>
-        <rdfs:label>contact point</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcatap#adms:sample">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:comment xml:lang="en">Provides a link for direct download of a data sample.  A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.</rdfs:comment>
+        <rdfs:label xml:lang="en">data sample</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#theme -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#theme"/>
     
 
 
@@ -268,16 +644,31 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">To give the user more information about content of the dataset or service a brief description is mandatory.  The used language for the description should be the language from the field “metadata language”. If more than one language is marked at “metadata language”, for each language there should be another description.</rdfs:comment>
         <rdfs:label>dataset description</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatform"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
@@ -285,60 +676,125 @@ Rather than using free keywords, usage of predefined values is recommended. The 
 
     <!-- http://purl.org/dc/terms/modified -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#CatalogRecord"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">For the catalog, it is the individual name of the data platform itself. 
 
-
-    <!-- http://w3id.org/mobilitydcatap#dataPlatformTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://w3id.org/mobilitydcatap#dataPlatformTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatform"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The individual name of the data platform itself.</rdfs:comment>
-        <rdfs:label>data platform title</rdfs:label>
+For the dataset, it describes the data set or service in a generic term or short description. The author is encouraged to write a meaningful description. This field is only for a brief overview, because free text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation of the data set or service is done within other fields (see below).</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#datasetTitle -->
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#about -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/mobilitydcatap#datasetTitle">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#about">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Allows a unique identification of the individual distribution, and is used for referencing, e.g., when exchanging metadata between NAPs. This UID can be numeric or alphanumeric.</rdfs:comment>
+        <rdfs:label xml:lang="en">distribution unique identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Describes the data set or service in a generic term or short description. The author is encouraged to write a meaningful description. This field is only for a brief overview, because free text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation of the data set or service is done within other fields (see below).</rdfs:comment>
-        <rdfs:label>dataset title</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#datasetUniqueIdentifier -->
+    <!-- http://www.w3.org/2002/07/owl#adms:versionNotes -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/mobilitydcatap#datasetUniqueIdentifier">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#adms:versionNotes">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Allows a unique identification of the individual data set or service, and is used for referencing, e.g., when exchanging metadata between data platforms. This UID can be numeric or alphanumeric.</rdfs:comment>
-        <rdfs:label>dataset unique identifier</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">If there are changes to the data set or service (see “Changed on” above), the “Data version notes” contain a textual description of changes according to the previous version, as an addition to “Data Version” (above).</rdfs:comment>
+        <rdfs:label xml:lang="en">version notes</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#platformUniqueIdentifier -->
+    <!-- http://www.w3.org/ns/dcat#endDate -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/mobilitydcatap#platformUniqueIdentifier">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
-        <rdfs:domain rdf:resource="http://w3id.org/mobilitydcatap#DataPlatform"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Allows a unique identification of the individual data platform , and is used for referencing, e.g., when exchanging metadata between NAPs.  The identifcation is via an URI, which needs to be unambiguous and unique.</rdfs:comment>
-        <rdfs:label>data platform unique identifier</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#endDate">
+        <rdfs:domain rdf:resource="https://w3id.org/mobilitydcatap#dct:PeriodOfTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The end of the period.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#startDate">
+        <rdfs:domain rdf:resource="https://w3id.org/mobilitydcatap#dct:PeriodOfTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The start of the period.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatNotes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatNotes">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dataFormatVersion -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mobilitydcatap#dataFormatVersion">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#nationalBodyAssessmentDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mobilitydcatap#nationalBodyAssessmentDate">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Indicates the date of the last validation process by the national body. Such processes are currently specified by the NAPCORE project, and include, e.g., a cross-check of a self-declaration for correctness. The information optional and only needed for the assessment of compliance process. It might be an internal information, only visible for national bodies or other authorised users.</rdfs:comment>
+        <rdfs:label xml:lang="en">national body assessment date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#networkCoverageDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mobilitydcatap#networkCoverageDescription">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Adds a textual description to &quot;Transport network coverage” (see above). It might contain details of the network typology on a national basis. This is necessary due to different meanings and understanding of different terms in each country.</rdfs:comment>
+        <rdfs:label xml:lang="en">network coverage description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -354,27 +810,39 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
+    <!-- http://purl.org/dc/terms/Frequency -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Frequency"/>
+    
+
+
     <!-- http://purl.org/dc/terms/LinguisticSystem -->
 
     <owl:Class rdf:about="http://purl.org/dc/terms/LinguisticSystem"/>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#DataPlatform -->
+    <!-- http://purl.org/dc/terms/Location -->
 
-    <owl:Class rdf:about="http://w3id.org/mobilitydcatap#DataPlatform">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
-        <rdfs:label>Data Platform</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location"/>
     
 
 
-    <!-- http://w3id.org/mobilitydcatap#DataPlatformEntry -->
+    <!-- http://purl.org/dc/terms/MediaType -->
 
-    <owl:Class rdf:about="http://w3id.org/mobilitydcatap#DataPlatformEntry">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
-        <rdfs:label>Data Platform Entry</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/dc/terms/MediaType"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Standard -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Standard"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     
 
 
@@ -390,6 +858,12 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     <!-- http://www.w3.org/2006/vcard/ns#Kind -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#Asset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/adms#Asset"/>
     
 
 
@@ -409,6 +883,15 @@ Rather than using free keywords, usage of predefined values is recommended. The 
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
         <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
+        <rdfs:comment>A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).</rdfs:comment>
+        <rdfs:label>Distribution</rdfs:label>
     </owl:Class>
     
 
@@ -435,6 +918,42 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
+    <!-- https://w3id.org/mobilitydcatap#DataModelSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/mobilitydcatap#DataModelSchema"/>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#DataModelTypes -->
+
+    <owl:Class rdf:about="https://w3id.org/mobilitydcatap#DataModelTypes"/>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#EncodingTypes -->
+
+    <owl:Class rdf:about="https://w3id.org/mobilitydcatap#EncodingTypes"/>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#MobilityGrammarTypes -->
+
+    <owl:Class rdf:about="https://w3id.org/mobilitydcatap#MobilityGrammarTypes"/>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#NBAssessmentResult -->
+
+    <owl:Class rdf:about="https://w3id.org/mobilitydcatap#NBAssessmentResult"/>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#dct:PeriodOfTime -->
+
+    <owl:Class rdf:about="https://w3id.org/mobilitydcatap#dct:PeriodOfTime"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -443,24 +962,6 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://w3id.org/mobilitydcatap#haustild -->
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/mobilitydcatap#haustild">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <foaf:name>Hilde Austild</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/mobilitydcatap#plubrich -->
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/mobilitydcatap#plubrich">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <foaf:name>Peter Lubrich</foaf:name>
-    </owl:NamedIndividual>
     
 
 
@@ -491,6 +992,24 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     
 
 
+    <!-- https://w3id.org/mobilitydcatap#haustild -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcatap#haustild">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Hilde Austild</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mobilitydcatap#plubrich -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcatap#plubrich">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Peter Lubrich</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -499,9 +1018,18 @@ Rather than using free keywords, usage of predefined values is recommended. The 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
-        <rdfs:label>modification date</rdfs:label>
-        <rdfs:comment xml:lang="en">Date stamp (date and time) when the current version of the metadata set was created or last modified. It will be generated by the system, whenever a platform user enters or updates the metadata entry.</rdfs:comment>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:comment xml:lang="en">If there are changes to the data set or service (see “Changed on” above), the “Data version” indicates an identifier of the current version. 
+“Data Version” plus “Data version notes” (below) might also enable a change history (or version history) of the corresponding data set or service, which could be hosted and published on the data platform. It is recommended to follow s W3C Data on the Web Best Practices DWBP 7 &quot;Provide a version identifier&quot; (https://www.w3.org/TR/dwbp/#VersioningInfo). Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning (https://semver.org/).</rdfs:comment>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/mobilitydcatap#dataFormatNotes">
+        <rdfs:comment xml:lang="en">If any additional information about the data format is needed, e.g., extensions being used in a “Data model”, a textual description can be provided.</rdfs:comment>
+        <rdfs:label xml:lang="en">data format notes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/mobilitydcatap#dataFormatVersion">
+        <rdfs:label xml:lang="en">data format version</rdfs:label>
+        <rdfs:comment xml:lang="en">There might be different versions of Grammar, Schema, or Data Model (e.g., DATEX II v3.2). Any version information can be provided in a textual format.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
