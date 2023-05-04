@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Naf35178329994d00a0cfd1a985427c70",
+    "@id": "_:N3b13f1a36ef942e58dc82ad1c8c59b0d",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -14,7 +14,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:N2d5be33b849044faa13bb5b4ce30f8c4"
+      "@id": "_:Nc9f8bee172e440f393f2537b9f2ac118"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [
@@ -29,7 +29,7 @@
     ]
     },
     {
-    "@id": "_:N2d5be33b849044faa13bb5b4ce30f8c4",
+    "@id": "_:Nc9f8bee172e440f393f2537b9f2ac118",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -60,6 +60,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/kind.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/kind.rdf"
   }
 ]

@@ -29,12 +29,12 @@
     ],
     "http://purl.org/dc/terms/source": [
       {
-      "@id": "_:Nad16c988f9f94074949f7c5dd27e8c63"
+      "@id": "_:Nb3f02802dd964cf7b0f09f2f426378ce"
       }
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N7a23b3ee787748c184e96790e3bbc8c9"
+      "@id": "_:Nfff74f1950184c889db61288e81ddbe0"
       }
     ],
     "http://xmlns.com/foaf/0.1/primaryTopic": [
@@ -44,7 +44,7 @@
     ]
     },
     {
-    "@id": "_:N7a23b3ee787748c184e96790e3bbc8c9",
+    "@id": "_:Nfff74f1950184c889db61288e81ddbe0",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -56,7 +56,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:N14e6ce1c045f4ae9899460e7d89187d8"
+      "@id": "_:Nc7a0787a04c643659d92534769b52ec6"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [
@@ -66,7 +66,7 @@
     ]
     },
     {
-    "@id": "_:N14e6ce1c045f4ae9899460e7d89187d8",
+    "@id": "_:Nc7a0787a04c643659d92534769b52ec6",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -97,13 +97,13 @@
     ]
     },
     {
-    "@id": "_:Nad16c988f9f94074949f7c5dd27e8c63",
+    "@id": "_:Nb3f02802dd964cf7b0f09f2f426378ce",
     "@type": [
       "http://www.w3.org/ns/dcat#CatalogRecord"
     ],
     "http://purl.org/dc/terms/conformsTo": [
       {
-      "@id": "_:N077a98b4e06941fba6d6fb08af71bfb7"
+      "@id": "_:N001259197b75447c88c12b0666f00b1f"
       }
     ],
     "http://www.w3.org/2011/content#characterEncoding": [
@@ -113,7 +113,7 @@
     ]
     },
     {
-    "@id": "_:N077a98b4e06941fba6d6fb08af71bfb7",
+    "@id": "_:N001259197b75447c88c12b0666f00b1f",
     "@type": [
       "http://purl.org/dc/terms/Standard"
     ],
@@ -131,6 +131,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/catalogue-record.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/catalogue-record.rdf"
   }
 ]

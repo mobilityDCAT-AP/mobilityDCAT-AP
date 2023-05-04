@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N0d9f9de394f2420fbd593ed671b54d81",
+    "@id": "_:N2798fbaf00224c71a340a1185ab735ba",
     "@type": [
       "http://purl.org/dc/terms/Location",
       "http://www.w3.org/2004/02/skos/core#Concept"
@@ -14,7 +14,7 @@
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-      "@id": "_:N6c595f6462be436e8870f12f022ae35d"
+      "@id": "_:Naefb0275ee1b4f75b5d0ccb681937c4d"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -25,7 +25,7 @@
     ]
     },
     {
-    "@id": "_:N6c595f6462be436e8870f12f022ae35d",
+    "@id": "_:Naefb0275ee1b4f75b5d0ccb681937c4d",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -43,6 +43,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/location-gn.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/location-gn.rdf"
   }
 ]

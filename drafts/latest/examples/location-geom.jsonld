@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N0d1fa00e464744bcb7d905c7bbbd8ced",
+    "@id": "_:N67f0fa1eb5de48dcbec065d217839532",
     "@type": [
       "http://purl.org/dc/terms/Location"
     ],
@@ -18,6 +18,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/location-geom.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/location-geom.rdf"
   }
 ]

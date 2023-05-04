@@ -2,18 +2,18 @@
   {
   "@graph": [
     {
-    "@id": "_:Nef7dba9b1d584c8abfcd43872bc0251b",
+    "@id": "_:N40c9e730dd454483a4628d67e7d02f66",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
     ],
     "http://purl.org/dc/terms/format": [
       {
-      "@id": "_:N9406e58940c14b7abf3f883e0905a487"
+      "@id": "_:N13d8a85a86f24f57ba9a6123fb979cb5"
       }
     ]
     },
     {
-    "@id": "_:N9406e58940c14b7abf3f883e0905a487",
+    "@id": "_:N13d8a85a86f24f57ba9a6123fb979cb5",
     "@type": [
       "http://purl.org/dc/terms/MediaType"
     ],
@@ -24,6 +24,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/media-type.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/media-type.rdf"
   }
 ]

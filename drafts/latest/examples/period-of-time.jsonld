@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N04f9ebcaded44ccebf8125df36515611",
+    "@id": "_:N096ba0de45994f9c975b76bb7ae5f248",
     "@type": [
       "http://purl.org/dc/terms/PeriodOfTime"
     ],
@@ -20,6 +20,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/period-of-time.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/period-of-time.rdf"
   }
 ]

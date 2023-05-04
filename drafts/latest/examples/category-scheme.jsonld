@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N983d03d5bb13491482f589e6aa96e57d",
+    "@id": "_:Ne0dad0133b354db88ddafac1d2ede885",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -20,6 +20,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/category-scheme.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/category-scheme.rdf"
   }
 ]

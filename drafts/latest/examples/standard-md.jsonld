@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N0cb3d83baa4b46aea1fe325e4bbb7a2b",
+    "@id": "_:N89f3c1ea7989490ca2df9f9b34ce15df",
     "@type": [
       "http://purl.org/dc/terms/Standard"
     ],
@@ -20,6 +20,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/standard-md.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/standard-md.rdf"
   }
 ]

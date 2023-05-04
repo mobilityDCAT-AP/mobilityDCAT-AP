@@ -2,70 +2,15 @@
   {
   "@graph": [
     {
-    "@id": "https://some.catalogue/resource/a12345",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Ndd198890fd254186a11975536994a5f8"
-      }
-    ]
-    },
-    {
-    "@id": "_:Ndd198890fd254186a11975536994a5f8",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "0.000001"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/d45678",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:N1f0fc46652e04f7e8e42c05db2b1f6fb"
-      }
-    ]
-    },
-    {
-    "@id": "_:N1f0fc46652e04f7e8e42c05db2b1f6fb",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.qudt.org/vocab/unit/M"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "10"
-      }
-    ]
-    },
-    {
     "@id": "https://some.catalogue/resource/c34567",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:Nd3aa70ab7ca94c5b80395acb8cffa844"
+      "@id": "_:N7229e9ade00541c9bf23248a1725f23c"
       }
     ]
     },
     {
-    "@id": "_:Nd3aa70ab7ca94c5b80395acb8cffa844",
+    "@id": "_:N7229e9ade00541c9bf23248a1725f23c",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -87,15 +32,70 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/b23456",
+    "@id": "https://some.catalogue/resource/d45678",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:Nfb50a1f4e3de4ecd965ad6023ffa87d6"
+      "@id": "_:Ndb936e1f12f34264b8b298ec215c5914"
       }
     ]
     },
     {
-    "@id": "_:Nfb50a1f4e3de4ecd965ad6023ffa87d6",
+    "@id": "_:Ndb936e1f12f34264b8b298ec215c5914",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/M"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "10"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/a12345",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N895b9ab2caaa4546a24044615521f8b7"
+      }
+    ]
+    },
+    {
+    "@id": "_:N895b9ab2caaa4546a24044615521f8b7",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "0.000001"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/b23456",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N281cd50401884e2cbb58dff99e8b4fea"
+      }
+    ]
+    },
+    {
+    "@id": "_:N281cd50401884e2cbb58dff99e8b4fea",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -117,6 +117,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/quality-measurement.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/quality-measurement.rdf"
   }
 ]

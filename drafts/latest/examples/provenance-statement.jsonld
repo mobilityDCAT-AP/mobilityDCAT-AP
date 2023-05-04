@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N054adfa34b8246fba334c53489055110",
+    "@id": "_:N6d4c138a76a1499794e10d76d2fda29d",
     "@type": [
       "http://purl.org/dc/terms/ProvenanceStatement"
     ],
@@ -14,6 +14,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/provenance-statement.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/provenance-statement.rdf"
   }
 ]

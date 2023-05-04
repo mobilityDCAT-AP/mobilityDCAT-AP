@@ -2,13 +2,13 @@
   {
   "@graph": [
     {
-    "@id": "_:N17cec721880441ea9e59c4c0e7f41908",
+    "@id": "_:Nea495fabd1374eb58ac8bbf6065ea16d",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-      "@id": "_:N8106f703beec47cb979e9e1971dfbf8a"
+      "@id": "_:N5459f7738fa7471a9c2c4c41d4394bf8"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19,7 +19,7 @@
     ]
     },
     {
-    "@id": "_:N8106f703beec47cb979e9e1971dfbf8a",
+    "@id": "_:N5459f7738fa7471a9c2c4c41d4394bf8",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -37,6 +37,6 @@
     ]
     }
   ],
-  "@id": "file:///home/molinasc/Documents/GitHubProjects/mobilityDCAT-AP/drafts/latest/examples/category.rdf"
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/category.rdf"
   }
 ]
