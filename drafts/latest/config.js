@@ -24,7 +24,7 @@ var respecConfig = {
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2020,
-    publishDate: "2023-03-30",
+    publishDate: "2023-05-11",
 
     alternateFormats: [
 /*
@@ -83,9 +83,9 @@ var respecConfig = {
 /* SEMICEU specific - start */
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    thisVersionURI:       "https://w3id.org/mobilitydcatap/releases/1.1/",
+    thisVersionURI:       "https://w3id.org/mobilitydcatap/releases/1.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-    prevVersionURI:       "https://w3id.org/mobilitydcatap/drafts/1.1-draft-0.1/",
+    prevVersionURI:       "https://w3id.org/mobilitydcatap/drafts/1.0-draft-0.1/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
     latestVersionURI:     "https://w3id.org/mobilitydcatap/releases/",
 /* SEMICEU specific - end   */
@@ -128,7 +128,7 @@ var respecConfig = {
       data: [
       {
 //        value: "0.2"
-        value: "1.1"
+        value: "1.0"
       }
       ]
     },
