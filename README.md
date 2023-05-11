@@ -8,7 +8,7 @@ mobilityDCAT-AP is an initiative of the [NAPCORE (National Access Point Coordina
 
 The latest version of the mobilityDCAT-AP (v1.0) draft is available:
 
-[https://https://w3id.org/mobilitydcatap/releases/](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/)
+[https://https://w3id.org/mobilitydcatap/drafts/latest](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/)
 
 <!--- (https://https://w3id.org/mobilitydcatap/releases/) -->
 
