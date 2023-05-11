@@ -16,16 +16,17 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Structure of the repository
 
-[//]: # ([Releases](./releases/): mobilityDCAT-AP releases (1.0, etc.); each release might have different distributions.)
+<!---[Releases](./releases/): mobilityDCAT-AP releases (1.0, etc.); each release might have different distributions.-->
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest mobilityDCAT-AP release.
 
+<!---
 ## Implementations
 
 - [GeoDCAT-AP XSLT & API](https://github.com/SEMICeu/iso-19139-to-dcat-ap): Reference XSLT-based implementation and API
 - [CSW-4-Web](https://github.com/SEMICeu/csw-4-web): A proof-of-concept API to expose CSW endpoints in a Web-friendly way, making use of an extended and ad hoc version of the GeoDCAT-AP XSLT & API.
 - [EPSG to RDF XSLT](https://github.com/SEMICeu/epsg-to-rdf): Proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP.
 
-Additional mobilityDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations).
+Additional mobilityDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations). -->
 
 ## Licence
 
