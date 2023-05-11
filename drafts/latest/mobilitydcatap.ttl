@@ -1,534 +1,787 @@
 @prefix : <https://w3id.org/mobilitydcatap#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://w3id.org/mobilitydcatap> .
 
-dct:accrualPeriodicity a owl:ObjectProperty ;
-  rdfs:label "frequency"@en ;
-  rdfs:comment "Describes how often the delivered content is updated. This information tells a person who finds a data set or service, how often it is updated on the system, so this person might align the frequency of data retrieval to this data. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the change frequency (see “Changed on” above). The frequency might be a specific time interval or a general remark such as “updated on occurrence”."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range dct:Frequency .
+<https://w3id.org/mobilitydcatap> rdf:type owl:Ontology ;
+                                   owl:versionIRI <https://w3id.org/mobilitydcatap/releases/1.0..> ;
+                                   dct:contributor <https://github.com/lcomet> ,
+                                                   <https://github.com/marioscrock> ,
+                                                   <https://github.com/orgs/mobilityDCAT-AP/people/jonas-jaderberg> ,
+                                                   :haustild ,
+                                                   :plubrich ;
+                                   dct:creator "NAPCORE SWG 4.4."@en ;
+                                   dct:license "https://creativecommons.org/licenses/by/4.0/" ;
+                                   vann:preferredNamespacePrefix "http://w3id.org/mobilitydcatap" ,
+                                                                 "mobilitydcatap" ;
+                                   rdfs:comment "Deze woordenlijst definieert de essentiële metadata-elementen die overeenkomen met het conceptuele model van het mobilityDCAT-AP."@nl ,
+                                                "Dieses Vokabular definiert die grundlegenden Metadatenelemente, die dem konzeptionellen Modell der mobilityDCAT-AP entsprechen."@de ,
+                                                "Este vocabulario define los elementos de metadatos esenciales correspondientes al modelo conceptual del mobilityDCAT-AP."@es ,
+                                                "This vocabulary defines the essential metadata elements corresponding to the conceptual model of the mobilityDCAT-AP."@en ;
+                                   rdfs:label "mobilityDCAT-AP Elementos de Metadatos Esenciales"@es ,
+                                              "mobilityDCAT-AP Essential Metadata Elements"@en ,
+                                              "mobilityDCAT-AP Essentiële Metadata Elementen"@nl ,
+                                              "mobilityDCAT-AP Grundlegende Metadatenelemente"@de ;
+                                   owl:versionInfo "This is an updated copy of v1.0 of the mobilityDCAT-AP"@en .
 
-dct:contributor a owl:AnnotationProperty .
+#################################################################
+#    Annotation properties
+#################################################################
 
-dct:creator a owl:AnnotationProperty .
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
 
-dct:description a owl:DatatypeProperty ;
-  rdfs:label "dataset description" ;
-  rdfs:comment "To give the user more information about content of the dataset or service a brief description is mandatory.  The used language for the description should be the language from the field “metadata language”. If more than one language is marked at “metadata language”, for each language there should be another description."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Literal .
 
-dct:identifier a owl:DatatypeProperty ;
-  rdfs:label "identifier"@en ;
-  rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
-  rdfs:domain [ a owl:Class ;
-      owl:unionOf ( dcat:Catalog dcat:Dataset ) ] ;
-  rdfs:range xsd:anyURI .
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
 
-dct:license a owl:AnnotationProperty .
 
-dct:modified a owl:DatatypeProperty ;
-  rdfs:label "date modified"@en ;
-  rdfs:comment "Date on which the resource was changed."@en ;
-  rdfs:domain [ a owl:Class ;
-      owl:unionOf ( dcat:CatalogRecord dcat:Dataset ) ] ;
-  rdfs:range xsd:dateTime .
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
 
-dct:spatial a owl:ObjectProperty ;
-  rdfs:label "spatial coverage"@en ;
-  rdfs:comment "Describes the geographical extent covered by the delivered content.  Data can be valid for more than one region, so a multiple choice should be applied. As a reference system, the NUTS (Nomenclature des unités territoriales statistiques) is recommended. The “NUTS Level” defines a possible selection of area level (city, district, and region). Alternative geocodes instead or in addition to NUTS, e.g., local codes or EU codes, are allowed."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range dct:Location .
 
-dct:title a owl:DatatypeProperty ;
-  rdfs:label "title"@en ;
-  rdfs:comment """For the catalog, it is the individual name of the data platform itself. 
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
-For the dataset, it describes the data set or service in a generic term or short description. The author is encouraged to write a meaningful description. This field is only for a brief overview, because free text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation of the data set or service is done within other fields (see below)."""@en ;
-  rdfs:domain [ a owl:Class ;
-      owl:unionOf ( dcat:Catalog dcat:Dataset ) ] ;
-  rdfs:range rdfs:Literal .
 
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
-vann:preferredNamespaceUri a owl:AnnotationProperty .
 
-rdf:about a owl:DatatypeProperty ;
-  rdfs:label "distribution unique identifier"@en ;
-  rdfs:comment "Allows a unique identification of the individual distribution, and is used for referencing, e.g., when exchanging metadata between NAPs. This UID can be numeric or alphanumeric." ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range xsd:string .
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
 
-rdfs:label a owl:AnnotationProperty .
 
-<http://www.w3.org/2002/07/owl#adms:versionNotes> a owl:DatatypeProperty ;
-  rdfs:label "version notes"@en ;
-  rdfs:comment "If there are changes to the data set or service (see “Changed on” above), the “Data version notes” contain a textual description of changes according to the previous version, as an addition to “Data Version” (above)."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Literal .
+###  http://www.w3.org/ns/prov#component
+prov:component rdf:type owl:AnnotationProperty .
 
-owl:versionInfo a owl:DatatypeProperty ;
-  rdfs:label "version"@en ;
-  rdfs:comment """If there are changes to the data set or service (see “Changed on” above), the “Data version” indicates an identifier of the current version. 
-“Data Version” plus “Data version notes” (below) might also enable a change history (or version history) of the corresponding data set or service, which could be hosted and published on the data platform. It is recommended to follow s W3C Data on the Web Best Practices DWBP 7 "Provide a version identifier" (https://www.w3.org/TR/dwbp/#VersioningInfo). Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning (https://semver.org/)."""@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Literal .
 
-<http://www.w3.org/ns/adms#sample> a owl:ObjectProperty ;
-  rdfs:label "data sample"@en ;
-  rdfs:comment "Provides a link for direct download of a data sample.  A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range <http://www.w3.org/ns/adms#Asset> .
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
 
-dcat:accessURL a owl:ObjectProperty ;
-  rdfs:label "access url"@en ;
-  rdfs:comment "For data which cannot be downloaded directly: provides a link to a service or a website which enables access to the data, e.g., a website where a data feed or a data download can be applied for."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range rdfs:Resource .
 
-dcat:contactPoint a owl:ObjectProperty ;
-  rdfs:label "data platform entry contact point" ;
-  rdfs:comment "Describes an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry, for example.This information is mandatory when the metadata is natively created in a data platform. It should correspond to the entity that is registered to the data platform and has the role of a metadata creator. This information is optional, when metadata is harvested from other portals, and the point of contact is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity.  The metadata point of contact might be identical to the “Publisher”."@en ;
-  rdfs:domain dcat:CatalogRecord ;
-  rdfs:range <http://www.w3.org/2006/vcard/ns#Kind> .
+#################################################################
+#    Object Properties
+#################################################################
 
-dcat:downloadURL a owl:ObjectProperty ;
-  rdfs:label "download url"@en ;
-  rdfs:comment "Provides a link for direct download of the complete data set."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range rdfs:Resource .
+###  http://purl.org/dc/terms/accrualPeriodicity
+dct:accrualPeriodicity rdf:type owl:ObjectProperty ;
+                       rdfs:domain dcat:Dataset ;
+                       rdfs:range dct:Frequency ;
+                       rdfs:comment "Describes how often the delivered content is updated. This information tells a person who finds a data set or service, how often it is updated on the system, so this person might align the frequency of data retrieval to this data. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the change frequency (see “Changed on” above). The frequency might be a specific time interval or a general remark such as “updated on occurrence”."@en ;
+                       rdfs:label "frequency"@en .
 
-<http://www.w3.org/ns/dqv#dqv:hasQualityAnnotation> a owl:ObjectProperty ;
-  rdfs:label "has quality annotation"@en ;
-  rdfs:comment "Refers to a quality annotation. Quality annotation can be applied to any kind of resource, e.g., a dataset, a linkset, a graph, a set of triples. However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range <http://www.w3.org/ns/dqv#dqv:QualityAnnotation> .
 
-<http://www.w3.org/ns/dqv#dqv:hasQualityMeasurement> a owl:ObjectProperty ;
-  rdfs:label "has quality measurement"@en ;
-  rdfs:comment "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range <http://www.w3.org/ns/dqv#dqv:QualityMeasurement> .
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Dataset ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( dct:Standard
+                                          skos:Concept
+                                        )
+                          ] ;
+               rdfs:label "conforms to"@en ;
+               prov:component "An established standard to which the described resource conforms."@en .
 
-prov:component a owl:AnnotationProperty .
 
-foaf:Organization a owl:Class ;
-  rdfs:label "Organization"@en ;
-  rdfs:comment "The foaf:Organization class represents a kind of foaf:Agent corresponding to social instititutions such as companies, societies etc."@en ;
-  rdfs:subClassOf foaf:Agent .
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Distribution ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :DataModelSchema
+                                      :DataModelType
+                                      :EncodingType
+                                      :MobilityGrammarTypes
+                                    )
+                      ] ;
+           rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+           rdfs:label "format"@en .
 
-foaf:name a owl:AnnotationProperty .
 
-<https://w3id.org/mobilitydcatap> a owl:Ontology ;
-  rdfs:label "mobilityDCAT-AP Grundlegende Metadatenelemente"@de,
-    "mobilityDCAT-AP Essential Metadata Elements"@en,
-    "mobilityDCAT-AP Elementos de Metadatos Esenciales"@es,
-    "mobilityDCAT-AP Essentiële Metadata Elementen"@nl ;
-  dct:contributor <https://github.com/lcomet>,
-    <https://github.com/marioscrock>,
-    <https://github.com/orgs/mobilityDCAT-AP/people/jonas-jaderberg>,
-    :haustild,
-    :plubrich ;
-  dct:creator "NAPCORE SWG 4.4."@en ;
-  dct:license "https://creativecommons.org/licenses/by/4.0/" ;
-  vann:preferredNamespacePrefix "http://w3id.org/mobilitydcatap",
-    "mobilitydcatap" ;
-  rdfs:comment "Dieses Vokabular definiert die grundlegenden Metadatenelemente, die dem konzeptionellen Modell der mobilityDCAT-AP entsprechen."@de,
-    "This vocabulary defines the essential metadata elements corresponding to the conceptual model of the mobilityDCAT-AP."@en,
-    "Este vocabulario define los elementos de metadatos esenciales correspondientes al modelo conceptual del mobilityDCAT-AP."@es,
-    "Deze woordenlijst definieert de essentiële metadata-elementen die overeenkomen met het conceptuele model van het mobilityDCAT-AP."@nl ;
-  owl:versionIRI <https://w3id.org/mobilitydcatap/releases/1.0..> ;
-  owl:versionInfo "This is an updated copy of v1.1 of the mobilityDCAT-AP"@en .
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( dcat:CatalogRecord
+                                         dcat:Dataset
+                                       )
+                         ] ;
+             rdfs:range dct:LinguisticSystem ;
+             rdfs:comment "A language of the resource."@en ;
+             rdfs:label "language"@en .
 
-:applicationLayerProtocol a owl:ObjectProperty ;
-  rdfs:label "application layer protocol"@en ;
-  rdfs:comment "Describes the transmitting channel, i.e., the Application Layer Protocol, of the data set or service. There are predefined tags of common access interfaces."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range rdfs:Resource .
 
-:communicationMethod a owl:ObjectProperty ;
-  rdfs:label "communication method"@en ;
-  rdfs:comment "For data services, e.g., data feeds: indicates if the data interface of the data provider system functions in a push or pull mode."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range rdfs:Resource .
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( dcat:Catalog
+                                          dcat:Dataset
+                                        )
+                          ] ;
+              rdfs:range foaf:Agent ;
+              rdfs:label "publisher" .
 
-:coordinateReferenceSystem a owl:ObjectProperty ;
-  rdfs:label "coordinate reference system"@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range dct:Standard ;
-  rdfs:subPropertyOf dct:conformsTo .
 
-:dataContentCategory a owl:ObjectProperty ;
-  rdfs:label "data content category" ;
-  rdfs:comment """Describes the category of the content, as delivered by a data set or service. A category is important for data seekers who are interested for a particular type of data. A dataset may be associated with multiple themes.  
+###  http://purl.org/dc/terms/spatial
+dct:spatial rdf:type owl:ObjectProperty ;
+            rdfs:domain dcat:Dataset ;
+            rdfs:range dct:Location ;
+            rdfs:comment "Describes the geographical extent covered by the delivered content.  Data can be valid for more than one region, so a multiple choice should be applied. As a reference system, the NUTS (Nomenclature des unités territoriales statistiques) is recommended. The “NUTS Level” defines a possible selection of area level (city, district, and region). Alternative geocodes instead or in addition to NUTS, e.g., local codes or EU codes, are allowed."@en ;
+            rdfs:label "spatial coverage"@en .
+
+
+###  http://purl.org/dc/terms/temporal
+dct:temporal rdf:type owl:ObjectProperty ;
+             rdfs:domain dcat:Dataset ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( [ rdf:type owl:Restriction ;
+                                          owl:onProperty dcat:endDate ;
+                                          owl:someValuesFrom rdfs:Literal
+                                        ]
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty dcat:startDate ;
+                                          owl:someValuesFrom rdfs:Literal
+                                        ]
+                                      )
+                        ] ;
+             rdfs:comment "Temporal characteristics of the resource."@en ;
+             rdfs:label "temporal"@en .
+
+
+###  http://www.w3.org/ns/adms#sample
+<http://www.w3.org/ns/adms#sample> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain dcat:Distribution ;
+                                   rdfs:range <http://www.w3.org/ns/adms#Asset> ;
+                                   rdfs:comment "Provides a link for direct download of a data sample.  A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set."@en ;
+                                   rdfs:label "data sample"@en .
+
+
+###  http://www.w3.org/ns/dcat#accessURL
+dcat:accessURL rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Distribution ;
+               rdfs:range rdfs:Resource ;
+               rdfs:comment "For data which cannot be downloaded directly: provides a link to a service or a website which enables access to the data, e.g., a website where a data feed or a data download can be applied for."@en ;
+               rdfs:label "access url"@en .
+
+
+###  http://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint rdf:type owl:ObjectProperty ;
+                  rdfs:domain dcat:CatalogRecord ;
+                  rdfs:range <http://www.w3.org/2006/vcard/ns#Kind> ;
+                  rdfs:comment "Describes an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry, for example.This information is mandatory when the metadata is natively created in a data platform. It should correspond to the entity that is registered to the data platform and has the role of a metadata creator. This information is optional, when metadata is harvested from other portals, and the point of contact is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity.  The metadata point of contact might be identical to the “Publisher”."@en ;
+                  rdfs:label "data platform entry contact point" .
+
+
+###  http://www.w3.org/ns/dcat#downloadURL
+dcat:downloadURL rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Distribution ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:comment "Provides a link for direct download of the complete data set."@en ;
+                 rdfs:label "download url"@en .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Dataset ;
+           rdfs:range skos:Concept ;
+           rdfs:comment "A main category of the resource. A resource can have multiple themes."@en ;
+           rdfs:label "theme"@en .
+
+
+###  http://www.w3.org/ns/dqv#dqv:hasQualityAnnotation
+<http://www.w3.org/ns/dqv#dqv:hasQualityAnnotation> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain dcat:Dataset ;
+                                                    rdfs:range <http://www.w3.org/ns/dqv#dqv:QualityAnnotation> ;
+                                                    rdfs:comment "Refers to a quality annotation. Quality annotation can be applied to any kind of resource, e.g., a dataset, a linkset, a graph, a set of triples. However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
+                                                    rdfs:label "has quality annotation"@en .
+
+
+###  http://www.w3.org/ns/dqv#dqv:hasQualityMeasurement
+<http://www.w3.org/ns/dqv#dqv:hasQualityMeasurement> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain dcat:Dataset ;
+                                                     rdfs:range <http://www.w3.org/ns/dqv#dqv:QualityMeasurement> ;
+                                                     rdfs:comment "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
+                                                     rdfs:label "has quality measurement"@en .
+
+
+###  https://w3id.org/mobilitydcatap#applicationLayerProtocol
+:applicationLayerProtocol rdf:type owl:ObjectProperty ;
+                          rdfs:domain dcat:Distribution ;
+                          rdfs:range rdfs:Resource ;
+                          rdfs:comment "Describes the transmitting channel, i.e., the Application Layer Protocol, of the data set or service. There are predefined tags of common access interfaces."@en ;
+                          rdfs:label "application layer protocol"@en .
+
+
+###  https://w3id.org/mobilitydcatap#communicationMethod
+:communicationMethod rdf:type owl:ObjectProperty ;
+                     rdfs:domain dcat:Distribution ;
+                     rdfs:range rdfs:Resource ;
+                     rdfs:comment "For data services, e.g., data feeds: indicates if the data interface of the data provider system functions in a push or pull mode."@en ;
+                     rdfs:label "communication method"@en .
+
+
+###  https://w3id.org/mobilitydcatap#coordinateReferenceSystem
+:coordinateReferenceSystem rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dct:conformsTo ;
+                           rdfs:domain dcat:Dataset ;
+                           rdfs:range dct:Standard ;
+                           rdfs:label "coordinate reference system"@en .
+
+
+###  https://w3id.org/mobilitydcatap#dataContentCategory
+:dataContentCategory rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dcat:theme ;
+                     rdfs:domain dcat:Dataset ;
+                     rdfs:range skos:Concept ;
+                     rdfs:comment """Describes the category of the content, as delivered by a data set or service. A category is important for data seekers who are interested for a particular type of data. A dataset may be associated with multiple themes.  
 The category is described in two hierarchy levels: The “Category” describes the classification of the data content on an aggregated level. The “Category detailed” concretises the “Category” with several sub-categories.  This means the data provider would select one option of a “Category” first, and then optionally concretise this with one or more options of “Category detailed”.  
 Rather than using free keywords, usage of predefined values is recommended. The predefined values should be mappable to the data categories mentioned in the individual EC Delegated Regulations, but do not need to 1:1 repeat them. The predefined values might also include categories outside the scope of EC Delegated Regulations."""@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf dcat:theme .
+                     rdfs:label "data content category" .
 
-:dataContentCategoryDetailed a owl:ObjectProperty ;
-  rdfs:label "data content category detailed" ;
-  rdfs:comment """Describes the category of the content, as delivered by a data set or service. A category is important for data seekers who are interested for a particular type of data. A dataset may be associated with multiple themes.  
+
+###  https://w3id.org/mobilitydcatap#dataContentCategoryDetailed
+:dataContentCategoryDetailed rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf dcat:theme ;
+                             rdfs:domain dcat:Dataset ;
+                             rdfs:range skos:Concept ;
+                             rdfs:comment """Describes the category of the content, as delivered by a data set or service. A category is important for data seekers who are interested for a particular type of data. A dataset may be associated with multiple themes.  
 The category is described in two hierarchy levels: The “Category” describes the classification of the data content on an aggregated level. The “Category detailed” concretises the “Category” with several sub-categories.  This means the data provider would select one option of a “Category” first, and then optionally concretise this with one or more options of “Category detailed”.  
 Rather than using free keywords, usage of predefined values is recommended. The predefined values should be mappable to the data categories mentioned in the individual EC Delegated Regulations, but do not need to 1:1 repeat them. The predefined values might also include categories outside the scope of EC Delegated Regulations."""@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf dcat:theme .
+                             rdfs:label "data content category detailed" .
 
-:dataFormatDataModel a owl:ObjectProperty ;
-  rdfs:label "data format data model"@en ;
-  rdfs:comment "Describes the used data model of the delivered content. There are predefined tags of common data formats."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range :DataModelType ;
-  rdfs:subPropertyOf dct:format .
 
-:dataFormatDataModelSchema a owl:ObjectProperty ;
-  rdfs:label "data model schema"@en ;
-  rdfs:comment "Describes the used data schema applied for the “Data model” (see above). The schema can be individually determined by the data provider (e.g., a stakeholder-based DATEX II profile) or a prescribed by other institutions (e.g., a DATEX II recommended reference profile)."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range :DataModelSchema ;
-  rdfs:subPropertyOf dct:format .
+###  https://w3id.org/mobilitydcatap#dataFormatDataModel
+:dataFormatDataModel rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dct:format ;
+                     rdfs:domain dcat:Distribution ;
+                     rdfs:range :DataModelType ;
+                     rdfs:comment "Describes the used data model of the delivered content. There are predefined tags of common data formats."@en ;
+                     rdfs:label "data format data model"@en .
 
-:dataFormatEncoding a owl:ObjectProperty ;
-  rdfs:label "data format encoding"@en ;
-  rdfs:comment "Describes the technical encoding format of the delivered content. There are predefined values of common data formats."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range :EncodingType ;
-  rdfs:subPropertyOf dct:format .
 
-:dataFormatGrammar a owl:ObjectProperty ;
-  rdfs:label "data format grammar"@en ;
-  rdfs:comment "Describes the technical data grammar format of the delivered content. There are predefined tags of common data formats."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range :MobilityGrammarTypes ;
-  rdfs:subPropertyOf dct:format .
+###  https://w3id.org/mobilitydcatap#dataFormatDataModelSchema
+:dataFormatDataModelSchema rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dct:format ;
+                           rdfs:domain dcat:Distribution ;
+                           rdfs:range :DataModelSchema ;
+                           rdfs:comment "Describes the used data schema applied for the “Data model” (see above). The schema can be individually determined by the data provider (e.g., a stakeholder-based DATEX II profile) or a prescribed by other institutions (e.g., a DATEX II recommended reference profile)."@en ;
+                           rdfs:label "data model schema"@en .
 
-:dataFormatNotes a owl:DatatypeProperty,
-    owl:ObjectProperty ;
-  rdfs:label "data format notes"@en ;
-  rdfs:comment "If any additional information about the data format is needed, e.g., extensions being used in a “Data model”, a textual description can be provided."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range rdfs:Literal ;
-  rdfs:subPropertyOf dct:format .
 
-:dataFormatSyntax a owl:ObjectProperty ;
-  rdfs:label "data format syntax"@en ;
-  rdfs:comment "Describes the technical syntax of the delivered content. There are predefined tags of the common data formats."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range dct:MediaType ;
-  rdfs:subPropertyOf dct:format .
+###  https://w3id.org/mobilitydcatap#dataFormatEncoding
+:dataFormatEncoding rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dct:format ;
+                    rdfs:domain dcat:Distribution ;
+                    rdfs:range :EncodingType ;
+                    rdfs:comment "Describes the technical encoding format of the delivered content. There are predefined values of common data formats."@en ;
+                    rdfs:label "data format encoding"@en .
 
-:dataFormatVersion a owl:DatatypeProperty,
-    owl:ObjectProperty ;
-  rdfs:label "data format version"@en ;
-  rdfs:comment "There might be different versions of Grammar, Schema, or Data Model (e.g., DATEX II v3.2). Any version information can be provided in a textual format."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range rdfs:Literal ;
-  rdfs:subPropertyOf dct:format .
 
-:dataOwner a owl:ObjectProperty ;
-  rdfs:label "data owner" ;
-  rdfs:comment "Describes the entity that legally owns the data provided in a dataset or service. This entity is responsible for the content of the data, in particular, that the data fulfilles quality criteria (if applicable, see “Quality description” below) and/or corresponds to legal frameworks (if applicable, see “Legal frameworks” below).  The “Data Owner” will be in many cases identical with the “Publisher”. In this case, the contact data will be copied from the “Publisher” entry.  There might be also cases where one or several “Data Owners” contract a third-party “Publisher” (e.g., an IT service company) to host and publish a data set.  This entity is the direct contact for the platform operator or data-consuming  users, who have questions or issues about the contents of a dataset, for example. The Data owner might be identical to the \"Metadata Point of Contact\" (see above) and/or  the “Publisher” (see above). This information is optional, when metadata is harvested from other portals, and the data owner is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range foaf:Agent .
+###  https://w3id.org/mobilitydcatap#dataFormatGrammar
+:dataFormatGrammar rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dct:format ;
+                   rdfs:domain dcat:Distribution ;
+                   rdfs:range :MobilityGrammarTypes ;
+                   rdfs:comment "Describes the technical data grammar format of the delivered content. There are predefined tags of common data formats."@en ;
+                   rdfs:label "data format grammar"@en .
 
-:dataPlatformEntryLanguage a owl:ObjectProperty ;
-  rdfs:label "data platform entry language" ;
-  rdfs:comment "This element indicates the language in which the metadata is described. Next to the national operators and publishers there are international operators which use their own language for descriptions. According to the ISO 639 standard part 2, there is a 3 letter code for 24 EU languages, which should be used.  At least one language has to be set, but it should be possible to select more than one language."@en ;
-  rdfs:domain dcat:CatalogRecord ;
-  rdfs:range dct:LinguisticSystem ;
-  rdfs:subPropertyOf dct:language .
 
-:dataPlatformPublisher a owl:ObjectProperty ;
-  rdfs:label "data platform point of contact" ;
-  rdfs:comment "Describes an organisation, if applicable a person, which is responsible for creation and maintenance of the data platform. This person or company is the direct contact for platform users, who have questions or issues about the platform system, for example. This information is mandatory and should correspond to the information in the disclaimer of the platform website."@en ;
-  rdfs:domain dcat:Catalog ;
-  rdfs:range foaf:Agent ;
-  rdfs:subPropertyOf dct:publisher .
+###  https://w3id.org/mobilitydcatap#dataFormatNotes
+:dataFormatNotes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dct:format ;
+                 rdfs:domain dcat:Distribution .
 
-:datasetLanguage a owl:ObjectProperty ;
-  rdfs:label "dataset language" ;
-  rdfs:comment "Indicates the language of the data itself. This relates to data contents including language-specific elements such as text fields, addresses etc. Selection of one language is mandatory. According to the ISO 639 standard part 2, a 3 letter code for 24 EU languages is available."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range dct:LinguisticSystem ;
-  rdfs:subPropertyOf dct:language .
 
-:datasetPublisher a owl:ObjectProperty ;
-  rdfs:label "dataset publisher" ;
-  rdfs:comment "Describes an entity (company and person) that publishes the corresponding data set or service. This entity is responsible for the provisioning of a dataset or service. The entity also concludes a contract, if applicable. This entity is the direct contact for the  platform operator or data-consuming users, who have questions or issues about the availability of a dataset, for example. The Publisher might be identical to the \"Metadata Point of Contact\" (see above) and/or  the “Data Owner” (see below). This information is optional, when metadata is harvested from other portals, and the publisher is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range foaf:Agent ;
-  rdfs:subPropertyOf dct:publisher .
+###  https://w3id.org/mobilitydcatap#dataFormatSyntax
+:dataFormatSyntax rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dct:format ;
+                  rdfs:domain dcat:Distribution ;
+                  rdfs:range dct:MediaType ;
+                  rdfs:comment "Describes the technical syntax of the delivered content. There are predefined tags of the common data formats."@en ;
+                  rdfs:label "data format syntax"@en .
 
-:georeferencing_method a owl:ObjectProperty ;
-  rdfs:label "georeferencing method"@en ;
-  rdfs:comment "Due to the different existing and used georeferencing systems it is essential to describe it in a separate meta data field. This field contains frequently used methods as a controlled vocabulary."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf dct:conformsTo .
 
-:legalFramework a owl:ObjectProperty ;
-  rdfs:label "legal framework"@en ;
-  rdfs:comment "References to one or several legal frameworks being relevant for the data set or service, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponing data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept .
+###  https://w3id.org/mobilitydcatap#dataFormatVersion
+:dataFormatVersion rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dct:format ;
+                   rdfs:domain dcat:Distribution .
 
-:nationalBodyAssessmentDate a owl:DatatypeProperty ;
-  rdfs:label "national body assessment date"@en ;
-  rdfs:comment "Indicates the date of the last validation process by the national body. Such processes are currently specified by the NAPCORE project, and include, e.g., a cross-check of a self-declaration for correctness. The information optional and only needed for the assessment of compliance process. It might be an internal information, only visible for national bodies or other authorised users."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range xsd:dateTime .
 
-:nationalBodyAssessmentReport a owl:ObjectProperty ;
-  rdfs:label "national body assessment report"@en ;
-  rdfs:comment "Describes the draft result of the last validation process by the national body, in form of a URL to external details or results."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Resource .
+###  https://w3id.org/mobilitydcatap#dataOwner
+:dataOwner rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Dataset ;
+           rdfs:range foaf:Agent ;
+           rdfs:comment "Describes the entity that legally owns the data provided in a dataset or service. This entity is responsible for the content of the data, in particular, that the data fulfilles quality criteria (if applicable, see “Quality description” below) and/or corresponds to legal frameworks (if applicable, see “Legal frameworks” below).  The “Data Owner” will be in many cases identical with the “Publisher”. In this case, the contact data will be copied from the “Publisher” entry.  There might be also cases where one or several “Data Owners” contract a third-party “Publisher” (e.g., an IT service company) to host and publish a data set.  This entity is the direct contact for the platform operator or data-consuming  users, who have questions or issues about the contents of a dataset, for example. The Data owner might be identical to the \"Metadata Point of Contact\" (see above) and/or  the “Publisher” (see above). This information is optional, when metadata is harvested from other portals, and the data owner is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity."@en ;
+           rdfs:label "data owner" .
 
-:nationalBodyAssessmentResult a owl:ObjectProperty ;
-  rdfs:label "national body assessment result"@en ;
-  rdfs:comment "Describes the draft result of the last validation process by the national body, in form of a textual description."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range :NBAssessmentResult .
 
-:networkCoverage a owl:ObjectProperty ;
-  rdfs:label "network coverage"@en ;
-  rdfs:comment """Describes the part of the transport network that is covered by the delivered content.  
+###  https://w3id.org/mobilitydcatap#dataPlatformEntryLanguage
+:dataPlatformEntryLanguage rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dct:language ;
+                           rdfs:domain dcat:CatalogRecord ;
+                           rdfs:range dct:LinguisticSystem ;
+                           rdfs:comment "This element indicates the language in which the metadata is described. Next to the national operators and publishers there are international operators which use their own language for descriptions. According to the ISO 639 standard part 2, there is a 3 letter code for 24 EU languages, which should be used.  At least one language has to be set, but it should be possible to select more than one language."@en ;
+                           rdfs:label "data platform entry language" .
+
+
+###  https://w3id.org/mobilitydcatap#dataPlatformPublisher
+:dataPlatformPublisher rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf dct:publisher ;
+                       rdfs:domain dcat:Catalog ;
+                       rdfs:range foaf:Agent ;
+                       rdfs:comment "Describes an organisation, if applicable a person, which is responsible for creation and maintenance of the data platform. This person or company is the direct contact for platform users, who have questions or issues about the platform system, for example. This information is mandatory and should correspond to the information in the disclaimer of the platform website."@en ;
+                       rdfs:label "data platform point of contact" .
+
+
+###  https://w3id.org/mobilitydcatap#datasetLanguage
+:datasetLanguage rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dct:language ;
+                 rdfs:domain dcat:Dataset ;
+                 rdfs:range dct:LinguisticSystem ;
+                 rdfs:comment "Indicates the language of the data itself. This relates to data contents including language-specific elements such as text fields, addresses etc. Selection of one language is mandatory. According to the ISO 639 standard part 2, a 3 letter code for 24 EU languages is available."@en ;
+                 rdfs:label "dataset language" .
+
+
+###  https://w3id.org/mobilitydcatap#datasetPublisher
+:datasetPublisher rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dct:publisher ;
+                  rdfs:domain dcat:Dataset ;
+                  rdfs:range foaf:Agent ;
+                  rdfs:comment "Describes an entity (company and person) that publishes the corresponding data set or service. This entity is responsible for the provisioning of a dataset or service. The entity also concludes a contract, if applicable. This entity is the direct contact for the  platform operator or data-consuming users, who have questions or issues about the availability of a dataset, for example. The Publisher might be identical to the \"Metadata Point of Contact\" (see above) and/or  the “Data Owner” (see below). This information is optional, when metadata is harvested from other portals, and the publisher is not provided in such harvesting. When this information is provided, it should include, as a minimum, the name and email address of the entity."@en ;
+                  rdfs:label "dataset publisher" .
+
+
+###  https://w3id.org/mobilitydcatap#georeferencing_method
+:georeferencing_method rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf dct:conformsTo ;
+                       rdfs:domain dcat:Dataset ;
+                       rdfs:range skos:Concept ;
+                       rdfs:comment "Due to the different existing and used georeferencing systems it is essential to describe it in a separate meta data field. This field contains frequently used methods as a controlled vocabulary."@en ;
+                       rdfs:label "georeferencing method"@en .
+
+
+###  https://w3id.org/mobilitydcatap#legalFramework
+:legalFramework rdf:type owl:ObjectProperty ;
+                rdfs:domain dcat:Dataset ;
+                rdfs:range skos:Concept ;
+                rdfs:comment "References to one or several legal frameworks being relevant for the data set or service, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponing data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations."@en ;
+                rdfs:label "legal framework"@en .
+
+
+###  https://w3id.org/mobilitydcatap#nationalBodyAssessmentReport
+:nationalBodyAssessmentReport rdf:type owl:ObjectProperty ;
+                              rdfs:domain dcat:Dataset ;
+                              rdfs:range rdfs:Resource ;
+                              rdfs:comment "Describes the draft result of the last validation process by the national body, in form of a URL to external details or results."@en ;
+                              rdfs:label "national body assessment report"@en .
+
+
+###  https://w3id.org/mobilitydcatap#nationalBodyAssessmentResult
+:nationalBodyAssessmentResult rdf:type owl:ObjectProperty ;
+                              rdfs:domain dcat:Dataset ;
+                              rdfs:range :NBAssessmentResult ;
+                              rdfs:comment "Describes the draft result of the last validation process by the national body, in form of a textual description."@en ;
+                              rdfs:label "national body assessment result"@en .
+
+
+###  https://w3id.org/mobilitydcatap#networkCoverage
+:networkCoverage rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Dataset ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:comment """Describes the part of the transport network that is covered by the delivered content.  
 For road traffic: network typology for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended, to allow data search across different countries. In addition, national classifications are allowed.  
 For other transport modes: information which physical infrastructure is used by the services covered by the data. 
 For all modes: Information if the data covers the TEN network."""@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Resource .
+                 rdfs:label "network coverage"@en .
 
-:networkCoverageDescription a owl:DatatypeProperty ;
-  rdfs:label "network coverage description"@en ;
-  rdfs:comment "Adds a textual description to \"Transport network coverage” (see above). It might contain details of the network typology on a national basis. This is necessary due to different meanings and understanding of different terms in each country."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Literal .
 
-:publishedFrom a owl:ObjectProperty ;
-  rdfs:label "published from"@en ;
-  rdfs:comment "Describes the beginning of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform.  This field can be set optional for the user input, but for the data base it is mandatory. If there is no entry it means that the publication gets valid immediately and the timestamp is the same as the metadata timestamp."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range [ a owl:Restriction ;
-      owl:onProperty dcat:startDate ;
-      owl:someValuesFrom rdfs:Literal ] ;
-  rdfs:subPropertyOf dct:temporal .
+###  https://w3id.org/mobilitydcatap#publishedFrom
+:publishedFrom rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dct:temporal ;
+               rdfs:domain dcat:Distribution ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty dcat:startDate ;
+                            owl:someValuesFrom rdfs:Literal
+                          ] ;
+               rdfs:comment "Describes the beginning of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform.  This field can be set optional for the user input, but for the data base it is mandatory. If there is no entry it means that the publication gets valid immediately and the timestamp is the same as the metadata timestamp."@en ;
+               rdfs:label "published from"@en .
 
-:publishedUntil a owl:ObjectProperty ;
-  rdfs:label "published until"@en ;
-  rdfs:comment "Describes the end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform. This field is optional, if there is no entry it means that the publication does not expire."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range [ a owl:Restriction ;
-      owl:onProperty dcat:endDate ;
-      owl:someValuesFrom rdfs:Literal ] ;
-  rdfs:subPropertyOf dct:temporal .
 
-:serviceTypeCategory a owl:ObjectProperty ;
-  rdfs:label "service type category" ;
-  rdfs:comment "This element is only relevant for EC Delegated Regulation 2017/1926 and shows the distinction between the different service categories related to the data set use."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept .
+###  https://w3id.org/mobilitydcatap#publishedUntil
+:publishedUntil rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dct:temporal ;
+                rdfs:domain dcat:Distribution ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty dcat:endDate ;
+                             owl:someValuesFrom rdfs:Literal
+                           ] ;
+                rdfs:comment "Describes the end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform. This field is optional, if there is no entry it means that the publication does not expire."@en ;
+                rdfs:label "published until"@en .
 
-:transportationMode a owl:ObjectProperty ;
-  rdfs:label "transportation mode"@en ;
-  rdfs:comment "Describes the transportation mode that is covered by by the delivered content. Data can be valid for more than one transportation mode, so a multiple choice should be applied."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range rdfs:Resource .
 
-:validFrom a owl:ObjectProperty ;
-  rdfs:label "valid from"@en ;
-  rdfs:comment "Describes the beginning of the time reference of the delivered content (e.g., validity time of a public-transport time table). This date may differ from \"Published from” (see above)."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range [ a owl:Restriction ;
-      owl:onProperty dcat:startDate ;
-      owl:someValuesFrom rdfs:Literal ] ;
-  rdfs:subPropertyOf dct:temporal .
+###  https://w3id.org/mobilitydcatap#serviceTypeCategory
+:serviceTypeCategory rdf:type owl:ObjectProperty ;
+                     rdfs:domain dcat:Dataset ;
+                     rdfs:range skos:Concept ;
+                     rdfs:comment "This element is only relevant for EC Delegated Regulation 2017/1926 and shows the distinction between the different service categories related to the data set use."@en ;
+                     rdfs:label "service type category" .
 
-:validTo a owl:ObjectProperty ;
-  rdfs:label "valid to"@en ;
-  rdfs:comment "Describes the  end of the time reference of the delivered content (e.g., validity time of a public-transport time table). This date may differ from \"Published until” (see above)."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range [ a owl:Restriction ;
-      owl:onProperty dcat:endDate ;
-      owl:someValuesFrom rdfs:Literal ] ;
-  rdfs:subPropertyOf dct:temporal .
 
-:visibility a owl:ObjectProperty ;
-  rdfs:label "visibility level" ;
-  rdfs:comment "Describes the visibility status of a data set or data service publication on the data platform interface. It is used only for internal usage or administration via predefined keys such as “public” or “private”. “Public” means that the dataset or service can be retrieved by external data platform users, or that that the corresponding metadata can be exchanged. “Private” means that the dataset, the service and the metadata are only visible to the original data provider and the data platform operator; this might be the case for test publications, for example."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept .
+###  https://w3id.org/mobilitydcatap#transportationMode
+:transportationMode rdf:type owl:ObjectProperty ;
+                    rdfs:domain dcat:Dataset ;
+                    rdfs:range rdfs:Resource ;
+                    rdfs:comment "Describes the transportation mode that is covered by by the delivered content. Data can be valid for more than one transportation mode, so a multiple choice should be applied."@en ;
+                    rdfs:label "transportation mode"@en .
 
-dct:Frequency a owl:Class ;
-  rdfs:label "Frequency"@en ;
-  rdfs:comment "A rate at which something recurs."@en .
 
-dct:Location a owl:Class ;
-  rdfs:label "Location"@en ;
-  rdfs:comment "A spatial region or named place."@en .
+###  https://w3id.org/mobilitydcatap#validFrom
+:validFrom rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf dct:temporal ;
+           rdfs:domain dcat:Dataset ;
+           rdfs:range [ rdf:type owl:Restriction ;
+                        owl:onProperty dcat:startDate ;
+                        owl:someValuesFrom rdfs:Literal
+                      ] ;
+           rdfs:comment "Describes the beginning of the time reference of the delivered content (e.g., validity time of a public-transport time table). This date may differ from \"Published from” (see above)."@en ;
+           rdfs:label "valid from"@en .
 
-dct:MediaType a owl:Class ;
-  rdfs:label "Media Type"@en ;
-  rdfs:comment "A file format or physical medium."@en .
 
-<http://www.w3.org/2006/vcard/ns#Kind> a owl:Class ;
-  rdfs:label "Kind"@en ;
-  rdfs:comment "vCard defines \"Kinds\" to represent the types of objects to be represented by vCard: Individual - To represent people, Organization - To represent organisations, Group - To represent groups of vCard objects, Location - To represent location objects"@en .
+###  https://w3id.org/mobilitydcatap#validTo
+:validTo rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf dct:temporal ;
+         rdfs:domain dcat:Dataset ;
+         rdfs:range [ rdf:type owl:Restriction ;
+                      owl:onProperty dcat:endDate ;
+                      owl:someValuesFrom rdfs:Literal
+                    ] ;
+         rdfs:comment "Describes the  end of the time reference of the delivered content (e.g., validity time of a public-transport time table). This date may differ from \"Published until” (see above)."@en ;
+         rdfs:label "valid to"@en .
 
-<http://www.w3.org/ns/adms#Asset> a owl:Class ;
-  rdfs:label "Asset"@en ;
-  rdfs:comment "An abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work) [ FRBR ]."@en .
 
-<http://www.w3.org/ns/dqv#dqv:QualityAnnotation> a owl:Class ;
-  rdfs:label "Quality Annotation"@en ;
-  rdfs:comment "Represents quality annotations, including ratings, quality certificates or feedback that can be associated to datasets or distributions. Quality annotations must have one oa:motivatedBy statement with an instance of oa:Motivation (and skos:Concept) that reflects a quality assessment purpose. We define this instance as dqv:qualityAssessment."@en .
+###  https://w3id.org/mobilitydcatap#visibility
+:visibility rdf:type owl:ObjectProperty ;
+            rdfs:domain dcat:Dataset ;
+            rdfs:range skos:Concept ;
+            rdfs:comment "Describes the visibility status of a data set or data service publication on the data platform interface. It is used only for internal usage or administration via predefined keys such as “public” or “private”. “Public” means that the dataset or service can be retrieved by external data platform users, or that that the corresponding metadata can be exchanged. “Private” means that the dataset, the service and the metadata are only visible to the original data provider and the data platform operator; this might be the case for test publications, for example."@en ;
+            rdfs:label "visibility level" .
 
-<http://www.w3.org/ns/dqv#dqv:QualityMeasurement> a owl:Class ;
-  rdfs:label "Quality Measurement"@en ;
-  rdfs:comment "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en .
 
-<https://github.com/lcomet> a owl:NamedIndividual,
-    foaf:Person ;
-  foaf:name "Lina Molinas Comet" .
+#################################################################
+#    Data properties
+#################################################################
 
-<https://github.com/marioscrock> a owl:NamedIndividual,
-    foaf:Person ;
-  foaf:name "Mario Scrocca" .
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain dcat:Dataset ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "To give the user more information about content of the dataset or service a brief description is mandatory.  The used language for the description should be the language from the field “metadata language”. If more than one language is marked at “metadata language”, for each language there should be another description."@en ;
+                rdfs:label "dataset description" .
 
-<https://github.com/orgs/mobilityDCAT-AP/people/jonas-jaderberg> a owl:NamedIndividual,
-    foaf:Person ;
-  foaf:name "Jonas Jäderberg" .
 
-:NBAssessmentResult a owl:Class ;
-  rdfs:label "National Body Assessment Result"@en .
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( dcat:Catalog
+                                           dcat:Dataset
+                                         )
+                           ] ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+               rdfs:label "identifier"@en .
 
-:haustild a owl:NamedIndividual,
-    foaf:Person ;
-  foaf:name "Hilde Austild" .
 
-:plubrich a owl:NamedIndividual,
-    foaf:Person ;
-  foaf:name "Peter Lubrich" .
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( dcat:CatalogRecord
+                                         dcat:Dataset
+                                       )
+                         ] ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Date on which the resource was changed."@en ;
+             rdfs:label "date modified"@en .
 
-dct:PeriodOfTime a owl:Class ;
-  rdfs:label "Period of Time"@en ;
-  rdfs:comment "An interval of time that is named or defined by its start and end dates."@en .
 
-dct:Standard a owl:Class ;
-  rdfs:label "Standard"@en ;
-  rdfs:comment "A reference point against which other things can be evaluated or compared."@en .
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( dcat:Catalog
+                                      dcat:Dataset
+                                    )
+                      ] ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment """For the catalog, it is the individual name of the data platform itself. 
 
-dct:conformsTo a owl:ObjectProperty ;
-  rdfs:label "conforms to"@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range [ a owl:Class ;
-      owl:unionOf ( dct:Standard skos:Concept ) ] ;
-  prov:component "An established standard to which the described resource conforms."@en .
+For the dataset, it describes the data set or service in a generic term or short description. The author is encouraged to write a meaningful description. This field is only for a brief overview, because free text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation of the data set or service is done within other fields (see below)."""@en ;
+          rdfs:label "title"@en .
 
-dct:language a owl:ObjectProperty ;
-  rdfs:label "language"@en ;
-  rdfs:comment "A language of the resource."@en ;
-  rdfs:domain [ a owl:Class ;
-      owl:unionOf ( dcat:CatalogRecord dcat:Dataset ) ] ;
-  rdfs:range dct:LinguisticSystem .
 
-dct:publisher a owl:ObjectProperty ;
-  rdfs:label "publisher" ;
-  rdfs:domain [ a owl:Class ;
-      owl:unionOf ( dcat:Catalog dcat:Dataset ) ] ;
-  rdfs:range foaf:Agent .
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#about
+rdf:about rdf:type owl:DatatypeProperty ;
+          rdfs:domain dcat:Distribution ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Allows a unique identification of the individual distribution, and is used for referencing, e.g., when exchanging metadata between NAPs. This UID can be numeric or alphanumeric." ;
+          rdfs:label "distribution unique identifier"@en .
 
-dcat:theme a owl:ObjectProperty ;
-  rdfs:label "theme"@en ;
-  rdfs:comment "A main category of the resource. A resource can have multiple themes."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range skos:Concept .
 
-:DataModelSchema a owl:Class ;
-  rdfs:label "Data Model Schema"@en .
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain dcat:Dataset ;
+                rdfs:range rdfs:Literal .
 
-:DataModelType a owl:Class ;
-  rdfs:label "Data Model Type"@en .
 
-:EncodingType a owl:Class ;
-  rdfs:label "Encoding Type"@en .
+###  http://www.w3.org/2002/07/owl#adms:versionNotes
+owl:adms:versionNotes rdf:type owl:DatatypeProperty ;
+                      rdfs:domain dcat:Dataset ;
+                      rdfs:range rdfs:Literal ;
+                      rdfs:comment "If there are changes to the data set or service (see “Changed on” above), the “Data version notes” contain a textual description of changes according to the previous version, as an addition to “Data Version” (above)."@en ;
+                      rdfs:label "version notes"@en .
 
-:MobilityGrammarTypes a owl:Class ;
-  rdfs:label "Mobility Grammar Type"@en .
 
-dct:LinguisticSystem a owl:Class ;
-  rdfs:label "Linguistic System"@en ;
-  rdfs:comment "A system of signs, symbols, sounds, gestures, or rules used in communication."@en .
+###  http://www.w3.org/ns/dcat#endDate
+dcat:endDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain dct:PeriodOfTime ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "The end of the period."@en ;
+             rdfs:label "end date"@en .
 
-dcat:endDate a owl:DatatypeProperty ;
-  rdfs:label "end date"@en ;
-  rdfs:comment "The end of the period."@en ;
-  rdfs:domain dct:PeriodOfTime ;
-  rdfs:range rdfs:Literal .
 
-dcat:startDate a owl:DatatypeProperty ;
-  rdfs:label "start date"@en ;
-  rdfs:comment "The start of the period."@en ;
-  rdfs:domain dct:PeriodOfTime ;
-  rdfs:range rdfs:Literal .
+###  http://www.w3.org/ns/dcat#startDate
+dcat:startDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain dct:PeriodOfTime ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "The start of the period."@en ;
+               rdfs:label "start date"@en .
 
-dct:temporal a owl:ObjectProperty ;
-  rdfs:label "temporal"@en ;
-  rdfs:comment "Temporal characteristics of the resource."@en ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:range [ a owl:Class ;
-      owl:unionOf ( [ a owl:Restriction ;
-            owl:onProperty dcat:endDate ;
-            owl:someValuesFrom rdfs:Literal ] [ a owl:Restriction ;
-            owl:onProperty dcat:startDate ;
-            owl:someValuesFrom rdfs:Literal ] ) ] .
 
-dcat:Catalog a owl:Class ;
-  rdfs:label "Catalog"@en ;
-  rdfs:comment "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)"@en .
+###  https://w3id.org/mobilitydcatap#dataFormatNotes
+:dataFormatNotes rdf:type owl:DatatypeProperty ;
+                 rdfs:range rdfs:Literal .
 
-dcat:CatalogRecord a owl:Class ;
-  rdfs:label "Catalog Record"@en ;
-  rdfs:comment "A record in a catalog, describing the registration of a single dcat:Resource."@en .
 
-foaf:Person a owl:Class ;
-  rdfs:label "Person"@en ;
-  rdfs:comment "The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered 'agents' in FOAF."@en ;
-  rdfs:subClassOf foaf:Agent .
+###  https://w3id.org/mobilitydcatap#dataFormatVersion
+:dataFormatVersion rdf:type owl:DatatypeProperty ;
+                   rdfs:range rdfs:Literal .
 
-foaf:Agent a owl:Class ;
-  rdfs:label "Agent"@en ;
-  rdfs:comment "The foaf:Agent class is the class of agents; things that do stuff. A well known sub-class is foaf:Person, representing people. Other kinds of agents include foaf:Organization and foaf:Group."@en .
 
-dct:format a owl:ObjectProperty ;
-  rdfs:label "format"@en ;
-  rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
-  rdfs:domain dcat:Distribution ;
-  rdfs:range [ a owl:Class ;
-      owl:unionOf ( :DataModelSchema :DataModelType :EncodingType :MobilityGrammarTypes ) ] .
+###  https://w3id.org/mobilitydcatap#nationalBodyAssessmentDate
+:nationalBodyAssessmentDate rdf:type owl:DatatypeProperty ;
+                            rdfs:domain dcat:Dataset ;
+                            rdfs:range xsd:dateTime ;
+                            rdfs:comment "Indicates the date of the last validation process by the national body. Such processes are currently specified by the NAPCORE project, and include, e.g., a cross-check of a self-declaration for correctness. The information optional and only needed for the assessment of compliance process. It might be an internal information, only visible for national bodies or other authorised users."@en ;
+                            rdfs:label "national body assessment date"@en .
 
-rdfs:Resource a owl:Class ;
-  rdfs:label "Resource"@en ;
-  rdfs:comment "All things described by RDF are called resources, and are instances of the class rdfs:Resource. This is the class of everything. All other classes are subclasses of this class. rdfs:Resource is an instance of rdfs:Class."@en .
 
-skos:Concept a owl:Class ;
-  rdfs:label "Concept" ;
-  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+###  https://w3id.org/mobilitydcatap#networkCoverageDescription
+:networkCoverageDescription rdf:type owl:DatatypeProperty ;
+                            rdfs:domain dcat:Dataset ;
+                            rdfs:range rdfs:Literal ;
+                            rdfs:comment "Adds a textual description to \"Transport network coverage” (see above). It might contain details of the network typology on a national basis. This is necessary due to different meanings and understanding of different terms in each country."@en ;
+                            rdfs:label "network coverage description"@en .
 
-dcat:Distribution a owl:Class ;
-  rdfs:label "Distribution" ;
-  rdfs:comment "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)." .
 
-dcat:Dataset a owl:Class ;
-  rdfs:label "Dataset"@en .
+#################################################################
+#    Classes
+#################################################################
 
+###  http://purl.org/dc/terms/Frequency
+dct:Frequency rdf:type owl:Class ;
+              rdfs:comment "A rate at which something recurs."@en ;
+              rdfs:label "Frequency"@en .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+dct:LinguisticSystem rdf:type owl:Class ;
+                     rdfs:comment "A system of signs, symbols, sounds, gestures, or rules used in communication."@en ;
+                     rdfs:label "Linguistic System"@en .
+
+
+###  http://purl.org/dc/terms/Location
+dct:Location rdf:type owl:Class ;
+             rdfs:comment "A spatial region or named place."@en ;
+             rdfs:label "Location"@en .
+
+
+###  http://purl.org/dc/terms/MediaType
+dct:MediaType rdf:type owl:Class ;
+              rdfs:comment "A file format or physical medium."@en ;
+              rdfs:label "Media Type"@en .
+
+
+###  http://purl.org/dc/terms/PeriodOfTime
+dct:PeriodOfTime rdf:type owl:Class ;
+                 rdfs:comment "An interval of time that is named or defined by its start and end dates."@en ;
+                 rdfs:label "Period of Time"@en .
+
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             rdfs:comment "A reference point against which other things can be evaluated or compared."@en ;
+             rdfs:label "Standard"@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class ;
+              rdfs:comment "All things described by RDF are called resources, and are instances of the class rdfs:Resource. This is the class of everything. All other classes are subclasses of this class. rdfs:Resource is an instance of rdfs:Class."@en ;
+              rdfs:label "Resource"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "Concept" .
+
+
+###  http://www.w3.org/2006/vcard/ns#Kind
+<http://www.w3.org/2006/vcard/ns#Kind> rdf:type owl:Class ;
+                                       rdfs:comment "vCard defines \"Kinds\" to represent the types of objects to be represented by vCard: Individual - To represent people, Organization - To represent organisations, Group - To represent groups of vCard objects, Location - To represent location objects"@en ;
+                                       rdfs:label "Kind"@en .
+
+
+###  http://www.w3.org/ns/adms#Asset
+<http://www.w3.org/ns/adms#Asset> rdf:type owl:Class ;
+                                  rdfs:comment "An abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work) [ FRBR ]."@en ;
+                                  rdfs:label "Asset"@en .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class ;
+             rdfs:comment "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)"@en ;
+             rdfs:label "Catalog"@en .
+
+
+###  http://www.w3.org/ns/dcat#CatalogRecord
+dcat:CatalogRecord rdf:type owl:Class ;
+                   rdfs:comment "A record in a catalog, describing the registration of a single dcat:Resource."@en ;
+                   rdfs:label "Catalog Record"@en .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:label "Dataset"@en .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class ;
+                  rdfs:comment "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)." ;
+                  rdfs:label "Distribution" .
+
+
+###  http://www.w3.org/ns/dqv#dqv:QualityAnnotation
+<http://www.w3.org/ns/dqv#dqv:QualityAnnotation> rdf:type owl:Class ;
+                                                 rdfs:comment "Represents quality annotations, including ratings, quality certificates or feedback that can be associated to datasets or distributions. Quality annotations must have one oa:motivatedBy statement with an instance of oa:Motivation (and skos:Concept) that reflects a quality assessment purpose. We define this instance as dqv:qualityAssessment."@en ;
+                                                 rdfs:label "Quality Annotation"@en .
+
+
+###  http://www.w3.org/ns/dqv#dqv:QualityMeasurement
+<http://www.w3.org/ns/dqv#dqv:QualityMeasurement> rdf:type owl:Class ;
+                                                  rdfs:comment "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en ;
+                                                  rdfs:label "Quality Measurement"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:comment "The foaf:Agent class is the class of agents; things that do stuff. A well known sub-class is foaf:Person, representing people. Other kinds of agents include foaf:Organization and foaf:Group."@en ;
+           rdfs:label "Agent"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent ;
+                  rdfs:comment "The foaf:Organization class represents a kind of foaf:Agent corresponding to social instititutions such as companies, societies etc."@en ;
+                  rdfs:label "Organization"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class ;
+            rdfs:subClassOf foaf:Agent ;
+            rdfs:comment "The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered 'agents' in FOAF."@en ;
+            rdfs:label "Person"@en .
+
+
+###  https://w3id.org/mobilitydcatap#DataModelSchema
+:DataModelSchema rdf:type owl:Class ;
+                 rdfs:label "Data Model Schema"@en .
+
+
+###  https://w3id.org/mobilitydcatap#DataModelType
+:DataModelType rdf:type owl:Class ;
+               rdfs:label "Data Model Type"@en .
+
+
+###  https://w3id.org/mobilitydcatap#EncodingType
+:EncodingType rdf:type owl:Class ;
+              rdfs:label "Encoding Type"@en .
+
+
+###  https://w3id.org/mobilitydcatap#MobilityGrammarTypes
+:MobilityGrammarTypes rdf:type owl:Class ;
+                      rdfs:label "Mobility Grammar Type"@en .
+
+
+###  https://w3id.org/mobilitydcatap#NBAssessmentResult
+:NBAssessmentResult rdf:type owl:Class ;
+                    rdfs:label "National Body Assessment Result"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://github.com/lcomet
+<https://github.com/lcomet> rdf:type owl:NamedIndividual ,
+                                     foaf:Person ;
+                            foaf:name "Lina Molinas Comet" .
+
+
+###  https://github.com/marioscrock
+<https://github.com/marioscrock> rdf:type owl:NamedIndividual ,
+                                          foaf:Person ;
+                                 foaf:name "Mario Scrocca" .
+
+
+###  https://github.com/orgs/mobilityDCAT-AP/people/jonas-jaderberg
+<https://github.com/orgs/mobilityDCAT-AP/people/jonas-jaderberg> rdf:type owl:NamedIndividual ,
+                                                                          foaf:Person ;
+                                                                 foaf:name "Jonas Jäderberg" .
+
+
+###  https://w3id.org/mobilitydcatap#haustild
+:haustild rdf:type owl:NamedIndividual ,
+                   foaf:Person ;
+          foaf:name "Hilde Austild" .
+
+
+###  https://w3id.org/mobilitydcatap#plubrich
+:plubrich rdf:type owl:NamedIndividual ,
+                   foaf:Person ;
+          foaf:name "Peter Lubrich" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:versionInfo rdfs:comment """If there are changes to the data set or service (see “Changed on” above), the “Data version” indicates an identifier of the current version. 
+“Data Version” plus “Data version notes” (below) might also enable a change history (or version history) of the corresponding data set or service, which could be hosted and published on the data platform. It is recommended to follow s W3C Data on the Web Best Practices DWBP 7 \"Provide a version identifier\" (https://www.w3.org/TR/dwbp/#VersioningInfo). Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning (https://semver.org/)."""@en ;
+                rdfs:label "version"@en .
+
+
+:dataFormatNotes rdfs:comment "If any additional information about the data format is needed, e.g., extensions being used in a “Data model”, a textual description can be provided."@en ;
+                 rdfs:label "data format notes"@en .
+
+
+:dataFormatVersion rdfs:label "data format version"@en ;
+                   rdfs:comment "There might be different versions of Grammar, Schema, or Data Model (e.g., DATEX II v3.2). Any version information can be provided in a textual format."@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
