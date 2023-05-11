@@ -59,7 +59,7 @@ var respecConfig = {
     }
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
-    errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A1.1",
+    errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A1.0",
 //    specStatus: "unofficial",
     specStatus: "ED",
 //    specStatus: "FPWD",
@@ -76,7 +76,7 @@ var respecConfig = {
 //    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/releases/",
 //    prevRecURI: "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 //    prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/1.0.1/",
-    prevRecURI: "https://w3id.org/mobilitydcatap/releases/1.1/",
+    prevRecURI: "https://w3id.org/mobilitydcatap/releases/1.0/",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
