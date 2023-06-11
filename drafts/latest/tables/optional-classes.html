@@ -17,23 +17,6 @@
 </thead>
 <tbody>
 
-<tr class="class optional ap-ext" id="activity">
-<td>
-<p>+<a href="#properties-for-activity">Activity</a></p>
-</td>
-<td>
-<p>An activity carried out by an Agent over an entity, according to a plan, and generating another entity.</p>
-<p>In GeoDCAT-AP, this class SHOULD be used to specify a testing activity over a resource, against a given Standard, producing as output a conformance degree.</p>
-</td>
-<td>
-<p><code>prov:Activity</code></p>
-</td>
-<td>
-<p>
-<a data-cite="PROV-O#Activity">§&nbsp;(2) Class: prov:Activity</a> [[PROV-O]]; 
-<a class="src-ref" data-cite="VOCAB-DCAT-2#quality-conformance-degree">§&nbsp;<bdi class="secno">12.2.2 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-2]]</p>
-</td>
-</tr>
 
 <tr class="class optional ap-ext" id="address-agent">
 <td>
@@ -50,52 +33,6 @@
 </td>
 </tr>
 
-<tr class="class optional ap-ext" id="address-kind">
-<td>
-<p>+<a href="#properties-for-address-kind">Address (Kind)</a></p>
-</td>
-<td>
-<p>A postal address of the Kind.</p>
-</td>
-<td>
-<p><code>vcard:Address</code></p>
-</td>
-<td>
-<p><a data-cite="VCARD-RDF#d4e1292">§&nbsp;Address</a> [[VCARD-RDF]]</p>
-</td>
-</tr>
-
-<tr class="class optional ap-ext" id="attribution">
-<td>
-<p>+<a href="#properties-for-attribution">Attribution</a></p>
-</td>
-<td>
-<p>A responsibility of an Agent for a resource.</p>
-</td>
-<td>
-<p><code>prov:Attribution</code></p>
-</td>
-<td>
-<p>
-<a data-cite="PROV-O#Attribution">§&nbsp;(50) Class: prov:Attribution</a> [[PROV-O]]; 
-<a class="src-ref" data-cite="VOCAB-DCAT-2#qualified-attribution">§&nbsp;<bdi class="secno">13.1 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-2]]</p>
-</td>
-</tr>
-
-<tr class="class optional" id="catalogue-record">
-<td>
-<a href="#properties-for-catalogue-record">Catalogue Record</a>
-</td>
-<td>
-<p>A description of a Catalogue's, Data Service's, or Dataset's entry in the Catalogue.</p>
-</td>
-<td>
-<p><code>dcat:CatalogRecord</code></p>
-</td>
-<td>
-<p><a data-cite="VOCAB-DCAT-2#Class:Catalog_Record">§&nbsp;<bdi class="secno">6.5 </bdi>Class: Catalog Record</a> [[VOCAB-DCAT-2]]</p>
-</td>
-</tr>
 
 <tr class="class optional" id="checksum">
 <td>
@@ -139,6 +76,21 @@
 </td>
 <td>
 <p><a class="sec-ref" data-cite="FOAF#term_Document">§&nbsp;Class: foaf:Document</a> [[FOAF]]</p>
+</td>
+</tr>
+
+<tr class="class optional ap-ext" id="external-assessment">
+<td>
+<p>+<a href="#properties-for-external-assessment">External assessment</a></p>
+</td>
+<td>
+<p>Compiles any results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations.</p>
+</td>
+<td>
+<p><code>dqv:QualityAnnotation</code></p>
+</td>
+<td>
+<p><a class="src-ref" data-cite="VOCAB-DQV#dqv:Metric">§&nbsp;<bdi class="secno">4.2 </bdi>Class: Metric</a> [[VOCAB-DQV]]</p>
 </td>
 </tr>
 
@@ -236,21 +188,6 @@ In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommend
 </td>
 </tr>
 
-<tr class="class optional ap-ext" id="metric">
-<td>
-<p>+<a href="#properties-for-metric">Metric</a></p>
-</td>
-<td>
-<p>Represents a standard to measure a quality dimension. An observation (instance of <code>dqv:QualityMeasurement</code>) assigns a value in a given unit to a Metric.</p>
-<p>In GeoDCAT-AP, this class is used to define individuals corresponding to the different types of spatial resolution.</p>
-</td>
-<td>
-<p><code>dqv:Metric</code></p>
-</td>
-<td>
-<p><a class="src-ref" data-cite="VOCAB-DQV#dqv:Metric">§&nbsp;<bdi class="secno">4.2 </bdi>Class: Metric</a> [[VOCAB-DQV]]</p>
-</td>
-</tr>
 
 <tr class="class optional" id="period-of-time">
 <td>
@@ -297,19 +234,18 @@ In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommend
 </td>
 </tr>
 
-<tr class="class optional ap-ext" id="quality-measurement">
+<tr class="class optional ap-ext" id="quality-annotation">
 <td>
-<p>+<a href="#properties-for-quality-measurement">Quality Measurement</a></p>
+<p>+<a href="#properties-for-quality-annotation">Quality annotation</a></p>
 </td>
 <td>
-<p>Represents the evaluation of a given resource (as a Data Service, Dataset, or Distribution) against a specific quality metric.</p>
-<p>In GeoDCAT-AP, this class corresponds to the notion of "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
+<p>Compiles any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment.</p>
 </td>
 <td>
-<p><code>dqv:QualityMeasurement</code></p>
+<p><code>dqv:QualityAnnotation</code></p>
 </td>
 <td>
-<p><a class="src-ref" data-cite="VOCAB-DQV#dqv:QualityMeasurement">§&nbsp;<bdi class="secno">4.1 </bdi>Class: Quality Measurement</a> [[VOCAB-DQV]]</p>
+<p><a class="src-ref" data-cite="VOCAB-DQV#dqv:Metric">§&nbsp;<bdi class="secno">4.2 </bdi>Class: Metric</a> [[VOCAB-DQV]]</p>
 </td>
 </tr>
 
