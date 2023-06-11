@@ -20,25 +20,7 @@
 </thead>
 <tbody>
 
-<tr class="property optional ap-ext" id="distribution-access-rights">
-<td>
-<p>+access rights</p>
-</td>
-<td>
-<p><code>dct:accessRights</code></p>
-</td>
-<td>
-<p><code>dct:RightsStatement</code></p>
-</td>
-<td>
-<p>This property MAY include information regarding access or restrictions based on privacy, security, or other policies.</p>
-<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-access-service">
 <td>
 <p>access service</p>
@@ -55,8 +37,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-byte-size">
 <td>
 <p>byte size</p>
@@ -73,7 +56,7 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
 <tr class="property optional ap-ext" id="distribution-character-encoding">
 <td>
@@ -86,13 +69,14 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property SHOULD be used to specify the character encoding of the Distribution, by using as value the character set names in the IANA register [[IANA-CHARSETS]].</p>
+<p>This property describes the technical encoding format of the delivered content within the Distribution. It is described via a character set standard, by using as value the character set names in the IANA register [[IANA-CHARSETS]].</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-checksum">
 <td>
 <p>checksum</p>
@@ -109,8 +93,27 @@
 <td>
 <p>0..1</p>
 </td>
+</tr>-->
+
+<tr class="property optional ap-ext" id="distribution-communicationmethod">
+<td>
+<p>+communication method</p>
+</td>
+<td>
+<p><code>mobilitydcatap:communicationMethod</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-compression-format">
 <td>
 <p>compression format</p>
@@ -127,8 +130,27 @@
 <td>
 <p>0..1</p>
 </td>
+</tr>-->
+
+<tr class="property optional ap-ext" id="distribution-dataformatnotes">
+<td>
+<p>+data format notes</p>
+</td>
+<td>
+<p><code>mobilitydcatap:dataFormatNotes</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains any additional information about the Grammar, Schema, or Data Model of the delivered content within the Distribution (see the corresponding properties). This might be about, e.g., extensions being used in a “Data model”. This information should be provided in a textual format. </p>
+</td>
+<td>
+<p>0..1</p>
+</td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-documentation">
 <td>
 <p>documentation</p>
@@ -145,7 +167,7 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
 <tr class="property optional" id="distribution-download-url">
 <td>
@@ -165,6 +187,26 @@
 </td>
 </tr>
 
+
+<tr class="property optional ap-ext" id="distribution-grammar">
+<td>
+<p>+grammar</p>
+</td>
+<td>
+<p><code>mobilitydcatap:grammar</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the technical data grammar format of the delivered content within the Distribution. It describes the standard on top of the elementary syntax that describe data structures in the dataset.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-has-policy">
 <td>
 <p>has policy</p>
@@ -181,8 +223,9 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-language">
 <td>
 <p>language</p>
@@ -199,8 +242,27 @@
 <td>
 <p>0..n</p>
 </td>
+</tr>-->
+
+<tr class="property optional ap-ext" id="distribution-sample"><!-- This DCAT-AP propoerty is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
+<td>
+<p>sample</p>
+</td>
+<td>
+<p><code>adms:sample</code></p>
+</td>
+<td>
+<p><code>rdfs:Resource</code></p>
+</td>
+<td>
+<p>This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. In DCAT-AP, there is a property "Sample" under the class "Dateset", with a range of "Distribution". This would imply, that all , i.e., all mandatory properties from "Distribution" mus be applied. To simplefy the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class "Distribution". It is assumed that all other properties form "Distributuion", e.g. "data model", also apply for the descrioption of the data sample. </p>
+</td>
+<td>
+<p>0..n</p>
+</td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-linked-schemas">
 <td>
 <p>linked schemas</p>
@@ -217,8 +279,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-media-type">
 <td>
 <p>media type</p>
@@ -235,8 +298,9 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-packaging-format">
 <td>
 <p>packaging format</p>
@@ -253,27 +317,27 @@
 <td>
 <p>0..1</p>
 </td>
+</tr>-->
+
+<tr class="property optional ap-ext" id="distribution-temporal-coverage">
+<td>
+<p>+temporal coverage</p>
+</td>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p>This property describes the beginning and end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform. If there is no entry it means that the publication gets valid immediately and the timestamp is the same as the metadata timestamp.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
 </tr>
 
-<tr class="property optional ap-ext" id="distribution-reference-system">
-<td>
-<p>+reference system</p>
-</td>
-<td>
-<p><code>dct:conformsTo</code></p>
-</td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td>
-<p>This property SHOULD be used to specify the reference system used in the Distribution.</p>
-<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-release-date">
 <td>
 <p>release date</p>
@@ -290,67 +354,9 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="distribution-representation-technique">
-<td>
-<p>+representation technique</p>
-</td>
-<td>
-<p><code>adms:representationTechnique</code></p>
-</td>
-<td>
-<p><code>skos:Concept</code></p>
-</td>
-<td>
-<p>This property MAY be used to provide more information about the format in which an Distribution is released. This is different from the file format as, for example, a ZIP file (file format) could contain an XML schema (representation technique).</p>
-<!--
-<p>In GeoDCAT-AP, this property SHOULD be used to express the spatial representation type (grid, vector, tin), by using a dedicated code list.</p>
--->
-<p>In GeoDCAT-AP, this property SHOULD be used to express the spatial representation type (grid, vector, tin), by using the URIs of the corresponding code list operated by the INSPIRE Registry [[INSPIRE-SRT]].</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional" id="distribution-rights">
-<td>
-<p>rights</p>
-</td>
-<td>
-<p><code>dct:rights</code></p>
-</td>
-<td>
-<p><code>dct:RightsStatement</code></p>
-</td>
-<td>
-<p>This property refers to a statement that specifies rights associated with the Distribution.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="distribution-spatial-resolution">
-<td>
-<p>+spatial resolution</p>
-</td>
-<td>
-<p><code>dqv:hasQualityMeasurement</code></p>
-</td>
-<td>
-<p><code>dqv:QualityMeasurement</code></p>
-</td>
-<td>
-<p>Refers to the performed quality measurements.</p>
-<p>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-spatial-resolution-in-metres">
 <td>
 <p>spatial resolution in metres</p>
@@ -367,26 +373,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="distribution-spatial-resolution-general">
-<td>
-<p>+spatial resolution as text</p>
-</td>
-<td>
-<p><code>rdfs:comment</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code></p>
-</td>
-<td>
-<p>This property MAY be used to express spatial resolution types that cannot be specified via <code>dcat:spatialResolutionInMeters</code> - i.e., spatial resolution as equivalent scale, angular distance, vertical distance.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-status">
 <td>
 <p>status</p>
@@ -403,8 +392,9 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-temporal-resolution">
 <td>
 <p>temporal resolution</p>
@@ -421,8 +411,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-title">
 <td>
 <p>title</p>
@@ -439,8 +430,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="distribution-modification-date">
 <td>
 <p>update / modification date</p>
@@ -457,7 +449,7 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
 </tbody>
 </table>
