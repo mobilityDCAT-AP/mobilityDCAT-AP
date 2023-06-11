@@ -19,6 +19,26 @@
 </tr>
 </thead>
 <tbody>
+
+
+<tr class="property recommended ap-ext" id="distribution-applicationlayerprotocol">
+<td>
+<p>+application layer protocol</p>
+</td>
+<td>
+<p><code>mobilitydcatap: applicationLayerProtocol</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the transmitting channel, i.e., the Application Layer Protocol, of the data set or service. </p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 <tr class="property recommended" id="distribution-availability">
 <td>
 <p>availability</p>
@@ -36,6 +56,43 @@
 <p>0..1</p>
 </td>
 </tr>
+
+<tr class="property recommended ap-ext" id="distribution-dataformatversion">
+<td>
+<p>+data format version<</p>
+</td>
+<td>
+<p><code>mobilitydcatap:dataFormatVersion</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property describes the version of the Grammar, Schema, or Data Model of the delivered content within the Distribution (see the corresponding properties). A version might be, e.g., DATEX II v3.2. This information should be provided in a textual format. </p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="distribution-datamodelschema">
+<td>
+<p>+data model schema</p>
+</td>
+<td>
+<p><code>mobilitydcatap:dataModelSchema</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the schema of the delivered content, as applied for the data model within the Distribution (see property "data model"). The schema can be individually determined by the data provider (e.g., a stakeholder-based DATEX II profile) or a prescribed by other institutions (e.g., a DATEX II recommended reference profile). The data platform should keep references of commonly used schemas.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 <tr class="property recommended" id="distribution-description">
 <td>
 <p>description</p>
@@ -53,23 +110,8 @@
 <p>0..n</p>
 </td>
 </tr>
-<tr class="property recommended" id="distribution-format">
-<td>
-<p>format</p>
-</td>
-<td>
-<p><code>dct:format</code></p>
-</td>
-<td>
-<p><code>dct:MediaTypeOrExtent</code></p>
-</td>
-<td>
-<p>This property refers to the file format of the Distribution.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
+
+
 <tr class="property recommended" id="distribution-licence">
 <td>
 <p>licence</p>
@@ -87,5 +129,6 @@
 <p>0..1</p>
 </td>
 </tr>
+
 </tbody>
 </table>
