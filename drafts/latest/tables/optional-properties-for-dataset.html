@@ -29,7 +29,7 @@
 </tr>
 </thead>
 <tbody>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-access-rights">
 <td>
 <p>access rights</p>
@@ -42,13 +42,14 @@
 </td>
 <td>
 <p>This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public.</p>
-<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
+.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-conforms-to">
 <td>
 <p>conforms to</p>
@@ -65,27 +66,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="dataset-creation-date">
-<td>
-<p>+creation date</p>
-</td>
-<td>
-<p><code>dct:created</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
-</td>
-<td>
-<p>This property contains the date on which the Dataset has been first created.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional" id="dataset-creator">
+<tr class="property optional" id="dataset-creator"><!-- This DCAT-AP propoerty is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>creator</p>
 </td>
@@ -103,6 +86,7 @@
 </td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-documentation">
 <td>
 <p>documentation</p>
@@ -119,27 +103,27 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional" id="dataset-frequency">
+<tr class="property optional ap-ext" id="dataset-external-assessment">
 <td>
-<p>frequency</p>
+<p>external assessment</p>
 </td>
 <td>
-<p><code>dct:accrualPeriodicity</code></p>
+<p><code>mobilitydcatap:externalAssessment</code></p>
 </td>
 <td>
-<p><code>dct:Frequency</code></p>
+<p><code>mobilitydcatap:ExternalAssessment</code></p>
 </td>
 <td>
-<p>This property refers to the frequency at which the Dataset is updated.</p>
+<p>This property refers to the results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations.  EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies and installed individually in each Member State. The property shoould point to the recent assessment procedure, including its date, its result as a free-text and/or a link refererring to an assessment report online. The information should be internal, i.e., only visible for organisations responsible for the assessment or other authorised users. The difference to the property "quality description" is that the latter one is provided by the data provider, while the assessment results are provided by external organisation. </p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-has-version">
+<tr class="property optional" id="dataset-has-version"><!-- This DCAT-AP property is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>has version</p>
 </td>
@@ -150,7 +134,7 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset.</p>
+<p>This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to property "is version of", with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version hiostory. Multiple versions should be differentiated via the properties "version" and "version notes".</p>
 </td>
 <td>
 <p>0..n</p>
@@ -168,14 +152,15 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains the main identifier for the Dataset, e.g., the URI or other unique identifier in the context of the Catalogue.</p>
+<p>This property contains the main identifier for the dataset, e.g., the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data platforms.
+</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-is-referenced-by">
+<tr class="property optional" id="dataset-is-referenced-by"><!-- This DCAT-AP property is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>is referenced by</p>
 </td>
@@ -186,14 +171,14 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property is about a related resource, such as a publication, that references, cites, or otherwise points to the Dataset.</p>
+<p>This property is about a related resource, such as another dataset, that references, cites, or otherwise points to the original dataset. Corresponds to property "related resource", with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data. both covering the same parking facilities. </p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-is-version-of">
+<tr class="property optional" id="dataset-is-version-of"><!-- This DCAT-AP property is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>is version of</p>
 </td>
@@ -204,13 +189,14 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.</p>
+<p>This property refers to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property "has version", with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version hiostory. Multiple versions should be differentiated via the properties "version" and "version notes".</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-landing-page">
 <td>
 <p>landing page</p>
@@ -227,26 +213,27 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr></tr>-->
 
-<tr class="property optional" id="dataset-language">
+<tr class="property optional ap-ext" id="dataset-legal-framework">
 <td>
-<p>language</p>
+<p>legal framework</p>
 </td>
 <td>
-<p><code>dct:language</code></p>
+<p><code>mobilitydcatap:legalFramework</code></p>
 </td>
 <td>
-<p><code>dct:LinguisticSystem</code></p>
+<p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to a language of the Dataset. This property can be repeated if there are multiple languages in the Dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property refers to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponing data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-other-identifier">
 <td>
 <p>other identifier</p>
@@ -263,8 +250,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-provenance">
 <td>
 <p>provenance</p>
@@ -281,8 +269,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-qualified-attribution">
 <td>
 <p>qualified attribution</p>
@@ -299,8 +288,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-qualified-relation">
 <td>
 <p>qualified relation</p>
@@ -317,28 +307,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="dataset-reference-system">
-<td>
-<p>+reference system</p>
-</td>
-<td>
-<p><code>dct:conformsTo</code></p>
-</td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td>
-<p>This property SHOULD be used to specify the reference system used in the Dataset.</p>
-<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional" id="dataset-related-resource">
+<tr class="property optional" id="dataset-related-resource"><!-- This DCAT-AP propoerty is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>related resource</p>
 </td>
@@ -349,14 +320,14 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property refers to a related resource.</p>
+<p>This property refers to a related resource. Corresponds to property "is referenced by", with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data. both covering the same parking facilities. </p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-release-date">
+<tr class="property optional" id="dataset-release-date"><!-- This DCAT-AP propoerty is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>release date</p>
 </td>
@@ -367,32 +338,14 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the date of formal issuance (e.g., publication) of the Dataset.</p>
+<p>This property contains the date of formal issuance (e.g., publication) of the Dataset. This is redundant to property "created" from class "Catalogue Record" and should not be used.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-rights-holder">
-<td>
-<p>+rights holder</p>
-</td>
-<td>
-<p><code>dct:rightsHolder</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>This property refers to an Agent (organisation) holding rights on the Dataset.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional" id="dataset-sample">
+<tr class="property optional" id="dataset-sample"><!-- This DCAT-AP propoerty is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
 <p>sample</p>
 </td>
@@ -410,6 +363,43 @@
 </td>
 </tr>
 
+<tr class="property optional" id="dataset-sample">
+<td>
+<p>sample</p>
+</td>
+<td>
+<p><code>adms:sample</code></p>
+</td>
+<td>
+<p><code>dcat:Distribution</code></p>
+</td>
+<td>
+<p>This property refers to a sample Distribution of the dataset.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-service-category">
+<td>
+<p>service category</p>
+</td>
+<td>
+<p><code>mobilitydcatap:serviceCategory</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to predefined categopries of information services for multimodal mobility, in accordance to possible services listed in EC Delegated Regulation 2017/1926 (Multimodal Travel Information Services). In particular, this property will describe, if a dataset is intended to explicitly support specific services listed in EC Regulation 2017/1926. Examples for such services are “location search”, which is based on a data set describing address identifiers, or “trip plan computation”, which is based on a data set describing the road network. It might be used to declare for which sercive the dataset is intended for.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-source">
 <td>
 <p>source</p>
@@ -427,26 +417,9 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
-<tr class="property optional ap-ext" id="dataset-spatial-resolution">
-<td>
-<p>+spatial resolution</p>
-</td>
-<td>
-<p><code>dqv:hasQualityMeasurement</code></p>
-</td>
-<td>
-<p><code>dqv:QualityMeasurement</code></p>
-</td>
-<td>
-<p>Refers to the performed quality measurements.</p>
-<p>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-spatial-resolution-in-metres">
 <td>
 <p>spatial resolution in metres</p>
@@ -463,26 +436,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="dataset-spatial-resolution-general">
-<td>
-<p>+spatial resolution as text</p>
-</td>
-<td>
-<p><code>rdfs:comment</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code></p>
-</td>
-<td>
-<p>This property MAY be used to express spatial resolution as free-text, when it cannot be specified via <code>dqv:hasQualityMeasurement</code> and <code>dcat:spatialResolutionInMeters</code>.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-temporal-resolution">
 <td>
 <p>temporal resolution</p>
@@ -499,26 +455,9 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="dataset-topic-category">
-<td>
-<p>+topic category</p>
-</td>
-<td>
-<p><code>dct:subject</code></p>
-</td>
-<td>
-<p><code>skos:Concept</code></p>
-</td>
-<td>
-<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Topic categories in accordance with EN ISO 19115" code list operated by the INSPIRE Registry [[INSPIRE-TC]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-type">
 <td>
 <p>type</p>
@@ -536,7 +475,7 @@
 <td>
 <p>0..1</p>
 </td>
-</tr>
+</tr>-->
 
 <tr class="property optional" id="dataset-modification-date">
 <td>
@@ -549,7 +488,7 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the most recent date on which the Dataset was changed or modified.</p>
+<p>This property contains the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -567,7 +506,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a version number or other version designation of the Dataset.</p>
+<p>This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property "update / modification date".  "Version” plus “Version notes” might also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow s W3C Data on the Web Best Practices DWBP 7 "Provide a version identifier" (https://www.w3.org/TR/dwbp/#VersioningInfo). Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning (https://semver.org/).</p>
 </td>
 <td>
 <p>0..1</p>
@@ -585,13 +524,14 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a description of the differences between this version and a previous version of the Dataset. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property “version”. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
+<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-was-generated-by">
 <td>
 <p>was generated by</p>
@@ -608,149 +548,23 @@
 <td>
 <p>0..n</p>
 </td>
-</tr>
+</tr>-->
 
-<tr class="property optional ap-ext" id="dataset-was-used-by">
-<td>
-<p>+was used by</p>
-</td>
-<td>
-<p><code>prov:wasUsedBy</code></p>
-</td>
-<td>
-<p><code>prov:Activity</code></p>
-</td>
-<td>
-<p>This property refers to an Activity that used the Dataset.</p>
-<p>In GeoDCAT-AP, this property MAY be used to specify a testing Activity over a Dataset, against a given Standard, producing as output a conformance degree.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
 
-<!-- NEW -->
 
-<tr class="property optional ap-ext" id="dataset-custodian">
-<td>
-<p>+custodian</p>
-</td>
-<td>
-<p><code>geodcat:custodian</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
 
-<tr class="property optional ap-ext" id="dataset-distributor">
+<tr class="property optional ap-ext" id="dataset-quality-description">
 <td>
-<p>+distributor</p>
+<p>quality description</p>
 </td>
 <td>
-<p><code>geodcat:distributor</code></p>
+<p><code>dqv:hasQualityAnnotation</code></p>
 </td>
 <td>
-<p><code>foaf:Agent</code></p>
+<p><code>dqv:QualityAnnotationt</code></p>
 </td>
 <td>
-<p>Party who distributes the resource [[ISO-19115]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-originator">
-<td>
-<p>+originator</p>
-</td>
-<td>
-<p><code>geodcat:originator</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>Party who created the resource [[ISO-19115]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-principal-investigator">
-<td>
-<p>+principal investigator</p>
-</td>
-<td>
-<p><code>geodcat:principalInvestigator</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>Key party responsible for gathering information and conducting research [[ISO-19115]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-processor">
-<td>
-<p>+processor</p>
-</td>
-<td>
-<p><code>geodcat:processor</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-resource-provider">
-<td>
-<p>+resource provider</p>
-</td>
-<td>
-<p><code>geodcat:resourceProvider</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>Party that supplies the resource [[ISO-19115]].</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-user">
-<td>
-<p>+user</p>
-</td>
-<td>
-<p><code>geodcat:user</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td>
-<p>Party who uses the resource [[ISO-19115]].</p>
+<p>This property describes any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the “rights holder”. This information shall assist data consumers in determining the value of data for their own services. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations. Quality aspects can be noted via a free text and optionally via URLs linking to further quality information. The information can be provided by free text and/or an URL to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” is required. If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects, these frameworks should be referenced. </p>
 </td>
 <td>
 <p>0..n</p>
