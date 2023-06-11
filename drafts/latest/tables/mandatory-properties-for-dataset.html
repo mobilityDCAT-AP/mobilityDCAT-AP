@@ -19,6 +19,8 @@
 </tr>
 </thead>
 <tbody>
+
+
 <tr class="property mandatory" id="dataset-description">
 <td>
 <p>description</p>
@@ -30,12 +32,88 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property contains more information about the dataset as a brief, free-text description. It is used only for a brief overview, because free-text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation and other aspects about the dataset are descrobed within other properties of the dataset.
+  This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>. The applied language versions should correspond to the field “metadata language”. If more than one language is marked at “metadata language”, for each language there should be another version. </p>
 </td>
 <td>
 <p>1..n</p>
 </td>
 </tr>
+
+<tr class="property mandatory" id="dataset-distribution">
+<td>
+<p>dataset distribution</p>
+</td>
+<td>
+<p><code>dcat:distribution</code></p>
+</td>
+<td>
+<p><code>dcat:Distribution</code></p>
+</td>
+<td>
+<p>This property links the dataset to an available distribution. In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, it is also mandatory to use the property “record”.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="dataset-frequency">
+<td>
+<p>frequency</p>
+</td>
+<td>
+<p><code>dct:accrualPeriodicity</code></p>
+</td>
+<td>
+<p><code>dct:Frequency</code></p>
+</td>
+<td>
+<p>This property describes how often the delivered content is updated. This information tells a data comsumer, how often it is updated on the on the data platform, so this person might align the frequency of data retrieval to this data. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the expected change frequency (see property “update / modification date”). The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. </p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="dataset-language">
+<td>
+<p>language</p>
+</td>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p><code>dct:LinguisticSystem</code></p>
+</td>
+<td>
+<p>This property refers to a language of content data, if this data has a natural language embedded. Such data contents might be text fields, addresses etc. Selection of one language is mandatory. According to the ISO 639 standard part 2, a 3 letter code for 24 EU languages is available.
+  This property can be repeated if there are multiple languages in the Dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>. The ISO 639 standard should be used.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
+
+<tr class="property mandatory" id="dataset-spatial-coverage">
+<td>
+<p>spatial / geographic coverage</p>
+</td>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p>This property refers to a geographic region that is covered by the delivered content. Data can be valid for more than one region, so a multiple choice is applied. According to DCAT-AP, a georeference via the class "Location" can be expressed by spatial regions (geographic coordinates) or via a named place (controlled vocabulary). See: https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used. For National Access Points,a named place via NUTS codes (Nomenclature des unités territoriales statistiques) is recommended. Alternative geocodes instead or in addition to NUTS, e.g., local codes or EU codes, are allowed. </p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
 <tr class="property mandatory" id="dataset-title">
 <td>
 <p>title</p>
@@ -47,11 +125,50 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a name given to the Dataset. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property contains a name given to the dataset in a generic term. The name should be a meaningful, unique and unambigous label. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.The applied language versions should correspond to the field “metadata language”. If more than one language is marked at “metadata language”, for each language there should be another version.</p>
 </td>
 <td>
 <p>1..n</p>
 </td>
 </tr>
+
+<tr class="property mandatory" id="dataset-publisher">
+<td>
+<p>publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (company and person) that publishes the corresponding dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable. This entity is the direct contact for the platform operator or data-consuming platform users, who have questions or issues about the provisioning of a dataset. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property "Metadata Point of Contact" and/or “Data Owner”. </p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="dataset-category">
+<td>
+<p>theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to the category of the content, as delivered by a dataset. A dataset may be associated with multiple themes. A category is important for data seekers who are interested for a particular type of data.
+  The category is described via a mobility-related taxonomy in two hierarchy levels: The 1st level is a metadata field labeled "Data content category" describes the classification of the data content on an aggregated level. The 2nd level is a metadata field labeled “Data content sub catagory” concretises the "Data content category" via one or several sub-categories. When entering the metadata for one dataset, the data provider would first select one or several options of a "Data content category", and then optionally concretise this with one or more options of corresponding “Data content sub catagory”. The platform must be able to handle the dependencies between these two levels, i.e., match the allowed options between the 1st and 2nd level.
+  According to DCAT-AP, this property must further refer to a Controlled Vocabulary "Data Themes" by the Publications Office of the European Union (https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme). It is recommended to use this Controlled Vocabulary as a 3rd metadata field labeled "EU Open Data Theme". In most cases, it is assumed that the relevant values from this EU vocabulary is "Transport" (https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/TRAN).</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
 </tbody>
 </table>
