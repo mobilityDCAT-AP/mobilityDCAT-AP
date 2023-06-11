@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<title>mobilityDCAT-AP - Version 1.0</title>
+<title>mobilityDCAT-AP - Version 1.1</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -85,41 +85,44 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document contains version 1.0 of the specification for mobilityDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing mobility datasets, dataset series, and services.</p>
+<p>This document contains version 1.1 of the specification for mobilityDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing mobility datasets, dataset series, and services.</p>
 
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making mobility information better findable across borders and sectors. For this purpose, mobility-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
 
-<p><strong>The mobilityDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[?INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of mobility metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on [[ISO-19115]] and [[ISO-19119]], while at the same time publishing these collections on [[DCAT-AP]]-conformant data portals. A conversion to an RDF representation allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
 
 <section id="context">
 
 <h3>Context</h3>
 
-<p>With a view to fostering Europe's digital transformation, the European Commission is investing in frameworks and agreements to provide governments and businesses with the appropriate resources to digitalise their services. There are, for instance, building blocks available for creating a single market for data, where data flows freely within the EU and across sectors for the benefit of businesses, researchers and public administrations.</p>
+<p>Digitalisation in the mobility domain often involves making various data from various actors discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. They often have a specific spatial coverage and/or a specific thematic coverage, e.g., showing public transport data for one region. In addition, legal obligations to set up and populate such portals have been established, e.g., in the European Union via the National Access Points (NAPs). </p>
 
-<p>To this direction, the European Commission launched the European Data Strategy [[DataStrategy]], as part of the European Commission's priorities for 2019-2024 in order to make the EU a leader in a data-driven society.</p>
+<p>Metadata are a crucial building block for accessibility and reusability of datasets in NAPs and other mobility data portals. However, a common metadata approach across different mobility portals has not been established yet, unlike in other domains such as bibliography. A common metadata approach can ease and harmonise data accessibility and exchange, thus enhancing the efficiency of individual mobility data portals. To proceed with metadata harmonisation, a dedicated Working Group within the EU-cofunded project NAPCORE is taking care of the definition and maintenance of a common metadata schema for all NAPs in Europe, but also for any mobility data portals. </p>
 
-<p>Studies previously conducted on behalf of the European Commission (e.g., [[Vickery]]) shed light on the importance of having data findable and available in machine readable format in order to stimulate its reuse. This vision led to several legislative actions to reduce barriers and promote data sharing, such as the Open Data Directive [[OPENDATA-DIR]], which turned out to be a driving force towards a more transparent and fair access to government data.</p>
+<p>Starting from the analysis of the European recommendations for the interoperability of data catalogues, the Working Group has defined a roadmap for the design, implementation and publication of the metadata schema. The roadmap is composed of five steps: collection of requirements from experts and transportation stakeholders, definition of the conceptual model, implementation, documentation and guidelines, hosting and publication. The conceptual modal, containing definitions of essential metadata elements for mobility data portals, allows for precisely and unambiguously designating a mobility dataset, e.g. for representing the data topic, the data provider or the data format. Further, this model is linked to established, metadata specifications, namely DCAT-AP. Moreover, a formal metadata specification was elaborated as an extension to DCAT-AP, called mobilityDCAT-AP. </p>
 
-<p>With this regard, the wide range of (open) data portals developed by European public administrations is the result of this mission. These Web-based interfaces allow access to data by providing users means to explore a catalogue of datasets. To facilitate the sharing, discovery and re-use of the data beyond the (open) data portal, common agreements for the exchange of catalogues of datasets are needed. These interoperability agreements enable to connect (open) data catalogues into a pan-european catalogue of datasets.</p>
+<p>mobilityDCAT-AP allows harmonised, platform-independent metadata descriptions in human-readable and machine-readable formats. The latter one allows for an automated import and export of metadata with 3rd parties via an API, for example. Analogous to DCAT-AP, the specification is based on a Resource Description Framework (RDF) schema, being an enabler for semantic technologies. This facilitates, for example, enhanced queries about the metadata, or a deduction of additional information from the metadata. After its first release in summer 2023, this specification is being promoted for wide-scale usage in mobility data portals. For improved acceptance and sustainability, formal maintenance and governance structures were also established for mobilityDCAT-AP. Lastly, the common approach is an input for a planned cross-border metadata registry, resulting in a planned demonstrator and proof-of-concept for mobilityDCAT-AP.</p>
 
-<p>The DCAT-AP application profile specifies the generic agreements for (open) data portals operated by public administrations in Europe. This specification extends DCAT-AP with additional requirements for mobility data.</p>
 
-<p>This work has been carried out in the context of Action 1.0 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) Programme [[ISA2]], and it is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[mobilityDCAT-AP-20230329]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+<p>This work has been carried out in the context of sub-working group 4.4 of the NAPCORE project. NAPCORE is an EU-cofunded Programme Support Action under the GRANT AGREEMENT No MOVE/B4/SUB/2020-123/SI2.852232. This Programme Support Action aims at supporting the implementation of Delegated Regulations under Directive 2010/40/EU regarding the requirements to make infrastructure, safety, traffic and travel data accurate and available to users such as transport authorities or service providers through National Access Points (NAPs). It will stimulate and accelerate the coordinated provision of ITS data through National Access Points to enhance the quality of services based on these data.</p>
 
 </section>
 
 <section id="scope-of-the-revision">
 
-<h3>Scope of the revision</h3>
+<h3>Scope of this version</h3>
 
-<p>The objective of this work is to produce an updated release of mobilityDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-20200608]] and [[INSPIRE-MD-20170302]].</p>
+<p>The objective of this work is to produce an initional release of mobilityDCAT-AP based on preceding preparatory activtities, including a requirement analysis, a roadmap and conceptual models.</p>
 
 <p>As [[DCAT-AP-20200608]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p>
 
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p>
 
 <p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p>
+
+<p>mobilityDCAT is applying the extension rules for DCAT-AP, as explained on https://joinup.ec.europa.eu/release/dcat-ap-how-extend-dcat-ap. In particular, some classes are newly created, and some properties are added to existing classes in DCAT-AP. Further, some optional or recommended properties from DCAT-AP are declared as mandatory, and some optional or recommended properties from DCAT-AP are removed. The usage notes are refined to adress the special considerations in the context of mobility data portals. </p>
+
+<p>Design principles: some classes added by mobilityDCAT-AP; some obligation levels for classes, as previously proposed by [[DCAT-AP-20200608]], are raised to higher levels; several properties are added by mobilityDCAT-AP; several properties, as previously added by geoDCAT-AP, are reused; some obligation levels for properties, as previously proposed by [[DCAT-AP-20200608]], are raised to higher levels; some existing controlled vocabalaries are refereneced; some new controlled vocabalaries are added; several usage notes are revised or concretised; some optional properties are removed from [[DCAT-AP-20200608]]</p>
+
 
 </section>
 
@@ -211,11 +214,7 @@ table code, table pre {
 <li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-20200608]]).</li>
 </ul>
 
-<p>These extensions are meant to provide a DCAT-AP-conformant representation of mobility metadata, identified by defining RDF syntax mappings covering the union of the elements in ...</p>
-
-<p>The current specification does not change the set of mobility metadata elements already covered in its previous version, but rather it updates some of the corresponding mappings based on the new classes and properties included in [[DCAT-AP-20200608]], following the release of version 2 of the W3C Data Catalog (DCAT) Vocabulary [[VOCAB-DCAT-2]], and aligns them with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]]. With the same objective, new terms have been defined in the mobilityDCAT-AP namespace for the specification of agent roles (see <a class="no-secRef" href="#agent-roles"></a>) and spatial resolution (see <a class="no-secRef" href="#instances-of-metric"></a>). As a result, some of the classes and properties defined in [[mobilityDCAT-AP-20230329]] have been deprecated and replaced by the equivalent ones in [[DCAT-AP-20200608]] and by the newly defined terms.</p>
-
-<p>The list of deprecated classes and properties is summarised in <a class="no-sectionRef" href="#deprecated-classes-and-properties"></a>.</p>
+<p>These extensions are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
 
 <p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a UML diagram of the classes and properties included in the Application Profile.</p>
 
@@ -242,7 +241,7 @@ table code, table pre {
 
 <h3>Mandatory Classes</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-classes.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-classes.html"></div><!-- PL: class dcat:Distribution to be moved from recommended to mandatory! class dcat:CatalogRecord to be moved from optional to mandatory!-->
 
 </section>
 
@@ -259,12 +258,11 @@ table code, table pre {
 <h3>Optional Classes</h3>
 
 <aside class="note">
-<p>The following classes are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following optional classes are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#activity">Activity</a></li>
-<li>+<a href="#address-agent">Address (Agent)</a></li>
-<li>+<a href="#attribution">Attribution</a></li>
-<li>+<a href="#address-kind">Address (Kind)</a></li>
+<li>+<a href="#address-agent">Address (Agent)</a></li><!-- geoDCAT-AP addition-->
+<li>+<a href="#quality-annotation">Quality annotation</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#external-assessment">External assessment</a></li><!-- mobilityDCAT-AP addition-->
 </ul>
 </aside>
 
@@ -289,57 +287,14 @@ table code, table pre {
 <h2>Application Profile Properties per Class</h2>
 
 <p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20200608]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which mobilityDCAT-AP expresses additional constraints or on which mobilityDCAT-AP wants to emphasise their usage.
-<!--
-A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for mobilityDCAT-AP.
--->
+
 </p>
 
 <p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]], RDF/XML [[RDF-SYNTAX-GRAMMAR]], and JSON-LD [[JSON-LD11]] from a <a href="./examples/">separate folder</a>.</p>
 
-<!-- Activity -->
 
-<section id="properties-for-activity">
 
-<h3>+Activity</h3>
 
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-activity.html"></div>
-
-<p>The use of this class in mobilityDCAT-AP is illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
-
-<section id="mandatory-properties-for-activity">
-
-<h4>Mandatory properties for Activity</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#activity-generated">generated</a></li>
-<li>+<a href="#activity-qualified-association">qualified association</a></li>
-<li>+<a href="#activity-used">used</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-activity.html"></div>
-
-</section>
-
-<section id="examples-for-activity">
-
-<h4>Examples for Activity</h4>
-
-<p><a href="#ex-activity"></a> shows the use of class <code>prov:Activity</code> to specify the results of a testing activity assessing the conformance of a given resource against a given specification - as illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
-
-<aside class="example" id="ex-activity" title="A testing activity">
-<pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
 
 <!-- Address (Agent)-->
 
@@ -385,52 +340,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Address (Kind)-->
-
-<section id="properties-for-address-kind">
-
-<h3>+Address (Kind)</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-kind.html"></div>
-
-<section id="recommended-properties-for-address-kind">
-
-<h4>Recommended properties for Address (Kind)</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#address-kind-administrative-area">administrative area</a></li>
-<li>+<a href="#address-kind-city">city</a></li>
-<li>+<a href="#address-kind-country">country</a></li>
-<li>+<a href="#address-kind-postal-code">postal code</a></li>
-<li>+<a href="#address-kind-street-address">street address</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-kind.html"></div>
-
-</section>
-
-<section id="examples-for-address-kind">
-
-<h4>Examples for Address (Kind)</h4>
-
-<aside class="example" id="ex-address-kind" title="Address (Kind)">
-<p>The address in this example is the same of <a href="#ex-address-agent"></a>, but represented by using [[VCARD-RDF]].</p>
-<p>For the mapping between [[LOCN]] and [[VCARD-RDF]], see [[?LOCN-MAPPING]].</p>
-<pre data-include-format="text" data-include="./examples/address-kind.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Agent -->
+<!-- Agent,  PL: verified 28.04.23-->
 
 <section id="properties-for-agent">
 
@@ -461,18 +371,18 @@ A property which is not mentioned but would be applicable for a class according 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#agent-address">address</a></li>
-<li>+<a href="#agent-affiliation">affiliation</a></li>
-<li>+<a href="#agent-email">email</a></li>
-<li>+<a href="#agent-phone">phone</a></li>
-<li>+<a href="#agent-url">URL</a></li>
+<li>+<a href="#agent-address">address</a></li><!-- PL: check if necessary!-->
+<li>+<a href="#agent-affiliation">affiliation</a></li><!-- PL: check if necessary!-->
+<li>+<a href="#agent-email">email</a></li> <!-- PL: make mandatory!-->
+<li>+<a href="#agent-phone">phone</a></li><!-- PL: check if necessary!-->
+<li>+<a href="#agent-url">URL</a></li> <!-- PL: make recommended!-->
 </ul>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-agent.html"></div>
 
 </section>
-
+<!--
 <section id="examples-for-agent">
 
 <h4>Examples for Agent</h4>
@@ -482,72 +392,22 @@ A property which is not mentioned but would be applicable for a class according 
 </aside>
 
 </section>
-
+-->
 </section>
 
-<!-- Attribution -->
-
-<section id="properties-for-attribution">
-
-<h3>+Attribution</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-attribution.html"></div>
-
-<p>The use of this class in mobilityDCAT-AP is illustrated in <a class="no-sectionRef" href="#agent-roles"></a>.</p>
-
-<section id="mandatory-properties-for-attribution">
-
-<h4>Mandatory properties for Attribution</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#attribution-agent">agent</a></li>
-<li>+<a href="#attribution-had-role">had role</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-attribution.html"></div>
-
-</section>
-
-<section id="deprecated-properties-for-attribution">
-
-<h4>Deprecated properties for Attribution</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-attribution.html"></div>
-
-</section>
-
-<section id="examples-for-attribution">
-
-<h4>Examples for Attribution</h4>
-
-<aside class="example" id="ex-attribution" title="Attribution">
-<pre data-include-format="text" data-include="./examples/attribution.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Catalogue -->
+<!-- Catalogue, PL: verified and finalised 28.04.23 -->
 
 <section id="properties-for-catalogue">
 
 <h3>Catalogue</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div> <!-- PL: html edited -->
 
 <section id="mandatory-properties-for-catalogue">
 
 <h4>Mandatory properties for Catalogue</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue.html"></div> <!-- PL: html edited ; moved property "dct:spatial" from recommended to mandatory; moved property "dcat:record" from recommended to mandatory -->
 
 </section>
 
@@ -555,7 +415,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h4>Recommended properties for Catalogue</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue.html"></div> <!-- PL: html edited; see move above -->
 
 </section>
 
@@ -566,30 +426,11 @@ A property which is not mentioned but would be applicable for a class according 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#catalogue-access-rights">access rights</a></li>
-<li>+<a href="#catalogue-conforms-to">conforms to</a></li>
-<li>+<a href="#catalogue-contact-point">contact point</a></li>
-<li>+<a href="#catalogue-creation-date">creation date</a></li>
-<li>+<a href="#catalogue-identifier">identifier</a></li>
-<li>+<a href="#catalogue-keyword">keyword / tag</a></li>
-<li>+<a href="#catalogue-qualified-attribution">qualified attribution</a></li>
-<li>+<a href="#catalogue-reference-system">reference system</a></li>
-<li>+<a href="#catalogue-rights-holder">rights holder</a></li>
-<li>+<a href="#catalogue-category">theme / category</a></li>
-<li>+<a href="#catalogue-topic-category">topic category</a></li>
-<li>+<a href="#catalogue-was-used-by">was used by</a></li>
-
-<li>+<a href="#catalogue-custodian">custodian</a></li>
-<li>+<a href="#catalogue-distributor">distributor</a></li>
-<li>+<a href="#catalogue-originator">originator</a></li>
-<li>+<a href="#catalogue-principal-investigator">principal investigator</a></li>
-<li>+<a href="#catalogue-processor">processor</a></li>
-<li>+<a href="#catalogue-resource-provider">resource provider</a></li>
-<li>+<a href="#catalogue-user">user</a></li>
+<li>+<a href="#catalogue-record-identifier">identifier</a></li>
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div> <!-- PL: html edited ;  several DCAT-AP properties and all geoDCAT-AP additions removed except dct:identifier -->
 
 </section>
 
@@ -615,19 +456,26 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Catalogue Record -->
+<!-- Catalogue Record, PL: verified 28.04.23- -->
 
 <section id="properties-for-catalogue-record">
 
 <h3>Catalogue Record</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue-record.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue-record.html"></div> <!-- PL: html edited -->
 
 <section id="mandatory-properties-for-catalogue-record">
 
 <h4>Mandatory properties for Catalogue Record</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue-record.html"></div>
+<aside class="note">
+<p>The following mandatory properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#catalogue-record-creation-date">creation date</a></li><!-- geoDCAT-AP addition-->
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue-record.html"></div> <!-- PL: html edited; moved property "dct:created" and "dct:language" from optional to mandatory -->
 
 </section>
 
@@ -635,7 +483,14 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h4>Recommended properties for Catalogue Record</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue-record.html"></div>
+<aside class="note">
+<p>The following recommended properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="catalogue-record-visibility-status">visibility status</a></li><!-- mobilityDCAT-AP addition-->
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue-record.html"></div> <!-- PL: html edited; all DCAT-AP properties removed; one mobilityDCAT-AP property added-->
 
 </section>
 
@@ -644,31 +499,16 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Catalogue Record</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following optionanal properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#catalogue-record-character-encoding">character encoding</a></li>
-<li>+<a href="#catalogue-record-contact-point">contact point</a></li>
-<li>+<a href="#catalogue-record-creation-date">creation date</a></li>
-<li>+<a href="#catalogue-record-creator">creator</a></li>
-<li>+<a href="#catalogue-record-identifier">identifier</a></li>
-<li>+<a href="#catalogue-record-publisher">publisher</a></li>
-<li>+<a href="#catalogue-record-qualified-attribution">qualified attribution</a></li>
-<li>+<a href="#catalogue-record-rights-holder">rights holder</a></li>
-
-<li>+<a href="#catalogue-record-custodian">custodian</a></li>
-<li>+<a href="#catalogue-record-distributor">distributor</a></li>
-<li>+<a href="#catalogue-record-originator">originator</a></li>
-<li>+<a href="#catalogue-record-principal-investigator">principal investigator</a></li>
-<li>+<a href="#catalogue-record-processor">processor</a></li>
-<li>+<a href="#catalogue-record-resource-provider">resource provider</a></li>
-<li>+<a href="#catalogue-record-user">user</a></li>
+<li>+<a href="#catalogue-record-publisher">publisher</a></li><!-- geoDCAT-AP addition-->
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue-record.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue-record.html"></div> <!-- PL: html edited, all DCAT-AP properties and all geoDCAT-AP additions removed except "dct:created" and "dct:publisher"-->
 
 </section>
-
+<!--
 <section id="examples-for-catalogue-record">
 
 <h4>Examples for Catalogue Record</h4>
@@ -678,7 +518,7 @@ A property which is not mentioned but would be applicable for a class according 
 </aside>
 
 </section>
-
+-->
 </section>
 
 <!-- Category -->
@@ -885,13 +725,14 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h3>Dataset</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset.html"></div> <!-- PL: html edited -->
 
 <section id="mandatory-properties-for-dataset">
 
 <h4>Mandatory properties for Dataset</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset.html"></div> <!-- PL: html edited ; moved property "dct:publisher" and
+"dcat:distribution" and "dcat:theme" and "dct:spatial" from recommended to mandatory; moved "dct:language" and "dct:accrualPeriodicity" from optional to mandatory-->
 
 </section>
 
@@ -899,7 +740,19 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h4>Recommended properties for Dataset</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset.html"></div>
+<aside class="note">
+<p>The following recommended properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#dataset-georeferencing-method">creation date</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#dataset-network-coverage">network coverage</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#dataset-reference-system">reference system</a></li><!-- geoDCAT-AP addition-->
+<li>+<a href="#dataset-rights-holder">rights holder</a></li><!-- geoDCAT-AP addition-->
+<li>+<a href="#dataset-transportation-mode">transportation mode</a></li><!-- mobilityDCAT-AP addition-->
+</ul>
+</aside>
+
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset.html"></div> <!-- PL: html edited; moved property "dct:rightsHolder" and "dct:conformsTo" from optional to recommended; three mobilityDCAT-AP properties added-->
 
 </section>
 
@@ -908,27 +761,34 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Dataset</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following optional properties are not included in [[DCAT-AP-20200608]]:</p> <!-- no further optional additions from geoDCAT-AP are re-used for mobilityDCAT-AP!-->
 <ul>
-<li>+<a href="#dataset-creation-date">creation date</a></li>
-<li>+<a href="#dataset-reference-system">reference system</a></li>
-<li>+<a href="#dataset-rights-holder">rights holder</a></li>
-<li>+<a href="#dataset-spatial-resolution">spatial resolution</a></li>
-<li>+<a href="#dataset-spatial-resolution-general">spatial resolution as text</a></li>
-<li>+<a href="#dataset-topic-category">topic category</a></li>
-<li>+<a href="#dataset-was-used-by">was used by</a></li>
-
-<li>+<a href="#dataset-custodian">custodian</a></li>
-<li>+<a href="#dataset-distributor">distributor</a></li>
-<li>+<a href="#dataset-originator">originator</a></li>
-<li>+<a href="#dataset-principal-investigator">principal investigator</a></li>
-<li>+<a href="#dataset-processor">processor</a></li>
-<li>+<a href="#dataset-resource-provider">resource provider</a></li>
-<li>+<a href="#dataset-user">user</a></li>
+<li>+<a href="#dataset-external-assessment">external assessment</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#dataset-legal-framework">legal framework</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#dataset-quality-description">quality description</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#dataset-service-category">service category</a></li><!-- mobilityDCAT-AP addition-->
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div>
+<aside class="note">
+<p>The following optional properties are removed from[[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#dataset-access-rights">access rights</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-conforms-to">conforms to</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-documentation">documentation<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-landing-page">landing page<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-other-identifier">other identifier<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-provenance">provenance<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-qualified-attribution">qualified attribution<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-qualified-relation">qualified relation<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-source">was generated by<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-spatial-resolution-in-metres">spatial resolution in metres<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-temporal-resolution">temporal resolution<<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-type">type<</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#dataset-was-generated-by">source<</a></li><!-- mobilityDCAT-AP remove-->
+</ul>
+</aside>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div> <!-- PL: html edited ; several properties added and removed (see tables above); several use notes revised--->
 
 </section>
 
@@ -958,13 +818,23 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h3>Distribution</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-distribution.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-distribution.html"></div><!-- PL: html edited -->
 
 <section id="mandatory-properties-for-distribution">
 
 <h4>Mandatory properties for Distribution</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-distribution.html"></div>
+<aside class="note">
+<p>The following mandatory properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#distribution-datamodel">data model</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-format">format</a></li><!-- mobilityDCAT-AP move from recommended-->
+<li>+<a href="#distribution-rights">rights</a></li><!-- mobilityDCAT-AP move from optional-->
+</ul>
+</aside>
+
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-distribution.html"></div><!-- PL: html edited ; moved property  "dct:format" from recommended to mandatory; moved "dct:rights"  from optional to mandatory-->
 
 </section>
 
@@ -972,7 +842,16 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h4>Recommended properties for Distribution</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-distribution.html"></div>
+<aside class="note">
+<p>The following recommended properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#distribution-applicationlayerprotocol">application layer protocol</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-dataformatversion">data format version</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-datamodelschema">data model schema</a></li><!-- mobilityDCAT-AP addition-->
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-distribution.html"></div><!-- PL: html edited ; several properties added and removed (see tables above); several use notes revised--->
 
 </section>
 
@@ -981,14 +860,37 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Distribution</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following optional properties are not included in [[DCAT-AP-20200608]]:</p><!-- no further optional additions from geoDCAT-AP are re-used for mobilityDCAT-AP!-->
 <ul>
-<li>+<a href="#distribution-access-rights">access rights</a></li>
-<li>+<a href="#distribution-character-encoding">character encoding</a></li>
-<li>+<a href="#distribution-reference-system">reference system</a></li>
-<li>+<a href="#distribution-representation-technique">representation technique</a></li>
-<li>+<a href="#distribution-spatial-resolution">spatial resolution</a></li>
-<li>+<a href="#distribution-spatial-resolution-general">spatial resolution as text</a></li>
+<li>+<a href="#distribution-distribution-communicationmethod">communication method</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-dataformatnotes">data format notes</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-grammar">grammar</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-sample">sample</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-temporal-coverage">temporal coverage</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#distribution-character-encoding">character encoding</a></li><!-- geoDCAT-AP addition-->
+</ul>
+</aside>
+
+<aside class="note">
+<p>The following optional properties are removed from[[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#distribution-access-service">access service</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-byte-size">byte size</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-checksum">checksum</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-compression-format">compression format</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-documentation">documentation</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-has-policy">has policy</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-language">language/a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-linked-schemas">linked schemas</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-media-type">media type</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-packaging-format">packaging format</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-release-date">release date</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-spatial-resolution-in-metres">spatial resolution in metres</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-status">status</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-temporal-resolution">temporal resolution</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-title">title</a></li><!-- mobilityDCAT-AP remove-->
+<li>+<a href="#distribution-modification-date">update / modification date</a></li><!-- mobilityDCAT-AP remove-->
+
 </ul>
 </aside>
 
@@ -1176,7 +1078,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Location -->
+<!-- Location PL: edited 28.04.23-->
 
 <section id="properties-for-location">
 
@@ -1199,16 +1101,16 @@ A property which is not mentioned but would be applicable for a class according 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#location-gazetteer">gazetteer</a></li>
-<li>+<a href="#location-geographic-identifier">geographic identifier</a></li>
-<li>+<a href="#location-geographic-name">geographic name</a></li>
+<li>+<a href="#location-gazetteer">gazetteer</a></li> <!--PL: check if necessary-->
+<li>+<a href="#location-geographic-identifier">geographic identifier</a></li> <!--PL: when used in class Catalogue: change to mandatory, controlled vocabulary to be used : http://publications.europa.eu/resource/authority/country! Change range to skos:Concept!-->
+<li>+<a href="#location-geographic-name">geographic name</a></li><!--PL: check if necessary-->
 </ul>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-location.html"></div>
 
 </section>
-
+<!--
 <section id="examples-for-location">
 
 <h4>Examples for Location</h4>
@@ -1222,7 +1124,7 @@ A property which is not mentioned but would be applicable for a class according 
 </aside>
 
 </section>
-
+-->
 </section>
 
 <!-- Media Type -->
