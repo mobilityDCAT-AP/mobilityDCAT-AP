@@ -19,6 +19,25 @@
 </tr>
 </thead>
 <tbody>
+
+<tr class="property recommended ap-ext" id="dataset-georeferencing-method">
+<td>
+<p>georeferencing method</p>
+</td>
+<td>
+<p><code>mobilitydcatap:georeferencingMethod</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>his property SHOULD be used to specify the georeferencing systems  used in the dataset. This field contains frequently used methods as a controlled vocabulary.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property recommended" id="dataset-contact-point">
 <td>
 <p>contact point</p>
@@ -36,23 +55,7 @@
 <p>0..n</p>
 </td>
 </tr>
-<tr class="property recommended" id="dataset-distribution">
-<td>
-<p>dataset distribution</p>
-</td>
-<td>
-<p><code>dcat:distribution</code></p>
-</td>
-<td>
-<p><code>dcat:Distribution</code></p>
-</td>
-<td>
-<p>This property links the Dataset to an available Distribution.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
+
 <tr class="property recommended" id="dataset-keyword">
 <td>
 <p>keyword / tag</p>
@@ -64,46 +67,69 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a keyword or tag describing the Dataset.</p>
+<p>This property contains a keyword or tag describing the Dataset. For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult. Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular “theme/ category” , "network coverage" and "transportation mode". If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of "mobilityDCAT-AP", in order to update the Controlled Vocabularies.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
-<tr class="property recommended" id="dataset-publisher">
+
+<tr class="property recommended ap-ext" id="dataset-network-coverage">
 <td>
-<p>publisher</p>
+<p>+network coverage</p>
 </td>
 <td>
-<p><code>dct:publisher</code></p>
+<p><code>mobilitydcatap:networkCoverage</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property is meant to refer to the network typology for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended, to allow data search across different countries. In addition, national classifications are allowed.
+For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. For all modes, the property should indicate if the data content relate to the EU’s trans-European transport network (TEN-T network, https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en). </p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-reference-system">
+<td>
+<p>+reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].
+</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-rights-holder">
+<td>
+<p>+rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
 </td>
 <td>
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an Agent (organisation) responsible for making the Dataset available.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-<tr class="property recommended" id="dataset-spatial-coverage">
-<td>
-<p>spatial / geographic coverage</p>
-</td>
-<td>
-<p><code>dct:spatial</code></p>
-</td>
-<td>
-<p><code>dct:Location</code></p>
-</td>
-<td>
-<p>This property refers to a geographic region that is covered by the Dataset.</p>
+<p>This property refers to an entity that legally owns or holds the rights about the data provided in a dataset. This entity is responsible for the content of the data, in particular, that the data fulfilles quality criteria (if applicable, see property “Quality description”) and/or is subject to legal frameworks (if applicable, see property “Legal frameworks”). The “Data Owner” will be in many cases identical with the “Publisher”. In this case, the contact data will be copied from the “Publisher” entry.  There might be also cases where one or several “Data Owners” contract a third-party “Publisher” (e.g., an IT service company) to host and publish a data set.  This entity is the direct contact for the platform operator or data-consuming  users, who have questions or issues about the contents of a dataset, for example. The information might be identical to the property "Metadata Point of Contact"  and/or “Publisher”. When provided, it should include, as a minimum, the name and email address of the entity.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property recommended" id="dataset-temporal-coverage">
 <td>
 <p>temporal coverage</p>
@@ -115,28 +141,30 @@
 <p><code>dct:PeriodOfTime</code></p>
 </td>
 <td>
-<p>This property refers to a temporal period that the Dataset covers.</p>
+<p>This property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
-<tr class="property recommended" id="dataset-category">
+
+<tr class="property recommended ap-ext" id="dataset-transportation-mode">
 <td>
-<p>theme / category</p>
+<p>+transportation mode</p>
 </td>
 <td>
-<p><code>dcat:theme</code></p>
+<p><code>mobilitydcatap:transportationMode</code></p>
 </td>
 <td>
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to a category of the Dataset. A Dataset may be associated with multiple themes.</p>
+<p>This property describes the transportation mode that is covered by by the delivered content. Data can be valid for more than one transportation mode, so a multiple choice should be applied. </p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 </tbody>
 </table>
