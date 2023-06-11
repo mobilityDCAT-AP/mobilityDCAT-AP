@@ -30,11 +30,66 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Distribution.</p>
+<p>This property contains a URL that gives access to a Distribution of the Dataset. Depending ont he type of data provision, there are different options for describing the URL. For data services, e.g., data feeds, the URL might be the API access. However, if some agreements between the data provider and the data user need to be established first, the access URL becomes no public metadata, but is linked to a subscription that enables the access to the publication. For data which can be downloaded directly, the download URL should be copied from the optional property "donwload URL". For other cases where data cannot be directly accessed or downloaded via the platform, the ULR is a link to a service or a website which enables access to the data, e.g., a website where a data feed or a data download can be applied for. </p>
 </td>
 <td>
 <p>1..n</p>
 </td>
 </tr>
+
+<tr class="property mandatory ap-ext" id="distribution-datamodel">
+<td>
+<p>+data model</p>
+</td>
+<td>
+<p><code>mobilitydcatap:dataModel</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the data model of the delivered content within the Distribution. It desctibes the concrete data models that use the specification elements to specify specific data models.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="distribution-format">
+<td>
+<p>format</p>
+</td>
+<td>
+<p><code>dct:format</code></p>
+</td>
+<td>
+<p><code>dct:MediaTypeOrExtent</code></p>
+</td>
+<td>
+<p>This property refers to the technical syntax of the delivered content within the Distribution. It describes the base standard that specifies syntactically correct documents. On this level, only base elements of building documents properly are specified and can be proved by syntax checks.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="distribution-rights">
+<td>
+<p>rights</p>
+</td>
+<td>
+<p><code>dct:rights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property indicates the conditions if any contracts, licences and/or are applied for the use of the dataset The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset. A controlled vocabular is provided. The values can be logically mapped with the property “Standard licences”.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+
 </tbody>
 </table>
