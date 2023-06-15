@@ -24,8 +24,8 @@ var respecConfig = {
     logos: [
         {
         src: './Mobilitydcat-Ap-Logo-Farbe-RGB-1000px@300ppi.png',
-        width: 150,
-        height: 150,
+        width: 250,
+        height: 140,
   }
       ],
 //    copyrightHolder: "European Union",
