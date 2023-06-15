@@ -21,6 +21,13 @@ var respecConfig = {
     doJsonLd: true,
     noRecTrack: false,
     subtitle: "A mobility extension for the DCAT application profile for data portals in Europe",
+    logos: [
+        {
+        src: './Mobilitydcat-Ap-Logo-Farbe-RGB-1000px@300ppi.png',
+        width: 150,
+        height: 150,
+  }
+      ],
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2020,
