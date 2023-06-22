@@ -59,11 +59,12 @@ var respecConfig = {
     {
       label: "JSON-LD",
       uri: "./mobilitydcatap.jsonld",
-    },
-    {
-      label: "SHACL (Turtle)",
-      uri: "./mobilitydcatap.shacl.ttl",
     }
+    //,
+    //{
+    //  label: "SHACL (Turtle)",
+    //  uri: "./mobilitydcatap.shacl.ttl",
+    //}
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A1.0",
