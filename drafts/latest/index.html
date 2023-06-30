@@ -102,6 +102,7 @@ table code, table pre {
 
 <p>mobilityDCAT-AP allows harmonised, platform-independent metadata descriptions in human-readable and machine-readable formats. The latter one allows for an automated import and export of metadata with 3rd parties via an API, for example. Analogous to DCAT-AP, the specification is based on a Resource Description Framework (RDF) schema, being an enabler for semantic technologies. This facilitates, for example, enhanced queries about the metadata, or a deduction of additional information from the metadata. After its first release in summer 2023, this specification is being promoted for wide-scale usage in mobility data portals. For improved acceptance and sustainability, formal maintenance and governance structures were also established for mobilityDCAT-AP. Lastly, the common approach is an input for a planned cross-border metadata registry, resulting in a planned demonstrator and proof-of-concept for mobilityDCAT-AP.</p>
 
+<p>mobilityDCAT-AP is suitable for precisely and unambiguously designating metadata of any data offering with mobility relevance, e.g. for representing the data topic, the data provider or the data format. It is recommended that the metadata management of all National Access Points (NAPs) in Europe, or any other mobility data portals, be adapted to this metadata specification in order to avoid loss of information and any necessary conversions during the exchange of metadata. Furthermore, this will ensure the basis for extended interoperability, among others with other NAPs or data portals.</p>
 
 <p>This work has been carried out in the context of sub-working group 4.4 of the NAPCORE project. NAPCORE is an EU-cofunded Programme Support Action under the GRANT AGREEMENT No MOVE/B4/SUB/2020-123/SI2.852232. This Programme Support Action aims at supporting the implementation of Delegated Regulations under Directive 2010/40/EU regarding the requirements to make infrastructure, safety, traffic and travel data accurate and available to users such as transport authorities or service providers through National Access Points (NAPs). It will stimulate and accelerate the coordinated provision of ITS data through National Access Points to enhance the quality of services based on these data.</p>
 
@@ -119,25 +120,31 @@ table code, table pre {
 
 <p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p>
 
-<p>mobilityDCAT is applying the extension rules for DCAT-AP, as explained on https://joinup.ec.europa.eu/release/dcat-ap-how-extend-dcat-ap. In particular, some classes are newly created, and some properties are added to existing classes in DCAT-AP. Further, some optional or recommended properties from DCAT-AP are declared as mandatory, and some optional or recommended properties from DCAT-AP are removed. The usage notes are refined to adress the special considerations in the context of mobility data portals. </p>
-
-<p>Design principles: some classes added by mobilityDCAT-AP; some obligation levels for classes, as previously proposed by [[DCAT-AP-20200608]], are raised to higher levels; several properties are added by mobilityDCAT-AP; several properties, as previously added by geoDCAT-AP, are reused; some obligation levels for properties, as previously proposed by [[DCAT-AP-20200608]], are raised to higher levels; some existing controlled vocabalaries are refereneced; some new controlled vocabalaries are added; several usage notes are revised or concretised; some optional properties are removed from [[DCAT-AP-20200608]]</p>
-
-
 </section>
 
 <section id="specification">
 
 <h3>A DCAT-AP extension</h3>
 
-<!--
-<p>The DCAT-AP Application Profile defined in this document is based on the specification of the Data Catalog Vocabulary (DCAT) of 16 January 2014 [[VOCAB-DCAT-20140116]], and the Data Catalog Vocabulary (DCAT) - Version 2, W3C Candidate Recommendation 03 October 2019 [[VOCAB-DCAT-2-20191003]].</p>
--->
 
-<p>The mobilityDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-20200608]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
+<p>The mobilityDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification version 2.0.1. of 8 June 2020 [[DCAT-AP-v2.0.1]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
 
 <p>This dependency must be taken into account while reading and using this specification. When implementing mobilityDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p>
 
+<p>Comparing to [[DCAT-AP-v2.0.1]], the following editions were made in mobilityDCAT-AP:</p>
+  
+<ul>
+<li>some classes are newly created;</li>
+<li>some obligation levels for existing classes in DCAT-AP are raised to higher levels;</li>
+<li>some properties are added to existing classes in DCAT-AP, of which some are newly created;</li>
+<li>some obligation levels for existing properties in DCAT-AP are raised to higher levels;</li>
+<li>some existing, optional or recommended properties from DCAT-AP are removed;</li> 
+<li>some usage notes about existing classes and properties from DCAT-AP are refined to adress the special considerations in the context of mobility data portals;</li> 
+<li>some additional, existing controlled vocabalaries are refereneced;</li> 
+<li>some controlled vocabalaries are newly created.</li> 
+</ul>
+
+<p>Further, some of the class and property additions correspond to the parallel DCAT-AP extension [[GEODCAT-AP-v2.0.0]], so there is a comaptibility between these two extensions in terms of class and property additions. </p>
 </section>
 
 </section>
@@ -1803,27 +1810,16 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <p>A full change-log is available on <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP">GitHub</a></p>
 
-<section id="changes-since-20230329">
+<section id="changes-since-202300101">
 
-<h2>Changes since mobilityDCAT-AP 1.0.1 (29 March 2023)</h2>
+<h2>Starting point of mobilityDCAT-AP 1.0 (01 January 2023)</h2>
 
 <ul>
-<li>Document completely re-written starting from the [[DCAT-AP-20200608]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
-<li>Create documentation of the mobilityDCAT-AP vocabulary (see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">#1</a>. Classes and properties no longer used or replaced by new ones have been deprecated (see <a class="no-secRef" href="#deprecated-classes-and-properties"></a>).</li>
+<li>Document completely re-written starting from the [[DCAT-AP-20200608]] and [[GEODCAT-AP-v2.0.0]] specifications, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
 </ul>
 
 </section>
 
-
-<section id="changes-since-20151223">
-
-<h2>Changes since mobilityDCAT-AP 1.0.0 (23 December 2015)</h2>
-
-<ul>
-<li>Corrected a typo concerning the URIs of the code lists of the INSPIRE Registry. No other changes have been done on [[GeoDCAT-AP-20151223]].</li>
-</ul>
-
-</section>
 
 <section id="changes-summary">
 
