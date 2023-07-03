@@ -1645,7 +1645,8 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Agent Types, Agent Roles and Agent Propeortes</h2>
 
-<p>According to [[FOAF]], an Agent (via class "foaf:Agent") may be of a type of a person (via sub-class "foaf:Person"), an organisation (via sub-class "foaf:Organization"), or a group (via sub-class "foaf:Group". For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicetely mentioned as an agent, but, in this case, he or she SHOULD be attributed to an organisation via the property "org:memberOf".</p>
+<p>According to [[FOAF]], an Agent (via class "foaf:Agent") may be of a type of a person (via sub-class "foaf:Person"), an organisation (via sub-class "foaf:Organization"), or a group (via sub-class "foaf:Group". </p> 
+<p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicetely mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property "org:memberOf", and, additionally, attributed with the personal name via properties "foaf:firstName" and "foaf:surname".</p>
   
 <p>Further, [[DCAT-AP-v2.0.1]] has the following note about agent roles:</p>
   
@@ -1657,7 +1658,7 @@ Often there is applicable legislation or a licency policy in place which determi
   
 <p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under class "foaf:Agent". As "dcat:contactPoint" is using the class "vcard:Kind" as the range, this class is neither used by mobilityDCAT-AP, but kept in the overview table of optional classes for compatibility reasons.</p>  
   
-<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities: </p>  
+<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities:</p>  
 <ul>
 <li>responsible for the creation and maintenance of the data platform;</li>
 <li>responsible for the creation and maintenance of a metadata entry;</li>
