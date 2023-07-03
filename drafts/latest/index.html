@@ -1658,11 +1658,11 @@ Often there is applicable legislation or a licency policy in place which determi
 
 </section>
 
-<!-- Agent roles; PL edits 03.07.23 -->
+<!-- Agent roles and agent properties; PL edits 03.07.23 -->
 
 <section id="agent-roles" class="informative">
 
-<h2>Agent Roles</h2>
+<h2>Agent Roles and Agent Propeortes</h2>
 
 <p> [[DCAT-AP-v2.0.1]] has the following note about agent roles:</p>
   
@@ -1670,15 +1670,27 @@ Often there is applicable legislation or a licency policy in place which determi
   
 <p>In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles. In such cases, extensions to the base profile may be defined using additional properties with more specific meanings. ..." </p>
 
-<p>mobilityDCAT-AP specifies this note as follows:
+<p>mobilityDCAT-AP specifies this note as follows:</p>
   
 <p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under class "foaf:Agent". As "dcat:contactPoint" is using the class "vcard:Kind" as the range, this class is neither used by mobilityDCAT-AP, but kept in the overview table of optional classes for compatibility reasons.</p>  
   
-<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities: responsible for the creation and maintenance of the data platform; or responsible for the creation and maintenance of a metadata entry; or responsible for the provisioning of a dataset; or responsible for the content of the data.</p>    
+<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities: </p>  
+<ul>
+<li>responsible for the creation and maintenance of the data platform;</li>
+<li>responsible for the creation and maintenance of a metadata entry;</li>
+<li>responsible for the provisioning of a dataset; or</li>
+<li>responsible for the content of the data.</li>
+</ul>
   
 <p>Thus, two different agent-role properties are used: "dct:publisher" (already defined by [[DCAT-AP-v2.0.1]]); and "dct:rightsHolder" (added by mobilityDCAT-AP). In contrast, other agent-role properties such as "dct:creator" (defined by [[DCAT-AP-v2.0.1]]) are not used.</p>
 
 <p>These specifications are meant to keep the agend-related vocabulary of mobilityDCAT-AP as small as possible, to avoid any mis-interpretations and multiple usage of properties among senders.</p>
+
+<p>The class "foaf:Agent" is used to indentify the entity with the above-mentioned roles, as well as its contact details. </p>
+
+<p>Thus, a couple of properties is defined, independently of the agent's role. Of these properties, "organisation name" and "email" are mandatory. The email SHOULD be used to establish a communication channel to the agent. Further, recommended or optional properties MAY used to provide further contact details, e.g. via the agent's web adress or the postal adress. </p>
+  
+<p>All information about an agent, as described via such properties, MAY be linked to, or be part of the data portal's user registry, in case, e.g., users are required to sign in before they use the data portal.</p> 
   
 </section>
 
