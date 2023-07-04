@@ -17,12 +17,17 @@
 <th>Usage note</th>
 <td>
 <p>A collection of operations that provides access to one or more datasets or data processing functions. </p>
-<p>For mobilityDCAP-AP, it was discussed if anf how this class should be used. In fact, some mobility data are offered via sophisticated systems, such as APIs or broker interfaces, in contrast to simple downloadable files.</p>
-<p>The following advice is based on the guideline provided in [[DCAT-APv2.1.0-Guideline-Dataservices]], and an analysis on how the class "dcat:DataService" is embedded in the [[DCAT-APv2.0.1]] UML model:</p>
-<p>As a range to class "dcat:CatalogueReorod" via property "foaf:primaryTopic" as 1:1 relationship. This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about data sets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP.</p>
-<p>As a domain to class "dcat:Dataset" via property "dcat:servesDataset" as 0:n relationship, linking to one or more data sets "...that this data service can distribute". However, any metadata about the characteristics and mechanisms of an distribution channel are sufficiently described as properties of class "dcat:Distribution". In particular, information provided by property "dcat:endpointDescription" (mandatory to class "dcat:DataService") can be equally provided by the property "dcat:accessURL" (mandatory to class "dcat:Distribution").</p> 
-<p>As a range to class  "dcat:Distribution" via property "dcat:accessService" as 0:n relationship. This allows for additional information , e.g., about an end point, related to one distribution. This, in fact, MAY be useful to describe a dedicated (but optional) data service related to one distribution.</p>
-<p>Altogether, the class "dcat:DataService" is not a primary topic for describing metadata in mobility data portals, and, thus, SHOULD NOT be used. However, this class and its related properties are kept for compatibility reasons with [[DCAT-APv2.1.0], and to prepare future use cases (when dedicated data services need to be explicitely described via mobilityDCAT-AP).</p> 
+
+<p>Comparing to [[DCAT-AP-v2.0.1]], the following editions were made in mobilityDCAT-AP:</p> <!-- PL edits 04.07.12 -->
+    
+<p>For mobilityDCAP-AP, it was discussed if and how this class should be used. In fact, some mobility data are offered via sophisticated systems, such as APIs or broker interfaces, in contrast to simple downloadable files.</p>
+<p>The following advice is based on the guideline provided in [[DCAT-AP-v2.1.0-Guideline-Dataservices]], and an analysis on how the class "dcat:DataService" is embedded in the [[DCAT-AP-v2.0.1]] UML model:</p>
+<ul>
+<li>As a range to class "dcat:CatalogueReorod" via property "foaf:primaryTopic" as 1:1 relationship. This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about data sets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP.</li> 
+<li>As a domain to class "dcat:Dataset" via property "dcat:servesDataset" as 0:n relationship, linking to one or more data sets "...that this data service can distribute". However, any metadata about the characteristics and mechanisms of a distribution channel are sufficiently described as properties of class "dcat:Distribution". In particular, information provided by property "dcat:endpointDescription" (mandatory to class "dcat:DataService") can be equally provided by the property "dcat:accessURL" (mandatory to class "dcat:Distribution").</li>  
+<li>As a range to class  "dcat:Distribution" via property "dcat:accessService" as 0:n relationship. This allows for additional information , e.g., about an end point, related to one distribution. This, in fact, MAY be useful to describe a dedicated (but optional) data service related to one distribution.</li> 
+</ul>
+<p>Altogether, the class "dcat:DataService" is not a primary topic for describing metadata in mobility data portals, and, thus, SHOULD NOT be used. However, this class and its related properties are kept for compatibility reasons with [[DCAT-AP-v2.0.1]], and to prepare future use cases (when dedicated data services need to be explicitely described via mobilityDCAT-AP).</p> 
 </td></tr>
 <tr>
 <th>Reference</th>
