@@ -116,7 +116,9 @@
 <p><code>mobilitydcatap:ExternalAssessment</code></p>
 </td>
 <td>
-<p>This property refers to the results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations.  EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies and installed individually in each Member State. The property shoould point to the recent assessment procedure, including its date, its result as a free-text and/or a link refererring to an assessment report online. The information should be internal, i.e., only visible for organisations responsible for the assessment or other authorised users. The difference to the property "quality description" is that the latter one is provided by the data provider, while the assessment results are provided by external organisation. </p>
+<p>This property refers to the results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [[NAPCORE-NB]]and installed individually in each Member State. </p>
+<p> The property SHOULD point to the recent assessment procedure, including its date, its result as a free-text and/or a link refererring to an assessment report online. The information should be internal, i.e., only visible for organisations responsible for the assessment or other authorised users.</p> 
+<p>The difference to the property "dqv:hasQualityAnnotation" is that the latter one is provided by the data provider, while the assessment results are provided by external organisation. </p>
 </td>
 <td>
 <p>0..1</p>
@@ -363,24 +365,6 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-sample">
-<td>
-<p>sample</p>
-</td>
-<td>
-<p><code>adms:sample</code></p>
-</td>
-<td>
-<p><code>dcat:Distribution</code></p>
-</td>
-<td>
-<p>This property refers to a sample Distribution of the dataset.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
 <tr class="property optional ap-ext" id="dataset-service-category">
 <td>
 <p>service category</p>
@@ -392,7 +376,8 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to predefined categopries of information services for multimodal mobility, in accordance to possible services listed in EC Delegated Regulation 2017/1926 (Multimodal Travel Information Services). In particular, this property will describe, if a dataset is intended to explicitly support specific services listed in EC Regulation 2017/1926. Examples for such services are “location search”, which is based on a data set describing address identifiers, or “trip plan computation”, which is based on a data set describing the road network. It might be used to declare for which sercive the dataset is intended for.</p>
+<p>This property refers to predefined categopries of information services for multimodal mobility, in accordance to possible services listed in EC Delegated Regulation 2017/1926 [[EC-MMTIS-DR]]. In particular, this property SHOULD describe, if a dataset is intended to support specific services listed in this EC Regulation. </p>
+<p>Examples for such services are “location search”, which is based on a data set describing address identifiers, or “trip plan computation”, which is based on a data set describing the road network. It might be used to declare for which sercive the dataset is intended for.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -506,7 +491,8 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property "update / modification date".  "Version” plus “Version notes” might also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow s W3C Data on the Web Best Practices DWBP 7 "Provide a version identifier" (https://www.w3.org/TR/dwbp/#VersioningInfo). Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning (https://semver.org/).</p>
+<p>This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property "dct:modified". The properties "owl:versionInfo” plus “adms:versionNotes” might also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform.</p>
+<p>It is recommended to follow W3C Data on the Web Best Practices [[DWBP]]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [[SEMVER]].</p>
 </td>
 <td>
 <p>0..1</p>
@@ -524,7 +510,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property “version”. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property “owl:versionInfo". This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -564,7 +550,9 @@
 <p><code>dqv:QualityAnnotationt</code></p>
 </td>
 <td>
-<p>This property describes any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the “rights holder”. This information shall assist data consumers in determining the value of data for their own services. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations. Quality aspects can be noted via a free text and optionally via URLs linking to further quality information. The information can be provided by free text and/or an URL to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” is required. If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects, these frameworks should be referenced. </p>
+<p>This property describes any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the “dct:rightsHolder”. This information shall assist data consumers in determining the value of data for their own services. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
+<p>Quality aspects can be noted via a free text and optionally via URLs linking to further quality information. The information can be provided by free text and/or an URL to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” SHOULD be give.</p>
+<p>If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects [[EU-EIP-QP]], these frameworks should be referenced. </p>
 </td>
 <td>
 <p>0..n</p>
