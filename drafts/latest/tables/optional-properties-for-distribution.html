@@ -69,7 +69,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property describes the technical encoding format of the delivered content within the Distribution. It is described via a character set standard, by using as value the character set names in the IANA register [[IANA-CHARSETS]].</p>
+<p>This property describes the technical encoding format of the delivered content within the Distribution. It is described via a character set standard. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -106,7 +106,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode.</p>
+<p>This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -199,7 +199,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property describes the technical data grammar format of the delivered content within the Distribution. It describes the standard on top of the elementary syntax that describe data structures in the dataset.</p>
+<p>This property describes the technical data grammar format of the delivered content within the Distribution. It describes the standard on top of the elementary syntax that describe data structures in the dataset. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -246,7 +246,7 @@
 
 <tr class="property optional ap-ext" id="distribution-sample"><!-- This DCAT-AP propoerty is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
-<p>sample</p>
+<p>+sample</p>
 </td>
 <td>
 <p><code>adms:sample</code></p>
@@ -255,7 +255,8 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. In DCAT-AP, there is a property "Sample" under the class "Dateset", with a range of "Distribution". This would imply, that all , i.e., all mandatory properties from "Distribution" mus be applied. To simplefy the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class "Distribution". It is assumed that all other properties form "Distributuion", e.g. "data model", also apply for the descrioption of the data sample. </p>
+<p>This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. .</p>
+<p>In [[DCAT-AP-v2.0.1]], there is a property "adms:sample" under the class "Dataset", with a range of "Distribution". This implies, that all mandatory properties from "Distribution", e.g., "mobilitydcatap:dataModel", must be applied. To simplify the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class "Distribution". It is assumed that all other properties for "Distribution", e.g. "mobilitydcatap:dataModel", also apply for the description of the data sample. </p>
 </td>
 <td>
 <p>0..n</p>
