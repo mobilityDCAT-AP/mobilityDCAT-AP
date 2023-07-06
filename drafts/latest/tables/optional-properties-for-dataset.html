@@ -29,6 +29,28 @@
 </tr>
 </thead>
 <tbody>
+
+<tr class="property optional ap-ext" id="dataset-assessment">
+<td>
+<p>assessment result</p>
+</td>
+<td>
+<p><code>mobilitydcatap:assessmentResult</code></p>
+</td>
+<td>
+<p><code>mobilitydcatap:Assessment</code></p>
+</td>
+<td>
+<p>This property refers to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [[NAPCORE-NB]]and installed individually in each Member State. </p>
+<p> The property SHOULD point to the recent assessment procedure, including its date, its result as a free-text and/or a link refererring to an assessment report online. The information should be internal, i.e., only visible for organisations responsible for the assessment or other authorised users.</p> 
+<p>The difference to the property "dqv:hasQualityAnnotation" is that the latter one is provided by the data provider, while the assessment results are provided by external organisation. </p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+  
 <!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-access-rights">
 <td>
@@ -105,25 +127,6 @@
 </td>
 </tr>-->
 
-<tr class="property optional ap-ext" id="dataset-external-assessment">
-<td>
-<p>external assessment</p>
-</td>
-<td>
-<p><code>mobilitydcatap:externalAssessment</code></p>
-</td>
-<td>
-<p><code>mobilitydcatap:ExternalAssessment</code></p>
-</td>
-<td>
-<p>This property refers to the results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [[NAPCORE-NB]]and installed individually in each Member State. </p>
-<p> The property SHOULD point to the recent assessment procedure, including its date, its result as a free-text and/or a link refererring to an assessment report online. The information should be internal, i.e., only visible for organisations responsible for the assessment or other authorised users.</p> 
-<p>The difference to the property "dqv:hasQualityAnnotation" is that the latter one is provided by the data provider, while the assessment results are provided by external organisation. </p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
 
 <tr class="property optional" id="dataset-has-version"><!-- This DCAT-AP property is not part of the mobilityDCAT-AP conceptual model v9. Still kept, because maybe useful to be kept.-->
 <td>
