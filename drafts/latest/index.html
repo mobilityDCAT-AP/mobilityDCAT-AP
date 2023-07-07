@@ -898,62 +898,18 @@ table code, table pre {
 
 </section>
 
-<!-- Kind -->
+<!-- Kind --> <!-- PL edits 07.05.23-->
 
 <section id="properties-for-kind">
 
 <h3>Kind</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
-</aside>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "dcat:contactPoint" for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see <a class="no-sectionRef" href="#agent-roles"></a>. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
+</aside> 
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
 
-<section id="recommended-properties-for-kind">
-
-<h4>Recommended properties for Kind</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#kind-email">email</a></li>
-<li>+<a href="#kind-name">name</a></li>
-<li>+<a href="#kind-url">URL</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-kind.html"></div>
-
-</section>
-
-<section id="optional-properties-for-kind">
-
-<h4>Optional properties for Kind</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#kind-address">address</a></li>
-<li>+<a href="#kind-affiliation">affiliation</a></li>
-<li>+<a href="#kind-name">name</a></li>
-<li>+<a href="#kind-phone">phone</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-kind.html"></div>
-
-</section>
-
-<section id="examples-for-kind">
-
-<h4>Examples for Kind</h4>
-
-<aside class="example" id="ex-kind" title="Kind">
-<pre data-include-format="text" data-include="./examples/kind.ttl"></pre>
-</aside>
-
-</section>
 
 </section>
 
