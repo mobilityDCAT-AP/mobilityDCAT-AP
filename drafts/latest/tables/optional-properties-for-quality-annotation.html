@@ -20,9 +20,9 @@
 </thead>
 <tbody>
   
-<tr class="property optional ap-ext" id="quality-annotation-quality-description">
+<tr class="property optional ap-ext" id="quality-annotation-quality-annotation-ressource">
 <td>
-<p>+quality description</p>
+<p>+quality annotation ressource</p>
 </td>
 <td>
 <p><code>oa:hasBody</code></p>
@@ -31,7 +31,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property MAY be used to describe the date of the latest assessment procedure.</p>
+<p>This property MAY be used to describe any quality aspects regarding the delivered content, in form of a textual description.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -39,7 +39,23 @@
 </tr>
  
 
-
+<tr class="property optional ap-ext" id="quality-annotation-quality-annotation-target">
+<td>
+<p>+quality annotation target</p>
+</td>
+<td>
+<p><code>oa:hasBody</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property MAY be used to describe the target of the quality annotion, referring back to the data set being described. I.e., it is the inverse property of "dqv:hasQualityAnnotation".</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
 
 
 </td>
