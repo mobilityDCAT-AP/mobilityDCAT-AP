@@ -1,4 +1,4 @@
-<table class="simple" id="table-optional-properties-for-location">
+<table class="simple" id="table-optional-properties-for-location"><!-- PL esits 10.07.23 -->
 <thead>
 <tr>
 <th>
@@ -19,40 +19,43 @@
 </tr>
 </thead>
 <tbody>
-<tr class="property optional ap-ext" id="location-gazetteer"> 
+  
+<tr class="property optional" id="location-bbox">
 <td>
-<p>+gazetteer</p>
+<p>bounding box</p>
 </td>
 <td>
-<p><code>skos:inScheme</code></p>
+<p><code>dcat:bbox</code></p>
 </td>
 <td>
-<p><code>skos:ConceptScheme</code></p>
+<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
 </td>
 <td>
-<p>This property MAY be used to specify the gazetteer to which the Location belongs.</p>
+<p>This property refers to the geographic bounding box of a resource.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
-<tr class="property optional ap-ext" id="location-geographic-identifier">
+  
+<tr class="property optional" id="location-centroid">
 <td>
-<p>+geographic identifier</p>
+<p>centroid</p>
 </td>
 <td>
-<p><code>dct:identifier</code></p>
+<p><code>dcat:centroid</code></p>
 </td>
 <td>
-<p><code>rdfs:Literal</code></p>
+<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
 </td>
 <td>
-<p>This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer.</p>
+<p>This property refers to the geographic centre (centroid) of a resource.</p>
 </td>
 <td>
-<p>0..n</p>
+<p>0..1</p>
 </td>
 </tr>
+  
 <tr class="property optional ap-ext" id="location-geographic-name"> 
 <td> 
 <p>+geographic name</p> 
@@ -65,11 +68,13 @@
 </td> 
 <td> 
 <p>This property contains a preferred label of the Location. This property can be repeated for parallel language versions of the label - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p> 
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td> 
 <td> 
 <p>1..n</p> 
 </td> 
 </tr> 
+  
 <tr class="property optional" id="location-geometry">
 <td>
 <p>geometry</p>
@@ -87,5 +92,11 @@
 <p>0..1</p>
 </td>
 </tr>
+
+  
 </tbody>
 </table>
+
+<aside class="note">
+<p>Please note that the order of usage is as follows: use the most specific geospatial relationship by preference. E.g. if the spatial description is a bbox, use <code>dcat:bbox</code>, otherwise use <code>locn:geometry</code> (see <a class="no-sectionRef" href="#optional-properties-for-location"></a>).</p>
+</aside>
