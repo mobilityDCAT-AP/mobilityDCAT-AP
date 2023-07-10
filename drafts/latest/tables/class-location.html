@@ -16,11 +16,8 @@
 <tr>
 <th>Usage note</th>
 <td>
-<p>A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates.
-<!--
-In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommended, following the approach described in the [[GeoDCAT-AP]] specification.
--->
-</p>
+<p>A spatial region or named place. It can be represented via a named place (controlled vocabulary) or with geographic coordinates, according to DCAT-AP guidelines [[DCAT-AP-guideline-spatial]].</p>
+<p>For mobility data portals, usage of named place is recommended. Many mobility data providers represent public authorities such as states, regions, municaplitites etc, which can be easily represented via named placs. In contrast, defining of coordinates per data sets might be error-prone and inconsistent. As named spaces, identifiers SHOULD be used (via properrty "dct:identifier). These are coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. Alternativels, geographic clear names MAY be used via property "skos:prefLabel".  </p>
 </td></tr>
 <tr>
 <th>Reference</th>
