@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<title>mobilityDCAT-AP - Version 1.1</title>
+<title>mobilityDCAT-AP - Version 1.0</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<script class="remove" src="https://semiceu.github.io/respec/builds/respec-semiceu.js"></script>
+<!--<script class="remove" src="https://semiceu.github.io/respec/builds/respec-semiceu.js"></script>-->
 <script class="remove" src="./config.js"></script>
 <style>
 table.simple {width:100%;}
@@ -44,7 +44,7 @@ table code, table pre {
 
 <p>mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </p>
 
-<p>This document is a product of sub-working group 4.4 of the NAPCORE [[NAPCORE]] project consortium.</p> 
+<p>This document is a product of sub-working group 4.4 of the NAPCORE [[NAPCORE]] project consortium.</p>
 
 <p>Comments and queries should be sent via <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
 
@@ -132,16 +132,16 @@ table code, table pre {
 <p>This dependency must be taken into account while reading and using this specification. When implementing mobilityDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p>
 
 <p>Comparing to [[DCAT-AP-v2.0.1]], the following editions were made in mobilityDCAT-AP:</p>
-  
+
 <ul>
 <li>some classes are newly created;</li>
 <li>some obligation levels for existing classes in DCAT-AP are raised to higher levels;</li>
 <li>some properties are added to existing classes in DCAT-AP, of which some are newly created;</li>
 <li>some obligation levels for existing properties in DCAT-AP are raised to higher levels;</li>
-<li>some existing, optional or recommended properties from DCAT-AP are removed;</li> 
-<li>some usage notes about existing classes and properties from DCAT-AP are refined to adress the special considerations in the context of mobility data portals;</li> 
-<li>some additional, existing controlled vocabalaries are refereneced;</li> 
-<li>some controlled vocabalaries are newly created.</li> 
+<li>some existing, optional or recommended properties from DCAT-AP are removed;</li>
+<li>some usage notes about existing classes and properties from DCAT-AP are refined to adress the special considerations in the context of mobility data portals;</li>
+<li>some additional, existing controlled vocabalaries are refereneced;</li>
+<li>some controlled vocabalaries are newly created.</li>
 </ul>
 
 <p>Further, some of the class and property additions correspond to the parallel DCAT-AP extension [[GEODCAT-AP-v2.0.0]], so there is a comaptibility between these two extensions in terms of class and property additions. </p>
@@ -163,26 +163,26 @@ table code, table pre {
 <p>In the context of mobility, this might be a National Access Points adressing to the EC ITS Directive [[EC-NAP]]. Accordingly, a NAP aims to "...facilitate access, easy exchange and reuse of transport related data, in order to help support the provision of EU-wide interoperable travel and traffic services to end users." It is realised as "...a database, data warehouse, data marketplace, repository, and register, web portal or similar...".  </p>
 
 <p> In the context of NAPs, the terms "Metadata registry", "Metadata entry" and "Publication" are often used, which are explained next:</p>
-  
+
 <p>A <strong>Metadata registry</strong> is a A Metadata registry is a digital recording of all metadata entries in a data portal, each describing the administration, organisation, and content of individual publications, including the published data set and the corresponding distributions. The most visible Metadata representation are the dataset descriptions in a GUI of a NAP portal.</p>
 
 <p>A <strong>Metadata entry</strong> (sometimes called metadata record or metadata set) describes the administration, organisation, and content of an individual publication, including the published data set and the corresponding distributions.</p>
 
 <p>A <strong>Publication</strong> is an abstract construct that covers a dataset published by a data publisher and which has one or multiple distributions.</p>
 
-<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as a RDF schema [[RDFS]]. A RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and the relationships between these resources. This is done via a class and property system.</p> 
+<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as a RDF schema [[RDFS]]. A RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and the relationships between these resources. This is done via a class and property system.</p>
 
 <p>A <strong>Class</strong> is a group of resources. Classes are themselves resources. They are often identified by IRIs and may be described using properties.</p>
 
 <p>A <strong>Property</strong> is a relation between subject resources and object resources.</p>
 
-<p>The following figure shows the core elements of the DCAT-AP data model, denoting how the above-mentioned terms and relations are expressed as classes and properties. This figure also shows, how NAP-related terms, such as publications, are related to this class and property structure.</p> 
-  
-  
+<p>The following figure shows the core elements of the DCAT-AP data model, denoting how the above-mentioned terms and relations are expressed as classes and properties. This figure also shows, how NAP-related terms, such as publications, are related to this class and property structure.</p>
+
+
 <p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning, relating to potential responsibilities of metadata senders and metadata receivers.</p>
 
 <p>Such metadata senders and receivers are important actors for interoperable metadata, i.e. whenever there is an exchange of metadata between IT systems. This may happen when there are metadata import and export functions in a data portal. In this case, metadata senders and receivers are other data portals, e.g., allowing harvesting of metadata. So, the following terms refer to the capability of a data portal to provide corresponding metadata in an export function, or to read them in an import function.</p>
-  
+
 <ul>
 <li><strong>Mandatory class</strong>: a receiver MUST be able to process information about instances of the class; a sender MUST provide information about instances of the class.</li>
 <li><strong>Recommended class</strong>: a receiver MUST be able to process information about instances of the class; a sender SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class, if such information is available.</li>
@@ -380,7 +380,7 @@ table code, table pre {
 <li>+<a href="#agent-url">URL</a></li> <!-- PL: geoDCAT-AP addition-->
 </ul>
 </aside>
-  
+
 <div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-agent.html"></div>
 
 </section>
@@ -405,7 +405,7 @@ table code, table pre {
 </section>
 
 </section>
-  
+
 
 <!-- Assessment,  PL: edited 06.07.23-->
 
@@ -434,7 +434,7 @@ table code, table pre {
 
 </section>
 
-</section>  
+</section>
 
 <!-- Catalogue, PL: edited 04.07.23 -->
 
@@ -481,7 +481,7 @@ table code, table pre {
 </ul>
 </aside>
 
-  
+
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div> <!-- PL: html edited ;  several DCAT-AP properties and all geoDCAT-AP additions removed except dct:identifier -->
 
 </section>
@@ -529,7 +529,7 @@ table code, table pre {
 <li>-change type</li>
 <li>-listing date</li>
 </ul>
-</aside>  
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue-record.html"></div> <!-- PL: html edited; all DCAT-AP properties removed; one mobilityDCAT-AP property added-->
 
@@ -553,7 +553,7 @@ table code, table pre {
 <li>-source metadata</li>
 <li>-title</li>
 </ul>
-</aside>  
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue-record.html"></div> <!-- PL: html edited, all DCAT-AP properties and all geoDCAT-AP additions removed except "dct:created" and "dct:publisher"-->
 
@@ -762,7 +762,7 @@ table code, table pre {
 <li>-was generated by</li><!-- mobilityDCAT-AP remove-->
 </ul>
 </aside>
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div> 
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div>
 <!-- PL: html edited ; several properties added and removed (see tables above)-->
 
 </section>
@@ -779,7 +779,7 @@ table code, table pre {
 
 <section id="mandatory-properties-for-distribution">
 
-<h4>Mandatory properties for Distribution</h4> 
+<h4>Mandatory properties for Distribution</h4>
 
 <aside class="note">
 <p>The following mandatory properties are not included in [[DCAT-AP-v2.0.1]]:</p>
@@ -810,7 +810,7 @@ table code, table pre {
 <ul>
 <li>-availability</li>
 </ul>
-</aside>  
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-distribution.html"></div><!-- PL: html edited ; several properties added and removed (see tables above)-->
 
@@ -884,7 +884,7 @@ table code, table pre {
 
 <aside class="note">
 <p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "adms:identifier" for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
-</aside> 
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-identifier.html"></div>
 
@@ -906,7 +906,7 @@ table code, table pre {
 
 <aside class="note">
 <p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "dcat:contactPoint" for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see <a class="no-sectionRef" href="#agent-roles"></a>. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
-</aside> 
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
 
@@ -924,7 +924,7 @@ table code, table pre {
 <section id="recommended-properties-for-licence-document">
 
 <h4>Recommended property for Licence Document</h4>
-  
+
 <aside class="note">
 <p>The following recommended property is not included in [[DCAT-AP-v2.0.1]]:</p>
 <ul>
@@ -938,7 +938,7 @@ table code, table pre {
 <li>-licence type</li>>
 </ul>
 </aside>
-  
+
 <div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-licence-document.html"></div>
 
 </section>
@@ -1224,8 +1224,8 @@ table code, table pre {
 
 </section>
 
-</section> 
-  
+</section>
+
 
 <!-- Relationship -->
 
@@ -1509,27 +1509,27 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Agent Types, Agent Roles and Agent Properties</h2>
 
-<p>According to [[FOAF]], an Agent (via class "foaf:Agent") may be of a type of a person (via sub-class "foaf:Person"), an organisation (via sub-class "foaf:Organization"), or a group (via sub-class "foaf:Group". </p> 
+<p>According to [[FOAF]], an Agent (via class "foaf:Agent") may be of a type of a person (via sub-class "foaf:Person"), an organisation (via sub-class "foaf:Organization"), or a group (via sub-class "foaf:Group". </p>
 <p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicetely mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property "org:memberOf", and, additionally, attributed with the personal name via properties "foaf:firstName" and "foaf:surname".</p>
-  
+
 <p>Further, [[DCAT-AP-v2.0.1]] has the following note about agent roles:</p>
-  
+
 <p>"The DCAT Application Profile specified in this document has a single property to relate an Agent (typically, an organisation) to a Dataset. The only such ‘agent role’ that can be expressed in the current version of the profile is through the property dct:publisher (http://purl.org/dc/terms/publisher), defined as “An entity responsible for making the dataset available”. A second property is available in the DCAT recommendation, dcat:contactPoint (http://www.w3.org/TR/vocab-dcat/#Property:dataset_contactPoint), defined as “Link a dataset to relevant contact information which is provided using VCard”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</p>
-  
+
 <p>In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles. In such cases, extensions to the base profile may be defined using additional properties with more specific meanings. ..." </p>
 
 <p>mobilityDCAT-AP specifies this note as follows:</p>
-  
-<p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under class "foaf:Agent". As "dcat:contactPoint" is using the class "vcard:Kind" as the range, this class is neither used by mobilityDCAT-AP, but kept in the overview table of optional classes for compatibility reasons.</p>  
-  
-<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities:</p>  
+
+<p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under class "foaf:Agent". As "dcat:contactPoint" is using the class "vcard:Kind" as the range, this class is neither used by mobilityDCAT-AP, but kept in the overview table of optional classes for compatibility reasons.</p>
+
+<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities:</p>
 <ul>
 <li>responsible for the creation and maintenance of the data platform;</li>
 <li>responsible for the creation and maintenance of a metadata entry;</li>
 <li>responsible for the provisioning of a dataset; or</li>
 <li>responsible for the content of the data.</li>
 </ul>
-  
+
 <p>Thus, two different agent-role properties are used: "dct:publisher" (already defined by [[DCAT-AP-v2.0.1]]); and "dct:rightsHolder" (added by mobilityDCAT-AP). In contrast, other agent-role properties such as "dct:creator" (defined by [[DCAT-AP-v2.0.1]]) are not used.</p>
 
 <p>These specifications are meant to keep the agend-related vocabulary of mobilityDCAT-AP as small as possible, to avoid any mis-interpretations and multiple usage of properties among senders.</p>
@@ -1537,13 +1537,13 @@ Often there is applicable legislation or a licency policy in place which determi
 <p>The class "foaf:Agent" is used to indentify the entity with the above-mentioned roles, as well as its contact details. </p>
 
 <p>Thus, a couple of properties is defined, independently of the agent's role. Of these properties, "organisation name" and "email" are mandatory. The email SHOULD be used to establish a communication channel to the agent. Further, recommended or optional properties MAY used to provide further contact details, e.g. via the agent's web adress or the postal adress. </p>
-  
+
 <p>There is one further, recommended property "dct:type" describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regiona, national, supranational). Such organisation types are often data providers at mobility data portals, so such information is seen beneficialy.</p>
 
-<p>However, the controlled vocabulary from [[ADMS-SKOS]], as proposed by [[DCAT-AP-v2.0.1]], is not sufficient in the mobility context. Thus, further items are added by mobilityDCAT-AP to the controlled vocabulary, see <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>. </p> 
-  
-<p>All information about an agent, as described via such properties, MAY be linked to, or be part of the data portal's user registry, in case, e.g., users are required to sign in before they use the data portal.</p> 
-  
+<p>However, the controlled vocabulary from [[ADMS-SKOS]], as proposed by [[DCAT-AP-v2.0.1]], is not sufficient in the mobility context. Thus, further items are added by mobilityDCAT-AP to the controlled vocabulary, see <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>. </p>
+
+<p>All information about an agent, as described via such properties, MAY be linked to, or be part of the data portal's user registry, in case, e.g., users are required to sign in before they use the data portal.</p>
+
 </section>
 
 <!-- Conformance Test Results -->
