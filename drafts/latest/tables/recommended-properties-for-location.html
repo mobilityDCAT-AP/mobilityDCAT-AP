@@ -1,4 +1,4 @@
-<table class="simple" id="table-recommended-properties-for-location">
+<table class="simple" id="table-recommended-properties-for-location"> <!-- PL esits 10.07.23 -->
 <thead>
 <tr>
 <th>
@@ -19,40 +19,48 @@
 </tr>
 </thead>
 <tbody>
-<tr class="property recommended" id="location-bbox">
+  
+
+
+<tr class="property recommended ap-ext" id="location-gazetteer"> 
 <td>
-<p>bounding box</p>
+<p>+gazetteer</p>
 </td>
 <td>
-<p><code>dcat:bbox</code></p>
+<p><code>skos:inScheme</code></p>
 </td>
 <td>
-<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
+<p><code>skos:ConceptScheme</code></p>
 </td>
 <td>
-<p>This property refers to the geographic bounding box of a resource.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-<tr class="property recommended" id="location-centroid">
-<td>
-<p>centroid</p>
-</td>
-<td>
-<p><code>dcat:centroid</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
-</td>
-<td>
-<p>This property refers to the geographic centre (centroid) of a resource.</p>
+<p>This property MAY be used to specify the gazetteer to which the Location belongs.</p>
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+  
+<tr class="property recommended ap-ext" id="location-geographic-identifier">
+<td>
+<p>+geographic identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer.</p>
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+  
 </tbody>
 </table>
 
