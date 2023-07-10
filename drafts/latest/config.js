@@ -670,6 +670,11 @@ var respecConfig = {
         "title":"Joinup. Change and Release Management Policy for DCAT-AP",
         "publisher":"European Commission"
        },
+       "DCAT-AP-guideline-spatial":{
+        "href":"https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used",
+        "title":"How should dct:spatial and dct:Location be used?",
+        "publisher":"European Commission"
+       },
       "DXWG":{
         "href":"https://www.w3.org/2017/dxwg/",
         "title":"Dataset Exchange Working Group (DXWG)",
