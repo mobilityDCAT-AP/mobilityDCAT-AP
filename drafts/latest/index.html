@@ -861,6 +861,7 @@ table code, table pre {
 <h3>Document</h3>
 
 <aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
 <p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of properties "foaf:homepage" for class Catalogue; "foaf:page" and "dcat:landingPage" for class Dataset; and "foaf:page" for class Distribution.</p>
 <p>In mobilityDCAT-AP, however, the range of "foaf:homepage" for class Catalogue is changed to the more generic range "rdfs:Resource". The other, above-mentioned properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
 </aside>
@@ -899,6 +900,7 @@ table code, table pre {
 <h3>Kind</h3>
 
 <aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
 <p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "dcat:contactPoint" for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see <a class="no-sectionRef" href="#agent-roles"></a>. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
 </aside>
 
@@ -1016,35 +1018,13 @@ table code, table pre {
 <h3>Media Type</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of properties "dcat:compressFormat", "dcat:mediaType"  and "dcat:packageFormat for class Distribution. In mobilityDCAT-AP, however, these properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasons with [[DCAT-AP-v2.0.1]]</p>
+
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
 
-<section id="recommended-properties-for-media-type">
-
-<h4>Recommended property for Media Type</h4>
-
-<aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#media-type-label">label</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-media-type.html"></div>
-
-</section>
-
-<section id="examples-for-media-type">
-
-<h4>Examples for Media Type</h4>
-
-<aside class="example" id="ex-media-type" title="Media Type">
-<pre data-include-format="text" data-include="./examples/media-type.ttl"></pre>
-</aside>
-
-</section>
 
 </section>
 
