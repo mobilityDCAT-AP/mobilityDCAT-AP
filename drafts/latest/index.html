@@ -1255,67 +1255,15 @@ table code, table pre {
 <h3>Standard</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
+<p>In[[DCAT-AP-v2.0.1]], this class is used as the range of property "dct:conformsTo" for class Catalogue Record (context "application profile"); for class Dataset (context "conforms to"); and for class Distribution (context "linked schemas"). In mobilityDCAT-AP, these properties are removed.</p>
+<p>However, mobilityDCAT-AP uses this class as the range of an added property "dct:conformsTo" for class Dataset in a different context "reference system", analogue to a property addition by by [[GEODCAT-AP-v2.0.0]].</p>
+<p>[GEODCAT-AP-v2.0.0]] adds several properties to class Standard. These are obviously used to decribe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [GEODCAT-AP-v2.0.0]], MAY be used.</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
 
-<section id="recommended-properties-for-standard">
 
-<h4>Recommended properties for Standard</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#standard-description">description</a></li>
-<li>+<a href="#standard-identifier">identifier</a></li>
-<li>+<a href="#standard-reference-register">reference register</a></li>
-<li>+<a href="#standard-release-date">release date</a></li>
-<li>+<a href="#standard-title">title</a></li>
-<li>+<a href="#standard-type">type</a></li>
-<li>+<a href="#standard-version">version</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-standard.html"></div>
-
-</section>
-
-<section id="optional-properties-for-standard">
-
-<h4>Optional properties for Standard</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#standard-creation-date">creation date</a></li>
-<li>+<a href="#standard-modification-date">update / modification date</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-standard.html"></div>
-
-</section>
-
-<section id="examples-for-standard">
-
-<h4>Examples for Standard</h4>
-
-<p>The following examples show the specification of different types of Standards.</p>
-
-<aside class="example" id="ex-standard-md" title="Metadata standard">
-<pre data-include-format="text" data-include="./examples/standard-md.ttl"></pre>
-</aside>
-
-<aside class="example" id="ex-standard-ir" title="Implementing rule">
-<pre data-include-format="text" data-include="./examples/standard-ir.ttl"></pre>
-</aside>
-
-<aside class="example" id="ex-standard-crs" title="Coordinate reference system">
-<pre data-include-format="text" data-include="./examples/standard-crs.ttl"></pre>
-</aside>
-
-</section>
 
 </section>
 
