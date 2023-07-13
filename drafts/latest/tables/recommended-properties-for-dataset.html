@@ -87,8 +87,9 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property is meant to refer to the network typology for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended, to allow data search across different countries. In addition, national classifications are allowed.
-For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. For all modes, the property should indicate if the data content relate to the EU’s trans-European transport network (TEN-T network, https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en). </p>
+<p>This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network typology for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended, to allow data search across different countries. In addition, national classifications are allowed.</p>
+<p>For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. </p>
+<p>For all modes, the property SHOULD also indicate if the data content relates to the EU’s trans-European transport network [[EU-TEN-T]]. </p>
 </td>
 <td>
 <p>0..n</p>
@@ -108,7 +109,7 @@ For other transport modes, the property is meant to refer to the physical infras
 <td>
 <p>This property SHOULD be used to specify the reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].
 </p>
-<p>This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</p>
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td>
 <td>
 <p>0..n</p>
