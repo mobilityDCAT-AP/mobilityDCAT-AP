@@ -222,7 +222,7 @@
 
 	div.head h2 { margin-bottom: 1.5em;}
 
-/** NAPCORE Logo ******************************************************************/
+/** SEMICEU Logo ******************************************************************/
 
 	.head p:not(.copyright):first-child {
 		margin: 0;
@@ -234,7 +234,7 @@
 		margin: 0.4rem 0 0.2rem .4rem;
 	}
 
-	.head img[src*="logos/NAPCORE.png"] {
+	.head img[src*="logos/SEMICEU.png"] {
 		display: block;
 		border: solid #1a5e9a;
 		border: solid var(--logo-bg);
@@ -247,12 +247,12 @@
 		font-weight: bold;
 	}
 
-	.head a:hover > img[src*="logos/NAPCORE.png"],
-	.head a:focus > img[src*="logos/NAPCORE.png"] {
+	.head a:hover > img[src*="logos/SEMICEU.png"],
+	.head a:focus > img[src*="logos/SEMICEU.png"] {
 		opacity: .8;
 	}
 
-	.head a:active > img[src*="logos/NAPCORE.png"] {
+	.head a:active > img[src*="logos/SEMICEU.png"] {
 		background: #c00;
 		background: var(--logo-active-bg);
 		border-color: #c00;
@@ -687,7 +687,7 @@
 		border-color: var(--a-active-underline);
 	}
 
-	/* Backout above styling for NAPCORE logo */
+	/* Backout above styling for SEMICEU logo */
 	.head p:not(.copyright):first-child > a,
 	.head > a:first-child {
 		border: none;
