@@ -23,7 +23,7 @@ var respecConfig = {
     subtitle: "A mobility extension for the DCAT application profile for data portals in Europe",
     logos: [
         {
-        src: './Mobilitydcat-Ap-Logo-Farbe-RGB-1000px@300ppi.png',
+        src: '../../respec/respec-style/logos/mobilitydcat-ap.png',
         width: 250,
         height: 140,
         alt: "mobilitydcat-ap logo"
@@ -235,8 +235,8 @@ var respecConfig = {
         "title":"DCAT Application Profile for data portals in Europe. Version 2.0.1.",
         "publisher":"European Commission",
         "date":"08 June 2020"
-       }, 
-        
+       },
+
       "DCAT-AP-SDO": {
         "href": "https://ec-jrc.github.io/dcat-ap-to-schema-org/",
         "title": "DCAT-AP to Schema.org Mapping",
@@ -264,7 +264,7 @@ var respecConfig = {
         "title":"European Legislation Identifier (ELI) system",
         "publisher":"EU Publications Office"
       },
-        
+
       "EPRINTS-AR": {
         "href":"http://purl.org/eprint/accessRights/",
         "title":"Eprints AccessRights Vocabulary Encoding Scheme",
@@ -318,14 +318,14 @@ var respecConfig = {
         "status":"Namespace Document",
         "date":"2005"
       },
-          
+
       "GEODCAT-AP-v2.0.0":{
         "href":"https://semiceu.github.io/GeoDCAT-AP/releases/",
         "title":"GeoDCAT-AP - Version 2.0.0",
         "publisher":"European Commission",
         "date":"23 December 2020"
       },
-          
+
       "GeoDCAT-ACV":{
         "href":"https://joinup.ec.europa.eu/node/148245/",
         "title":"Joinup. GeoDCAT-AP: Alignment of controlled vocabularies",
@@ -534,7 +534,7 @@ var respecConfig = {
         "title":"Website of the NAPCORE project",
         "publisher":"NAPCORE Consortium"
       },
-        
+
       "NAPCORE-Metadata-preparatory-activities":{
         "href":"https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/",
         "title":"Documentation about preparatory activities for mobilityDCAT-AP",
@@ -552,13 +552,13 @@ var respecConfig = {
         "title":"NAPCORE information about National Access Points (NAPs)",
         "publisher":"NAPCORE Consortium"
       },
-      
+
       "NAPCORE-NB":{
         "href":"https://napcore.eu/national-bodies/",
         "title":"NAPCORE information about National Bodies (NAPs)",
         "publisher":"NAPCORE Consortium"
       },
-        
+
       "EUV-AR":{
         "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/access-right",
         "title":"Named Authority List: Access rights",
