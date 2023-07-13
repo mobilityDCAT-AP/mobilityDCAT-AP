@@ -44,7 +44,7 @@ table code, table pre {
 
 <p>mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </p>
 
-<p>This document is a product of sub-working group 4.4 of the NAPCORE [[NAPCORE]] project consortium.</p>
+<p>This document is a product of sub-working group 4.4 of the NAPCORE project [[NAPCORE]] consortium.</p>
 
 <p>Comments and queries should be sent via <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
 
@@ -96,7 +96,7 @@ table code, table pre {
 
 <p>Digitalisation in the mobility domain often involves making various data from various actors discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. They often have a specific spatial coverage and/or a specific thematic coverage, e.g., showing public transport data for one region. In addition, legal obligations to set up and populate such portals have been established, e.g., in the European Union via the National Access Points (NAPs) [[NAPCORE-NAPs]]. </p>
 
-<p>Metadata are a crucial building block for accessibility and reusability of datasets in NAPs and other mobility data portals. However, a common metadata approach across different mobility portals has not been established yet, unlike in other domains such as bibliography. A common metadata approach can ease and harmonise data accessibility and exchange, thus enhancing the efficiency of individual mobility data portals. To proceed with metadata harmonisation, a dedicated Working Group within the EU-cofunded project [[NAPCORE]] is taking care of the definition and maintenance of a common metadata schema for all NAPs in Europe, but also for any mobility data portals. </p>
+<p>Metadata are a crucial building block for accessibility and reusability of datasets in NAPs and other mobility data portals. However, a common metadata approach across different mobility portals has not been established yet, unlike in other domains such as bibliography. A common metadata approach can ease and harmonise data accessibility and exchange, thus enhancing the efficiency of individual mobility data portals. To proceed with metadata harmonisation, a dedicated Working Group within the EU-cofunded project [[NAPCORE-Metadata-Working-Group]] is taking care of the definition and maintenance of a common metadata schema for all NAPs in Europe, but also for any mobility data portals. </p>
 
 <p>Starting from the analysis of the European recommendations for the interoperability of data catalogues, the Working Group has defined a roadmap for the design, implementation and publication of the metadata schema. The roadmap is composed of five steps: collection of requirements from experts and transportation stakeholders, definition of the conceptual model, implementation, documentation and guidelines, hosting and publication. The conceptual modal, containing definitions of essential metadata elements for mobility data portals, allows for precisely and unambiguously designating a mobility dataset, e.g. for representing the data topic, the data provider or the data format. Further, this model wass linked to established, metadata specifications, namely DCAT-AP. Moreover, a formal metadata specification was elaborated as an extension to DCAT-AP, called mobilityDCAT-AP. </p>
 
@@ -112,7 +112,7 @@ table code, table pre {
 
 <h3>Scope of this version</h3>
 
-<p>The objective of this work is to produce an initial release of mobilityDCAT-AP based on preceding preparatory activtities, including a requirement analysis, a roadmap and conceptual models. Documentations about these preceding actzivities can be found on the [[NAPCORE-Materials-Hub]].</p>
+<p>The objective of this work is to produce an initial release of mobilityDCAT-AP based on preceding preparatory activities, including a requirement analysis, a roadmap and conceptual models. A documentation about these preparatory activities is found at [[NAPCORE-Metadata-preparatory-activities]].</p>
 
 <p>As [[DCAT-AP]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p>
 
@@ -160,7 +160,7 @@ table code, table pre {
 <p>A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats. In the context of mobility, this might be, e.g., a data collection about static parking information for truck driversIn the context of mobility, this might be, e.g., a data collection about static parking information for truck drivers, published by a road authority.</p>
 
 <p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and re-use of the datasets. </p>
-<p>In the context of mobility, this might be a National Access Points adressing to the EC ITS Directive [[EC-NAP]]. Accordingly, a NAP aims to "...facilitate access, easy exchange and reuse of transport related data, in order to help support the provision of EU-wide interoperable travel and traffic services to end users." It is realised as "...a database, data warehouse, data marketplace, repository, and register, web portal or similar...".  </p>
+<p>In the context of mobility, this might be a National Access Points adressing to the EC ITS Directive [[NAPCORE-NAPs]]. Accordingly, a NAP aims to "...facilitate access, easy exchange and reuse of transport related data, in order to help support the provision of EU-wide interoperable travel and traffic services to end users." It is realised as "...a database, data warehouse, data marketplace, repository, and register, web portal or similar...".  </p>
 
 <p> In the context of NAPs, the terms "Metadata registry", "Metadata entry" and "Publication" are often used, which are explained next:</p>
 
@@ -204,7 +204,8 @@ table code, table pre {
 
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
-<p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
+<p>Finally, classes and properties added in mobilityDCAT-AP and extending [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
+<p>Properties removed from [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;minus&rdquo; sign (-),
 
 <section id="namespaces">
 
@@ -222,14 +223,14 @@ table code, table pre {
 
 <section id="overview">
 
-<h3>Application Profile Overview</h3>
+<h3>mobilityDCAT-AP Overview</h3>
 
-<p>This Application Profile extends [[DCAT-AP-v2.0.1]] by including:</p>
+<p>mobilityDCAT-AP extends [[DCAT-AP-v2.0.1]] by including:</p>
 
 <ul>
 <li>additional classes and properties (marked with a prepended &ldquo;plus&rdquo; sign (+) in this document, and summarised in <a class="no-sectionRef" href="#mobilitydcat-ap-classes-and-properties"></a>);</li>
 <li>additional recommendations on the use of classes and properties (documented in <a class="no-sectionRef" href="#classes"></a> and <a class="no-sectionRef" href="#properties"></a>);</li>
-<li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-20200608]]).</li>
+<li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-v2.0.1]]).</li>
 </ul>
 
 <p>These extensions are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
@@ -1228,9 +1229,8 @@ table code, table pre {
 
 <p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
-<p>Compared with [[DCAT-AP-20200608]], mobilityDCAT-AP makes use of additional controlled vocabularies mandated by [[INSPIRE-MD-REG]], and operated by the INSPIRE Registry - with the only exceptions of the coordinate reference systems register maintained by OGC [[OGC-EPSG]].</p>
-
-<p>For two of these controlled vocabularies, namely the INSPIRE spatial data themes [[INSPIRE-THEMES]] and the ISO topic categories [[INSPIRE-TC]], the mobilityDCAT-AP Working Group has defined a set of harmonised mappings to the EU Vocabularies Data Themes [[EUV-THEMES]], in order to facilitate the identification of the relevant theme in [[EUV-THEMES]] for mobility metadata. The status of this work, along with links to a machine readable representation of the mappings, is documented on a dedicated page in Joinup [[?GeoDCAT-ACV]].</p>
+<p>Compared with [[DCAT-AP-v2.0.1]], mobilityDCAT-AP makes use of additional controlled vocabularies. Some of these additional controlled vocabularies are maintained by external organisations, others are created and maintained by mobilityDCAT-AP.</p>
+<p>Further, mobilityDCAT-AP is removing some recommended and properties from [[DCAT-AP-v2.0.1]], which are linked with controlled vocabularies. Thus, these controlled vocabularies are not relevant for mobilityDCAT-AP and not listed in the following table.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used.html"></div>
 
@@ -1444,23 +1444,12 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Acknowledgements</h2>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>Representatives, editors and contributors to be updated.</p>
-</aside>
--->
 
-<!--
-<p>This work was elaborated by a Working Group under the ISA² programme. The ISA² Programme of the European Commission was represented by <strong>TBD</strong>. <strong>TBD</strong> were the editors of the specification. Contributors: TBD.</p>
-<p>The members of the Working Group:</p>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-wg-members.html"></div>
--->
 <p>
-  This work was elaborated by the by NAPCORE Sub-Working Group (SWG) 4.4 <a href="https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/">mobilityDCAT-AP Working Group</a>.
+  This work was elaborated by the by NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Metadata-Working-Group]].
 </p>
 <p>
-  Contributors: Hilde Austlid, Jonas Jäderberg, Christoph Lange-Bever, Peter Lubrich, Lina Teresa Molinas Comet, Mario Scrocca
+  Contributors: Hilde Austlid, Jonas Jäderberg, Christoph Lange-Bever, Peter Lubrich, Lina Teresa Molinas Comet, Mario Scrocca.
 </p>
 
 </section>
@@ -1485,15 +1474,6 @@ Often there is applicable legislation or a licency policy in place which determi
 
 </section>
 
-<!-- Deprecated classes and properties -->
-
-<section id="deprecated-classes-and-properties">
-
-<h2>Deprecated classes and properties</h2>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-classes-and-properties.html"></div>
-
-</section>
 
 </section>
 
