@@ -546,7 +546,12 @@ var respecConfig = {
         "title":"NAPCORE information about National Access Points (NAPs)",
         "publisher":"NAPCORE Consortium"
       },
-        
+      
+      "NAPCORE-NB":{
+        "href":"https://napcore.eu/national-bodies/",
+        "title":"NAPCORE information about National Bodies (NAPs)",
+        "publisher":"NAPCORE Consortium"
+      },
         
       "EUV-AR":{
         "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/access-right",
