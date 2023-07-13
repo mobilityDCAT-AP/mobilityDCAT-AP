@@ -862,7 +862,7 @@ table code, table pre {
 
 <aside class="note">
 <p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of properties "foaf:homepage" for class Catalogue; "foaf:page" and "dcat:landingPage" for class Dataset; and "foaf:page" for class Distribution.</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the recommended properties "foaf:homepage" for class Catalogue; the optional properties "foaf:page" and "dcat:landingPage" for class Dataset; and the optional property "foaf:page" for class Distribution.</p>
 <p>In mobilityDCAT-AP, however, the range of "foaf:homepage" for class Catalogue is changed to the more generic range "rdfs:Resource". The other, above-mentioned properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
 </aside>
 
@@ -878,7 +878,7 @@ table code, table pre {
 <h3>Identifier</h3>
 
 <aside class="note">
-<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "adms:identifier" for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the optional property "adms:identifier" for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-identifier.html"></div>
@@ -901,7 +901,7 @@ table code, table pre {
 
 <aside class="note">
 <p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "dcat:contactPoint" for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see <a class="no-sectionRef" href="#agent-roles"></a>. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the recommended property "dcat:contactPoint" for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see <a class="no-sectionRef" href="#agent-roles"></a>. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
@@ -1019,7 +1019,7 @@ table code, table pre {
 
 <aside class="note">
 <p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of properties "dcat:compressFormat", "dcat:mediaType"  and "dcat:packageFormat" for class Distribution. In mobilityDCAT-AP, however, these properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasons with [[DCAT-AP-v2.0.1]]</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the optional properties "dcat:compressFormat", "dcat:mediaType"  and "dcat:packageFormat" for class Distribution. In mobilityDCAT-AP, however, these properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasons with [[DCAT-AP-v2.0.1]]</p>
 
 </aside>
 
@@ -1068,7 +1068,7 @@ table code, table pre {
 
 <aside class="note">
 <p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of property "dct:provenance" for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasons with [[DCAT-AP-v2.0.1]]</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the optional property "dct:provenance" for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasons with [[DCAT-AP-v2.0.1]]</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-provenance-statement.html"></div>
@@ -1109,6 +1109,10 @@ table code, table pre {
 <section id="properties-for-relationship">
 
 <h3>Relationship</h3>
+
+<aside class="note">
+<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the optional property "dcat:qualifiedRelation" for class Dataset. In mobilityDCAT-AP, this property is removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [[DCAT-AP-v2.0.1]]</p>
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-relationship.html"></div>
 
