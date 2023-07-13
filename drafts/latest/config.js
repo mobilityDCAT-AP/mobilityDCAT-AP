@@ -229,6 +229,14 @@ var respecConfig = {
         "authors":["DataCite Metadata Working Group"],
         "date":"3 February 2016"
       },
+
+      "DCAT-AP-v2.0.1":{
+        "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0",
+        "title":"DCAT Application Profile for data portals in Europe. Version 2.0.1.",
+        "publisher":"European Commission",
+        "date":"08 June 2020"
+       }, 
+        
       "DCAT-AP-SDO": {
         "href": "https://ec-jrc.github.io/dcat-ap-to-schema-org/",
         "title": "DCAT-AP to Schema.org Mapping",
@@ -250,6 +258,13 @@ var respecConfig = {
         "publisher":"Dublin Core Metadata Initiative",
 //        "date":"9 March 2007"
       },
+
+      "ELI": {
+        "href":"https://eur-lex.europa.eu/eli-register/eu_publications_office.html",
+        "title":"European Legislation Identifier (ELI) system",
+        "publisher":"EU Publications Office"
+      },
+        
       "EPRINTS-AR": {
         "href":"http://purl.org/eprint/accessRights/",
         "title":"Eprints AccessRights Vocabulary Encoding Scheme",
@@ -297,6 +312,14 @@ var respecConfig = {
         "status":"Namespace Document",
         "date":"2005"
       },
+          
+      "GEODCAT-AP-v2.0.0":{
+        "href":"https://semiceu.github.io/GeoDCAT-AP/releases/",
+        "title":"GeoDCAT-AP - Version 2.0.0",
+        "publisher":"European Commission",
+        "date":"23 December 2020"
+      },
+          
       "GeoDCAT-ACV":{
         "href":"https://joinup.ec.europa.eu/node/148245/",
         "title":"Joinup. GeoDCAT-AP: Alignment of controlled vocabularies",
@@ -499,6 +522,32 @@ var respecConfig = {
         "title":"Link properties",
         "publisher":"OSGeo"
       },
+
+      "NAPCORE":{
+        "href":"https://napcore.eu/",
+        "title":"Website of the NAPCORE project",
+        "publisher":"NAPCORE Consortium"
+      },
+        
+      "NAPCORE-Metadata-preparatory-activities":{
+        "href":"https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/",
+        "title":"Documentation about preparatory activities for mobilityDCAT-AP",
+        "publisher":"NAPCORE Consortium"
+      },
+
+      "NAPCORE-Metadata-Working-Group":{
+        "href":"https://napcore.eu/metadata/",
+        "title":"Information about the NAPCORE Sub-Working Group on Metadata",
+        "publisher":"NAPCORE Consortium"
+      },
+
+      "NAPCORE-NAPs":{
+        "href":"https://napcore.eu/description-naps/",
+        "title":"NAPCORE information about National Access Points (NAPs)",
+        "publisher":"NAPCORE Consortium"
+      },
+        
+        
       "EUV-AR":{
         "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/access-right",
         "title":"Named Authority List: Access rights",
