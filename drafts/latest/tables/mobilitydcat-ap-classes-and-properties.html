@@ -14,19 +14,7 @@
 </thead>
 <tbody>
 
-<tr>
-<td>+<a href="#activity">Activity</a></td>
-<td><code>prov:Activity</code></td>
-<td>
-<p>+<a title="generated" href="#activity-generated"><code>prov:generated</code></a></p>
-<p>+<a title="qualified association" href="#activity-qualified-association"><code>prov:qualifiedAssociation</code></a></p>
-<p>+<a title="used" href="#activity-used"><code>prov:used</code></a></p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
+
   
 <tr>
 <td>+<a href="#address-agent">Address (Agent)</a></td>
@@ -44,48 +32,37 @@
 </td>
 </tr>
   
-<tr>
-<td>+<a href="#address-kind">Address (Kind)</a></td>
-<td><code>vcard:Address</code></td>
-<td>
-</td>
-<td>
-<p>+<a title="country" href="#address-kind-country"><code>vcard:country-name</code></a></p>
-<p>+<a title="city" href="#address-kind-city"><code>vcard:locality</code></a></p>
-<p>+<a title="postal code" href="#address-kind-postal-code"><code>vcard:postal-code</code></a></p>
-<p>+<a title="administrative area" href="#address-kind-administrative-area"><code>vcard:region</code></a></p>
-<p>+<a title="street address" href="#address-kind-street-address"><code>vcard:street-address</code></a></p>
-</td>
-<td>
-</td>
-</tr>
+
   
 <tr>
 <td><a href="#agent">Agent</a></td>
 <td><code>foaf:Agent</code></td>
 <td>
-</td>
-<td>
-</td>
-<td>
 <p>+<a title="email" href="#agent-email"><code>foaf:mbox</code></a></p>
-<p>+<a title="phone" href="#agent-phone"><code>foaf:phone</code></a></p>
+</td>
+<td>
 <p>+<a title="URL" href="#agent-url"><code>foaf:workplaceHomepage</code></a></p>
+</td>
+<td>
+<p>+<a title="phone" href="#agent-phone"><code>foaf:phone</code></a></p>
 <p>+<a title="address" href="#agent-address"><code>locn:address</code></a></p>
 <p>+<a title="affiliation" href="#agent-affiliation"><code>org:memberOf</code></a></p>
+<p>+<a title="first name" href="#agent-first-name"><code>foaf:firstName</code></a></p>
+<p>+<a title="first name" href="#agent-surname"><code>foaf:surname</code></a></p>
 </td>
 </tr>
   
 <tr>
-<td>+<a href="#attribution">Attribution</a></td>
-<td><code>prov:Attribution</code></td>
-<td>
-<p>+<a title="had role" href="#attribution-had-role"><code>dcat:hadRole</code></a></p>
-<p>+<a title="agent" href="#attribution-agent"><code>prov:agent</code></a></p>
-</td>
+<td>+<a href="#assessment">Assessment</a></td>
+<td><code>mobilitydcatap:Assessment</code></td>
 <td>
 </td>
 <td>
+</td>
+<td>
+<p>+<a title="assessment date" href="#assessmentAssessmentDate"><code>dct:issued</code></a></p>
+<p>+<a title="assessment result" href="#assessmentAssessmentResult"><code>oa:hasBody</code></a></p>
+<p>+<a title="assessment report" href="#assessmentAssessmentReport"><code>oa:hasBody</code></a></p>
 </td>
 </tr>
   
@@ -98,25 +75,7 @@
 <p>+<a title="keyword / tag" href="#catalogue-keyword"><code>dcat:keyword</code></a></p>
 </td>
 <td>
-<p>+<a title="contact point" href="#catalogue-contact-point"><code>dcat:contactPoint</code></a></p>
-<p>+<a title="theme / category" href="#catalogue-category"><code>dcat:theme</code></a></p>
-<p>+<a title="access rights" href="#catalogue-access-rights"><code>dct:accessRights</code></a></p>
-<p>+<a title="conforms to" href="#catalogue-conforms-to"><code>dct:conformsTo</code></a></p>
-<p>+<a title="reference system" href="#catalogue-reference-system"><code>dct:conformsTo</code></a></p>
-<p>+<a title="creation date" href="#catalogue-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="identifier" href="#catalogue-identifier"><code>dct:identifier</code></a></p>
-<p>+<a title="rights holder" href="#catalogue-rights-holder"><code>dct:rightsHolder</code></a></p>
-<p>+<a title="topic category" href="#catalogue-topic-category"><code>dct:subject</code></a></p>
-<p>+<a title="temporal coverage" href="#catalogue-temporal-coverage"><code>dct:temporal</code></a></p>
-<p>+<a title="custodian" href="#catalogue-custodian"><code>geodcat:custodian</code></a></p>
-<p>+<a title="distributor" href="#catalogue-distributor"><code>geodcat:distributor</code></a></p>
-<p>+<a title="originator" href="#catalogue-originator"><code>geodcat:originator</code></a></p>
-<p>+<a title="principal investigator" href="#catalogue-principal-investigator"><code>geodcat:principalInvestigator</code></a></p>
-<p>+<a title="processor" href="#catalogue-processor"><code>geodcat:processor</code></a></p>
-<p>+<a title="resource provider" href="#catalogue-resource-provider"><code>geodcat:resourceProvider</code></a></p>
-<p>+<a title="user" href="#catalogue-user"><code>geodcat:user</code></a></p>
-<p>+<a title="qualified attribution" href="#catalogue-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
-<p>+<a title="was used by" href="#catalogue-was-used-by"><code>prov:wasUsedBy</code></a></p>
 </td>
 </tr>
   
@@ -124,25 +83,13 @@
 <td><a href="#catalogue-record">Catalogue Record</a></td>
 <td><code>dcat:CatalogRecord</code></td>
 <td>
+<p>+<a title="creation date" href="#catalogue-record-visibility-status"><code>dct:created</code></a></p>
 </td>
 <td>
+<p>+<a title="creation date" href="#catalogue-record-creation-date"><code>mobilitydcatap:visibilityStatus</code></a></p>
 </td>
 <td>
-<p>+<a title="character encoding" href="#catalogue-record-character-encoding"><code>cnt:characterEncoding</code></a></p>
-<p>+<a title="contact point" href="#catalogue-record-contact-point"><code>dcat:contactPoint</code></a></p>
-<p>+<a title="creation date" href="#catalogue-record-creation-date"><code>dct:created</code></a></p>
-<p>+<a title="creator" href="#catalogue-record-creator"><code>dct:creator</code></a></p>
-<p>+<a title="identifier" href="#catalogue-record-identifier"><code>dct:identifier</code></a></p>
 <p>+<a title="publisher" href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
-<p>+<a title="rights holder" href="#catalogue-record-rights-holder"><code>dct:rightsHolder</code></a></p>
-<p>+<a title="custodian" href="#catalogue-record-custodian"><code>geodcat:custodian</code></a></p>
-<p>+<a title="distributor" href="#catalogue-record-distributor"><code>geodcat:distributor</code></a></p>
-<p>+<a title="originator" href="#catalogue-record-originator"><code>geodcat:originator</code></a></p>
-<p>+<a title="principal investigator" href="#catalogue-record-principal-investigator"><code>geodcat:principalInvestigator</code></a></p>
-<p>+<a title="processor" href="#catalogue-record-processor"><code>geodcat:processor</code></a></p>
-<p>+<a title="resource provider" href="#catalogue-record-resource-provider"><code>geodcat:resourceProvider</code></a></p>
-<p>+<a title="user" href="#catalogue-record-user"><code>geodcat:user</code></a></p>
-<p>+<a title="qualified attribution" href="#catalogue-record-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 </td>
 </tr>
   
