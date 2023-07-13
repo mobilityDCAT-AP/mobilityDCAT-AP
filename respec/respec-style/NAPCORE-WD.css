@@ -1,0 +1,14 @@
+
+/* Style for a public "Working Draft" */
+
+@import "base.css";
+
+body {
+  background-image: url(https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/respec/respec-style/logos/WD.svg);
+  background-color: transparent;
+}
+
+html {
+  background-image: url(https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/respec/respec-style/logos/WD-watermark.svg);
+  background-color: transparent;
+}

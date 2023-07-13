@@ -1,0 +1,8 @@
+
+/* Style for a "Recommendation" */
+
+@import "base.css";
+
+body {
+  background-image: url(https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/respec/respec-style/logos/REC.svg);
+}
