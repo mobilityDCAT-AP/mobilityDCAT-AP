@@ -283,12 +283,16 @@ var respecConfig = {
         "publisher":"OJ L 172",
         "date":"20 June 2019"
       },
+      "EU-EIP-CMC": {
+        "href":"https://www.its-platform.eu/achievement/monitoring-harmonisation-of-naps/",
+        "title":"Information about the Coordinated Metadata Catalogue (CMC) by EU EIP",
+        "publisher":"EU EIP Consortium"
+      },
       "EU-TEN-T": {
         "href":"https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en",
         "title":"Information about Trans-European Transport Network (TEN-T)",
         "publisher":"European Commission"
       },
-
       "EU-REPO-AR": {
         "href":"https://wiki.surfnet.nl/display/standards/info-eu-repo#info-eu-repo-AccessRights",
         "title":"EU-Repo: Access Rights",
