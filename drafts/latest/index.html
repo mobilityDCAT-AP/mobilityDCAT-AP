@@ -164,34 +164,34 @@ table code, table pre {
 
 <p> In the context of NAPs, the terms "Metadata registry", "Metadata entry", and "Publication" are often used, which are explained in the following.</p>
 
-<p>A <strong>Metadata registry</strong> is a A Metadata registry is a digital recording of all metadata entries in a data portal, each describing the administration, organisation, and content of individual publications, including the published data set and the corresponding distributions. The most visible Metadata representation are the dataset descriptions in a GUI of a NAP portal.</p>
+<p>A <strong>Metadata registry</strong> is a digital recording of all metadata entries in a data portal, each describing the administration, organisation, and content of individual publications, including the published datasets and the corresponding distributions. The most visible Metadata representation is the dataset descriptions in a GUI of a NAP portal.</p>
 
-<p>A <strong>Metadata entry</strong> (sometimes called metadata record or metadata set) describes the administration, organisation, and content of an individual publication, including the published data set and the corresponding distributions.</p>
+<p>A <strong>Metadata entry</strong> (sometimes called metadata record or metadata set) describes the administration, organisation, and content of an individual publication, including the published dataset and the corresponding distributions.</p>
 
 <p>A <strong>Publication</strong> is an abstract construct that covers a dataset published by a data publisher and which has one or multiple distributions.</p>
 
-<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as a RDF schema [[RDFS]]. A RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and the relationships between these resources. This is done via a class and property system.</p>
+<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as an RDF schema [[RDFS]]. An RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and their relationships. This is done via a class and property system.</p>
 
 <p>A <strong>Class</strong> is a group of resources. Classes are themselves resources. They are often identified by IRIs and may be described using properties.</p>
 
 <p>A <strong>Property</strong> is a relation between subject resources and object resources.</p>
 
-<p>The following figure shows the core elements of the DCAT-AP data model, denoting how the above-mentioned terms and relations are expressed as classes and properties. This figure also shows, how NAP-related terms, such as publications, are related to this class and property structure.</p>
+<p>The following figure shows the core elements of the DCAT-AP data model, denoting how the above-mentioned terms and relations are expressed as classes and properties. This figure also shows how NAP-related terms, such as publications, are related to this class and property structure.</p>
 
 
-<p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning, relating to potential responsibilities of metadata senders and metadata receivers.</p>
+<p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning, relating to the potential responsibilities of metadata senders and metadata receivers.</p>
 
-<p>Such metadata senders and receivers are important actors for interoperable metadata, i.e. whenever there is an exchange of metadata between IT systems. This may happen when there are metadata import and export functions in a data portal. In this case, metadata senders and receivers are other data portals, e.g., allowing harvesting of metadata. So, the following terms refer to the capability of a data portal to provide corresponding metadata in an export function, or to read them in an import function.</p>
+<p>Such metadata senders and receivers are important actors for interoperable metadata, i.e., whenever metadata is exchanged between IT systems. This may happen when a data portal has metadata import and export functions. In this case, metadata senders and receivers are other data portals, e.g., allowing metadata harvesting. So, the following terms refer to the capability of a data portal to provide corresponding metadata in an export function or to read them in an import function.</p>
 
 <ul>
 <li><strong>Mandatory class</strong>: a receiver MUST be able to process information about instances of the class; a sender MUST provide information about instances of the class.</li>
-<li><strong>Recommended class</strong>: a receiver MUST be able to process information about instances of the class; a sender SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class, if such information is available.</li>
+<li><strong>Recommended class</strong>: a receiver MUST be able to process information about instances of the class; a sender SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class if such information is available.</li>
 <li><strong>Optional class</strong>: a receiver MUST be able to process information about instances of the class; a sender MAY provide the information but is not obliged to do so.</li>
 <li><strong>Mandatory property</strong>: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
-<li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide information for that property; a sender MUST provide information for that property, if such information is available.</li>
+<li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide information for that property; a sender MUST provide information for that property if such information is available.</li>
 <li><strong>Optional property</strong>: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
 <li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
-<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that propertry.</li>
+<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>
 </ul>
 
 <p>The meaning of the terms MUST, MUST NOT, SHOULD and MAY in this section and in the following sections are as defined in [[RFC2119]].</p>
@@ -205,7 +205,7 @@ table code, table pre {
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
 <p>Finally, classes and properties added in mobilityDCAT-AP and extending [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
-<p>Properties removed from [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;minus&rdquo; sign (-),
+<p>Properties removed from [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;minus&rdquo; sign (-).
 
 <section id="namespaces">
 
@@ -238,7 +238,7 @@ table code, table pre {
 <p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a UML diagram of the classes and properties included in the Application Profile.</p>
 
 <aside class="note">
-<p>For legibility, the diagram does not visualise all the classes as boxes. Supportive classes, as <code>skos:Concept</code>, are directly mentioned as the range of properties. The figure, therefore, might not highlight all the constraints and recommendations for these supportive classes, which are documented in the following sections. Moreover, the figure does not include the agent role properties defined in the GeoDCAT-AP namespace (<a class="no-secRef" href="#agent-roles"></a>), and whose use is illustrated in <a class="no-secRef" href="#properties"></a>.</p>
+<p>For legibility, the diagram does not visualise all the classes as boxes. Supportive classes, such as <code>skos:Concept</code>, are directly mentioned as the range of properties. The figure, therefore, might highlight only some of the constraints and recommendations for these supportive classes, which are documented in the following sections. Moreover, the figure does not include the agent role properties defined in the GeoDCAT-AP namespace (<a class="no-secRef" href="#agent-roles"></a>), and whose use is illustrated in <a class="no-secRef" href="#properties"></a>.</p>
 </aside>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram">
