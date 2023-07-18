@@ -2,10 +2,10 @@
 <thead>
 <tr>
 <th>
-<p>CMC Metadata number</p>
+<p>CMC section</p>
 </th>
 <th>
-<p>CMC Metadata element</p>
+<p>CMC element name</p>
 </th>
 <th>
 <p>Class</p>
@@ -28,7 +28,7 @@
 <p>2.2.1.1</p>
 </td>
 <td>
-<p><code>Metadata date</code></p>
+<p>Metadata date</p>
 </td>
 <td><a href="#catalogue-record">Catalogue Record</a></td>
 <td><code>dcat:CatalogRecord</code></td>
@@ -47,12 +47,11 @@
 <p>2.2.1.2</p>
 </td>
 <td>
-<p><code>Metadata language</code></p>
+<p>Metadata language</p>
 </td>
 <td><a href="#catalogue-record">Catalogue Record</a></td>
 <td><code>dcat:CatalogRecord</code></td>
 <td>
-<p>creation date</p>
 <p>language</p>
 </td>
 <td>
@@ -65,18 +64,156 @@
 <p>2.2.1.3</p>
 </td>
 <td>
-<p><code>Metadata point of contact</code></p>
+<p>Metadata point of contact</p>
 </td>
 <td><a href="#catalogue-record">Catalogue Record</a></td>
 <td><code>dcat:CatalogRecord</code></td>
 <td>
-<p>creation date</p>
 <p>publisher</p>
 </td>
 <td>
-<p>+<a title="publisher" href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
+<p><a title="publisher" href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
 </td>
 </tr>
 
+<tr>
+<td>
+<p>2.2.2.1</p>
+</td>
+<td>
+<p>Name of dataset</p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>title</p>
+</td>
+<td>
+<p><a title="title" href="#dataset-title"><code>dct:title</code></a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>2.2.2.2</p>
+</td>
+<td>
+<p>Description of dataset </p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>description</p>
+</td>
+<td>
+<p><a title="description" href="#dataset-description"><code>dct:description</code></a></p>
+</td>
+</tr> 
+
+<tr>
+<td>
+<p>2.2.2.3</p>
+</td>
+<td>
+<p>Resource Type</p>
+</td>
+<td>
+<p>Not used in mobilityDCAT-AP.</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>   
+
+<tr>
+<td>
+<p>2.2.2.4</p>
+</td>
+<td>
+<p>Dataset type category</p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>theme / category</p>
+</td>
+<td>
+<p><a title="theme / category" href="#dataset-category"><code>dcat:theme</code></a></p>
+</td>
+</tr>   
+
+<tr>
+<td>
+<p>2.2.2.5</p>
+</td>
+<td>
+<p>Dataset detailed type</p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>theme / category</p>
+</td>
+<td>
+<p><a title="theme / category" href="#dataset-category"><code>dcat:theme</code></a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>2.2.2.6</p>
+</td>
+<td>
+<p>Service type category</p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>theme / category</p>
+</td>
+<td>
+<p><a title="service category" href="#dataset-service-category"><code>mobilitydcatap:serviceCategory</code></a></p>
+</td>
+</tr>  
+
+<tr>
+<td>
+<p>2.2.2.7</p>
+</td>
+<td>
+<p>Dataset language</p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>language</p>
+</td>
+<td>
+<p><a title="language" href="#dataset-language"><code>dct:language</code></a></p>
+</td>
+</tr>    
+
+<tr>
+<td>
+<p>2.2.2.8</p>
+</td>
+<td>
+<p>Georeferencing method</p>
+</td>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+<p>reference system</p>
+<p>georeferencing method</p>
+</td>
+<td>
+<p>+<a title="reference system" href="#dataset-reference-system"><code>dct:conformsTo</code></a></p>
+<p>+<a title="georeferencing method" href="#dataset-georeferencing-method"><code>mobilitydcatap:georeferencingMethod</code></a></p>
+</td>
+</tr>   
+  
 </tbody>
 </table>
