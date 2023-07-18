@@ -42,7 +42,7 @@ table code, table pre {
 
 <h2>Abstract</h2>
 
-<p>mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </p>
+<p>mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </p>
 
 <p>This document is a product of sub-working group 4.4 of the NAPCORE project [[NAPCORE]] consortium.</p>
 
@@ -58,9 +58,9 @@ table code, table pre {
 
 <p>The NAPCORE consortium does not guarantee the accuracy of the information included in this study, nor does it accept any responsibility for any use thereof.</p>
 
-<p>Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favouring by the NAPCORE consortium.</p>
+<p>Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favouring by the NAPCORE consortium.</p>
 
-<p>All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscripts including illustrations, maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.</p>
+<p>All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscripts, including illustrations, maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.</p>
 
 </section>
 
@@ -85,7 +85,7 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document contains version 1.0 of the specification for mobilityDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. Its basic use case is to make such datasets and services searchable on data portals with a mobility focus, thereby making mobility information better findable across borders and sectors. </p>
+<p>This document contains version 1.0 of the specification for mobilityDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. Its basic use case is to make such datasets and services searchable on data portals with a mobility focus, thereby making mobility information better findable across borders and sectors. </p>
 
 <p>For this purpose, mobilityDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax, as originally defined by [[DCAT-AP]], but it is extended and customised to the mobility sector.</p>
 
@@ -94,13 +94,13 @@ table code, table pre {
 
 <h3>Context</h3>
 
-<p>Digitalisation in the mobility domain often involves making various data from various actors discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. They often have a specific spatial coverage and/or a specific thematic coverage, e.g., showing public transport data for one region. In addition, legal obligations to set up and populate such portals have been established, e.g., in the European Union via the National Access Points (NAPs) [[NAPCORE-NAPs]]. </p>
+<p>Digitalisation in the mobility domain often involves making various data from various actors discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. They often have specific spatial coverage and/or a specific thematic coverage, e.g., showing public transport data for one region. In addition, legal obligations to set up and populate such portals have been established, e.g., in the European Union via the National Access Points (NAPs) [[NAPCORE-NAPs]]. </p>
 
-<p>Metadata are a crucial building block for accessibility and reusability of datasets in NAPs and other mobility data portals. However, a common metadata approach across different mobility portals has not been established yet, unlike in other domains such as bibliography. A common metadata approach can ease and harmonise data accessibility and exchange, thus enhancing the efficiency of individual mobility data portals. To proceed with metadata harmonisation, a dedicated Working Group within the EU-cofunded project [[NAPCORE-Metadata-Working-Group]] is taking care of the definition and maintenance of a common metadata schema for all NAPs in Europe, but also for any mobility data portals. </p>
+<p>Metadata are a crucial building block for the accessibility and reusability of datasets in NAPs and other mobility data portals. However, a common metadata approach across different mobility portals has not been established yet, unlike in other domains such as bibliography. A common metadata approach can ease and harmonise data accessibility and exchange, thus enhancing the efficiency of individual mobility data portals. To proceed with metadata harmonisation, a dedicated Working Group within the EU-cofunded project [[NAPCORE-Metadata-Working-Group]] is taking care of the definition and maintenance of a common metadata schema for all NAPs in Europe, but also for any mobility data portals. </p>
 
-<p>Starting from the analysis of the European recommendations for the interoperability of data catalogues, the Working Group has defined a roadmap for the design, implementation and publication of the metadata schema. The roadmap is composed of five steps: collection of requirements from experts and transportation stakeholders, definition of the conceptual model, implementation, documentation and guidelines, hosting and publication. The conceptual modal, containing definitions of essential metadata elements for mobility data portals, allows for precisely and unambiguously designating a mobility dataset, e.g. for representing the data topic, the data provider or the data format. Further, this model wass linked to established, metadata specifications, namely DCAT-AP. Moreover, a formal metadata specification was elaborated as an extension to DCAT-AP, called mobilityDCAT-AP. </p>
+<p>Starting from the analysis of the European recommendations for the interoperability of data catalogues, the Working Group has defined a roadmap for the design, implementation and publication of the metadata schema. The roadmap comprises five steps: collection of requirements from experts and transportation stakeholders, definition of the conceptual model, implementation, documentation and guidelines, hosting and publication. The conceptual modal, containing definitions of essential metadata elements for mobility data portals, allows for precisely and unambiguously designating a mobility dataset, e.g. for representing the data topic, the data provider or the data format. Further, this model was linked to established metadata specifications, namely DCAT-AP. Moreover, a formal metadata specification was elaborated as an extension to DCAT-AP, called mobilityDCAT-AP. </p>
 
-<p>mobilityDCAT-AP allows harmonised, platform-independent metadata descriptions in human-readable and machine-readable formats. The latter one allows for an automated import and export of metadata with 3rd parties via an API, for example. Analogous to DCAT-AP, the specification is based on a Resource Description Framework (RDF) schema, being an enabler for semantic technologies. This facilitates, for example, enhanced queries about the metadata, or a deduction of additional information from the metadata. After its first release in summer 2023, this specification is being promoted for wide-scale usage in mobility data portals. For improved acceptance and sustainability, formal maintenance and governance structures were also established for mobilityDCAT-AP. Lastly, the common approach is an input for a planned cross-border metadata registry, resulting in a planned demonstrator and proof-of-concept for mobilityDCAT-AP.</p>
+<p>mobilityDCAT-AP allows harmonised, platform-independent metadata descriptions in human-readable and machine-readable formats. The latter allows for an automated import and export of metadata with 3rd parties via an API, for example. Analogous to DCAT-AP, the specification is based on a Resource Description Framework (RDF) schema, being an enabler for semantic technologies. This facilitates, for example, enhanced queries about the metadata or a deduction of additional information from the metadata. After its first release in the summer of 2023, this specification is being promoted for wide-scale usage in mobility data portals. Formal maintenance and governance structures were also established for mobilityDCAT-AP to improve acceptance and sustainability. Lastly, the common approach is an input for a planned cross-border metadata registry, resulting in a planned demonstrator and proof-of-concept for mobilityDCAT-AP.</p>
 
 <p>mobilityDCAT-AP is suitable for precisely and unambiguously designating metadata of any data offering with mobility relevance, e.g. for representing the data topic, the data provider or the data format. It is recommended that the metadata management of all National Access Points (NAPs) in Europe, or any other mobility data portals, considers this metadata specification in order to harmonise metadata descriptions across individual portals, and to ease the exchange of metadata in the mobility data ecosystem. Furthermore, this will ensure the basis for extended interoperability, among others with other NAPs or data portals.</p>
 
@@ -116,9 +116,9 @@ table code, table pre {
 
 <p>As [[DCAT-AP]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p>
 
-<p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p>
+<p>The work does not cover implementation issues like mechanisms for the exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p>
 
-<p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p>
+<p>The Application Profile is intended to facilitate data exchange. Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p>
 
 </section>
 
@@ -127,9 +127,9 @@ table code, table pre {
 <h3>A DCAT-AP extension</h3>
 
 
-<p>The mobilityDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification version 2.0.1. of 8 June 2020 [[DCAT-AP-v2.0.1]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
+<p>The mobilityDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification version 2.0.1. of 8 June 2020 [[DCAT-AP-v2.0.1]]. According to the same principles, DCAT-AP is in itself an extension of DCAT.</p>
 
-<p>This dependency must be taken into account while reading and using this specification. When implementing mobilityDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p>
+<p>This dependency must be taken into account while reading and using this specification. When implementing mobilityDCAT-AP, these specifications should be consulted first to fill in any missing gaps in this document.</p>
 
 <p>Comparing to [[DCAT-AP-v2.0.1]], the following editions were made in mobilityDCAT-AP:</p>
 
@@ -139,12 +139,12 @@ table code, table pre {
 <li>some properties are added to existing classes in DCAT-AP, of which some are newly created;</li>
 <li>some obligation levels for existing properties in DCAT-AP are raised to higher levels;</li>
 <li>some existing, optional or recommended properties from DCAT-AP are removed;</li>
-<li>some usage notes about existing classes and properties from DCAT-AP are refined to adress the special considerations in the context of mobility data portals;</li>
-<li>some additional, existing controlled vocabalaries are refereneced;</li>
-<li>some controlled vocabalaries are newly created.</li>
+<li>some usage notes about existing classes and properties from DCAT-AP are refined to address the special considerations in the context of mobility data portals;</li>
+<li>some additional, existing controlled vocabularies are referenced;</li>
+<li>some controlled vocabularies are newly created.</li>
 </ul>
-<p>These removals of optional or recommended properties from DCAT-AP are meant to keep the vocabulary of mobilityDCAT-AP as small as possible, to avoid any mis-interpretations and multiple usage of properties among senders.</p>
-<p>Further, some of the class and property additions correspond to the parallel DCAT-AP extension [[GEODCAT-AP-v2.0.0]], so there is a comaptibility between these two extensions in terms of class and property additions. </p>
+<p>These removals of optional or recommended properties from DCAT-AP are meant to keep the vocabulary of mobilityDCAT-AP as small as possible to avoid any misinterpretations and multiple usage of properties among senders.</p>
+<p>Further, some of the class and property additions correspond to the parallel DCAT-AP extension [[GEODCAT-AP-v2.0.0]], so these two extensions are compatible in terms of class and property additions. </p>
 </section>
 
 </section>
@@ -157,12 +157,12 @@ table code, table pre {
 
 <p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
 
-<p>A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats. In the context of mobility, this might be, e.g., a data collection about static parking information for truck driversIn the context of mobility, this might be, e.g., a data collection about static parking information for truck drivers, published by a road authority.</p>
+<p>A <strong>Dataset</strong> is a collection of data published or curated by a single source and available for access or download in one or more formats. In the mobility context, this might be, e.g., a data collection about static parking information for truck drivers published by a road authority.</p>
 
-<p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and re-use of the datasets. </p>
-<p>In the context of mobility, this might be a National Access Points adressing to the EC ITS Directive [[NAPCORE-NAPs]]. Accordingly, a NAP aims to "...facilitate access, easy exchange and reuse of transport related data, in order to help support the provision of EU-wide interoperable travel and traffic services to end users." It is realised as "...a database, data warehouse, data marketplace, repository, and register, web portal or similar...".  </p>
+<p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling the discovery and re-use of the datasets. </p>
+<p>In the context of mobility, this might be a National Access Point addressing the EC ITS Directive [[NAPCORE-NAPs]]. Accordingly, a NAP aims to "...facilitate access, easy exchange and reuse of transport-related data, in order to help support the provision of EU-wide interoperable travel and traffic services to end users." It is realised as "...a database, data warehouse, data marketplace, repository, and register, web portal or similar...".  </p>
 
-<p> In the context of NAPs, the terms "Metadata registry", "Metadata entry" and "Publication" are often used, which are explained next:</p>
+<p> In the context of NAPs, the terms "Metadata registry", "Metadata entry", and "Publication" are often used, which are explained in the following.</p>
 
 <p>A <strong>Metadata registry</strong> is a A Metadata registry is a digital recording of all metadata entries in a data portal, each describing the administration, organisation, and content of individual publications, including the published data set and the corresponding distributions. The most visible Metadata representation are the dataset descriptions in a GUI of a NAP portal.</p>
 
