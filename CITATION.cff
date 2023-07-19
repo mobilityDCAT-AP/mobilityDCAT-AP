@@ -1,17 +1,8 @@
-cff-version: 1.1
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
 authors:
-- name: "European Commission"
+- name: "NAPCORE"
 title: "Repository of the mobility extension to DCAT-AP (mobilityDCAT-AP)"
-version: 1.1
-date-released: "2023-03-30"
-url: "https://w3id.org/mobilitydcatap"
-preferred-citation:
-  type: standard
-  authors:
-  - name: "European Commission"
-  title: "mobilityDCAT-AP: A mobility extension for the DCAT application profile for data portals in Europe"
-  version: 1.1
-  date-released: "2023-03-30"
-  institution:
-    name: "European Commission"
-  url: "https://w3id.org/mobilitydcatap/releases/"
+version: 1.0
+date-released: 2023-05-11
+url: "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/"
