@@ -288,6 +288,21 @@ var respecConfig = {
         "title":"Information about the Coordinated Metadata Catalogue (CMC) by EU EIP",
         "publisher":"EU EIP Consortium"
       },
+      "EU-EIP-QP": {
+        "href":"https://www.its-platform.eu/achievement/quality-of-european-its-services-and-their-data/",
+        "title":"Information about the Quality Frameworks by EU EIP",
+        "publisher":"EU EIP Consortium"
+      }, 
+      "EC-ITS-Directive": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010L0040",
+        "title":"Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance",
+        "publisher":"European Commission"
+      },
+      "EC-MMTIS-DR": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32017R1926",
+        "title":"Commission Delegated Regulation (EU) 2017/1926 of 31 May 2017 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services (Text with EEA relevance.)",
+        "publisher":"European Commission"
+      },    
       "EU-TEN-T": {
         "href":"https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en",
         "title":"Information about Trans-European Transport Network (TEN-T)",
@@ -670,6 +685,10 @@ var respecConfig = {
       "SCHEMA-ORG":{
         "href":"http://schema.org/",
         "title":"Schema.org"
+      },
+      "SEMVER":{
+        "href":"https://semver.org/",
+        "title":"Semantic Versioning Specification (SemVer)"
       },
       "SCoRO": {
         "href":"http://purl.org/spar/scoro#",
