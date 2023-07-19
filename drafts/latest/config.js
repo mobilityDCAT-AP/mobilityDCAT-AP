@@ -98,7 +98,7 @@ var respecConfig = {
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
     latestVersionURI:     "https://w3id.org/mobilitydcat-ap/releases/",
 /* MOBILITYDCAT-AP specific - end   */
-    edDraftURI:           "https://w3id.org/mobilitydca-ap/drafts/latest/",
+    edDraftURI:           "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     issueBase:            "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/",
     github:               "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP",
     editors: [
