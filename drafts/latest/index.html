@@ -204,7 +204,7 @@ table code, table pre {
 
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
-<p>Finally, classes and properties added in mobilityDCAT-AP and extending [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
+<p>Finally, classes and properties added in mobilityDCAT-AP and extending [[DCAT-AP-v2.0.1]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
 <p>Properties removed from [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;minus&rdquo; sign (-).
 
 <section id="namespaces">
@@ -235,10 +235,13 @@ table code, table pre {
 
 <p>These extensions are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
 
-<p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a UML diagram of the classes and properties included in the Application Profile.</p>
+<p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a UML diagram of the classes and properties included in mobilityDCAT-AP.</p>
 
 <aside class="note">
-<p>For legibility, the diagram does not visualise all the classes as boxes. Supportive classes, such as <code>skos:Concept</code>, are directly mentioned as the range of properties. The figure, therefore, might highlight only some of the constraints and recommendations for these supportive classes, which are documented in the following sections. Moreover, the figure does not include the agent role properties defined in the GeoDCAT-AP namespace (<a class="no-secRef" href="#agent-roles"></a>), and whose use is illustrated in <a class="no-secRef" href="#properties"></a>.</p>
+<p>This diagram shows only a subset of classes from [[DCAT-AP-v2.0.1]], namely the four central classes (marked in orange) <a href="#catalogue">Catalogue</a>, <a href="#catalogue-record">Catalogue Record</a>, <a href="#dataset">Dataset</a> and <a href="#distribution">Distribution</a>; as well as the properties connecting these four classes. </p>
+<p>Please note that two of these properties (marked in red) have a mandatory obligation, comparing to [[DCAT-AP-v2.0.1]]. Thus, any metadata set in accordance with mobilityDCAT-AP SHOULD contain at least instance of these four classes. See also the usage notes for <a href="#catalogue-record"></a> and <a href="#dataset-distribution"></a>. </p>
+<p>This diagram also shows classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v2.0.1]]. The additions relate to the four central classes (in organge) and some supportive classes (in yellow). All additions are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>  
+<p>Altogether, this diagram is focused on some special aspects of mobilityDCAT-AP in terms of obligation levels and element additions. A complete UML diagram with all elements inherited from DCAT-AP is shown on [[DCAT-AP-v2.0.1]].</p>  
 </aside>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram">
