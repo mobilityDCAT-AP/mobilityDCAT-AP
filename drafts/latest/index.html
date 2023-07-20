@@ -190,8 +190,8 @@ table code, table pre {
 <li><strong>Mandatory property</strong>: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
 <li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide information for that property; a sender MUST provide information for that property if such information is available.</li>
 <li><strong>Optional property</strong>: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
-<li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
-<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>
+<!-- <li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
+<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>-->
 </ul>
 
 <p>The meaning of the terms MUST, MUST NOT, SHOULD and MAY in this section and in the following sections are as defined in [[RFC2119]].</p>
@@ -202,7 +202,7 @@ table code, table pre {
 
 <p>All other classes are classified as ‘Optional’ in <a class="no-sectionRef" href="#optional-classes"></a>. A further description of the optional classes is only included as a sub-section in <a class="no-sectionRef" href="#properties"></a> if the Application Profile specifies mandatory or recommended properties for them.</p>
 
-<p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
+<!-- <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>-->
 
 <p>Finally, classes and properties added in mobilityDCAT-AP and extending [[DCAT-AP-v2.0.1]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
 <p>Properties removed from [[DCAT-AP-v2.0.1] are marked with a prepended &ldquo;minus&rdquo; sign (-).
@@ -1369,22 +1369,6 @@ Often there is applicable legislation or a licence policy in place which determi
 <p>However, the controlled vocabulary from [[ADMS-SKOS]], as proposed by [[DCAT-AP-v2.0.1]], is not sufficient in the mobility context. Thus, further items are added by mobilityDCAT-AP to the controlled vocabulary, see <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>. </p>
 
 <p>All information about an agent, as described via such properties, MAY be linked to, or be part of the data portal's user registry, in case, e.g., users are required to sign in before they use the data portal.</p>
-
-</section>
-
-<!-- Conformance Test Results -->
-
-<section id="conformance-test-results" class="informative">
-
-<h2>Conformance Test Results</h2>
-
-<p>Following ..., mobilityDCAT-AP supports the specification of test results to assess the degree of conformity of a resource (i.e., a Catalogue, a Dataset, a Data Service) with a given specification (e.g., a standard, a set of implementing rules, a set of data quality or interoperability criteria).</p>
-
-<p>For this purpose, mobilityDCAT-AP makes use of two different but not mutually exclusive approaches. More precisely, property <code>dct:conformsTo</code> is used when the test result states that a resource is conformant with a given specification. The more general approach is based on [[PROV-O]], and it specifies conformance test results as a testing activity (<code>prov:Activity</code>) that generates a result (specified with property <code>prov:generated</code>), corresponding to one of the degrees of conformity defined in [[INSPIRE-MD-REG]], and available from the INSPIRE Registry [[INSPIRE-DoC]]. The specification against which the testing activity is carried out is specified via a &ldquo;qualified association&rdquo; (<code>prov:qualifiedAssociation</code>), linked to a &ldquo;plan&rdquo; (<code>prov:hadPlan</code>) derived from (<code>prov:wasDerivedFrom</code>) the specification itself.</p>
-
-<p>This pattern is illustrated in <a href="#ex-activity"></a>.</p>
-
-<!-- <p>More details on these solutions are available in <a class="no-sectionRef" href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</p> -->
 
 </section>
 
