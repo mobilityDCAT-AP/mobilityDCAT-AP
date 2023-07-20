@@ -237,6 +237,12 @@ var respecConfig = {
         "date":"08 June 2020"
        },
 
+      "DCAT-AP-v2.1.0-Guideline-Dataservices":{
+        "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
+        "title":"DCAT-AP Usage guide on Datasets, Distributions and Data Services",
+        "publisher":"European Commission"
+       },
+
       "DCAT-AP-SDO": {
         "href": "https://ec-jrc.github.io/dcat-ap-to-schema-org/",
         "title": "DCAT-AP to Schema.org Mapping",
