@@ -112,41 +112,39 @@ table code, table pre {
 
 <section id="scope-of-the-revision">
 
-<h3>Scope of this version</h3>
+<h3>Scope of this version: Preparatory Activities and Initial Release</h3>
 
-<p>The objective of this work is to produce an initial release of mobilityDCAT-AP based on preceding preparatory activities, including a requirement analysis, a roadmap and conceptual models. A documentation about these preparatory activities is found at [[NAPCORE-Metadata-preparatory-activities]].</p>
+<p>This document aims to present the initial release of mobilityDCAT-AP, building upon preceding preparatory activities that include requirement analysis, a roadmap development and conceptual modeling. For detailed information about these preparatory activities, please refer to the relevant documentation at [[NAPCORE-Metadata-preparatory-activities]].</p>
 
-<p>As [[DCAT-AP]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p>
+<p>As [[DCAT-AP]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. mobilityDCAT-AP incorporates additional classes and properties from other well-known vocabularies are re-used, where necessary.</p>
 
-<p>The work does not cover implementation issues like mechanisms for the exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p>
+<p>This document, beyond what is defined in <a class="no-sectionRef" href="#conformance">Conformance Statement</a>, does not cover implementation issues such as data exchange mechanisms and the expected behavior of systems implementing mobilityDCAT-AP.</p>
 
-<p>The Application Profile is intended to facilitate data exchange. Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p>
+<p>The Application Profile purpose is to facilitate data exchange. Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged. There are no specific requirements for the systems involved in the data exchange process to implement particular technical environments, as long as they can export and import metadata in RDF, in conformance with mobilityDCAT-AP.</p>
 
 </section>
 
 <section id="specification">
 
-<h3>A DCAT-AP extension</h3>
+<h3>A DCAT-AP extension: Enhancing DCAT-AP for Mobility</h3>
 
+<p>mobilityDCAT-AP designed as an extension of DCAT-AP in conformance with the guidelines for the creating of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile, upon which this document is based, is version 2.0.1. of 8 June, 2020 [[DCAT-AP-v2.0.1]]. According to the same principles, DCAT-AP is in itself an extension of DCAT.</p>
 
-<p>The mobilityDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification version 2.0.1. of 8 June 2020 [[DCAT-AP-v2.0.1]]. According to the same principles, DCAT-AP is in itself an extension of DCAT.</p>
+<p>It is important to consider this dependency on the DCAT-AP specifications when reading and implementing mobilityDCAT-AP. The corresponding specifications should be consulted to address any gaps or missing information in this document.</p>
 
-<p>This dependency must be taken into account while reading and using this specification. When implementing mobilityDCAT-AP, these specifications should be consulted first to fill in any missing gaps in this document.</p>
-
-<p>Comparing to [[DCAT-AP-v2.0.1]], the following editions were made in mobilityDCAT-AP:</p>
+<p>Comparing mobilityDCAT-AP to [[DCAT-AP-v2.0.1]], the following editions have been made:</p>
 
 <ul>
-<li>some classes are newly created;</li>
-<li>some obligation levels for existing classes in DCAT-AP are raised to higher levels;</li>
-<li>some properties are added to existing classes in DCAT-AP, of which some are newly created;</li>
-<li>some obligation levels for existing properties in DCAT-AP are raised to higher levels;</li>
-<li>some existing, optional or recommended properties from DCAT-AP are removed;</li>
-<li>some usage notes about existing classes and properties from DCAT-AP are refined to address the special considerations in the context of mobility data portals;</li>
-<li>some additional, existing controlled vocabularies are referenced;</li>
-<li>some controlled vocabularies are newly created.</li>
+<li>Introduction of new classes</li>
+<li>Change to obligation levels for some existing classes in DCAT-AP</li>
+<li>Addition of new properties to existing classes in DCAT-AP, including newly created properties</li>
+<li>Change to obligation levels for some  existing properties in DCAT-AP</li>
+<li>Removal of certain optional or recommended properties from DCAT-AP</li>
+<li>Refinement of usage notes for existing classes and properties from DCAT-AP, to address the special considerations in the context of mobility data portals</li>
+<li>Reference to additional controlled vocabularies, including newly created controlled vocabularies</li>
 </ul>
-<p>These removals of optional or recommended properties from DCAT-AP are meant to keep the vocabulary of mobilityDCAT-AP as small as possible to avoid any misinterpretations and multiple usage of properties among senders.</p>
-<p>Further, some of the class and property additions correspond to the parallel DCAT-AP extension [[GEODCAT-AP-v2.0.0]], so these two extensions are compatible in terms of class and property additions. </p>
+<p>The removal of optional or recommended properties from DCAT-AP aims to minimise the vocabulary size of mobilityDCAT-AP, avoiding any misinterpretations and multiple usage of properties among data senders.</p>
+<p>Additionally, some class and property additions align with the parallel DCAT-AP extension [[GEODCAT-AP-v2.0.0]], enabling compatibility between the two extensions in terms of class and property additions. </p>
 </section>
 
 </section>
