@@ -85,7 +85,7 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document presents version 1.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about data sets and about access for such data sets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
+<p>This document presents version 1.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
 
 <p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original [[DCAT-AP]], while extending and customizing it for the mobility sector.</p>
 
@@ -162,7 +162,7 @@ table code, table pre {
 <p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling the discovery and re-use of the datasets. </p>
 <p>In the context of mobility, this might be a National Access Point addressing the EC ITS Directive [[NAPCORE-NAPs]]. Accordingly, a NAP aims to "...facilitate access, easy exchange and reuse of transport-related data, in order to help support the provision of EU-wide interoperable travel and traffic services to end users." It is realised as "...a database, data warehouse, data marketplace, repository, and register, web portal or similar...".  </p>
 
-<p> In the context of NAPs, the terms "Metadata registry", "Metadata entry", and "Publication" are often used, which are explained in the following.</p>
+<p>In the context of NAPs, the terms "Metadata registry", "Metadata entry", and "Publication" are often used, which are explained in the following.</p>
 
 <p>A <strong>Metadata registry</strong> is a digital recording of all metadata entries in a data portal, each describing the administration, organisation, and content of individual publications, including the published datasets and the corresponding distributions. The most visible Metadata representation is the dataset descriptions in a GUI of a NAP portal.</p>
 
@@ -181,7 +181,7 @@ table code, table pre {
 
 <p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning, relating to the potential responsibilities of metadata senders and metadata receivers.</p>
 
-<p>Such metadata senders and receivers are important actors for interoperable metadata, i.e., whenever metadata is exchanged between IT systems. This may happen when a data portal has metadata import and export functions. In this case, metadata senders and receivers are other data portals, e.g., allowing metadata harvesting. So, the following terms refer to the capability of a data portal to provide corresponding metadata in an export function or to read them in an import function.</p>
+<p>Such metadata senders and receivers are important actors for interoperable metadata, i.e., whenever metadata is exchanged between IT systems. This is the case when a data portal has metadata import and export functions. In this case, metadata senders and receivers are individual data portals. So, the following terms refer to the capability of a data portal to provide corresponding metadata in an export function or to read them in an import function.</p>
 
 <ul>
 <li><strong>Mandatory class</strong>: a receiver MUST be able to process information about instances of the class; a sender MUST provide information about instances of the class.</li>
@@ -283,7 +283,7 @@ table code, table pre {
 <p>The following optional classes are not included in [[DCAT-AP-v2.0.1]]:</p>
 <ul>
 <li>+<a href="#address-agent">Address (Agent)</a></li><!-- geoDCAT-AP addition-->
-<li>+<a href="#assessment">External assessment</a></li><!-- mobilityDCAT-AP addition-->
+<li>+<a href="#assessment">Assessment</a></li><!-- mobilityDCAT-AP addition-->
 <li>+<a href="#quality-annotation">Quality annotation</a></li><!-- mobilityDCAT-AP addition-->
 </ul>
 </aside>
