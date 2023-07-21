@@ -104,15 +104,23 @@ var respecConfig = {
     editors: [
       {
         name:    "Lina Molinas Comet",
-        company: "Fraunhofer FIT",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
         orcid:   "0000-0001-5446-6947",
-//        companyURL: "https://ec.europa.eu/jrc/"
+//        companyURL: ""
       },
       {
-        name: "Someone Else",
-        company: "Some other Company",
+        name: "Peter Lubrich",
+        company: "Federal Highway Research Institute (BASt)",
+        orcid: "",
+//        companyURL: ""
+      },
+      {
+        name: "Mario Scrocca",
+        company: "Cefriel",
+        orcid: "0000-0002-8235-7331",
 //        companyURL: ""
       }
+
     ],
     authors: [
     {
