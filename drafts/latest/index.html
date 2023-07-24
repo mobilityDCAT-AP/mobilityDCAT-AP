@@ -1335,8 +1335,8 @@ Often there is applicable legislation or a licence policy in place which determi
 
 <h2>Agent Types, Agent Roles and Agent Properties</h2>
 
-<p>According to [[FOAF]], an Agent (via class "foaf:Agent") may be of a type of a person (via sub-class "foaf:Person"), an organisation (via sub-class "foaf:Organization"), or a group (via sub-class "foaf:Group"). </p>
-<p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicitly mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property "org:memberOf", and, additionally, attributed with the personal name via properties "foaf:firstName" and "foaf:surname".</p>
+<p>According to [[FOAF]], an Agent (via class <a href="#agent"><code>foaf:Agent</code></a>) may be of a type of a person (via sub-class <code>foaf:Person</code>), an organisation (via sub-class <code>foaf:Organization</code>), or a group (via sub-class <code>foaf:Group</code>). </p>
+<p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicitly mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property <a href="#agent-affiliation"><code>org:memberOf</code></a>, and, additionally, attributed with the personal name via properties <a href="#agent-first-name"><code>foaf:firstName</code></a> and <a href="#agent-surname"><code>foaf:surname</code></a>.</p>
 
 <p>Further, [[DCAT-AP-v2.0.1]] has the following note about agent roles:</p>
 
@@ -1346,9 +1346,9 @@ Often there is applicable legislation or a licence policy in place which determi
 
 <p>mobilityDCAT-AP specifies this note as follows:</p>
 
-<p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under the class "foaf:Agent". As "dcat:contactPoint" is using the class "vcard:Kind" as the range, this class is neither used by mobilityDCAT-AP but kept in the overview table of optional classes for compatibility reasons.</p>
+<p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under the class <a href="#agent">foaf:Agent</a>. As "dcat:contactPoint" is using the class <a href="#kind">vcard:Kind</a> as the range, this class is neither used by mobilityDCAT-AP but kept in the overview table of optional classes for compatibility reasons.</p>
 
-<p>mobilityDCAT-AP uses the class "foaf:Agent" in the context of describing entities:</p>
+<p>mobilityDCAT-AP uses the class <a href="#agent"><code>foaf:Agent</code></a> in the context of describing entities:</p>
 <ul>
 <li>responsible for the creation and maintenance of the data platform;</li>
 <li>responsible for the creation and maintenance of a metadata entry;</li>
@@ -1360,7 +1360,7 @@ Often there is applicable legislation or a licence policy in place which determi
 
 <p>These specifications are meant to keep the agent-related vocabulary of mobilityDCAT-AP as small as possible, to avoid any misinterpretations and multiple usages of properties among senders.</p>
 
-<p>The class "foaf:Agent" is used to identify the entity with the above-mentioned roles, as well as its contact details. </p>
+<p>The class <a href="#agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles, as well as its contact details. </p>
 
 <p>Thus, a couple of properties for this class are defined, independently of the agent's role. Of these properties, <a href="#dataset-agent-name"><code>foaf:name</code></a> and <a href="#agent-email"><code>foaf:mbox</code></a> are mandatory. The email SHOULD be used to establish a communication channel to the agent. Further, recommended or optional properties MAY be used to provide further contact details, e.g. via the agent's web address or the postal address.</p>
 
