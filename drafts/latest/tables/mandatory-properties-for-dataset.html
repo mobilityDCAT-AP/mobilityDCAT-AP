@@ -71,7 +71,7 @@
 </td>
 <td>
 <p>This property describes how often the delivered content is updated. This information tells a data comsumer, how often it is updated on the on the data platform, so the data comsumer might align the frequency of data retrieval accordingly. </p>
-<p>For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the expected change frequency (see property "dct:modified"). The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. </p>
+<p>For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the expected change frequency (see property <a href="#dataset-modification-date"><code>dct:modified</code></a>). The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 <p>The obligation of this property is raised to “mandatory”, compared to [[DCAT-AP-v2.0.1]].</p>
 </td>
 <td>
@@ -90,8 +90,7 @@
 <p><code>dct:LinguisticSystem</code></p>
 </td>
 <td>
-<p>This property refers to a language of content data, if this data has a natural language embedded. Such data contents include text fields, addresses etc. Selection of one language is mandatory. According to the ISO 639 standard part 2, a 3 letter code for 24 EU languages is available.
-  This property can be repeated if there are multiple languages in the Dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
+<p>This property refers to a language of content data, if this data has a natural language embedded. Such data contents include text fields, addresses etc. This property can be repeated if there are multiple languages in the Dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 <p>The obligation of this property is raised to “mandatory”, compared to [[DCAT-AP-v2.0.1]].</p>
 </td>
 <td>
@@ -151,7 +150,7 @@
 </td>
 <td>
 <p>This property refers to an entity (company and person) that publishes the corresponding dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable. This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the provisioning of a dataset.</p>
-<p> This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset. </p>
+<p>This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset. </p>
 <p>The obligation of this property is raised to “mandatory”, compared to [[DCAT-AP-v2.0.1]].</p>
 </td>
 <td>
