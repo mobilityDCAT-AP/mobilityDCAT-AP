@@ -657,7 +657,12 @@ var respecConfig = {
         "title":"Named Authority List: Roles",
         "publisher":"Publications Office of the European Union"
        },
-      "EUV-THEMES":{
+      "EUV-THEMES-TRANSPORT":{
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/TRAN",
+        "title":"Named Authority List: Data Themes - Label: Transport ",
+        "publisher":"Publications Office of the European Union"
+       },
+       "EUV-THEMES":{
         "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme",
         "title":"Named Authority List: Data Themes",
         "publisher":"Publications Office of the European Union"
