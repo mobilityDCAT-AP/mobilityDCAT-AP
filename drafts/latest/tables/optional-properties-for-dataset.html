@@ -34,7 +34,7 @@
 <td>
 <p>This property refers to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [[NAPCORE-NB]] and installed individually in each Member State. </p>
 <p>The property SHOULD point to the recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online.</p> 
-<p>The difference to the property "dqv:hasQualityAnnotation" is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation. </p>
+<p>The difference to the property <a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a> is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation. </p>
 </td>
 <td>
 <p>0..1</p>
@@ -131,7 +131,7 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to property "is version of", with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version hiostory. Multiple versions should be differentiated via the properties "version" and "version notes".</p>
+<p>This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a>, with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version hiostory. Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -186,7 +186,7 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property "has version", with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version hiostory. Multiple versions should be differentiated via the properties "version" and "version notes".</p>
+<p>This property refers to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property <a href="#dataset-has-version"><code>dct:hasVersion</code></a> with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
 <td>
 <p>0..n</p>
