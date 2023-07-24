@@ -46,7 +46,7 @@
         <dct:description xml:lang="en">mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </dct:description>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-11</dct:issued>
         <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-14</dct:modified>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-07-24</dct:modified>
         <dct:title xml:lang="en">mobilityDCAT-AP</dct:title>
         <bibo:editor rdf:resource="https://lina-molinas-comet.name/foaf/#me"/>
         <bibo:editor>
