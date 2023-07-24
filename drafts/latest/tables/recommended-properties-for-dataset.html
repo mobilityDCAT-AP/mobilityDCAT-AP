@@ -87,7 +87,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended, to allow data search across different countries. In addition, national classifications are allowed.</p>
+<p>This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed.</p>
 <p>For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. </p>
 <p>For all modes, the property SHOULD also indicate if the data content relates to the EU’s trans-European transport network [[EU-TEN-T]]. </p>
 <p>A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided, denoting commonly used road and infrastructure network classes.</p>
@@ -127,9 +127,9 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an entity that legally owns or holds the rights about the data provided in a dataset. This entity is responsible for the content of the data, in particular, that the data fulfilles quality criteria (if applicable, see property “dqv:hasQualityAnnotation”) and/or is subject to legal frameworks (if applicable, see property “mobilitydcatap:legalFramework”).</p>
-<p>The Rights Holder will be in many cases identical with the Publisher (see property "dct:publisher"). In this case, the contact data will be copied from the “Publisher” entry. There might be also cases where one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a data set.</p>
-<p>This entity is the direct contact for the platform operator or data-consuming  users, who have questions or issues about the contents of a dataset, for example. The information might be identical to the property values of “dct:publisher” for the classes Catalogue Record and/or Dataset. When provided, it SHOULD include, as a minimum, the name and email address of the entity.</p>
+<p>This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property <a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a>) and/or the relevance to legal frameworks (if applicable, see property <a href="#dataset-legal-framework"><code>mobilitydcatap:legalFramework</code></a>).</p>
+<p>The Rights Holder will be in many cases identical with the Publisher (see property  <a href="#dataset-publisher"><code>dct:publisher</code></a>). In this case, the contact data will be copied from the Publisher entry. There might be also cases where one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a data set.</p>
+<p>This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset. The information might be identical to the property values of “dct:publisher” for the classes Catalogue Record and/or Dataset. When provided, it SHOULD include, as a minimum, the name and email address of the entity.</p>
 <p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td>
 <td>
@@ -166,7 +166,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property describes the transportation mode that is covered by by the delivered content. Data can be valid for more than one transportation mode, so a multiple choice should be applied. </p>
+<p>This property describes the transportation mode that is covered by the delivered content. Data can be valid for more than one transportation mode, so a multiple choice should be applied. </p>
 <p>A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided, denoting commonly used transportation modes.</p>
 </td>
 </td>
