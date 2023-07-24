@@ -1346,7 +1346,7 @@ Often there is applicable legislation or a licence policy in place which determi
 
 <p>mobilityDCAT-AP specifies this note as follows:</p>
 
-<p>mobilityDCAT-AP does not use the property "dcat:contactPoint" at all. Any contact details can be described as properties under the class <a href="#agent">foaf:Agent</a>. As "dcat:contactPoint" is using the class <a href="#kind">vcard:Kind</a> as the range, this class is neither used by mobilityDCAT-AP but kept in the overview table of optional classes for compatibility reasons.</p>
+<p>mobilityDCAT-AP does not use the property <code>dcat:contactPoint</code> at all. Any contact details can be described as properties under the class <a href="#agent">foaf:Agent</a>. As "dcat:contactPoint" is using the class <a href="#kind">vcard:Kind</a> as the range, this class is neither used by mobilityDCAT-AP but kept in the overview table of optional classes for compatibility reasons.</p>
 
 <p>mobilityDCAT-AP uses the class <a href="#agent"><code>foaf:Agent</code></a> in the context of describing entities:</p>
 <ul>
@@ -1356,15 +1356,15 @@ Often there is applicable legislation or a licence policy in place which determi
 <li>responsible for the content of the data.</li>
 </ul>
 
-<p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#catalogue-publisher"><code>dct:publisher</code></a>), Catalogue Record (<a href="#catalogue-record-publisher"><code>dct:publisher</code></a>), and Dataset (<a href="#dataset-publisher"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as "dct:creator" (defined by [[DCAT-AP-v2.0.1]]) are not used.</p>
+<p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#catalogue-publisher"><code>dct:publisher</code></a>), Catalogue Record (<a href="#catalogue-record-publisher"><code>dct:publisher</code></a>), and Dataset (<a href="#dataset-publisher"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as <code>dct:creator</code> are not used.</p>
 
 <p>These specifications are meant to keep the agent-related vocabulary of mobilityDCAT-AP as small as possible, to avoid any misinterpretations and multiple usages of properties among senders.</p>
 
 <p>The class <a href="#agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles, as well as its contact details. </p>
 
-<p>Thus, a couple of properties for this class are defined, independently of the agent's role. Of these properties, <a href="#dataset-agent-name"><code>foaf:name</code></a> and <a href="#agent-email"><code>foaf:mbox</code></a> are mandatory. The email SHOULD be used to establish a communication channel to the agent. Further, recommended or optional properties MAY be used to provide further contact details, e.g. via the agent's web address or the postal address.</p>
+<p>Thus, a couple of properties for this class are defined, independently of the agent's role. Of these properties, <a href="#agent-name"><code>foaf:name</code></a> and <a href="#agent-email"><code>foaf:mbox</code></a> are mandatory. The email SHOULD be used to establish a communication channel to the agent. Further, recommended or optional properties MAY be used to provide further contact details, e.g. via the agent's web address or the postal address.</p>
 
-<p>There is one further, recommended property <a href="#dataset-agent-type"><code>dct:type</code></a> describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regiona, national, supranational). Such organisation types are often data providers at mobility data portals, so much information is seen beneficial.</p>
+<p>There is one further, recommended property <a href="#agent-type"><code>dct:type</code></a> describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regiona, national, supranational). Such organisation types are often data providers at mobility data portals, so much information is seen beneficial.</p>
 
 <p>However, the controlled vocabulary from [[ADMS-SKOS]], as proposed by [[DCAT-AP-v2.0.1]], is not sufficient in the mobility context. Thus, further items are added by mobilityDCAT-AP to the controlled vocabulary, see <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>. </p>
 
