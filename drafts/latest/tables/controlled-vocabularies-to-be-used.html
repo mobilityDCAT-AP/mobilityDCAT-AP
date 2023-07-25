@@ -48,20 +48,20 @@
 <!-- row 1 -->
 <tr>
 <td rowspan="2">
-<p><code>dcat:theme</code></p>
+<p><a href="#dataset-category"><code>dcat:theme</code></a></p>
 </td>
 <td rowspan="2">
-<p><a href="#dataset-category">Dataset</a></p>
+<p><a href="#dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td>
-<p>mobilityDCAT-AP Vocabulary "Data content category"</p>
+<p>+mobilityDCAT-AP Vocabulary "Data content category"</p>
 </td>
 <td>
-<p><a href="http://">Placeholder for link to vocab "Data content category"</a></p>
+<p>+<a href="http://">Placeholder for link to vocab "Data content category"</a></p>
 </td>
 <td>
 <p>The values to be used for this property are the URIs of the concepts in the vocabulary. </p>
-<p>This is an vocabulary created by mobilityDCAT-AP. There are two hierarchical levels: "Data content category" (mandatory) and "Data content sub-catagory” (optional), see the usage note for property <a href="#dataset-categoryr"><code>dcat:theme</code></a>.</p>
+<p>This is a vocabulary created by mobilityDCAT-AP. There are two hierarchical levels: "Data content category" (mandatory) and "Data content sub-catagory” (optional), see the usage note for property <a href="#dataset-categoryr"><code>dcat:theme</code></a>.</p>
 </td>
 </tr>
   
@@ -87,10 +87,10 @@
 
 <tr>
 <td>
-<p><code>dcat:themeTaxonomy</code></p>
+<p><a href="#catalogue-themes"><code>dcat:themeTaxonom</code></a></p>
 </td>
 <td>
-<p><a href="#catalogue-themes">Catalogue</a></p>
+<p><a href="#catalogue"><code>dcat:Catalog</code></a></p>
 </td>
 <td>
 <p>Dataset Theme Vocabulary [[EUV-THEMES]]</p>
@@ -133,10 +133,10 @@
 <!-- row 1 -->
 <tr>
 <td rowspan="2">
-<p><code>dct:accrualPeriodicity</code></p>
+<p><a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a></p>
 </td>
 <td rowspan="2">
-<p><a href="#dataset-frequency">Dataset</a></p>
+<p><a href="#dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td>
 <p>EU Authority Table "Frequency" [[EUV-FREQ]]</p>
@@ -155,10 +155,10 @@
 <td>
 </td>
 <td>
-<p>mobilityDCAT-AP Vocabulary "Update frequency"</p
+<p>+mobilityDCAT-AP Vocabulary "Update frequency"</p
 </td>
 <td>
-<p><a href="http://">Placeholder for link to vocab "Update frequency"</a></p>
+<p>+<a href="http://">Placeholder for link to vocab "Update frequency"</a></p>
 </td>
 <td>
 <p>This is an vocabulary created by mobilityDCAT-AP, complementing time intervals missing in the EU vocabulary (see row above).</p>
@@ -169,19 +169,19 @@
 
 <tr>
 <td>
-<p>+<code>dct:conformsTo</code></p>
+<p><a href="#href="#dataset-reference-system"><code>dct:conformsTo</code></a></p>
 </td>
 <td>
-<p><a href="#dataset-reference-system">Dataset</a></p>
+<p><a href="#dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td>
-<p>OGC EPSG Coordinate Reference Systems Register [[OGC-EPSG]]</p>
+<p>+OGC EPSG Coordinate Reference Systems Register [[OGC-EPSG]]</p>
 </td>
 <td>
-<p><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
+<p>+<a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
 </td>
 <td>
-<p>GeoDCAT-AP extension.</p>
+<p>Analogue to a vocabulary addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td>
 </tr>
 
@@ -191,19 +191,44 @@
 
 <tr>
 <td>
-<p><code>dct:format</code></p>
+<p><a href="#distribution-format"><code>dct:format</code></a></p>
 </td>
 <td>
-<p><a href="#distribution-format">Distribution</a></p>
+<p><a href="#distribution"><code>dcat:Distribution</code></a></p>
 </td>
 <td>
-<p>EU Vocabularies File Type Named Authority List [[EUV-FT]]</p>
+<p>EU Authority Table "File Type" [[EUV-FT]]</p>
 </td>
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a></p>
 </td>
-<td>&nbsp;</td>
+<td>
+<p>This is a mandatory vocabulary "File Type" by the Publications Office of the European Union. </p>  
+<p>Please note that mobilityDCAT-AP has different properties related to the format, including <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, <a href="#distribution-format"><code>dct:format</code></a>, <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a>, <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a>, and <a href="#distribution-datamodelschema"><code>mobilitydcatap:dataModelSchema</code></a>. This controlled vocabulary relates to <a href="#distribution-format"><code>dct:format</code></a> ,i.e., the base standard that specifies syntactically correct documents.</p>  
+</td>
 </tr>
+
+
+
+<!-- Data model, mobilityDCAT-AP addition -->
+<tr>
+<td>
+<p><a href="#distribution-datamodel"><code>mobilitydcatap:dataMode</code></a></p>
+</td>
+<td>
+<p><a href="#distribution"><code>dcat:Distribution</code></a></p>
+</td>
+<td>
+<p>+mobilityDCAT-AP Vocabulary "Data model"</p>
+</td>
+<td>
+<p>+<a href="http://">Placeholder for link to vocab "Data model"</a></p>
+</td>
+<td>
+<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+</td>
+</tr>
+  
 
 <!-- Language -->
 
