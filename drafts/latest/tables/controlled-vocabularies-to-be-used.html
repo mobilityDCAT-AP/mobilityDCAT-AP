@@ -45,7 +45,7 @@
 -->
   
 <!-- Theme -->
-
+<!-- row 1 -->
 <tr>
 <td rowspan="2">
 <p><code>dcat:theme</code></p>
@@ -54,7 +54,7 @@
 <p><a href="#dataset-category">Dataset</a></p>
 </td>
 <td>
-<p>Mobility-related Category Vocabulary</p>
+<p>mobilityDCAT-AP Vocabulary "Data content category"</p>
 </td>
 <td>
 <p><a href="http://">Placeholder for link to vocab "Data content category"</a></p>
@@ -64,14 +64,15 @@
 <p>This is an vocabulary created by mobilityDCAT-AP. There are two hierarchical levels: "Data content category" (mandatory) and "Data content sub-catagory” (optional), see the usage note for property <a href="#dataset-categoryr"><code>dcat:theme</code></a>.</p>
 </td>
 </tr>
-
+  
+<!-- row 2 -->
 <tr>
 <td>
 </td>
 <td>
 </td>
 <td>
-<p>Dataset Theme Vocabulary [[EUV-THEMES]]</p>
+<p>EU Authority Table "Data Themes" [[EUV-THEMES]]</p>
 </td>
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/data-theme">http://publications.europa.eu/resource/authority/data-theme</a></p>
@@ -129,23 +130,40 @@
 
 
 <!-- Update frequency -->
-
+<!-- row 1 -->
 <tr>
-<td>
+<td rowspan="2">
 <p><code>dct:accrualPeriodicity</code></p>
 </td>
-<td>
+<td rowspan="2">
 <p><a href="#dataset-frequency">Dataset</a></p>
 </td>
 <td>
-<p>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</p>
+<p>EU Authority Table "Frequency" [[EUV-FREQ]]</p>
 </td>
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a></p>
 </td>
-<td>&nbsp;</td>
+<p>This is a mandatory vocabulary "Frequency" by the Publications Office of the European Union. </p>
+<p>The values from this vocabulary do not cover all relevant time intervals used in mobility data portals, e.g., minute-based intervals. Thus, there is a second vocabulary created by mobilityDCAT-AP (see next row), adding any missing time intervals.</p>
 </tr>
-
+  
+<!-- row 2 -->
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+<p>mobilityDCAT-AP Vocabulary "Update frequency"</p
+</td>
+<td>
+<p><a href="http://">Placeholder for link to vocab "Update frequency"</a></p>
+</td>
+<td>
+<p>This is an vocabulary created by mobilityDCAT-AP, complementing time intervals missing in the EU vocabulary (see row above).</p>
+</td>
+</tr>
 
 <!-- Conforms to -->
 
