@@ -81,7 +81,7 @@
 <!-- Theme taxonomy -->
 <tr>
 <td>
-<p><a href="#catalogue-themes"><code>dcat:themeTaxonom</code></a></p>
+<p><a href="#catalogue-themes"><code>dcat:themeTaxonomy</code></a></p>
 </td>
 <td>
 <p><a href="#catalogue"><code>dcat:Catalog</code></a></p>
@@ -102,19 +102,19 @@
 <!-- Access rights -->
 <tr>
 <td>
-<p><code>dct:accessRights</code></p>
+<p><a href="#data-service-access-rights"><code>dct:accessRights</code></a></p>
 </td>
 <td>
-<p><a href="#data-service-access-rights">Data Service</a></p>
+<p><a href="#data-service"><code>dcat:DataService</code></a></p>
 </td>
 <td>
-<p>EU Vocabularies Access rights [[?EUV-AR]]</p>
+<p>EU Authority Table "Access right" [[EUV-AR]]</p>
 </td>
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a></p>
 </td>
 <td>
-<p></p>
+<p>This is an optional vocabulary "Access right" by the Publications Office of the European Union. It is only used in the context of class <a href="#data-service"><code>dcat:DataService</code></a>, which is not recommended for usage in mobilityDCAT-AP, see the usage note for <a href="#propoerties-fordata-service"><code>dcat:DataService</code></a>.</p>
 </td>
 </tr>
 
@@ -134,8 +134,10 @@
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a></p>
 </td>
+<td>
 <p>This is a mandatory vocabulary "Frequency" by the Publications Office of the European Union. </p>
 <p>The values from this vocabulary do not cover all relevant time intervals used in mobility data portals, e.g., minute-based intervals. Thus, there is a second vocabulary created by mobilityDCAT-AP (see next row), adding any missing time intervals.</p>
+</td>
 </tr>
   
 <!-- row 2 -->
@@ -166,7 +168,7 @@
 <p>+<a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
 </td>
 <td>
-<p>Analogue to a vocabulary addition by [[GEODCAT-AP-v2.0.0]].</p>
+<p>This is a optional added by mobilityDCAT-AP, analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td>
 </tr>
 
@@ -189,7 +191,7 @@
 </td>
 <td>
 <p>This is a mandatory vocabulary "File Type" by the Publications Office of the European Union. </p>  
-<p>Please note that mobilityDCAT-AP has different properties related to the format, including <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, <a href="#distribution-format"><code>dct:format</code></a>, <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a>, <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a>, and <a href="#distribution-datamodelschema"><code>mobilitydcatap:dataModelSchema</code></a>. This controlled vocabulary relates to <a href="#distribution-format"><code>dct:format</code></a> ,i.e., the base standard that specifies syntactically correct documents.</p>  
+<p>Please note that mobilityDCAT-AP has different properties related to the format, including <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, <a href="#distribution-format"><code>dct:format</code></a>, <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a>, <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a>, and <a href="#distribution-datamodelschema"><code>mobilitydcatap:dataModelSchema</code></a>. This controlled vocabulary relates to <a href="#distribution-format"><code>dct:format</code></a>, i.e., the base standard that specifies syntactically correct documents.</p>  
 </td>
 </tr>
 
@@ -280,7 +282,7 @@
 <!-- Georeferencing method, mobilityDCAT-AP addition -->
 <tr>
 <td>
-<p>+<a href="#dataset"><code>mobilitydcatap:georeferencingMethod</code></a></p>
+<p>+<a href="#dataset-georefercing-method"><code>mobilitydcatap:georeferencingMethod</code></a></p>
 </td>
 <td>
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
@@ -299,7 +301,7 @@
 <!-- Network coverage, mobilityDCAT-AP addition -->
 <tr>
 <td>
-<p>+<a href="#dataset"><code>mobilitydcatap:networkCoverage</code></a></p>
+<p>+<a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a></p>
 </td>
 <td>
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
@@ -311,7 +313,7 @@
 <p>+<a href="http://">Placeholder for link to vocab "Network coverage"</a></p>
 </td>
 <td>
-<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+<p>This is an optional vocabulary created by mobilityDCAT-AP. </p>
 </td>
 </tr>   
 
@@ -320,7 +322,7 @@
 <!-- Transportation mode, mobilityDCAT-AP addition -->
 <tr>
 <td>
-<p>+<a href="#dataset"><code>mobilitydcatap:transportationMode</code></a></p>
+<p>+<a href="#dataset-transportation-mode"><code>mobilitydcatap:transportationMode</code></a></p>
 </td>
 <td>
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
@@ -332,14 +334,14 @@
 <p>+<a href="http://">Placeholder for link to vocab "Transportation mode"</a></p>
 </td>
 <td>
-<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+<p>This is an optional vocabulary created by mobilityDCAT-AP. </p>
 </td>
 </tr>  
    
 <!-- Service category, mobilityDCAT-AP addition -->
 <tr>
 <td>
-<p>+<a href="#dataset"><code>mobilitydcatap:serviceCategory</code></a></p>
+<p>+<a href="#dataset-service-category"><code>mobilitydcatap:serviceCategory</code></a></p>
 </td>
 <td>
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
@@ -351,7 +353,7 @@
 <p>+<a href="http://">Placeholder for link to vocab "Service category"</a></p>
 </td>
 <td>
-<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+<p>This is an optional vocabulary created by mobilityDCAT-AP. </p>
 </td>
 </tr>  
 
@@ -408,7 +410,7 @@
 <p>+<a href="http://">Placeholder for link to vocab "Grammar"</a></p>
 </td>
 <td>
-<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+<p>This is an optional vocabulary created by mobilityDCAT-AP. </p>
 </td>
 </tr>
    
@@ -427,7 +429,7 @@
 <p>+<a href="http://">Placeholder for link to vocab "Application layer protocol"</a></p>
 </td>
 <td>
-<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+<p>This is an optional vocabulary created by mobilityDCAT-AP. </p>
 </td>
 </tr>
   
@@ -446,7 +448,7 @@
 <p>+<a href="http://">Placeholder for link to vocab "Communication method"</a></p>
 </td>
 <td>
-<p>This is a mandatory vocabulary created by mobilityDCAT-AP. </p>
+<p>This is an optional vocabulary created by mobilityDCAT-AP. </p>
 </td>
 </tr>
    
