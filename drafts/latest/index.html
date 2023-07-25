@@ -1234,18 +1234,7 @@ table code, table pre {
 <h3>Other controlled vocabularies</h3>
 
 <p>In [[DCAT-AP-v2.0.1]], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and sevaral licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p> 
-<p>Regarding license-related vocabularies, [[DCAT-AP-v2.0.1]] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]], which seems too complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [[ODRS]], which seems rather simple, but is reusing terms form from t </p>
-
-</section>
-
-<section id="licence-vocabularies">
-
-<h3>Licence vocabularies</h3>
-
-<p>Concerning licence vocabularies, implementers are encouraged to use widely recognised licences such as Creative Commons licences [[?CC]], particularly the CC Zero Public Domain Dedication [[?CC0]] or CC-BY Attribution 4.0 International [[?CC-BY]], or the Open Data Commons Public Domain Dedication and License (PDDL) [[?PDDL]].
-Often there is applicable legislation or a licence policy in place which determines the set of licences to be used. They may recommend the use of an open government licence such as the UK Open Government Licence [[?UKOGL]].</p>
-
-<p>Further activities in this area are undertaken by the Open Data Institute [[?ODI]] with the Open Data Rights Statement Vocabulary [[?ODRS]] and by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]].</p>
+<p>Regarding license-related vocabularies, [[DCAT-AP-v2.0.1]] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]], which seems rather complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [[ODRS]]. This vocabulary is introducing a central class called <code>odrs:RightsStatement</code>, which is semantically equal to class <a href="#rights-statement"><code>dct:RightsStatement</code></a> from [[DCAT-AP-v2.0.1]]; and reusing some properties from [[DCAT-AP-v2.0.1]], such as <a href="#distribution-rights"><code>dct:rights</code></a>. Again, no explicit recommendation for the usage of such license-related vocabularies is given. </p>
 
 </section>
 
@@ -1313,7 +1302,7 @@ Often there is applicable legislation or a licence policy in place which determi
 
 <p>mobilityDCAT-AP specifies this note as follows:</p>
 
-<p>mobilityDCAT-AP does not use the property <code>dcat:contactPoint</code> at all. Any contact details can be described as properties under the class <a href="#agent">foaf:Agent</a>. As <code>dcat:contactPoint</code> is using the class <a href="#kind">vcard:Kind</a> as the range, this class is neither used by mobilityDCAT-AP but kept in the overview table of optional classes for compatibility reasons.</p>
+<p>mobilityDCAT-AP does not use the property <code>dcat:contactPoint</code> at all. Any contact details can be described as properties under the class <a href="#agent">foaf:Agent</a>. As <code>dcat:contactPoint</code> is using the class <a href="#kind"><code>vcard:Kind</code></a> as the range, this class is neither used by mobilityDCAT-AP but kept in the overview table of optional classes for compatibility reasons.</p>
 
 <p>mobilityDCAT-AP uses the class <a href="#agent"><code>foaf:Agent</code></a> in the context of describing entities:</p>
 <ul>
