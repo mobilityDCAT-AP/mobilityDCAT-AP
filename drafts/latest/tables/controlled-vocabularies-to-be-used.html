@@ -150,6 +150,7 @@
 </td>
 <td>
 <p>This is an vocabulary created by mobilityDCAT-AP, complementing time intervals missing in the EU vocabulary (see row above).</p>
+<p>Values from the above-mentioned vocabularies MUST be used as instances of class <a href="#frequency"><code>dct:Frequency</code></a>, being the range of the property <code>dct:accrualPeriodicity</code>. </p>
 </td>
 </tr>
 
@@ -169,6 +170,7 @@
 </td>
 <td>
 <p>This is a optional added by mobilityDCAT-AP, analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
+<p>Values from this vocabulary MUST be used as instances of class <a href="#standard"><code>dct:Standard</code></a>, being the range of the property <code>dct:conformsTo</code>. </p>
 </td>
 </tr>
 
@@ -191,7 +193,8 @@
 </td>
 <td>
 <p>This is a mandatory vocabulary "File Type" by the Publications Office of the European Union. </p>  
-<p>Please note that mobilityDCAT-AP has different properties related to the format, including <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, <a href="#distribution-format"><code>dct:format</code></a>, <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a>, <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a>, and <a href="#distribution-datamodelschema"><code>mobilitydcatap:dataModelSchema</code></a>. This controlled vocabulary relates to <a href="#distribution-format"><code>dct:format</code></a>, i.e., the base standard that specifies syntactically correct documents.</p>  
+<p>Values from this vocabulary MUST be used as instances of class <code>dct:MediaTypeOrExtent</code>, being the range of the property <code>dct:format</code>. </p>
+<p>Please note that mobilityDCAT-AP has different properties related to the format, including <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, <a href="#distribution-format"><code>dct:format</code></a>, <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a>, <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a>, and <a href="#distribution-datamodelschema"><code>mobilitydcatap:dataModelSchema</code></a>. This controlled vocabulary relates only to <a href="#distribution-format"><code>dct:format</code></a>, i.e., the base standard that specifies syntactically correct documents.</p>  
 </td>
 </tr>
 
@@ -208,15 +211,16 @@
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td>
-<p>EU Vocabularies Languages Named Authority List [[EUV-LANG]]</p>
+<p>EU Authority Table "language" [[EUV-LANG]]</p>
 </td>
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a></p>
 </td>
-<td>&nbsp;</td>
+<td>
+<p>This is a mandatory vocabulary "Language" by the Publications Office of the European Union.</p> 
+<p>Values from this vocabulary MUST be used as instances of class <a href="#linguistic-system"><code>dct:LinguisticSystem</code></a>, being the range of the property <code>dct:language</code>. </p>
+</td>
 </tr>
-
-
 
 <!-- Publisher -->
 <tr>
@@ -231,13 +235,14 @@
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td>
-<p>EU Vocabularies Corporate bodies Named Authority List [[EUV-CB]]</p>
+<p>EU Authority Table "Corporate body" [[EUV-CB]]</p>
 </td>
 <td>
 <p><a href="http://publications.europa.eu/resource/authority/corporate-body">http://publications.europa.eu/resource/authority/corporate-body</a></p>
 </td>
 <td>
-<p>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</p>
+<p>This is a mandatory vocabulary "Corporate body" by the Publications Office of the European Union. It MUST be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies about organisations SHOULD be used, if available.</p>
+<p>Values from this vocabulary MUST be used as instances of class <a href="#agent"><code>foaf:Agent</code></a>, being the range of the property <code>dct:publisher</code>. </p>
 </td>
 </tr>
 
@@ -262,6 +267,7 @@
 </td>
 <td>
 <p>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, [[GEONAMES]] URIs must be used.</p>
+<p>Values from the above-mentioned vocabularies MUST be used as instances of class <a href="#location"><code>dct:Location</code></a>, being the range of the property <code>dct:spatial</code>. </p>
 </td>
 </tr>
 
