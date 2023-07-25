@@ -139,11 +139,11 @@
 <td>
 <p><code>mobilitydcatap:dataFormatNotes</code></p>
 </td>
-<td>
 <p><code>rdfs:Literal</code></p>
+<td>
 </td>
 <td>
-<p>This property contains any additional information about the Grammar, Schema, or Data Model of the delivered content within the Distribution (see the corresponding properties). This might be about, e.g., extensions being used in a “Data model”. This information should be provided in a textual format. </p>
+<p>This property contains any additional information about the Grammar, Schema, or Data Model of the delivered content within the Distribution (see the corresponding properties <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a>, <a href="#distribution-datamodelschema"><code>mobilitydcatap:dataModelSchema</code></a>, <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>), in a textual format. This might be about, e.g., extensions being used in a <code>mobilitydcatap:dataModel</code>.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -256,7 +256,7 @@
 </td>
 <td>
 <p>This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. .</p>
-<p>In [[DCAT-AP-v2.0.1]], there is a property "adms:sample" under the class "Dataset", with a range of "Distribution". This implies, that all mandatory properties from "Distribution", e.g., "mobilitydcatap:dataModel", must be applied. To simplify the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class "Distribution". It is assumed that all other properties for "Distribution", e.g. "mobilitydcatap:dataModel", also apply for the description of the data sample. </p>
+<p>In [[DCAT-AP-v2.0.1]], there is a property <code>adms:sample/code></a> under the class <a href="#dataset"><code>dcat:Dataset</code></a> , with a range of <a href="#distribution"><code>dcat:Distribution</code></a>. This implies, that all mandatory properties from <a href="#distribution"><code>dcat:Distribution</code></a>, e.g., <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, must be applied. To simplify the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class <a href="#distribution"><code>dcat:Distribution</code></a>. It is assumed that all other properties, as already populated for <a href="#distribution"><code>dcat:Distribution</code></a>, e.g., <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>, also apply for the description of the data sample. </p>
 </td>
 <td>
 <p>0..n</p>
