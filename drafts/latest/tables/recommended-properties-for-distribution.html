@@ -59,18 +59,18 @@
 </tr>
 -->  
 
-<tr class="property recommended ap-ext" id="distribution-dataformatversion">
+<tr class="property recommended ap-ext" id="distribution-datamodelversion"> <<!-- revision addressiing GitGub issue Data format version"-->
 <td>
-<p>+data format version</p>
+<p>+data model version</p>
 </td>
 <td>
-<p><code>mobilitydcatap:dataFormatVersion</code></p>
+<p><code>mobilitydcatap:dataModelVersion</code></p>
 </td>
 <td>
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property describes the version of the Grammar, Schema, or Data Model of the delivered content within the Distribution (see the corresponding properties). A version might be, e.g., DATEX II v3.2. This information should be provided in a textual format. </p>
+<p>This property describes the version of the data model, see property <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>. A version might be, e.g., DATEX II v3.2. This information is provided in a textual format. To avoid ambiguity, allow short version identifiers SHOULD be used, without redundant acronyms such as "v", underscores etc.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -85,10 +85,10 @@
 <p><code>mobilitydcatap:dataModelSchema</code></p>
 </td>
 <td>
-<p><code>skos:Concept</code></p>
+<p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property describes the schema of the delivered content, as applied for the data model within the Distribution (see property <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>). The schema can be individually determined by the data provider (e.g., a stakeholder-based DATEX II profile) or a prescribed by other institutions (e.g., a DATEX II recommended reference profile). The data platform SHOULD keep references of commonly used schemas.</p>
+<p>This property describes the schema of the delivered content, as applied for the data model, see property <a href="#distribution-datamodel"><code>mobilitydcatap:dataModel</code></a>). The schema can be individually determined by the data provider (e.g., a stakeholder-based DATEX II profile) or a prescribed by other institutions (e.g., a DATEX II recommended reference profile). The data platform SHOULD keep an archive of commonly used schemas. The data provider SHOULD be able to select an applicable schema from this archive, or to upload an own, individual schema. In any case, the schema should be available as a resource. </p>
 </td>
 <td>
 <p>0..1</p>
