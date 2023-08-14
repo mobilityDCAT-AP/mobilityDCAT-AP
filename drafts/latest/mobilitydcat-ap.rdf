@@ -1115,7 +1115,6 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/mobilitydcat-ap#">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/adms#Asset"/>
-        <dct:conformsTo rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
         <dct:conformsTo rdf:resource="http://data.europa.eu/r5r/"/>
         <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"/>
         <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"/>

@@ -13,7 +13,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -37,8 +36,7 @@ mobilitydcatap: a voaf:Vocabulary,
   rdfs:label "mobilityDCAT-AP"@en ;
   dct:abstract "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. "@en ;
   dct:alternative "mobilityDCAT-AP - Version 1.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
-  dct:conformsTo <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
-    dcatap:,
+  dct:conformsTo dcatap:,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements>,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap>,
     <https://www.w3.org/TR/vocab-dcat-2/> ;
