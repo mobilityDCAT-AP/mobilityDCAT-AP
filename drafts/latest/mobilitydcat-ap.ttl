@@ -846,3 +846,140 @@ rdfs:label rdf:type owl:DatatypeProperty ;
 
 ###  https://www.w3.org/TR/vocab-dcat-2/
 <https://www.w3.org/TR/vocab-dcat-2/> rdf:type owl:NamedIndividual .
+
+
+dct:LicenseDocument skos:scopeNote "A legal document giving official permission to do something with a resource. The ''dct:identifier'' recommended property is not included in [DCAT-AP-v2.0.1]. The licence type recommended property is removed from [DCAT-AP-v2.0.1]. The ''rdfs:label'' optional property is not included in [DCAT-AP-v2.0.1]."@en .
+
+dct:Location skos:scopeNote "A spatial region or named place. It can be represented via a named place (controlled vocabulary) or with geographic coordinates, according to DCAT-AP guidelines [DCAT-AP-guideline-spatial]. For mobility data portals, usage of a named place is preferred. Many mobility data providers represent public authorities such as states, regions, municipalities etc, which can be easily represented via named places. In contrast, defining of coordinates per data set might be error-prone and inconsistent. As named spaces, identifiers SHOULD be used (via property ''dct:identifier''). These are coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames, see § 5.2 Controlled vocabularies to be used. Alternatively, geographic clear names MAY be used via property ''skos:prefLabel''. The ''skos:inScheme'' and ''dct:identifier'' recommended properties are not included in [DCAT-AP-v2.0.1]. The ''skos:prefLabel'' optional property is not included in [DCAT-AP-v2.0.1]. Please note that the order of usage is as follows: use the most specific geospatial relationship by preference. E.g. if the spatial description is a bbox, use ''dcat:bbox'', otherwise use ''locn:geometry'' (see § 4.16.2 Optional properties for Location)."@en .
+
+dct:MediaType skos:scopeNote " A media type, e.g. the format of a computer file. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the optional properties ''dcat:compressFormat'', ''dcat:mediaType'', and ''dcat:packageFormat'' for class Distribution. In mobilityDCAT-AP, however, these properties are removed. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1]"@en .
+
+dct:PeriodOfTime skos:scopeNote "An interval of time that is named or defined by its start and end dates. Please note that while both properties are recommended, one of the two must be present for each instance of the class ''dct:PeriodOfTime'', if such an instance is present. The start of the period should be understood as the start of the date, hour, minute etc. given (e.g. starting at midnight at the beginning of the day if the value is a date); the end of the period should be understood as the end of the date, hour, minute etc. given (e.g. ending at midnight at the end of the day if the value is a date). The beginning and end properties are removed from [DCAT-AP-v2.0.1]."@en .
+
+dct:ProvenanceStatement skos:scopeNote "A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the optional property ''dct:provenance'' for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1]."@en .
+
+dct:RightsStatement skos:scopeNote "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights. As a minimum, it should include an information on the type of conditions for access and usage. Information about concrete licenses can be provided via class License Document. The ''dct:type'' mandatory property is not included in [DCAT-AP-v2.0.1]. The ''rdfs:label'' recommended property is not included in [DCAT-AP-v2.0.1]."@en .
+
+dct:Standard skos:scopeNote "A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or Distribution conforms.. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is used as the range of property ''dct:conformsTo'' for class Catalogue Record (context ''application profile''); for class Dataset (context' 'conforms to''); and for class Distribution (context ''linked schemas''). In mobilityDCAT-AP, these properties are removed. However, mobilityDCAT-AP uses this class as the range of an added property ''dct:conformsTo'' for class Dataset in a different context ''reference system'', analogue to a property addition by [GEODCAT-AP-v2.0.0]. [GEODCAT-AP-v2.0.0] adds several properties to the class Standard. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [GEODCAT-AP-v2.0.0], MAY be used."@en .
+
+dct:accessRights skos:scopeNote "This property MAY include information regarding access or restrictions based on privacy, security, or other policies. For INSPIRE metadata, this property SHOULD be used with the URIs of the ''Limitations on public access'' code list operated by the INSPIRE Registry [INSPIRE-LPA]."@en .
+
+dct:accrualPeriodicity skos:scopeNote "This property describes how often the delivered content is updated. This information tells a data comsumer, how often it is updated on the on the data platform, so the data comsumer might align the frequency of data retrieval accordingly. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the expected change frequency (see property dct:modified). The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1]."@en .
+
+dct:description skos:scopeNote "This property contains a free-text, individual name of the mobility data platform itself. This property MAY be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects."@en .
+
+dct:format skos:scopeNote "This property refers to the technical syntax of the delivered content within the Distribution. It describes the base standard that specifies syntactically correct documents. On this level, only base elements of building documents properly are specified and can be proved by syntax checks. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1]. There is a similar property in [DCAT-AP-v2.0.1] dcat:mediaType, which is removed in mobilityDCAT-AP. There reason is the use of Controlled vocabularies: dct:format uses the EU Authority List [EUV-FT], whereas dcat:mediaType uses the IANA media types [IANA-MEDIA-TYPES]. The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals. "@en .
+
+dct:hasPart skos:scopeNote "This property refers to a related Catalogue that is part of the described mobility data portal. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal. "@en .
+
+dct:hasVersion skos:scopeNote "This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to the property ''dct:isVersionOf'', with a contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties ''owl:versionInfo'' and ''adms:versionNotes''."@en .
+
+dct:isPartOf skos:scopeNote "This property refers to a related Catalogue in which the described mobility data portal is physically or logically included. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from the mobility data portal into this other portal. "@en .
+
+dct:isReferencedBy skos:scopeNote "This property references, cites, or otherwise points to another, related dataset. Corresponds to the property dct:relation, with a contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities."@en .
+
+dct:isVersionOf skos:scopeNote "This property refers to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property dct:hasVersion with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties owl:versionInfo and adms:versionNotes."@en .
+
+dct:issued skos:scopeNote "This property contains the date of formal issuance (e.g., publication) of the Catalogue."@en .
+
+dct:language skos:scopeNote "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the metadata entry. The value should be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see § 8. Accessibility and Multilingual Aspects. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided."@en .
+
+dct:license skos:scopeNote "This property contains the licence under which the Data Service is made available."@en .
+
+dct:modified skos:scopeNote "This property contains the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed."@en .
+
+dct:relation skos:scopeNote "This property references, cites, or otherwise points to another, related dataset. Corresponds to the property dct:isReferencedBy, with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.	"@en .
+
+dct:rights skos:scopeNote "This property links to a Rights Statement, i.e., a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage. A concrete (standard) license can be referred via the recommended property dct:license. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1]."@en .
+
+dct:spatial skos:scopeNote "This property refers to a country code where the data platform is hosted. For National Access Points (NAPs), this corresonds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available data sets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property dct:spatial, which might be different. The obligation of this property is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1]."@en .
+
+dct:temporal skos:scopeNote "This property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table)."@en .
+
+dct:title skos:scopeNote "This property contains a name given to the mobility data portal, a name of the Category Scheme, a name given to the Data Service, a name given to the Dataset in a generic term. The name should be a meaningful, unique and unambigous label. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. The language versions should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title."@en .
+
+dct:type skos:scopeNote "This property refers to a type of the Agent that makes the Catalogue, Catalogue Record, Data Service, or Dataset available"@en .
+
+spdx:Checksum skos:scopeNote "A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented. In [DCAT-AP-v2.0.1], this class is defined as the range for the optional property ''spdx:checksum'' of class Distribution. However, in mobilityDCAT-AP, this property is removed. So, the class and its properties are without function but kept for compatibility reasons."@en .
+
+spdx:algorithm skos:scopeNote "This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time."@en .
+
+spdx:checksumValue skos:scopeNote "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm."@en .
+
+owl:versionInfo skos:scopeNote "This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property dct:modified. Together with property adms:versionNotes, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow W3C Data on the Web Best Practices [DWBP]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [SEMVER]."@en .
+
+skos:Concept skos:scopeNote "A category of a dataset, i.e. a specific subject, theme, or a class about its content. The category is described via a categorisation scheme, i.e. a classification or a taxonomy. Such scheme lists all potential categories, see class ''Category Scheme''. In mobilityDCAT-AP, this class SHOULD only be used in the context of a data set (via property ''dcat:theme''). In other contexts, e.g. under [geoDCAT-AP-v2.0.0], this might also be used to describe the theme of a Catalogue or Data Service."@en .
+
+skos:ConceptScheme skos:scopeNote "A categorisation scheme, i.e. a classification or a taxonomy, listing all potential categories which might be used for instances of class Category. In mobilityDCAT-AP, this scheme is expressed via a controlled vocabulary for the property ''dcat:theme'' of class Dataset."@en .
+
+skos:notation skos:scopeNote "This property contains a string that is an identifier in the context of the identifier scheme referenced by its datatype."@en .
+
+skos:prefLabel skos:scopeNote "This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects."@en .
+
+vcard:Kind skos:scopeNote "A description following the [VCARD-RDF] specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class vcard:Kind is the parent class for the four explicit types of vCards (vcard:Individual, vcard:Organization, vcard:Location, vcard:Group). This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the recommended property ''dcat:contactPoint'' for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see § 7. Agent Types, Agent Roles and Agent Properties. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1]."@en .
+
+adms:Identifier skos:scopeNote "An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme. In [DCAT-AP-v2.0.1], this class is only used as the range of the optional property ''adms:identifier'' for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1]"@en .
+
+adms:versionNotes skos:scopeNote "This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property owl:versionInfo. This property can be repeated for parallel language versions of the version notes - see § 8. Accessibility and Multilingual Aspects."@en .
+
+dcat:Catalog skos:scopeNote "A concrete mobility data portal, i.e, a web portal, where mobility-related datasets and their distributions are described via metadata and discoverable for data users."@en .
+
+dcat:CatalogRecord skos:scopeNote "A description of a metadata entry in the mobility data portal, referring to one data set and its distributions published on the portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this class is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1]."@en .
+
+dcat:DataService skos:scopeNote "A collection of operations that provides access to one or more datasets or data processing functions."@en .
+
+dcat:Dataset skos:scopeNote "A dataset is a collection of data, published or curated by a single source, and available for access or download at the mobility data portal in one or more distributions. In the context of mobility-related data exchange, this might be, e.g., a data collection about static parking information for truck drivers, published by a road authority."@en .
+
+dcat:Distribution skos:scopeNote "A distribution describes the data formats and communication methods for a dataset. There may be one or multiple distributions for one dataset. For example, the same data set (e.g. static parking information for truck drivers) can be provided in different ways e.g. as downloadable zip file or as XML using a SOAP web service. These are two distributions based on one data set. In [DCAT-AP-v2.0.1], this class has been classified as ‘Recommended’, to allow for cases that a particular Dataset does not have a Distribution, i.e. . However, for the context of mobility data portals, it can be expected that all datasets have one or more Distributions. Thus, the obligation of class Distribution is raised to mandatory, comparing to [DCAT-AP-v2.0.1]."@en .
+
+dcat:Relationship skos:scopeNote "An association class for attaching additional information to a relationship between DCAT Resources"@en .
+
+dcat:accessService skos:scopeNote "This property refers to a Data Service that gives access to the Distribution of the Dataset."@en .
+
+dcat:accessURL skos:scopeNote "This property contains a URL that gives access to a Distribution of the Dataset. Depending on the type of data provision, there are different options for describing the URL. For data services, e.g., API, broker services, data feeds, etc., the URL MAY be the end point of such service. However, if some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process. For data which can be downloaded directly, the download URL should be copied from the optional property dcat:downloadURL. For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL MAY be a link to an external service or a website which enables access to the data. This way, this property is the primary key to link to a data service. There is also specific class dcat:DataService, which can be linked via property dcat:accessService. See § 4.9 Data Service for a usage note about the class Data Service."@en .
+
+dcat:bbox skos:scopeNote "This property refers to the geographic bounding box of a resource."@en .
+
+dcat:centroid skos:scopeNote "This property refers to the geographic centre (centroid) of a resource."@en .
+
+dcat:dataset skos:scopeNote "This property links the mobility data portal with a data set that is described at the mobility data portal. This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets SHOULD be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is also mandatory to use the property dcat:record."@en .
+
+dcat:downloadURL skos:scopeNote "This property contains a URL that is a direct link to a downloadable file in a given format."@en .
+
+dcat:endDate skos:scopeNote "This property contains the end of the Period of Time."@en .
+
+dcat:endpointDescription skos:scopeNote "This property contains a description of the Data Services available via the endpoints, including their operations, parameters etc. The property gives specific details of the actual endpoint instances, while dct:conformsTo is used to indicate the general standard or specification that the endpoints implement."@en .
+
+dcat:endpointURL skos:scopeNote "The root location or primary endpoint of the Service (an IRI)."@en .
+
+dcat:hadRole skos:scopeNote "This property refers to the function of an entity or agent with respect to another entity or resource."@en .
+
+dcat:keyword skos:scopeNote "This property contains a keyword or tag describing the Dataset. For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult. Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular dcat:theme, mobilitydcatap:networkCoverage and mobilitydcatap:transportMode. If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of ''mobilityDCAT-AP'', in order to update the Controlled Vocabularies."@en .
+
+dcat:packageFormat skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
+
+dcat:qualifiedRelation skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
+
+dcat:record skos:scopeNote "This property refers to a metadata record that is part of the mobility data portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1]."@en .
+
+dcat:servesDataset skos:scopeNote "This property refers to a Dataset that this Data Service can distribute."@en .
+
+dcat:startDate skos:scopeNote "This property contains the start of the Period of Time."@en .
+
+dcat:temporalResolution skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
+
+dcat:theme skos:scopeNote "The values to be used for this property are the URIs of the concepts in the vocabulary. This is a vocabulary created by mobilityDCAT-AP. There are two hierarchical levels: ''Data content category'' (mandatory) and ''Data content sub-catagory'' (optional), see the usage note for property ''dcat:theme''."@en .
+
+dcat:themeTaxonomy skos:scopeNote "The value to be used for this property is the URI of the vocabulary itself, i.e. the concept scheme, not the URIs of the concepts in the vocabulary."@en .
+
+locn:geometry skos:scopeNote "This property associates any resource with the corresponding geometry."@en .
+
+foaf:Agent skos:scopeNote "An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, or Datasets. If the Agent is an organisation, the use of the Organization Ontology [VOCAB-ORG] is recommended. See § 7. Agent Types, Agent Roles and Agent Properties for a discussion on Agent types, roles and properties. The ''foaf:mbox'' mandatory property is not included in [DCAT-AP-v2.0.1]. The ''foaf:workplaceHomepage'' recommended property is not included in [DCAT-AP-v2.0.1], The ''locn:address'', ''org:memberOf'', ''foaf:firstName'', ''foaf:phone'', ''foaf:surname'' optional properties are not included in [DCAT-AP-v2.0.1]."@en .
+
+foaf:Document skos:scopeNote "A textual resource intended for human consumption that contains information, e.g., a Web page about a Dataset.  This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the recommended properties ''foaf:homepage'' for class Catalogue; the optional properties ''foaf:page'' and ''dcat:landingPage'' for class Dataset; and the optional property ''foaf:page'' for class Distribution. In mobilityDCAT-AP, however, the range of ''foaf:homepage'' for class Catalogue is changed to the more generic range ''rdfs:Resource''. The other, above-mentioned properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasions with [DCAT-AP-v2.0.1]"@en .
+
+foaf:homepage skos:scopeNote "This property refers to a Web page that acts as the main page for the mobility data portal. The obligation of this property is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1]."@en .
+
+foaf:name skos:scopeNote "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects."@en .
+
+foaf:primaryTopic skos:scopeNote "This property links the metadata entry to the dataset described in the entry."@en .
