@@ -187,7 +187,7 @@ var respecConfig = {
     lint: "false",
     localBiblio: {
       "ADMS-SKOS":{
-        "href":"https://joinup.ec.europa.eu/svn/adms/ADMS_v1.00/ADMS_SKOS_v1.00.html",
+        "href":"https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf",
         "title":"Joinup. ADMS Controlled Vocabularies",
         "publisher":"European Commission",
 //        "date":"2016"
