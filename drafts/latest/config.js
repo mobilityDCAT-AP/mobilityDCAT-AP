@@ -592,6 +592,12 @@ var respecConfig = {
         "publisher":"NAPCORE Consortium"
       },
 
+      "NUTS-CODES":{
+        "href":"http://nuts.geovocab.org/",
+        "title":"EU NUTS classification as Linked Data",
+        "publisher":"NUTS-RDF project"
+      },
+
       "EUV-AR":{
         "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/access-right",
         "title":"Named Authority List: Access rights",
