@@ -32,8 +32,8 @@
 <p><code>mobilitydcatap:Assessment</code></p>
 </td>
 <td>
-<p>This property refers to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [[NAPCORE-NB]] and installed individually in each Member State. </p>
-<p>The property SHOULD point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online.</p> 
+<p>This property MAY refer to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [[NAPCORE-NB]] and installed individually in each Member State. </p>
+<p>The property MAY point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online.</p> 
 <p>The difference to the property <a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a> is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation. </p>
 </td>
 <td>
@@ -54,7 +54,7 @@
 <p><code>dct:RightsStatement</code></p>
 </td>
 <td>
-<p>This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public.</p>
+<p>This property MAY refer to information that indicates whether the Dataset is open data, has access restrictions or is not public.</p>
 .</p>
 </td>
 <td>
@@ -131,7 +131,7 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a>, with a contrary relationship. It might be used to host multiple versions of the same dataset in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
+<p>This property MAY refer to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a>, with a contrary relationship. It might be used to host multiple versions of the same dataset in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -149,7 +149,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains the main identifier for the dataset, e.g., the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data platforms.</p>
+<p>This property MAY contain the main identifier for the dataset, e.g., the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data platforms.</p>
 <p>The main identificator of a dataset SHOULD be the URI used within the RDF statment (via rdf:about). The additional identifier property MAY be used for special identification purposes, e.g., unambigous dataset identification across different NAPs or other portals. Fur such purposes, mobilityDCAT-AP might introduce (in the future) a structured, EU-wide identificator system for NAP datasets, that is used via the identifier property.</p>
 </td>
 <td>
@@ -168,7 +168,7 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property references, cites, or otherwise points to another, related dataset. Corresponds to the property <a href="#dataset-related-resource"><code>dct:relation</code></a>, with a contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities. </p>
+<p>This property MAY reference, cite, or otherwise point to another, related dataset. Corresponds to the property <a href="#dataset-related-resource"><code>dct:relation</code></a>, with a contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities. </p>
 </td>
 <td>
 <p>0..n</p>
@@ -186,7 +186,7 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property <a href="#dataset-has-version"><code>dct:hasVersion</code></a> with contrary relationship. It might be used to host multiple versions of the same dataset in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
+<p>This property MAY refer to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property <a href="#dataset-has-version"><code>dct:hasVersion</code></a> with contrary relationship. It might be used to host multiple versions of the same dataset in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -223,7 +223,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations. For European legal frameworks, a controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
+<p>This property MAY refer to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations. For European legal frameworks, a controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -317,7 +317,7 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property references, cites, or otherwise points to another, related dataset. Corresponds to the property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.</p>
+<p>This property MAY reference, cite, or otherwise point to another, related dataset. Corresponds to the property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -375,7 +375,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property SHOULD describe predefined categories of services, which the data content is intended to support.</p>
+<p>This property MAY describe predefined categories of services, which the data content is intended to support.</p>
 <p>Such services MAY be, e.g., information services for multimodal mobility, as specified by EC Delegated Regulation 2017/1926 [[EC-MMTIS-DR]]. Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets about a road network. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
 </td>
 <td>
@@ -472,7 +472,7 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed.</p>
+<p>This property MAY contain the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -490,7 +490,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property <a href="#dataset-modification-date"><code>dct:modified</code></a>. Together with property <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform.</p>
+<p>This property MAY contain a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property <a href="#dataset-modification-date"><code>dct:modified</code></a>. Together with property <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform.</p>
 <p>It is recommended to follow W3C Data on the Web Best Practices [[DWBP]]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [[SEMVER]].</p>
 </td>
 <td>
@@ -509,7 +509,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property <a href="#dataset-version"><code>owl:versionInfo</code></a>. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property MAY contain a textual description of the differences between this version and a previous version of the dataset, as an addition to the property <a href="#dataset-version"><code>owl:versionInfo</code></a>. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -549,7 +549,7 @@
 <p><code>dqv:QualityAnnotation</code></p>
 </td>
 <td>
-<p>This property describes any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Rights Holder (see property <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). This information SHOULD assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information SHOULD be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
+<p>This property MAY describe any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Rights Holder (see property <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). This information SHOULD assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information SHOULD be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
 <p>Quality aspects SHOULD be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” SHOULD be given.</p>
 <p>If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects [[EU-EIP-QP]], these frameworks should be referenced. </p>
 </td>
