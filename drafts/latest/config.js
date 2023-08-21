@@ -63,7 +63,7 @@ var respecConfig = {
     },
     {
        label: "SHACL (Turtle)",
-       uri: "./mobilitydcatap.shacl.ttl",
+       uri: "./mobilitydcatap_shacl_shapes.ttl",
     }
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
