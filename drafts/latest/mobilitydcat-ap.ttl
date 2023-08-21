@@ -17,15 +17,12 @@
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
-@prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix schema: <http://schema.org/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @base <https://w3id.org/mobilitydcat-ap/> .
 
@@ -62,12 +59,10 @@ mobilitydcatap: a voaf:Vocabulary,
   vann:preferredNamespaceUri "http://w3id.org/mobilitydcat-ap/"^^xsd:anyURI ;
   voaf:reliesOn dcatap:,
     dct:,
-    sdmx-attribute:,
     spdx:,
     rdfs:,
     owl:,
     skos:,
-    time:,
     vcard:,
     cnt:,
     adms:,
