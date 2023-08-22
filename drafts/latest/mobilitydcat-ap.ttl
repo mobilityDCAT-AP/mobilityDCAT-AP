@@ -1,4 +1,3 @@
-@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
@@ -8,22 +7,22 @@
 @prefix dcam: <http://purl.org/dc/dcam/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @base <https://w3id.org/mobilitydcat-ap/> .
 
 
@@ -69,7 +68,6 @@ mobilitydcatap: a voaf:Vocabulary,
     dcat:,
     dqv:,
     locn:,
-    odrl:,
     org:,
     prov:,
     foaf: ;
