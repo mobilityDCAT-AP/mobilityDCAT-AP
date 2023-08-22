@@ -149,30 +149,30 @@ var respecConfig = {
       ]
     },
 
-    {
-      key: "Reviewed by",
-      data: [
-      {
-        value: "Someone (Some Organization)",
+//    {
+//      key: "Reviewed by",
+//      data: [
+//      {
+//        value: "Someone (Some Organization)",
 //        href: "https://ec.europa.eu/"
-      },
-      {
-        value: "Someone Else (Some Organization)",
+//      },
+//      {
+//        value: "Someone Else (Some Organization)",
 //        href: "https://ec.europa.eu/"
-      },
-      ]
-    },
-    {
-      key: "Approved by",
-      data: [
-      {
-        value: "Someone (Some Organization)",
+//      },
+//      ]
+//    },
+//    {
+//     key: "Approved by",
+//      data: [
+//      {
+//        value: "Someone (Some Organization)",
 //        href: "https://ec.europa.eu/"
-      },
-      {
-        value: "Someone Else (Some Organization)",
+//      },
+//      {
+//        value: "Someone Else (Some Organization)",
 //        href: "https://ec.europa.eu/"
-      },
+//      },
       ]
     }
 
