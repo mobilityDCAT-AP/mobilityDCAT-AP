@@ -898,6 +898,11 @@ var respecConfig = {
         "title":"CC-BY 4.0 Attribution 4.0 International",
         "publisher":"Creative Commons"
       },
+      "CORE-ORGANIZATION-ONTOLOGY": {
+        "href":"https://www.w3.org/TR/vocab-org/",
+        "title":"Core organization ontology",
+        "date":"16 January 2014"
+      },
       "PDDL": {
         "href":"http://opendatacommons.org/licenses/pddl/",
         "title":"Public Domain Dedication and License (PDDL)",
@@ -961,6 +966,11 @@ var respecConfig = {
         "publisher":"QUDT.org",
         "date":"28 January 2021",
         "authors":["Ralph Hodgson"]
+      },
+      "WEB-ANOTATION-ONTOLOGY": {
+        "href":"https://www.w3.org/TR/annotation-vocab/",
+        "title":"Web Annotation Ontology",
+        "date":"23 February 2017",
       },
       "OM": {
         "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
