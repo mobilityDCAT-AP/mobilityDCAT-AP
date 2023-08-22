@@ -215,6 +215,12 @@ var respecConfig = {
         "title":"Representing Content in RDF",
         "date":"2 February 2017",
       },
+      "CORE-LOCATION-VOCABULARY":{
+        "href":"https://www.w3.org/TR/Content-in-RDF/",
+        "title":"ISA Programme Location Core Vocabulary",
+        "author":["EU ISA Programme Core Vocabularies Working Group (Location Task Force)"],
+        "date":"23 March 2015",
+      },
       "LOCN-MAPPING": {
         "href": "https://semiceu.github.io/locn-mapping/",
         "title": "LOCN mappings to vCard and Schema.org",
