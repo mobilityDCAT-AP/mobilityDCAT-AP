@@ -148,6 +148,7 @@ var respecConfig = {
       }
       ]
     },
+  ],
 
 //    {
 //      key: "Reviewed by",
@@ -174,9 +175,9 @@ var respecConfig = {
 //        href: "https://ec.europa.eu/"
 //      },
 //      ]
-    }
+//    }
 
-    ],
+//    ],
     wg: "NAPCORE Sub-Working Group (SWG) 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
 //    wgURI: "https://joinup.ec.europa.eu/solution/geodcat-ap",
