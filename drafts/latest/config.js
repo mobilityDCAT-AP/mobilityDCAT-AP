@@ -210,6 +210,11 @@ var respecConfig = {
         "publisher":"European Commission, Joint Research Centre (JRC)",
         "date": "2019"
       },
+      "CNT":{
+        "href":"https://www.w3.org/TR/Content-in-RDF/",
+        "title":"Representing Content in RDF",
+        "date":"2 February 2017",
+      },
       "LOCN-MAPPING": {
         "href": "https://semiceu.github.io/locn-mapping/",
         "title": "LOCN mappings to vCard and Schema.org",
