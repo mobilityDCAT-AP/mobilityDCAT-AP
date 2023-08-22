@@ -182,9 +182,116 @@ mobilitydcatap:Address_Agent_Shape
     sh:severity sh:Violation
   ];
   sh:targetClass dcat:Distribution .
-  
+
+
+#-------------------------------------------------------------------------
+# Concepts from controlled vocabularies defined and used in mobilityDCAT-AP.
+#-------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/data-content-category> a skos:Concept ;
+  skos:prefLabel "Data content category"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/update-frequency> a skos:Concept ;
+  skos:prefLabel "Update frequency"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/georeferencing-method/> a skos:Concept ;
+  skos:prefLabel "Georeferencing method"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/network-coverage> a skos:Concept ;
+  skos:prefLabel "Network coverage"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/transport-mode> a skos:Concept ;
+  skos:prefLabel "Transport mode"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/service-category> a skos:Concept ;
+  skos:prefLabel "Service category"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/grammar> a skos:Concept ;
+  skos:prefLabel "Grammar"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/application-layer-protocol> a skos:Concept ;
+  skos:prefLabel "Application layer protocol"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/communication-method> a skos:Concept ;
+  skos:prefLabel "Communication method"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> a skos:Concept ;
+  skos:prefLabel "Conditions for access and usage"@en ;
+.
 
 #-------------------------------------------------------------------------
 # Concepts from additional controlled vocabularies used in mobilityDCAT-AP.
 #-------------------------------------------------------------------------
 
+<http://publications.europa.eu/resource/authority/data-theme> a skos:Concept ;
+  skos:prefLabel "Data Themes"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/data-theme> a skos:Concept ;
+  skos:prefLabel "Dataset Theme Vocabulary"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/access-right> a skos:Concept ;
+  skos:prefLabel "Access right"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/frequency> a skos:Concept ;
+  skos:prefLabel "Frequency"@en ;
+.
+
+<http://www.opengis.net/def/crs/EPSG/0/> a skos:Concept ;
+  skos:prefLabel "OGC EPSG Coordinate Reference Systems Register"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/file-type> a skos:Concept ;
+  skos:prefLabel "File Type"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/language> a skos:Concept ;
+  skos:prefLabel "Language"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/corporate-body> a skos:Concept ;
+  skos:prefLabel "Corporate body"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/continent> a skos:Concept ;
+  skos:prefLabel "Continents"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/country> a skos:Concept ;
+  skos:prefLabel "Countries"@en ;
+.
+
+<http://publications.europa.eu/resource/authority/place> a skos:Concept ;
+  skos:prefLabel "Places"@en ;
+.
+
+<http://sws.geonames.org/> a skos:Concept ;
+  skos:prefLabel "GeoNames"@en ;
+.
+
+<http://nuts.geovocab.org/> a skos:Concept ;
+  skos:prefLabel "NUTS (Nomenclature of Territorial Units for Statistics)"@en ;
+.
+
+<http://purl.org/adms/publishertype/> a skos:Concept ;
+  skos:prefLabel "ADMS publisher type"@en ;
+.
+
+<https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:Concept ;
+  skos:prefLabel "European Legislation Identifier (ELI)"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/data-model> a skos:Concept ;
+  skos:prefLabel "Data model"@en ;
+.
