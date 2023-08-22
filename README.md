@@ -14,8 +14,6 @@ The latest version of the mobilityDCAT-AP (v1.0) draft is available:
 
 Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the mobilityDCAT-AP repository on GitHub](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues). A short guideline for submitting issues can be found at [SEMICeu/DCAT-AP/wiki/Submission-guidelines](https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines).
 
-*The mobilityDCAT-AP specification does not replace the [INSPIRE Metadata Regulation](http://data.europa.eu/eli/reg/2008/1205) nor the [INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139). Its purpose is give owners of geospatial metadata the possibility to achieve more by providing an additional RDF syntax binding.*
-
 ## Structure of the repository
 
 <!---[Releases](./releases/): mobilityDCAT-AP releases (1.0, etc.); each release might have different distributions.-->
