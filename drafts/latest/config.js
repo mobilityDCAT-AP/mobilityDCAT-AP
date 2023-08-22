@@ -173,7 +173,7 @@ var respecConfig = {
 //        value: "Someone Else (Some Organization)",
 //        href: "https://ec.europa.eu/"
 //      },
-      ]
+//      ]
     }
 
     ],
