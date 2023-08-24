@@ -17,19 +17,15 @@
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:locn="http://www.w3.org/ns/locn#"
-     xmlns:odrl="http://www.w3.org/ns/odrl/2/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:spdx="http://spdx.org/rdf/terms#"
-     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:voaf="http://purl.org/vocommons/voaf#"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
      xmlns:dcatap="http://data.europa.eu/r5r/"
-     xmlns:schema="http://schema.org/"
-     xmlns:mobilitydcatap="http://w3id.org/mobilitydcat-ap#"
-     xmlns:sdmx-attribute="http://purl.org/linked-data/sdmx/2009/attribute#">
+     xmlns:mobilitydcatap="http://w3id.org/mobilitydcat-ap#">
     <owl:Ontology rdf:about="http://w3id.org/mobilitydcat-ap#">
         <owl:versionIRI rdf:resource="http://w3id.org/mobilityDCAT-AP/releases/1.0.0/"/>
         <dct:abstract xml:lang="en">mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and haarmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </dct:abstract>
@@ -59,19 +55,16 @@
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://w3id.org/mobilitydcat-ap/</vann:preferredNamespaceUri>
         <voaf:reliesOn rdf:resource="http://data.europa.eu/r5r/"/>
         <voaf:reliesOn rdf:resource="http://purl.org/dc/terms/"/>
-        <voaf:reliesOn rdf:resource="http://purl.org/linked-data/sdmx/2009/attribute#"/>
         <voaf:reliesOn rdf:resource="http://spdx.org/rdf/terms#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/2002/07/owl#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
-        <voaf:reliesOn rdf:resource="http://www.w3.org/2006/time#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/2011/content#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/adms#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/dcat#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/dqv#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/locn#"/>
-        <voaf:reliesOn rdf:resource="http://www.w3.org/ns/odrl/2/"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/org#"/>
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/prov#"/>
         <voaf:reliesOn rdf:resource="http://xmlns.com/foaf/0.1/"/>
@@ -646,21 +639,6 @@
         <rdfs:label xml:lang="en">transportation mode</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/mobilitydcat-ap#visibilityStatus -->
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcat-ap#visibilityStatus">
-        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="en">This property describes the visibility status of a metadata entry on the data platform. It has predefined values such as “public” or “private”. “Public” means that the metadata entry and the corresponding dataset can be retrieved by external data platform users, and that that the corresponding metadata can be exchanged with 3rd parties. “Private” means that the metadata entry and the corresponding dataset are only visible to the original data provider and the data platform operator; this might be the case for test publications, for example. The value can be set be the metadata creator or by the platform operator. The property is used only for internal usage or administration.For mobilityDCAT-AP, it was discussed, if such visibility could be represented by the “dct:accessRights” property instead. This property may be linked to controlled vocabularies such as the EU access-right authority table [EUV-AR]. However, this property implies that the metadata are still exchanged, in spite of restricted publicity. For mobilityDCAT-AP, the understanding of “private” is different: metadata are not exchanged at all. Thus, an own property was created.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/mobilitydcat-ap#"/>
-        <rdfs:label xml:lang="en">visibility status</rdfs:label>
-        <vs:term_status>stable</vs:term_status>
-        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Catalogue Record.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
     
@@ -1302,8 +1280,8 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
         <rdfs:label xml:lang="en">reference system</rdfs:label>
-        <vs:term_status>stable</vs:term_status>
         <rdfs:comment xml:lang="en">This property SHOULD be used to specify the spatial reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by OGC [OGC-EPSG]. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. </rdfs:comment>
+        <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Dataset. </skos:scopeNote>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Standard"/>
@@ -1378,12 +1356,12 @@
         <skos:scopeNote xml:lang="en">This property links to a Rights Statement, i.e., a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage. A concrete (standard) license can be referred via the recommended property dct:license. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1].</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/rightsHolder">
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Dataset. </skos:scopeNote>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
         <rdfs:comment xml:lang="en">This property refers to an entity that legally owns or holds the rights about the data provided in a dataset. This entity is responsible for the content of the data, in particular, that the data fulfilles quality criteria (if applicable, see property “dqv:hasQualityAnnotation”) and/or is subject to legal frameworks (if applicable, see property “mobilitydcatap:legalFramework”). The Rights Holder will be in many cases identical with the Publisher (see property “dct:publisher”). In this case, the contact data will be copied from the “Publisher” entry.  There might be also cases where one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a data set. This entity is the direct contact for the platform operator or data-consuming users, who have questions or issues about the contents of a dataset, for example. The information might be identical to the property values of “dct:publisher” for the classes Catalogue Record and/or Dataset. When provided, it SHOULD include, as a minimum, the name and email address of the entity. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. </rdfs:comment>
         <vs:term_status>stable</vs:term_status>
-        <dcam:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <dcam:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="en">rights holder</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
@@ -1391,12 +1369,12 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/type">
         <rdfs:label xml:lang="en">conditions for access and usage</rdfs:label>
-        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
         <vs:term_status>stable</vs:term_status>
+        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
         <skos:scopeNote xml:lang="en">This property refers to a type of the Agent that makes the Catalogue, Catalogue Record, Data Service, or Dataset available</skos:scopeNote>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Rights Statement.</skos:scopeNote>
         <rdfs:comment xml:lang="en">This property SHOULD be used to indicate the conditions if any contracts, licences and/or are applied for the use of the dataset. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The values can be logically mapped with the property “dct:type” from Class License Document, see § 4.15 Licence Document. </rdfs:comment>
+        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Rights Statement.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://spdx.org/rdf/terms#Checksum">
@@ -1418,8 +1396,8 @@
         <rdfs:comment xml:lang="en">This property contains the text of the Rights Statement. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">This property MAY be used to contain the full text of a Licence Document, as a free text. This MAY be used when there is no standard license that can be linked via property “dct:type”. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
         <skos:scopeNote xml:lang="en">A category of a dataset, i.e. a specific subject, theme, or a class about its content. The category is described via a categorisation scheme, i.e. a classification or a taxonomy. Such scheme lists all potential categories, see class &apos;&apos;Category Scheme&apos;&apos;. In mobilityDCAT-AP, this class SHOULD only be used in the context of a data set (via property &apos;&apos;dcat:theme&apos;&apos;). In other contexts, e.g. under [geoDCAT-AP-v2.0.0], this might also be used to describe the theme of a Catalogue or Data Service.</skos:scopeNote>
@@ -1520,8 +1498,8 @@
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. </skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">assessment result</rdfs:label>
         <rdfs:comment xml:lang="en">This property MAY be used to describe the draft result of the latest assessment procedure, in form of a textual description.</rdfs:comment>
         <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#Assessment"/>

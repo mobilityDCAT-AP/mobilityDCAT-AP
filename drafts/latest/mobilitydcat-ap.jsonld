@@ -1,7 +1,6 @@
 {
   "@context": {
     "@base": "https://w3id.org/mobilitydcat-ap/",
-    "mobilitydcatap": "http://w3id.org/mobilitydcat-ap#",
     "adms": "http://www.w3.org/ns/adms#",
     "bibo": "http://purl.org/ontology/bibo/",
     "cnt": "http://www.w3.org/2011/content#",
@@ -11,25 +10,22 @@
     "dcam": "http://purl.org/dc/dcam/",
     "dqv": "http://www.w3.org/ns/dqv#",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "mobilitydcatap": "http://w3id.org/mobilitydcat-ap#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "org": "http://www.w3.org/ns/org#",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xml": "http://www.w3.org/XML/1998/namespace",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "locn": "http://www.w3.org/ns/locn#",
-    "odrl": "http://www.w3.org/ns/odrl/2/",
-    "org": "http://www.w3.org/ns/org#",
-    "prov": "http://www.w3.org/ns/prov#",
-    "sdmx-attribute": "http://purl.org/linked-data/sdmx/2009/attribute#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "spdx": "http://spdx.org/rdf/terms#",
-    "time": "http://www.w3.org/2006/time#",
     "vann": "http://purl.org/vocab/vann/",
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "voaf": "http://purl.org/vocommons/voaf#",
     "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
-    "schema": "http://schema.org/",
-    "oa": "http://www.w3.org/ns/oa#"
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
@@ -138,9 +134,6 @@
           "@id": "dct:"
         },
         {
-          "@id": "sdmx-attribute:"
-        },
-        {
           "@id": "spdx:"
         },
         {
@@ -151,9 +144,6 @@
         },
         {
           "@id": "skos:"
-        },
-        {
-          "@id": "time:"
         },
         {
           "@id": "vcard:"
@@ -172,9 +162,6 @@
         },
         {
           "@id": "locn:"
-        },
-        {
-          "@id": "odrl:"
         },
         {
           "@id": "org:"
@@ -715,38 +702,6 @@
       },
       "dcam:rangeIncludes": {
         "@id": "rdfs:Resource"
-      }
-    },
-    {
-      "@id": "mobilitydcatap:visibilityStatus",
-      "@type": [
-        "rdf:Property",
-        "owl:ObjectProperty"
-      ],
-      "rdfs:comment": {
-        "@value": "This property describes the visibility status of a metadata entry on the data platform. It has predefined values such as “public” or “private”. “Public” means that the metadata entry and the corresponding dataset can be retrieved by external data platform users, and that that the corresponding metadata can be exchanged with 3rd parties. “Private” means that the metadata entry and the corresponding dataset are only visible to the original data provider and the data platform operator; this might be the case for test publications, for example. The value can be set be the metadata creator or by the platform operator. The property is used only for internal usage or administration.For mobilityDCAT-AP, it was discussed, if such visibility could be represented by the “dct:accessRights” property instead. This property may be linked to controlled vocabularies such as the EU access-right authority table [EUV-AR]. However, this property implies that the metadata are still exchanged, in spite of restricted publicity. For mobilityDCAT-AP, the understanding of “private” is different: metadata are not exchanged at all. Thus, an own property was created.",
-        "@language": "en"
-      },
-      "rdfs:label": {
-        "@value": "visibility status",
-        "@language": "en"
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "mobilitydcatap:"
-      },
-      "vs:term_status": "stable",
-      "skos:scopeNote": {
-        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Catalogue Record.",
-        "@language": "en"
-      },
-      "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
-      },
-      "dcam:domainIncludes": {
-        "@id": "dcat:CatalogRecord"
-      },
-      "dcam:rangeIncludes": {
-        "@id": "skos:Concept"
       }
     },
     {
