@@ -3,6 +3,6 @@ message: "If you use this software, please cite it as below."
 authors:
 - name: "NAPCORE"
 title: "Repository of the mobility extension to DCAT-AP (mobilityDCAT-AP)"
-version: 1.0
+version: 1.0.0
 date-released: 2023-05-11
 url: "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/"

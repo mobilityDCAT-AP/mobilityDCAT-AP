@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<title>mobilityDCAT-AP - Version 1.0</title>
+<title>mobilityDCAT-AP - Version 1.0.0</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -85,7 +85,7 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document presents version 1.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
+<p>This document presents version 1.0.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
 
 <p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original [[DCAT-AP]], while extending and customizing it for the mobility sector.</p>
 
@@ -97,9 +97,9 @@ table code, table pre {
 <p>Digitalisation in the mobility domain often implies that various data assets from various actors in the mobility system are made discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. These portals often have specific spatial or thematic coverage, e.g., exposing public-transport timetable data for one specific region. In addition, legal obligations, such as those established through the European Union's National Access Points (NAPs) [[NAPCORE-NAPs]], mandate the creation and population of such portals.</p>
 
 <p>Metadata is a crucial building block for the accessibility and reusability of datasets within NAPs and other mobility data portals. However, unlike other domains like bibliography, there is currently no established common metadata approach across different mobility data portals. A common metadata approach can act as an important infrastructure and reference basis for providing harmonious and homogenous ITS- and mobility-related data descriptions across Europe, thus accelerating the easiness of searching, discovering, and accessing the proper data resources through the operated relevant data portals.</p>
-  
+
 <p>To serve this need, a dedicated Working Group within the EU-funded project NAPCORE [[NAPCORE-Metadata-Working-Group]] has been tasked with defining and maintaining a common metadata schema for all NAPs in Europe and other mobility data portals. Starting from the analysis of the European recommendations for the interoperability of data catalogues, the Working Group has defined a roadmap for the design, implementation and publication of the metadata schema. </p>
-  
+
 <p>The roadmap is explained in detail at [[NAPCORE-Metadata-preparatory-activities]]. It consists of five key steps: (1) gathering of requirements from experts and transport stakeholders, (2) definition of a conceptual model, (3) implementation of the conceptual model as a proper metadata scheme, (4) documentation of the scheme and provision of guidelines, and (5) hosting and publication of all outputs. The conceptual model contains definitions of essential metadata elements for mobility data portals. Further, this model is linked to established metadata specifications, particularly DCAT-AP. Moreover, the conceptual model serves as the foundation for a formal metadata specification as an extension to DCAT-AP, called mobilityDCAT-AP. </p>
 
 <p>mobilityDCAT-AP enables harmonised, platform-independent metadata descriptions both in human-readable and machine-readable formats. The latter one ensures seamless integration of mobility-related platforms with third party systems by enabling the automated import and export of metadata via, for example, an API. As a specification based on the Resource Description Framework (RDF) schema, mobilityDCAT-AP leverages semantic technologies, enabling advanced querying and inference capabilities based on metadata. Following its release in the summer of 2023, this specification is being promoted for wide-scale usage in mobility data portals. To ensure its acceptance and sustainability, formal maintenance and governance structures have been established. Additionally, the development of a cross-border metadata registry will be demonstrated that will make use of mobilityDCAT-AP and provide for it a proof of concept. </p>
@@ -242,8 +242,8 @@ table code, table pre {
 <aside class="note">
 <p>This diagram shows only a subset of classes from [[DCAT-AP-v2.0.1]], namely the four central classes (marked in orange) <a href="#catalogue">Catalogue</a>, <a href="#catalogue-record">Catalogue Record</a>, <a href="#dataset">Dataset</a> and <a href="#distribution">Distribution</a>; as well as the properties connecting these four classes. </p>
 <p>Please note that two of these properties (marked in red) have a mandatory obligation, in contrast to [[DCAT-AP-v2.0.1]]. Thus, any metadata set in accordance with mobilityDCAT-AP SHOULD contain at least instance of these four classes. See also the usage notes for properties <a href="#catalogue-catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-distribution"><code>dcat:distribution</code></a>. </p>
-<p>This diagram also shows classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v2.0.1]]. The additions relate to the four central classes (in orange) and some supportive classes (in yellow). All additions are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>  
-<p>Altogether, this diagram is focused on some special aspects of mobilityDCAT-AP in terms of obligation levels and element additions. A complete UML diagram with all elements inherited from DCAT-AP is shown on [[DCAT-AP-v2.0.1]].</p>  
+<p>This diagram also shows classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v2.0.1]]. The additions relate to the four central classes (in orange) and some supportive classes (in yellow). All additions are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
+<p>Altogether, this diagram is focused on some special aspects of mobilityDCAT-AP in terms of obligation levels and element additions. A complete UML diagram with all elements inherited from DCAT-AP is shown on [[DCAT-AP-v2.0.1]].</p>
 </aside>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram">
@@ -1235,7 +1235,7 @@ table code, table pre {
 
 <h3>Other controlled vocabularies</h3>
 
-<p>In [[DCAT-AP-v2.0.1]], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and sevaral licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p> 
+<p>In [[DCAT-AP-v2.0.1]], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and sevaral licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p>
 <p>Regarding license-related vocabularies, [[DCAT-AP-v2.0.1]] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]], which seems rather complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [[ODRS]]. This vocabulary is introducing a central class called <code>odrs:RightsStatement</code>, which is semantically equal to class <a href="#rights-statement"><code>dct:RightsStatement</code></a> from [[DCAT-AP-v2.0.1]]; and reusing some properties from [[DCAT-AP-v2.0.1]], such as <a href="#distribution-rights"><code>dct:rights</code></a>. Again, no explicit recommendation for the usage of such license-related vocabularies is given. </p>
 
 </section>
@@ -1378,16 +1378,16 @@ table code, table pre {
 <p>
 This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Metadata-Working-Group]].
 </p>
-  
+
 <p> Editors of ReSpec documentation:</p>
 <ul>
 <li>Lina Teresa Molinas Comet, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
 <li>Peter Lubrich, <a href="https://www.bast.de/EN/Home/home_node.html">Federal Highway Research Institute (BASt)</a>, Bergisch Gladbach, Germany</li>
 <li>Mario Scrocca, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
 </ul>
-  
+
 <p> Reviewers of ReSpec documentation and contributors to preparatory activities:</p>
-<ul> 
+<ul>
 <li>Hilde Austlid, <a href="https://www.vegvesen.no/en/">Norwegian Public Roads Administration</a>, Trondheim, Norway</li>
 <li>Antonia Azzini, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
 <li>Jasper Beernaerts, <a href="https://www.ngi.be/website/">Nationaal Geografisch Instituut</a>, Brussels, Belgium</li>
@@ -1400,8 +1400,8 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 <li>Rodolfo Da Silva, <a href="https://www.kios.ucy.ac.cy/">KIOS Research and Innovation Center of Excellence</a>, Nicosia, Cyprus</li>
 <li>Benjamin Witsch, <a href="https://www.austriatech.at/en/">AustriaTech – Gesellschaft des Bundes für technologiepolitische Maßnahmen GmbH</a>, Vienna, Austria</li>
 </ul>
-  
-<p>Other contributors and followers:</p>  
+
+<p>Other contributors and followers:</p>
 <ul>
 <li> Nighat John Akhtar, Malta</li>
 <li>Cosmin Bigică, <a href=" ">National Company of Road Infrastructure Administration (NCRIA)</a>, Romania</li>
@@ -1432,7 +1432,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 <section id="all-classes-and-properties">
 
 <h2>All classes and Properties</h2>
-  
+
 <div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
 
 </section>
@@ -1448,8 +1448,8 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 </section>
 
 </section>
-  
-  
+
+
 <!-- CMC Mapping-->
 
 <section id="Mapping-to-Coordinated-Metadata-Catalogue" class="appendix">
@@ -1474,7 +1474,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <section id="changes-since-20230101">
 
-<h2>Starting point of mobilityDCAT-AP 1.0 (01 January 2023)</h2>
+<h2>Starting point of mobilityDCAT-AP 1.0.0 (01 January 2023)</h2>
 
 <ul>
 <li>Document completely re-written starting from the [[DCAT-AP-v2.0.1]] and [[GEODCAT-AP-v2.0.0]] specifications, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
@@ -1490,10 +1490,10 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
   <p>Since this is the initial release of mobilityDCAT-AP, there are no changes yet.</p>
 
 <!-- Placeholder for future "changes" table in follow-up releases of mobility DCAT-AP
-  
+
 <p>The table below summarises the changes applied to the current release of mobilityDCAT-AP, including those inherited from [[DCAT-AP-v2.0.1]].</p>
 
- <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div> 
+ <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
 -->
 
 </section>

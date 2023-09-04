@@ -84,16 +84,16 @@ var respecConfig = {
 //    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/releases/",
 //    prevRecURI: "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 //    prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/1.0.1/",
-    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.0/",
+    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.0.0/",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* MOBILITYDCAT-AP specific - start */
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.0/",
+    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.0.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/drafts/1.0-draft-0.1/",
+    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
     latestVersionURI:     "https://w3id.org/mobilitydcat-ap/releases/",
 /* MOBILITYDCAT-AP specific - end   */
@@ -144,7 +144,7 @@ var respecConfig = {
       data: [
       {
 //        value: "0.2"
-        value: "1.0"
+        value: "1.0.0"
       }
       ]
     },
