@@ -21,6 +21,28 @@
 </thead>
 <tbody>
 
+
+<tr class="property optional ap-ext" id="dataset-applicable-legislation">
+<td>
+<p>+applicable legislation</p>
+</td>
+<td>
+<p><code>dcatap:applicableLegislation</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property MAY refer to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations.
+<p>For European legal frameworks, it is recommended to use the European Legislation Identifier [[ELI]] to refer to legislation whenever possible.</p>
+<p>This property is derived from the DCAT-AP HVD extension [[DCAT-AP-HVD]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+  
+
 <tr class="property optional ap-ext" id="dataset-assessment-result">
 <td>
 <p>+assessment result</p>
@@ -212,25 +234,9 @@
 </td>
 </tr></tr>-->
 
-<tr class="property optional ap-ext" id="dataset-legal-framework">
-<td>
-<p>+legal framework</p>
-</td>
-<td>
-<p><code>mobilitydcatap:legalFramework</code></p>
-</td>
-<td>
-<p><code>skos:Concept</code></p>
-</td>
-<td>
-<p>This property MAY refer to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations.
-<p>For European legal frameworks, it is recommended to use the European Legislation Identifier [[ELI]] to refer to legislation whenever possible.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
 
+
+ 
 <!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-other-identifier">
 <td>
