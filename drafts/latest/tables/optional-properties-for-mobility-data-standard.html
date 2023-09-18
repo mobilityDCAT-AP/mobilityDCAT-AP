@@ -41,23 +41,23 @@
 
 <tr class="property optional ap-ext" id="mobility-data-standard-schema">
 <td>
-<p>+quality annotation target</p>
+<p>+schema</p>
 </td>
 <td>
-<p><code>oa:hasTarget</code></p>
+<p><code>mobilitydcatap:schema</code></p>
 </td>
 <td>
-<p><code>dcat:Dataset</code></p>
+<p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property MAY be used to describe the target of the quality annotation, referring back to the dataset being described. I.e., it is the inverse property of "dqv:hasQualityAnnotation" for class Dataset.</p>
+<p>This property describes the schema of the mobility data standard, as applied within the delivered content. There are differet optiions how to reference the schema. It might be a reference to a portal-internal catalogue of schemas, a reference to an individual schema (that is provided by the data publisher), or a reference to an external catalogue of schemas (like a stakeholder-based DATEX II profile published on the datex2.eu page). The data platform SHOULD keep an archive of commonly used schemas. The data provider SHOULD be able to select an applicable schema from this archive, or to upload an own, individual schema. In any case, the schema should be available as a resource. </p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-
+  
 </td>
 </tr>
 </tbody>
