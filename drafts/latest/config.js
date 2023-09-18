@@ -277,7 +277,7 @@ var respecConfig = {
 //        "date":"2016"
       },
       
-      "DCAT-AP-HDV": {
+      "DCAT-AP-HVD": {
         "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
         "title":"Usage guidelines of DCAT-AP for High-Value Datasets",
         "publisher":"European Commission",
