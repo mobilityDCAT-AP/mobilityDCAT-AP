@@ -276,7 +276,17 @@ var respecConfig = {
         "publisher":"European Commission",
 //        "date":"2016"
       },
-      "DC-UG-PM": {
+      
+      "DCAT-AP-HDV": {
+        "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
+        "title":"Usage guidelines of DCAT-AP for High-Value Datasets",
+        "publisher":"European Commission",
+        "date":"19 June 2023"
+      },
+
+        
+        
+    "DC-UG-PM": {
         "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
         "title":"Dublin Core™ User Guide: Publishing Metadata",
         "authors":["Stefanie Rühle","Tom Baker","Pete Johnston"],
