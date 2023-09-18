@@ -701,14 +701,13 @@ var respecConfig = {
         "publisher":"GeoVocab.org",
         "date": "25 February 2012"
       },
-/*
-      "OpenAPI": {
-         "href": "https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md",
-         "title": "OpenAPI Specification. Version 3.0.2",
-         "date": "08 October 2018",
-         "publisher": "OAI"
+
+      "Web-Annotation-Data-Model": {
+        "href": "https://www.w3.org/TR/annotation-model/",
+        "title": "Web Annotation Data Model",
+        "publisher":"W3C",
+        "date": "23 February 2017"
       },
-*/
       "OpenSearch": {
          "authors": [
            "DeWitt Clinton"
@@ -718,16 +717,6 @@ var respecConfig = {
          "date":"17 April 2018",
          "publisher":"OpenSearch"
       },
-/*
-      "POWDER-S": {
-        "href":"https://www.w3.org/2007/05/powder-s",
-        "title":"Protocol for Web Description Resources (POWDER): POWDER-S Vocabulary (WDRS)",
-        "authors":["Andrea Perego","Stasinos Konstantopoulos","Phil Archer"],
-        "publisher":"W3C",
-        "status":"Namespace Document",
-        "date":"8 November 2010"
-      },
-*/
       "SCHEMA-ORG":{
         "href":"http://schema.org/",
         "title":"Schema.org"
@@ -762,12 +751,6 @@ var respecConfig = {
         "title":"SPDX 2.2",
         "publisher":"SPDX"
       },
-      "UNSD-M49":{
-        "href":"https://unstats.un.org/unsd/methodology/m49/",
-        "title":"Methodology - Standard country or area codes for statistical use (M49)",
-        "publisher":"United Nations Statistics Division"
-       },
-
       "ISA":{
         "href":"https://ec.europa.eu/isa/",
         "title":"Interoperability Solutions for European Public Administrations (ISA)",
@@ -781,22 +764,6 @@ var respecConfig = {
       "SEMIC":{
         "href":"https://ec.europa.eu/isa2/actions/improving-semantic-interoperability-european-egovernment-systems_en",
         "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²). Improving semantic interoperability in European eGovernment systems",
-        "publisher":"European Commission"
-       },
-      "Vickery":{
-        "href":"http://ec.europa.eu/information_society/policy/psi/docs/pdfs/report/final_version_study_psi.docx",
-        "title":"Review of recent studies on PSI reuse and related market developments",
-        "authors":["Graham Vickery"],
-        "nopublisher":"European Commission"
-       },
-      "EC-OD-COM":{
-        "href":"http://ec.europa.eu/information_society/policy/psi/docs/pdfs/opendata2012/open_data_communication/en.pdf",
-        "title":"Communication on Open Data",
-        "publisher":"European Commission"
-       },
-      "DCAT-AP-CRMP":{
-        "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap",
-        "title":"Joinup. Change and Release Management Policy for DCAT-AP",
         "publisher":"European Commission"
        },
        "DCAT-AP-guideline-spatial":{
@@ -814,20 +781,10 @@ var respecConfig = {
         "title":"Government Linked Data (GLD) Working Group",
         "publisher":"W3C"
        },
-      "GeoDCAT-AP-RPR": {
-        "href":"https://joinup.ec.europa.eu/discussion/geodcat-ap-how-express-different-responsible-party-roles-supported-iso-19115-inspire",
-        "title":"Joinup. DCAT application profile for data portals in Europe. GeoDCAT-AP – How to express the different responsible party roles supported in ISO 19115 / INSPIRE",
-        "publisher":"European Commission"
-      },
       "VOCAB-DCAT-QA": {
         "title":"Data Catalog Vocabulary (DCAT) - Version 2. Section 13.1",
         "href":"https://www.w3.org/TR/vocab-dcat-2/#qualified-attribution",
         "publisher":"W3C"
-      },
-      "MARC-REL": {
-        "href":"http://loc.gov/marc/relators/relaterm.html",
-        "title":"MARC Code List for Relators",
-        "publisher":"Library of Congress"
       },
       "DataCite-Types": {
         "href":"https://schema.datacite.org/meta/kernel-3/doc/DataCite-MetadataKernel_v3.1.pdf",
@@ -851,11 +808,7 @@ var respecConfig = {
         "date":"29 July 2013",
         "publisher":"ODI"
       },
-      "CLV": {
-        "href":"https://joinup.ec.europa.eu/solution/core-location-vocabulary",
-        "title":"Joinup. Core Location Vocabulary",
-        "publisher":"European Commission"
-      },
+
       "MAST-ADS": {
         "href":"http://archive.stsci.edu/pub_dsn.html",
         "title":"Referencing Data Sets in Astronomical Literature",
@@ -884,133 +837,18 @@ var respecConfig = {
         "title":"Joinup. Asset Description Metadata Schema (ADMS)",
         "publisher":"European Commission"
       },
-      "CERIF-VOCS": {
-        "href":"http://www.eurocris.org/Uploads/Web%20pages/CERIF-1.5/CERIF1.5_Semantics.xhtml",
-        "title":"CERIF standard vocabularies"
-      },
-      "DDC": {
-        "href":"http://www.oclc.org/dewey/webservices.en.html",
-        "title":"Dewey Summaries as Linked Data",
-        "publisher":"OCLC"
-      },
-      "CC": {
-        "href":"http://creativecommons.org/licenses/",
-        "title":"About The Licenses",
-        "publisher":"Creative Commons"
-      },
-      "CC0": {
-        "href":"http://creativecommons.org/publicdomain/zero/1.0/",
-        "title":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
-        "publisher":"Creative Commons"
-      },
-      "CC-BY": {
-        "href":"https://creativecommons.org/licenses/by/4.0/",
-        "title":"CC-BY 4.0 Attribution 4.0 International",
-        "publisher":"Creative Commons"
-      },
+
+
       "CORE-ORGANIZATION-ONTOLOGY": {
         "href":"https://www.w3.org/TR/vocab-org/",
         "title":"Core organization ontology",
         "date":"16 January 2014"
       },
-      "PDDL": {
-        "href":"http://opendatacommons.org/licenses/pddl/",
-        "title":"Public Domain Dedication and License (PDDL)",
-        "publisher":"Open Data Commons"
-      },
-      "EUPL": {
-        "href":"https://joinup.ec.europa.eu/collection/eupl",
-        "title":"Joinup. Open Source Software. European Union Public Licence (EUPL)",
-        "publisher":"European Commission"
-      },
-      "UKOGL": {
-        "href":"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
-        "title":"Open Government Licence for public sector information",
-        "publisher":"The National Archives"
-      },
-      "ODI": {
-        "href":"http://www.theodi.org/",
-        "title":"ODI"
-      },
-      "GETTY": {
-        "href":"https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/",
-        "authors":["Patricia Harpring"],
-        "title":"Introduction to Controlled Vocabularies: Terminology for Art, Architecture, and Other Cultural Works",
-        "publisher": "The Getty Research Institute",
-        "date":"2010"
-      },
-      "OPENDATA-DIR": {
-        "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
-        "title":"Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information",
-        "publisher":"OJ L 172",
-        "date":"20 June 2019"
-      },
-      "DataStrategy": {
-        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52020DC0066",
-        "title":"COMMUNICATION FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT, THE COUNCIL, THE EUROPEAN ECONOMIC AND SOCIAL COMMITTEE AND THE COMMITTEE OF THE REGIONS A European strategy for data",
-        "publisher":"COM/2020/66 final",
-        "date":"19 February 2020"
-      },
-// To be pushed to SpecRef
-      "SPS": {
-        "href":"http://www.ogc.org/standards/sps",
-        "title":"OGC® Sensor Planning Service Implementation Standard ",
-        "publisher":"OGC",
-        "date":"28 March 2011",
-        "authors":["Ingo Simonis","Johannes Echterhoff"]
-      },
-      "WCS": {
-        "href":"http://www.ogc.org/standards/wcs",
-        "title":"OGC Web Coverage Service (WCS) 2.1 Interface Standard - Core",
-        "publisher":"OGC",
-        "date":"16 August 2018"
-      },
-      "QUDT-UNITS": {
-        "href":"http://www.qudt.org/vocab/unit",
-        "title":"QUDT Units Vocabulary",
-        "publisher":"QUDT.org",
-      },
-      "QUDT-UNITS-21": {
-        "href":"http://www.qudt.org/2.1/vocab/unit",
-        "title":"QUDT Units Vocabulary. Version 2.1",
-        "publisher":"QUDT.org",
-        "date":"28 January 2021",
-        "authors":["Ralph Hodgson"]
-      },
       "WEB-ANOTATION-ONTOLOGY": {
         "href":"https://www.w3.org/TR/annotation-vocab/",
         "title":"Web Annotation Ontology",
         "date":"23 February 2017",
-      },
-      "OM": {
-        "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
-        "title":"Ontology of units of Measure (OM)",
-        "publisher":"Wageningen UR",
-        "date":"4 June 2018",
-        "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
-      },
-      "OM-2": {
-        "href":"http://www.ontology-of-units-of-measure.org/resource/om-2/",
-        "title":"Ontology of units of Measure (OM). Version 2",
-        "publisher":"Wageningen UR",
-        "date":"28 December 2017",
-        "authors":["Hajo Rijgersberg", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jan Top"]
-      },
-      "OM-18": {
-        "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
-        "title":"Ontology of units of Measure (OM). Version 1.8",
-        "publisher":"Wageningen UR",
-        "date":"4 June 2018",
-        "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
-      },
-      "GeoSPARQL11": {
-//        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
-        "href": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html",
-        "title": "OGC GeoSPARQL 1.1",
-//        "authors": [],
-        "publisher":"OGC",
-        "status":"Draft",
-        "date": "16 December 2020"
-      },
+      }
+
     }
   };
