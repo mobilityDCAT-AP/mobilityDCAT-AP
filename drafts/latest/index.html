@@ -1201,7 +1201,10 @@ table code, table pre {
 <p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
 <p>In [[DCAT-AP-v2.0.1]], this class is used as the range of property "dct:conformsTo" for class Catalogue Record (context "application profile"); for class Dataset (context "conforms to"); and for class Distribution (context "linked schemas"). In mobilityDCAT-AP, these properties are removed.</p>
 <p>However, mobilityDCAT-AP uses this class as the range of an added property "dct:conformsTo" for class Dataset in a different context "reference system", analogue to a property addition by [[GEODCAT-AP-v2.0.0]].</p>
-<p>[[GEODCAT-AP-v2.0.0]] adds several properties to the class Standard. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [[GEODCAT-AP-v2.0.0]], MAY be used.</p>
+<p>For detailed information about data standards in the mobility domain, mobilityDCAT-AP introduces a separate class <a href="#mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a>, as a sub-class to class <code>dct:Standard</code>. </p>
+<p>Further, [[GEODCAT-AP-v2.0.0]] adds several properties to the class <code>dct:Standard</code>. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [[GEODCAT-AP-v2.0.0]], MAY be used.</p>
+
+
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
