@@ -38,7 +38,6 @@
 </td>
 </tr>
   
-<!-- mobilityDCAT-AP remove
 <tr class="property recommended" id="dataset-contact-point">
 <td>
 <p>contact point</p>
@@ -56,7 +55,6 @@
 <p>0..n</p>
 </td>
 </tr>
--->
   
 <tr class="property recommended" id="dataset-keyword">
 <td>
@@ -136,6 +134,25 @@
 <p>0..n</p>
 </td>
 </tr>
+
+<tr class="property recommended" id="dataset-category">
+<td>
+<p>theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to the generic theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. </p>
+<p>The category is described via a controlled vocabulary "Data Themes" by the Publications Office of the European Union [[EUV-THEMES]]. In most cases, it is assumed that the relevant value from this EU vocabulary is "Transport" [[EUV-THEMES-TRANSPORT]]. The controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>  
 
 <tr class="property recommended" id="dataset-temporal-coverage">
 <td>
