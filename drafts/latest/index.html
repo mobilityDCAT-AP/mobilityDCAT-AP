@@ -1369,7 +1369,13 @@ table code, table pre {
 </ul>
 
 <p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#catalogue-publisher"><code>dct:publisher</code></a>), Catalogue Record (<a href="#catalogue-record-publisher"><code>dct:publisher</code></a>), and Dataset (<a href="#dataset-publisher"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as <code>dct:creator</code> are not used.</p>
+<p>The following figure shows how the potential usages of <a href="#agent"><code>foaf:Agent</code></a> are represented in a UML diagram.</p>
 
+<figure id="fig-mobilitydcat-ap-uml-class-diagram-withDataService">
+<a href="./mobilityDCAT-AP_uml-diagramm_reduced_DataServiceAfterDistribution230928.png" title="view full-size image"><img src="./mobilityDCAT-AP_uml-diagramm_reduced_DataServiceAfterDistribution230928.png" alt="mobilityDCAT-AP UML Class Diagram with DataService"/></a>
+<figcaption>mobilityDCAT-AP UML Class Diagram with DataService</figcaption>
+</figure>
+  
 <p>The class <a href="#agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles. The properties under the class <a href="#agent"><code>foaf:Agent</code></a> also allow for providing (optional) contact details.</p>
 <p>There is one further, recommended property <a href="#agent-type"><code>dct:type</code></a> describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regional, national, supranational). Such organisation types are often data providers at mobility data portals, so much information is seen beneficial. However, the controlled vocabulary from [[ADMS-SKOS]], as proposed by [[DCAT-AP-v2.0.1]], is not sufficient in the mobility context. Thus, further items are added by mobilityDCAT-AP to the controlled vocabulary, see <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>. </p>
 
