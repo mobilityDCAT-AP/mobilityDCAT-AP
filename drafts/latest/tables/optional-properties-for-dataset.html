@@ -171,8 +171,8 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property MAY contain an identifier for the dataset, e.g., the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data platforms.</p>
-<p>The main identification of a dataset SHOULD be the URI used within the RDF statement (via rdf:about). The additional identifier property MAY be used for special identification purposes, e.g., unambiguous dataset identification across different NAPs or other portals. Fur such purposes, mobilityDCAT-AP might introduce (in the future) a structured, EU-wide identification system for NAP datasets, that is used via the identifier property.</p>
+<p>This property MAY contain an identifier for the dataset. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
+<p>This property SHOULD populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>  
 </td>
 <td>
 <p>0..1</p>
@@ -255,8 +255,6 @@
 
 
 
- 
-<!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-other-identifier">
 <td>
 <p>other identifier</p>
@@ -268,12 +266,12 @@
 <p><code>adms:Identifier</code></p>
 </td>
 <td>
-<p>This property refers to a secondary identifier of the Dataset, such as MAST/ADS [[?MAST-ADS]], [[?DataCite]], [[?DOI]], [[?EZID]] or [[?W3ID]].</p>
+<p>This property MAY be used as an additional identifier, besides  <a href="#dataset-identifier"><code>dct:identifier</code></a>. It MAY be referring to a dedicated, EU-wide identificator system of NAP datasets, to be introduced in the future, or other  identificator systems such as MAST/ADS [[?MAST-ADS]], [[?DataCite]], [[?DOI]], [[?EZID]] or [[?W3ID]].</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
-</tr>-->
+</tr>
 
 <!-- mobilityDCAT-AP remove
 <tr class="property optional" id="dataset-provenance">
