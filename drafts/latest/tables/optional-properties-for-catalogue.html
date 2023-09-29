@@ -90,9 +90,8 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property MAY contain an identifier for the mobility data portal, e.g. the URI or other unique identifier.
-Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
-<p>The main identification of a portal SHOULD be the URI used within the RDF statement (via rdf:about). This additional identifier property MAY be used for special identification purposes, e.g., unambiguous identification of NAPS or other portals. Fur such purposes, mobilityDCAT-AP might introduce (in the future) a structured, EU-wide identification system for NAPs, that is used via the identifier property.</p>  
+<p>This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
+<p>This property SHOULD populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>  
 <p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
 </td>
 <td>
@@ -119,6 +118,27 @@ This property could be used to link the mobility data portal to another data por
 <p>0..1</p>
 </td>
 </tr>
+
+<tr class="property optional ap-ext" id="catalogue-other-identifier">
+<td>
+<p>+other identifier</p>
+</td>
+<td>
+<p><code>adms:identifierr</code></p>
+</td>
+<td>
+<p><code>radms:Identifier</code></p>
+</td>
+<td>
+<p>This property MAY be used as an additional identifier, besides  <a href="#catalogue-identifier"><code>dct:identifier</code></a>. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future.</p>  
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+
+  
 
 <!-- PL: DCAT-AP property removed
 <tr class="property optional" id="mobility data portalue-rights">
