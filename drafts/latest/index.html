@@ -237,18 +237,25 @@ table code, table pre {
 
 <p>These extensions are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
 
-<p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a UML diagram of the classes and properties included in mobilityDCAT-AP.</p>
+<p>For a first orientation in mobilityDCAT-AP, these four central classes should be considered: <a href="#catalogue">Catalogue</a>, <a href="#catalogue-record">Catalogue Record</a>, <a href="#dataset">Dataset</a> and <a href="#distribution">Distribution</a>; as well as the properties connecting these four classes. </p>
+<p>These four central classes represent a hierarchical concept when describing metadata via mobilityDCAT-AP. Firstly, the Catalogue as such is described, i.e., being the metadata register in a data portal. Secondly, there is the Catalogue Record, which describes the metadata entry, including its publication date. Thirdly, the Dataset is described. In fact, most metadata elements are covered here, including the content theme; the spatial and temporal context; quality information and others. Finally, the distribution describes a technical and organisational way to access the Da-taset. In addition to the data format (e.g., a machine-readable syntax standard), the licensing terms are described here. </p>
+<p><a href="#fig-mobilitydcat-ap-uml-class-diagram-centralClasses"></a> shows an excerpt of the UML diagram of the mobilityDCAT-AP model, showing these four central classes and their connecting properties. </p>
+<p>Please note that two of these properties, <a href="#catalogue-catalogue-record"><code></code>dcat:record</a> and <a href="#dataset-distribution"><code></code>dcat:distribution</a>, have a mandatory obligation, in contrast to [[DCAT-AP-v2.0.1]]. Thus, a complete metadata set in accordance with mobilityDCAT-AP SHOULD contain at least instance of these four classes. See also the usage notes for properties <a href="#catalogue-catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-distribution"><code>dcat:distribution</code></a>. </p>
+  
+<figure id="fig-mobilitydcat-ap-uml-class-diagram-centralClasses">
+<a href="./figures/mobilityDCAT-AP_uml-diagramm_230928_centralClasses.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_230928_centralClasses.png" alt="Excerpt of mobilityDCAT-AP UML Class Diagram with central classes"/></a>
+<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on central classes</figcaption>
+</figure>
 
-<aside class="note">
-<p>This diagram shows only a subset of classes from [[DCAT-AP-v2.0.1]], namely the four central classes (marked in orange) <a href="#catalogue">Catalogue</a>, <a href="#catalogue-record">Catalogue Record</a>, <a href="#dataset">Dataset</a> and <a href="#distribution">Distribution</a>; as well as the properties connecting these four classes. </p>
-<p>Please note that two of these properties (marked in red) have a mandatory obligation, in contrast to [[DCAT-AP-v2.0.1]]. Thus, any metadata set in accordance with mobilityDCAT-AP SHOULD contain at least instance of these four classes. See also the usage notes for properties <a href="#catalogue-catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-distribution"><code>dcat:distribution</code></a>. </p>
-<p>This diagram also shows classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v2.0.1]]. The additions relate to the four central classes (in orange) and some supportive classes (in yellow). All additions are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
-<p>Altogether, this diagram is focused on some special aspects of mobilityDCAT-AP in terms of obligation levels and element additions. A complete UML diagram with all elements inherited from DCAT-AP is shown on [[DCAT-AP-v2.0.1]].</p>
+<p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a more complex UML diagram with selected classes and properties included in mobilityDCAT-AP.</p>
+<p>It shows the four central classes (marked in orange), as explained above, as well as some supportive classes (marked in yellow).</p>
+<p>In this diagram, the focus is on classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v2.0.1]]. All additions are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
+<p>A complete UML diagram with all elements is not shown here, but can be reconstructed from the UML diagram on [[DCAT-AP-v2.0.1]].</p>
 </aside>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram">
-<a href="./mobilityDCAT-AP_uml-diagramm_230719.png" title="view full-size image"><img src="./mobilityDCAT-AP_uml-diagramm_230719.png" alt="mobilityDCAT-AP UML Class Diagram"/></a>
-<figcaption>mobilityDCAT-AP UML Class Diagram</figcaption>
+<a href="./figures/mobilityDCAT-AP_uml-diagramm_230721.png" title="view full-size image"><img src="./mobilityDCAT-AP_uml-diagramm_230721.png" alt="mobilityDCAT-AP UML Class Diagram"/></a>
+<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on added classes and properties</figcaption>
 </figure>
 
 </section>
@@ -1366,11 +1373,11 @@ table code, table pre {
 </ul>
 
 <p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#catalogue-publisher"><code>dct:publisher</code></a>), Catalogue Record (<a href="#catalogue-record-publisher"><code>dct:publisher</code></a>), and Dataset (<a href="#dataset-publisher"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as <code>dct:creator</code> are not used.</p>
-<p>The following figure shows how the potential usages of <a href="#agent"><code>foaf:Agent</code></a> are represented in a UML diagram.</p>
+<p><p><a href="#fig-mobilitydcat-ap-uml-class-diagram-withAgent"></a> shows how the potential usages of <a href="#agent"><code>foaf:Agent</code></a> are represented in a UML diagram.</p>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram-withAgent">
 <a href="./figures/mobilityDCAT-AP_uml-diagramm_230929_AgentRelated.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_230929_AgentRelated.png" alt="mobilityDCAT-AP UML Class Diagram with Agent"/></a>
-<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with relations to class Agent</figcaption>
+<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on agent-role properties</figcaption>
 </figure>
   
 <p>The class <a href="#agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles. The properties under the class <a href="#agent"><code>foaf:Agent</code></a> also allow for providing (optional) contact details.</p>
