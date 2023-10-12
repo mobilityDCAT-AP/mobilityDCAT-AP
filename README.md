@@ -6,17 +6,15 @@ mobilityDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solutio
 
 mobilityDCAT-AP is an initiative of the [NAPCORE (National Access Point Coordination Organisation for Europe)](https://napcore.eu/), a formed organisation to coordinate and harmonise more than 30 mobility data platforms across Europe.
 
-The latest version of the mobilityDCAT-AP (v1.0.0) draft is available:
+The latest version of the mobilityDCAT-AP (v1.0.0) is available:
 
-[https://w3id.org/mobilitydcat-ap/drafts/latest](https://w3id.org/mobilitydcat-ap/drafts/latest)
-
-<!--- (https://https://w3id.org/mobilitydcat-ap/releases/) -->
+[https://https://w3id.org/mobilitydcat-ap/releases/](https://https://w3id.org/mobilitydcat-ap/releases/)
 
 Any problems encountered or suggestions for new functionalities can be submitted as [issues on the mobilityDCAT-AP repository on GitHub](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues). A short guideline for submitting issues can be found at [SEMICeu/DCAT-AP/wiki/Submission-guidelines](https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines).
 
 ## Structure of the repository
 
-<!---[Releases](./releases/): mobilityDCAT-AP releases (1.0.0, etc.); each release might have different distributions.-->
+- [Releases](./releases/): mobilityDCAT-AP releases (1.0.0, etc.); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest mobilityDCAT-AP release.
 
 <!---
@@ -29,5 +27,4 @@ Any problems encountered or suggestions for new functionalities can be submitted
 Additional mobilityDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations). -->
 
 ## Licence
-
-mobilityDCAT-AP releases and working drafts are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Copyright © 2023 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the mobilityDCAT-AP repository on GitHub.
