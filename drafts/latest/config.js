@@ -31,7 +31,7 @@ var respecConfig = {
       ],
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
-    copyrightStart: 2020,
+    copyrightStart: 2023,
     publishDate: "2023-05-11",
 
     alternateFormats: [
@@ -110,7 +110,7 @@ var respecConfig = {
       {
         name: "Peter Lubrich",
         company: "Federal Highway Research Institute (BASt)",
-        orcid: "",
+        orcid: "0000-0002-0023-1234",
 //        companyURL: ""
       },
       {
@@ -276,7 +276,7 @@ var respecConfig = {
         "publisher":"European Commission",
 //        "date":"2016"
       },
-      
+
       "DCAT-AP-HVD": {
         "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
         "title":"Usage guidelines of DCAT-AP for High-Value Datasets",
@@ -284,8 +284,8 @@ var respecConfig = {
         "date":"19 June 2023"
       },
 
-        
-        
+
+
     "DC-UG-PM": {
         "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
         "title":"Dublin Core™ User Guide: Publishing Metadata",
