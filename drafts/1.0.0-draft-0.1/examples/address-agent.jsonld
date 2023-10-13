@@ -1,0 +1,38 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Nd7c9b8e33aab4991848806c419cf4ff4",
+    "@type": [
+      "http://www.w3.org/ns/locn#Address"
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL1": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL2": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postCode": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postName": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/ns/locn#thoroughfare": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/address-agent.rdf"
+  }
+]

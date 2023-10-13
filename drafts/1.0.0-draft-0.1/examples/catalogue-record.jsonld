@@ -1,0 +1,136 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "https://some.catalogue/record/af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb",
+    "@type": [
+      "http://www.w3.org/ns/dcat#CatalogRecord"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "http://data.europa.eu/930/"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+      "@value": "af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2020-03-25"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+      "@id": "_:Nb3f02802dd964cf7b0f09f2f426378ce"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+      "@id": "_:Nfff74f1950184c889db61288e81ddbe0"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/primaryTopic": [
+      {
+      "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nfff74f1950184c889db61288e81ddbe0",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:Nc7a0787a04c643659d92534769b52ec6"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nc7a0787a04c643659d92534769b52ec6",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Address"
+    ],
+    "http://www.w3.org/2006/vcard/ns#country-name": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#locality": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#postal-code": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#region": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#street-address": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nb3f02802dd964cf7b0f09f2f426378ce",
+    "@type": [
+      "http://www.w3.org/ns/dcat#CatalogRecord"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "_:N001259197b75447c88c12b0666f00b1f"
+      }
+    ],
+    "http://www.w3.org/2011/content#characterEncoding": [
+      {
+      "@value": "UTF-8"
+      }
+    ]
+    },
+    {
+    "@id": "_:N001259197b75447c88c12b0666f00b1f",
+    "@type": [
+      "http://purl.org/dc/terms/Standard"
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "ISO 19119/19139"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+      "@language": "en",
+      "@value": "1.0"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/catalogue-record.rdf"
+  }
+]

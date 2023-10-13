@@ -1,0 +1,25 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Ne0dad0133b354db88ddafac1d2ede885",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2002-03-01"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "EEA keyword list"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/category-scheme.rdf"
+  }
+]

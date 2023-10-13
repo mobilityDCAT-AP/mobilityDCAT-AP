@@ -1,0 +1,47 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N03cdaaf0e8bc4f6cabcb54ecd381d265",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+      "@id": "_:N12ef52b8c0834384b0aa4c4bb00868f3"
+      }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+      {
+      "@id": "_:N3278d37c98464a8596c63a5280886903"
+      }
+    ]
+    },
+    {
+    "@id": "_:N12ef52b8c0834384b0aa4c4bb00868f3",
+    "@type": [
+      "http://www.w3.org/2006/time#Instant"
+    ],
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-01-01"
+      }
+    ]
+    },
+    {
+    "@id": "_:N3278d37c98464a8596c63a5280886903",
+    "@type": [
+      "http://www.w3.org/2006/time#Instant"
+    ],
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-12-31"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///home/molinasc/Documents/GitHubProjects/NAPCORE/mobilityDCAT-AP/drafts/latest/examples/period-of-time-with-owl-time.rdf"
+  }
+]
