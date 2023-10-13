@@ -69,7 +69,7 @@ var respecConfig = {
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
 //    specStatus: "unofficial",
-    specStatus: "ED",
+    specStatus: "RE",
 //    specStatus: "FPWD",
 //    specStatus: "WD",
 //    specStatus: "LC",
