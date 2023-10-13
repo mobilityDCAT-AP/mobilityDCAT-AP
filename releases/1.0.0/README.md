@@ -1,17 +1,18 @@
-# GeoDCAT-AP v2.0.0
+# mobilityDCAT-AP v1.0.0
 
 Release page:
 
-[https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/)
+[https://w3id.org/mobilitydcat-ap/releases/](https://w3id.org/mobilitydcat-ap/releases/)
 
 ## Distributions
 
-- [HTML version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/)
-- [Turtle version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl)
-- [RDF/XML version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf)
-- [JSON-LD version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.jsonld)
-- [SHACL version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.shacl.ttl)
+- [HTML version](https://w3id.org/mobilitydcat-ap/releases/1.0.0/)
+- [Turtle version](https://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.ttl)
+- [RDF/XML version](https://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.rdf)
+- [JSON-LD version](https://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.jsonld)
+- [SHACL version](https://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap_shacl_shapes.ttl) 
 
 ## Licence
 
-GeoDCAT-AP releases are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Copyright © 2023 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned. Any problems encountered or suggestions for new functionalities can be submitted as issues on the mobilityDCAT-AP repository on GitHub.
+
