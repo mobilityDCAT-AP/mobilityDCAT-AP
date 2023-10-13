@@ -161,7 +161,7 @@ table code, table pre {
   "name": "mobilityDCAT-AP - Version 1.0.0",
   "inLanguage": "en-GB",
   "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "datePublished": "2023-10-31",
+  "datePublished": "2023-10-16",
   "copyrightHolder": {
     "name": "European Union",
     "url": "https://europa.eu/"
@@ -1171,7 +1171,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   ],
   "copyrightStart": 2023,
-  "publishDate": "2023-05-11",
+  "publishDate": "2023-10-16",
   "alternateFormats": [
     {
       "label": "RDF/XML",
@@ -1187,13 +1187,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     },
     {
       "label": "SHACL (Turtle)",
-      "uri": "./mobilitydcat-ap_shacl_shapes.ttl"
+      "uri": "./mobilitydcatap_shacl_shapes.ttl"
     }
   ],
   "errata": "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
-  "specStatus": "REC",
+  "specStatus": "RE",
   "shortName": "mobility-ap",
-  "canonicalURI": "https://w3id.org/mobilitydcat-ap/releases/1.0.0",
+  "canonicalURI": "https://w3id.org/mobilitydcat-ap/drafts/latest/",
   "prevRecURI": "https://w3id.org/mobilitydcat-ap/releases/1.0.0/",
   "thisVersionURI": "https://w3id.org/mobilitydcat-ap/releases/1.0.0/",
   "prevVersionURI": "https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/",
@@ -2001,16 +2001,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "id": "web-anotation-ontology"
     }
   },
-  "publishISODate": "2023-10-31T00:00:00.000Z",
-  "generatedSubtitle": "NAPCORE Recommendation 31 October 2023"
+  "publishISODate": "2023-10-16T00:00:00.000Z",
+  "generatedSubtitle": "Recommendation 16 October 2023"
 }</script>
-<link rel="stylesheet" href="https://mobilitydcat-ap.github.io/respec-style/NAPCORE-ED.css"></head>
+<link rel="stylesheet" href="https://mobilitydcat-ap.github.io/respec-style/NAPCORE-RE.css"></head>
 <body data-new-gr-c-s-check-loaded="8.907.0" data-gr-ext-installed="" class="h-entry"><div class="head">
     <a class="logo" href=""><img alt="mobilitydcat-ap logo" width="250" height="140" src="https://mobilitydcat-ap.github.io/respec-style/logos/mobilitydcat-ap.png"></a> <h1 id="title" class="title">mobilityDCAT-AP - Version 1.0.0</h1>
     <h2 id="subtitle" class="subtitle">A mobility extension for the DCAT application profile for data portals in Europe</h2>
     <h2>
-      NAPCORE Recommendation
-      <time class="dt-published" datetime="2023-10-31">31 October 2023</time>
+      NAPCORE
+      <time class="dt-published" datetime="2023-10-16">16 Ocotber 2023</time>
     </h2>
 
     <dl>
@@ -2023,7 +2023,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 
 
-
+      <dt>Previous version:</dt><dd><a href="https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/">https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/</a></dd>
       <dt>Latest Recommendation:</dt><dd><a href="https://w3id.org/mobilitydcat-ap/releases/1.0.0/">https://w3id.org/mobilitydcat-ap/releases/1.0.0/</a></dd>
       <dt>Editors:</dt>
       <dd class="p-author h-card vcard"><span class="p-name fn">Lina Molinas Comet</span><a class="p-name orcid" href="https://orcid.org/0000-0001-5446-6947"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -2076,14 +2076,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     Completed
   </dd><dt>Document version:</dt><dd>
     1.0.0
-  </dd><dt>Reviewed by:</dt><dd>
-    Pavlina Fragkou (European Commission)
-  </dd><dd>
-    Seth van Hooland (European Commission)
-  </dd><dt>Approved by:</dt><dd>
-    Pavlina Fragkou (European Commission)
-  </dd><dd>
-    Seth van Hooland (European Commission)
   </dd>
     </dl>
     <p>
@@ -2138,19 +2130,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       document at the time of its publication. Other documents may supersede
       this document.</em></p>
 <p>
-    This document was published by the <a href="https://github.com/mobilityDCAT-AP/">NAPCORE Sub-Working Group (SWG) 4.4</a> as a Recommendation.
+    This document was published by the <a href="https://github.com/mobilityDCAT-AP/">NAPCORE Sub-Working Group (SWG) 4.4</a> as a Recommendation
+    .
 
   </p><p>
     <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/">GitHub Issues</a> are preferred for
           discussion of this specification.
 
 
-        </p><p>
-            A Recommendation is a specification that, after extensive
-            consensus-building, has received the endorsement of the Working Group.
-            The Working Group recommends the wide deployment of this specification.
-
-          </p><p>
+  </p><p>
+      Publication as a Recommendation has received the endorsement of the Working Group.
+    </p><p>The Working Group recommends the wide deployment of this specification.
+  </p><p></p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap">Change and Release Management Policy for DCAT-AP</a>.
                 </p></section>
@@ -2171,21 +2162,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </thead>
 <tbody>
 
-<tr>
-<td><a href="https://w3id.org/mobilitydcat-ap/releases/">1.0</a></td>
-<td>31/10/2023</td>
-<td>Recommendation</td>
-<td>Publication</td>
-<td><a class="no-secRef sec-ref" href="#changes-since-20230101">§&nbsp;<bdi class="secno">C.1 </bdi>Changes since first public working draft of 11 May 2023</a></td>
-</tr>
+  <tr>
+  <td><a href="https://w3id.org/mobilitydcat-ap/releases/">1.0.0</a></td>
+  <td>16/10/2023</td>
+  <td>Recommendation</td>
+  <td>Publication</td>
+  <td><a class="no-secRef sec-ref" href="#changes-since-20230101">§&nbsp;<bdi class="secno">C.1 </bdi>Changes since first public working draft of 11 May 2023</a></td>
+  </tr>
 
-<tr>
-<td><a href="https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/">0.1</a></td>
-<td>11/05/2023</td>
-<td>First Public Working Draft</td>
-<td>Creation</td>
-<td><a class="no-secRef sec-ref" href="#changes-since-20230101">§&nbsp;<bdi class="secno">C.1 </bdi>Starting point of mobilityDCAT-AP 1.0.0 (01 January 2023)</a></td>
-</tr>
+  <tr>
+  <td><a href="https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/">0.1</a></td>
+  <td>11/05/2023</td>
+  <td>First Public Working Draft</td>
+  <td>Creation</td>
+  <td><a class="no-secRef sec-ref" href="#changes-since-20230101">§&nbsp;<bdi class="secno">C.1 </bdi>Starting point of mobilityDCAT-AP 1.0.0 (01 January 2023)</a></td>
+  </tr>
 
 </tbody>
 </table>
@@ -7219,19 +7210,34 @@ This property could be used to link the mobility data portal to another data por
 
 <h3 id="x4-18-mobility-data-standard"><bdi class="secno">4.18 </bdi>+Mobility Data Standard<a class="self-link" aria-label="§" href="#properties-for-mobility-data-standard"></a></h3>
 
-
-
-
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <title>Error response</title>
-
-
-        <h1>Error response</h1>
-        <p>Error code: 404</p>
-        <p>Message: File not found.</p>
-        <p>Error code explanation: HTTPStatus.NOT_FOUND - Nothing matches the given URI.</p>
-
-
+<table class="def" id="table-class-quality-annotation">
+<tbody>
+<tr>
+<th>Class name</th>
+<td>Mobility Data Standard</td>
+</tr>
+<tr>
+<th>Obligation</th>
+<td>Mandatory</td>
+</tr>
+<tr>
+<th>URI</th>
+<td>
+<p><code>mobilitydcatap:mobilityDataStandard</code></p>
+</td></tr>
+<tr>
+<th>Usage note</th>
+<td>
+<p>The mobility data standard applied for the delivered content. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange.</p>
+<p>This is a sub-class of <code>dct:Standard</code>.</p>
+</td></tr>
+<tr>
+<th>Reference</th>
+<td>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">§&nbsp;Term name: Standard</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+</td></tr>
+</tbody>
+</table>
 
 
 <section id="optional-properties-for-mobility-data-standard">
@@ -10002,7 +10008,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a cl
 
 <h2 id="c-change-log"><bdi class="secno">C. </bdi>Change Log<a class="self-link" aria-label="§" href="#changes"></a></h2>
 
-<p>A full change-log is available on <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/commits/gh-pages/drafts/latest/">GitHub</a></p>
+<p>A full change-log is available on <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP">GitHub</a></p>
 
 <section id="changes-since-20230101">
 
