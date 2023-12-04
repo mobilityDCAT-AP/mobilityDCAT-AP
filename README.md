@@ -12,7 +12,7 @@ The latest version of the mobilityDCAT-AP (v1.0.0) is available:
 
 Any problems encountered or suggestions for new functionalities can be submitted as [issues on the mobilityDCAT-AP repository on GitHub](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues). A short guideline for submitting issues can be found at [SEMICeu/DCAT-AP/wiki/Submission-guidelines](https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines).
 
-The guidelines about the mobilityDCAT-AP specification are available at [mobilityDCAT‐AP Accompanying Guidelines](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Introduction-and-Overview)
+The guidelines about the mobilityDCAT-AP specification are available at [mobilityDCAT‐AP Accompanying Guidelines](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki)
 
 ## Structure of the repository
 
