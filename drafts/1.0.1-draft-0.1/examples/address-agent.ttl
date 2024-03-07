@@ -1,9 +1,0 @@
-@prefix locn: <http://www.w3.org/ns/locn#> .
-
-[] a locn:Address ;
-  locn:adminUnitL1 "Denmark" ;
-  locn:adminUnitL2 "K" ;
-  locn:postCode "1050" ;
-  locn:postName "Copenhagen" ;
-  locn:thoroughfare "Kongens Nytorv 6" .
-
