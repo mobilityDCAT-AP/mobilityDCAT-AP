@@ -1,0 +1,196 @@
+<table class="simple"> <!-- PL edits 05.07.23 -->
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property recommended ap-ext" id="dataset-georeferencing-method">
+<td>
+<p>+georeferencing method</p>
+</td>
+<td>
+<p><code>mobilitydcatap:georeferencingMethod</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the georeferencing method used in the dataset. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided, denoting commonly used georeferencing methods for mobility data.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+  
+<tr class="property recommended" id="dataset-contact-point">
+<td>
+<p>contact point</p>
+</td>
+<td>
+<p><code>dcat:contactPoint</code></p>
+</td>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p>This property contains contact information that can be used for communication with a company or person responsible for the dataset. Such contact is important for any questions or issues about a dataset and its provisioning, which might raised by a platform user or a platform operator. The provided contact information, such as a personal name and email address, MAY NOT be exposed to platform users, but MAY be anonymously used via, e.g. a contact button on the GUI that triggers an email to the contact point.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+  
+<tr class="property recommended" id="dataset-keyword">
+<td>
+<p>keyword / tag</p>
+</td>
+<td>
+<p><code>dcat:keyword</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a keyword or tag describing the Dataset. For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult. Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular <a href="#dataset-category"><code>dcat:theme</code></a>, <a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a> and <a href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a>. If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of "mobilityDCAT-AP", in order to update the Controlled Vocabularies.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-network-coverage">
+<td>
+<p>+network coverage</p>
+</td>
+<td>
+<p><code>mobilitydcatap:networkCoverage</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed.</p>
+<p>For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. </p>
+<p>For all modes, the property SHOULD also indicate if the data content relates to the EU’s trans-European transport network [[EU-TEN-T]]. </p>
+<p>A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided, denoting commonly used road and infrastructure network classes.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-reference-system">
+<td>
+<p>+reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the spatial reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]]. A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-rights-holder">
+<td>
+<p>+rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property <a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a>) and/or the relevance to legal frameworks (if applicable, see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>).</p>
+<p>This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset.</p>
+<p>The Rights Holder will be in many cases identical with the Publisher information for class Dataset (see property <a href="#dataset-publisher"><code>dct:publisher</code></a>) and/or for class Catalogue Record (see property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a>). In this case, the contact data MAY be copied from the corresponding Publisher entries. There might be also cases with non-identical entities: e.g., when one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.</p>
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended" id="dataset-category">
+<td>
+<p>theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to the generic theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. </p>
+<p>The category is described via a controlled vocabulary "Data Themes" by the Publications Office of the European Union [[EUV-THEMES]]. In most cases, it is assumed that the relevant value from this EU vocabulary is "Transport" [[EUV-THEMES-TRANSPORT]]. The controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>  
+
+<tr class="property recommended" id="dataset-temporal-coverage">
+<td>
+<p>temporal coverage</p>
+</td>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p>This property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-transport-mode">
+<td>
+<p>+transport mode</p>
+</td>
+<td>
+<p><code>mobilitydcatap:transportMode</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the transport mode that is covered by the delivered content. Data can be valid for more than one  mode, so a multiple choice should be applied. </p>
+<p>A controlled vocabulary <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> is provided, denoting commonly used transport modes.</p>
+</td>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+</tbody>
+</table>

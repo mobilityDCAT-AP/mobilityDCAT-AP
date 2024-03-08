@@ -1,0 +1,105 @@
+<table class="simple" id="table-optional-properties-for-catalogue-record">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="catalogue-record-description">
+<td>
+<p>description</p>
+</td>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a free-text account of the Catalogue Record. This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+
+<tr class="property optional ap-ext" id="catalogue-record-publisher">
+<td>
+<p>+publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property “Publisher” of the corresponding dataset. </p>
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="catalogue-record-source-metadata">
+<td>
+<p>source metadata</p>
+</td>
+<td>
+<p><code>dct:source</code></p>
+</td>
+<td>
+<p><code>dcat:CatalogRecord</code></p>
+</td>
+<td>
+<p>This property refers to the original metadata record that was used in creating the Catalogue Record.</p>
+<p>In GeoDCAT-AP, this MAY refer to an INSPIRE / [[ISO-19115]] record that was transformed into the current Geo/DCAT-AP one.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="catalogue-record-title">
+<td>
+<p>title</p>
+</td>
+<td>
+<p><code>dct:title</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a name given to the Catalogue Record. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+</tbody>
+</table>

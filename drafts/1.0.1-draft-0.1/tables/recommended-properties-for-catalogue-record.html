@@ -1,0 +1,110 @@
+<table class="simple" id="table-recommended-properties-for-catalogue-record"> <!--Pl edits 05.05.23>
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+
+<!-- proprietary property "visibility status"; removed after issue https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/12 (point 1); might be re-introduced in future, probably via property dct:accessRights
+<aside class="note">
+
+<tr class="property recommended" id="catalogue-record-visibility-status">
+<td>
+<p>visibility status</p>
+</td>
+<td>
+<p><code>mobilitydcatap:visibilityStatus</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property describes the visibility status of a metadata entry on the data platform. It has predefined values such as “public” or “private”. “Public” means that the metadata entry and the corresponding dataset can be retrieved by external data platform users, and that that the corresponding metadata can be exchanged with 3rd parties. “Private” means that the metadata entry and the corresponding dataset are only visible to the original data provider and the data platform operator; this might be the case for test publications, for example. The value can be set be the metadata creator or by the platform operator. The property is used only for internal usage or administration. </p>
+<p>For mobilityDCAT-AP, it was discussed, if such visibility could be represented by the "dct:accessRights" property instead. This property may be linked to controlled vocabularies such as the EU access-right authority table [[EUV-AR]]. However, this property implies that the metadata are still exchanged, in spite of restricted publicity. For mobilityDCAT-AP, the understanding of "private" is different: metadata are not exchanged at all. Thus, an own property was created.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+  
+<!-- PL: DCAT-AP property removed
+<tr class="property recommended" id="catalogue-record-application-profile">
+<td>
+<p>application profile</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property refers to an Application Profile that the Catalogue Record conforms to</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<!-- PL: DCAT-AP property removed
+<tr class="property recommended" id="catalogue-record-change-type">
+<td>
+<p>change type</p>
+</td>
+<td>
+<p><code>adms:status</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to the type of the <em>latest</em> revision of a Catalogue Record.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<!-- PL: DCAT-AP property removed
+<tr class="property recommended" id="catalogue-record-listing-date">
+<td>
+<p>listing date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date on which the Catalogue Record was included in the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+</tbody>
+</table>

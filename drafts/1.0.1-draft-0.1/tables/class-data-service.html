@@ -1,0 +1,52 @@
+<table class="def" id="table-class-data-service">
+<tbody>
+<tr>
+<th>Class name</th>
+<td>Data Service</td>
+</tr>
+<tr>
+<th>Obligation</th>
+<td>Optional</td>
+</tr>
+<tr>
+<th>URI</th>
+<td>
+<p><code>dcat:DataService</code></p>
+</td></tr>
+<tr>
+<th>Usage note</th>
+<td>
+<p>A collection of operations that provides access to one or more datasets or data processing functions. </p>
+
+<!-- PL edits 04.07.12 -->
+    
+<p>For mobilityDCAP-AP, it was discussed if and how this class should be used. In fact, some mobility data are offered via sophisticated systems, such as APIs or broker interfaces, in contrast to simple downloadable files.</p>
+<p>The following advice is based on the guideline provided in [[DCAT-AP-v2.1.0-Guideline-Dataservices]], and an analysis on how the class <code>dcat:DataService</code> is embedded in the [[DCAT-AP-v2.0.1]] UML model. Three usage options for <code>dcat:DataService</code> are identified:</p>
+
+<p>1. As a range to class <a href="#distribution">dcat:Distribution</a> via property <a href="#distribution-access-service"><code>dcat:accessService</code></a>.</p> 
+<p>This construct allows that class <code>dcat:DataService</code> describes additional information, e.g., about an end point, related to one distribution. This, in fact, MAY be useful to describe a dedicated (but optional) data service related to one distribution. </p>   
+<p>However, looking at today's set-ups of NAPs and mobility data portals, any metadata about the characteristics and mechanisms of a distribution channel MAY ALSO be sufficiently described as properties of class <a href="#distribution">dcat:Distribution</a>. In particular, information provided by property <a href="#data-service-endpoint-description"><code>dcat:endpointDescription</code></a> (mandatory to class <code>dcat:DataService</code>) can be equally provided by the property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> (mandatory to class <a href="#distribution">dcat:Distribution</a>).  
+<p>This advice contradicts somewhat to the [[DCAT-AP-v2.1.0-Guideline-Dataservices]], stating that "Anything that has not the intend to provide a downloadable representation of a dataset is a data service.", for cases in which mobility data is offered via APIs, broker services etc. However, the usage note for the property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> also includes "...information about how to get the Dataset", which could allow for a link to one ore more APIs, broker services etc. This way, the class <a href="#distribution">dcat:Distribution</a> is considered sufficient for such cases.</p> 
+
+<p>2. As a domain to class <a href="#dataset">dcat:Dataset</a> via property <a href="#data-service-serves-dataset"><code>dcat:servesDataset</code></a>.</p> 
+<p>Class <code>dcat:DataService</code> would then linking to one or more datasets "...that this data service can distribute". Thus, this property connects the Data Service to the Dataset.</p>
+<p>The following figure shows how this contruct, containing above points 1. and 2., is represented in a UML diagram.</p>
+
+<figure id="fig-mobilitydcat-ap-uml-class-diagram-withDataService">
+<a href="./figures/mobilityDCAT-AP_uml-diagramm_230928_DataServiceRelated.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_230928_DataServiceRelated.png" alt="mobilityDCAT-AP UML Class Diagram with DataService"/></a>
+<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with relations to class DataService</figcaption>
+</figure>
+    
+<p>3. As a range to class <a href="#catalogue-record">dcat:CatalogueRecord</a> via property <a href="#catalogue-record-primary-topic"><code>foaf:primaryTopic</code></a> as 1:1 relationship.</p>
+<p>This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about datasets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP as of today. This construct might be used in the future when such portals also explicitely list data services. </p>
+
+    
+<p>Altogether, class <code>dcat:DataService</code> MAY be used for the contruct explained above, but seems to be a rather unnecessary addition to the data model in NAPs and mobility data portals, looking at their set-ups today. It might be more relevant in the future, when data services are more explicit items to be exposed in NAPs or mobility data portals. For this reason, any properties, as associated to class <code>dcat:DataService</code> in [[DCAT-AP-v2.0.1]], are kept in mobilityDCAT-AP.</p> 
+</td></tr>
+<tr>
+<th>Reference</th>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Data_Service">§ <bdi class="secno">6.8 </bdi>Class: Data Service</a> [[VOCAB-DCAT-2]]</p>
+</td></tr>
+</tbody>
+</table>
