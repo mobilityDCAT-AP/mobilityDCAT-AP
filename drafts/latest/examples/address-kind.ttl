@@ -1,9 +1,0 @@
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-
-[] a vcard:Address ;
-  vcard:country-name "Denmark" ;
-  vcard:locality "Copenhagen" ;
-  vcard:postal-code "1050" ;
-  vcard:region "K" ;
-  vcard:street-address "Kongens Nytorv 6" .
-

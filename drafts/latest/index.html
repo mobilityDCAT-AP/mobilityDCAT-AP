@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<title>mobilityDCAT-AP - Version 1.0.0</title>
+<title>mobilityDCAT-AP - Version 1.0.1</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -85,7 +85,7 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document presents version 1.0.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
+<p>This document presents version 1.0.1 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
 
 <p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original [[DCAT-AP]], while extending and customizing it for the mobility sector.</p>
 
@@ -254,10 +254,17 @@ table code, table pre {
 <p>In this diagram, the focus is on classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v2.0.1]]. All additions are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram">
-<a href="./figures/mobilityDCAT-AP_uml-diagramm_230921.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_230921.png" alt="mobilityDCAT-AP UML Class Diagram"/></a>
+<a href="./figures/mobilityDCAT-AP_uml-diagramm_240205.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240205.png" alt="mobilityDCAT-AP UML Class Diagram"/></a>
 <figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on added classes and properties</figcaption>
 </figure>
 
+<p><a href="#fig-mobilitydcat-ap-uml-minimum-class-diagram"></a> shows a reduced UML diagram with classes and properties that are declared mandatory in mobilityDCAT-AP.</p>
+
+<figure id="fig-mobilitydcat-ap-uml-minimum-class-diagram">
+<a href="./figures/mobilityDCAT-AP_uml-diagramm_240205_minimum elements.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240205_minimum elements.png" alt="mobilityDCAT-AP UML Minimum Class Diagram"/></a>
+<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on mandatory classes and properties</figcaption>
+</figure> 
+  
 <p>A complete UML diagram with all elements is not shown here, but can be reconstructed from the UML diagram on [[DCAT-AP-v2.0.1]].</p>
 
 </section>
@@ -1236,8 +1243,8 @@ table code, table pre {
 
 <aside class="note">
 <p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is used as the range of property "dct:conformsTo" for class Catalogue Record (context "application profile"); for class Dataset (context "conforms to"); and for class Distribution (context "linked schemas"). In mobilityDCAT-AP, these properties are removed.</p>
-<p>However, mobilityDCAT-AP uses this class as the range of an added property "dct:conformsTo" for class Dataset in a different context "reference system", analogue to a property addition by [[GEODCAT-AP-v2.0.0]].</p>
+<p>In [[DCAT-AP-v2.0.1]], this class is used as the range of property <code>dct:conformsTo</code> for class Catalogue Record (context "application profile"); for class Dataset (context "conforms to"); and for class Distribution (context "linked schemas"). In mobilityDCAT-AP, these properties are removed.</p>
+<p>However, mobilityDCAT-AP uses this class as the range of an added property <a href="#dataset-reference-system""><code>dct:conformsTo</code></a> for class Dataset in a different context "reference system", analogue to a property addition by [[GEODCAT-AP-v2.0.0]].</p>
 <p>For detailed information about data standards in the mobility domain, mobilityDCAT-AP introduces a separate class <a href="#mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a>, as a sub-class to class <code>dct:Standard</code>. </p>
 <p>Further, [[GEODCAT-AP-v2.0.0]] adds several properties to the class <code>dct:Standard</code>. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [[GEODCAT-AP-v2.0.0]], MAY be used.</p>
 
@@ -1462,7 +1469,6 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 <li>Jonas Jäderberg, <a href="https://www.viati.se/in-english/">Viati</a>, Sweden</li>
 <li>Christoph Lange-Bever, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
 <li>Chrysostomos Mylonas, <a href="https://www.certh.gr/root.en.aspx">Centre for Research and Technology Hellas (CERTH)/Hellenic Institute of Transport (HIT)</a>, Thessaloniki Greece</li>
-<li>Kees Nieuwstad, <a href="https://www.ndw.nu/">Nationaal Dataportaal Wegverkeer</a>, Utrecht, the Netherlands</li>
 <li>Rodolfo Da Silva, <a href="https://www.kios.ucy.ac.cy/">KIOS Research and Innovation Center of Excellence</a>, Nicosia, Cyprus</li>
 <li>Benjamin Witsch, <a href="https://www.austriatech.at/en/">AustriaTech – Gesellschaft des Bundes für technologiepolitische Maßnahmen GmbH</a>, Vienna, Austria</li>
 </ul>
@@ -1530,13 +1536,88 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 </section>
 
+
+<!-- Minimum profile -->
+
+<section id="minimum-profile" class="appendix">
+
+<h2>mobilityDCAT-AP minimum profile</h2>
+
+<p>Add description.</p>
+
+</section>
+  
+
+<!-- Examples -->
+
+<section id="examples" class="appendix">
+
+<h2>mobilityDCAT-AP example populations</h2>
+
+<p>To show how mobilityDCAT-AP can be deployed in practice, some example files have been produced. These denote how metadata descriptions can be populated using the mobilityDCAT-AP data vocabulary. </p>
+<p>The first example is related to a real-life NAP data offering from the Swedish NAP. See the corresponding human-readable <a href="https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"> metadata description on the NAP portal</a>.</p>
+<p>The Swedish NAP also provides machine-readable representations of its metadata records in a proprietary DCAT-AP dialect, see the <a href="https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits.xml"> RDF/XML file for the example above</a>.</p>
+<p>This RDF/XML was converted into a metadata description according to the mobilityDCAT-AP v1.0.0 specification. It is fullfilling all mandatory and some recommended and optional elements from mobilityDCAT-AP v1.0.0. Within the RDF/XML example file, several comments are given regarding the original RDF/XML as follows:</p>
+<ul>
+<li>OK = this element can remain from the original</li>
+<li>PROPOSAL = this element can remain from the original; however, a proposal is given following the usage notes of mobilityDCAT-AP</li>
+<li>MODIFIED = changed element</li>
+<li>ADDED = new element</p></li>
+</ul> 
+
+<p>The above RDF/XML example population was further formatted as a TTL file. Lastly, a reduced example population is provided, only considering mandatory elements from mobilityDCAT-AP v1.0.0.</p>
+<p>Altogether, the following files are provided as example population:</p>
+<ul>
+<li>SE NAP dataset expressed in original proprietary DCAT-AP (RDF/XML)</li>
+<li>SE NAP dataset expressed in mobilityDCAT-AP: original population (RDF/XML)</li>
+<li>SE NAP dataset expressed in mobilityDCAT-AP: original population (TTL)</li>
+<li>SE NAP dataset expressed in mobilityDCAT-AP: minimum population (RDF/XML)</li>
+<li>SE NAP dataset expressed in mobilityDCAT-AP: minimum population (TTL)</li>
+</ul> 
+<p>These files can be retrieved in the <a href="./examples"> example directory on the GitHub repository</a>.</p>
+<p>Further example populations, also looking at real-life data offerings on other NAPS, will be provided in the future.</p>  
+</section>
+
+
+<!-- Wikipage -->
+
+<section id="wikipage" class="appendix">
+
+<h2>mobilityDCAT-AP Wikipage</h2>
+
+<p>As an addition to this specification, a "mobilityDCAT-AP Wiki" has been published. This serves as a practical orientation for users of mobilityDCAT-AP. In particular, it guides deployers (e.g., developers and operators of NAPs and data platforms) in the implementation phasis of mobilityDCAT-AP​.
+This includes additional explanations and examples for specific vocabulary elements, recommendations for metadata handling and exposure on individual IT systems, as well as advice on metadata quality and validation processes.</p>
+<p>The Wiki page can be retrieved in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki"> Wiki section of the GitHub repository</a></p>
+</section>
+  
+
 <!-- Change Log -->
 
 <section id="changes" class="appendix">
 
 <h2>Change Log</h2>
 
-<p>A full change-log is available on <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP">GitHub</a></p>
+<p>A full change-log is available on <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/commits/gh-pages/drafts/latest/">GitHub</a></p>
+
+<section id="changes-since-20231016">
+
+<h2>Changes since mobilityDCAT-AP 1.0.0 (16 October 2023)</h2>
+
+<ul>
+<li>Errata: </li>
+<li><ul>
+  <li><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> corrected</li>
+  <li>Class <code>mobilitydcatap:MobilityDataStandard</code> was sometimes misspelled as <code>mobilitydcatap:mobilityDataStandard</code>, corrected </li>
+  <li>URL linking to Controlled Vocabulary "http://publications.europa.eu/resource/authority/licence" repaired</li>
+  <li>several typos corrected</li>
+</ul></li>
+<li><a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/mobilitydcat-ap_shacl_shapes.ttl">SHACL file</a> updated</li>
+<li>UML Class Diagram with focus on mandatory classes and properties added, see section <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#overview">2.2 mobilityDCAT-AP Overview</a> </li>  
+<li><a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#examples">Appendix C (mobilityDCAT-AP example populations)</a> added </li>
+<li><a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#wikipage">Appendix D (mobilityDCAT-AP Wikipage)</a> added</li>
+</ul>
+
+</section>
 
 <section id="changes-since-20230101">
 
@@ -1546,8 +1627,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 <li>Document completely re-written starting from the [[DCAT-AP-v2.0.1]] and [[GEODCAT-AP-v2.0.0]] specifications, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
 </ul>
 
-</section>
-
+</section>  
 
 <section id="changes-summary">
 
