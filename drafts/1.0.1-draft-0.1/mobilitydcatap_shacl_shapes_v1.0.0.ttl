@@ -361,6 +361,7 @@
   sh:property [
     # Mandatory property for Distribution
     sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-data-standard" ;
+	sh:Class mobilitydcatap:MobilityDataStandard  ;
 	sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:path mobilitydcatap:mobilityDataStandard ;

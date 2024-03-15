@@ -127,10 +127,10 @@
         </dcat:distribution>
         <foaf:depiction rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/mobilityDCAT-AP_uml-diagramm_230719.png"/>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -138,61 +138,61 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/dcam/domainIncludes -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/domainIncludes"/>
-    
+
 
 
     <!-- http://purl.org/dc/dcam/rangeIncludes -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/rangeIncludes"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/abstract -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/alternative -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/alternative"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/conformsTo -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/dateCopyrighted -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateCopyrighted"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/description -->
@@ -200,13 +200,13 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
         <skos:scopeNote xml:lang="en">This property contains a free-text, individual name of the mobility data platform itself. This property MAY be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/license -->
@@ -214,7 +214,7 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
         <skos:scopeNote xml:lang="en">This property contains the licence under which the Data Service is made available.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/modified -->
@@ -222,19 +222,19 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
         <skos:scopeNote xml:lang="en">This property contains the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/publisher -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/rightsHolder -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/title -->
@@ -242,91 +242,91 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
         <skos:scopeNote xml:lang="en">This property contains a name given to the mobility data portal, a name of the Category Scheme, a name given to the Data Service, a name given to the Dataset in a generic term. The name should be a meaningful, unique and unambiguous label. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. The language versions should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/type -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/type"/>
-    
+
 
 
     <!-- http://purl.org/ontology/bibo/editor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/editor"/>
-    
+
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
+
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
+
 
 
     <!-- http://purl.org/vocommons/voaf#reliesOn -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocommons/voaf#reliesOn"/>
-    
+
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
+
 
 
     <!-- http://www.w3.org/2002/07/owl#backwardCompatibleWith -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith"/>
-    
+
 
 
     <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#last -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#last"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#prev -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#prev"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#representationTechnique -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#representationTechnique"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#status -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#status"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#versionNotes -->
@@ -334,13 +334,13 @@
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#versionNotes">
         <skos:scopeNote xml:lang="en">This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property owl:versionInfo. This property can be repeated for parallel language versions of the version notes - see § 8. Accessibility and Multilingual Aspects.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#distribution -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#distribution"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#downloadURL -->
@@ -348,25 +348,25 @@
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL">
         <skos:scopeNote xml:lang="en">This property contains a URL that is a direct link to a downloadable file in a given format.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#mediaType -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#mediaType"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#component -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#component"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/depiction -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
@@ -374,16 +374,16 @@
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name">
         <skos:scopeNote xml:lang="en">This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects.</skos:scopeNote>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/page -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/page"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -391,16 +391,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/IMT -->
 
     <rdfs:Datatype rdf:about="http://purl.org/dc/terms/IMT"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -408,7 +408,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://data.europa.eu/r5r/applicableLegislation -->
@@ -423,13 +423,13 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/conformsTo -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/format -->
@@ -437,25 +437,25 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format">
         <skos:scopeNote xml:lang="en">This property refers to the technical syntax of the delivered content within the Distribution. It describes the base standard that specifies syntactically correct documents. On this level, only base elements of building documents properly are specified and can be proved by syntax checks. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1]. There is a similar property in [DCAT-AP-v2.0.1] dcat:mediaType, which is removed in mobilityDCAT-AP. There reason is the use of Controlled vocabularies: dct:format uses the EU Authority List [EUV-FT], whereas dcat:mediaType uses the IANA media types [IANA-MEDIA-TYPES]. The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals. </skos:scopeNote>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/identifier"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/publisher -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/rightsHolder -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/temporal -->
@@ -470,13 +470,13 @@
         <skos:scopeNote xml:lang="en">This property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/type -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type"/>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#applicationLayerProtocol -->
@@ -491,7 +491,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is recommended to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#assessmentResult -->
@@ -506,7 +506,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#communicationMethod -->
@@ -521,7 +521,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#georeferencingMethod -->
@@ -536,7 +536,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#grammar -->
@@ -552,7 +552,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#intendedInformationService -->
@@ -567,7 +567,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#mobilityDataStandard -->
@@ -575,7 +575,7 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/mobilitydcat-ap#mobilityDataStandard">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dcam:rangeIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <rdfs:comment xml:lang="en">This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided, listing common mobility data standards. If no established mobility data standard is applied, an information “proprietary standard” is requested. </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/mobilitydcat-ap#"/>
         <rdfs:label xml:lang="en">mobility data standard</rdfs:label>
@@ -583,7 +583,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#mobilityTheme -->
@@ -598,7 +598,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for  Dataset.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#networkCoverage -->
@@ -613,7 +613,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#schema -->
@@ -629,7 +629,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#transportMode -->
@@ -644,7 +644,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
@@ -662,7 +662,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for  Category.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/vcard/ns#hasAddress -->
@@ -676,7 +676,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Kind.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
@@ -690,7 +690,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Kind.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/vcard/ns#hasTelephone -->
@@ -704,7 +704,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Kind.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/vcard/ns#hasURL -->
@@ -718,7 +718,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Kind.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#identifier -->
@@ -731,7 +731,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Catalogue. </skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#sample -->
@@ -745,7 +745,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#theme -->
@@ -753,7 +753,7 @@
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#theme">
         <skos:scopeNote xml:lang="en">The values to be used for this property are the URIs of the concepts in the vocabulary. This is a vocabulary created by mobilityDCAT-AP. There are two hierarchical levels: &apos;&apos;Data content category&apos;&apos; (mandatory) and &apos;&apos;Data content sub-category&apos;&apos; (optional), see the usage note for property &apos;&apos;dcat:theme&apos;&apos;.</skos:scopeNote>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/dqv#hasQualityAnnotation -->
@@ -768,7 +768,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#address -->
@@ -781,13 +781,13 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#hasBody -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasBody"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#hasTarget -->
@@ -800,7 +800,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. </skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/org#memberOf -->
@@ -813,7 +813,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/mbox -->
@@ -826,7 +826,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/phone -->
@@ -839,7 +839,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/workplaceHomepage -->
@@ -852,10 +852,10 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -863,25 +863,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#dataFormatNotes -->
@@ -896,19 +896,19 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
+
 
 
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
@@ -923,7 +923,7 @@
         <skos:scopeNote xml:lang="en">This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/vcard/ns#fn -->
@@ -937,7 +937,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Kind.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/vcard/ns#organization-name -->
@@ -951,7 +951,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Kind.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/2011/content#characterEncoding -->
@@ -965,7 +965,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#adminUnitL1 -->
@@ -978,7 +978,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#adminUnitL2 -->
@@ -991,7 +991,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#postCode -->
@@ -1004,7 +1004,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#postName -->
@@ -1017,7 +1017,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#thoroughfare -->
@@ -1030,13 +1030,13 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#hasBody -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/oa#hasBody"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/firstName -->
@@ -1049,7 +1049,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/surname -->
@@ -1062,10 +1062,10 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -1073,7 +1073,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/Standard -->
@@ -1081,13 +1081,13 @@
     <owl:Class rdf:about="http://purl.org/dc/terms/Standard">
         <skos:scopeNote xml:lang="en">A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or Distribution conforms.. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is used as the range of property &apos;&apos;dct:conformsTo&apos;&apos; for class Catalogue Record (context &apos;&apos;application profile&apos;&apos;); for class Dataset (context&apos; &apos;conforms to&apos;&apos;); and for class Distribution (context &apos;&apos;linked schemas&apos;&apos;). In mobilityDCAT-AP, these properties are removed. However, mobilityDCAT-AP uses this class as the range of an added property &apos;&apos;dct:conformsTo&apos;&apos; for class Dataset in a different context &apos;&apos;reference system&apos;&apos;, analogue to a property addition by [GEODCAT-AP-v2.0.0]. [GEODCAT-AP-v2.0.0] adds several properties to the class Standard. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [GEODCAT-AP-v2.0.0], MAY be used.</skos:scopeNote>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/vocommons/voaf#Vocabulary -->
 
     <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#Assessment -->
@@ -1100,7 +1100,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional class.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:Class>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap#MobilityDataStandard -->
@@ -1114,19 +1114,19 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory class.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#Asset -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/adms#Asset"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/adms#AssetDistribution -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/adms#AssetDistribution"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/dqv#QualityAnnotation -->
@@ -1138,7 +1138,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional class.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/locn#Address -->
@@ -1150,22 +1150,22 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional class.</skos:scopeNote>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Group -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -1173,61 +1173,61 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://data.europa.eu/r5r/ -->
 
     <owl:NamedIndividual rdf:about="http://data.europa.eu/r5r/"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7 -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/corporate-body/COM -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/dataset-type/APROF -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/file-type/HTML -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/file-type/HTML"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/file-type/JSON_LD -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/file-type/JSON_LD"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
-    
+
 
 
     <!-- http://publications.europa.eu/resource/authority/file-type/RDF_XML -->
 
     <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
-    
+
 
 
     <!-- http://w3id.org/mobilitydcat-ap# -->
@@ -1245,31 +1245,31 @@
         <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
         <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.w3.org/ns/formats/data/JSON-LD -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/formats/data/JSON-LD"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/formats/data/RDF_XML -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/formats/data/RDF_XML"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/formats/data/Turtle -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/formats/data/Turtle"/>
-    
+
 
 
     <!-- https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24 -->
 
     <owl:NamedIndividual rdf:about="https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24"/>
-    
+
 
 
     <!-- https://github.com/lcomet -->
@@ -1278,25 +1278,25 @@
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <foaf:name>Lina Molinas Comet</foaf:name>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements -->
 
     <owl:NamedIndividual rdf:about="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"/>
-    
+
 
 
     <!-- https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap -->
 
     <owl:NamedIndividual rdf:about="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"/>
-    
+
 
 
     <!-- https://napcore.eu/ -->
 
     <owl:NamedIndividual rdf:about="https://napcore.eu/"/>
-    
+
 
 
     <!-- https://w3id.org/mobilitydcatap/ -->
@@ -1309,7 +1309,7 @@
         <dct:conformsTo rdf:resource="https://www.w3.org/TR/vocab-dcat-2/"/>
         <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://www.w3.org/TR/vocab-dcat-2/ -->
@@ -1362,10 +1362,10 @@
         <dcat:downloadURL rdf:resource="http://w3id.org/mobilitydcat-ap/releases/1.0.0/"/>
         <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/html</dcat:mediaType>
     </rdf:Description>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
@@ -1641,4 +1641,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

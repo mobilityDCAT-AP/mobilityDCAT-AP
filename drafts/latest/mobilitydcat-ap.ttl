@@ -484,7 +484,7 @@ mobilitydcatap:mobilityDataStandard a rdf:Property,
            skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Distributions."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Distribution ;
-           dcam:rangeIncludes skos:Concept .
+           dcam:rangeIncludes mobilitydcatap:MobilityDataStandard .
 		   
 ###  https://w3id.org/mobilitydcat-ap#applicationLayerProtocol
 mobilitydcatap:applicationLayerProtocol a rdf:Property,

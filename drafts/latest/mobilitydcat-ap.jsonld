@@ -1164,7 +1164,7 @@
         "@id": "dcat:Distribution"
       },
       "dcam:rangeIncludes": {
-        "@id": "skos:Concept"
+        "@id": "mobilitydcatap:MobilityDataStandard"
       }
     },
     {
