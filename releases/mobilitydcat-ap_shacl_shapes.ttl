@@ -361,6 +361,7 @@
   sh:property [
     # Mandatory property for Distribution
     sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-data-standard" ;
+	sh:Class mobilitydcatap:MobilityDataStandard  ;
 	sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:path mobilitydcatap:mobilityDataStandard ;
@@ -606,38 +607,6 @@
 # Concepts from controlled vocabularies defined and used in mobilityDCAT-AP.
 #-------------------------------------------------------------------------
 
-<https://w3id.org/mobilitydcat-ap/data-model> a skos:ConceptScheme ;
-  skos:prefLabel "Data model"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/data-content-category> a skos:ConceptScheme ;
-  skos:prefLabel "Data content category"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/update-frequency> a skos:ConceptScheme ;
-  skos:prefLabel "Update frequency"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/georeferencing-method/> a skos:ConceptScheme ;
-  skos:prefLabel "Georeferencing method"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/network-coverage> a skos:ConceptScheme ;
-  skos:prefLabel "Network coverage"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/transport-mode> a skos:ConceptScheme ;
-  skos:prefLabel "Transport mode"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/service-category> a skos:ConceptScheme ;
-  skos:prefLabel "Service category"@en ;
-.
-
-<https://w3id.org/mobilitydcat-ap/grammar> a skos:ConceptScheme ;
-  skos:prefLabel "Grammar"@en ;
-.
-
 <https://w3id.org/mobilitydcat-ap/application-layer-protocol> a skos:ConceptScheme ;
   skos:prefLabel "Application layer protocol"@en ;
 .
@@ -650,9 +619,38 @@
   skos:prefLabel "Conditions for access and usage"@en ;
 .
 
+<https://w3id.org/mobilitydcat-ap/mobility-theme> a skos:ConceptScheme ;
+  skos:prefLabel "Mobility Theme"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/mobility-data-standard> a skos:ConceptScheme ;
+  skos:prefLabel "Mobility Data Standard"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/georeferencing-method> a skos:ConceptScheme ;
+  skos:prefLabel "Georeferencing Method"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/grammar> a skos:ConceptScheme ;
+  skos:prefLabel "Grammar"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/network-coverage> a skos:ConceptScheme ;
+  skos:prefLabel "Network coverage"@en ;
+.
+
 <https://w3id.org/mobilitydcat-ap/intended-information-service> a skos:ConceptScheme ;
   skos:prefLabel "Intended Information Service"@en ;
  . 
+
+<https://w3id.org/mobilitydcat-ap/transport-mode> a skos:ConceptScheme ;
+  skos:prefLabel "Transport mode"@en ;
+.
+
+<https://w3id.org/mobilitydcat-ap/update-frequency> a skos:ConceptScheme ;
+  skos:prefLabel "Update frequency"@en ;
+.
+
 
 #-------------------------------------------------------------------------
 # Concepts from additional controlled vocabularies used in mobilityDCAT-AP.
