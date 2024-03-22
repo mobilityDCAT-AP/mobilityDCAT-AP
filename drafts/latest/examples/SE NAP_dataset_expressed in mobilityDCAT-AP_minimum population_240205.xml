@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is a RDF example file for a NAP dateset according to the mobilityDCAT-AP v1.0 specification.
+It is fullfilling all mandatory and some recommended and optional elements from mobilityDCAT-AP.
+
+This example is based on a real-life NAP dataset from the Swedish NAP.
+The Swedish NAP already allows RDF/XML representations of its metadata records.
+The real-life NAP dataset can be assessed here:
+Human-readable HTML version:
+https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits
+Machine-readable RDF/XML version:
+https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits.xml
+
+Comments regarding the original RDF/XML representation are marked as follows:
+OK = this element can remain from the original
+PROPOSAL = this element can remain from the original; however, a proposal is given following the usage notes of mobilityDCAT-AP
+MODIFIED = changed element
+ADDED = new element
+-->
+<!-- -->
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:ext="http://trafficdata.se/dcatext/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
+  xmlns:dcatap="http://data.europa.eu/r5r/"
+>
+
+    <!-- The Class "Catalog" is mandatory. It describes the concrete NAP system. Thus, the block below is added with all mandatory properties for class Catalogue.-->
+    <dcat:Catalog rdf:about="https://trafficdata.se/">
+      <dct:title xml:lang="en">Trafficdata.se </dct:title> <!-- ADDED; mandatory property for class Catalogue -->
+      <dct:description xml:lang="en">The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data. </dct:description> <!-- ADDED; mandatory property for class Catalogue -->
+      <foaf:homepage rdf:resource="https://trafficdata.se/"/> <!-- ADDED; mandatory property for class Catalogue -->
+      <dct:publisher> <!-- ADDED; mandatory property for class Catalogue -->
+        <foaf:Agent rdf:about="https://www.trafikverket.se/">
+          <foaf:name>Trafikverket</foaf:name>
+        </foaf:Agent>
+      </dct:publisher>
+      <dct:spatial> <!-- ADDED; mandatory property for class Catalogue -->
+        <dct:Location><!-- ADDED; class Location is the range of property spatial-->
+          <dct:identifier rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/><!-- ADDED; recommended property for class Location-->
+        </dct:Location>
+      </dct:spatial>
+    <dcat:dataset rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"/> <!-- ADDED; mandatory property for class Catalogue -->
+    <dcat:record rdf:resource="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"/><!-- ADDED; mandatory property for class Catalogue -->
+    </dcat:Catalog>
+
+    <!-- The Class "Catalogue Record" is mandatory. It describes the metadata entry in the NAP. Thus, the block below is added with all mandatory properties for "Catalogue Record". -->
+    <dcat:CatalogRecord rdf:about="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits">
+  		<foaf:primaryTopic rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"/> <!-- ADDED; mandatory property for class Catalogue Record-->
+  		<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:created> <!-- ADDED with arbitrary date; mandatory property for class Catalogue Record-->
+      <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:modified> <!-- ADDED with arbitrary date; mandatory property for class Catalogue Record-->
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/> <!-- ADDED; mandatory property for class Catalogue Record-->
+  	</dcat:CatalogRecord>
+
+    <dcat:Dataset rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa">
+      <dct:title>Traffic signs expressing traffic regulations and identifying dangers, Speed limits</dct:title> <!-- OK; mandatory property for class Dataset-->
+      <dct:description>Traffic signs expressing traffic regulations and identifying dangers from the Swedish Transport Administration. Datex</dct:description> <!-- OK; mandatory property for class Dataset-->
+      <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"/><!-- MODIFIED from originally <dcat:theme rdf:resource="http://trafficdata.se/definitions/category/traffic_signs_expressing_traffic_regulations_and_identifying_dangers/speed_limits"/>; mandatory property for class Dataset -->
+      <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"/> <!-- MODIFIED from originally <dcat:theme rdf:resource="http://trafficdata.se/definitions/category/traffic_signs_expressing_traffic_regulations_and_identifying_dangers/speed_limits"/>; mandatory property for class Dataset -->
+      <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/><!--MODIFIED from originally rdf:resource="http://publications.europa.eu/mdr/authority/frequency/UPDATE_CONT"; mandatory property for class Dataset -->
+      <dct:spatial> <!--MODIFIED from originally <dct:spatial rdf:resource="http://sws.geonames.org/2661886"/>; mandatory property for class Dataset-->
+        <dct:Location><!-- OK; class Location is the range of property spatial-->
+          <dct:identifier rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/><!-- OK; recommended property for class Location-->
+        </dct:Location>
+      </dct:spatial>
+      <dct:publisher> <!-- OK; mandatory property for class Dataset-->
+        <foaf:Organization rdf:about="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"> <!-- OK; class Agent is the range of property publisher; Organization is a sub-class of class Agent-->
+          <foaf:workplaceHomepage>www.trafikverket.se</foaf:workplaceHomepage> <!-- MODIFIED from originally foaf:homepage; optional property for class Agent-->
+          <foaf:name>Trafikverket</foaf:name> <!-- OK; mandatory property for class Agent-->
+          <foaf:mbox>datex@trafikverket.se</foaf:mbox> <!-- OK; mandatory property for class Agent-->
+        </foaf:Organization>
+      </dct:publisher>
+      <dcat:distribution><!-- OK; mandatory property for class Dataset-->
+        <dcat:Distribution rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"><!-- OK-->
+          <dcat:accessURL>http://www.trafikverket.se/tjanster/Oppna_data/trafikinformation-i-realtid/Trafikinformation-vag-i-realtid/Sa-har-far-du-tillgang-till-data-for-trafikinformation-i-realtid/</dcat:accessURL><!-- OK; mandatory property for class Distribution-->
+          <dct:rights><!-- ADDED; mandatory property for class Distribution-->
+            <dct:RightsStatement><!-- ADDED; class RightsStatement is the range of property rights-->
+              <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/><!-- ADDED; mandatory property for class RightsStetement -->
+            </dct:RightsStatement>
+          </dct:rights>
+          <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/><!--MODIFIED from originally <dct:format>application/xml</dct:Format>; mandatory property for class Distribution-->
+          <mobilitydcatap:mobilityDataStandard rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"/> <!-- ADDED; mandatory property for class Distribution-->
+        </dcat:Distribution>
+      </dcat:distribution>
+    </dcat:Dataset>
+</rdf:RDF>
