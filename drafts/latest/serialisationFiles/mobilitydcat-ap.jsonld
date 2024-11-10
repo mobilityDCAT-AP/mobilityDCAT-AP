@@ -1,0 +1,2688 @@
+{
+  "@context": {
+    "@base": "https://w3id.org/mobilitydcat-ap/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "cnt": "http://www.w3.org/2011/content#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "mobilitydcatap": "http://w3id.org/mobilitydcat-ap#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "voaf": "http://purl.org/vocommons/voaf#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mobilitydcatap:",
+      "@type": [
+        "voaf:Vocabulary",
+        "owl:Ontology",
+        "adms:Asset"
+      ],
+      "rdfs:label": {
+        "@value": "mobilityDCAT-AP",
+        "@language": "en"
+      },
+      "dct:abstract": {
+        "@value": "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. ",
+        "@language": "en"
+      },
+      "dct:alternative": {
+        "@value": "mobilityDCAT-AP - Version 1.0.0: A mobility extension for the DCAT application profile for data portals in Europe",
+        "@language": "en"
+      },
+      "dct:conformsTo": [
+        {
+          "@id": "dcatap:"
+        },
+        {
+          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"
+        },
+        {
+          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"
+        },
+        {
+          "@id": "https://www.w3.org/TR/vocab-dcat-2/"
+        }
+      ],
+      "dct:created": {
+        "@value": "2023-05-11",
+        "@type": "xsd:date"
+      },
+      "dct:creator": {
+        "@type": "foaf:Group",
+        "foaf:name": "NAPCORE SWG 4.4",
+        "foaf:page": {
+          "@id": "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"
+        }
+      },
+      "dct:dateCopyrighted": {
+        "@value": "2023",
+        "@type": "xsd:gYear"
+      },
+      "dct:description": {
+        "@value": "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. ",
+        "@language": "en"
+      },
+      "dct:issued": {
+        "@value": "2023-05-11",
+        "@type": "xsd:date"
+      },
+      "dct:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "dct:modified": {
+        "@value": "2023-07-24",
+        "@type": "xsd:date"
+      },
+      "dct:publisher": {
+        "@id": "https://napcore.eu/"
+      },
+      "dct:rightsHolder": {
+        "@id": "https://napcore.eu/"
+      },
+      "dct:title": {
+        "@value": "mobilityDCAT-AP",
+        "@language": "en"
+      },
+      "dct:type": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7"
+        },
+        {
+          "@id": "http://publications.europa.eu/resource/authority/dataset-type/APROF"
+        },
+        {
+          "@id": "http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"
+        }
+      ],
+      "bibo:editor": [
+        {
+          "@type": "foaf:Person",
+          "foaf:name": "Lina Molinas Comet"
+        },
+        {
+          "@id": "https://lina-molinas-comet.name/foaf/#me"
+        }
+      ],
+      "vann:preferredNamespacePrefix": "mobilitydcatap",
+      "vann:preferredNamespaceUri": {
+        "@value": "http://w3id.org/mobilitydcat-ap/",
+        "@type": "xsd:anyURI"
+      },
+      "voaf:reliesOn": [
+        {
+          "@id": "dcatap:"
+        },
+        {
+          "@id": "dct:"
+        },
+        {
+          "@id": "spdx:"
+        },
+        {
+          "@id": "rdfs:"
+        },
+        {
+          "@id": "owl:"
+        },
+        {
+          "@id": "skos:"
+        },
+        {
+          "@id": "vcard:"
+        },
+        {
+          "@id": "cnt:"
+        },
+        {
+          "@id": "adms:"
+        },
+        {
+          "@id": "dcat:"
+        },
+        {
+          "@id": "dqv:"
+        },
+        {
+          "@id": "locn:"
+        },
+        {
+          "@id": "org:"
+        },
+        {
+          "@id": "prov:"
+        },
+        {
+          "@id": "foaf:"
+        }
+      ],
+      "rdfs:comment": {
+        "@value": "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. ",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://w3id.org/mobilityDCAT-AP/releases/1.0.0/"
+      },
+      "owl:backwardCompatibleWith": {
+        "@id": "http://w3id.org/mobilityDCAT-AP/releases/1.0.0/"
+      },
+      "owl:priorVersion": {
+        "@id": "http://w3id.org/mobilityDCAT-AP/releases/1.0.0/"
+      },
+      "owl:versionIRI": {
+        "@id": "http://w3id.org/mobilityDCAT-AP/releases/1.0.0/"
+      },
+      "owl:versionInfo": {
+        "@value": "Version 1.0.0",
+        "@language": "en"
+      },
+      "skos:altLabel": {
+        "@value": "mobilityDCAT-AP - Version 1.0.0: A mobility extension for the DCAT application profile for data portals in Europe",
+        "@language": "en"
+      },
+      "adms:last": {
+        "@id": "mobilitydcatap:"
+      },
+      "adms:prev": {
+        "@id": "http://w3id.org/mobilitydcat-ap/releases/1.0.0/"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"
+      },
+      "adms:versionNotes": {
+        "@value": "This version of mobilityDCAT-AP extends [DCAT-AP-v2.0.1] with 2 additional classes and 48 additional properties (some of which re-used across classes).",
+        "@language": "en"
+      },
+      "dcat:distribution": [
+        {
+          "@type": "adms:AssetDistribution",
+          "dct:format": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
+            },
+            {
+              "@id": "http://www.w3.org/ns/formats/data/JSON-LD"
+            }
+          ],
+          "dct:title": {
+            "@value": "JSON-LD",
+            "@language": "en"
+          },
+          "adms:representationTechnique": [
+            {
+              "@id": "http://purl.org/adms/representationtechnique/OWL"
+            },
+            {
+              "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
+            }
+          ],
+          "dcat:downloadURL": {
+            "@id": "http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.jsonld"
+          },
+          "dcat:mediaType": {
+            "@id": "https://www.iana.org/assignments/media-types/application/ld+json"
+          }
+        },
+        {
+          "@type": "adms:AssetDistribution",
+          "dct:format": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+            },
+            {
+              "@id": "http://www.w3.org/ns/formats/data/Turtle"
+            }
+          ],
+          "dct:title": {
+            "@value": "Turtle",
+            "@language": "en"
+          },
+          "adms:representationTechnique": [
+            {
+              "@id": "http://purl.org/adms/representationtechnique/OWL"
+            },
+            {
+              "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
+            }
+          ],
+          "dcat:downloadURL": {
+            "@id": "http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.ttl"
+          },
+          "dcat:mediaType": {
+            "@id": "https://www.iana.org/assignments/media-types/text/turtle"
+          }
+        },
+        {
+          "@type": "adms:AssetDistribution",
+          "dct:format": [
+            {
+              "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
+            },
+            {
+              "@id": "http://www.w3.org/ns/formats/data/RDF_XML"
+            }
+          ],
+          "dct:title": {
+            "@value": "RDF/XML",
+            "@language": "en"
+          },
+          "adms:representationTechnique": [
+            {
+              "@id": "http://purl.org/adms/representationtechnique/OWL"
+            },
+            {
+              "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
+            }
+          ],
+          "dcat:downloadURL": {
+            "@id": "http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.rdf"
+          },
+          "dcat:mediaType": {
+            "@id": "https://www.iana.org/assignments/media-types/application/rdf+xml"
+          }
+        },
+        {
+          "@type": "adms:AssetDistribution",
+          "dct:format": {
+            "@id": "http://publications.europa.eu/resource/authority/file-type/HTML"
+          },
+          "dct:title": {
+            "@value": "HTML",
+            "@language": "en"
+          },
+          "adms:representationTechnique": {
+            "@id": "http://purl.org/adms/representationtechnique/HumanLanguage"
+          },
+          "dcat:downloadURL": {
+            "@id": "http://w3id.org/mobilitydcat-ap/releases/1.0.0/"
+          },
+          "dcat:mediaType": {
+            "@value": "text/html",
+            "@type": "dct:IMT"
+          }
+        }
+      ],
+      "foaf:depiction": {
+        "@id": "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/mobilityDCAT-AP_uml-diagramm_230719.png"
+      }
+    },
+    {
+      "@id": "dct:abstract",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:alternative",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:conformsTo",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:contributor",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:created",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:creator",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:dateCopyrighted",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:description",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:issued",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:license",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:modified",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:publisher",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:rightsHolder",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:title",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "dct:type",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "vann:preferredNamespacePrefix",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "vann:preferredNamespaceUri",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "rdfs:label",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "owl:backwardCompatibleWith",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "skos:altLabel",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "prov:component",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "foaf:depiction",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "foaf:name",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "adms:versionNotes",
+      "rdf:type": {
+        "@id": "owl:AnnotationProperty"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:MobilityDataStandard",
+      "rdf:type": {
+        "@id": "owl:Class"
+      },
+      "rdfs:subClassOf": {
+        "@id": "dct:Standard"
+      },
+      "rdfs:comment": {
+        "@value": "The mobility data standard applied for the delivered content. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. This is a sub-class of dct:Standard.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "Mobility Data Standard",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a mandatory class.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      }
+    },
+    {
+      "@id": "locn:Address",
+      "rdf:type": {
+        "@id": "owl:Class"
+      },
+      "rdfs:comment": {
+        "@value": "A postal address of the Agent.A postal address of the Agent. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "Address (Agent)",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional class.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:Assessment",
+      "rdf:type": {
+        "@id": "owl:Class"
+      },
+      "rdfs:comment": {
+        "@value": "An assessment procedure by an external organisation. This organisation MAY be a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance with the applicable Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [NAPCORE-NB] and installed individually in each Member State. The information is optional and needed for the documentation of the assessment procedure. It MAY be an internal information, only visible for assessment organisations or other authorised users.  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "Assessment",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional class.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      }
+    },
+    {
+      "@id": "dqv:QualityAnnotation",
+      "rdf:type": {
+        "@id": "owl:Class"
+      },
+      "rdfs:comment": {
+        "@value": "An annotation about any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Data Owner. There is a similar class  “Quality Measurement” in [GEODCAT-AP-v2.0.0]. Both  “Quality Annotation” are  “Quality Measurement” are reusing the Data Quality Vocabulary [VOCAB-DQV]. Quality Measurement is referring to concrete metrics, like sub-types of spatial resolutions being used [GEODCAT-AP-v2.0.0]. At mobility data portals, however, the practice so far is to provide some free text about quality aspects. Thus, the Quality Annotation refers to an unspecified form of quality annotation, which MAY be a free text. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "Quality Annotation",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional class.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      }
+    },
+    {
+      "@id": "locn:address",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to specify the postal address of the Agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "address",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "locn:Address"
+      }
+    },
+    {
+      "@id": "org:memberOf",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "If the agent is of type person, this property SHOULD be used to specify the affiliation of the Agent, see § 7. Agent Types, Agent Roles and Contact Information. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "affiliation",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "org:Organization"
+      }
+    },
+    {
+      "@id": "foaf:mbox",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]. The email SHOULD be used to establish a communication channel to the agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "email",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a mandatory property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "foaf:phone",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to provide the phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "phone",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "foaf:workplaceHomepage",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to specify the Web site of the Agent.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "URL",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Resource"
+      }
+    },
+    {
+      "@id": "oa:hasBody",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "assessment result",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Assessment. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "mobilitydcatap:Assessment"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Resource"
+      }
+    },
+    {
+      "@id": "adms:identifier",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "other identifier",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Catalogue. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Catalog"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "adms:Identifier"
+      }
+    },
+    {
+      "@id": "dct:publisher",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property “Publisher” of the corresponding dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "publisher",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:CatalogRecord"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "foaf:Agent"
+      }
+    },
+    {
+      "@id": "skos:inScheme",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to specify the Category Scheme to which the Category belongs. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "category scheme",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for  Category.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "skos:Concept"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:ConceptScheme"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:mobilityTheme",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "dcat:theme"
+      },
+      "rdfs:comment": {
+        "@value": "This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content. The theme is described via a controlled vocabulary in two hierarchy levels: The 1st level is a mandatory field labelled “Data content category, describing the classification of the data content on an aggregated level. The 2nd level is an optional field labelled “Data content sub category”, detailing the “Data content category” via one or several sub-categories. When entering the metadata for one dataset, the data provider would first select one or several options of a “Data content category”, and then optionally details this with one or more options of corresponding “Data content sub category”. The platform must be able to handle the dependencies between these two levels, i.e., match the allowed options between the 1st and 2nd level. The corresponding controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This property is a sub-property of dcat:theme, which is also a further, recommended property of Dataset. To distinguish the both theme properties, it is recommended to label mobilitydcatap:mobilityTheme as “Mobility Theme”, and dcat:theme as “EU Open Data Theme”. The subject of a dataset MAY also be described via a property dcat:keyword. However, the usage of “theme / category” is preferred, to avoid ambiguity and uncontrolled theme descriptions.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "mobility theme",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a mandatory property to be used for  Dataset.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:georeferencingMethod",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property SHOULD be used to specify the georeferencing method used in the dataset. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided, denoting commonly used georeferencing methods for mobility data.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "georeferencing method",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "dct:conformsTo",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property SHOULD be used to specify the spatial reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by OGC [OGC-EPSG]. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "reference system",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Dataset. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "dct:Standard"
+      }
+    },
+    {
+      "@id": "dct:rightsHolder",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property dqv:hasQualityAnnotation) and/or the relevance to legal frameworks (if applicable, see property dcatap:applicableLegislation). This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset. The Rights Holder will be in many cases identical with the Publisher information for class Dataset (see property dct:publisher) and/or for class Catalogue Record (see property dct:publisher). In this case, the contact data MAY be copied from the corresponding Publisher entries. There might be also cases with non-identical entities: e.g., when one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "rights holder",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Dataset. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "foaf:Agent"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:networkCoverage",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed. For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. For all modes, the property SHOULD also indicate if the data content relates to the EU’s trans-European transport network [EU-TEN-T]. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided, denoting commonly used road and infrastructure network classes.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "network coverage",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:transportMode",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property describes the transport mode that is covered by the delivered content. Data can be valid for more than one mode, so a multiple choice should be applied. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided, denoting commonly used transport modes.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "transportation mode",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "dcatap:applicableLegislation",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY refer to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations. For European legal frameworks, it is recommended to use the European Legislation Identifier [ELI] to refer to legislation whenever possible. This property is derived from the DCAT-AP HVD extension [DCAT-AP-HVD].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "applicable legislation",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:assessmentResult",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY refer to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [NAPCORE-NB] and installed individually in each Member State. The property MAY point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online. The difference to the property dqv:hasQualityAnnotation is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "assessment result",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "mobilitydcatap:Assessment"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:intendedInformationService",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY describe predefined information services, which the data content is intended to support. Such services MAY be, e.g., information services for multimodal mobility, as specified by EC Delegated Regulation 2017/1926 [EC-MMTIS-DR]. Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets about a road network. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "intended information service",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "dqv:hasQualityAnnotation",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY describe any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Rights Holder (see property dct:rightsHolder). This information SHOULD assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information SHOULD be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations. Quality aspects SHOULD be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” SHOULD be given. If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects [EU-EIP-QP], these frameworks should be referenced.  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "quality description",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Datasets.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Dataset"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "dqv:QualityAnnotation"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:mobilityDataStandard",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "dct:format"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided, listing common mobility data standards. If no established mobility data standard is applied, an information “proprietary standard” is requested. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "mobility data standard",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a mandatory property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "mobilitydcatap:MobilityDataStandard"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:applicationLayerProtocol",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property describes the transmitting channel, i.e., the Application Layer Protocol, of the distribution. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "application layer protocol",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this property is recommended to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:communicationMethod",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "communication method",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:grammar",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "dct:conformsTo"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the technical data grammar format of the delivered content within the Distribution. It describes the standard on top of the elementary syntax that describe data structures in the dataset. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This is a sub-property of dct:conformsTo.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "grammar",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "adms:sample",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. In [DCAT-AP-v2.0.1], there is a property adms:sample under the class dcat:Dataset , with a range of dcat:Distribution. This implies, that all mandatory properties from dcat:Distribution, e.g., mobilitydcatap:mobilityDataStandard, must be applied. To simplify the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class dcat:Distribution. It is assumed that all other properties, as already populated for dcat:Distribution, e.g., mobilitydcatap:mobilityDataStandard, also apply for the description of the data sample.  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "sample",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Resource"
+      }
+    },
+    {
+      "@id": "dct:temporal",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property describes the beginning and end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform. If there is no entry it means that the publication gets valid immediately and the timestamp is the same as the metadata timestamp.  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "temporal coverage",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "dct:PeriodOfTime"
+      }
+    },
+    {
+      "@id": "vcard:hasEmail",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property contains an email address of the Kind, specified using fully qualified mailto: URI scheme [RFC6068]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "email",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Kind.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "vcard:Kind"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "vcard:hasURL",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property points to a Web site of the Kind. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "URL",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Kind.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "vcard:Kind"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "vcard:hasAddress",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to specify the postal address of the Kind. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "address",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Kind.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "vcard:Kind"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "vcard:Address"
+      }
+    },
+    {
+      "@id": "vcard:hasTelephone",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to provide the phone number of the Kind, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "phone",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Kind.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "vcard:Kind"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "owl:Thing"
+      }
+    },
+    {
+      "@id": "dct:identifier",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be be used to link to a concrete standard license. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided.  ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "standard licence",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Licence Document ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:LicenseDocument"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "skos:inScheme",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to specify the gazetteer to which the Location belongs. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "gazetteer",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for  Location.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:Location"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:ConceptScheme"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:schema",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:subPropertyOf": {
+        "@id": "dct:conformsTo"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the schema of the mobility data standard, as applied within the delivered content. There are differet optiions how to reference the schema. It might be a reference to a portal-internal catalogue of schemas, a reference to an individual schema (that is provided by the data publisher), or a reference to an external catalogue of schemas (like a stakeholder-based DATEX II profile published on the datex2.eu page). The data platform SHOULD keep an archive of commonly used schemas. The data provider SHOULD be able to select an applicable schema from this archive, or to upload an own, individual schema. In any case, the schema should be available as a resource. This is a sub-property of dct:conformsTo.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "schema",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "mobilitydcatap:MobilityDataStandard"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Resource"
+      }
+    },
+    {
+      "@id": "oa:hasTarget",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property MAY be used to describe the target of the quality annotation, referring back to the dataset being described. I.e., it is the inverse property of “dqv:hasQualityAnnotation” for class Dataset.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "quality annotation target",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dqv:QualityAnnotation"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "dcat:Dataset"
+      }
+    },
+    {
+      "@id": "dct:type",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@value": "This property SHOULD be used to indicate the conditions if any contracts, licences and/or are applied for the use of the dataset. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The values can be logically mapped with the property dct:identifier from class dct:LicenseDocument. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "conditions for access and usage",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a mandatory property to be used for Rights Statement.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:RightsStatement"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "locn:adminUnitL2",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "administrative area",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "locn:postName",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "The city of an Address of the Agent.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "city",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "locn:adminUnitL1",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "The country of an Address of the Agent.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "country",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "locn:postCode",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "The postal code of an Address of the Agent.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "postal code",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "locn:thoroughfare",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "The street name and civic number of an Address of the Agent.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "street address",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "dct:issued",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property MAY be used to describe the date of the latest assessment procedure.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "assessment date",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Assessment. Its range is rdfs:Literal typed as xsd:date or xsd:dateTime. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "mobilitydcatap:Assessment"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "foaf:firstName",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "If the agent is of type person, this property SHOULD be used to specify the first name of the Agent, see section § 7. Agent Types, Agent Roles and Contact Information.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "first name",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "foaf:surname",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "If the agent is of type person, this property SHOULD be used to specify the surname of the Agent, see section 7.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "surname",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Agent",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "locn:Address"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "dct:identifier",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals. This property SHOULD populated by the URI used within the RDF statement (via rdf:about). This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "identifier",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Catalogue. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Catalog"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "dct:created",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property contains the date stamp (date and time) when the metadata entry was created for the first time. It SHOULD be generated by the system, whenever a platform user enters the metadata entry. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "creation date",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue Record. Its range is rdfs:Literal typed as xsd:date or xsd:dateTime. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:CatalogRecord"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "mobilitydcatap:dataFormatNotes",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property contains any additional information about the format of the delivered content within the Distribution (see the corresponding properties dct:format, mobilitydcatap:mobilityDataStandard, mobilitydcatap:grammar), in a textual format. This might be about, e.g., extensions being used in a mobilitydcatap:mobilityDataStandard. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "data format notes",
+        "@language": "en"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "mobilitydcatap:"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "cnt:characterEncoding",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the technical encoding format of the delivered content within the Distribution. It is described via a character set standard. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. This is a sub-property of dct:conformsTo ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "character encoding",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Distributions.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:Distribution"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "vcard:fn",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property contains a name of the Kind. This property can be repeated for different versions of the name (e.g., the name in different languages) - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "name",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Kind.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "vcard:Kind"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "vcard:organization-name",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property MAY be used to specify the affiliation of the Kind. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. ",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "affiliation",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Kind.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "vcard:Kind"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "rdfs:label",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property MAY be used to contain the full text of a Licence Document, as a free text. This MAY be used when there is no standard license that can be linked via property dct:identifier. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "licence text",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Licence Document.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:LicenseDocument"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "dct:identifier",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "geographic identifier",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Location.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:Location"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "skos:prefLabel",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property contains a preferred label of the Location. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "geographic name",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Location.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:Location"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "owl:versionInfo",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2. This information is provided in a textual format. To avoid ambiguity, only short version identifiers SHOULD be used, e.g., only  “3.2”, without redundant acronyms such as “v”, underscores etc.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "version",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "mobilitydcatap:mobilityDataStandard"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "oa:hasBody",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property MAY be used to describe any quality aspects regarding the delivered content, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "quality annotation resource",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dqv:QualityAnnotation"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "rdfs:label",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property MAY describes in a textual form any additional access, usage or licensing information, besides other information under classes dct:RightsStatement and dct:LicenseDocument. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "Additional information for access and usage",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is a recommended property to be used for Rights Statement",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dct:RightsStatement"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "rdfs:Literal"
+      }
+    },
+    {
+      "@id": "http://data.europa.eu/r5r/",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      }
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      }
+    },
+    {
+      "@id": "https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      }
+    },
+    {
+      "@id": "https://github.com/lcomet",
+      "rdf:type": [
+        {
+          "@id": "owl:NamedIndividual"
+        },
+        {
+          "@id": "foaf:Person"
+        }
+      ],
+      "foaf:name": "Lina Molinas Comet"
+    },
+    {
+      "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      }
+    },
+    {
+      "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      }
+    },
+    {
+      "@id": "https://w3id.org/mobilitydcatap/",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      },
+      "dct:conformsTo": [
+        {
+          "@id": "http://data.europa.eu/r5r/"
+        },
+        {
+          "@id": "https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24"
+        },
+        {
+          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"
+        },
+        {
+          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"
+        },
+        {
+          "@id": "https://www.w3.org/TR/vocab-dcat-2/"
+        }
+      ],
+      "dct:publisher": {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body/COM"
+      }
+    },
+    {
+      "@id": "https://www.w3.org/TR/vocab-dcat-2/",
+      "rdf:type": {
+        "@id": "owl:NamedIndividual"
+      }
+    },
+    {
+      "@id": "dct:LicenseDocument",
+      "skos:scopeNote": {
+        "@value": "A legal document giving official permission to do something with a resource. The ''dct:identifier'' recommended property is not included in [DCAT-AP-v2.0.1]. The licence type recommended property is removed from [DCAT-AP-v2.0.1]. The ''rdfs:label'' optional property is not included in [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:Location",
+      "skos:scopeNote": {
+        "@value": "A spatial region or named place. It can be represented via a named place (controlled vocabulary) or with geographic coordinates, according to DCAT-AP guidelines [DCAT-AP-guideline-spatial]. For mobility data portals, usage of a named place is preferred. Many mobility data providers represent public authorities such as states, regions, municipalities etc., which can be easily represented via named places. In contrast, defining of coordinates per data set might be error-prone and inconsistent. As named spaces, identifiers SHOULD be used (via property ''dct:identifier''). These are coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames, see § 5.2 Controlled vocabularies to be used. Alternatively, geographic clear names MAY be used via property ''skos:prefLabel''. The ''skos:inScheme'' and ''dct:identifier'' recommended properties are not included in [DCAT-AP-v2.0.1]. The ''skos:prefLabel'' optional property is not included in [DCAT-AP-v2.0.1]. Please note that the order of usage is as follows: use the most specific geospatial relationship by preference. E.g. if the spatial description is a bbox, use ''dcat:bbox'', otherwise use ''locn:geometry'' (see § 4.16.2 Optional properties for Location).",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:MediaType",
+      "skos:scopeNote": {
+        "@value": " A media type, e.g. the format of a computer file. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the optional properties ''dcat:compressFormat'', ''dcat:mediaType'', and ''dcat:packageFormat'' for class Distribution. In mobilityDCAT-AP, however, these properties are removed. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1]",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:PeriodOfTime",
+      "skos:scopeNote": {
+        "@value": "An interval of time that is named or defined by its start and end dates. Please note that while both properties are recommended, one of the two must be present for each instance of the class ''dct:PeriodOfTime'', if such an instance is present. The start of the period should be understood as the start of the date, hour, minute etc. given (e.g. starting at midnight at the beginning of the day if the value is a date); the end of the period should be understood as the end of the date, hour, minute etc. given (e.g. ending at midnight at the end of the day if the value is a date). The beginning and end properties are removed from [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:ProvenanceStatement",
+      "skos:scopeNote": {
+        "@value": "A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the optional property ''dct:provenance'' for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:RightsStatement",
+      "skos:scopeNote": {
+        "@value": "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights. As a minimum, it should include an information on the type of conditions for access and usage. Information about concrete licenses can be provided via class License Document. The ''dct:type'' mandatory property is not included in [DCAT-AP-v2.0.1]. The ''rdfs:label'' recommended property is not included in [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:Standard",
+      "skos:scopeNote": {
+        "@value": "A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or Distribution conforms.. This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is used as the range of property ''dct:conformsTo'' for class Catalogue Record (context ''application profile''); for class Dataset (context' 'conforms to''); and for class Distribution (context ''linked schemas''). In mobilityDCAT-AP, these properties are removed. However, mobilityDCAT-AP uses this class as the range of an added property ''dct:conformsTo'' for class Dataset in a different context ''reference system'', analogue to a property addition by [GEODCAT-AP-v2.0.0]. [GEODCAT-AP-v2.0.0] adds several properties to the class Standard. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [GEODCAT-AP-v2.0.0], MAY be used.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:accessRights",
+      "skos:scopeNote": {
+        "@value": "This property MAY include information regarding access or restrictions based on privacy, security, or other policies. For INSPIRE metadata, this property SHOULD be used with the URIs of the ''Limitations on public access'' code list operated by the INSPIRE Registry [INSPIRE-LPA].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:accrualPeriodicity",
+      "skos:scopeNote": {
+        "@value": "This property describes how often the delivered content is updated. This information tells a data consumer, how often it is updated on the on the data platform, so the data consumer might align the frequency of data retrieval accordingly. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static data sets, it should correspond to the expected change frequency (see property dct:modified). The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:description",
+      "skos:scopeNote": {
+        "@value": "This property contains a free-text, individual name of the mobility data platform itself. This property MAY be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:format",
+      "skos:scopeNote": {
+        "@value": "This property refers to the technical syntax of the delivered content within the Distribution. It describes the base standard that specifies syntactically correct documents. On this level, only base elements of building documents properly are specified and can be proved by syntax checks. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1]. There is a similar property in [DCAT-AP-v2.0.1] dcat:mediaType, which is removed in mobilityDCAT-AP. There reason is the use of Controlled vocabularies: dct:format uses the EU Authority List [EUV-FT], whereas dcat:mediaType uses the IANA media types [IANA-MEDIA-TYPES]. The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals. ",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:hasPart",
+      "skos:scopeNote": {
+        "@value": "This property refers to a related Catalogue that is part of the described mobility data portal. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal. ",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:hasVersion",
+      "skos:scopeNote": {
+        "@value": "This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to the property ''dct:isVersionOf'', with a contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties ''owl:versionInfo'' and ''adms:versionNotes''.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:isPartOf",
+      "skos:scopeNote": {
+        "@value": "This property refers to a related Catalogue in which the described mobility data portal is physically or logically included. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from the mobility data portal into this other portal. ",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:isReferencedBy",
+      "skos:scopeNote": {
+        "@value": "This property references, cites, or otherwise points to another, related dataset. Corresponds to the property dct:relation, with a contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:isVersionOf",
+      "skos:scopeNote": {
+        "@value": "This property refers to a related dataset of which the described dataset is a version, edition, or adaptation. Corresponds to property dct:hasVersion with contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties owl:versionInfo and adms:versionNotes.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:issued",
+      "skos:scopeNote": {
+        "@value": "This property contains the date of formal issuance (e.g., publication) of the Catalogue.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:language",
+      "skos:scopeNote": {
+        "@value": "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the metadata entry. The value should be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see § 8. Accessibility and Multilingual Aspects. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:license",
+      "skos:scopeNote": {
+        "@value": "This property contains the licence under which the Data Service is made available.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:modified",
+      "skos:scopeNote": {
+        "@value": "This property contains the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:relation",
+      "skos:scopeNote": {
+        "@value": "This property references, cites, or otherwise points to another, related dataset. Corresponds to the property dct:isReferencedBy, with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.\t",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:rights",
+      "skos:scopeNote": {
+        "@value": "This property links to a Rights Statement, i.e., a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage. A concrete (standard) license can be referred via the recommended property dct:license. The obligation of this property is raised to “mandatory”, compared to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:spatial",
+      "skos:scopeNote": {
+        "@value": "This property refers to a country code where the data platform is hosted. For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available data sets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property dct:spatial, which might be different. The obligation of this property is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:temporal",
+      "skos:scopeNote": {
+        "@value": "This property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:title",
+      "skos:scopeNote": {
+        "@value": "This property contains a name given to the mobility data portal, a name of the Category Scheme, a name given to the Data Service, a name given to the Dataset in a generic term. The name should be a meaningful, unique and unambiguous label. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. The language versions should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dct:type",
+      "skos:scopeNote": {
+        "@value": "This property refers to a type of the Agent that makes the Catalogue, Catalogue Record, Data Service, or Dataset available",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "spdx:Checksum",
+      "skos:scopeNote": {
+        "@value": "A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented. In [DCAT-AP-v2.0.1], this class is defined as the range for the optional property ''spdx:checksum'' of class Distribution. However, in mobilityDCAT-AP, this property is removed. So, the class and its properties are without function but kept for compatibility reasons.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "spdx:algorithm",
+      "skos:scopeNote": {
+        "@value": "This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "spdx:checksumValue",
+      "skos:scopeNote": {
+        "@value": "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "owl:versionInfo",
+      "skos:scopeNote": {
+        "@value": "This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property dct:modified. Together with property adms:versionNotes, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow W3C Data on the Web Best Practices [DWBP]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [SEMVER].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "skos:Concept",
+      "skos:scopeNote": {
+        "@value": "A category of a dataset, i.e. a specific subject, theme, or a class about its content. The category is described via a categorisation scheme, i.e. a classification or a taxonomy. Such scheme lists all potential categories, see class ''Category Scheme''. In mobilityDCAT-AP, this class SHOULD only be used in the context of a data set (via property ''dcat:theme''). In other contexts, e.g. under [geoDCAT-AP-v2.0.0], this might also be used to describe the theme of a Catalogue or Data Service.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "skos:ConceptScheme",
+      "skos:scopeNote": {
+        "@value": "A categorisation scheme, i.e. a classification or a taxonomy, listing all potential categories which might be used for instances of class Category. In mobilityDCAT-AP, this scheme is expressed via a controlled vocabulary for the property ''dcat:theme'' of class Dataset.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "skos:notation",
+      "skos:scopeNote": {
+        "@value": "This property contains a string that is an identifier in the context of the identifier scheme referenced by its data type.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "skos:prefLabel",
+      "skos:scopeNote": {
+        "@value": "This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "vcard:Kind",
+      "skos:scopeNote": {
+        "@value": "A description following the [VCARD-RDF] specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class vcard:Kind is the parent class for the four explicit types of vCards (vcard:Individual, vcard:Organization, vcard:Location, vcard:Group). This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the recommended property ''dcat:contactPoint'' for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see § 7. Agent Types, Agent Roles and Agent Properties. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "adms:versionNotes",
+      "skos:scopeNote": {
+        "@value": "This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property owl:versionInfo. This property can be repeated for parallel language versions of the version notes - see § 8. Accessibility and Multilingual Aspects.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:Catalog",
+      "skos:scopeNote": {
+        "@value": "A concrete mobility data portal, i.e, a web portal, where mobility-related datasets and their distributions are described via metadata and discoverable for data users.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:CatalogRecord",
+      "skos:scopeNote": {
+        "@value": "A description of a metadata entry in the mobility data portal, referring to one data set and its distributions published on the portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this class is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:DataService",
+      "skos:scopeNote": {
+        "@value": "A collection of operations that provides access to one or more datasets or data processing functions.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:Dataset",
+      "skos:scopeNote": {
+        "@value": "A dataset is a collection of data, published or curated by a single source, and available for access or download at the mobility data portal in one or more distributions. In the context of mobility-related data exchange, this might be, e.g., a data collection about static parking information for truck drivers, published by a road authority.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:Distribution",
+      "skos:scopeNote": {
+        "@value": "A distribution describes the data formats and communication methods for a dataset. There may be one or multiple distributions for one dataset. For example, the same data set (e.g. static parking information for truck drivers) can be provided in different ways e.g. as downloadable zip file or as XML using a SOAP web service. These are two distributions based on one data set. In [DCAT-AP-v2.0.1], this class has been classified as ‘Recommended’, to allow for cases that a particular Dataset does not have a Distribution, i.e. . However, for the context of mobility data portals, it can be expected that all datasets have one or more Distributions. Thus, the obligation of class Distribution is raised to mandatory, comparing to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:Relationship",
+      "skos:scopeNote": {
+        "@value": "An association class for attaching additional information to a relationship between DCAT Resources",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:accessService",
+      "skos:scopeNote": {
+        "@value": "This property refers to a Data Service that gives access to the Distribution of the Dataset.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:accessURL",
+      "skos:scopeNote": {
+        "@value": "This property contains a URL that gives access to a Distribution of the Dataset. Depending on the type of data provision, there are different options for describing the URL. For data services, e.g., API, broker services, data feeds, etc., the URL MAY be the end point of such service. However, if some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process. For data which can be downloaded directly, the download URL should be copied from the optional property dcat:downloadURL. For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL MAY be a link to an external service or a website which enables access to the data. This way, this property is the primary key to link to a data service. There is also specific class dcat:DataService, which can be linked via property dcat:accessService. See § 4.9 Data Service for a usage note about the class Data Service.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:bbox",
+      "skos:scopeNote": {
+        "@value": "This property refers to the geographic bounding box of a resource.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:centroid",
+      "skos:scopeNote": {
+        "@value": "This property refers to the geographic centre (centroid) of a resource.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:dataset",
+      "skos:scopeNote": {
+        "@value": "This property links the mobility data portal with a data set that is described at the mobility data portal. This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets SHOULD be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is also mandatory to use the property dcat:record.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:downloadURL",
+      "skos:scopeNote": {
+        "@value": "This property contains a URL that is a direct link to a downloadable file in a given format.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:endDate",
+      "skos:scopeNote": {
+        "@value": "This property contains the end of the Period of Time.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:endpointDescription",
+      "skos:scopeNote": {
+        "@value": "This property contains a description of the Data Services available via the endpoints, including their operations, parameters etc. The property gives specific details of the actual endpoint instances, while dct:conformsTo is used to indicate the general standard or specification that the endpoints implement.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:endpointURL",
+      "skos:scopeNote": {
+        "@value": "The root location or primary endpoint of the Service (an IRI).",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:hadRole",
+      "skos:scopeNote": {
+        "@value": "This property refers to the function of an entity or agent with respect to another entity or resource.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:keyword",
+      "skos:scopeNote": {
+        "@value": "This property contains a keyword or tag describing the Dataset. For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependent and make data search difficult. Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular dcat:theme, mobilitydcatap:networkCoverage and mobilitydcatap:transportMode. If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of ''mobilityDCAT-AP'', in order to update the Controlled Vocabularies.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:packageFormat",
+      "skos:scopeNote": {
+        "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:qualifiedRelation",
+      "skos:scopeNote": {
+        "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:record",
+      "skos:scopeNote": {
+        "@value": "This property refers to a metadata record that is part of the mobility data portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:servesDataset",
+      "skos:scopeNote": {
+        "@value": "This property refers to a Dataset that this Data Service can distribute.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:startDate",
+      "skos:scopeNote": {
+        "@value": "This property contains the start of the Period of Time.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:temporalResolution",
+      "skos:scopeNote": {
+        "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:theme",
+      "skos:scopeNote": {
+        "@value": "The values to be used for this property are the URIs of the concepts in the vocabulary. This is a vocabulary created by mobilityDCAT-AP. There are two hierarchical levels: ''Data content category'' (mandatory) and ''Data content sub-category'' (optional), see the usage note for property ''dcat:theme''.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "dcat:themeTaxonomy",
+      "skos:scopeNote": {
+        "@value": "The value to be used for this property is the URI of the vocabulary itself, i.e. the concept scheme, not the URIs of the concepts in the vocabulary.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "locn:geometry",
+      "skos:scopeNote": {
+        "@value": "This property associates any resource with the corresponding geometry.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "foaf:Agent",
+      "skos:scopeNote": {
+        "@value": "An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, or Datasets. If the Agent is an organisation, the use of the Organization Ontology [VOCAB-ORG] is recommended. See § 7. Agent Types, Agent Roles and Agent Properties for a discussion on Agent types, roles and properties. The ''foaf:mbox'' mandatory property is not included in [DCAT-AP-v2.0.1]. The ''foaf:workplaceHomepage'' recommended property is not included in [DCAT-AP-v2.0.1], The ''locn:address'', ''org:memberOf'', ''foaf:firstName'', ''foaf:phone'', ''foaf:surname'' optional properties are not included in [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "foaf:Document",
+      "skos:scopeNote": {
+        "@value": "A textual resource intended for human consumption that contains information, e.g., a Web page about a Dataset.  This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the recommended properties ''foaf:homepage'' for class Catalogue; the optional properties ''foaf:page'' and ''dcat:landingPage'' for class Dataset; and the optional property ''foaf:page'' for class Distribution. In mobilityDCAT-AP, however, the range of ''foaf:homepage'' for class Catalogue is changed to the more generic range ''rdfs:Resource''. The other, above-mentioned properties are removed. Thus, this class SHOULD NOT be used, but is kept for compatibility reasons with [DCAT-AP-v2.0.1]",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "foaf:homepage",
+      "skos:scopeNote": {
+        "@value": "This property refers to a Web page that acts as the main page for the mobility data portal. The obligation of this property is raised to “mandatory”, comparing to [DCAT-AP-v2.0.1].",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "foaf:name",
+      "skos:scopeNote": {
+        "@value": "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "foaf:primaryTopic",
+      "skos:scopeNote": {
+        "@value": "This property links the metadata entry to the dataset described in the entry.",
+        "@language": "en"
+      }
+    }
+  ]
+}
