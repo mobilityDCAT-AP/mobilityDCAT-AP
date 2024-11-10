@@ -124,12 +124,11 @@
 
 
 <!-- Update frequency -->
-<!-- row 1 -->
 <tr>
-<td rowspan="2">
+<td>
 <p><a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a></p>
 </td>
-<td rowspan="2">
+<td>
 <p><a href="#dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td>
@@ -140,7 +139,7 @@
 </td>
 <td>
 <p>This is a mandatory vocabulary "Frequency" by the Publications Office of the European Union. </p>
-<p>The values from this vocabulary do not cover all relevant time intervals used in mobility data portals, e.g., minute-based intervals. Thus, there is a second vocabulary created by mobilityDCAT-AP (see next row), extending this taxonomy with additional missing time intervals.</p>
+<p>Values from  this vocabulary MUST be used as instances of class <a href="#frequency"><code>dct:Frequency</code></a>, being the range of the property <code>dct:accrualPeriodicity</code>. </p>
 </td>
 </tr>
   
@@ -154,7 +153,6 @@
 </td>
 <td>
 <p>This is a vocabulary created by mobilityDCAT-AP, complementing time intervals missing in the EU vocabulary (see row above).</p>
-<p>Values from the above-mentioned vocabularies MUST be used as instances of class <a href="#frequency"><code>dct:Frequency</code></a>, being the range of the property <code>dct:accrualPeriodicity</code>. </p>
 </td>
 </tr>
 
