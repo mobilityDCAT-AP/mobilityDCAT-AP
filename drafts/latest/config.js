@@ -619,9 +619,9 @@ var respecConfig = {
       },
 
       "NUTS-CODES":{
-        "href":"http://nuts.geovocab.org/",
-        "title":"EU NUTS classification as Linked Data",
-        "publisher":"NUTS-RDF project"
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/nuts",
+        "title":"EU NUTS (Nomenclature of Territorial Units for Statistics) Vocabulary",
+        "publisher":"Publications Office of the European Union"
       },
 
       "EUV-AR":{
