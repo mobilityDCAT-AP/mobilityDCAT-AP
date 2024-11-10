@@ -414,6 +414,11 @@ var respecConfig = {
         "href":"http://geonames.org/",
         "title":"Geonames"
        },
+      "IANA-CHARACTER-SETS":{
+        "href":"https://www.iana.org/assignments/character-sets/",
+        "title":"Character Sets",
+        "publisher":"IANA"
+       },
       "iiWAS17-JRC": {
         "href": "https://doi.org/10.1145/3151759.3151810",
         "title": "The JRC multidisciplinary research data infrastructure",
