@@ -1630,7 +1630,8 @@ This includes additional explanations and examples for specific vocabulary eleme
 <h2>Changes since mobilityDCAT-AP 1.0.1 (04 April 2024)</h2>
 
 <ul>
-<li>Property <code>dct:source</code> added under <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/index.html#optional-properties-for-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <code>dct:source</code>. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/57">#57.</a></li>
+<li>Property <code>dct:source</code> added under <a href="#optional-properties-for-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <code>dct:source</code>. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/57">#57.</a></li>
+<li>Cardinality of property <a href="#rights-statement-conditions-for-access-and-usage">"conditions for access and usage"</a> changed from from 1..1 to 1..n. Reason: allow for combinations of values, such as "Licence provided" plus "Free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a>.
 <li>Controlled vocabulary for <code>dct:accrualPeriodicity</code> under <a href="#controlled-vocabularies-to-be-used">5.2 Controlled Vocabularies</a> updated (only the EU Authority Table "Frequency" is now used, no complementary mobilityDCAT-AP vocab "Update frequency" needed any longer. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>.</li>
 <li>Errata and editorial improvements: </li>
 <ul>
