@@ -1,0 +1,77 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Fraunhofer Traffic Flow Dataset with Assessment
+:FraunhoferTrafficDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/traffic-data> ;
+    mobilitydcatap:georeferencingMethod <https://w3id.org/mobilitydcat-ap/georeferencing-method/linear-referencing> ;
+    mobilitydcatap:networkCoverage <https://w3id.org/mobilitydcat-ap/network-coverage/federal-roads> ;
+    dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/25832> ;
+    dct:rightsHolder [
+        a foaf:Agent ;
+        foaf:name "Fraunhofer FIT - ITS Research Division" ;
+        foaf:mbox <mailto:traffic.data@fit.fraunhofer.de>
+    ] ;
+    mobilitydcatap:transportMode <https://w3id.org/mobilitydcat-ap/transport-mode/road> ;
+    dcatap:applicableLegislation <http://data.europa.eu/eli/reg_del/2015/962/oj> ;
+    mobilitydcatap:assessmentResult :TrafficFlowAssessment ;
+    mobilitydcatap:intentedInformationService <https://w3id.org/mobilitydcat-ap/intended-information-service/real-time-traffic> ;
+    dqv:hasQualityAnnotation [
+        a dqv:QualityAnnotation ;
+        dqv:inDimension dqv:Availability ;
+        dct:description "Traffic flow data updated every 3 minutes, with 99.5% data completeness and accuracy validation through floating car data"@en
+    ] .
+
+# Associated Assessment
+:TrafficFlowAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-03-15T14:30:00"^^xsd:dateTime ;
+    oa:hasBody <https://data.mobility.fraunhofer.de/assessments/traffic-flow-2024-03> .
+
+<https://data.mobility.fraunhofer.de/assessments/traffic-flow-2024-03> a rdfs:Resource .
+
+
+
+# Invalid Examples with Assessment
+
+# Invalid: Multiple Assessment Results
+:InvalidTrafficDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/traffic-data> ;
+    mobilitydcatap:assessmentResult :TrafficFlowAssessment ;
+    mobilitydcatap:assessmentResult :AdditionalAssessment . # *Invalid: Multiple assessments violate maxCount 1*
+
+:AdditionalAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-03-16T10:00:00"^^xsd:dateTime ;
+    oa:hasBody <https://data.mobility.fraunhofer.de/assessments/traffic-flow-2024-03-update> .
+
+# Invalid: Assessment Result Not Properly Typed
+:InvalidAssessmentDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/traffic-data> ;
+    mobilitydcatap:assessmentResult "Passed Quality Check" . # *Invalid: Should be mobilitydcatap:Assessment*
+
+# Invalid: Assessment Without Required Resource Declaration
+:IncompleteAssessmentDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/traffic-data> ;
+    mobilitydcatap:assessmentResult [
+        a mobilitydcatap:Assessment ;
+        dct:issued "2024-03-15"^^xsd:date ;
+        oa:hasBody <https://data.mobility.fraunhofer.de/assessments/incomplete> # *Invalid: Resource not declared*
+    ] .
