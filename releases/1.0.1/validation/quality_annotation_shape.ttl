@@ -1,0 +1,87 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Valid Quality Annotations
+
+# Valid Quality Annotation with Literal Body
+:TrafficFlowQuality a dqv:QualityAnnotation ;
+    oa:hasBody """Traffic flow data quality metrics:
+        - Data freshness: 3-minute update interval
+        - Spatial coverage: 98.5% of monitored road segments
+        - Accuracy: 95% validated against floating car data
+        - Completeness: 99.2% of expected measurements received"""@en ;
+    oa:hasTarget :FraunhoferTrafficDataset .
+
+:FraunhoferTrafficDataset a dcat:Dataset .
+
+# Valid Quality Annotation with Literal Body
+:PublicTransportQuality a dqv:QualityAnnotation ;
+    oa:hasBody """KVB Real-time Data Quality Report:
+        - Real-time arrival predictions available for 97% of stops
+        - Update frequency: 30 seconds
+        - Average prediction accuracy: ±2 minutes
+        - Service disruption reporting within 60 seconds
+        For detailed reports visit: https://opendata.cologne.de/dataset/kvb-realtime-quality"""@en ;
+    oa:hasTarget :CologneTransitDataset .
+
+:CologneTransitDataset a dcat:Dataset .
+
+# Invalid 
+:InvalidPublicTransportQuality a dqv:QualityAnnotation ;
+    oa:hasBody <https://opendata.cologne.de/dataset/kvb-realtime-quality> ; # *Invalid: Using IRI when literal is required*
+    oa:hasTarget :CologneTransitDataset .
+
+# Cologne Public Transport Real-time Quality
+:PublicTransportQuality a dqv:QualityAnnotation ;
+    oa:hasBody <https://opendata.cologne.de/dataset/kvb-realtime-quality> ;
+    oa:hasTarget :CologneTransitDataset .
+
+:CologneTransitDataset a dcat:Dataset .
+
+
+# Multiple Quality Report Links (Violates maxCount)
+:InvalidParkingQuality a dqv:QualityAnnotation ;
+    oa:hasBody <https://parking.data.de/quality/technical>, # *Invalid: Multiple hasBody values*
+               <https://parking.data.de/quality/business> ;
+    oa:hasTarget :ParkingDataset .
+
+:ParkingDataset a dcat:Dataset .
+
+# Multiple Target Datasets (Violates maxCount)
+:InvalidBikeShareQuality a dqv:QualityAnnotation ;
+    oa:hasBody "95% availability rate" ;
+    oa:hasTarget :BikeShareDataset1, # *Invalid: Multiple targets*
+                 :BikeShareDataset2 .
+
+:BikeShareDataset1 a dcat:Dataset .
+:BikeShareDataset2 a dcat:Dataset .
+
+
+# Invalid Target Type
+:InvalidTrafficSignalQuality a dqv:QualityAnnotation ;
+    oa:hasBody [
+        a oa:TextualBody ;
+        rdf:value "Signal timing accuracy: ±2 seconds"@en ;
+        dc:format "text/plain" ;
+        dc:language "en"
+    ] ;
+    oa:hasTarget "TrafficSignalSystem" . # *Invalid: Target should be a dcat:Dataset*

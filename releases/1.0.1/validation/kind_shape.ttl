@@ -1,0 +1,88 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Valid Contacts
+
+
+
+# Cologne Traffic Management Contact
+:CologneTrafficContact a vcard:Kind ;
+    vcard:hasEmail <mailto:verkehrsmanagement@stadt-koeln.de> ;
+    vcard:fn "Amt für Verkehrsmanagement"@de,
+             "Office of Traffic Management"@en ;
+    vcard:hasURL <https://www.stadt-koeln.de/verkehr> ;
+    vcard:hasAddress [
+        a vcard:Address ;
+        vcard:street-address "Willy-Brandt-Platz 2" ;
+        vcard:postal-code "50679" ;
+        vcard:locality "Köln" ;
+        vcard:country-name "Deutschland"
+    ] ;
+    vcard:organization-name "Stadt Köln"@de ; # Only one organization name allowed
+    vcard:hasTelephone <tel:+4922122123333> .
+
+# Invalid Examples
+
+:InvalidCologneTrafficContact a vcard:Kind ;
+    vcard:hasEmail <mailto:verkehrsmanagement@stadt-koeln.de> ;
+    vcard:fn "Amt für Verkehrsmanagement"@de,
+             "Office of Traffic Management"@en ;
+    vcard:hasURL <https://www.stadt-koeln.de/verkehr> ;
+    vcard:hasAddress [
+        a vcard:Address ;
+        vcard:street-address "Willy-Brandt-Platz 2" ;
+        vcard:postal-code "50679" ;
+        vcard:locality "Köln" ;
+        vcard:country-name "Deutschland"
+    ] ;
+    vcard:organization-name "Stadt Köln"@de, # *Invalid: Multiple values violate maxCount 1*
+                          "City of Cologne"@en ;
+    vcard:hasTelephone <tel:+4922122123333> .
+
+# Missing Mandatory Email
+:InvalidMobilityContact1 a vcard:Kind ;
+    vcard:fn "NRW Transport Data Team" ; # *Invalid: Missing mandatory email*
+    vcard:organization-name "Verkehrsverbund Rhein-Ruhr" .
+
+# Invalid Email Format
+:InvalidMobilityContact2 a vcard:Kind ;
+    vcard:hasEmail "mobility@example.com" ; # *Invalid: Not a mailto: URI*
+    vcard:fn "Regional Mobility Team" .
+
+# Multiple URLs
+:InvalidMobilityContact3 a vcard:Kind ;
+    vcard:hasEmail <mailto:info@mobility.de> ;
+    vcard:fn "Mobility Services" ;
+    vcard:hasURL <https://mobility.de>, # *Invalid: Multiple URLs violate maxCount 1*
+                <https://mobility.de/contact> .
+
+# Invalid Address Format
+:InvalidMobilityContact4 a vcard:Kind ;
+    vcard:hasEmail <mailto:contact@transport.de> ;
+    vcard:fn "Transport Data Team" ;
+    vcard:hasAddress "Hauptstraße 1, Berlin" . # *Invalid: Should be vcard:Address instance*
+
+# Multiple Phone Numbers
+:InvalidMobilityContact5 a vcard:Kind ;
+    vcard:hasEmail <mailto:support@traffic.de> ;
+    vcard:fn "Traffic Management Support" ;
+    vcard:hasTelephone <tel:+49301234567>, # *Invalid: Multiple phones violate maxCount 1*
+                      <tel:+49301234568> .
