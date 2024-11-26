@@ -1630,10 +1630,11 @@ This includes additional explanations and examples for specific vocabulary eleme
 <h2>Changes since mobilityDCAT-AP 1.0.1 (04 April 2024)</h2>
 
 <ul>
-<li>Property <a href="#catalogue-record-source-metadata"><code>dct:source</code></a> added under <a href="#optional-properties-for-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <a href="#catalogue-record-source-metadata"><code>dct:source</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/57">#57.</a></li>
-<li>Cardinality of property <a href="#rights-statement-conditions-for-access-and-usage">"conditions for access and usage" <code>dct:type</code></a> changed from from 1..1 to 1..n. Reason: allow for combinations of values, such as "Licence provided" plus "Free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a>.
-<li>Cardinality of property <a href="#mobility-data-standard-schema">"schema" <code>mobilitydcatap:schema</code></a> changed from from 0..1 to 0..n. Reason: allow for naming multiple schemas. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/56">#56</a>.
-<li>Errata and editorial improvements: </li>
+<li>Property <a href="#catalogue-record-source-metadata"><code>dct:source</code></a> added under <a href="#optional-properties-for-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <a href="#catalogue-record-source-metadata"><code>dct:source</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/57">#57. DECISION POINT: YES / NO. </a></li>
+<li>OPTION 1: Cardinality of property <a href="#rights-statement-conditions-for-access-and-usage">"conditions for access and usage" <code>dct:type</code></a> changed from from 1..1 to 1..n. Reason: allow for combinations of values, such as "Licence provided" plus "Free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> DECISION POINT: OPTION 1 / OPTION 2.
+<li>OPTION 2: Extended <a href="#vocab-conditionsforusagee">controlled vocabulary</href> behind property <a href="#rights-statement-conditions-for-access-and-usage">"conditions for access and usage" <code>dct:type</code></a>. Reason: allow for constellations such as "Licence provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> DECISION POINT: OPTION 1 / OPTION 2.
+<li>Cardinality of property <a href="#mobility-data-standard-schema">"schema" <code>mobilitydcatap:schema</code></a> changed from from 0..1 to 0..n. Reason: allow for naming multiple schemas. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/56">#56</a> DECISION POINT: YES / NO.
+<li>Errata and editorial improvements: DECISION POINT: YES / NO</li>
 <ul>
   <li>Corrected usage note for property <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a> (now linking to IANA register [[IANA-CHARSETS]]). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/34">#34</a>.</li>
   <li>Corrected all figures showing UML diagrams (new arrow types). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/37">#37</a>.</li>
@@ -1641,13 +1642,13 @@ This includes additional explanations and examples for specific vocabulary eleme
   <li>All controlled vocabularies that are referenced at class and property descriptions are now directly hyperlinked to the specific controlled vocabulary. Before, a generic link to <a href="#controlled-vocabularies-to-be-used">chapter 5.2 Controlled Vocabularies</a> was only given.</li>
   <li>several typos corrected</li>
 </ul>
-<li><a href="#serialisation-files">Appendix F (mobilityDCAT-AP Serialisation Files)</a> added </li>
-<li><a href="#validation-guidance">Appendix G (mobilityDCAT-AP Validation Guidance)</a> added</li>
-<li><a href="#eap-files">Appendix H (mobilityDCAT-AP Enterprise Architect files)</a> added</li>
+<li><a href="#serialisation-files">Appendix F (mobilityDCAT-AP Serialisation Files)</a> added DECISION POINT: YES / NO.</li>
+<li><a href="#validation-guidance">Appendix G (mobilityDCAT-AP Validation Guidance)</a> added DECISION POINT: YES / NO.</li>
+<li><a href="#eap-files">Appendix H (mobilityDCAT-AP Enterprise Architect files)</a> added DECISION POINT: YES / NO.</li>
 <li>Changes in controlled vocabularies: </li>
 <ul>
-  <li><a href="#vocab-update-frequency">Frequency:</a> The <a href="https://w3id.org/mobilitydcat-ap/update-frequency">original controlled vocabulary "update frequency" by mobilityDCAT-AP </a> is deprecated, as it is not needed any longer. Only the EU Authority Table "Frequency" is now used, as it now contains all necessary values. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>.</li>
-  <li><a href="#vocab-mobility-theme">Mobility Theme:</a> Added references to EC Delegated Regulations via additional <code>dcatap:applicableLegislation</code> properties for all values used in this vocabulary. This allows for an automated tagging of EC Regulations to individual datasets. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/8">#8</a>.</li>
+  <li><a href="#vocab-update-frequency">Frequency:</a> The <a href="https://w3id.org/mobilitydcat-ap/update-frequency">original controlled vocabulary "update frequency" by mobilityDCAT-AP </a> is deprecated, as it is not needed any longer. Only the EU Authority Table "Frequency" is now used, as it now contains all necessary values. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>. DECISION POINT: YES / NO.</li>
+  <li><a href="#vocab-mobility-theme">Mobility Theme:</a> Added references to EC Delegated Regulations via additional <code>dcatap:applicableLegislation</code> properties for all values used in this vocabulary. This allows for an automated tagging of EC Regulations to individual datasets. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/8">#8</a>. DECISION POINT: YES / NO.</li>
 </ul>  
 <li>Ongoing refinements and additions in <a href="#wikipage">mobilityDCAT-AP Wikipage</a> </li>
 </ul>
