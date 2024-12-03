@@ -144,7 +144,7 @@ var respecConfig = {
       data: [
       {
 //        value: "0.2"
-        value: "1.0.1"
+        value: "1.1.0"
       }
       ]
     },
