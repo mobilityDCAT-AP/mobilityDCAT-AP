@@ -622,10 +622,18 @@
  :Mobility_Data_Standard_Shape
   a sh:NodeShape ;
   sh:targetClass mobilitydcatap:mobilityDataStandard ;
-  sh:name "Mobility Data Stadard"@en ;
+  sh:name "Mobility Data Standard"@en ;
   sh:property [
+  # Optional property for  Mobility Data Stadard
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^https://w3id.org/mobilitydcat-ap/mobility-data-standard/" ;
+    sh:path dct:conformsTo ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation
+  ],
+  [	  
    # Optional property for  Mobility Data Stadard
-  #  sh:class rdfs:Literal  ;
+   #  sh:class rdfs:Literal  ;
    sh:nodeKind sh:Literal ;
    sh:path owl:versionInfo ;
    sh:maxCount 1 ;
