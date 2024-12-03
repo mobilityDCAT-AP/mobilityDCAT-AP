@@ -51,19 +51,19 @@ var respecConfig = {
 */
     {
       label: "RDF/XML",
-      uri: "./mobilitydcat-ap.rdf",
+      uri: "./serialisationFiles/mobilitydcat-ap.rdf",
     },
     {
       label: "Turtle",
-      uri: "./mobilitydcat-ap.ttl",
+      uri: "./serialisationFiles/mobilitydcat-ap.ttl",
     },
     {
       label: "JSON-LD",
-      uri: "./mobilitydcat-ap.jsonld",
+      uri: "./serialisationFiles/mobilitydcat-ap.jsonld",
     },
     {
        label: "SHACL (Turtle)",
-       uri: "./mobilitydcat-ap_shacl_shapes.ttl",
+       uri: "./validationFiles/mobilitydcat-ap_shacl_shapes.ttl",
     }
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
