@@ -1,5 +1,7 @@
 # mobilityDCAT-AP Validation files
 
+The [SHACL shapes file](mobilitydcat-ap_shacl_shapes.ttl) contains constraints for a Data Graph expressed as RDF. 
+
 The following shape files ensure that an instances of a specific class has the necessary properties and conforms to specified rules.
 
 - The [Address_Agent_Shape](address_agent_shape.ttl) is a SHACL node shape that defines the structure and constraints for the locn:Address class.
