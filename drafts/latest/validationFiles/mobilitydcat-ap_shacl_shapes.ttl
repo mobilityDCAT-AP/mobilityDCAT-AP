@@ -404,12 +404,21 @@
    sh:targetClass dcat:Distribution ;
   sh:name "Distribution"@en ;
   sh:property [
-    # Mandatory property for Distribution
-    sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-data-standard" ;
-    sh:class mobilitydcatap:MobilityDataStandard  ;
+  # Mandatory property for Distribution
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:path mobilitydcatap:mobilityDataStandard ;
+    sh:or (
+      # First approach: Direct reference to controlled vocabulary
+      [
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https://w3id.org/mobilitydcat-ap/mobility-data-standard/"
+      ]
+      # Second approach: Reference to MobilityDataStandard instance
+      [
+        sh:class mobilitydcatap:MobilityDataStandard
+      ]
+    ) ;
     sh:name "mobility data standard" ;
     sh:description "This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. " ;
     sh:severity sh:Violation
