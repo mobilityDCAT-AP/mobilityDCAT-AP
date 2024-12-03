@@ -1,4 +1,4 @@
 # mobilityDCAT-AP Enterprise Architect files
 
-The [SHACL shapes file](mobilitydcat-ap_shacl_shapes.ttl) contains constraints for a Data Graph expressed as RDF. 
-
+The [mobilityDCAT-AP Enterprise Architect file](mobilityDCAT-AP.qea) contains the mobilityDCAT-AP data model as a .qea file, to be processed with Enterprise Architect software. 
+It contains an architecture diagram of mobilityDCAT-AP, a complete model as well as an overview containing only the mandatory properties.
