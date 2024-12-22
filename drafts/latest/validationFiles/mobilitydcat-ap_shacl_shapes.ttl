@@ -412,7 +412,7 @@
       # First approach: Direct reference to controlled vocabulary
       [
         sh:nodeKind sh:IRI ;
-        sh:pattern "^https://w3id.org/mobilitydcat-ap/mobility-data-standard/"
+        sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-data-standard/"
       ]
       # Second approach: Reference to MobilityDataStandard instance
       [
@@ -599,14 +599,28 @@
     sh:path dct:identifier ;
     sh:or (
         [
-          sh:nodeKind sh:Literal ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "http://publications.europa.eu/resource/authority/continent" ;
         ]
         [
-          sh:nodeKind sh:IRI  ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "http://publications.europa.eu/resource/authority/country" ;
+        ]
+	[
+        sh:nodeKind sh:IRI ;
+        sh:pattern "http://publications.europa.eu/resource/authority/place" ;
+        ]
+	[
+        sh:nodeKind sh:IRI ;
+        sh:pattern "http://sws.geonames.org/" ;
+        ]
+	[
+        sh:nodeKind sh:IRI ;
+        sh:pattern "http://publications.europa.eu/resource/dataset/nuts" ;
         ]
       );
     sh:name "geographic identifier" ;
-    sh:description "This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer." ;
+    sh:description "This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer. Identifiers SHOULD be coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. This property is analogue to an addition by GEODCAT-AP-v2.0.0." ;
     sh:severity sh:Violation
   ],
   [
@@ -626,7 +640,7 @@
   sh:property [
   # Optional property for  Mobility Data Standard
    sh:nodeKind sh:IRI ;
-   sh:pattern "^https://w3id.org/mobilitydcat-ap/mobility-data-standard/" ;
+   sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-data-standard/" ;
    sh:path dct:conformsTo ;
    sh:maxCount 1 ;
    sh:name "standard name" ;
