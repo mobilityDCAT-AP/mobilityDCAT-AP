@@ -828,7 +828,7 @@ dct:conformsTo rdf:type owl:DatatypeProperty ;
 		   rdfs:label "standard name"@en ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. "@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-           dcam:domainIncludes mobilitydcatap:mobilityDataStandard ;
+           dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
            dcam:rangeIncludes skos:Concept .
 
 ###   http://www.w3.org/2002/07/owl#versionInfo
@@ -837,7 +837,7 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
 		   rdfs:label "version"@en ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. "@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-           dcam:domainIncludes mobilitydcatap:mobilityDataStandard ;
+           dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
            dcam:rangeIncludes rdfs:Literal .		   
 
 ###   http://www.w3.org/ns/oa#hasBody
