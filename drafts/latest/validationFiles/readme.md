@@ -11,11 +11,11 @@ The following shape files ensure that an instances of a specific class has the n
 - The [CatalogRecord_Shape](catalog_record_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:CatalogRecord](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue-record) class. 
 - The [Category_Shape](category_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [skos:Concept](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-category) class.
 - The [Dataset_Shape](dataset_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:Dataset](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-dataset) class. 
-- The [Distribution_Shape](distribution_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:Distribution]( class. 
-- The [Kind_Shape](kind_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [vcard:Kind]( class.
-- The [LicenseDocument_Shape](license_document_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:LicenseDocument]( class. 
-- The [Location_Shape](location_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:Location]( class. 
-- The [MobilityDataStandard_Shape](mobility_data_standard_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [mobilitydcatap:mobilityDataStandard]( class. 
-- The [QualityAnnotation_Shape](quality_annotation_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dqv:QualityAnnotation]( class.
-- The [RightsStatement_Shape](rights_statement_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:RightsStatement]( class. 
+- The [Distribution_Shape](distribution_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:Distribution](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-distribution) class. 
+- The [Kind_Shape](kind_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [vcard:Kind](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-kind) class.
+- The [LicenseDocument_Shape](license_document_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:LicenseDocument](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-licence-document) class. 
+- The [Location_Shape](location_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:Location](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-location) class. 
+- The [MobilityDataStandard_Shape](mobility_data_standard_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [mobilitydcatap:mobilityDataStandard](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-mobility-data-standard) class. 
+- The [QualityAnnotation_Shape](quality_annotation_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dqv:QualityAnnotation](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-quality-annotation) class.
+- The [RightsStatement_Shape](rights_statement_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:RightsStatement](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-rights-statement) class. 
 
