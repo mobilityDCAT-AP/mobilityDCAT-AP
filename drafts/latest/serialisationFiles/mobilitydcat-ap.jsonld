@@ -2089,6 +2089,33 @@
       }
     },
     {
+      "@id": "dct:conformsTo",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "standard name",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "mobilitydcatap:MobilityDataStandard"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
       "@id": "owl:versionInfo",
       "rdf:type": {
         "@id": "owl:DatatypeProperty"
@@ -2109,7 +2136,7 @@
         "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
-        "@id": "mobilitydcatap:mobilityDataStandard"
+        "@id": "mobilitydcatap:MobilityDataStandard"
       },
       "dcam:rangeIncludes": {
         "@id": "rdfs:Literal"
