@@ -4,7 +4,7 @@ The [SHACL shapes file](mobilitydcat-ap_shacl_shapes.ttl) contains constraints f
 
 The following shape files ensure that an instances of a specific class has the necessary properties and conforms to specified rules.
 
-- The [Address_Agent_Shape](address_agent_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [locn:Address]("./index.html/#properties-for-address-agent") class. <a href="./#catalogue-record-source-metadata"><code>dct:source</code></a>
+- The [Address_Agent_Shape](address_agent_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [locn:Address]("./index.html/#properties-for-address-agent") class. <a href="./index.html/#catalogue-record-source-metadata"><code>dct:source</code></a>
 - The [Agent_Shape](agent_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [foaf:Agent]( class. 
 - The [Assessment_Shape](assessment_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [mobilitydcatap:Assessment]( class.
 - The [Catalogue_Shape](catalogue_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:Catalog]( class.
