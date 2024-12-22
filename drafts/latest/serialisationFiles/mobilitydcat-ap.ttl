@@ -821,7 +821,16 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dct:Location ;
            dcam:rangeIncludes rdfs:Literal .		   
-		   
+
+###   http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:DatatypeProperty ;
+           rdfs:comment "This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary."@en ;
+		   rdfs:label "standard name"@en ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. "@en ;
+           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+           dcam:domainIncludes mobilitydcatap:mobilityDataStandard ;
+           dcam:rangeIncludes skos:Concept .
+
 ###   http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:DatatypeProperty ;
            rdfs:comment "This property describes the version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2. This information is provided in a textual format. To avoid ambiguity, only short version identifiers SHOULD be used, e.g., only  “3.2”, without redundant acronyms such as “v”, underscores etc."@en ;
