@@ -624,15 +624,24 @@
   sh:targetClass mobilitydcatap:mobilityDataStandard ;
   sh:name "Mobility Data Standard"@en ;
   sh:property [
-  # Optional property for  Mobility Data Stadard
-    sh:nodeKind sh:IRI ;
-    sh:pattern "^https://w3id.org/mobilitydcat-ap/mobility-data-standard/" ;
-    sh:path dct:conformsTo ;
-    sh:maxCount 1 ;
-    sh:severity sh:Violation
+  # Optional property for  Mobility Data Standard
+   sh:nodeKind sh:IRI ;
+   sh:pattern "^https://w3id.org/mobilitydcat-ap/mobility-data-standard/" ;
+   sh:path dct:conformsTo ;
+   sh:maxCount 1 ;
+   sh:name "standard name" ;
+   sh:description "This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary." ;
+   sh:severity sh:Violation
   ],
   [	  
-   # Optional property for  Mobility Data Stadard
+   # Optional property for  Mobility Data Standard
+   sh:nodeKind sh:Literal ;
+   sh:path dct:conformsTo ;
+   sh:maxCount 1 ;
+   
+  ],
+  [	  
+   # Optional property for  Mobility Data Standard
    #  sh:class rdfs:Literal  ;
    sh:nodeKind sh:Literal ;
    sh:path owl:versionInfo ;
@@ -642,10 +651,9 @@
    sh:severity sh:Violation
   ],
   [
-   # Optional property for  Mobility Data Stadard
+   # Optional property for  Mobility Data Standard
    sh:class rdfs:Resource  ;
    sh:path mobilitydcatap:schema ;
-   sh:maxCount 1 ;
    sh:name "schema" ;
    sh:description "This property describes the schema of the mobility data standard, as applied within the delivered content. There are differet optiions how to reference the schema. It might be a reference to a portal-internal catalogue of schemas, a reference to an individual schema (that is provided by the data publisher), or a reference to an external catalogue of schemas (like a stakeholder-based DATEX II profile published on the datex2.eu page). The data platform SHOULD keep an archive of commonly used schemas. The data provider SHOULD be able to select an applicable schema from this archive, or to upload an own, individual schema. In any case, the schema should be available as a resource. This is a sub-property of dct:conformsTo." ;
    sh:severity sh:Violation
