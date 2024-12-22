@@ -1468,6 +1468,15 @@
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record.</skos:scopeNote>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <rdfs:comment xml:lang="en">This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested.</rdfs:comment>
+        <rdfs:label xml:lang="en">source</rdfs:label>
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        <vs:term_status>stable</vs:term_status>
+        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record.</skos:scopeNote>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
         <skos:scopeNote xml:lang="en">This property references, cites, or otherwise points to another, related dataset. Corresponds to the property dct:isReferencedBy, with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.	</skos:scopeNote>
     </rdf:Description>
