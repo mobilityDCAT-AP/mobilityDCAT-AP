@@ -635,13 +635,6 @@
   ],
   [	  
    # Optional property for  Mobility Data Standard
-   sh:nodeKind sh:Literal ;
-   sh:path dct:conformsTo ;
-   sh:maxCount 1 ;
-   
-  ],
-  [	  
-   # Optional property for  Mobility Data Standard
    #  sh:class rdfs:Literal  ;
    sh:nodeKind sh:Literal ;
    sh:path owl:versionInfo ;
