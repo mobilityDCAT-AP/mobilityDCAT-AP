@@ -1527,12 +1527,20 @@
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:label xml:lang="en">standard name</rdfs:label>
+        <rdfs:comment xml:lang="en">This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary.</rdfs:comment>
+        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. </skos:scopeNote>
+        <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:label xml:lang="en">version</rdfs:label>
         <rdfs:comment xml:lang="en">This property describes the version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2. This information is provided in a textual format. To avoid ambiguity, only short version identifiers SHOULD be used, e.g., only  “3.2”, without redundant acronyms such as “v”, underscores etc.</rdfs:comment>
         <skos:scopeNote xml:lang="en">This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property dct:modified. Together with property adms:versionNotes, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow W3C Data on the Web Best Practices [DWBP]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [SEMVER].</skos:scopeNote>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. </skos:scopeNote>
-        <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
+        <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
