@@ -24,7 +24,7 @@
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_deprecateduris.ttl> ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
-  owl:imports <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.0.0/mobilitydcat-ap.ttl> ;
+  owl:imports <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/serialisationFiles/mobilitydcat-ap.ttl> ;
   owl:imports <http://www.w3.org/ns/dqv.ttl> ;
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/SpatialDataServiceCategory.en.rdf> ;
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/ConditionsApplyingToAccessAndUse.en.rdf> ;
@@ -39,11 +39,11 @@
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.en.rdf> ;
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/SpatialScope.en.rdf> ;
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.en.rdf> ;
-  owl:versionIRI <http://w3id.org/mobilityDCAT-AP/releases/1.0.0/> ;
+  owl:versionIRI <http://w3id.org/mobilityDCAT-AP/releases/1.1.0/> ;
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
   dcatap:availability dcatap:stable ;
   dct:conformsTo <https://www.w3.org/TR/shacl> ;
-  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/1.0.0/> ;
+  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
   dct:license <https://creativecommons.org/licenses/by/4.0> ;
   dct:created "2023-08-14"^^xsd:date ;
   dct:issued "2023-08-14"^^xsd:date ;
@@ -51,7 +51,7 @@
   dct:modified "2023-09-01"^^xsd:date ;
   dct:dateCopyrighted "2023"^^xsd:gYear ;
   dct:title "The constraints of mobilityDCAT-AP Application Profile for Data Portals in Europe"@en ;
-  owl:versionInfo "1.0.1" ;
+  owl:versionInfo "1.1.0" ;
   dct:description "This document specifies the constraints on properties and classes expressed by mobilityDCAT-AP in SHACL."@en ;
   bibo:editor [
     a foaf:Person ;
@@ -74,14 +74,14 @@
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
       <http://www.w3.org/ns/formats/data/Turtle> ;
       dct:title "SHACL (Turtle)"@en ;
-      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.shacl.ttl> ;
+      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.1.0/serialisationFiles/mobilitydcat-ap.shacl.ttl> ;
       dcat:mediaType "text/turtle"^^dct:IMT
   ] ;
   .
 
 #-------------------------------------------------------------------------
 # The shapes in this file complement the DCAT-AP ones to cover all classes
-# in mobilityDCAT-AP 1.0.1.
+# in mobilityDCAT-AP 1.1.0.
 #-------------------------------------------------------------------------
 
 :Address_Agent_Shape
