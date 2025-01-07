@@ -32,7 +32,7 @@ var respecConfig = {
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2023,
-    publishDate: "2024-03-13",
+    publishDate: "2024-12-23",
 
     alternateFormats: [
 /*
