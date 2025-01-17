@@ -1,0 +1,154 @@
+<table class="simple" id="table-mandatory-properties-for-catalogue"> <!-- PL edits 04.07.23-->
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+ 
+<tr class="property mandatory" id="catalogue-dataset">
+<td>
+<p>dataset</p>
+</td>
+<td>
+<p><code>dcat:dataset</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property links the mobility data portal with a dataset that is described at the mobility data portal. This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets SHOULD be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is also mandatory to use the property <a href="#catalogue-catalogue-record"><code>dcat:record</code></a>.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="catalogue-description">
+<td>
+<p>description</p>
+</td>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a free-text, individual name of the mobility data platform itself. This property MAY be repeated for parallel language versions of the description - see <a class="no-sectionRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="catalogue-homepage">
+<td>
+<p>homepage</p>
+</td>
+<td>
+<p><code>foaf:homepage</code></p>
+</td>
+<td>
+<p><code>rdfs:Resource</code></p>
+</td>
+<td>
+<p>This property refers to a Web page that acts as the main page for the mobility data portal.</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to [[DCAT-AP-v2.0.1]].</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr> 
+ 
+<tr class="property mandatory" id="catalogue-publisher">
+<td>
+<p>publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an organisation, if applicable a person, which is responsible for creation and maintenance of the mobility data platform. This organisation is the direct contact for platform users, who have questions or issues about the platform and its system. This information is mandatory and should correspond to the information in the disclaimer of the platform website.
+</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="catalogue-catalogue-record">
+<td>
+<p>record</p>
+</td>
+<td>
+<p><code>dcat:record</code></p>
+</td>
+<td>
+<p><code>dcat:CatalogRecord</code></p>
+</td>
+<td>
+<p>This property refers to a metadata record that is part of the mobility data portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to “mandatory”, comparing to [[DCAT-AP-v2.0.1]].</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="catalogue-spatial-coverage">
+<td>
+<p>spatial / geographic</p>
+</td>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p>This property refers to a country code where the data platform is hosted. For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property <a href="#dataset-spatial-coverage"><code>dct:spatial</code></a>, which might be different.
+</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to [[DCAT-AP-v2.0.1]].</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+
+<tr class="property mandatory" id="catalogue-title">
+<td>
+<p>title</p>
+</td>
+<td>
+<p><code>dct:title</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a name given to the mobility data portal. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+</tbody>
+</table>

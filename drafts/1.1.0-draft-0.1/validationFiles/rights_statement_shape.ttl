@@ -1,0 +1,58 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Valid Rights Statements
+
+# Open Data Rights Statement for Cologne Traffic Data
+:CologneTrafficRights a dct:RightsStatement ;
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/open-data-license> ;
+    rdfs:label "Free access under CC BY 4.0 with attribution to City of Cologne"@en,
+              "Freier Zugang unter CC BY 4.0 mit Namensnennung der Stadt Köln"@de .
+
+# Commercial License Rights Statement for Fraunhofer FIT's Mobility Analysis
+:FraunhoferMobilityRights a dct:RightsStatement ;
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/commercial-license> ;
+    rdfs:label "Commercial license required. Contact mobility.data@fit.fraunhofer.de for access"@en,
+              "Kommerzielle Lizenz erforderlich. Kontaktieren Sie mobility.data@fit.fraunhofer.de für Zugang"@de .
+
+# Invalid Examples
+
+# Missing Type Property for Munich Transit Data
+:MunichTransitRights a dct:RightsStatement ;
+    rdfs:label "MVG open data terms of use apply"@en, # *Invalid: Missing mandatory dct:type*
+              "MVG Open Data Nutzungsbedingungen gelten"@de .
+
+# Wrong Pattern for Berlin Mobility Data
+:BerlinMobilityRights a dct:RightsStatement ;
+    dct:type <http://example.org/berlin-mobility-license> ; # *Invalid: Wrong pattern*
+    rdfs:label "Berlin Mobility Hub data access terms"@en .
+
+# Multiple Access Conditions (Violates maxCount)
+:HamburgPortRights a dct:RightsStatement ;
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/research-use>, # *Invalid: Multiple types*
+             <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/commercial-use> ;
+    rdfs:label "Hamburg Port Authority mixed usage conditions"@en .
+
+# Non-Literal Label
+:DusseldorfTrafficRights a dct:RightsStatement ;
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/open-data-license> ;
+    rdfs:label <http://example.org/terms> . # *Invalid: Label must be literal*

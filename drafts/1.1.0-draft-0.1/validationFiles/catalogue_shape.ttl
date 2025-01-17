@@ -1,0 +1,68 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Valid Catalogs
+
+# Aachen Mobility Data Catalog
+:AachenMobilityCatalog a dcat:Catalog ;
+    dct:identifier "Aachen-MOB-2024" ;
+    adms:identifier [
+        a adms:Identifier ;
+        skos:notation "EU-NAP-DE-Aachen-2024"
+    ] .
+
+# City of Cologne Transport Data Catalog
+:CologneMobilityCatalog a dcat:Catalog ;
+    dct:identifier "KOELN-MOB-2024" .
+
+# NRW Regional Transport Data Catalog
+:NRWTransportCatalog a dcat:Catalog ;
+    adms:identifier [
+        a adms:Identifier ;
+        skos:notation "EU-NAP-DE-NRW-2024"
+    ] .
+
+# Invalid Catalogs
+
+# Invalid: Non-literal identifier
+:DusseldorfMobilityCatalog a dcat:Catalog ;
+    dct:identifier <https://mobility.duesseldorf.de/catalog> . # *Invalid: Must be literal*
+
+# Invalid: Multiple identifiers
+:BonnTransportCatalog a dcat:Catalog ;
+    dct:identifier "BONN-MOB-2024" ; # *Invalid: Multiple identifiers violate maxCount 1*
+    dct:identifier "BONN-TRANSPORT-2024" .
+
+# Invalid: Wrong identifier type
+:AachenMobilityCatalog a dcat:Catalog ;
+    adms:identifier "NAP-DE-AC-2024" . # *Invalid: Must be adms:Identifier instance*
+
+# Invalid: Multiple ADMS identifiers
+:RuhrRegionCatalog a dcat:Catalog ;
+    adms:identifier [ # *Invalid: Multiple ADMS identifiers violate maxCount 1*
+        a adms:Identifier ;
+        skos:notation "EU-NAP-DE-RUHR-2024-A"
+    ] ;
+    adms:identifier [
+        a adms:Identifier ;
+        skos:notation "EU-NAP-DE-RUHR-2024-B"
+    ] .

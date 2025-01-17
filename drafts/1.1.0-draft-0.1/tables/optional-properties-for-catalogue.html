@@ -1,0 +1,186 @@
+<table class="simple" id="table-optional-properties-for-catalogue">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="catalogue-catalogue">
+<td>
+<p>catalogue</p>
+</td>
+<td>
+<p><code>dcat:catalog</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="catalogue-creator">
+<td>
+<p>creator</p>
+</td>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to the Agent primarily responsible for producing the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<tr class="property optional" id="catalogue-has-part">
+<td>
+<p>has part</p>
+</td>
+<td>
+<p><code>dct:hasPart</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a related Catalogue that is part of the described mobility data portal. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.
+</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-identifier">
+<td>
+<p>+identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
+<p>This property SHOULD populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>  
+<p>This property is analogue to an addition by [[GEODCAT-AP-v2.0.0]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="catalogue-is-part-of">
+<td>
+<p>is part of</p>
+</td>
+<td>
+<p><code>dct:isPartOf</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a related Catalogue in which the described mobility data portal is physically or logically included.
+This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from the mobility data portal into this other portal.
+</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-other-identifier">
+<td>
+<p>+other identifier</p>
+</td>
+<td>
+<p><code>adms:identifier</code></p>
+</td>
+<td>
+<p><code>adms:Identifier</code></p>
+</td>
+<td>
+<p>This property MAY be used as an additional identifier, besides  <a href="#catalogue-identifier"><code>dct:identifier</code></a>. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future.</p>  
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+
+  
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="mobility data portalue-rights">
+<td>
+<p>rights</p>
+</td>
+<td>
+<p><code>dct:rights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property refers to a statement that specifies rights associated with the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<!-- PL: DCAT-AP property removed
+<tr class="property optional" id="catalogue-service">
+<td>
+<p>service</p>
+</td>
+<td>
+<p><code>dcat:service</code></p>
+</td>
+<td>
+<p><code>dcat:DataService</code></p>
+</td>
+<td>
+<p>This property refers to a Data Service that is listed in the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+
+
+</tbody>
+</table>
