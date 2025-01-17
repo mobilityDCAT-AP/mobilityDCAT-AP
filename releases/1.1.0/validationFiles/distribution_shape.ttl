@@ -1,0 +1,96 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Valid Distribution Examples
+
+# Cologne Real-time Traffic Data Distribution
+:CologneTrafficDistribution a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/mqtt> ;
+    cnt:characterEncoding "UTF-8" ;
+    mobilitydcatap:communicationMethod <https://w3id.org/mobilitydcat-ap/communication-method/push> ;
+    mobilitydcatap:dataFormatNotes "DATEX II v3.3 with urban traffic extensions"@en ;
+    mobilitydcatap:grammar <https://w3id.org/mobilitydcat-ap/grammar/xml> ;
+    adms:sample <https://open.nrw/cologne/traffic/sample> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;
+        dct:start "2024-01-01T00:00:00Z"^^xsd:dateTime
+    ] .
+
+# NRW Regional Transit GTFS Feed Distribution
+:NRWRegionalTransitGTFSDistribution a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs> ;
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/https> ;
+    cnt:characterEncoding "UTF-8" ;
+    mobilitydcatap:communicationMethod <https://w3id.org/mobilitydcat-ap/communication-method/pull> ;
+    mobilitydcatap:dataFormatNotes "GTFS Realtime feed for NRW regional transit with live occupancy data for trains and buses"@en ;
+    mobilitydcatap:grammar <https://w3id.org/mobilitydcat-ap/grammar/protobuf> ;
+    adms:sample <https://mobility.fraunhofer.de/nrw-transit/gtfs/sample> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;
+        dct:start "2024-03-01T00:00:00Z"^^xsd:dateTime ;
+        dct:end "2024-12-31T23:59:59Z"^^xsd:dateTime
+    ] .
+
+# Valid Distribution with Temporal Coverage
+:ValidDistribution a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;  # Must be explicitly typed as dct:PeriodOfTime
+        dct:start "2024-01-01T00:00:00Z"^^xsd:dateTime ;
+        dct:end "2024-12-31T23:59:59Z"^^xsd:dateTime
+    ] .
+
+# Using Named Time Period IRI
+:NRWTransitDistribution a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs> ;
+    dct:temporal <https://mobility.fraunhofer.de/temporal/2024-annual> .
+
+<https://mobility.fraunhofer.de/temporal/2024-annual> a dct:PeriodOfTime ;
+    dct:start "2024-01-01T00:00:00Z"^^xsd:dateTime ;
+    dct:end "2024-12-31T23:59:59Z"^^xsd:dateTime .
+
+# Invalid Examples
+
+:InvalidDistribution4 a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    dct:temporal "2024-01-01/2024-12-31" . # Invalid because:
+                                          # 1. It's a literal string, not a dct:PeriodOfTime instance
+                                          # 2. Doesn't have proper start and end dates
+                                          # 3. Missing proper dateTime format with timezone
+
+# Missing Mandatory Standard
+:InvalidDistribution1 a dcat:Distribution ;
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/http> .
+    # *Invalid: Missing mandatory mobilityDataStandard*
+
+# Invalid Pattern for Standard
+:InvalidDistribution2 a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <http://example.org/standards/datex> ; # *Invalid: Wrong pattern*
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/http> .
+
+# Multiple Character Encodings
+:InvalidDistribution3 a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    cnt:characterEncoding "UTF-8", # *Invalid: Multiple encodings violate maxCount 1*
+                         "ASCII" .
+

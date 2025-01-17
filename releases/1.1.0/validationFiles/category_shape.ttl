@@ -1,0 +1,71 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Valid Category Schemes
+:EUMobilityTaxonomy a skos:ConceptScheme ;
+    rdfs:label "European Urban Mobility Taxonomy"@en ;
+    dct:description "Standard classification scheme for urban mobility data in European cities"@en .
+
+:GermanNAPCategories a skos:ConceptScheme ;
+    rdfs:label "German NAP Data Categories"@en ;
+    dct:description "Official categorization scheme for the German National Access Point"@en .
+
+# Valid Categories
+
+# Public Transport Category with EU Scheme
+:PublicTransportCategory a skos:Concept ;
+    skos:prefLabel "Public Transport"@en ;
+    skos:prefLabel "Öffentlicher Verkehr"@de ;
+    skos:inScheme :EUMobilityTaxonomy .
+
+# Shared Mobility Category with German NAP Scheme
+:SharedMobilityCategory a skos:Concept ;
+    skos:prefLabel "Shared Mobility"@en ;
+    skos:prefLabel "Geteilte Mobilität"@de ;
+    skos:inScheme :GermanNAPCategories .
+
+# Traffic Management Category (without scheme - valid as scheme is optional)
+:TrafficManagementCategory a skos:Concept ;
+    skos:prefLabel "Traffic Management"@en ;
+    skos:prefLabel "Verkehrsmanagement"@de .
+
+# Invalid Categories
+
+# Invalid: Multiple Schemes
+:ParkingCategory a skos:Concept ;
+    skos:prefLabel "Parking"@en ;
+    skos:prefLabel "Parken"@de ;
+    skos:inScheme :EUMobilityTaxonomy ; # *Invalid: Multiple schemes violate maxCount 1*
+    skos:inScheme :GermanNAPCategories .
+
+# Invalid: Wrong Scheme Type
+:ChargingStationCategory a skos:Concept ;
+    skos:prefLabel "Charging Infrastructure"@en ;
+    skos:prefLabel "Ladeinfrastruktur"@de ;
+    skos:inScheme :InvalidScheme . # *Invalid: Target is not a skos:ConceptScheme*
+
+:InvalidScheme a skos:Concept . # Should be skos:ConceptScheme
+
+# Invalid: Literal Instead of Resource
+:BikeInfrastructureCategory a skos:Concept ;
+    skos:prefLabel "Cycling Infrastructure"@en ;
+    skos:prefLabel "Fahrradinfrastruktur"@de ;
+    skos:inScheme "European Mobility Categories" . # *Invalid: Must be a resource, not a literal*

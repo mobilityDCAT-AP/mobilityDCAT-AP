@@ -1,0 +1,146 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Research Organization
+:FraunhoferFIT a org:Organization ;
+    foaf:name "Fraunhofer Institute for Applied Information Technology FIT" .
+
+<https://www.fit.fraunhofer.de/> a rdfs:Resource .
+
+# Institute Address
+:SchlossResearchCampus a locn:Address ;
+    locn:adminUnitL2 "Nordrhein-Westfalen" ;
+    locn:postName "Sankt Augustin" ;
+    locn:adminUnitL1 "Deutschland" ;
+    locn:postCode "53757" ;
+    locn:thoroughfare "Schloss Birlinghoven" .
+
+# Research Scientist Profile
+:DrThomasSchmidt a foaf:Agent ;
+    locn:address :SchlossResearchCampus ;
+    org:memberOf :FraunhoferFIT ;
+    foaf:mbox <mailto:thomas.schmidt@fit.fraunhofer.de> ;
+    foaf:firstName "Thomas" ;
+    foaf:surname "Schmidt" ;
+    foaf:phone "tel:+492241141" ;
+    foaf:workplaceHomepage <https://www.fit.fraunhofer.de/> .
+    
+     
+
+# Example 1: Invalid address specification (using literal instead of resource)
+:BerlinUniversityResearcher a foaf:Agent ;
+    locn:address "Unter den Linden 6, 10117 Berlin" ; # Value is a literal string but must be an instance of locn:Address class and Value is a literal string but must be either a blank node or IRI (sh:BlankNodeOrIRI)
+    org:memberOf :HumboldtUniversity ;                # :HumboldtUniversity needs to be explicitly declared as org:Organization
+    foaf:mbox <mailto:researcher@hu-berlin.de> ;
+    foaf:firstName "Anna" ;
+    foaf:surname "Schmidt" ;
+    foaf:phone "tel:+493020932000" ;
+    foaf:workplaceHomepage <https://www.hu-berlin.de> . # <https://www.hu-berlin.de> needs to be explicitly declared as rdfs:Resource
+
+
+# Corrected Version:
+:HumboldtUniversity a org:Organization ;  
+    foaf:name "Humboldt-Universität zu Berlin" .
+
+<https://www.hu-berlin.de> a rdfs:Resource . 
+
+:BerlinAddress a locn:Address ;  
+    locn:thoroughfare "Unter den Linden 6" ;
+    locn:postCode "10117" ;
+    locn:postName "Berlin" ;
+    locn:adminUnitL2 "Berlin" ;
+    locn:adminUnitL1 "Deutschland" .
+
+:BerlinUniversityResearcher a foaf:Agent ;
+    locn:address :BerlinAddress ;
+    org:memberOf :HumboldtUniversity ;
+    foaf:mbox <mailto:researcher@hu-berlin.de> ;
+    foaf:firstName "Anna" ;
+    foaf:surname "Schmidt" ;
+    foaf:phone "tel:+493020932000" ;
+    foaf:workplaceHomepage <https://www.hu-berlin.de> .
+
+
+# Example 2: Invalid organization reference
+:MunichTechAddress a locn:Address ;
+    locn:thoroughfare "Arcisstraße 21" ;
+    locn:postCode "80333" ;
+    locn:postName "München" ;
+    locn:adminUnitL2 "Bayern" ;
+    locn:adminUnitL1 "Deutschland" .
+
+:MunichDataScientist a foaf:Agent ;
+    locn:address :MunichTechAddress ;
+    org:memberOf "TU Munich Data Lab" ; # Invalid: should be an org:Organization instance
+    foaf:mbox <mailto:scientist@tum.de> ;
+    foaf:firstName "Max" ;
+    foaf:surname "Weber" ;
+    foaf:phone "tel:+498921800" ;
+    foaf:workplaceHomepage <https://www.tum.de> . # needs to be explicitly declared as rdfs:Resource
+
+
+# Example 3: Invalid email format
+:HamburgPortAddress a locn:Address ;
+    locn:thoroughfare "Bei St. Annen 1" ;
+    locn:postCode "20457" ;
+    locn:postName "Hamburg" ;
+    locn:adminUnitL2 "Hamburg" ;
+    locn:adminUnitL1 "Deutschland" .
+
+:HamburgPort a org:Organization ;  
+    foaf:name "HamburgPort" .
+
+<https://www.hamburg-port.de> a rdfs:Resource .
+
+:HamburgEngineer a foaf:Agent ;
+    locn:address :HamburgPortAddress ;
+    org:memberOf :HamburgPort ;
+    foaf:mbox "engineer@hamburg-port.de" ; # Invalid: should be mailto: URI
+    foaf:firstName "Lars" ;
+    foaf:surname "Fischer" ;
+    foaf:phone "tel:+494042847-0" ;
+    foaf:workplaceHomepage <https://www.hamburg-port.de> .
+
+# Example 4: Multiple first names violation
+
+:FrankfurtFinanceAddress a locn:Address ;
+    locn:thoroughfare "Taunusanlage 12" ;
+    locn:postCode "60325" ;
+    locn:postName "Frankfurt am Main" ;
+    locn:adminUnitL2 "Hessen" ;
+    locn:adminUnitL1 "Deutschland" .
+:DeutscheBank a org:Organization ;  
+    foaf:name "DeutscheBank" . 
+ <https://www.db.com> a rdfs:Resource .
+     
+:FrankfurtBanker a foaf:Agent ;
+    locn:address :FrankfurtFinanceAddress ;
+    org:memberOf :DeutscheBank ;
+    foaf:mbox <mailto:banker@db.com> ;
+    foaf:firstName "Thomas" ;
+    foaf:firstName "Tom" ; # Invalid: violates maxCount 1
+    foaf:surname "Müller" ;
+    foaf:phone "tel:+496991010" ;
+    foaf:workplaceHomepage <https://www.db.com> .
+
+
+
