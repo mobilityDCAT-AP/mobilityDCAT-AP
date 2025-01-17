@@ -93,6 +93,12 @@ var respecConfig = {
     github:               "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP",
     editors: [
       {
+        name:    "Daham Mohammed Mustafa",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
+        orcid:   "0000-0003-1867-4428",
+//        companyURL: ""
+      },
+      {
         name:    "Lina Molinas Comet",
         company: "Fraunhofer Institute for Applied Information Technology FIT",
         orcid:   "0000-0001-5446-6947",
