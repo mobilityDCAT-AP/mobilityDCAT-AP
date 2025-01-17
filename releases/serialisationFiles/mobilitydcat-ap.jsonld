@@ -790,6 +790,35 @@
       }
     },
     {
+      "@id": "dct:source",
+      "@type": [
+        "rdf:Property",
+        "owl:ObjectProperty"
+      ],
+      "rdfs:comment": {
+        "@language": "en"
+        "@value": "This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested.",
+      },
+      "rdfs:label": {
+        "@value": "source",
+        "@language": "en"
+      },
+      "vs:term_status": "stable",
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record.",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "dcat:CatalogRecord"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "dcat:CatalogRecord"
+      }
+    },
+    {
       "@id": "skos:inScheme",
       "@type": [
         "rdf:Property",
@@ -2060,6 +2089,33 @@
       }
     },
     {
+      "@id": "dct:conformsTo",
+      "rdf:type": {
+        "@id": "owl:DatatypeProperty"
+      },
+      "rdfs:comment": {
+        "@value": "This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary.",
+        "@language": "en"
+      },
+      "rdfs:label": {
+        "@value": "standard name",
+        "@language": "en"
+      },
+      "skos:scopeNote": {
+        "@value": "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. ",
+        "@language": "en"
+      },
+      "adms:status": {
+        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      },
+      "dcam:domainIncludes": {
+        "@id": "mobilitydcatap:MobilityDataStandard"
+      },
+      "dcam:rangeIncludes": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
       "@id": "owl:versionInfo",
       "rdf:type": {
         "@id": "owl:DatatypeProperty"
@@ -2080,7 +2136,7 @@
         "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
-        "@id": "mobilitydcatap:mobilityDataStandard"
+        "@id": "mobilitydcatap:MobilityDataStandard"
       },
       "dcam:rangeIncludes": {
         "@id": "rdfs:Literal"

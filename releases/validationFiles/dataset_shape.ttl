@@ -1,0 +1,113 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Cologne Traffic Dataset
+:CologneTrafficDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/traffic-data> ;
+    mobilitydcatap:georeferencingMethod <https://w3id.org/mobilitydcat-ap/georeferencing-method/linear-referencing> ;
+    mobilitydcatap:networkCoverage <https://w3id.org/mobilitydcat-ap/network-coverage/urban-roads> ;
+    dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/25832> ;
+    dct:rightsHolder [
+        a foaf:Agent ;
+        foaf:name "Stadt Köln - Amt für Verkehrsmanagement" ;
+        foaf:mbox <mailto:verkehrsmanagement@stadt-koeln.de>
+    ] ;
+    mobilitydcatap:transportMode <https://w3id.org/mobilitydcat-ap/transport-mode/road> ;
+    dcatap:applicableLegislation <http://data.europa.eu/eli/reg_del/2015/962/oj> ;
+    mobilitydcatap:assessmentResult [
+        a mobilitydcatap:Assessment ;
+        dct:description "Compliant with EU RTTI Delegated Regulation standards"@en
+    ] ;
+    mobilitydcatap:intentedInformationService <https://w3id.org/mobilitydcat-ap/intended-information-service/real-time-traffic> ;
+    dqv:hasQualityAnnotation [
+        a dqv:QualityAnnotation ;
+        dqv:inDimension dqv:Availability ;
+        dct:description "Traffic data update frequency: Every 5 minutes, 98.5% system availability"@en
+    ] ;
+    dqv:hasQualityAnnotation [
+        a dqv:QualityAnnotation ;
+        oa:hasBody """KVB Real-time Data Quality Report:
+        - Real-time arrival predictions available for 97% of stops
+        - Update frequency: 30 seconds
+        - Average prediction accuracy: ±2 minutes
+        - Service disruption reporting within 60 seconds
+        For detailed reports visit: https://opendata.cologne.de/dataset/kvb-realtime-quality"""@en ;
+        oa:hasTarget :CologneTransitDataset
+    ] .
+
+# Cologne Transit Dataset with mandatory properties
+:CologneTransitDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/public-transport> ; # Added mandatory theme
+    mobilitydcatap:georeferencingMethod <https://w3id.org/mobilitydcat-ap/georeferencing-method/stop-point> ;
+    mobilitydcatap:transportMode <https://w3id.org/mobilitydcat-ap/transport-mode/bus>,
+                                <https://w3id.org/mobilitydcat-ap/transport-mode/tram> ;
+    dct:rightsHolder [
+        a foaf:Agent ;
+        foaf:name "Kölner Verkehrs-Betriebe AG" ;
+        foaf:mbox <mailto:opendata@kvb.koeln>
+    ] .
+
+:HamburgPortDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/freight-transport> ;
+    dqv:hasQualityAnnotation [
+        a dqv:QualityAnnotation ;
+        dqv:inDimension dqv:Availability ;
+        dct:description "High quality real-time data with 99.9% availability"@en
+    ] .
+
+# Invalid Examples
+
+# Düsseldorf Parking Dataset - Missing Mandatory Theme
+:DusseldorfParkingDataset a dcat:Dataset ;
+    mobilitydcatap:georeferencingMethod <https://w3id.org/mobilitydcat-ap/georeferencing-method/point-based> ;
+    dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/25832> .
+
+# Bonn Public Transport Dataset - Wrong Theme Pattern
+:BonnPTDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <http://example.org/public-transport> ; # *Invalid pattern*
+    mobilitydcatap:transportMode <https://w3id.org/mobilitydcat-ap/transport-mode/bus> .
+
+# Frankfurt Bike Sharing Dataset - Multiple Assessments
+:FrankfurtBikeDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/shared-mobility> ;
+    mobilitydcatap:assessmentResult [
+        a mobilitydcatap:Assessment ;
+        dct:description "First Quarter Assessment 2024"@en
+    ] ;
+    mobilitydcatap:assessmentResult [ # *Invalid: Multiple assessments*
+        a mobilitydcatap:Assessment ;
+        dct:description "Second Quarter Assessment 2024"@en
+    ] .
+
+# Aachen E-Charging Dataset - Invalid Rights Holder
+:AachenChargingDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/charging-infrastructure> ;
+    dct:rightsHolder "City of Aachen" . # *Invalid: Should be foaf:Agent*
+
+
+
+# Invalid 
+:InvalidHamburgPortDataset a dcat:Dataset ;
+    mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/freight-transport> ;
+    dqv:hasQualityAnnotation "High quality real-time data" . # Invalid because:
+                                                            # 1. It's a literal string
+                                                            # 2. Should be an instance of dqv:QualityAnnotation

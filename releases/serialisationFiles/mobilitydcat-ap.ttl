@@ -341,7 +341,18 @@ dct:publisher a rdf:Property,
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:CatalogRecord ;
            dcam:rangeIncludes foaf:Agent .		   
-		   
+
+###  http://purl.org/dc/terms/source
+dct:source a rdf:Property,
+           owl:ObjectProperty ;
+           rdfs:comment "This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested."@en ;
+           rdfs:label "source"@en ;
+           vs:term_status "stable" ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record."@en ;
+           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+           dcam:domainIncludes dcat:CatalogRecord ;
+           dcam:rangeIncludes dcat:CatalogRecord .	
+
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 skos:inScheme a rdf:Property,
            owl:ObjectProperty ;
@@ -810,14 +821,23 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dct:Location ;
            dcam:rangeIncludes rdfs:Literal .		   
-		   
+
+###   http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:DatatypeProperty ;
+           rdfs:comment "This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary."@en ;
+		   rdfs:label "standard name"@en ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. "@en ;
+           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+           dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
+           dcam:rangeIncludes skos:Concept .
+
 ###   http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:DatatypeProperty ;
            rdfs:comment "This property describes the version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2. This information is provided in a textual format. To avoid ambiguity, only short version identifiers SHOULD be used, e.g., only  “3.2”, without redundant acronyms such as “v”, underscores etc."@en ;
 		   rdfs:label "version"@en ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. "@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-           dcam:domainIncludes mobilitydcatap:mobilityDataStandard ;
+           dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
            dcam:rangeIncludes rdfs:Literal .		   
 
 ###   http://www.w3.org/ns/oa#hasBody
