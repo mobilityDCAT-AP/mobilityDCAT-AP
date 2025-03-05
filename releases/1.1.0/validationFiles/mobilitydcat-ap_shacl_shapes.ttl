@@ -247,9 +247,8 @@
   sh:targetClass dcat:Catalog ;
   sh:name "Catalogue"@en ;
   sh:property [
-    # Optional property for Catalogue
+    # Optional property for Catalogue (existing)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path dct:identifier ;
     sh:name "identifier" ;
@@ -257,12 +256,40 @@
     sh:severity sh:Violation
   ],
   [
-    # Optional property for Catalogue
+    # Optional property for Catalogue (existing)
     sh:maxCount 1 ;
     sh:class adms:Identifier ;
     sh:path adms:identifier ;
     sh:name "other identifier" ;
     sh:description "This property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future." ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:path dcat:record ;
+    sh:class dcat:CatalogRecord ;
+    sh:minCount 1 ;  # Make it mandatory
+    sh:name "record" ;
+    sh:description "This property refers to a metadata record that is part of the mobility data portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to 'mandatory', comparing to DCAT-AP-v2.0.1." ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue 
+    sh:path dct:spatial ;
+    sh:class dct:Location ;
+    sh:minCount 1 ;  # Make it mandatory
+    sh:name "spatial / geographic" ;
+    sh:description "This property refers to a country code where the data platform is hosted. For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The obligation of this property is raised to 'mandatory', comparing to DCAT-AP-v2.0.1." ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:path foaf:homepage ;
+    sh:class foaf:Document ;
+    sh:minCount 1 ;  # Make it mandatory
+    sh:maxCount 1 ;
+    sh:name "homepage" ;
+    sh:description "This property refers to a Web page that acts as the main page for the mobility data portal. The obligation of this property is raised to 'mandatory', comparing to DCAT-AP-v2.0.1." ;
     sh:severity sh:Violation
   ] .
 
