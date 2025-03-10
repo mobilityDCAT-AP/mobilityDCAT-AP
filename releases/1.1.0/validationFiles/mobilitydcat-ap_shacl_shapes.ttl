@@ -152,7 +152,7 @@
     sh:description "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages)." ;
     sh:severity sh:Violation
   ],
-  sh:property[
+  [
     # Optional property for Agent
     sh:class locn:Address ;
     # sh:nodeKind sh:Literal ;
