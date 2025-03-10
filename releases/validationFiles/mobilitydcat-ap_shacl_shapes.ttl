@@ -239,17 +239,18 @@
     # Optional property for Assessment
     sh:maxCount 1 ;
     sh:path dct:issued ;
-            sh:or (
-        [
-          sh:datatype xsd:date ;
-        ]
-        [
-          sh:datatype xsd:dateTime ;
-        ]
-      );
-      sh:name "assessment date" ;
-      sh:description "This property MAY be used to describe the date of the latest assessment procedure. " ;
-      sh:severity sh:Violation
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "assessment date" ;
+    sh:description "This property MAY be used to describe the date of the latest assessment procedure." ;
+    sh:message "Assessment date must be either xsd:date or xsd:dateTime and can appear at most once" ;
+    sh:severity sh:Violation
   ],
   [
     # Optional property for Assessment
@@ -258,6 +259,7 @@
     sh:path oa:hasBody ;
     sh:name "assessment result" ;
     sh:description "This property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes." ;
+    sh:message "Assessment result must be a rdfs:Resource and can appear at most once" ;
     sh:severity sh:Violation
   ].
 
