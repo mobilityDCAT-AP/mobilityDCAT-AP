@@ -267,14 +267,172 @@
   a sh:NodeShape ;
   sh:targetClass dcat:Catalog ;
   sh:name "Catalogue"@en ;
+  # Mandatory properties
   sh:property [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:class dcat:Dataset ;
+    sh:path dcat:dataset ;
+    sh:name "dataset" ;
+    sh:description "This property links the mobility data portal with a dataset that is described at the mobility data portal." ;
+    sh:message "Catalogue must link to at least one dataset" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path dct:description ;
+    sh:name "description" ;
+    sh:description "This property contains a free-text, individual name of the mobility data platform itself." ;
+    sh:message "Catalogue must have at least one description" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class rdfs:Resource ;
+    sh:path foaf:homepage ;
+    sh:name "homepage" ;
+    sh:description "This property refers to a Web page that acts as the main page for the mobility data portal." ;
+    sh:message "Catalogue must have exactly one homepage" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class foaf:Agent ;
+    sh:path dct:publisher ;
+    sh:name "publisher" ;
+    sh:description "This property refers to an organisation, if applicable a person, which is responsible for creation and maintenance of the mobility data platform." ;
+    sh:message "Catalogue must have exactly one publisher" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:class dcat:CatalogRecord ;
+    sh:path dcat:record ;
+    sh:name "record" ;
+    sh:description "This property refers to a metadata record that is part of the mobility data portal." ;
+    sh:message "Catalogue must link to at least one catalog record" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:class dct:Location ;
+    sh:path dct:spatial ;
+    sh:name "spatial / geographic" ;
+    sh:description "This property refers to a country code where the data platform is hosted." ;
+    sh:message "Catalogue must have at least one spatial property" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path dct:title ;
+    sh:name "title" ;
+    sh:description "This property contains a name given to the mobility data portal." ;
+    sh:message "Catalogue must have at least one title" ;
+    sh:severity sh:Violation
+  ],
+  
+  # Recommended properties
+  [
+    # Recommended property for Catalogue
+    sh:class dct:LinguisticSystem ;
+    sh:path dct:language ;
+    sh:name "language" ;
+    sh:description "This property refers to a language used in the user interface of the mobility data portal." ;
+    sh:message "Language must be a dct:LinguisticSystem" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:maxCount 1 ;
+    sh:class dct:LicenseDocument ;
+    sh:path dct:license ;
+    sh:name "licence" ;
+    sh:description "This property refers to the licence under which the Catalogue can be used or reused." ;
+    sh:message "License must be a dct:LicenseDocument and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:maxCount 1 ;
+    sh:path dct:issued ;
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "release date" ;
+    sh:description "This property contains the date of formal issuance (e.g., publication) of the Catalogue." ;
+    sh:message "Release date must be either xsd:date or xsd:dateTime and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:class skos:ConceptScheme ;
+    sh:path dcat:themeTaxonomy ;
+    sh:name "themes" ;
+    sh:description "This property refers to a knowledge organization system used to classify the mobility data portal's Datasets." ;
+    sh:message "Theme taxonomy must be a skos:ConceptScheme" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:maxCount 1 ;
+    sh:path dct:modified ;
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "update / modification date" ;
+    sh:description "This property contains the most recent date on which the Catalogue was modified." ;
+    sh:message "Modification date must be either xsd:date or xsd:dateTime and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  
+  # Optional properties
+  [
+    # Optional property for Catalogue
+    sh:class dcat:Catalog ;
+    sh:path dct:hasPart ;
+    sh:name "has part" ;
+    sh:description "This property refers to a related Catalogue that is part of the described mobility data portal." ;
+    sh:message "Has part must be a dcat:Catalog" ;
+    sh:severity sh:Violation
+  ],
+  [
     # Optional property for Catalogue
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path dct:identifier ;
     sh:name "identifier" ;
-    sh:description "This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals. This property SHOULD populated by the URI used within the RDF statement (via rdf:about). This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:description "This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals." ;
+    sh:message "Identifier must be a literal and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Optional property for Catalogue
+    sh:maxCount 1 ;
+    sh:class dcat:Catalog ;
+    sh:path dct:isPartOf ;
+    sh:name "is part of" ;
+    sh:description "This property refers to a related Catalogue in which the described mobility data portal is physically or logically included." ;
+    sh:message "Is part of must be a dcat:Catalog and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
@@ -284,6 +442,7 @@
     sh:path adms:identifier ;
     sh:name "other identifier" ;
     sh:description "This property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future." ;
+    sh:message "Other identifier must be an adms:Identifier and can appear at most once" ;
     sh:severity sh:Violation
   ] .
 
