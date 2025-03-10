@@ -143,6 +143,15 @@
   a sh:NodeShape ;
     sh:targetClass foaf:Agent ;
     sh:name "Agent"@en ;
+    sh:property[
+     # Mandatory property for Agent
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path foaf:name ;
+    sh:name "name" ;
+    sh:description "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages)." ;
+    sh:severity sh:Violation
+  ],
   sh:property[
     # Optional property for Agent
     sh:class locn:Address ;
