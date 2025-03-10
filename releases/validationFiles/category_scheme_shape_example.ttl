@@ -1,1 +1,53 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Valid Category Scheme with single title
+:MobilityThemes a skos:ConceptScheme ;
+    dct:title "Mobility Data Themes"@en .
+
+# ✅ EXAMPLE 2: Valid Category Scheme with multilingual titles
+:TrafficThemes a skos:ConceptScheme ;
+    dct:title "Traffic Data Classification"@en,
+              "Verkehrsdatenklassifikation"@de,
+              "Classification des données de trafic"@fr .
+
+# ✅ EXAMPLE 3: Valid Category Scheme used in a Catalogue
+:PublicTransportThemes a skos:ConceptScheme ;
+    dct:title "Public Transport Themes"@en ;
+    skos:hasTopConcept :BusCategory, :TrainCategory, :TramCategory .
+
+# Connection to a Catalogue (for context)
+:TransportDataCatalogue a dcat:Catalog ;
+    dct:title "European Transport Data Portal"@en ;
+    dcat:themeTaxonomy :PublicTransportThemes .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 4: Missing Mandatory Property
+:InvalidScheme a skos:ConceptScheme .
+    # Missing dct:title (mandatory)
+
+#=============================================================
+# SUPPORTING RESOURCES
+#=============================================================
+
+# Categories within schemes (for context)
+:BusCategory a skos:Concept ;
+    skos:prefLabel "Bus Transport"@en ;
+    skos:inScheme :PublicTransportThemes .
+
+:TrainCategory a skos:Concept ;
+    skos:prefLabel "Rail Transport"@en ;
+    skos:inScheme :PublicTransportThemes .
+
+:TramCategory a skos:Concept ;
+    skos:prefLabel "Tram Transport"@en ;
+    skos:inScheme :PublicTransportThemes .
