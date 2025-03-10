@@ -18,6 +18,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
 
 
 <http://w3id.org/mobilitydcat-ap#> a owl:Ontology , adms:Asset ;
@@ -564,6 +565,35 @@
     sh:name "title" ;
     sh:description "This property contains a name of the Category Scheme. May be repeated for different versions of the name." ;
     sh:message "Category Scheme must have at least one title" ;
+    sh:severity sh:Violation
+  ] .
+
+:Checksum_Shape
+  a sh:NodeShape ;
+  sh:targetClass spdx:Checksum ;
+  sh:name "Checksum"@en ;
+  sh:description "A value that allows the contents of a file to be authenticated. This class is kept for compatibility with DCAT-AP." ;
+  sh:property [
+    # Mandatory property for Checksum
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path spdx:algorithm ;
+    sh:hasValue spdx:checksumAlgorithm_sha1 ;
+    sh:name "algorithm" ;
+    sh:description "This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm." ;
+    sh:message "Checksum must specify exactly one algorithm (currently only SHA-1 is supported)" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Checksum
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path spdx:checksumValue ;
+    sh:datatype xsd:hexBinary ;
+    sh:nodeKind sh:Literal ;
+    sh:name "checksum value" ;
+    sh:description "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm." ;
+    sh:message "Checksum must specify exactly one checksum value as a hexadecimal string" ;
     sh:severity sh:Violation
   ] .
 
