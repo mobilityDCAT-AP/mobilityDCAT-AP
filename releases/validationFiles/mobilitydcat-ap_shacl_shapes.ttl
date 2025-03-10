@@ -141,16 +141,36 @@
 
 :Agent_Shape
   a sh:NodeShape ;
-    sh:targetClass foaf:Agent ;
-    sh:name "Agent"@en ;
+  sh:targetClass foaf:Agent ;
+  sh:name "Agent"@en ;
   sh:property[
+    # Mandatory property for Agent
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path foaf:name ;
+    sh:name "name" ;
+    sh:description "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages)." ;
+    sh:message "Each Agent must have at least one name property" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Agent
+    sh:maxCount 1 ;
+    sh:class skos:Concept ;
+    sh:path dct:type ;
+    sh:name "type" ;
+    sh:description "This property refers to a type of the Agent that makes the Catalogue, Catalogue Record, Data Service, or Dataset available. A controlled vocabulary is provided." ;
+    sh:message "Agent type must be a skos:Concept and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
     # Optional property for Agent
     sh:class locn:Address ;
-    # sh:nodeKind sh:Literal ;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path locn:address ;
     sh:name "address" ;
     sh:description "This property MAY be used to specify the postal address of the Agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Address must be a blank node or IRI and must be an instance of locn:Address" ;
     sh:severity sh:Violation
   ],
   [
@@ -159,47 +179,45 @@
     sh:path org:memberOf ;
     sh:name "affiliation" ;
     sh:description "If the agent is of type person, this property SHOULD be used to specify the affiliation of the Agent, see § 7. Agent Types, Agent Roles and Contact Information. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Affiliation must be an instance of org:Organization" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
-    # sh:class owl:Thing ;
     sh:path foaf:mbox ;
     sh:nodeKind sh:IRI ;
-    # sh:pattern "^mailto:.+" ;
     sh:name "email" ;
     sh:description "This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]. The email SHOULD be used to establish a communication channel to the agent." ;
+    sh:message "Email must be an IRI using the mailto: scheme" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
-    # sh:datatype xsd:string ;
     sh:path foaf:firstName ;
     sh:name "first name" ;
     sh:description "If the agent is of type person, this property SHOULD be used to specify the first name of the Agent, see section § 7. Agent Types, Agent Roles and Contact Information." ;
+    sh:message "First name must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
-    # sh:class owl:Thing ;
-    sh:nodeKind sh:Literal ;
+    sh:nodeKind sh:IRI ;
     sh:path foaf:phone ;
     sh:name "phone" ;
     sh:description "This property MAY be used to provide the phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Phone must be an IRI using the tel: scheme" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
-    # sh:datatype xsd:string ;
     sh:path foaf:surname ;
     sh:name "surname" ;
     sh:description "If the agent is of type person, this property SHOULD be used to specify the surname of the Agent, see section 7." ;
+    sh:message "Surname must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
@@ -208,7 +226,8 @@
     sh:class rdfs:Resource ;
     sh:path foaf:workplaceHomepage ;
     sh:name "work place Homepage URL" ;
-    sh:description "If the agent is of type person, this property SHOULD be used to specify the surname of the Agent, see section 7." ;
+    sh:description "This property MAY be used to specify the Web site of the Agent." ;
+    sh:message "Workplace homepage must be a rdfs:Resource and can appear at most once" ;
     sh:severity sh:Violation
   ] .
 
