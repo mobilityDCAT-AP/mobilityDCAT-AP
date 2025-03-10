@@ -552,6 +552,21 @@
     sh:severity sh:Violation
   ] .
 
+:CategoryScheme_Shape
+  a sh:NodeShape ;
+  sh:targetClass skos:ConceptScheme ;
+  sh:name "Category Scheme"@en ;
+  sh:property [
+    # Mandatory property for Category Scheme
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path dct:title ;
+    sh:name "title" ;
+    sh:description "This property contains a name of the Category Scheme. May be repeated for different versions of the name." ;
+    sh:message "Category Scheme must have at least one title" ;
+    sh:severity sh:Violation
+  ] .
+
 :Dataset_Shape
   a sh:NodeShape ;
   sh:targetClass dcat:Dataset;
