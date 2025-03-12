@@ -69,7 +69,24 @@ SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data ag
 
   **SHACL fills the gaps left by OWL** by offering strict data validation, ensuring data completeness, and enforcing constraints. Its **closed-world approach** makes it essential for high-quality data management in various applications.  
 </details>  
+
 # 🔍 SHACL Basics (Core) and Advanced Features  
+
+<details>
+  <summary><strong>Core Features</strong></summary>
+  
+  - **Shapes**: Define the structure and constraints for RDF nodes (resources or literals).
+  - **Validation**: SHACL validates RDF data by checking whether it adheres to the defined shapes.
+  - **Simple Constraints**: Includes constraints like required properties, property types, and cardinality (e.g., min/max values).
+</details>
+
+<details>
+  <summary><strong>Advanced Features</strong></summary>
+  
+  - **Complex Constraints**: Allows for more advanced validation, such as disjunctions, conjunctions, and custom rules.
+  - **Inference**: SHACL can be used alongside inference engines to apply logical rules.
+  - **Extensions**: SHACL allows the use of external functions and custom constraints.
+</details>
 
 ## 📖 Technical Terminology  
 
