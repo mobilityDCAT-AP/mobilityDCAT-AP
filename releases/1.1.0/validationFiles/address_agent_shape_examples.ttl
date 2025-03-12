@@ -1,0 +1,76 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#=============================================================
+# VALID ADDRESS EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Valid address with simple string literals
+:CologneHistoricalDistrictAddress a locn:Address ;
+    locn:adminUnitL2 "Nordrhein-Westfalen" ;  # Administrative area (state/province)
+    locn:postName "Köln" ;                   # City name
+    locn:adminUnitL1 "Deutschland" ;         # Country
+    locn:postCode "50667" ;                  # Postal code
+    locn:thoroughfare "Hohe Straße 85" .     # Street address
+
+# ✅ EXAMPLE 2: Valid address with typed literals
+:CologneEigelsteinQuarterAddress a locn:Address ;
+    locn:adminUnitL2 "Nordrhein-Westfalen"^^xsd:string ;
+    locn:postName "Köln"^^xsd:string ;
+    locn:adminUnitL1 "Deutschland"^^xsd:string ;
+    locn:postCode "50668"^^xsd:string ;
+    locn:thoroughfare "Eigelstein 115"^^xsd:string .
+
+# ✅ EXAMPLE 3: Valid address using a blank node in an Agent instance
+:organization_123 a foaf:Agent ;
+  locn:address [
+    # This is a blank node address (anonymous resource)
+    a locn:Address ;
+    locn:adminUnitL1 "Belgium" ;
+    locn:adminUnitL2 "Brussels-Capital Region" ;
+    locn:postName "Brussels" ;
+    locn:postCode "1000" ;
+    locn:thoroughfare "Rue de la Loi 56" ;
+  ] .
+
+#=============================================================
+# INVALID ADDRESS EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 4: Multiple values violation
+# SHACL constraint violated: sh:maxCount 1
+:MunichCityHallAddressInvalid1 a locn:Address ;
+    # A property can have at most one value (sh:maxCount 1)
+    # Here two administrative areas are provided, which is not allowed
+    locn:adminUnitL2 "Bavaria", "Saxony" ; 
+    locn:postName "Munich" ;
+    locn:adminUnitL1 "Germany" ;
+    locn:postCode "80331" ;
+    locn:thoroughfare "Marienplatz 8" .
+
+# ❌ EXAMPLE 5: Non-literal values violation  
+# SHACL constraint violated: sh:nodeKind sh:Literal
+:MunichCityHallAddressInvalid2 a locn:Address ;
+    # Administrative area must be a literal (text), not a URI
+    locn:adminUnitL2 <http://example.org/Bavaria> ; 
+    locn:postName "Munich" ;
+    locn:adminUnitL1 "Germany" ;
+    # Postal code must be a string literal, not a number
+    locn:postCode 80331 ; 
+    locn:thoroughfare "Marienplatz 8" .
+
+# ❌ EXAMPLE 6: Blank node violation
+# SHACL constraint violated: sh:nodeKind sh:Literal
+:MunichCityHallAddressInvalid3 a locn:Address ;
+    # Administrative area must be a literal (text), not a blank node
+    locn:adminUnitL2 [ 
+        a skos:Concept ; 
+        skos:prefLabel "Bavaria" 
+    ] ;
+    locn:postName "Munich" ;
+    locn:adminUnitL1 "Germany" ;
+    locn:postCode "80331" ;
+    locn:thoroughfare "Marienplatz 8" .

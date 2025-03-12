@@ -1,0 +1,84 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+#=============================================================
+# WHAT IS A CHECKSUM?
+#=============================================================
+# A checksum is like a digital fingerprint for a file. It's a small piece 
+# of data derived from the file's contents that can be used to verify
+# if the file has been changed or corrupted during transfer or storage.
+# It's commonly used to ensure data integrity.
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Valid Checksum with SHA-1
+# This example shows a checksum created using the SHA-1 algorithm
+:FileChecksum1 a spdx:Checksum ;
+    # This specifies which mathematical formula (algorithm) was used to generate the checksum
+    # SHA-1 is a specific algorithm that converts file data into a fixed-length string
+    spdx:algorithm spdx:checksumAlgorithm_sha1 ;
+    
+    # This is the actual checksum value - a hexadecimal string that uniquely represents the file
+    # If even one byte in the file changes, this value would be completely different
+    spdx:checksumValue "a9993e364706816aba3e25717850c26c9cd0d89d"^^xsd:hexBinary .
+
+# ✅ EXAMPLE 2: Another Valid Checksum
+# Different files will have different checksum values
+:FileChecksum2 a spdx:Checksum ;
+    spdx:algorithm spdx:checksumAlgorithm_sha1 ;
+    # This different value represents a different file's contents
+    spdx:checksumValue "84983e441c3bd26ebaae4aa1f95129e5e54670f1"^^xsd:hexBinary .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 3: Missing Algorithm
+# This is invalid because it doesn't specify which method was used to generate the checksum
+:InvalidChecksum1 a spdx:Checksum ;
+    # Missing spdx:algorithm (mandatory) - without knowing the algorithm,
+    # it's impossible to verify the checksum against the file
+    spdx:checksumValue "a9993e364706816aba3e25717850c26c9cd0d89d"^^xsd:hexBinary .
+
+# ❌ EXAMPLE 4: Missing Checksum Value
+# This is invalid because it has no actual checksum value
+:InvalidChecksum2 a spdx:Checksum ;
+    spdx:algorithm spdx:checksumAlgorithm_sha1 .
+    # Missing spdx:checksumValue (mandatory) - the actual fingerprint is missing
+
+# ❌ EXAMPLE 5: Invalid Algorithm
+# This is invalid because it uses a text string instead of the standard algorithm reference
+:InvalidChecksum3 a spdx:Checksum ;
+    # Should reference the standardized SHA-1 term, not use a text string
+    spdx:algorithm "SHA-256" ;  
+    spdx:checksumValue "a9993e364706816aba3e25717850c26c9cd0d89d"^^xsd:hexBinary .
+
+# ❌ EXAMPLE 6: Invalid Checksum Value Format
+# This is invalid because the checksum value must be a hexadecimal string
+:InvalidChecksum4 a spdx:Checksum ;
+    spdx:algorithm spdx:checksumAlgorithm_sha1 ;
+    # Checksum values must be hexadecimal (letters a-f and numbers 0-9 only)
+    # This regular text is not a valid checksum
+    spdx:checksumValue "This is not a hexadecimal value" .
+
+#=============================================================
+# REAL-WORLD CONTEXT
+#=============================================================
+
+# When you download a file from the internet, you might see a checksum provided
+# alongside it. You can calculate the checksum of your downloaded file and
+# compare it with the provided value to verify the file wasn't corrupted.
+
+# Example showing how a checksum would be related to a downloadable file
+# (Note: The spdx:checksum property is not used in mobilityDCAT-AP but shown for context)
+:ExampleDistribution a dcat:Distribution ;
+    dct:title "Traffic Data File" ;
+    # This is the URL where you can download the file
+    dcat:downloadURL <https://example.org/traffic-data.csv> ;
+    # This links to the checksum for that file
+    spdx:checksum :FileChecksum1 .

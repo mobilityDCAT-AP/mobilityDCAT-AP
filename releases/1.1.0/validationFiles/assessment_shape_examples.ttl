@@ -1,0 +1,69 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Valid Assessment with dateTime
+:TrafficAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-03-15T14:30:00"^^xsd:dateTime ;
+    oa:hasBody <https://example.org/assessments/traffic-2024> .
+
+<https://example.org/assessments/traffic-2024> a rdfs:Resource .
+
+# ✅ EXAMPLE 2: Valid Assessment with date
+:ParkingAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-02-20"^^xsd:date ;
+    oa:hasBody <https://example.org/assessments/parking-2024> .
+
+<https://example.org/assessments/parking-2024> a rdfs:Resource .
+
+# ✅ EXAMPLE 3: Valid Assessment with blank node body
+:SafetyAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-01-10"^^xsd:date ;
+    oa:hasBody [
+        a rdfs:Resource ;
+        rdfs:label "Safety assessment results" ;
+        rdfs:comment "This assessment verified compliance with safety regulations" 
+    ] .
+
+# ✅ EXAMPLE 4: Valid Assessment with minimal properties
+:MinimalAssessment a mobilitydcatap:Assessment .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 5: Invalid date format
+:InvalidDateAssessment a mobilitydcatap:Assessment ;
+    dct:issued "March 15, 2024" ; # Invalid: Not xsd:date or xsd:dateTime
+    oa:hasBody <https://example.org/assessments/invalid-date> .
+
+<https://example.org/assessments/invalid-date> a rdfs:Resource .
+
+# ❌ EXAMPLE 6: Multiple issued dates
+:MultiDateAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-03-10"^^xsd:date ;
+    dct:issued "2024-03-15"^^xsd:date ; # Invalid: Multiple values violate maxCount 1
+    oa:hasBody <https://example.org/assessments/multi-date> .
+
+<https://example.org/assessments/multi-date> a rdfs:Resource .
+
+# ❌ EXAMPLE 7: Multiple body resources
+:MultiBodyAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-04-01"^^xsd:date ;
+    oa:hasBody <https://example.org/assessments/part1> ;
+    oa:hasBody <https://example.org/assessments/part2> . # Invalid: Multiple values violate maxCount 1
+
+<https://example.org/assessments/part1> a rdfs:Resource .
+<https://example.org/assessments/part2> a rdfs:Resource .
+
+# ❌ EXAMPLE 8: Non-resource body
+:StringBodyAssessment a mobilitydcatap:Assessment ;
+    dct:issued "2024-05-15"^^xsd:date ;
+    oa:hasBody "Assessment passed with high score" . # Invalid: String literal instead of rdfs:Resource
