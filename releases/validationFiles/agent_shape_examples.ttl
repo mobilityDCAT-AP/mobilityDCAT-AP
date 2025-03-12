@@ -1,9 +1,45 @@
-@prefix : <http://w3id.org/mobilitydcat-ap#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://w3id.org/mobilitydcat-ap#> .  # Custom prefix for the data standard
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .  # The FOAF (Friend of a Friend) standard for describing people
+@prefix org: <http://www.w3.org/ns/org#> .  # The W3C Organization Ontology for describing organizations
+@prefix locn: <http://www.w3.org/ns/locn#> .  # The W3C Location Ontology for addresses
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .  # The RDF Schema for describing resources
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .  # The SKOS (Simple Knowledge Organization System) for classification and concepts
+
+#=============================================================
+# EXAMPLES - Understanding Non-Literal Properties
+#=============================================================
+
+# When you see properties that are not simple text or numbers, they are often referring to other parts of the data. These non-literal properties are typically called **resources** or **classes**.
+
+# Here's an explanation of the most common non-literal properties used in these examples:
+
+# 1. **Address (locn:address)**
+# - This property connects the Agent to a **location** (address) in the data. Instead of writing out the address directly, we refer to an **address resource** (such as :SchlossResearchCampus).
+# - The address resource is described elsewhere in the data with specific details like "Street," "City," and "Postal Code."
+# - Example: The Agent has an address, and we say "This Agent's address is located at :SchlossResearchCampus."
+
+# 2. **Organization (org:memberOf)**
+# - This property links an Agent to an **organization** (like a company or university).
+# - The organization is described in another part of the data (e.g., :FraunhoferFIT), and the Agent is associated with it using the org:memberOf property.
+# - Example: The Agent might work for an organization like "Fraunhofer Institute for Applied Information Technology" (which is defined as a separate resource).
+
+# 3. **Type (dct:type)**
+# - The Agent has a "type," which tells us what kind of Agent it is. For example, is it a "Researcher," "Data Publisher," or "Scientist"?
+# - This "type" is connected to a **class** (like skos:Concept), which is a predefined category or group.
+# - Example: An Agent may be classified as "researcher" or "data provider," which are categories defined using SKOS concepts.
+
+# 4. **Homepage (foaf:workplaceHomepage)**
+# - This property links to a **resource** that represents the Agent's workplace website.
+# - Instead of including the entire URL everywhere, the data uses a resource reference, such as <https://www.example.edu>.
+
+# 5. **Phone (foaf:phone)**
+# - The phone number is given as an **IRI (Internationalized Resource Identifier)**, which is a specific type of link (like a URL).
+# - This ensures that the phone number is identified in a specific, globally standardized format (e.g., tel:+1234567890).
+
+# In short, non-literal properties (like address, organization, or type) help organize and structure the data by **referencing other pieces of information** (resources and classes) rather than repeating them over and over. This approach makes the data more connected and easier to manage.
+
+# Below are some example data entries that show how these non-literal properties work in practice.
+
 
 #=============================================================
 # VALID EXAMPLES
