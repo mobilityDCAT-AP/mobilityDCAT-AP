@@ -85,63 +85,61 @@
 # in mobilityDCAT-AP 1.1.0.
 #-------------------------------------------------------------------------
 
-:Address_Agent_Shape
-  a sh:NodeShape ;
+:Address_Agent_Shape a sh:NodeShape ;
   sh:name "Address (Agent)"@en ;
   sh:targetClass locn:Address ;
   sh:property [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:adminUnitL2 ;
-	  sh:name "administrative area" ;
-	  sh:description "The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state." ;
+    sh:name "administrative area" ;
+    sh:description "The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state." ;
+    sh:message "Administrative area must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:postName ;
     sh:name "city" ;
     sh:description "The city of an Address of the Agent." ;
+    sh:message "City must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:adminUnitL1 ;
     sh:name "country" ;
     sh:description "The country of an Address of the Agent." ;
+    sh:message "Country must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
    [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:postCode ;
     sh:name "postal code" ;
     sh:description "The postal code of an Address of the Agent." ;
+    sh:message "Postal code must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:thoroughfare ;
     sh:name "street address" ;
     sh:description "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)" ;
+    sh:message "Street address must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ] .
 
-:Agent_Shape
-  a sh:NodeShape ;
+:Agent_Shape a sh:NodeShape ;
   sh:targetClass foaf:Agent ;
   sh:name "Agent"@en ;
   sh:property[
@@ -232,8 +230,7 @@
     sh:severity sh:Violation
   ] .
 
-:Assessment_Shape
-  a sh:NodeShape ;
+:Assessment_Shape a sh:NodeShape ;
   sh:targetClass mobilitydcatap:Assessment ;
   sh:name "Assessment"@en ;
   sh:property [
@@ -264,8 +261,7 @@
     sh:severity sh:Violation
   ].
 
-:Catalogue_Shape
-  a sh:NodeShape ;
+:Catalogue_Shape a sh:NodeShape ;
   sh:targetClass dcat:Catalog ;
   sh:name "Catalogue"@en ;
   # Mandatory properties
