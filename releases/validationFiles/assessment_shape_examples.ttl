@@ -6,6 +6,24 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 #=============================================================
+# EXAMPLES - Understanding Non-Literal Properties in Assessment Shape
+#=============================================================
+# 1. **Assessment Date (dct:issued)**
+# - This property represents the **date** when the assessment was issued. It can be in two formats: `xsd:date` (e.g., "2024-02-20") or `xsd:dateTime` (e.g., "2024-03-15T14:30:00").
+# - This date is a **literal** value in the RDF data but needs to follow the specified **data type** format for it to be valid.
+# - Example: The assessment has a date when it was issued, and it must be either a date or a datetime value.
+
+# 2. **Assessment Result (oa:hasBody)**
+# - This property links to a **body** resource that describes the content or result of the assessment.
+# - The value of `oa:hasBody` can either be a **URL** (pointing to a web page with assessment details) or a **blank node** (which contains RDF data directly within the document).
+# - Example: The result of the assessment is described by a URL like `<https://example.org/assessments/traffic-2024>`, or by a blank node containing details such as labels or comments.
+
+# 3. **Blank Node Body (Blank Node)**
+# - In the case of Example 3 (`:SafetyAssessment`), the assessment’s body is a **blank node**. This means that the body doesn’t link to an external resource but is described directly in the data.
+# - The blank node can contain RDF properties like `rdfs:label` (a label) and `rdfs:comment` (a description or explanation) to provide context or details about the assessment result.
+# - Example: A blank node is used for the safety assessment, and it has a label and comment describing the results.
+
+#=============================================================
 # VALID EXAMPLES
 #=============================================================
 
