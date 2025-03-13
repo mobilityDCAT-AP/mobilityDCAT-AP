@@ -22,9 +22,16 @@ SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data ag
   **SHACL does the same for RDF data**, ensuring that:  
   - Required properties exist  
   - Values are in the correct format  
-  - Data follows specific rules and patterns  
+  - Data follows specific rules and patterns
 
-  Just like form validation improves data quality in web applications, SHACL enhances data reliability in semantic web applications.  
+  ### Why It Matters
+  Without SHACL, data can be incomplete or inconsistent - like receiving a shipping address with no city or a phone number with letters in it.
+  With SHACL, computers can automatically verify data quality before accepting it, leading to:
+  * More reliable information
+  * Fewer errors in systems
+  * Clearer expectations for data providers
+  Just like form validation improves data quality in web applications, SHACL enhances data reliability in semantic web applications.
+
 </details>  
 
 ### 🔄 Why OWL is Not Enough?  
