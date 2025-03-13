@@ -835,7 +835,7 @@ Go to [Try it ↗](https://shacl.org/playground/)
 <details>
   <summary><strong>📜 :Assessment_Shape</strong></summary>
 
-  The `:Assessment_Shape` is a SHACL node shape that defines the structure and constraints for the `mobilitydcatap:Assessment` class. This shape ensures that assessment information has the necessary properties and conforms to specified rules.
+  The `:Assessment_Shape` is a SHACL node shape that defines the structure and constraints for the [`mobilitydcatap:Assessment`↗](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment)  class. This shape ensures that assessment information has the necessary properties and conforms to specified rules.
 
   ## 📊 Shape Details
   - **Type**: `sh:NodeShape`
