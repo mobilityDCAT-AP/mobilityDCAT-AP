@@ -120,6 +120,15 @@ SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data ag
 
   **Graph** – A collection of RDF triples that connect data, forming a network of relationships. Example:  
   *A social network where users and their connections are linked as nodes.*  
+  **Resource** – Anything that can be assigned a unique URI (Uniform Resource Identifier). Examples include:
+   - A person
+   - A place (like a city)
+   - A physical object (like a book or car)
+   - An abstract concept (like an idea or theory)
+   - An internet resource (like a webpage or file)
+
+ **Resource in SHACL** – The term has the same meaning, but in the context of validation. These are the entities we want to validate against SHACL constraints.
+
 
 </details>  
 
