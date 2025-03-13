@@ -1,6 +1,3 @@
-https://github.com/Daham-Mustaf/mobilityDCAT-AP/blob/patch-2/releases/validationFiles/mobilitydcat-ap_shacl_shapes.ttl
-
-
 # 📚 mobilityDCAT-AP SHACL Documentation  
 
 ## 🔍 Introduction to SHACL  
