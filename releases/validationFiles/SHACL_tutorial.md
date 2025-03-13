@@ -34,7 +34,7 @@ SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data ag
 
 </details>  
 
-### 🔄 Why OWL is Not Enough?  
+### 🤔 Why OWL is Not Enough? 
 <details>  
   <summary>Click to expand</summary>  
 
@@ -44,7 +44,15 @@ SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data ag
   2. **Limited Constraint Enforcement** – OWL struggles with certain validation tasks, like **ensuring a property appears exactly once**.  
   3. **Designed for Inferencing** – OWL is built for **reasoning**, not strict data validation.  
 
-  **SHACL complements OWL** by adding precise validation rules and integrity constraints.  
+  ### Different Purposes
+
+- **OWL** is like a detective who makes logical deductions about what must be true
+- **SHACL** is like a quality inspector checking if everything meets specific requirements
+
+  ### Real-World Example
+  If you need to ensure every person in your database has exactly one email address:
+  - OWL can't easily enforce this "exactly one" rule
+  - SHACL can directly state: "Each person needs exactly one email property"  
 </details>  
 
 ### 🌐 Open World vs. Closed World  
@@ -62,9 +70,6 @@ SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data ag
   - Assumes missing data **does not exist**  
   - Ideal for strict validation and ensuring completeness  
   - Example: If "John has a phone number" is missing, CWA assumes he **definitely** has no phone number.  
-
-  **Why does this matter?**  
-  SHACL’s **closed-world approach** makes it better suited for ensuring data quality, completeness, and compliance with strict requirements.  
 </details>  
 
 ### 💡 Key Takeaway  
