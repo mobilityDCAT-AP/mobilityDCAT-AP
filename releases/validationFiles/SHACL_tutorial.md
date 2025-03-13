@@ -582,8 +582,6 @@ SHACL Core provides the fundamental constraints and validation mechanisms for RD
 
 </details>
 
-You can add a new chapter for "Common Errors in SHACL Validation" right before or after the "Using mobilityDCAT-AP Resources" section. This placement would allow readers to learn about typical mistakes and how to avoid them while working with SHACL validation. Here's a suggested outline for that section:
-
 ### 📚 Common Errors in SHACL Validation
 
 <details>
