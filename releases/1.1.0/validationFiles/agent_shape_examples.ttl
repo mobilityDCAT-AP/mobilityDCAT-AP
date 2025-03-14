@@ -1,0 +1,211 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .  # Custom prefix for the data standard
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .  # The FOAF (Friend of a Friend) standard for describing people
+@prefix org: <http://www.w3.org/ns/org#> .  # The W3C Organization Ontology for describing organizations
+@prefix locn: <http://www.w3.org/ns/locn#> .  # The W3C Location Ontology for addresses
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .  # The RDF Schema for describing resources
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .  # The SKOS (Simple Knowledge Organization System) for classification and concepts
+
+#=============================================================
+# EXAMPLES - Understanding Non-Literal Properties
+#=============================================================
+
+# When you see properties that are not simple text or numbers, they are often referring to other parts of the data. These non-literal properties are typically called **resources** or **classes**.
+
+# Here's an explanation of the most common non-literal properties used in these examples:
+
+# 1. **Address (locn:address)**
+# - This property connects the Agent to a **location** (address) in the data. Instead of writing out the address directly, we refer to an **address resource** (such as :SchlossResearchCampus).
+# - The address resource is described elsewhere in the data with specific details like "Street," "City," and "Postal Code."
+# - Example: The Agent has an address, and we say "This Agent's address is located at :SchlossResearchCampus."
+
+# 2. **Organization (org:memberOf)**
+# - This property links an Agent to an **organization** (like a company or university).
+# - The organization is described in another part of the data (e.g., :FraunhoferFIT), and the Agent is associated with it using the org:memberOf property.
+# - Example: The Agent might work for an organization like "Fraunhofer Institute for Applied Information Technology" (which is defined as a separate resource).
+
+# 3. **Type (dct:type)**
+# - The Agent has a "type," which tells us what kind of Agent it is. For example, is it a "Researcher," "Data Publisher," or "Scientist"?
+# - This "type" is connected to a **class** (like skos:Concept), which is a predefined category or group.
+# - Example: An Agent may be classified as "researcher" or "data provider," which are categories defined using SKOS concepts.
+
+# 4. **Homepage (foaf:workplaceHomepage)**
+# - This property links to a **resource** that represents the Agent's workplace website.
+# - Instead of including the entire URL everywhere, the data uses a resource reference, such as <https://www.example.edu>.
+
+# 5. **Phone (foaf:phone)**
+# - The phone number is given as an **IRI (Internationalized Resource Identifier)**, which is a specific type of link (like a URL).
+# - This ensures that the phone number is identified in a specific, globally standardized format (e.g., tel:+1234567890).
+
+# In short, non-literal properties (like address, organization, or type) help organize and structure the data by **referencing other pieces of information** (resources and classes) rather than repeating them over and over. This approach makes the data more connected and easier to manage.
+
+# Below are some example data entries that show how these non-literal properties work in practice.
+
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# Research Organization
+:FraunhoferFIT a org:Organization ;
+    foaf:name "Fraunhofer Institute for Applied Information Technology FIT" .
+
+<https://www.fit.fraunhofer.de/> a rdfs:Resource .
+
+# Institute Address
+:SchlossResearchCampus a locn:Address ;
+    locn:adminUnitL2 "Nordrhein-Westfalen" ;
+    locn:postName "Sankt Augustin" ;
+    locn:adminUnitL1 "Deutschland" ;
+    locn:postCode "53757" ;
+    locn:thoroughfare "Schloss Birlinghoven" .
+
+# EXAMPLE A: Valid Research Scientist Profile with all properties
+# ✅ This example passes all validation rules
+:DrThomasSchmidt a foaf:Agent ;
+    # Mandatory property - Notice the agent has a name!
+    foaf:name "Dr. Thomas Schmidt" ;
+    
+    # Optional properties, all correctly formatted
+    locn:address :SchlossResearchCampus ;  # References a proper Address resource
+    org:memberOf :FraunhoferFIT ;           # References a proper Organization
+    foaf:mbox <mailto:thomas.schmidt@fit.fraunhofer.de> ;  # Correct email IRI
+    foaf:firstName "Thomas" ;               # Single first name as literal
+    foaf:surname "Schmidt" ;                # Single surname as literal
+    foaf:phone <tel:+492241141> ;           # Phone as IRI with tel: protocol
+    foaf:workplaceHomepage <https://www.fit.fraunhofer.de/> .  # Homepage as resource
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# EXAMPLE 1: Missing mandatory name property
+# ❌ This example will fail validation because every Agent MUST have a name
+:MissingNameScientist a foaf:Agent ;
+    # Missing mandatory foaf:name property! This will trigger sh:minCount 1 violation
+    locn:address :SchlossResearchCampus ;
+    org:memberOf :FraunhoferFIT ;
+    foaf:mbox <mailto:unnamed@fit.fraunhofer.de> ;
+    foaf:firstName "Unnamed" ;
+    foaf:surname "Scientist" ;
+    foaf:phone <tel:+492241142> ;
+    foaf:workplaceHomepage <https://www.fit.fraunhofer.de/> .
+
+# Required supporting resources for remaining examples
+:HumboldtUniversity a org:Organization ;  
+    foaf:name "Humboldt-Universität zu Berlin" .
+
+<https://www.hu-berlin.de> a rdfs:Resource . 
+
+:BerlinAddress a locn:Address ;  
+    locn:thoroughfare "Unter den Linden 6" ;
+    locn:postCode "10117" ;
+    locn:postName "Berlin" ;
+    locn:adminUnitL2 "Berlin" ;
+    locn:adminUnitL1 "Deutschland" .
+
+# EXAMPLE 2: Invalid address format
+# ❌ This example demonstrates incorrect property value type
+:BerlinUniversityResearcher a foaf:Agent ;
+    foaf:name "Anna Schmidt" ;
+    # The address should be a resource (blank node or IRI), not a literal string
+    # This violates the sh:nodeKind sh:BlankNodeOrIRI constraint
+    locn:address "Unter den Linden 6, 10117 Berlin" ; 
+    org:memberOf :HumboldtUniversity ;
+    foaf:mbox <mailto:researcher@hu-berlin.de> ;
+    foaf:firstName "Anna" ;
+    foaf:surname "Schmidt" ;
+    foaf:phone <tel:+493020932000> ;
+    foaf:workplaceHomepage <https://www.hu-berlin.de> .
+
+
+# EXAMPLE 3: Invalid organization reference
+# ❌ This example demonstrates incorrect reference type 
+:MunichDataScientist a foaf:Agent ;
+    foaf:name "Max Weber" ;
+    locn:address :MunichTechAddress ;
+    # The affiliation should be an org:Organization resource, not a literal string
+    # This violates the sh:class org:Organization constraint
+    org:memberOf "TU Munich Data Lab" ; 
+    foaf:mbox <mailto:scientist@tum.de> ;
+    foaf:firstName "Max" ;
+    foaf:surname "Weber" ;
+    foaf:phone <tel:+498921800> ;
+    foaf:workplaceHomepage <https://www.tum.de> .
+
+:MunichTechAddress a locn:Address ;
+    locn:thoroughfare "Arcisstraße 21" ;
+    locn:postCode "80333" ;
+    locn:postName "München" ;
+    locn:adminUnitL2 "Bayern" ;
+    locn:adminUnitL1 "Deutschland" .
+
+<https://www.tum.de> a rdfs:Resource .
+
+# EXAMPLE 4: Invalid email format
+# ❌ This example demonstrates incorrect IRI format
+:HamburgEngineer a foaf:Agent ;
+    foaf:name "Lars Fischer" ;
+    locn:address :HamburgPortAddress ;
+    org:memberOf :HamburgPort ;
+    # Email must be an IRI using mailto: scheme, not a plain string
+    # This violates the sh:nodeKind sh:IRI constraint
+    foaf:mbox "engineer@hamburg-port.de" ; 
+    foaf:firstName "Lars" ;
+    foaf:surname "Fischer" ;
+    foaf:phone <tel:+494042847-0> ;
+    foaf:workplaceHomepage <https://www.hamburg-port.de> .
+
+:HamburgPort a org:Organization ;  
+    foaf:name "Hamburg Port Authority" .
+
+:HamburgPortAddress a locn:Address ;
+    locn:thoroughfare "Bei St. Annen 1" ;
+    locn:postCode "20457" ;
+    locn:postName "Hamburg" ;
+    locn:adminUnitL2 "Hamburg" ;
+    locn:adminUnitL1 "Deutschland" .
+
+<https://www.hamburg-port.de> a rdfs:Resource .
+
+# EXAMPLE 5: Cardinality violation (multiple values for single-valued property)
+# ❌ This example demonstrates cardinality constraint violation
+:FrankfurtBanker a foaf:Agent ;
+    foaf:name "Thomas Müller" ;
+    locn:address :FrankfurtFinanceAddress ;
+    org:memberOf :DeutscheBank ;
+    foaf:mbox <mailto:banker@db.com> ;
+    # First name can appear at most once (sh:maxCount 1)
+    # Having two values violates this constraint
+    foaf:firstName "Thomas" ;
+    foaf:firstName "Tom" ; 
+    foaf:surname "Müller" ;
+    foaf:phone <tel:+496991010> ;
+    foaf:workplaceHomepage <https://www.db.com> .
+
+:DeutscheBank a org:Organization ;  
+    foaf:name "Deutsche Bank AG" . 
+
+:FrankfurtFinanceAddress a locn:Address ;
+    locn:thoroughfare "Taunusanlage 12" ;
+    locn:postCode "60325" ;
+    locn:postName "Frankfurt am Main" ;
+    locn:adminUnitL2 "Hessen" ;
+    locn:adminUnitL1 "Deutschland" .
+
+<https://www.db.com> a rdfs:Resource .
+
+# EXAMPLE 6: Invalid phone format
+# ❌ This example demonstrates incorrect IRI format for phone
+:BerlinConsultant a foaf:Agent ;
+    foaf:name "Julia Becker" ;
+    locn:address :BerlinAddress ;
+    org:memberOf :HumboldtUniversity ;
+    foaf:mbox <mailto:jbecker@example.org> ;
+    foaf:firstName "Julia" ;
+    foaf:surname "Becker" ;
+    # Phone must be an IRI with tel: scheme, not a plain string
+    # This violates the sh:nodeKind sh:IRI constraint
+    foaf:phone "+4930123456789" ; 
+    foaf:workplaceHomepage <https://www.example.org> .
+
+<https://www.example.org> a rdfs:Resource .
