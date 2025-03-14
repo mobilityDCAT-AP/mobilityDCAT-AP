@@ -5,6 +5,32 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 #=============================================================
+# A NOTE ON CARDINALITY CONSTRAINTS AND VALIDATION
+#=============================================================
+# ℹ️ UNDERSTANDING MULTIPLE VALUES IN SHACL VALIDATION
+#
+# When a SHACL shape specifies sh:maxCount 1 for a property (like locn:adminUnitL1), 
+# it means the property should appear at most once for each resource.
+#
+# In Turtle syntax, using commas to separate values:
+#    locn:adminUnitL1 "Belgium", "Belgium" ;
+# creates TWO separate RDF triples with the same property, which violates the constraint.
+#
+# Even if the values are identical ("Belgium"), they still count as separate triples.
+# This is why Example 4 below violates the SHACL constraint for adminUnitL2.
+#
+# Common reasons validation errors might be missed:
+# ▪️ Validation not being run at all
+# ▪️ Validation tool merging duplicate values 
+# ▪️ Missing type declarations (shapes only apply to resources with correct types)
+# ▪️ SHACL files not properly imported 
+#
+# To ensure proper validation, always:
+# ✓ Use a standards-compliant SHACL validator
+# ✓ Make sure resources have proper type declarations (a locn:Address)
+# ✓ Check validation reports carefully for constraint violations
+
+#=============================================================
 # VALID ADDRESS EXAMPLES
 #=============================================================
 
