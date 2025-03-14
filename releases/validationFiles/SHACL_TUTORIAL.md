@@ -428,7 +428,7 @@ SHACL Core provides the fundamental constraints and validation mechanisms for RD
 </details>
 
 
-# 📚 SHACL Shape Prefixes
+# 🔖 SHACL Shape Prefixes
 
 <details>
   <summary><strong>Prefix Table</strong> - Common namespaces used in SHACL shapes</summary>
@@ -591,7 +591,7 @@ SHACL Core provides the fundamental constraints and validation mechanisms for RD
 
 </details>
 
-### 📚 Common Errors in SHACL Validation
+### 🐞 Common Errors in SHACL Validation
 
 <details>
   <summary><strong>⚠️ Common Errors in SHACL Validation</strong></summary>
