@@ -653,7 +653,13 @@ SHACL Core provides the fundamental constraints and validation mechanisms for RD
   
 </details>
 
+<details>
+<summary>📚 Recommended Learning Resources</summary>
 
+**Official Documentation:**
+* W3C SHACL Recommendation - The official specification document [Try it ↗](https://www.w3.org/TR/shacl/)
+* Validating RDF Data - Comprehensive book on RDF validation including SHACL [Try it ↗](https://book.validatingrdf.com/)
+</details>
 
 # 🛠️ SHACL Playground Guide for mobilityDCAT-AP
 
