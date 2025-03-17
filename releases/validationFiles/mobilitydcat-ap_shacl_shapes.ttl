@@ -18,6 +18,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
 
 
 <http://w3id.org/mobilitydcat-ap#> a owl:Ontology , adms:Asset ;
@@ -84,73 +85,91 @@
 # in mobilityDCAT-AP 1.1.0.
 #-------------------------------------------------------------------------
 
-:Address_Agent_Shape
-  a sh:NodeShape ;
+:Address_Agent_Shape a sh:NodeShape ;
   sh:name "Address (Agent)"@en ;
   sh:targetClass locn:Address ;
   sh:property [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:adminUnitL2 ;
-	  sh:name "administrative area" ;
-	  sh:description "The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state." ;
+    sh:name "administrative area" ;
+    sh:description "The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state." ;
+    sh:message "Administrative area must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:postName ;
     sh:name "city" ;
     sh:description "The city of an Address of the Agent." ;
+    sh:message "City must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:adminUnitL1 ;
     sh:name "country" ;
     sh:description "The country of an Address of the Agent." ;
+    sh:message "Country must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
    [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:postCode ;
     sh:name "postal code" ;
     sh:description "The postal code of an Address of the Agent." ;
+    sh:message "Postal code must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Recommended property for Address (Agent)
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path locn:thoroughfare ;
     sh:name "street address" ;
     sh:description "In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)" ;
+    sh:message "Street address must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ] .
 
-:Agent_Shape
-  a sh:NodeShape ;
-    sh:targetClass foaf:Agent ;
-    sh:name "Agent"@en ;
+:Agent_Shape a sh:NodeShape ;
+  sh:targetClass foaf:Agent ;
+  sh:name "Agent"@en ;
   sh:property[
+    # Mandatory property for Agent
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path foaf:name ;
+    sh:name "name" ;
+    sh:description "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages)." ;
+    sh:message "Each Agent must have at least one name property" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Agent
+    sh:maxCount 1 ;
+    sh:class skos:Concept ;
+    sh:path dct:type ;
+    sh:name "type" ;
+    sh:description "This property refers to a type of the Agent that makes the Catalogue, Catalogue Record, Data Service, or Dataset available. A controlled vocabulary is provided." ;
+    sh:message "Agent type must be a skos:Concept and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
     # Optional property for Agent
     sh:class locn:Address ;
-    # sh:nodeKind sh:Literal ;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path locn:address ;
     sh:name "address" ;
     sh:description "This property MAY be used to specify the postal address of the Agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Address must be a blank node or IRI and must be an instance of locn:Address" ;
     sh:severity sh:Violation
   ],
   [
@@ -159,47 +178,45 @@
     sh:path org:memberOf ;
     sh:name "affiliation" ;
     sh:description "If the agent is of type person, this property SHOULD be used to specify the affiliation of the Agent, see § 7. Agent Types, Agent Roles and Contact Information. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Affiliation must be an instance of org:Organization" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
-    # sh:class owl:Thing ;
     sh:path foaf:mbox ;
     sh:nodeKind sh:IRI ;
-    # sh:pattern "^mailto:.+" ;
     sh:name "email" ;
     sh:description "This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]. The email SHOULD be used to establish a communication channel to the agent." ;
+    sh:message "Email must be an IRI using the mailto: scheme" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
-    # sh:datatype xsd:string ;
     sh:path foaf:firstName ;
     sh:name "first name" ;
     sh:description "If the agent is of type person, this property SHOULD be used to specify the first name of the Agent, see section § 7. Agent Types, Agent Roles and Contact Information." ;
+    sh:message "First name must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
-    # sh:class owl:Thing ;
-    sh:nodeKind sh:Literal ;
+    sh:nodeKind sh:IRI ;
     sh:path foaf:phone ;
     sh:name "phone" ;
     sh:description "This property MAY be used to provide the phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Phone must be an IRI using the tel: scheme" ;
     sh:severity sh:Violation
   ],
   [
     # Optional property for Agent
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
-    # sh:datatype xsd:string ;
     sh:path foaf:surname ;
     sh:name "surname" ;
     sh:description "If the agent is of type person, this property SHOULD be used to specify the surname of the Agent, see section 7." ;
+    sh:message "Surname must be a literal and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
@@ -208,29 +225,30 @@
     sh:class rdfs:Resource ;
     sh:path foaf:workplaceHomepage ;
     sh:name "work place Homepage URL" ;
-    sh:description "If the agent is of type person, this property SHOULD be used to specify the surname of the Agent, see section 7." ;
+    sh:description "This property MAY be used to specify the Web site of the Agent." ;
+    sh:message "Workplace homepage must be a rdfs:Resource and can appear at most once" ;
     sh:severity sh:Violation
   ] .
 
-:Assessment_Shape
-  a sh:NodeShape ;
+:Assessment_Shape a sh:NodeShape ;
   sh:targetClass mobilitydcatap:Assessment ;
   sh:name "Assessment"@en ;
   sh:property [
     # Optional property for Assessment
     sh:maxCount 1 ;
     sh:path dct:issued ;
-            sh:or (
-        [
-          sh:datatype xsd:date ;
-        ]
-        [
-          sh:datatype xsd:dateTime ;
-        ]
-      );
-      sh:name "assessment date" ;
-      sh:description "This property MAY be used to describe the date of the latest assessment procedure. " ;
-      sh:severity sh:Violation
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "assessment date" ;
+    sh:description "This property MAY be used to describe the date of the latest assessment procedure." ;
+    sh:message "Assessment date must be either xsd:date or xsd:dateTime and can appear at most once" ;
+    sh:severity sh:Violation
   ],
   [
     # Optional property for Assessment
@@ -239,21 +257,179 @@
     sh:path oa:hasBody ;
     sh:name "assessment result" ;
     sh:description "This property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes." ;
+    sh:message "Assessment result must be a rdfs:Resource and can appear at most once" ;
     sh:severity sh:Violation
   ].
 
-:Catalogue_Shape
-  a sh:NodeShape ;
+:Catalogue_Shape a sh:NodeShape ;
   sh:targetClass dcat:Catalog ;
   sh:name "Catalogue"@en ;
+  # Mandatory properties
   sh:property [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:class dcat:Dataset ;
+    sh:path dcat:dataset ;
+    sh:name "dataset" ;
+    sh:description "This property links the mobility data portal with a dataset that is described at the mobility data portal." ;
+    sh:message "Catalogue must link to at least one dataset" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path dct:description ;
+    sh:name "description" ;
+    sh:description "This property contains a free-text, individual name of the mobility data platform itself." ;
+    sh:message "Catalogue must have at least one description" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class rdfs:Resource ;
+    sh:path foaf:homepage ;
+    sh:name "homepage" ;
+    sh:description "This property refers to a Web page that acts as the main page for the mobility data portal." ;
+    sh:message "Catalogue must have exactly one homepage" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class foaf:Agent ;
+    sh:path dct:publisher ;
+    sh:name "publisher" ;
+    sh:description "This property refers to an organisation, if applicable a person, which is responsible for creation and maintenance of the mobility data platform." ;
+    sh:message "Catalogue must have exactly one publisher" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:class dcat:CatalogRecord ;
+    sh:path dcat:record ;
+    sh:name "record" ;
+    sh:description "This property refers to a metadata record that is part of the mobility data portal." ;
+    sh:message "Catalogue must link to at least one catalog record" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:class dct:Location ;
+    sh:path dct:spatial ;
+    sh:name "spatial / geographic" ;
+    sh:description "This property refers to a country code where the data platform is hosted." ;
+    sh:message "Catalogue must have at least one spatial property" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path dct:title ;
+    sh:name "title" ;
+    sh:description "This property contains a name given to the mobility data portal." ;
+    sh:message "Catalogue must have at least one title" ;
+    sh:severity sh:Violation
+  ],
+  
+  # Recommended properties
+  [
+    # Recommended property for Catalogue
+    sh:class dct:LinguisticSystem ;
+    sh:path dct:language ;
+    sh:name "language" ;
+    sh:description "This property refers to a language used in the user interface of the mobility data portal." ;
+    sh:message "Language must be a dct:LinguisticSystem" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:maxCount 1 ;
+    sh:class dct:LicenseDocument ;
+    sh:path dct:license ;
+    sh:name "licence" ;
+    sh:description "This property refers to the licence under which the Catalogue can be used or reused." ;
+    sh:message "License must be a dct:LicenseDocument and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:maxCount 1 ;
+    sh:path dct:issued ;
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "release date" ;
+    sh:description "This property contains the date of formal issuance (e.g., publication) of the Catalogue." ;
+    sh:message "Release date must be either xsd:date or xsd:dateTime and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:class skos:ConceptScheme ;
+    sh:path dcat:themeTaxonomy ;
+    sh:name "themes" ;
+    sh:description "This property refers to a knowledge organization system used to classify the mobility data portal's Datasets." ;
+    sh:message "Theme taxonomy must be a skos:ConceptScheme" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Recommended property for Catalogue
+    sh:maxCount 1 ;
+    sh:path dct:modified ;
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "update / modification date" ;
+    sh:description "This property contains the most recent date on which the Catalogue was modified." ;
+    sh:message "Modification date must be either xsd:date or xsd:dateTime and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  
+  # Optional properties
+  [
+    # Optional property for Catalogue
+    sh:class dcat:Catalog ;
+    sh:path dct:hasPart ;
+    sh:name "has part" ;
+    sh:description "This property refers to a related Catalogue that is part of the described mobility data portal." ;
+    sh:message "Has part must be a dcat:Catalog" ;
+    sh:severity sh:Violation
+  ],
+  [
     # Optional property for Catalogue
     sh:maxCount 1 ;
-    # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path dct:identifier ;
     sh:name "identifier" ;
-    sh:description "This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals. This property SHOULD populated by the URI used within the RDF statement (via rdf:about). This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:description "This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals." ;
+    sh:message "Identifier must be a literal and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Optional property for Catalogue
+    sh:maxCount 1 ;
+    sh:class dcat:Catalog ;
+    sh:path dct:isPartOf ;
+    sh:name "is part of" ;
+    sh:description "This property refers to a related Catalogue in which the described mobility data portal is physically or logically included." ;
+    sh:message "Is part of must be a dcat:Catalog and can appear at most once" ;
     sh:severity sh:Violation
   ],
   [
@@ -263,6 +439,7 @@
     sh:path adms:identifier ;
     sh:name "other identifier" ;
     sh:description "This property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future." ;
+    sh:message "Other identifier must be an adms:Identifier and can appear at most once" ;
     sh:severity sh:Violation
   ] .
 
@@ -274,17 +451,57 @@
     # Mandatory property for Catalogue Record
     sh:minCount 1 ;
     sh:maxCount 1 ;
-	  sh:path dct:created ;
-            sh:or (
-			[
-				sh:datatype xsd:date ;
-			]
-			[
-				sh:datatype xsd:dateTime ;
-			]
-		);
+    sh:path dct:created ;
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
     sh:name "creation date" ;
-    sh:description "This property contains the date stamp (date and time) when the metadata entry was created for the first time. It SHOULD be generated by the system, whenever a platform user enters the metadata entry. " ;
+    sh:description "This property contains the date stamp (date and time) when the metadata entry was created for the first time. It SHOULD be generated by the system, whenever a platform user enters the metadata entry." ;
+    sh:message "Catalogue Record must have exactly one creation date (xsd:date or xsd:dateTime)" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue Record
+    sh:minCount 1 ;
+    sh:class dct:LinguisticSystem ;
+    sh:path dct:language ;
+    sh:name "language" ;
+    sh:description "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the metadata entry." ;
+    sh:message "Catalogue Record must have at least one language" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue Record
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class dcat:Dataset ;
+    sh:path foaf:primaryTopic ;
+    sh:name "primary topic" ;
+    sh:description "This property links the metadata entry to the dataset described in the entry." ;
+    sh:message "Catalogue Record must link to exactly one dataset as primary topic" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Catalogue Record
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path dct:modified ;
+    sh:or (
+      [
+        sh:datatype xsd:date ;
+      ]
+      [
+        sh:datatype xsd:dateTime ;
+      ]
+    );
+    sh:name "update / modification date" ;
+    sh:description "This property contains the date stamp (date and time) when the metadata entry was last modified." ;
+    sh:message "Catalogue Record must have exactly one modification date (xsd:date or xsd:dateTime)" ;
     sh:severity sh:Violation
   ],
   [
@@ -293,23 +510,88 @@
     sh:class foaf:Agent ;
     sh:path dct:publisher ;
     sh:name "publisher" ;
-    sh:description "This property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property “Publisher” of the corresponding dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:description "This property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform." ;
+    sh:message "Publisher must be a foaf:Agent and can appear at most once" ;
     sh:severity sh:Violation
-  ].
+  ],
+  [
+    # Optional property for Catalogue Record
+    sh:class dcat:CatalogRecord ;
+    sh:path dct:source ;
+    sh:name "source metadata" ;
+    sh:description "This property is used for metadata records that are harvested from other portals." ;
+    sh:message "Source must be a dcat:CatalogRecord" ;
+    sh:severity sh:Violation
+  ] .
 
 :Category_Shape
   a sh:NodeShape ;
   sh:targetClass skos:Concept ;
   sh:name "Category"@en ;
   sh:property [
+    # Mandatory property for Category
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path skos:prefLabel ;
+    sh:name "preferred label" ;
+    sh:description "This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label." ;
+    sh:message "Category must have at least one preferred label" ;
+    sh:severity sh:Violation
+  ],
+  [
     # Optional property for Category
     sh:maxCount 1 ;
     sh:class skos:ConceptScheme ;
     sh:path skos:inScheme ;
     sh:name "category scheme" ;
     sh:description "This property MAY be used to specify the Category Scheme to which the Category belongs. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Category scheme must be a skos:ConceptScheme and can appear at most once" ;
     sh:severity sh:Violation
-  ].
+  ] .
+
+:CategoryScheme_Shape
+  a sh:NodeShape ;
+  sh:targetClass skos:ConceptScheme ;
+  sh:name "Category Scheme"@en ;
+  sh:property [
+    # Mandatory property for Category Scheme
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path dct:title ;
+    sh:name "title" ;
+    sh:description "This property contains a name of the Category Scheme. May be repeated for different versions of the name." ;
+    sh:message "Category Scheme must have at least one title" ;
+    sh:severity sh:Violation
+  ] .
+
+:Checksum_Shape
+  a sh:NodeShape ;
+  sh:targetClass spdx:Checksum ;
+  sh:name "Checksum"@en ;
+  sh:description "A value that allows the contents of a file to be authenticated. This class is kept for compatibility with DCAT-AP." ;
+  sh:property [
+    # Mandatory property for Checksum
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path spdx:algorithm ;
+    sh:hasValue spdx:checksumAlgorithm_sha1 ;
+    sh:name "algorithm" ;
+    sh:description "This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm." ;
+    sh:message "Checksum must specify exactly one algorithm (currently only SHA-1 is supported)" ;
+    sh:severity sh:Violation
+  ],
+  [
+    # Mandatory property for Checksum
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path spdx:checksumValue ;
+    sh:datatype xsd:hexBinary ;
+    sh:nodeKind sh:Literal ;
+    sh:name "checksum value" ;
+    sh:description "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm." ;
+    sh:message "Checksum must specify exactly one checksum value as a hexadecimal string" ;
+    sh:severity sh:Violation
+  ] .
 
 :Dataset_Shape
   a sh:NodeShape ;
