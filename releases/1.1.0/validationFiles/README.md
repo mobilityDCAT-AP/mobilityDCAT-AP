@@ -7,7 +7,9 @@ The following shape files ensure that an instances of a specific class has the n
 - The [Address_Agent_Shape](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/285311b9c92546c04edefcedfc7a4a663eaa8edf/releases/1.1.0/validationFiles/mobilitydcat-ap_shacl_shapes.ttl#L88) is a SHACL node shape that defines the structure and constraints for the [locn:Address](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-address-agent) class. See [examples](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/285311b9c92546c04edefcedfc7a4a663eaa8edf/releases/1.1.0/validationFiles/address_agent_examples.ttl) for validation.
 
 
-- The [Agent_Shape](agent_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [foaf:Agent](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-agent) class. 
+- The [Agent_Shape](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/e0981eb1ea7e7b3691a5104e59161f342db65c90/releases/1.1.0/validationFiles/mobilitydcat-ap_shacl_shapes.ttl#L142) is a SHACL node shape that defines the structure and constraints for the [foaf:Agent](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-agent) class. See [examples](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/releases/1.1.0/validationFiles/agent_shape_examples.ttl) for validation.
+
+
 - The [Assessment_Shape](assessment_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [mobilitydcatap:Assessment](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment) class.
 - The [Catalogue_Shape](catalogue_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:Catalog](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue) class.
 - The [CatalogRecord_Shape](catalog_record_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:CatalogRecord](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue-record) class. 
