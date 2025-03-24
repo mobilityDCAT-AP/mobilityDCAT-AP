@@ -10,7 +10,9 @@ The following shape files ensure that an instances of a specific class has the n
 - The [Agent_Shape](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/e0981eb1ea7e7b3691a5104e59161f342db65c90/releases/1.1.0/validationFiles/mobilitydcat-ap_shacl_shapes.ttl#L142) is a SHACL node shape that defines the structure and constraints for the [foaf:Agent](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-agent) class. See [examples](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/releases/1.1.0/validationFiles/agent_shape_examples.ttl) for validation.
 
 
-- The [Assessment_Shape](assessment_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [mobilitydcatap:Assessment](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment) class.
+- The [Assessment_Shape](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/e0981eb1ea7e7b3691a5104e59161f342db65c90/releases/1.1.0/validationFiles/mobilitydcat-ap_shacl_shapes.ttl#L233) is a SHACL node shape that defines the structure and constraints for the [mobilitydcatap:Assessment](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment) class. See [example](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/releases/1.1.0/validationFiles/assessment_shape_examples.ttl) for validation.
+
+- 
 - The [Catalogue_Shape](catalogue_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:Catalog](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue) class.
 - The [CatalogRecord_Shape](catalog_record_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dcat:CatalogRecord](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue-record) class. 
 - The [Category_Shape](category_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [skos:Concept](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-category) class.
