@@ -79,13 +79,13 @@ var respecConfig = {
 //    prEnd:"2020-12-23",
     shortName: "mobility-ap",
     canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
-    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.0.1/",
+    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* MOBILITYDCAT-AP specific - start */
-    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
-    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.0.1/",
+    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
+    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
     latestVersionURI:     "https://w3id.org/mobilitydcat-ap/releases/",
 /* MOBILITYDCAT-AP specific - end   */
     edDraftURI:           "https://w3id.org/mobilitydcat-ap/drafts/latest/",
@@ -141,7 +141,7 @@ var respecConfig = {
       data: [
       {
 //        value: "0.2"
-        value: "1.1.0"
+        value: "3.0.0"
       }
       ]
     },
