@@ -377,12 +377,17 @@ var respecConfig = {
         "date":"2005"
       },
       "GEODCAT-AP-v2.0.0":{
-        "href":"https://semiceu.github.io/GeoDCAT-AP/releases/",
+        "href":"https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
         "title":"GeoDCAT-AP - Version 2.0.0",
         "publisher":"European Commission",
         "date":"23 December 2020"
       },
-
+      "GEODCAT-AP-v3.0.0":{
+        "href":"https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
+        "title":"GeoDCAT-AP - Version 3.0.0",
+        "publisher":"European Commission",
+        "date":"04 October 2024"
+      },
       "GeoDCAT-ACV":{
         "href":"https://joinup.ec.europa.eu/node/148245/",
         "title":"Joinup. GeoDCAT-AP: Alignment of controlled vocabularies",
