@@ -245,6 +245,18 @@ var respecConfig = {
         "authors":["DataCite Metadata Working Group"],
         "date":"3 February 2016"
       },
+      "DCAT-v3":{
+        "href":"https://www.w3.org/TR/vocab-dcat-3/",
+        "title":"Data Catalog Vocabulary (DCAT) - Version 3",
+        "publisher":"W3C Recommendation",
+        "date":"22 August 2024"
+       },
+      "DCAT-AP-v3.0.0":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0",
+        "title":"DCAT Application Profile for data portals in Europe. Version 3.0.0.",
+        "publisher":"European Commission",
+        "date":"14 June 2024"
+       },
 
       "DCAT-AP-v2.0.1":{
         "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0",
@@ -273,16 +285,12 @@ var respecConfig = {
         "publisher":"European Commission",
 //        "date":"2016"
       },
-
       "DCAT-AP-HVD": {
         "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
         "title":"Usage guidelines of DCAT-AP for High-Value Datasets",
         "publisher":"European Commission",
         "date":"19 June 2023"
       },
-
-
-
     "DC-UG-PM": {
         "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
         "title":"Dublin Core™ User Guide: Publishing Metadata",
@@ -290,7 +298,6 @@ var respecConfig = {
         "publisher":"Dublin Core Metadata Initiative",
 //        "date":"9 March 2007"
       },
-
       "ELI": {
         "href":"https://eur-lex.europa.eu/eli-register/eu_publications_office.html",
         "title":"European Legislation Identifier (ELI) system",
@@ -369,7 +376,6 @@ var respecConfig = {
         "status":"Namespace Document",
         "date":"2005"
       },
-
       "GEODCAT-AP-v2.0.0":{
         "href":"https://semiceu.github.io/GeoDCAT-AP/releases/",
         "title":"GeoDCAT-AP - Version 2.0.0",
