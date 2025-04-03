@@ -6,7 +6,7 @@ mobilityDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solutio
 
 mobilityDCAT-AP is an initiative of the [NAPCORE (National Access Point Coordination Organisation for Europe)](https://napcore.eu/), a formed organisation to coordinate and harmonise more than 30 mobility data platforms across Europe.
 
-The latest version of the mobilityDCAT-AP (v1.0.0) is available:
+The latest version of the mobilityDCAT-AP is available:
 
 [https://w3id.org/mobilitydcat-ap/releases/](https://w3id.org/mobilitydcat-ap/releases/)
 
@@ -29,4 +29,4 @@ The guidelines about the mobilityDCAT-AP specification are available at [mobilit
 Additional mobilityDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations). -->
 
 ## Licence
-Copyright © 2023 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the mobilityDCAT-AP repository on GitHub.
+Copyright © 2025 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the mobilityDCAT-AP repository on GitHub.
