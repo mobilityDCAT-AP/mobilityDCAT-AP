@@ -121,20 +121,22 @@ table code, table pre {
 <p>Comparing mobilityDCAT-AP to [[DCAT-AP-v3.0.0]], the following edits have been made:</p>
 
 <ul>
-<li>Introduction of new classes</li>
+<li>Addition of classes, including the creation of new classes under the mobilityDCAT-AP namespace</li>
 <li>Change to obligation levels for some existing classes in DCAT-AP</li>
-<li>Addition of new properties to existing classes in DCAT-AP, including newly created properties</li>
-<li>Change to obligation levels for some  existing properties in DCAT-AP</li>
+<li>Addition of properties to existing classes in DCAT-AP, including the creation of new properties under the mobilityDCAT-AP namespace</li>
+<li>Change to obligation levels for some existing properties in DCAT-AP</li>
 <li>Removal of certain optional or recommended properties from DCAT-AP</li>
-<li>Refinement of usage notes for existing classes and properties from DCAT-AP, to address the special considerations in the context of mobility data portals</li>
-<li>Reference to additional controlled vocabularies, including newly created controlled vocabularies</li>
+<li>Refinement of usage notes for existing classes and properties from DCAT-AP/li>
+<li>Reference to additional controlled vocabularies, including the creation of new controlled vocabularies</li>
 </ul>
-<p>The class and property additions aim to capture some specific characteristics and features of mobility data, when exposed on NAPs and mobility data portals.</p>
-<p>Some of these class and property additions align with the parallel DCAT-AP extension [[GEODCAT-AP-v3.0.0]], enabling compatibility between the two extensions in terms of class and property additions. </p>
+
+<p>Some of the class and property additions align with the parallel DCAT-AP extension [[GEODCAT-AP-v3.0.0]], enabling compatibility between the two extensions in terms of class and property additions. </p>
 <p>All classes and property additions are marked with a prepended &ldquo;plus&rdquo; sign (+) in this document, and summarised in the reference table in <a class="no-secRef" href="#mobilitydcat-ap-classes-and-properties"></a>.</p>
 <p>The removal of optional or recommended properties from DCAT-AP aims to minimise the vocabulary size of mobilityDCAT-AP, avoiding any misinterpretations and multiple usage of properties among data senders.</p>
 <p>Properties removed from [[DCAT-AP-v3.0.0]] are marked with a prepended &ldquo;minus&rdquo; sign (-).
 
+<p>These edits aim to capture some specific characteristics and features of mobility data, when exposed on NAPs and mobility data portals. Thus, they are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
+  
 </section>
 
 </section>
@@ -212,16 +214,6 @@ table code, table pre {
 <section id="overview">
 
 <h3>mobilityDCAT-AP Overview</h3>
-
-<p>mobilityDCAT-AP extends [[DCAT-AP-v2.0.1]] by including:</p>
-
-<ul>
-<li>additional classes and properties (marked with a prepended &ldquo;plus&rdquo; sign (+) in this document, and summarised in <a class="no-sectionRef" href="#mobilitydcat-ap-classes-and-properties"></a>);</li>
-<li>additional recommendations on the use of classes and properties (documented in <a class="no-sectionRef" href="#classes"></a> and <a class="no-sectionRef" href="#properties"></a>);</li>
-<li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-v2.0.1]]).</li>
-</ul>
-
-<p>These extensions are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
 
 <p>For a first orientation in mobilityDCAT-AP, these four central classes should be considered: <a href="#catalogue"><code>dcat:Catalogue</code></a>, <a href="#catalogue-record"><code>dcat:CatalogRecord</code></a>, <a href="#dataset"><code>dcat:Dataset</code></a> and <a href="#distribution"><code>dcat:Distribution</code></a>; as well as the properties connecting these four classes. </p>
 
