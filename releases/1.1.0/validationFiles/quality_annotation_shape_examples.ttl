@@ -1,0 +1,98 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#=============================================================
+# WHAT IS A QUALITY ANNOTATION?
+#=============================================================
+# A Quality Annotation in mobilityDCAT-AP provides information about the
+# quality of mobility data. It uses the W3C Data Quality Vocabulary (DQV)
+# to describe quality metrics like accuracy, completeness, and timeliness.
+# Quality annotations help data consumers understand the reliability and
+# limitations of the data they're using.
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Quality Annotation with Detailed Text Body
+# This example shows a quality annotation with a multi-line text description
+:TrafficFlowQuality a dqv:QualityAnnotation ;
+    # Detailed quality metrics as a literal text string
+    oa:hasBody """Traffic flow data quality metrics:
+        - Data freshness: 3-minute update interval
+        - Spatial coverage: 98.5% of monitored road segments
+        - Accuracy: 95% validated against floating car data
+        - Completeness: 99.2% of expected measurements received"""@en ;
+    
+    # Reference to the dataset this quality information applies to
+    oa:hasTarget :FraunhoferTrafficDataset .
+
+# The referenced dataset
+:FraunhoferTrafficDataset a dcat:Dataset .
+
+# ✅ EXAMPLE 2: Quality Annotation with Report Links in Text
+# This example shows quality information with URLs embedded in the text
+:PublicTransportQuality a dqv:QualityAnnotation ;
+    oa:hasBody """KVB Real-time Data Quality Report:
+        - Real-time arrival predictions available for 97% of stops
+        - Update frequency: 30 seconds
+        - Average prediction accuracy: ±2 minutes
+        - Service disruption reporting within 60 seconds
+        For detailed reports visit: https://opendata.cologne.de/dataset/kvb-realtime-quality"""@en ;
+    oa:hasTarget :CologneTransitDataset .
+
+# The referenced dataset
+:CologneTransitDataset a dcat:Dataset .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 3: Invalid Body Type
+# This is invalid because hasBody must be a literal string, not a URI
+:InvalidPublicTransportQuality a dqv:QualityAnnotation ;
+    # hasBody must be a literal string, not a URI
+    oa:hasBody <https://opendata.cologne.de/dataset/kvb-realtime-quality> ;
+    oa:hasTarget :CologneTransitDataset .
+
+# ❌ EXAMPLE 4: Multiple Body Values
+# This is invalid because only one hasBody property is allowed
+:InvalidParkingQuality a dqv:QualityAnnotation ;
+    # Multiple hasBody values violate maxCount 1 constraint
+    oa:hasBody <https://parking.data.de/quality/technical>,
+               <https://parking.data.de/quality/business> ;
+    oa:hasTarget :ParkingDataset .
+
+# Referenced dataset
+:ParkingDataset a dcat:Dataset .
+
+# ❌ EXAMPLE 5: Multiple Target Datasets
+# This is invalid because only one hasTarget property is allowed
+:InvalidBikeShareQuality a dqv:QualityAnnotation ;
+    oa:hasBody "95% availability rate" ;
+    # Multiple targets violate maxCount 1 constraint
+    oa:hasTarget :BikeShareDataset1,
+                 :BikeShareDataset2 .
+
+# Referenced datasets
+:BikeShareDataset1 a dcat:Dataset .
+:BikeShareDataset2 a dcat:Dataset .
+
+# ❌ EXAMPLE 6: Invalid Target Type
+# This is invalid because hasTarget must reference a dataset resource
+:InvalidTrafficSignalQuality a dqv:QualityAnnotation ;
+    oa:hasBody "Signal timing accuracy: ±2 seconds"@en ;
+    # Target must be a dcat:Dataset resource, not a literal string
+    oa:hasTarget "TrafficSignalSystem" .
+
+#=============================================================
+# VALIDATION RULES SUMMARY
+#=============================================================
+# 1. oa:hasBody MUST have at most one value (maxCount 1)
+# 2. oa:hasBody SHOULD be a literal string, typically with language tag
+# 3. oa:hasTarget MUST have at most one value (maxCount 1)
+# 4. oa:hasTarget MUST reference a dcat:Dataset resource
+# 5. Both oa:hasBody and oa:hasTarget are recommended for complete annotations
