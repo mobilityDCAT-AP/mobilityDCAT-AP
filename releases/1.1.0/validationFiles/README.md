@@ -31,7 +31,7 @@ Each class in the mobilityDCAT-AP specification has corresponding validation sha
 |-------|--------------|------------------|--------------|
 | **Assessment** | [mobilitydcatap:Assessment](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment) | [Assessment_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [assessment_shape](assessment_shape_examples.ttl) |
 | **Category** | [skos:Concept](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-category) | [Category_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [category_shape](category_shape_examples.ttl) |
-| **Location** | [dct:Location](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-location) | [Location_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [location_shape.ttl](location_shape.ttl) |
+| **Location** | [dct:Location](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-location) | [Location_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [location_shape](location_shape_examples.ttl) |
 | **Mobility Data Standard** | [mobilitydcatap:MobilityDataStandard](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-mobility-data-standard) | [MobilityDataStandard_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [mobility_data_standard](mobility_data_standard_shape_examples.ttl) |
 
 ### Rights and Quality Information
