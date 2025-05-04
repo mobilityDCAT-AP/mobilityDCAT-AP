@@ -23,16 +23,16 @@ Each class in the mobilityDCAT-AP specification has corresponding validation sha
 |-------|--------------|------------------|--------------|
 | **Agent** | [foaf:Agent](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-agent) | [Agent_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [agent_shape](agent_shape_examples.ttl) |
 | **Address** | [locn:Address](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-address-agent) | [Address_Agent_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [address_agent](address_agent_examples.ttl) |
-| **Kind (Contact)** | [vcard:Kind](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-kind) | [Kind_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [kind_shape](kind_shape.ttl) |
+| **Kind (Contact)** | [vcard:Kind](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-kind) | [Kind_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [kind_shape](kind_shape_examples.ttl) |
 
 ### Metadata and Standards
 
 | Class | Documentation | Shape Definition | Example Files |
 |-------|--------------|------------------|--------------|
-| **Assessment** | [mobilitydcatap:Assessment](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment) | [Assessment_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [assessment_shape_examples.ttl](assessment_shape_examples.ttl) |
-| **Category** | [skos:Concept](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-category) | [Category_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [category_shape_examples.ttl](category_shape_examples.ttl) |
+| **Assessment** | [mobilitydcatap:Assessment](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-assessment) | [Assessment_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [assessment_shape](assessment_shape_examples.ttl) |
+| **Category** | [skos:Concept](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-category) | [Category_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [category_shape](category_shape_examples.ttl) |
 | **Location** | [dct:Location](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-location) | [Location_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [location_shape.ttl](location_shape.ttl) |
-| **Mobility Data Standard** | [mobilitydcatap:MobilityDataStandard](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-mobility-data-standard) | [MobilityDataStandard_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [mobility_data_standard_shape.ttl](mobility_data_standard_shape.ttl) |
+| **Mobility Data Standard** | [mobilitydcatap:MobilityDataStandard](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-mobility-data-standard) | [MobilityDataStandard_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [mobility_data_standard](mobility_data_standard_shape_examples.ttl) |
 
 ### Rights and Quality Information
 
