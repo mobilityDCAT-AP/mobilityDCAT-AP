@@ -1,0 +1,74 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#=============================================================
+# WHAT IS A RIGHTS STATEMENT?
+#=============================================================
+# A Rights Statement in mobilityDCAT-AP describes the terms and conditions
+# under which mobility data can be accessed and used. It provides information
+# about licenses, access conditions, and usage restrictions. Rights statements
+# help data consumers understand what they are permitted to do with the data.
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Open Data Rights Statement
+# This example shows a rights statement for openly licensed data
+:CologneTrafficRights a dct:RightsStatement ;
+    # Mandatory property linking to a controlled vocabulary term
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/open-data-license> ;
+    
+    # Human-readable description in multiple languages
+    rdfs:label "Free access under CC BY 4.0 with attribution to City of Cologne"@en,
+              "Freier Zugang unter CC BY 4.0 mit Namensnennung der Stadt Köln"@de .
+
+# ✅ EXAMPLE 2: Commercial License Rights Statement
+# This example shows a rights statement for commercially licensed data
+:FraunhoferMobilityRights a dct:RightsStatement ;
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/commercial-license> ;
+    rdfs:label "Commercial license required. Contact mobility.data@fit.fraunhofer.de for access"@en,
+              "Kommerzielle Lizenz erforderlich. Kontaktieren Sie mobility.data@fit.fraunhofer.de für Zugang"@de .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 3: Missing Type Property
+# This is invalid because the type property is mandatory
+:MunichTransitRights a dct:RightsStatement ;
+    # Missing the mandatory dct:type property
+    rdfs:label "MVG open data terms of use apply"@en,
+              "MVG Open Data Nutzungsbedingungen gelten"@de .
+
+# ❌ EXAMPLE 4: Wrong URI Pattern for Type
+# This is invalid because it uses a non-standard URI pattern
+:BerlinMobilityRights a dct:RightsStatement ;
+    # Should use the standard mobilityDCAT-AP vocabulary URI pattern
+    dct:type <http://example.org/berlin-mobility-license> ;
+    rdfs:label "Berlin Mobility Hub data access terms"@en .
+
+# ❌ EXAMPLE 5: Multiple Type Values
+# This is invalid because only one type value is allowed
+:HamburgPortRights a dct:RightsStatement ;
+    # Only one type value is allowed (maxCount 1)
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/research-use>,
+             <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/commercial-use> ;
+    rdfs:label "Hamburg Port Authority mixed usage conditions"@en .
+
+# ❌ EXAMPLE 6: Non-Literal Label
+# This is invalid because label must be a literal string
+:DusseldorfTrafficRights a dct:RightsStatement ;
+    dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/open-data-license> ;
+    # Label must be a literal string with language tag, not a URI
+    rdfs:label <http://example.org/terms> .
+
+#=============================================================
+# VALIDATION RULES SUMMARY
+#=============================================================
+# 1. MANDATORY: Each rights statement MUST have dct:type
+# 2. dct:type MUST have exactly one value (maxCount 1)
+# 3. dct:type MUST use the controlled vocabulary URI pattern from mobilityDCAT-AP
+# 4. If used, rdfs:label MUST be a literal string, typically with language tag
+# 5. Multiple language versions of rdfs:label are allowed
