@@ -13,9 +13,9 @@ Each class in the mobilityDCAT-AP specification has corresponding validation sha
 | Class | Documentation | Shape Definition | Example Files |
 |-------|--------------|------------------|--------------|
 | **Catalog** | [dcat:Catalog](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue) | [Catalogue_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [catalogue_shape_examples.ttl](catalogue_shape_examples.ttl) |
-| **Catalog Record** | [dcat:CatalogRecord](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue-record) | [CatalogRecord_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [catalog_record_shape_examples.ttl](catalog_record_shape_examples.ttl) |
-| **Dataset** | [dcat:Dataset](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-dataset) | [Dataset_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [dataset_shape.ttl](dataset_shape_examples.ttl) |
-| **Distribution** | [dcat:Distribution](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-distribution) | [Distribution_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [distribution_shape.ttl](distribution_shape_examples.ttl) |
+| **Catalog Record** | [dcat:CatalogRecord](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue-record) | [CatalogRecord_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [catalog_record_shape](catalog_record_shape_examples.ttl) |
+| **Dataset** | [dcat:Dataset](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-dataset) | [Dataset_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [dataset_shape](dataset_shape_examples.ttl) |
+| **Distribution** | [dcat:Distribution](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-distribution) | [Distribution_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [distribution_shape](distribution_shape_examples.ttl) |
 
 ### Agents and Contact Information
 
