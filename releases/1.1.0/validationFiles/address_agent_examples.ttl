@@ -1,61 +1,85 @@
 @prefix : <http://w3id.org/mobilitydcat-ap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Scenarios Based on the SHACL Shape
+#=============================================================
+# WHAT IS AN ADDRESS?
+#=============================================================
+# An Address in mobilityDCAT-AP represents a physical location using the 
+# locn:Address class. Addresses are used to provide location information
+# for organizations, contact points, and other entities. The Address class
+# follows the European INSPIRE standard for addresses.
 
-# Correct Example (All Properties Present)
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Complete Address Without Data Types
+# This example shows a fully specified address with all recommended properties
 :CologneHistoricalDistrictAddress a locn:Address ;
-    locn:adminUnitL2 "Nordrhein-Westfalen" ;
-    locn:postName "Köln" ;
+    # Country (Level 1 administrative unit)
     locn:adminUnitL1 "Deutschland" ;
+    
+    # State/Region/Province (Level 2 administrative unit)
+    locn:adminUnitL2 "Nordrhein-Westfalen" ;
+    
+    # City/Town/Village name
+    locn:postName "Köln" ;
+    
+    # Postal/ZIP code
     locn:postCode "50667" ;
+    
+    # Street address including number
     locn:thoroughfare "Hohe Straße 85" .
 
+# ✅ EXAMPLE 2: Complete Address With Explicit Data Types
+# This example shows the same structure but with explicitly typed string literals
 :CologneEigelsteinQuarterAddress a locn:Address ;
+    locn:adminUnitL1 "Deutschland"^^xsd:string ;
     locn:adminUnitL2 "Nordrhein-Westfalen"^^xsd:string ;
     locn:postName "Köln"^^xsd:string ;
-    locn:adminUnitL1 "Deutschland"^^xsd:string ;
     locn:postCode "50668"^^xsd:string ;
     locn:thoroughfare "Eigelstein 115"^^xsd:string .
 
-# Example with Organization Address
+# ✅ EXAMPLE 3: Address Used Within an Organization
+# This example shows how an address is typically used within an Agent
 :organization_123 a foaf:Agent ;
-  locn:address [
-    a locn:Address ;
-    locn:adminUnitL1 "Belgium" ;
-    locn:adminUnitL2 "Brussels-Capital Region" ;
-    locn:postName "Brussels" ;
-    locn:postCode "1000" ;
-    locn:thoroughfare "Rue de la Loi 56" ;
-  ] .
+    # Address as a blank node within the Agent
+    locn:address [
+        a locn:Address ;
+        locn:adminUnitL1 "Belgium" ;
+        locn:adminUnitL2 "Brussels-Capital Region" ;
+        locn:postName "Brussels" ;
+        locn:postCode "1000" ;
+        locn:thoroughfare "Rue de la Loi 56"
+    ] .
 
-# the only potential invalid scenarios are:
-# Multiple Values: Any property having more than one value (due to sh:maxCount 1).
-# Incorrect Data Type: Any property value not being of the type a literal.
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
 
-# Example 1: Multiple values violation
+# ❌ EXAMPLE 4: Multiple Values for a Property
+# This is invalid because each property can have at most one value
 :MunichCityHallAddressInvalid1 a locn:Address ;
-    locn:adminUnitL2 "Bavaria", "Saxony" ; # Invalid: Multiple values
+    # Multiple values violate maxCount 1 constraint
+    locn:adminUnitL2 "Bavaria", "Saxony" ;
     locn:postName "Munich" ;
     locn:adminUnitL1 "Germany" ;
     locn:postCode "80331" ;
     locn:thoroughfare "Marienplatz 8" .
 
-# Example 2: Non-literal values violation
+# ❌ EXAMPLE 5: Non-Literal Values
+# This is invalid because property values must be literals
 :MunichCityHallAddressInvalid2 a locn:Address ;
-    locn:adminUnitL2 <http://example.org/Bavaria> ; # Invalid: Not a literal
+    # URI instead of a literal string
+    locn:adminUnitL2 <http://example.org/Bavaria> ;
     locn:postName "Munich" ;
     locn:adminUnitL1 "Germany" ;
-    locn:postCode 80331 ; # Invalid: Not a string literal
+    # Number instead of string literal
+    locn:postCode 80331 ;
     locn:thoroughfare "Marienplatz 8" .
 
-# Example 3: Blank node violation
-:MunichCityHallAddressInvalid3 a locn:Address ;
-    locn:adminUnitL2 [ a skos:Concept ; skos:prefLabel "Bavaria" ] ; # Invalid: Blank node
-    locn:postName "Munich" ;
-    locn:adminUnitL1 "Germany" ;
-    locn:postCode "80331" ;
-    locn:thoroughfare "Marienplatz 8" .
+# ❌ EXAMPLE 6: Blank Node Property Values
+# This is invalid because property values must be simple literals
+:MunichCityHallAddressInvalid3 a locn:Address
