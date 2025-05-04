@@ -1,0 +1,113 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+#=============================================================
+# WHAT IS A KIND (CONTACT)?
+#=============================================================
+# A Kind in mobilityDCAT-AP represents contact information related to 
+# mobility datasets or services. It uses the vCard vocabulary to provide
+# structured contact details like email, phone, address, and organization name.
+# Contacts are essential for users to get support or additional information
+# about mobility data.
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Complete Contact Information
+# This example shows a fully specified contact with all recommended properties
+:CologneTrafficContact a vcard:Kind ;
+    # Mandatory email address for contacting the organization
+    vcard:hasEmail <mailto:verkehrsmanagement@stadt-koeln.de> ;
+    
+    # Full name of the contact/department (in multiple languages)
+    vcard:fn "Amt für Verkehrsmanagement"@de,
+             "Office of Traffic Management"@en ;
+    
+    # Website URL for more information
+    vcard:hasURL <https://www.stadt-koeln.de/verkehr> ;
+    
+    # Structured postal address
+    vcard:hasAddress [
+        a vcard:Address ;
+        vcard:street-address "Willy-Brandt-Platz 2" ;
+        vcard:postal-code "50679" ;
+        vcard:locality "Köln" ;
+        vcard:country-name "Deutschland"
+    ] ;
+    
+    # Organization name (maximum of one allowed)
+    vcard:organization-name "Stadt Köln"@de ;
+    
+    # Telephone number (must use tel: URI scheme)
+    vcard:hasTelephone <tel:+4922122123333> .
+
+# ✅ EXAMPLE 2: Minimal Valid Contact
+# This example shows the minimum required properties for a valid contact
+:MinimalContact a vcard:Kind ;
+    # Only email and full name are mandatory
+    vcard:hasEmail <mailto:info@mobility.de> ;
+    vcard:fn "Mobility Data Team" .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 3: Multiple Organization Names
+# This is invalid because only one organization name is allowed
+:InvalidMultipleOrgNames a vcard:Kind ;
+    vcard:hasEmail <mailto:info@example.org> ;
+    vcard:fn "Contact Team" ;
+    # Only one organization name is allowed (maxCount 1)
+    vcard:organization-name "Verkehrsverbund"@de, 
+                            "Transport Association"@en .
+
+# ❌ EXAMPLE 4: Missing Mandatory Email
+# This is invalid because email is mandatory
+:InvalidMissingEmail a vcard:Kind ;
+    # Missing the mandatory vcard:hasEmail property
+    vcard:fn "NRW Transport Data Team" ;
+    vcard:organization-name "Verkehrsverbund Rhein-Ruhr" .
+
+# ❌ EXAMPLE 5: Invalid Email Format
+# This is invalid because email must use mailto: URI scheme
+:InvalidEmailFormat a vcard:Kind ;
+    # Email must be a mailto: URI, not a plain string
+    vcard:hasEmail "mobility@example.com" ;
+    vcard:fn "Regional Mobility Team" .
+
+# ❌ EXAMPLE 6: Multiple URLs
+# This is invalid because only one URL is allowed
+:InvalidMultipleURLs a vcard:Kind ;
+    vcard:hasEmail <mailto:info@mobility.de> ;
+    vcard:fn "Mobility Services" ;
+    # Only one URL is allowed (maxCount 1)
+    vcard:hasURL <https://mobility.de>,
+                <https://mobility.de/contact> .
+
+# ❌ EXAMPLE 7: Invalid Address Format
+# This is invalid because address must be a vcard:Address instance
+:InvalidAddressFormat a vcard:Kind ;
+    vcard:hasEmail <mailto:contact@transport.de> ;
+    vcard:fn "Transport Data Team" ;
+    # Address must be a vcard:Address instance, not a literal string
+    vcard:hasAddress "Hauptstraße 1, Berlin" .
+
+# ❌ EXAMPLE 8: Multiple Phone Numbers
+# This is invalid because only one phone number is allowed
+:InvalidMultiplePhones a vcard:Kind ;
+    vcard:hasEmail <mailto:support@traffic.de> ;
+    vcard:fn "Traffic Management Support" ;
+    # Only one phone number is allowed (maxCount 1)
+    vcard:hasTelephone <tel:+49301234567>,
+                      <tel:+49301234568> .
+
+#=============================================================
+# VALIDATION RULES SUMMARY
+#=============================================================
+# 1. MANDATORY: Each contact MUST have vcard:hasEmail (using mailto: scheme)
+# 2. MANDATORY: Each contact MUST have vcard:fn (full name)
+# 3. vcard:organization-name MUST have at most one value (maxCount 1)
+# 4. vcard:hasURL MUST have at most one value (maxCount 1)
+# 5. vcard:hasTelephone MUST have at most one value (maxCount 1) and use tel: scheme
+# 6. vcard:hasAddress MUST link to a vcard:Address instance, not a literal
