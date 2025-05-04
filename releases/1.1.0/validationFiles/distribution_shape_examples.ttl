@@ -1,0 +1,112 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#=============================================================
+# WHAT IS A DISTRIBUTION?
+#=============================================================
+# A Distribution in mobilityDCAT-AP represents a specific form in which a 
+# mobility dataset is made available. It extends DCAT-AP Distribution with
+# properties specific to mobility data, such as data standards, communication
+# methods, and application protocols. Each dataset can have multiple distributions,
+# representing different formats or access methods.
+
+#=============================================================
+# VALID EXAMPLES
+#=============================================================
+
+# ✅ EXAMPLE 1: Complete Distribution with All Key Properties
+# This example shows a real-time traffic data distribution with all key properties
+:CologneTrafficDistribution a dcat:Distribution ;
+    # Mandatory property - specifies the mobility data standard used
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    
+    # Protocol used for accessing the data
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/mqtt> ;
+    
+    # Character encoding of the data
+    cnt:characterEncoding "UTF-8" ;
+    
+    # Whether data is pushed to consumers or pulled by them
+    mobilitydcatap:communicationMethod <https://w3id.org/mobilitydcat-ap/communication-method/push> ;
+    
+    # Additional notes about the data format
+    mobilitydcatap:dataFormatNotes "DATEX II v3.3 with urban traffic extensions"@en ;
+    
+    # Grammar/syntax used for the data
+    mobilitydcatap:grammar <https://w3id.org/mobilitydcat-ap/grammar/xml> ;
+    
+    # Sample of the data
+    adms:sample <https://open.nrw/cologne/traffic/sample> ;
+    
+    # Time period the distribution covers
+    dct:temporal [
+        a dct:PeriodOfTime ;
+        dct:start "2024-01-01T00:00:00Z"^^xsd:dateTime
+    ] .
+
+# ✅ EXAMPLE 2: Distribution with Full Temporal Coverage
+# This example shows a distribution with both start and end dates in the temporal coverage
+:ValidDistribution a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;  # Must be explicitly typed as dct:PeriodOfTime
+        dct:start "2024-01-01T00:00:00Z"^^xsd:dateTime ;
+        dct:end "2024-12-31T23:59:59Z"^^xsd:dateTime
+    ] .
+
+# ✅ EXAMPLE 3: Distribution with Named Time Period Reference
+# This example shows how to reference a named time period
+:NRWTransitDistribution a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs> ;
+    dct:temporal <https://mobility.fraunhofer.de/temporal/2024-annual> .
+
+# The referenced time period defined elsewhere
+<https://mobility.fraunhofer.de/temporal/2024-annual> a dct:PeriodOfTime ;
+    dct:start "2024-01-01T00:00:00Z"^^xsd:dateTime ;
+    dct:end "2024-12-31T23:59:59Z"^^xsd:dateTime .
+
+#=============================================================
+# INVALID EXAMPLES
+#=============================================================
+
+# ❌ EXAMPLE 4: Missing Mandatory Standard
+# This is invalid because mobilityDataStandard is mandatory
+:InvalidDistribution1 a dcat:Distribution ;
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/http> .
+    # Missing the mandatory mobilityDataStandard property
+
+# ❌ EXAMPLE 5: Invalid Standard Pattern
+# This is invalid because the standard must use the controlled vocabulary URI pattern
+:InvalidDistribution2 a dcat:Distribution ;
+    # Standard must use the official mobilityDCAT-AP vocabulary URI pattern
+    mobilitydcatap:mobilityDataStandard <http://example.org/standards/datex> ;
+    mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/http> .
+
+# ❌ EXAMPLE 6: Multiple Character Encodings
+# This is invalid because only one character encoding is allowed
+:InvalidDistribution3 a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    # Only one character encoding is allowed (maxCount 1)
+    cnt:characterEncoding "UTF-8", 
+                         "ASCII" .
+
+# ❌ EXAMPLE 7: Invalid Temporal Coverage
+# This is invalid because temporal must be a dct:PeriodOfTime instance
+:InvalidDistribution4 a dcat:Distribution ;
+    mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex2> ;
+    # Temporal must be a dct:PeriodOfTime instance, not a literal string
+    dct:temporal "2024-01-01/2024-12-31" .
+
+#=============================================================
+# VALIDATION RULES SUMMARY
+#=============================================================
+# 1. MANDATORY: Each distribution MUST have mobilitydcatap:mobilityDataStandard
+# 2. mobilityDataStandard values MUST use the controlled vocabulary from mobilityDCAT-AP
+# 3. If used, dct:temporal MUST link to a dct:PeriodOfTime resource with proper dates
+# 4. If used, cnt:characterEncoding MUST have at most one value (maxCount 1)
+# 5. All URIs MUST follow the appropriate patterns for controlled vocabularies
