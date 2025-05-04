@@ -12,7 +12,7 @@ Each class in the mobilityDCAT-AP specification has corresponding validation sha
 
 | Class | Documentation | Shape Definition | Example Files |
 |-------|--------------|------------------|--------------|
-| **Catalog** | [dcat:Catalog](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue) | [Catalogue_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [catalogue_shape_examples.ttl](catalogue_shape_examples.ttl) |
+| **Catalog** | [dcat:Catalog](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue) | [Catalogue_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [catalogue_shape](catalogue_shape_examples.ttl) |
 | **Catalog Record** | [dcat:CatalogRecord](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-catalogue-record) | [CatalogRecord_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [catalog_record_shape](catalog_record_shape_examples.ttl) |
 | **Dataset** | [dcat:Dataset](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-dataset) | [Dataset_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [dataset_shape](dataset_shape_examples.ttl) |
 | **Distribution** | [dcat:Distribution](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-distribution) | [Distribution_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [distribution_shape](distribution_shape_examples.ttl) |
@@ -21,9 +21,9 @@ Each class in the mobilityDCAT-AP specification has corresponding validation sha
 
 | Class | Documentation | Shape Definition | Example Files |
 |-------|--------------|------------------|--------------|
-| **Agent** | [foaf:Agent](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-agent) | [Agent_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [agent_shape_examples.ttl](agent_shape_examples.ttl) |
-| **Address** | [locn:Address](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-address-agent) | [Address_Agent_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [address_agent_examples.ttl](address_agent_examples.ttl) |
-| **Kind (Contact)** | [vcard:Kind](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-kind) | [Kind_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [kind_shape.ttl](kind_shape.ttl) |
+| **Agent** | [foaf:Agent](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-agent) | [Agent_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [agent_shape](agent_shape_examples.ttl) |
+| **Address** | [locn:Address](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-address-agent) | [Address_Agent_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [address_agent](address_agent_examples.ttl) |
+| **Kind (Contact)** | [vcard:Kind](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-kind) | [Kind_Shape](mobilitydcat-ap_shacl_shapes.ttl) | [kind_shape](kind_shape.ttl) |
 
 ### Metadata and Standards
 
