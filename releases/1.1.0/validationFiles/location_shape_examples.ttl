@@ -46,16 +46,23 @@
                   "Cologne"@en,
                   "Colonia"@es .
 
-# ✅ EXAMPLE 4: Location with URI Identifier
-# This example shows a location using a URI as an identifier
+# ✅ EXAMPLE 4: Location with HTTP URI Identifier
+# This example shows a location using an HTTP URI as an identifier
 :NRWLocation a dct:Location ;
     skos:inScheme :EUNUTSRegions ;
-    # URI can be used as an identifier
+    # URI can be used as an identifier (HTTP protocol)
     dct:identifier <http://data.europa.eu/nuts/code/DEA> ;
     skos:prefLabel "Nordrhein-Westfalen"@de,
                   "North Rhine-Westphalia"@en .
 
-# ✅ EXAMPLE 5: Minimal Valid Location
+# ✅ EXAMPLE 5: Location with HTTPS URI Identifier
+# This example shows a location using an HTTPS URI as an identifier (both protocols supported)
+:GeoNamesLocation a dct:Location ;
+    # HTTPS protocol is now fully supported
+    dct:identifier <https://sws.geonames.org/13192441/> ;
+    skos:prefLabel "Berlin Airport"@en .
+
+# ✅ EXAMPLE 6: Minimal Valid Location
 # This example shows the minimum properties needed for a valid location
 :SanktAugustinLocation a dct:Location ;
     # Only an identifier is required
@@ -65,43 +72,47 @@
 # INVALID EXAMPLES
 #=============================================================
 
-# ❌ EXAMPLE 6: Multiple Gazetteer References
-# This is invalid because a location can only reference one concept scheme
+# ⚠️ EXAMPLE 7: Multiple Gazetteer References
+# This will produce a warning because a location should reference only one concept scheme
 :InvalidBonnLocation a dct:Location ;
-    # Only one concept scheme reference is allowed (maxCount 1)
+    # Only one concept scheme reference is recommended (maxCount 1)
     skos:inScheme :GermanMunicipalityRegister ;
     skos:inScheme :EUNUTSRegions ;
     dct:identifier "05314000" ;
     skos:prefLabel "Bonn"@de .
 
-# ❌ EXAMPLE 7: Non-literal Label
-# This is invalid because prefLabel must be a literal string
+# ⚠️ EXAMPLE 8: Non-literal Label
+# This will produce a warning because prefLabel should be a literal string
 :InvalidDusseldorfLocation a dct:Location ;
     skos:inScheme :GermanMunicipalityRegister ;
     dct:identifier "05111000" ;
-    # prefLabel must be a literal string with language tag, not a URI
+    # prefLabel should be a literal string with language tag, not a URI
     skos:prefLabel <http://example.com/city/duesseldorf> .
 
-# ❌ EXAMPLE 8: Invalid Gazetteer Type
-# This is invalid because inScheme must reference a skos:ConceptScheme
+# ⚠️ EXAMPLE 9: Invalid Gazetteer Type
+# This will produce a warning because inScheme should reference a skos:ConceptScheme
 :InvalidAachenLocation a dct:Location ;
-    # inScheme must reference a skos:ConceptScheme resource, not a literal string
+    # inScheme should reference a skos:ConceptScheme resource, not a literal string
     skos:inScheme "German Cities" ;
     dct:identifier "05334002" ;
     skos:prefLabel "Aachen"@de .
 
-# ❌ EXAMPLE 9: Missing Recommended Identifier
+# ✅ EXAMPLE 10: Missing Recommended Identifier
 # This example is technically valid but missing the recommended identifier
 :IncompleteEssenLocation a dct:Location ;
     skos:inScheme :GermanMunicipalityRegister ;
     skos:prefLabel "Essen"@de .
-    # Missing recommended dct:identifier
+    # Missing recommended dct:identifier (will not produce warnings since properties are optional)
 
 #=============================================================
 # VALIDATION RULES SUMMARY
 #=============================================================
 # 1. RECOMMENDED: Each location SHOULD have dct:identifier
-# 2. If used, skos:inScheme MUST link to a skos:ConceptScheme resource
-# 3. skos:inScheme MUST have at most one value (maxCount 1)
-# 4. If used, skos:prefLabel MUST be a literal string with language tag
+# 2. If used, skos:inScheme SHOULD link to a skos:ConceptScheme resource
+# 3. skos:inScheme SHOULD have at most one value (maxCount 1)
+# 4. If used, skos:prefLabel SHOULD be a literal string with language tag
 # 5. ConceptScheme resources SHOULD have rdfs:label properties
+# 6. Authority URLs support both HTTP and HTTPS protocols (e.g., both 
+#    http://sws.geonames.org/ and https://sws.geonames.org/ are valid)
+# 7. All validation rules produce warnings (sh:Warning) rather than errors
+#    since these are recommendations for best practices
