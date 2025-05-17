@@ -1,3 +1,4 @@
+
 @prefix : <http://w3id.org/mobilitydcat-ap#> .
 @prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
@@ -599,6 +600,29 @@
   sh:targetClass dcat:Dataset;
   sh:name "Dataset"@en ;
   sh:property [
+     # Mandatory property for Dataset - accrualPeriodicity
+    sh:path dct:accrualPeriodicity ;
+    sh:minCount 1 ;  # Makes it mandatory
+    sh:maxCount 1 ; 
+    # Flexible validation approach
+    sh:nodeKind sh:IRI ;
+    sh:or (
+      # Try class + pattern validation
+      [
+        sh:class dct:Frequency ;
+        sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/" ;
+      ]
+      # Fall back to just pattern validation
+      [
+        sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/" ;
+      ]
+    ) ;
+    sh:name "accrual periodicity" ;
+    sh:description "This property refers to the frequency at which the dataset is updated. The obligation of this property is raised to 'mandatory' in mobilityDCAT-AP." ;
+    sh:message "ERROR: Missing or invalid accrual periodicity. This is mandatory in mobilityDCAT-AP and must specify how frequently the dataset is updated using a value from http://publications.europa.eu/resource/authority/frequency/"@en ;
+    sh:severity sh:Violation
+  ],
+  [
     # Mandatory property for Dataset
     sh:minCount 1 ;
 	  sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-theme" ;
@@ -893,17 +917,17 @@
   sh:targetClass  dct:Location ;
   sh:name "Location"@en ;
   sh:property [
-    # Recommended property for Location
+    # Recommended property for  Location
     sh:class skos:ConceptScheme ;
     sh:path skos:inScheme ;
     sh:maxCount 1 ;
     sh:name "gazetteer" ;
     sh:description "This property MAY be used to specify the gazetteer to which the Location belongs. " ;
-    sh:message "WARNING: Invalid gazetteer. If provided, this must be a skos:ConceptScheme instance representing the geographic naming system, and you cannot specify more than one."@en ;
-    sh:severity sh:Warning  # Changed from sh:Violation to sh:Warning
+    sh:message "ERROR: Invalid gazetteer. If provided, this must be a skos:ConceptScheme instance representing the geographic naming system, and you cannot specify more than one."@en ;
+    sh:severity sh:Violation
   ],
   [
-    # Recommended property for Location
+    # Recommended property for  Location
     sh:path dct:identifier ;
     sh:or (
         [
@@ -912,57 +936,36 @@
         ]
         [
         sh:nodeKind sh:IRI ;
-        sh:pattern "https://publications.europa.eu/resource/authority/continent" ;
-        ]
-        [
-        sh:nodeKind sh:IRI ;
         sh:pattern "http://publications.europa.eu/resource/authority/country" ;
         ]
-        [
-        sh:nodeKind sh:IRI ;
-        sh:pattern "https://publications.europa.eu/resource/authority/country" ;
-        ]
-        [
+	[
         sh:nodeKind sh:IRI ;
         sh:pattern "http://publications.europa.eu/resource/authority/place" ;
         ]
-        [
-        sh:nodeKind sh:IRI ;
-        sh:pattern "https://publications.europa.eu/resource/authority/place" ;
-        ]
-        [
+	[
         sh:nodeKind sh:IRI ;
         sh:pattern "http://sws.geonames.org/" ;
         ]
-        [
-        sh:nodeKind sh:IRI ;
-        sh:pattern "https://sws.geonames.org/" ;
-        ]
-        [
+	[
         sh:nodeKind sh:IRI ;
         sh:pattern "http://publications.europa.eu/resource/dataset/nuts" ;
-        ]
-        [
-        sh:nodeKind sh:IRI ;
-        sh:pattern "https://publications.europa.eu/resource/dataset/nuts" ;
         ]
       );
     sh:name "geographic identifier" ;
     sh:description "This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer. Identifiers SHOULD be coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. This property is analogue to an addition by GEODCAT-AP-v2.0.0." ;
-    sh:message "WARNING: Invalid geographic identifier. This must be a URI from one of the following authorities: EU continent list, EU country list, EU place list, Geonames, or NUTS codes (e.g., http://publications.europa.eu/resource/authority/country/FRA)."@en ;
-    sh:severity sh:Warning  # Changed from sh:Violation to sh:Warning
+    sh:message "ERROR: Invalid geographic identifier. This must be a URI from one of the following authorities: EU continent list, EU country list, EU place list, Geonames, or NUTS codes (e.g., http://publications.europa.eu/resource/authority/country/FRA)."@en ;
+    sh:severity sh:Violation
   ],
   [
-    # Optional property for Location
+    # Optional property for  Location
     # sh:class rdfs:Literal ;
     sh:nodeKind sh:Literal ;
     sh:path skos:prefLabel ;
     sh:name "geographic name" ;
     sh:description "This property contains a preferred label of the Location. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects." ;
-    sh:message "WARNING: Invalid geographic name. If provided, this must be a literal text value representing the preferred name of the location. Multiple values can be provided for different languages."@en ;
-    sh:severity sh:Warning  # Changed from sh:Violation to sh:Warning for this optional property
+    sh:message "ERROR: Invalid geographic name. If provided, this must be a literal text value representing the preferred name of the location. Multiple values can be provided for different languages."@en ;
+    sh:severity sh:Violation
   ] .
-
 
  :Mobility_Data_Standard_Shape
   a sh:NodeShape ;
