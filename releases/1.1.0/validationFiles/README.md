@@ -4,6 +4,87 @@
 
 This repository contains validation files for the mobilityDCAT-AP specification. The [SHACL shapes file](mobilitydcat-ap_shacl_shapes.ttl) defines constraints for validating RDF data against the mobilityDCAT-AP requirements.
 
+## ⚠️ SHACL Validation Requirements
+
+**Important**: The SHACL shapes require additional ontology models to be loaded for proper validation. Most SHACL validators do not perform automatic reasoning, which means class hierarchies (like `foaf:Organization` being a subclass of `foaf:Agent`) must be explicitly provided.
+
+### Required Ontologies
+
+Before validating your data, ensure you have these ontology files loaded:
+
+| Ontology | Purpose | Download Link |
+|----------|---------|---------------|
+| **FOAF** | Friend of a Friend vocabulary | [foaf.rdf](http://xmlns.com/foaf/spec/20140114.rdf) |
+| **Organization Ontology** | Organizational structures | [org.ttl](https://www.w3.org/ns/org.ttl) |
+| **DCAT** | Data Catalog Vocabulary | [dcat.ttl](https://www.w3.org/ns/dcat.ttl) |
+| **Dublin Core Terms** | Metadata elements | [dcterms.ttl](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl) |
+| **SKOS** | Knowledge organization systems | [skos.ttl](https://www.w3.org/2009/08/skos-reference/skos.ttl) |
+| **vCard** | Contact information | [vcard.ttl](https://www.w3.org/2006/vcard/ns.ttl) |
+| **LOCN** | Location vocabulary | [locn.ttl](https://www.w3.org/ns/locn.ttl) |
+| **DQV** | Data Quality Vocabulary | [dqv.ttl](https://www.w3.org/ns/dqv.ttl) |
+| **DCAT-AP 2.0.1** | DCAT Application Profile | [dcat-ap.ttl](https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1.ttl) |
+| **mobilityDCAT-AP Core** | Main vocabulary | [mobilitydcat-ap.ttl](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/serialisationFiles/mobilitydcat-ap.ttl) |
+
+### Validation Commands
+
+**With pyshacl (supports reasoning):**
+
+First, install pyshacl:
+```bash
+# Install pyshacl
+pip install pyshacl
+
+# Or with conda
+conda install -c conda-forge pyshacl
+```
+
+Then download required ontologies and validate:
+```bash
+# Download required ontologies first
+wget https://www.w3.org/ns/dcat.ttl
+wget http://xmlns.com/foaf/spec/20140114.rdf
+wget https://www.w3.org/ns/org.ttl
+wget https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+wget https://www.w3.org/2009/08/skos-reference/skos.ttl
+wget https://www.w3.org/2006/vcard/ns.ttl
+wget https://www.w3.org/ns/locn.ttl
+wget https://www.w3.org/ns/dqv.ttl
+wget https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1.ttl
+wget https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/serialisationFiles/mobilitydcat-ap.ttl
+
+# Validate with reasoning enabled
+pyshacl -s mobilitydcat-ap_shacl_shapes.ttl \
+        -e dcat.ttl \
+        -e foaf.rdf \
+        -e org.ttl \
+        -e dublin_core_terms.ttl \
+        -e skos.ttl \
+        -e vcard.ttl \
+        -e locn.ttl \
+        -e dqv.ttl \
+        -e dcat-ap_2.0.1.ttl \
+        -e mobilitydcat-ap.ttl \
+        -i rdfs \
+        your-data.ttl
+```
+
+**With Apache Jena:**
+```bash
+# Merge all required graphs
+riot --validate your-data.ttl mobilitydcat-ap_shacl_shapes.ttl dcat.ttl foaf.rdf
+```
+
+### Validator Compatibility
+
+| Validator | Reasoning Support | Notes |
+|-----------|-------------------|-------|
+| **pyshacl** | ✅ With `-i rdfs` flag | Recommended approach |
+| **Apache Jena** | ❌ Manual ontology loading | Requires merging graphs |
+| **TopBraid** | ✅ Configurable | Commercial tool |
+| **SHACL Playground** | ❌ Manual setup | Include ontologies in data |
+
+> **💡 Tip**: Always specify which SHACL validator you used when reporting validation results, as different validators may behave differently.
+
 ## Available Shapes and Examples
 
 Each class in the mobilityDCAT-AP specification has corresponding validation shapes and example files:
@@ -50,5 +131,16 @@ Each class in the mobilityDCAT-AP specification has corresponding validation sha
 
 All shape definitions are contained in the main [SHACL shapes file](mobilitydcat-ap_shacl_shapes.ttl). The example files provide guidance on how to correctly implement each class in your data.
 
-For more information about the mobilityDCAT-AP specification, please visit the [official documentation](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/).
+## Common Validation Issues
 
+### Class Inheritance Problems
+If you see errors like `"foaf:Organization not recognized as foaf:Agent"`, ensure you have loaded the FOAF ontology that defines the class hierarchy.
+
+### Missing Controlled Vocabularies
+Some properties require values from controlled vocabularies. Ensure your data uses the correct URI patterns as defined in the SHACL shapes.
+
+## Future Improvements
+
+We are working with Peter to develop a comprehensive Docker-based validation tool with built-in reasoning support to eliminate the need for manual ontology management.
+
+For more information about the mobilityDCAT-AP specification, please visit the [official documentation](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/).
