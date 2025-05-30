@@ -1,6 +1,5 @@
-
-@prefix : <http://w3id.org/mobilitydcat-ap#> .
-@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix : <https://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
@@ -22,7 +21,7 @@
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 
 
-<http://w3id.org/mobilitydcat-ap#> a owl:Ontology , adms:Asset ;
+<https://w3id.org/mobilitydcat-ap#> a owl:Ontology , adms:Asset ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_deprecateduris.ttl> ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
