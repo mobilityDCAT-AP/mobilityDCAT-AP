@@ -1,4 +1,16 @@
 # mobilityDCAT-AP
+🆔 Primary Identifiers
+<p align="center">
+  <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html">
+    <img src="https://img.shields.io/badge/Ontology%20URI-w3id.org/mobilitydcat--ap-blue.svg" alt="Ontology URI"/>
+  </a>
+  <a href="https://doi.org/10.5281/zenodo.15660570">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15660570.svg" alt="DOI"/>
+  </a>
+  <a href="https://prefix.cc/mobilitydcatap">
+    <img src="https://img.shields.io/badge/Namespace-mobilitydcatap%3A-purple.svg" alt="Namespace Prefix"/>
+  </a>
+</p>
 
 This is the issue tracker for the maintenance of [mobilityDCAT-AP](https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/).
 

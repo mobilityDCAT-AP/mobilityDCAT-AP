@@ -3,6 +3,16 @@ message: "If you use this software, please cite it as below."
 authors:
 - name: "NAPCORE"
 title: "Repository of the mobility extension to DCAT-AP (mobilityDCAT-AP)"
-version: 1.0.0
-date-released: 2023-05-11
-url: "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/"
+version: 1.2.0
+doi: 10.5281/zenodo.15660570
+date-released: 2025-06-14
+url: "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"
+repository-code: "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"
+license: "CC-BY-4.0"  # Update with your actual license
+keywords:
+  - mobility
+  - DCAT-AP
+  - data catalog
+  - RDF
+  - ontology
+  - transportation
