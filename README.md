@@ -1,7 +1,7 @@
 # mobilityDCAT-AP
 🆔 Primary Identifiers
 <p align="center">
-  <a href="http://w3id.org/mobilitydcat-ap/">
+  <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html">
     <img src="https://img.shields.io/badge/Ontology%20URI-w3id.org/mobilitydcat--ap-blue.svg" alt="Ontology URI"/>
   </a>
   <a href="https://doi.org/10.5281/zenodo.15660570">
