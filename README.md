@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15660570.svg)](https://doi.org/10.5281/zenodo.15660570)
 # mobilityDCAT-AP
 
 This is the issue tracker for the maintenance of [mobilityDCAT-AP](https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/).
