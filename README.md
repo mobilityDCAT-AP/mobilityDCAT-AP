@@ -28,7 +28,7 @@ The guidelines about the mobilityDCAT-AP specification are available at [mobilit
 
 ## Structure of the repository
 
-- [Releases](./releases/): mobilityDCAT-AP releases (1.0.0, etc.); each release might have different distributions.
+- [Releases](./releases/): mobilityDCAT-AP releases (latest: v1.1.0); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest mobilityDCAT-AP release.
 
 <!---
