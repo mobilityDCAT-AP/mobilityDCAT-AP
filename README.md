@@ -10,7 +10,11 @@
   <a href="https://prefix.cc/mobilitydcatap">
     <img src="https://img.shields.io/badge/Namespace-mobilitydcatap%3A-purple.svg" alt="Namespace Prefix"/>
   </a>
+  <a href="https://doi.org/10.48550/arXiv.2503.11535">
+    <img src="https://img.shields.io/badge/arXiv-2506.03301-b31b1b.svg" alt="arXiv Paper"/>
+  </a>
 </p>
+
 
 This is the issue tracker for the maintenance of [mobilityDCAT-AP](https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/).
 
