@@ -290,7 +290,7 @@
     # Mandatory property for Catalogue
     sh:minCount 1 ;
     sh:maxCount 1 ;
-    sh:class rdfs:Resource ;
+    sh:nodeKind sh:IRI ;
     sh:path foaf:homepage ;
     sh:name "homepage" ;
     sh:description "This property refers to a Web page that acts as the main page for the mobility data portal." ;
