@@ -1,4 +1,4 @@
-<table class="simple" id="table-mandatory-properties-for-agent">
+<table class="simple" id="table-properties-for-agent">
 <thead>
 <tr>
 <th>
@@ -11,17 +11,23 @@
 <p>Range</p>
 </th>
 <th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
 <p>Usage note</p>
 </th>
 <th>
-<p>Card.</p>
+<p>Reuse</p>
 </th>
 </tr>
 </thead>
 <tbody>
 
   
-<tr class="property mandatory" id="agent-name">
+<tr class="property" id="agent-name">
 <td>
 <p>name</p>
 </td>
@@ -32,13 +38,42 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>1..*</p>
 </td>
 <td>
-<p>1..n</p>
+<p>A name of the Agent.</p>
+</td>
+<td>
+<p>This property can be repeated for different versions of the name (e.g. the name in different languages) - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>A</p>
 </td>
 </tr>
 
+<tr class="property" id="agent-type">
+<td>
+<p>type</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The nature of the agent.</p>
+</td>
+<td>
+<p>A <a href="#vocab-publisher-type">controlled vocabulary</a> is provided.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
   
 </tbody>
 </table>
