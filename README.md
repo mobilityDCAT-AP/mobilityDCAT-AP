@@ -1,20 +1,9 @@
 # mobilityDCAT-AP
-🆔 Primary Identifiers
-<p align="center">
-  <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html">
-    <img src="https://img.shields.io/badge/Ontology%20URI-w3id.org/mobilitydcat--ap-blue.svg" alt="Ontology URI"/>
-  </a>
-  <a href="https://doi.org/10.5281/zenodo.15660570">
-    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15660570.svg" alt="DOI"/>
-  </a>
-  <a href="https://prefix.cc/mobilitydcatap">
-    <img src="https://img.shields.io/badge/Namespace-mobilitydcatap%3A-purple.svg" alt="Namespace Prefix"/>
-  </a>
-  <a href="https://doi.org/10.48550/arXiv.2503.11535">
-    <img src="https://img.shields.io/badge/arXiv-2506.03301-b31b1b.svg" alt="arXiv Paper"/>
-  </a>
-</p>
 
+[![Specification](https://img.shields.io/badge/Specification-w3id.org/mobilitydcat--ap-yellow.svg)](https://w3id.org/mobilitydcat-ap)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15913668.svg)](https://doi.org/10.5281/zenodo.15913668)
+[![Prefix](https://img.shields.io/badge/Namespace-mobilitydcatap%3A-purple.svg)](https://prefix.cc/mobilitydcatap)
+[![Paper](https://img.shields.io/badge/arXiv-2506.03301-b31b1b.svg)](https://doi.org/10.48550/arXiv.2503.11535)
 
 This is the issue tracker for the maintenance of [mobilityDCAT-AP](https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/).
 
@@ -34,15 +23,6 @@ The guidelines about the mobilityDCAT-AP specification are available at [mobilit
 
 - [Releases](./releases/): mobilityDCAT-AP releases (latest: v1.1.0); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest mobilityDCAT-AP release.
-
-<!---
-## Implementations
-
-- [GeoDCAT-AP XSLT & API](https://github.com/SEMICeu/iso-19139-to-dcat-ap): Reference XSLT-based implementation and API
-- [CSW-4-Web](https://github.com/SEMICeu/csw-4-web): A proof-of-concept API to expose CSW endpoints in a Web-friendly way, making use of an extended and ad hoc version of the GeoDCAT-AP XSLT & API.
-- [EPSG to RDF XSLT](https://github.com/SEMICeu/epsg-to-rdf): Proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP.
-
-Additional mobilityDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations). -->
 
 ## Licence
 Copyright © 2025 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the mobilityDCAT-AP repository on GitHub.
