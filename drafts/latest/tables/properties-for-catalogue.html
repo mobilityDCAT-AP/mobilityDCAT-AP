@@ -1,0 +1,151 @@
+<table class="simple" id="table-properties-for-catalogue">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+  
+<tr class="property" id="catalogue-applicable-legislation">
+<td>
+<p>applicable legislation</p>
+</td>
+<td>
+<p><a href="http://data.europa.eu/r5r/applicableLegislation"><code>dcatap:applicableLegislation</code></a></p>
+</td>
+<td>
+<p><a href="#class-legal-resource"><code>legalResource</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>	The legislation that mandates the creation or management of the Catalog.</p>
+</td>
+<td>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-dataset">
+<td>
+<p>dataset</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/dcat#dataset"><code>dcat:dataset</code></a></p>
+</td>
+<td>
+<p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>Links the mobility data portal with a dataset that is described at the mobility data portal.</p>
+</td>
+<td>
+<p>This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets should be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is mandatory to use the property <a href="#catalog-record"><code>dcat:record</code></a>.</p>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-description">
+<td>
+<p>description</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/description"><code>dct:description</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>1..*</p>
+</td>
+<td>
+<p>A free-text account of the Catalogue.</p>
+</td>
+<td>
+<p>This property can be repeated for parallel language versions of the description.</p>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-geographical-description">
+<td>
+<p>geographical description</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/description"><code>dct:description</code></a></p>
+</td>
+<td>
+<p><a href="#class-location"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>1..*</p>
+</td>
+<td>
+<p>A geographical area covered by the Catalogue.</p>
+</td>
+<td>
+<p>For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property <a href"dataset-spatial"><code>dct:spatial</code></a>, which might be different.</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to DCAT-AP-v3.0.0.</p>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>  
+
+<tr class="property" id="catalogue-has-part">
+<td>
+<p>has part</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/hasPart"><code>dct:hasPart</code></a></p>
+</td>
+<td>
+<p><a href="#class-catalogue"><code>dcat:Catalog</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>	A related Catalogue that is part of the described Catalogue.</p>
+</td>
+<td>
+<p>This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.</p>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>    
+  
+</tbody>
+</table>
