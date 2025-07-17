@@ -26,52 +26,79 @@
 </thead>
 <tbody>
 
-  
-<tr class="property" id="address-administrative-unit-level-1">
+<tr class="property" id="address-administrative-area">
 <td>
-<p>+administrative unit level 1</p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#adminUnitL1"><code>locn:adminUnitL1</code></a></p>
-</td>
-<td>
-<p><a href=""><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The name of the uppermost level of the address, almost always a country.</p>
-</td>
-<td>
-</td>
-<td>
-<p>GA</p>
-</td>
-</tr>
-
-<tr class="property" id="address-administrative-unit-level-2">
-<td>
-<p>+administrative unit level 2</p>
+<p>+administrative area</p>
 </td>
 <td>
 <p><a href="http://www.w3.org/ns/locn#adminUnitL2"><code>locn:adminUnitL2</code></a></p>
 </td>
 <td>
-<p><a href=""><code>rdfs:Literal</code></a></p>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</p>
+<p>The administrative area of an address. Depending on the country, this corresponds to a province, a county, a region, or a state.</p>
 </td>
 <td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).administrativeunitlevel2">GE</a></p>
 </td>
 </tr>
+  
+<tr class="property" id="address-city">
+<td>
+<p>+city</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/locn#postName"><code>locn:postName</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The name of the city of the address.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).postname">GE</a></p>
+</td>
+</tr>
+  
+<tr class="property" id="address-country">
+<td>
+<p>+country</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/locn#adminUnitL1"><code>locn:adminUnitL1</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The country of an address.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).administrativeunitlevel1">GE</a></p>
+</td>
+</tr>
+
+
 
 <tr class="property" id="address-postal-code">
 <td>
@@ -81,43 +108,23 @@
 <p><a href="http://www.w3.org/ns/locn#postCode"><code>locn:postCode</code></a></p>
 </td>
 <td>
-<p><a href=""><code>rdfs:Literal</code></a></p>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</p>
+<p>The postal code of an address.</p>
 </td>
 <td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).postcode">GE</a></p>
 </td>
 </tr>
 
-<tr class="property" id="address-city">
-<td>
-<p>+city</p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#postName"><code>locn:postName</code></a></p>
-</td>
-<td>
-<p><a href=""><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The name of the city of the address.</p>
-</td>
-<td>
-</td>
-<td>
-<p>GE</p>
-</td>
-</tr>
+
 
 <tr class="property" id="address-street-address">
 <td>
@@ -127,7 +134,7 @@
 <p><a href="http://www.w3.org/ns/locn#thoroughfare"><code>locn:thoroughfare</code></a></p>
 </td>
 <td>
-<p><a href=""><code>rdfs:Literal</code></a></p>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
 <td>
 <p>0..1</p>
@@ -136,9 +143,10 @@
 <p>The street name and civic number of the address.</p>
 </td>
 <td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>GE</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).streetaddress">GE</a></p>
 </td>
 </tr> 
   
