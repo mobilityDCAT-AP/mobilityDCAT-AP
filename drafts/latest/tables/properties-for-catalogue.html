@@ -46,7 +46,7 @@
 <td>
 </td>
 <td>
-<p>A</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Catalogue.applicablelegislation">A</a></p>
 </td>
 </tr>
 
@@ -70,7 +70,7 @@
 <p>This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets should be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is mandatory to use the property <a href="#catalog-record"><code>dcat:record</code></a>.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Catalogue.dataset">E</a></p>
 </td>
 </tr>
 
@@ -94,19 +94,19 @@
 <p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Catalogue.description">E</a></p>
 </td>
 </tr>
 
-<tr class="property" id="catalogue-geographical-description">
+<tr class="property" id="catalogue-geographical-coverage">
 <td>
-<p>geographical description</p>
+<p>geographical coverage</p>
 </td>
 <td>
-<p><a href="http://purl.org/dc/terms/description"><code>dct:description</code></a></p>
+<p><a href="http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a></p>
 </td>
 <td>
-<p><a href="#class-location"><code>rdfs:Literal</code></a></p>
+<p><a href="#class-location"><code>dct:Location</code></a></p>
 </td>
 <td>
 <p>1..*</p>
@@ -116,10 +116,10 @@
 </td>
 <td>
 <p>For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property <a href"#dataset-spatial"><code>dct:spatial</code></a>, which might be different.</p>
-<p>The obligation of this property is raised to “mandatory”, comparing to DCAT-AP-v3.0.0.</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Catalogue.geographicalcoverage">E</a></p>
 </td>
 </tr>  
 
@@ -143,7 +143,7 @@
 <p>This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.haspart">E</a></p>
 </td>
 </tr>    
 
@@ -165,12 +165,37 @@
 </td>
 <td>
 <p>This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.</p>
-<p>The obligation of this property is raised to “mandatory”, comparing to DCAT-AP-v3.0.0.</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.homepage">E</a></p>
 </td>
 </tr>  
+
+<tr class="property" id="catalogue-identifier">
+<td>
+<p>+identifier</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>The main identifier for the mobility data portal, e.g. the URI or other unique identifier. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
+</td>
+<td>
+<p>This property should populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Catalogue.identifier">GE</a></p>
+</td>
+</tr>
 
 <tr class="property" id="catalogue-language">
 <td>
@@ -192,7 +217,7 @@
 <p>This property can be repeated if the metadata is provided in multiple languages - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.language">E</a></p>
 </td>
 </tr>   
 
@@ -215,7 +240,7 @@
 <td>
 </td>
 <td>
-<p>A</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.licence">A</a></p>
 </td>
 </tr>
 
@@ -238,9 +263,34 @@
 <td>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.modificationdate">E</a></p>
 </td>
 </tr>  
+
+<tr class="property" id="catalogue-other-identifier">
+<td>
+<p>+other identifier</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/adms#identifier"><code>adms:identifier</code></a></p>
+</td>
+<td>
+<p><a href="#class-identifier"><code>adms:Identifier</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>This property may be used as an additional identifier, besides <a href="#catalogue-identifier"><code>dct:identifier</code></a>.</p>
+</td>
+<td>
+<p>This property may be referring to a dedicated, EU-wide identificator system of NAPs or other portals, to be introduced in the future.</p>
+<p>This property is an addition by mobilityDCAT-AP.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
 
 <tr class="property" id="catalogue-publisher">
 <td>
@@ -262,9 +312,107 @@
 <p> This information should correspond to the information in the disclaimer of the platform website.</p>
 </td>
 <td>
-<p>E</p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.publisher">E</a></p>
 </td>
 </tr>  
+
+<tr class="property" id="catalogue-record">
+<td>
+<p>record</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/dcat#record"><code>dcat:record</code></a></p>
+</td>
+<td>
+<p><a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a></p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+<td>
+<p>A metadata record that is part of the mobility data portal.</p>
+</td>
+<td>
+<p>mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.record">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="catalogue-release-date">
+<td>
+<p>release date</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/issued"><code>dct:issued</code></a></p>
+</td>
+<td>
+<p><a href="#datatype-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The date of formal issuance (e.g., publication) of the mobility data portal.</p>
+</td>
+<td>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.releasedate">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="catalogue-themes">
+<td>
+<p>themes</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/dcat#themeTaxonomy"><code>dcat:themeTaxonomy</code></a></p>
+</td>
+<td>
+<p><a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A knowledge organization system used to classify the mobility data portal's datasets.</p>
+</td>
+<td>
+<p>Recommended to indicate the version of the controlled vocabulary for property <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, that is used in the mobility data portal.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.themes">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="catalogue-title">
+<td>
+<p>title</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/title"><code>dct:title</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A name given to the mobility data portal.</p>
+</td>
+<td>
+<p>This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.title">E</a></p>
+</td>
+</tr>   
+
+
+  
   
 </tbody>
 </table>
