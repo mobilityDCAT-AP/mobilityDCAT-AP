@@ -91,7 +91,7 @@
 <p>A free-text account of the Catalogue.</p>
 </td>
 <td>
-<p>This property can be repeated for parallel language versions of the description.</p>
+<p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>E</p>
@@ -115,7 +115,7 @@
 <p>A geographical area covered by the Catalogue.</p>
 </td>
 <td>
-<p>For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property <a href"dataset-spatial"><code>dct:spatial</code></a>, which might be different.</p>
+<p>For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property <a href"#dataset-spatial"><code>dct:spatial</code></a>, which might be different.</p>
 <p>The obligation of this property is raised to “mandatory”, comparing to DCAT-AP-v3.0.0.</p>
 </td>
 <td>
@@ -172,5 +172,99 @@
 </td>
 </tr>  
 
+<tr class="property" id="catalogue-language">
+<td>
+<p>language</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/language"><code>dct:language</code></a></p>
+</td>
+<td>
+<p><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>Language used in the user interface of the mobility data portal, in particular the textual metadata describing the datasets registered in the portal.</p>
+</td>
+<td>
+<p>This property can be repeated if the metadata is provided in multiple languages - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>   
+
+<tr class="property" id="catalogue-licence">
+<td>
+<p>licence</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/license"><code>dct:license</code></a></p>
+</td>
+<td>
+<p><a href="#class-license-document"><code>dct:LicenseDocument</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>A licence under which the Catalogue can be used or reused.</p>
+</td>
+<td>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-modification-date">
+<td>
+<p>modification date</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/modified"><code>dct:modified</code></a></p>
+</td>
+<td>
+<p><a href="#datatype-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The most recent date on which the Catalogue was modified. It is recommended to indicate modifications of the portal system as such (e.g., major technical updates of the portal or its features), rather than modifications of the hosted datasets, since datasets on mobility data portals are updaded frequently.</p>
+</td>
+<td>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>  
+
+<tr class="property" id="catalogue-publisher">
+<td>
+<p>publisher</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a></p>
+</td>
+<td>
+<p><a href="#class-agent"><code>foaf:Agent</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>An entity (organisation) responsible for making the Catalogue available. This organisation is the direct contact for platform users, who have questions or issues about the platform and its system.</p>
+</td>
+<td>
+<p> This information should correspond to the information in the disclaimer of the platform website.</p>
+</td>
+<td>
+<p>E</p>
+</td>
+</tr>  
+  
 </tbody>
 </table>
