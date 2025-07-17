@@ -26,54 +26,6 @@
 </thead>
 <tbody>
 
-  
-<tr class="property" id="agent-name">
-<td>
-<p>name</p>
-</td>
-<td>
-<p><a href="http://xmlns.com/foaf/0.1/name"><code>foaf:name</code></a></p>
-</td>
-<td>
-<p><a href=""><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>1..*</p>
-</td>
-<td>
-<p>A name of the Agent.</p>
-</td>
-<td>
-<p>This property can be repeated for different versions of the name (e.g. the name in different languages) - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
-</td>
-<td>
-<p>A</p>
-</td>
-</tr>
-
-<tr class="property" id="agent-type">
-<td>
-<p>type</p>
-</td>
-<td>
-<p><a href="http://purl.org/dc/terms/type"><code>dct:type</code></a></p>
-</td>
-<td>
-<p><a href=""><code>skos:Concept</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The nature of the agent.</p>
-</td>
-<td>
-<p>A <a href="#vocab-publisher-type">controlled vocabulary</a> is provided.</p>
-</td>
-<td>
-<p>E</p>
-</td>
-</tr>
 
 <tr class="property" id="agent-address">
 <td>
@@ -83,18 +35,19 @@
 <p><a href="http://www.w3.org/ns/locn#address"><code>locn:address</code></a></p>
 </td>
 <td>
-<p><a href=""><code>locn:Address</code></a></p>
+<p><a href="#class-address-core-location"><code>locn:Address</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The postal address of the Agent.</p>
+<p>The postal address of the agent.</p>
 </td>
 <td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent.address">GA</a></p>
 </td>
 </tr>  
 
@@ -106,18 +59,19 @@
 <p><a href="http://www.w3.org/ns/org#memberOf"><code>org:memberOf</code></a></p>
 </td>
 <td>
-<p><a href=""><code>org:Organization</code></a></p>
+<p><a href="#class-organization"><code>org:Organization</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The affiliation of the Agent.</p>
+<p>The affiliation of the agent.</p>
 </td>
 <td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent.affiliation">GA</a></p>
 </td>
 </tr>   
 
@@ -129,21 +83,69 @@
 <p><a href="http://xmlns.com/foaf/0.1/mbox"><code>foaf:mbox</code></a></p>
 </td>
 <td>
-<p><a href=""><code>owl:Thing</code></a></p>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The email address of the Agent, specified using fully qualified mailto: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc6068">RFC6068</a>.</p>
+<p>The email address of the agent, specified using fully qualified mailto: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc6068">RFC6068</a>.</p>
+</td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-</td>
-<td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent.email">GA</a></p>
 </td>
 </tr>   
 
+<tr class="property" id="agent-first-name">
+<td>
+<p>+first name</p>
+</td>
+<td>
+<p><a href="http://xmlns.com/foaf/spec/#term_firstName"><code>foaf:firstName</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The first name of the agent.</p>
+</td>
+<td>
+<p>To be used if the agent is of type person, see <a class="no-sectionRef" href="#agent-roles"></a>.</p>
+</td>
+<td>
+<p>P</p>
+</td>
+</tr>  
+
+<tr class="property" id="agent-name">
+<td>
+<p>name</p>
+</td>
+<td>
+<p><a href="http://xmlns.com/foaf/0.1/name"><code>foaf:name</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>1..*</p>
+</td>
+<td>
+<p>A name of the agent.</p>
+</td>
+<td>
+<p>This property can be repeated for different versions of the name (e.g. the name in different languages) - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.name">A</a></p>
+</td>
+</tr>
+  
 <tr class="property" id="agent-phone">
 <td>
 <p>+phone</p>
@@ -152,21 +154,69 @@
 <p><a href="http://xmlns.com/foaf/0.1/phone"><code>foaf:phone</code></a></p>
 </td>
 <td>
-<p><a href=""><code>owl:Thing</code></a></p>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The phone number of the Agent, specified using fully qualified tel: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc3966">RFC3966</a>.</p>
+<p>The phone number of the agent, specified using fully qualified tel: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc3966">RFC3966</a>.</p>
+</td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-</td>
-<td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent.phone">GA</a></p>
 </td>
 </tr>   
 
+<tr class="property" id="agent-surname">
+<td>
+<p>+surname</p>
+</td>
+<td>
+<p><a href="http://xmlns.com/foaf/spec/#term_surname"><code>foaf:surname</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The surname of the agent.</p>
+</td>
+<td>
+<p>To be used if the agent is of type person, see <a class="no-sectionRef" href="#agent-roles"></a>.</p>
+</td>
+<td>
+<p>P</p>
+</td>
+</tr> 
+  
+<tr class="property" id="agent-type">
+<td>
+<p>type</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/type"><code>dct:type</code></a></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The nature of the agent.</p>
+</td>
+<td>
+<p>A <a href="#vocab-publisher-type">controlled vocabulary</a> is provided.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent.type">E</a></p>
+</td>
+</tr>
+  
 <tr class="property" id="agent-url">
 <td>
 <p>+URL</p>
@@ -175,18 +225,19 @@
 <p><a href="http://xmlns.com/foaf/0.1/workplaceHomepage"><code>foaf:workplaceHomepage</code></a></p>
 </td>
 <td>
-<p><a href=""><code>rdfs:Resource</code></a></p>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The Web site of the Agent.</p>
+<p>The Web site of the agent.</p>
 </td>
 <td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p>GA</p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent.URL">GA</a></p>
 </td>
 </tr>   
   
