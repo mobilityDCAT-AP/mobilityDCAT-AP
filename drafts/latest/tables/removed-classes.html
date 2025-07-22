@@ -1,0 +1,49 @@
+<table class="simple" id="table-removed-classes"> 
+<thead>
+<tr>
+<th>Class</th>
+<th>URI</th>
+<th>Reference DCAT-AP</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+  
+
+<tr>
+<td>Catalogued Resource</td>
+<td><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Resource"><code>dcat:Resource</code></a></td>
+<td>><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#CataloguedResource">Link</a></td>
+<td>
+<p>According to DCAT-AP-v3.0.0, this as an abstract class. Only subclasses should be used in a data exchange, such as <a href="#class-dataset"><code>dcat:Dataset</code></a>. 
+  Thus, the Catalogued Resource is not listed expilicitely in mobilityDCAT-AP.</p>
+</td>
+</tr>
+  
+<tr>
+<td>Checksum</td>
+<td><a href="http://spdx.org/rdf/terms#Checksum"><code>spdx:Checksum</code></a></td>
+<td>><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Checksum">Link</a></td>
+<td>
+<p>In DCAT-AP-v3.0.0, this class is defined as the range for the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.checksum"><code>spdx:checksum</code></a> of class Distribution. However, in mobilityDCAT-AP, this property is removed. So, the class is without function in mobilityDCAT-AP.</p>
+</td>
+</tr>
+
+<tr>
+<td>Data Service</td>
+<td><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service"><code>dcat:DataService</code></a></td>
+<td>><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#DataService">Link</a></td>
+<td>
+<p>In DCAT-AP-v3.0.0, a Data Service is a collection of operations that provides access to one or more datasets or data processing functions.</p>
+  <p>After discussions in mobility DCAT-AP and an analysis of potential use cases of this class in DCAT-AP-v3.0.0, it has been decided not to introduce Data Service for the following reasons.</p>
+  <p>1. Potential use as the range to property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.accessservice"><code>dcat:accessService</code></a> of class Distribution.</p>
+  <p>This property might describe additional information about an end point of one distribution. 
+  However, looking at today's set-ups of NAPs and mobility data portals, the characteristics and mechanisms of a distribution's end point are sufficiently described via property <a href="#distribution-access-URL"><code>dcat:accessURL</code></a> of class Distribution.</p>
+  <p>2. Potential use as the range to property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#CatalogueRecord.primarytopic"><code>foaf:primaryTopic</code></a> of class Catalogue Record</p>
+  <p>This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about datasets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP as of today, but might be used in the future when such portals also explicitely list data services.</p>
+  <p></p>
+  </td>
+</tr>  
+  
+</tbody>
+</table>
