@@ -1,4 +1,4 @@
-<table class="simple" id="table-properties-for-catalogue">
+<table class="simple" id="table-properties-for-dataset">
 <thead>
 <tr>
 <th>
@@ -27,7 +27,7 @@
 <tbody>
 
   
-<tr class="property" id="catalogue-applicable-legislation">
+<tr class="property" id="dataset-applicable-legislation">
 <td>
 <p>applicable legislation</p>
 </td>
@@ -35,21 +35,58 @@
 <p><a href="http://data.europa.eu/r5r/applicableLegislation"><code>dcatap:applicableLegislation</code></a></p>
 </td>
 <td>
-<p><a href="#class-legal-resource"><code>legalResource</code></a></p>
+<p><a href="#class-legal-resource"><code>eli:LegalResource</code></a></p>
 </td>
 <td>
 <p>0..*</p>
 </td>
 <td>
-<p>	The legislation that mandates the creation or management of the Catalog.</p>
+<p>A legal framework being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform or NAP, or some other international or national frameworks, e.g., Open Data regulations.</p>
 </td>
 <td>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Catalogue.applicablelegislation">A</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.applicablelegislation">E</a></p>
 </td>
 </tr>
 
+<tr class="property" id="dataset-contact-point">
+<td>
+<p>contact point</p>
+</td>
+<td>
+<p><a href="http://www.w3.org/ns/dcat#contactPoint"><code>dcat:contactPoint</code></a></p>
+</td>
+<td>
+<p><a href="#class-kind"><code>vcard:Kind</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>Contact information that can be used for communication with a company or person responsible for the dataset. 
+  Used for questions or issues about a dataset and its provisioning, as raised by a platform user or a platform operator.</p>
+</td>
+<td>
+  <p>The exposure of personal information, such as a personal name and email address, may be restricted to the public. 
+    Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.contactpoint">E</a></p>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+  
 <tr class="property" id="catalogue-dataset">
 <td>
 <p>dataset</p>
