@@ -377,6 +377,33 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier">E</a></p>
 </td>
 </tr>  
+
+<tr class="property" id="dataset-publisher">
+<td>
+<p>publisher</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a></p>
+</td>
+<td>
+<p><a href="#class-agent"><code>foaf:Agent</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>an entity (company and person) that publishes the  dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.</p>
+</td>
+<td>
+<p> This information should correspond to the information in the disclaimer of the platform website.</p>
+  <p>This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset.</p>
+  <p>To establish a contact with a company or person responsible for the datase, the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> should be used.</p>
+  <p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher">E</a></p>
+</td>
+</tr>  
   
 </tbody>
 </table>
