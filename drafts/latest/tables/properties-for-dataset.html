@@ -46,7 +46,7 @@
 <td>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.applicablelegislation">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">E</a></p>
 </td>
 </tr>
 
@@ -72,7 +72,7 @@
     Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.contactpoint">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint">E</a></p>
 </td>
 </tr>
 
@@ -96,7 +96,7 @@
   <p>In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, the obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.datasetdistribution">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.datasetdistribution">E</a></p>
 </td>
 </tr>
 
@@ -123,7 +123,7 @@ Information about the dataset as a free-text description.
     The language version should correspond to property <a href="catalogue-record-language"><code>dct:language</code></a> of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.description">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description">E</a></p>
 </td>
 </tr>
 
@@ -150,7 +150,7 @@ Information about the dataset as a free-text description.
   <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.description">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description">E</a></p>
 </td>
 </tr>
 
@@ -175,7 +175,7 @@ Information about the dataset as a free-text description.
   <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.geographicalcoverage">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.geographicalcoverage">E</a></p>
 </td>
 </tr>
 
@@ -201,7 +201,7 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
     Multiple versions should be differentiated via the properties <a href="#dataset-version-info"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.hasversion">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion">E</a></p>
 </td>
 </tr>
 
@@ -226,10 +226,133 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
 <p>This property should populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.identifier">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.identifier">E</a></p>
 </td>
 </tr>
 
+<tr class="property" id="dataset-in-series">
+<td>
+<p>in series</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series"><code>dcat:inSeries</code></a></p>
+</td>
+<td>
+<p><a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A dataset series of which the dataset is part.</p>
+</td>
+<td>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.inseries">A</a></p>
+</td>
+</tr>
+
+  
+<tr class="property" id="dataset-is-referenced-by">
+<td>
+<p>is referenced by</p>
+</td>
+<td>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isReferencedBy"><code>dct:isReferencedBy</code></a></p>
+</td>
+<td>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A related resource, such as a publication, that references, cites, or otherwise points to the dataset. Corresponds to the property <a href="#dataset-relation"><code>dct:relation</code></a>, with a contrary relationship.</p>
+</td>
+<td>
+  <p>It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.isreferencedby">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="dataset-keyword">
+<td>
+<p>keyword</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword"><code>dcat:keyword</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A keyword or tag describing the Dataset.</p>
+</td>
+<td>
+  <p>For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult.</p>
+  <p>Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, <a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a and <a href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a.</p>
+  <p>If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of mobilityDCAT-AP, in order to update the Controlled Vocabularies.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.keyword">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="dataset-language">
+<td>
+<p>language</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/language"><code>dct:language</code></a></p>
+</td>
+<td>
+<p><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p></p>The language of the content data in a dataset, if this content has a natural language embedded, such as text fields, addresses etc. </p>
+</td>
+<td>
+  <p>This property can be repeated if there are multiple languages in the dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a></p>
+ </td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.language">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="dataset-modification-date">
+<td>
+<p>modification date</p>
+</td>
+<td>
+<p><a href="http://purl.org/dc/terms/modified"><code>dct:modified</code></a></p>
+</td>
+<td>
+<p><a href="#datatype-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The most recent date on which the content of the dataset was changed or modified.</p>
+</td>
+<td>
+  <p>This is redundant for high-frequency data feeds (e.g., DATEX II feeds), where the change date can be derived from the time stamp within the data feed.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.modificationdate">E</a></p>
+</td>
+</tr>    
+  
+  
 <tr class="property" id="dataset-other-identifier">
 <td>
 <p>other identifier</p>
@@ -251,7 +374,7 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
 or other identificator systems such as <a href="https://schema.datacite.org/">DataCite</a>, <a href="http://www.doi.org/">DOI</a>, or <a href="https://w3id.org/">W3ID</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.otheridentifier">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier">E</a></p>
 </td>
 </tr>  
   
