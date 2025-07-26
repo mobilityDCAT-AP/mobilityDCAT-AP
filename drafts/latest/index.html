@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<script class="remove" src="https://mobilitydcat-ap.github.io/respec-style/respec-napcore.js"></script>
+<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c"></script>
 <script src="./config.js" class="remove" defer></script>
 <style>
 table.simple {width:100%;}
@@ -296,453 +296,67 @@ table code, table pre {
 
 </section>
 
-
-
 </section>
 
 <!-- Properties -->
+<section id="main entitties">
 
-<section id="properties">
-
-<h2>Application Profile Properties per Class</h2>
+<h2>Main entities</h2>
 
 <p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</p>
 
-
-
-
-
-<!-- Address (Agent)-->
-
-<section id="properties-for-address-agent">
-
-<h3>+Address (Agent)</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-v2.0.1]]. The class addition, as well as the properties defined for this class, are analogous to additions by [[GEODCAT-AP-v2.0.0]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-agent.html"></div>
-
-<section id="recommended-properties-for-address-agent">
-
-<h4>Recommended properties for Address (Agent)</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#address-agent-administrative-area">administrative area</a></li>
-<li>+<a href="#address-agent-city">city</a></li>
-<li>+<a href="#address-agent-country">country</a></li>
-<li>+<a href="#address-agent-postal-code">postal code</a></li>
-<li>+<a href="#address-agent-street-address">street address</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-agent.html"></div>
-
-</section>
-
-</section>
-
-<!-- Agent,  PL: edited 03.07.23-->
-
-<section id="properties-for-agent">
+<!-- Agent-->
+<section id="class-agent">
 
 <h3>Agent</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-agent.html"></div>
 
-<section id="mandatory-properties-for-agent">
-
-<h4>Mandatory property for Agent</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-agent.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-agent.html"></div>
 
 </section>
 
-<section id="recommended-properties-for-agent">
-
-<h4>Recommended property for Agent</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-agent.html"></div>
-
-</section>
-
-<section id="optional-properties-for-agent">
-
-<h4>Optional properties for Agent</h4>
-
-<aside class="note">
-<p>The following optional properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#agent-address">address</a></li><!-- PL: geoDCAT-AP addition-->
-<li>+<a href="#agent-affiliation">affiliation</a></li><!-- PL: geoDCAT-AP addition-->
-<li>+<a href="#agent-email">email</a></li> <!-- PL: geoDCAT-AP addition-->
-<li>+<a href="#agent-first-name">first name</a></li><!-- PL: mobilityDCAT-AP addition-->
-<li>+<a href="#agent-surname">surname</a></li><!-- PL: mobilityDCAT-AP addition-->
-<li>+<a href="#agent-phone">phone</a></li><!-- PL: geoDCAT-AP addition-->
-<li>+<a href="#agent-url">URL</a></li> <!-- PL: geoDCAT-AP addition-->
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-agent.html"></div>
-
-</section>
-
-</section>
-
-
-<!-- Assessment,  PL: edited 06.07.23-->
-
-<section id="properties-for-assessment">
+<!-- Assessment-->
+<section id="class-assessment">
 
 <h3>+Assessment</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-assessment.html"></div>
 
-
-<section id="recommended-properties-for-agent">
-
-
-<h4>Optional properties for Assessment</h4>
-
-<aside class="note">
-<p>The following optional properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#assessment-assessment-date">assessment date</a></li><!-- PL: mobilityDCAT-AP addition-->
-<li>+<a href="#assessment-assessment-result">assessment result</a></li><!-- PL: mobilityDCAT-AP addition-->
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-assessment.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-assessment.html"></div>
 
 </section>
 
-</section>
-
-<!-- Catalogue, PL: edited 04.07.23 -->
-
-<section id="properties-for-catalogue">
+<!-- Catalogue -->
+<section id="class-catalogue">
 
 <h3>Catalogue</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div> <!-- PL: html edited -->
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div> 
 
-<section id="mandatory-properties-for-catalogue">
-
-<h4>Mandatory properties for Catalogue</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue.html"></div> <!-- PL: html edited ; moved property "dct:spatial" from recommended to mandatory; moved property "dcat:record" from recommended to mandatory -->
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-catalogue.html"></div> 
 
 </section>
 
-<section id="recommended-properties-for-catalogue">
-
-<h4>Recommended properties for Catalogue</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue.html"></div> <!-- PL: html edited; see move above -->
-
-</section>
-
-<section id="optional-properties-for-catalogue">
-
-<h4>Optional properties for Catalogue</h4>
-
-<aside class="note">
-<p>The following optional properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#catalogue-identifier">identifier</a></li>
-<li>+<a href="#catalogue-other-identifier">other identifier</a></li>
-</ul>
-</aside>
-
-<aside class="note">
-<p>The following optional properties are removed from [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>-catalogue</li><!-- mobilityDCAT-AP remove-->
-<li>-creator</li><!-- mobilityDCAT-AP remove-->
-<li>-rights</li><!-- mobilityDCAT-AP remove-->
-<li>-service</li><!-- mobilityDCAT-AP remove-->
-</ul>
-</aside>
-
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div> <!-- PL: html edited ;  several DCAT-AP properties and all geoDCAT-AP additions removed except dct:identifier -->
-
-</section>
-
-</section>
-
-<!-- Catalogue Record, PL: edits 05.07.23 -->
-
-<section id="properties-for-catalogue-record">
+<!-- Catalogue Record -->
+<section id="class-catalogue-record">
 
 <h3>Catalogue Record</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue-record.html"></div> <!-- PL: html edited -->
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue-record.html"></div> 
 
-<section id="mandatory-properties-for-catalogue-record">
-
-<h4>Mandatory properties for Catalogue Record</h4>
-
-<aside class="note">
-<p>The following mandatory properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#catalogue-record-creation-date">creation date</a></li><!-- geoDCAT-AP addition-->
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue-record.html"></div> <!-- PL: html edited; moved property "dct:created" and "dct:language" from optional to mandatory -->
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-catalogue-record.html"></div> 
 
 </section>
 
-<section id="recommended-properties-for-catalogue-record">
-
-<h4>Recommended properties for Catalogue Record</h4>
-
-<!-- proprietary property "visibility status"; removed after issue https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/12 (point 1); might be re-introduced in future, probably via property dct:accessRights
-<aside class="note">
-<p>The following recommended properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="catalogue-record-visibility-status">visibility status</a></li>
-</ul>
-</aside>
--->
-
-
-<aside class="note">
-<p>The following recommended properties are removed [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>-application profile</li>
-<li>-change type</li>
-<li>-listing date</li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue-record.html"></div> <!-- PL: html edited; all DCAT-AP properties removed; one mobilityDCAT-AP property added-->
-
-</section>
-
-<section id="optional-properties-for-catalogue-record">
-
-<h4>Optional properties for Catalogue Record</h4>
-
-<aside class="note">
-<p>The following optional properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#catalogue-record-publisher">publisher</a></li><!-- geoDCAT-AP addition-->
-</ul>
-</aside>
-
-<aside class="note">
-<p>The following optional properties are removed [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>-description</li>
-<li>-title</li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue-record.html"></div> <!-- PL: html edited, all DCAT-AP properties and all geoDCAT-AP additions removed except "dct:created" and "dct:publisher" and "dct:source"-->
-
-</section>
-
-</section>
-
-<!-- Category , PL: edits 05.07.23 -->
-
-<section id="properties-for-category">
-
-<h3>Category</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category.html"></div>
-
-<section id="mandatory-properties-for-category">
-
-<h4>Mandatory property for Category</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category.html"></div>
-
-</section>
-
-<section id="optional-properties-for-category">
-
-<h4>Optional property for Category</h4>
-
-<aside class="note">
-<p>The following property is not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#category-category-scheme">category scheme</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category.html"></div>
-
-</section>
-
-</section>
-
-<!-- Category Scheme -->
-
-<section id="properties-for-category-scheme">
-
-<h3>Category Scheme</h3>
-
-<aside class="note">
-<p>In [[DCAT-AP-v2.0.1]], this class is used as the range of recommended property "dcat:themeTaxonomy" for class Catalogue.</p>
-<p>[[GEODCAT-AP-v2.0.0]] adds several properties to the class Category Scheme. These are used to allow for versioning of concept collections etc. However, describing concept collections is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Category Scheme, as added by [[GEODCAT-AP-v2.0.0]], MAY be used.</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category-scheme.html"></div>
-
-<section id="mandatory-properties-for-category-scheme">
-
-<h4>Mandatory property for Category Scheme</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category-scheme.html"></div>
-
-</section>
-
-
-</section>
-
-<!-- Checksum --> <!-- PL edits 05.05.23-->
-
-<section id="properties-for-checksum">
-
-<h3>Checksum</h3>
-<aside class="note">
-<p>In [[DCAT-AP-v2.0.1]], this class is defined as the range for the optional property "spdx:checksum" of class Distribution. However, in mobilityDCAT-AP, this property is removed. So, the class and its properties are without function but kept for compatibility reasons.</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-checksum.html"></div>
-
-<section id="mandatory-properties-for-checksum">
-
-<h4>Mandatory properties for Checksum</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-checksum.html"></div>
-
-</section>
-
-</section>
-
-<!-- Data Service; PL edited 04.07.23- -->-->
-
-<section id="properties-for-data-service">
-
-<h3>Data Service</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-data-service.html"></div>
-
-<section id="mandatory-properties-for-data-service">
-
-<h4>Mandatory properties for Data Service</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-data-service.html"></div>
-
-</section>
-
-<section id="recommended-properties-for-data-service">
-
-<h4>Recommended properties for Data Service</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-data-service.html"></div>
-
-</section>
-
-<section id="optional-properties-for-data-service">
-
-<h4>Optional properties for Data Service</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-data-service.html"></div>
-
-</section>
-
-</section>
-
-<!-- Dataset --> <!-- PL edits 05.05.23-->
-
-<section id="properties-for-dataset">
+<!-- Dataset -->
+<section id="class-dataset">
 
 <h3>Dataset</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset.html"></div> <!-- PL: html edited -->
-
-<section id="mandatory-properties-for-dataset">
-
-<h4>Mandatory properties for Dataset</h4>
-
-<aside class="note">
-<p>The following mandatory properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#dataset-mobility-theme">mobility theme</a></li><!-- mobilityDCAT-AP addition-->
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset.html"></div> <!-- PL edits ; moved property "dct:publisher" and
-"dcat:distribution" and "dcat:theme" and "dct:spatial" from recommended to mandatory; moved "dct:language" and "dct:accrualPeriodicity" from optional to mandatory-->
-
-</section>
-
-<section id="recommended-properties-for-dataset">
-
-<h4>Recommended properties for Dataset</h4>
-
-<aside class="note">
-<p>The following recommended properties are not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#dataset-georeferencing-method">georeferencing method</a></li><!-- mobilityDCAT-AP addition-->
-<li>+<a href="#dataset-network-coverage">network coverage</a></li><!-- mobilityDCAT-AP addition-->
-<li>+<a href="#dataset-reference-system">reference system</a></li><!-- geoDCAT-AP addition-->
-<li>+<a href="#dataset-rights-holder">rights holder</a></li><!-- geoDCAT-AP addition-->
-<li>+<a href="#dataset-transport-mode">transport mode</a></li><!-- mobilityDCAT-AP addition-->
-</ul>
-</aside>
-
-
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset.html"></div> <!-- PL: html edited; moved property "dct:rightsHolder" and "dct:conformsTo" from optional to recommended; three mobilityDCAT-AP properties added-->
-
-</section>
-
-<section id="optional-properties-for-dataset">
-
-<h4>Optional properties for Dataset</h4>
-
-<aside class="note">
-<p>The following optional properties are not included in [[DCAT-AP-v2.0.1]]:</p> <!-- no further optional additions from geoDCAT-AP are re-used for mobilityDCAT-AP!-->
-<ul>
-<li>+<a href="#dataset-applicable-legislation">applicable legislation</a></li><!-- mobilityDCAT-AP addition-->
-<li>+<a href="#dataset-assessment-result">assessment result</a></li><!-- mobilityDCAT-AP addition-->
-<li>+<a href="#dataset-quality-description">quality description</a></li><!-- mobilityDCAT-AP addition-->
-<li>+<a href="#dataset-intended-information-service">intended information service</a></li><!-- mobilityDCAT-AP addition-->
-</ul>
-</aside>
-
-<aside class="note">
-<p>The following optional properties are removed from [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>-access rights</li><!-- mobilityDCAT-AP remove-->
-<li>-conforms to</li><!-- mobilityDCAT-AP remove-->
-<li>-creator</li><!-- mobilityDCAT-AP remove-->
-<li>-documentation</li><!-- mobilityDCAT-AP remove-->
-<li>-landing page</li><!-- mobilityDCAT-AP remove-->
-<li>-provenance</li><!-- mobilityDCAT-AP remove-->
-<li>-qualified attribution</li><!-- mobilityDCAT-AP remove-->
-<li>-qualified relation</li><!-- mobilityDCAT-AP remove-->
-<li>-sample</li><!-- mobilityDCAT-AP remove-->
-<li>-source</li><!-- mobilityDCAT-AP remove-->
-<li>-spatial resolution in metres</li><!-- mobilityDCAT-AP remove-->
-<li>-temporal resolution</li><!-- mobilityDCAT-AP remove-->
-<li>-type</li><!-- mobilityDCAT-AP remove-->
-<li>-was generated by</li><!-- mobilityDCAT-AP remove-->
-</ul>
-</aside>
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div>
-<!-- PL: html edited ; several properties added and removed (see tables above)-->
-
-</section>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset.html"></div>
+ 
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-dataset.html"></div> 
 
 </section>
 
@@ -1227,12 +841,30 @@ table code, table pre {
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
 
-
-
 </section>
 
 </section>
+  
 
+<section id="supportive entitties">
+
+<h2>Supportive entities</h2>
+
+  <!-- Address (Core Location)-->
+
+<section id="class-address-core-location">
+
+<h3>+Address (Core Location)</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-core-location.html"></div>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-address-core-location.html"></div>
+
+</section>
+
+
+</section>
+  
 <!-- Controlled vocabularies -->
 
 <section id="controlled-vocabularies">
@@ -1494,6 +1126,26 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 </section>
 
+<!-- Classes removed from DCAT-AP-->
+
+<section id="dcat-ap-removed-classes">
+
+<h2>Classes removed from DCAT-AP</h2>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/dcat-ap-removed-classes.html"></div>
+
+</section>  
+  
+<!-- Properties removed from DCAT-AP-->
+
+<section id="dcat-ap-removed-properties">
+
+<h2>Properties removed from DCAT-AP</h2>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/dcat-ap-removed-properties.html"></div>
+
+</section>  
+  
 </section>
 
 
