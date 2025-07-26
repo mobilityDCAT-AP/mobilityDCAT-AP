@@ -599,21 +599,17 @@
   sh:targetClass dcat:Dataset;
   sh:name "Dataset"@en ;
   sh:property [
-     # Mandatory property for Dataset - accrualPeriodicity
     sh:path dct:accrualPeriodicity ;
-    sh:minCount 1 ;  # Makes it mandatory
+    sh:minCount 1 ; 
     sh:maxCount 1 ; 
-    # Flexible validation approach
     sh:nodeKind sh:IRI ;
     sh:or (
-      # Try class + pattern validation
       [
         sh:class dct:Frequency ;
-        sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/" ;
+        sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/.+$" ;
       ]
-      # Fall back to just pattern validation
       [
-        sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/" ;
+        sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/.+$" ;
       ]
     ) ;
     sh:name "accrual periodicity" ;
