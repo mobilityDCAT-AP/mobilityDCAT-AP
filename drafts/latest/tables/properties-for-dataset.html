@@ -50,6 +50,33 @@
 </td>
 </tr>
 
+<tr class="property" id="dataset-assessment-result">
+<td>
+<p>+assessment result</p>
+</td>
+<td>
+<p><code>mobilitydcatap:assessmentResult</code></p>
+</td>
+<td>
+<p><a href="#class-assessment"><code>mobilitydcatap:Assessment</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+  <p>The results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by <a href="https://napcore.eu/national-bodies-3/">National Bodies</a> and installed individually in each Member State.</p>
+  <p>The property may point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online.</p>
+</td>
+<td>
+  <p>The difference to the property <a href="dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a> is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+
+  
 <tr class="property" id="dataset-contact-point">
 <td>
 <p>contact point</p>
@@ -179,6 +206,32 @@ Information about the dataset as a free-text description.
 </td>
 </tr>
 
+<tr class="property" id="dataset-georeferencing-method">
+<td>
+<p>+georeferencing method</p>
+</td>
+<td>
+<p><code>mobilitydcatap:georeferencingMethod</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>The georeferencing method used in the delivered content.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-georeferencing-method">controlled vocabulary</a> is provided, denoting commonly used georeferencing methods for mobility data.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+  
+
 <tr class="property" id="dataset-has-version">
 <td>
 <p>has version</p>
@@ -253,6 +306,30 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
 </td>
 </tr>
 
+<tr class="property" id="dataset+intended-information-service">
+<td>
+<p>+intended information service</p>
+</td>
+<td>
+<p><code>mmobilitydcatap:intendedInformationService</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>A type of information service, which the data content is intended to support. Such services may be, e.g., information services for multimodal mobility, as specified by <a href="https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng">EC Delegated Regulation 2024/490</a>.</p>
+  <p>Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets on timetables.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-intended-information-service">controlled vocabulary</a> is provided.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
   
 <tr class="property" id="dataset-is-referenced-by">
 <td>
@@ -328,6 +405,34 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
 </td>
 </tr> 
 
+<tr class="property" id="dataset-mobility-theme">
+<td>
+<p>+mobility theme</p>
+</td>
+<td>
+<p><code>mobilitydcatap:mobilityTheme</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+<td>
+  <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content.</p>
+  <p>The theme is described via a controlled vocabulary in two hierarchy levels: The 1st level is a mandatory field labelled "Data content category", describing the classification of the data content on an aggregated level. The 2nd level is an optional field labelled “Data content sub category”, detailing the "Data content category" via one or several sub-categories. When entering the metadata for one dataset, the data provider would first select one or several options of a "Data content category", and then optionally details this with one or more options of corresponding “Data content sub category”. The platform must be able to handle the dependencies between these two levels, i.e., match the allowed options between the 1st and 2nd level.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-mobility-theme">controlled vocabulary</a> is provided.</p>
+  <p>This property is a sub-property of <a href="#dataset-theme"><code>dcat:theme</code></a>, being a further property of Dataset. To distinguish these two theme properties, it is recommended to label <code>mobilitydcatap:mobilityTheme</code> as "Mobility Theme", and <code>dcat:theme</code> as "EU Open Data Theme".</p>
+  <p>The subject of a dataset may also be described via property <a href="#dataset-keyword"><code>dcat:keyword</code></a>. However, the usage of "mobility theme" is preferred, to avoid ambiguity and uncontrolled theme descriptions.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+  
 <tr class="property" id="dataset-modification-date">
 <td>
 <p>modification date</p>
@@ -351,6 +456,34 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.modificationdate">E</a></p>
 </td>
 </tr>    
+
+<tr class="property" id="dataset-network-coverage">
+<td>
+<p>+network coverage</p>
+</td>
+<td>
+<p><code>mobilitydcatap:networkCoverage</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>This property describes the part of the transport network that is covered by the delivered content.</p>
+  <p>For road traffic, the property should refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed.</p>
+  <p>For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data.</p>
+  <p>For all modes, the property should also indicate if the data content relates to the <a href="https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en">EU’s trans-European transport network</a>.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-georeferencing-method">controlled vocabulary</a> is provided, denoting commonly used road and infrastructure network classes.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
   
   
 <tr class="property" id="dataset-other-identifier">
@@ -378,6 +511,31 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 </td>
 </tr>  
 
+ <tr class="property" id="dataset-transport-mode">
+<td>
+<p>+transport mode</p>
+</td>
+<td>
+<p><code>mobilitydcatap:transportMode</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>The transport mode that is covered by the delivered content.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-transport-mode">controlled vocabulary</a> is provided, denoting commonly used transport modes.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+  
 <tr class="property" id="dataset-publisher">
 <td>
 <p>publisher</p>
@@ -395,7 +553,6 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p>an entity (company and person) that publishes the  dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.</p>
 </td>
 <td>
-<p> This information should correspond to the information in the disclaimer of the platform website.</p>
   <p>This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset.</p>
   <p>To establish a contact with a company or person responsible for the datase, the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> should be used.</p>
   <p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
@@ -405,6 +562,57 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 </td>
 </tr>  
 
+<tr class="property" id="dataset-quality-description">
+<td>
+<p>+quality description</p>
+</td>
+<td>
+<p><code>dqv:hasQualityAnnotation</code></p>
+</td>
+<td>
+<p><a href="#class-quality-annotation"><code>dqv:QualityAnnotation</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>Any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment. This information should assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information should be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
+</td>
+<td>
+  <p>Quality aspects should be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” should be given.</p>
+  <p>If existing quality frameworks have been applied in the quality assessment, e.g., the <a href="https://napcore.eu/quality/">Quality Frameworks from the NAPCORE project</a>, these frameworks should be referenced.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>  
+
+<tr class="property" id="dataset-reference-system">
+<td>
+<p>+reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><a href="#class-standard"><code>dct:Standard</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>The spatial reference system used in the delivered content. To be specified via the <a href="http://www.opengis.net/def/crs/EPSG/">“EPSG coordinate reference systems” register</a> operated by OGC.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-reference-system">controlled vocabulary</a> is provided.</p>
+  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.referencesystem">GA</a></p>
+</td>
+</tr>
+
+  
 <tr class="property" id="dataset-related-resource">
 <td>
 <p>related resource</p>
@@ -454,6 +662,58 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 </td>
 </tr>  
 
+<tr class="property" id="dataset-rights-holder">
+<td>
+<p>+rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
+</td>
+<td>
+<p><a href="#class-agent"><code>foaf:Agent</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</p>
+</td>
+<td>
+  <p>The rights holder will be in many cases identical with the publisher of the dataset (see property <a href="#dataset-publisher"><code>dct:publisher</code></a>) and/or of the catalogue record (see property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a>). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.</p>
+  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.rightsholder">GE</a></p>
+</td>
+</tr>
+
+  
+
+<tr class="property" id="dataset-temporal-coverage">
+<td>
+<p>temporal coverage</p>
+</td>
+<td>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal"><code>dct:temporal</code></a></p>
+</td>
+<td>
+<p><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+<p>A temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</p>
+</td>
+<td>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalcoverage">E</a></p>
+</td>
+</tr>
+
+
+  
 <tr class="property" id="dataset-theme">
 <td>
 <p>theme</p>
@@ -503,6 +763,31 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 </td>
 </tr>    
 
+<tr class="property" id="dataset-transport-mode">
+<td>
+<p>+transport mode</p>
+</td>
+<td>
+<p><code>mobilitydcatap:transportMode</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+<td>
+  <p>The transport mode that is covered by the delivered content.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-transport-mode">controlled vocabulary</a> is provided, denoting commonly used transport modes.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+ 
 <tr class="property" id="dataset-version">
 <td>
 <p>version</p>
