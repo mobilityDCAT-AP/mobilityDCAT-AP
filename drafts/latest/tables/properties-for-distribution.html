@@ -23,8 +23,34 @@
 </thead>
 <tbody>
 
+<tr class="property" id="distribution-access-url">
+<td>
+<p>access url</p>
+<p><a href="https://www.w3.org/ns/dcat#accessURL"><code>dcat:accessURL</code></a></p>
+</td>
+<td>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>A URL that gives access to a distribution of the dataset.</p>
+</td>
+<td>
+  <p>Depending on the type of data provision, there are different options for describing the URL.</p>
+  <p>For data services, e.g., API, broker services, data feeds, etc., the URL may be the end point of such service.</p>
+  <p>If some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process.</p>
+  <p>For data which can be downloaded directly, the download URL should be copied from the property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a>.</p>
+  <p>For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL may be a link to an external service or a website which enables access to the data.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.accessURL">E</a></p>
+</td>
+</tr>
+
   
-<tr class="property" id="dataset-applicable-legislation">
+<tr class="property" id="distribution-applicable-legislation">
 <td>
 <p>applicable legislation</p>
 <p><a href="http://data.europa.eu/r5r/applicableLegislation"><code>dcatap:applicableLegislation</code></a></p>
@@ -36,15 +62,41 @@
 <p>0..*</p>
 </td>
 <td>
-<p>A legal framework being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform or NAP, or some other international or national frameworks, e.g., Open Data regulations.</p>
+<p>A legal framework being relevant for the distribution.</p>
 </td>
 <td>
+  <p>The legal framework is usually provided on the dataset level, see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>. 
+    However, there is a special case of if a High Value Dataset (HVD) is provided on a portal. Here, the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a> stipulates that
+      this property links to the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">EC regulation 2013/138 on HVD</a> both on the dataset and distribution levels.
+    In other words, a RDF statement <code><dcatap:applicableLegislation rdf:resource="http://data.europa.eu/eli/reg_impl/2023/138/oj"/></code> is required under the dataset and distribution class, if a HVD is published on the portal.
+   For other cases outside HVD, the use of this property is not recommended.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation">E</a></p>
 </td>
 </tr>
 
+<tr class="property" id="distribution-description">
+<td>
+<p>description</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description"><code>dct:description</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A free-text account of the Distribution.</p>
+</td>
+<td>
+  <p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation">E</a></p>
+</td>
+</tr>
   
 </tbody>
 </table>
