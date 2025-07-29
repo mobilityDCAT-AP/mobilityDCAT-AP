@@ -146,6 +146,72 @@
 </td>
 </tr> 
 
+<tr class="property" id="distribution-licence">
+<td>
+<p>licence</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license"><code>dct:license</code></a></p>
+</td>
+<td>
+<p><a href="#class-licence-document"><code>dct:LicenseDocument</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The licence under which the distribution is made available. This should be a reference to a concrete (standard) licence.</p>
+</td>
+<td>
+  <p>A <a href="#vocab-licence">controlled vocabulary</a> is provided.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="distribution-rights">
+<td>
+<p>rights</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights"><code>dct:rights</code></a></p>
+</td>
+<td>
+<p><a href="#class-rights-statement"><code>dct:RightsStatement</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>A statement that specifies rights associated with the distribution. In particular, a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage.</p>
+</td>
+<td>
+  <p>A concrete (standard) license can be referred via the recommended property <a href="#distribution-licence"><code>dct:license</code></a>.</p>
+  <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.rights">E</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="distribution-title">
+<td>
+<p>title</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title"><code>dct:title</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>A name given to the distribution.</p>
+</td>
+<td>
+  <p>This property can be repeated for parallel language versions of the title  - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.title">E</a></p>
+</td>
+</tr>  
   
 </tbody>
 </table>
