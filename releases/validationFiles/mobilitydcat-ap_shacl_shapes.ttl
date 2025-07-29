@@ -947,7 +947,7 @@
         ]
 	[
         sh:nodeKind sh:IRI ;
-        sh:pattern "http://publications.europa.eu/resource/dataset/nuts" ;
+        sh:pattern "http://publications.europa.eu/resource/authority/nuts" ;
         ]
       );
     sh:name "geographic identifier" ;
