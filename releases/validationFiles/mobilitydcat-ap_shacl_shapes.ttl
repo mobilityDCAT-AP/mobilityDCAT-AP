@@ -928,27 +928,13 @@
   [
     # Recommended property for  Location
     sh:path dct:identifier ;
-    sh:or (
-        [
-        sh:nodeKind sh:IRI ;
-        sh:pattern "http://publications.europa.eu/resource/authority/continent" ;
-        ]
-        [
-        sh:nodeKind sh:IRI ;
-        sh:pattern "http://publications.europa.eu/resource/authority/country" ;
-        ]
-	[
-        sh:nodeKind sh:IRI ;
-        sh:pattern "http://publications.europa.eu/resource/authority/place" ;
-        ]
-	[
-        sh:nodeKind sh:IRI ;
-        sh:pattern "http://sws.geonames.org/" ;
-        ]
-	[
-        sh:nodeKind sh:IRI ;
-        sh:pattern "http://publications.europa.eu/resource/authority/nuts" ;
-        ]
+    sh:nodeKind sh:IRI ;
+    sh:in (
+        <http://publications.europa.eu/resource/authority/continent>
+	<http://publications.europa.eu/resource/authority/country>
+	<http://publications.europa.eu/resource/authority/place>
+	<http://sws.geonames.org/>
+	<http://publications.europa.eu/resource/authority/nuts>
       );
     sh:name "geographic identifier" ;
     sh:description "This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer. Identifiers SHOULD be coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. This property is analogue to an addition by GEODCAT-AP-v2.0.0." ;
