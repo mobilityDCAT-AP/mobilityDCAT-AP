@@ -32,7 +32,7 @@
 <p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
 <td>
-<p>1..1</p>
+<p>1..*</p>
 </td>
 <td>
 <p>A URL that gives access to a distribution of the dataset.</p>
@@ -97,6 +97,55 @@
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation">E</a></p>
 </td>
 </tr>
+
+ <tr class="property" id="distribution-download-url">
+<td>
+<p>access url</p>
+<p><a href="https://www.w3.org/ns/dcat#downloadURL"><code>dcat:downloadURL</code></a></p>
+</td>
+<td>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td>
+<p>1..*</p>
+</td>
+<td>
+<p>A URL that is a direct link to a downloadable file in a given format.</p>
+</td>
+<td>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.downloadURL">A</a></p>
+</td>
+</tr>
+
+<tr class="property" id="distribution-format">
+<td>
+<p>format</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format"><code>dct:format</code></a></p>
+</td>
+<td>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>The technical syntax of the delivered content within the distribution. It describes the base standard that specifies syntactically correct documents. On this level, base elements are properly specified on how to build a document. The resulting document can then be validated by syntax checks.</p>
+</td>
+<td>
+  <p>A <a href="#vocab-format">controlled vocabulary</a> is provided.</p>
+  <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+  <p>There is a similar property in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> called <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.mediatype"><code>dcat:mediaType</code></a>.
+    This one is not used in mobilityDCAT-AP. The reason is the use of Controlled vocabularies: 
+    <code>dct:format</code> uses the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/file-type">EU Authority List about file types</a>, whereas <code>dcat:mediaType</code> uses the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA media types list</a>. 
+    The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.format">E</a></p>
+</td>
+</tr> 
+
   
 </tbody>
 </table>
