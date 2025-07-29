@@ -1,12 +1,8 @@
-<table class="def" id="table-class-distribution"> <!--PL edits 06.06.23-->
+<table class="def" id="table-class-distribution">
 <tbody>
 <tr>
-<th>Class name</th>
-<td>Distribution</td>
-</tr>
-<tr>
-<th>Obligation</th>
-<td>Mandatory</td>
+<th>Definition</th>
+<td>A distribution describes the data formats and communication methods for a dataset. There may be one or multiple distributions for one dataset. For example, the same dataset (e.g. static parking information for truck drivers) can be provided in different ways e.g. as downloadable zip file or as XML using a REST web service. These are two distributions based on one dataset.</td>
 </tr>
 <tr>
 <th>URI</th>
@@ -14,15 +10,15 @@
 <p><code>dcat:Distribution</code></p>
 </td></tr>
 <tr>
+<th>References</th>
+<td><p>DCAT: <a href="https://www.w3.org/ns/dcat#Distribution">Link</a><br>
+DCAT-AP: <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution">Link</a><br>
+geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Distribution">Link</a></p></td>
+</tr>
+<tr>
 <th>Usage note</th>
 <td>
-<p>A distribution describes the data formats and communication methods for a dataset. There may be one or multiple distributions for one dataset. For example, the same dataset (e.g. static parking information for truck drivers) can be provided in different ways e.g. as downloadable zip file or as XML using a SOAP web service. These are two distributions based on one dataset.</p>
-<p>in [[DCAT-AP-v2.0.1]], this class has been classified as ‘Recommended’, to allow for cases that a particular Dataset does not have a Distribution, i.e. . However, for the context of mobility data portals, it can be expected that all datasets have one or more Distributions. Thus, the obligation of class Distribution is raised to mandatory, comparing to [[DCAT-AP-v2.0.1]].</p>
-</td></tr>
-<tr>
-<th>Reference</th>
-<td>
-<p><a data-cite="VOCAB-DCAT-2#Class:Distribution">§ <bdi class="secno">6.7 </bdi>Class: Distribution</a> [[VOCAB-DCAT-2]]</p>
+  <p>For the context of mobility data portals, it can be expected that all datasets have one or more distributions. Thus, there must be at least one instance of class Distribution related to one dataset. This is in contrast to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, which allows for datasets without distributions.</p>
 </td></tr>
 </tbody>
 </table>
