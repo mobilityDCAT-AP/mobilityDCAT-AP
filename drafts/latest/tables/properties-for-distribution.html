@@ -49,6 +49,27 @@
 </td>
 </tr>
 
+<tr class="property" id="distribution-application-layer-protocol">
+<td>
+<p>+application layer protocol</p>
+<p><code>mobilitydcatap:applicationLayerProtocol</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+  <p>The transmitting channel, i.e., the Application Layer Protocol, of the distribution.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-application-layer-protocol">controlled vocabulary</a> is provided.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>  
   
 <tr class="property" id="distribution-applicable-legislation">
 <td>
@@ -76,6 +97,53 @@
 </td>
 </tr>
 
+
+<tr class="property" id="distribution-character-encoding">
+<td>
+<p>+character encoding</p>
+<p><code>cnt:characterEncoding</code></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+  <p>The technical encoding format of the delivered content within the distribution. </p>
+</td>
+<td>
+  <p> It SHOULD be expressed using a character set name defined in the <a href="https://www.iana.org/assignments/character-sets/character-sets.xhtml">IANA character sets register</a>.</p>
+  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Distribution.characterencoding">GE</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="distribution-communication-method">
+<td>
+<p>+communication method</p>
+<p><code>mobilitydcatap:communicationMethod</code></p>
+</td>
+<td>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+  <p>Indicates for dynamically provided distributions, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-communication-method">controlled vocabulary</a> is provided.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>  
+
+  
 <tr class="property" id="distribution-description">
 <td>
 <p>description</p>
@@ -168,6 +236,31 @@
 </td>
 </tr> 
 
+<tr class="property" id="distribution-mobility-data-standard">
+<td>
+<p>+mobility data standard</p>
+<p><code>mobilitydcatap:mobilityDataStandard</code></p>
+</td>
+<td>
+<p><a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+  <p>The mobility data standard, as applied for the delivered content within the distribution. 
+    A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange.</p>
+</td>
+<td>
+  <p>A corresponding <a href="#vocab-mobility-data-standard">controlled vocabulary</a> is provided, listing common mobility data standards. 
+    If no established mobility data standard is applied, an information "proprietary standard" is requested.</p>
+</td>
+<td>
+<p>A</p>
+</td>
+</tr>
+
+  
 <tr class="property" id="distribution-rights">
 <td>
 <p>rights</p>
