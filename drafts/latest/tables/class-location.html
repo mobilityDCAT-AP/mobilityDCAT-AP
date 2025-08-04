@@ -1,12 +1,9 @@
-<table class="def" id="table-class-location"> <!-- PL edits 10.07.23 -->
+
+<table class="def" id="table-class-location">
 <tbody>
 <tr>
-<th>Class name</th>
-<td>Location</td>
-</tr>
-<tr>
-<th>Obligation</th>
-<td>Mandatory</td>
+<th>Definition</th>
+<td>A spatial region or named place.</td>
 </tr>
 <tr>
 <th>URI</th>
@@ -14,15 +11,19 @@
 <p><code>dct:Location</code></p>
 </td></tr>
 <tr>
+<th>References</th>
+<td><p>DCAT: none<br>
+DCAT-AP: <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location">Link</a><br>
+geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Location">Link</a></p></td>
+</tr>
+<tr>
 <th>Usage note</th>
 <td>
-<p>A spatial region or named place. It can be represented via a named place (controlled vocabulary) or with geographic coordinates, according to DCAT-AP guidelines [[DCAT-AP-guideline-spatial]].</p>
-<p>For mobility data portals, usage of a named place is preferred. Many mobility data providers represent public authorities such as states, regions, municipalities etc, which can be easily represented via named places. In contrast, defining of coordinates per dataset might be error-prone and inconsistent. As named spaces, identifiers SHOULD be used via property <a href="#location-geographic-identifier"><code>dct:identifier</code></a>. These are coded via <a href="#vocab-spatial">controlled vocabularies</a> such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. Alternatively, geographic clear names MAY be used via property <a href="#location-geographic-name"><code>skos:prefLabel</code></a>.</p>
-</td></tr>
-<tr>
-<th>Reference</th>
-<td>
-<p><a data-cite="DCTERMS#terms-Location">§ Term name: Location</a> [[DCTERMS]]</p>
+   <p>It can be represented via a named place (controlled vocabulary) or with geographic coordinates, according to <a href="https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used">DCAT-AP guidelines</a>.</p>
+   <p>For mobility data portals, usage of a named place is preferred. Many mobility data providers represent public authorities such as states, regions, municipalities etc, which can be easily represented via named places. In contrast, defining of coordinates per dataset might be error-prone and inconsistent.</p>
+    <p>As named spaces, identifiers should be used via property <a href="#location-geographic-identifier"><code>dct:identifier</code></a>. These are coded via <a href="#vcab-geogpraphic-identifier">controlled vocabularies</a> such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. 
+      Alternatively, geographic clear names may be used via property <a href="#location-geographic-name"><code>skos:prefLabel</code></a>.</p>
 </td></tr>
 </tbody>
 </table>
+
