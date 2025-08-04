@@ -88,6 +88,7 @@
 <td>
   <p>The exposure of personal information, such as a personal name and email address, may be restricted to the public. 
     Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point.</p>
+   <p>The contact point might be populated with the same information as for property <a href="#dataset-publisher"><code>dct:publisher</code></a>. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
 </td>
 <td>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint">E</a></p>
@@ -485,11 +486,12 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p>1..1</p>
 </td>
 <td>
-<p>an entity (company and person) that publishes the  dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.</p>
+<p>An entity (company and person) that publishes the  dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.</p>
 </td>
 <td>
   <p>This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset.</p>
-  <p>To establish a contact with a company or person responsible for the datase, the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> should be used.</p>
+  <p>To establish a contact with a company or person responsible for the dataset, the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> should be used.</p>
+    <p>However, the publisher and the contact point might be populated with the same information. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
   <p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
