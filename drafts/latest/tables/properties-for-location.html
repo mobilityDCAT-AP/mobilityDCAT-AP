@@ -1,4 +1,4 @@
-<table class="simple" id="table-properties-for-address-core-location">
+<table class="simple" id="table-properties-for-location">
 <thead>
 <tr>
 <th>
@@ -26,12 +26,13 @@
 </thead>
 <tbody>
 
-<tr class="property" id="address-administrative-area">
+
+<tr class="property" id="location-bounding-box">
 <td>
-<p>+administrative area</p>
+<p>bounding box</p>
 </td>
 <td>
-<p><a href="http://www.w3.org/ns/locn#adminUnitL2"><code>locn:adminUnitL2</code></a></p>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox"><code>dcat:bbox</code></a></p>
 </td>
 <td>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
@@ -40,115 +41,111 @@
 <p>0..1</p>
 </td>
 <td>
-<p>The administrative area of an address. Depending on the country, this corresponds to a province, a county, a region, or a state.</p>
+<p>The geographic bounding box of the location.</p>
 </td>
 <td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).administrativeunitlevel2">GE</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.bbox">A</a></p>
+</td>
+</tr>
+
+<tr class="property" id="location-centroid">
+<td>
+<p>centroid</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid"><code>dcat:centroid</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The geographic center (centroid) of the location.</p>
+</td>
+<td>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.centroid">A</a></p>
 </td>
 </tr>
   
-<tr class="property" id="address-city">
+
+<tr class="property" id="location-gazetteer">
 <td>
-<p>+city</p>
+<p>+gazetteer</p>
 </td>
 <td>
-<p><a href="http://www.w3.org/ns/locn#postName"><code>locn:postName</code></a></p>
+<p><a href="https://www.w3.org/2009/08/skos-reference/skos.html#inScheme"><code>skos:inScheme</code></a></p>
 </td>
 <td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+<p><a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The name of the city of the address.</p>
+<p>The gazetteer, i.e., a codelist to which the location belongs.</p>
 </td>
 <td>
 <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).postname">GE</a></p>
-</td>
-</tr>
-  
-<tr class="property" id="address-country">
-<td>
-<p>+country</p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#adminUnitL1"><code>locn:adminUnitL1</code></a></p>
-</td>
-<td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The country of an address.</p>
-</td>
-<td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
-</td>
-<td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).administrativeunitlevel1">GE</a></p>
-</td>
-</tr>
-
-
-
-<tr class="property" id="address-postal-code">
-<td>
-<p>+postal code/p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#postCode"><code>locn:postCode</code></a></p>
-</td>
-<td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The postal code of an address.</p>
-</td>
-<td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
-</td>
-<td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).postcode">GE</a></p>
-</td>
-</tr>
-
-
-
-<tr class="property" id="address-street-address">
-<td>
-<p>+street address</p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#thoroughfare"><code>locn:thoroughfare</code></a></p>
-</td>
-<td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The street name and civic number of the address.</p>
-</td>
-<td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
-</td>
-<td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).streetaddress">GE</a></p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Location.gazetteer">GA</a></p>
 </td>
 </tr> 
+
+<tr class="property" id="location-geographic-identifier">
+<td>
+<p>+geographic identifier</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/2009/08/skos-reference/skos.html#inScheme"><code>dct:identifier</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..*</p>
+</td>
+<td>
+<p>This property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer.</p>
+</td>
+<td>
+  <p>Corresponding <a href="#vcab-geographic-identifier">controlled vocabularies</a> are provided, denoting commonly used geographic identifiers.</p> 
+  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Location.geograhicidentifier">GA</a></p>
+</td>
+</tr>
+
+<tr class="property" id="location-geometry">
+<td>
+<p>geometry</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.geometry"><code>locn:geometry</code></a></p>
+</td>
+<td>
+<p><a href="#class-geometry"><code>locn:Geometry</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The corresponding geometry for the location.</p>
+</td>
+<td>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location.geometry">A</a></p>
+</td>
+</tr>  
+
   
 </tbody>
 </table>
