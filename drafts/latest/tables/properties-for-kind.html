@@ -1,4 +1,4 @@
-<table class="simple" id="table-properties-for-address-core-location">
+<table class="simple" id="table-properties-for-kind">
 <thead>
 <tr>
 <th>
@@ -26,129 +26,78 @@
 </thead>
 <tbody>
 
-<tr class="property" id="address-administrative-area">
+<tr class="property" id="kind-email">
 <td>
-<p>+administrative area</p>
+<p>+email</p>
 </td>
 <td>
-<p><a href="http://www.w3.org/ns/locn#adminUnitL2"><code>locn:adminUnitL2</code></a></p>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e183"><code>vcard:hasEmail</code></a></p>
 </td>
 <td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+<p><a href="#class-email-vcard"><code>vcard:Email</code></a></p>
 </td>
 <td>
-<p>0..1</p>
+<p>1..1</p>
 </td>
 <td>
-<p>The administrative area of an address. Depending on the country, this corresponds to a province, a county, a region, or a state.</p>
+<p>The email address of the kind (i.e., an individual, an organization, a location or a group), specified using fully qualified mailto: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc6068">RFC6068</a>.</p>
 </td>
 <td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>, however, with an raised obligation level.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).administrativeunitlevel2">GE</a></p>
-</td>
-</tr>
-  
-<tr class="property" id="address-city">
-<td>
-<p>+city</p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#postName"><code>locn:postName</code></a></p>
-</td>
-<td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The name of the city of the address.</p>
-</td>
-<td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
-</td>
-<td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).postname">GE</a></p>
-</td>
-</tr>
-  
-<tr class="property" id="address-country">
-<td>
-<p>+country</p>
-</td>
-<td>
-<p><a href="http://www.w3.org/ns/locn#adminUnitL1"><code>locn:adminUnitL1</code></a></p>
-</td>
-<td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-<td>
-<p>The country of an address.</p>
-</td>
-<td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
-</td>
-<td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).administrativeunitlevel1">GE</a></p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.email">GE</a></p>
 </td>
 </tr>
 
-
-
-<tr class="property" id="address-postal-code">
+<tr class="property" id="kind-name">
 <td>
-<p>+postal code/p>
+<p>+name</p>
 </td>
 <td>
-<p><a href="http://www.w3.org/ns/locn#postCode"><code>locn:postCode</code></a></p>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e891"><code>vcard:fn</code></a></p>
 </td>
 <td>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
 <td>
-<p>0..1</p>
+<p>1..1</p>
 </td>
 <td>
-<p>The postal code of an address.</p>
+<p>A name of the kind, i.e., a unique name of an individual, an organization, a location or a group./p>
 </td>
 <td>
-<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>, however, with an raised obligation level.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).postcode">GE</a></p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.name">GE</a></p>
 </td>
 </tr>
 
-
-
-<tr class="property" id="address-street-address">
+<tr class="property" id="kind-URL">
 <td>
-<p>+street address</p>
+<p>+URL</p>
 </td>
 <td>
-<p><a href="http://www.w3.org/ns/locn#thoroughfare"><code>locn:thoroughfare</code></a></p>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e605"><code>vcard:hasURL</code></a></p>
 </td>
 <td>
-<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 <td>
-<p>The street name and civic number of the address.</p>
+<p>A web site of the kind., i.e., of an individual, an organization, a location or a group./p>
 </td>
 <td>
 <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
 <td>
-<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation).streetaddress">GE</a></p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.URL">GA</a></p>
 </td>
-</tr> 
+</tr>
+
   
 </tbody>
 </table>
