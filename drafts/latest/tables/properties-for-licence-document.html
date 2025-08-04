@@ -1,0 +1,178 @@
+<table class="simple" id="table-properties-for-licence-document">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property" id="kind-address">
+<td>
+<p>+address</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e101"><code>vcard:hasAddress</code></a></p>
+</td>
+<td>
+<p><a href="#class-address-vcard"><code>vcard:Address</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The postal address of the kind, i.e., of an individual, an organization, a location or a group.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.address">GA</a></p>
+</td>
+</tr>
+
+<tr class="property" id="kind-affiliation">
+<td>
+<p>+affiliation</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e1077"><code>vcard:organization-name</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The affiliation of the kind, i.e., of an individual, an organization, a location or a group.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.affiliation">GA</a></p>
+</td>
+</tr>  
+  
+<tr class="property" id="kind-email">
+<td>
+<p>+email</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e183"><code>vcard:hasEmail</code></a></p>
+</td>
+<td>
+<p><a href="#class-email-vcard"><code>vcard:Email</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>The email address of the kind (i.e., an individual, an organization, a location or a group), specified using fully qualified mailto: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc6068">RFC6068</a>.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>, however, with an raised obligation level.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.email">GE</a></p>
+</td>
+</tr>
+
+<tr class="property" id="kind-name">
+<td>
+<p>+name</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e891"><code>vcard:fn</code></a></p>
+</td>
+<td>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+<td>
+<p>A name of the kind, i.e., a unique name of an individual, an organization, a location or a group.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>, however, with an raised obligation level.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.name">GE</a></p>
+</td>
+</tr>
+
+
+<tr class="property" id="kind-phone">
+<td>
+<p>+phone</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e563"><code>vcard:hasTelephone</code></a></p>
+</td>
+<td>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>The phone number of the  kind (i.e., an individual, an organization, a location or a group), specified using fully qualified tel: URI scheme <a href="https://www.rfc-editor.org/rfc/rfc3966">RFC3966</a>.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.email">GA</a></p>
+</td>
+</tr>
+
+
+  
+<tr class="property" id="kind-URL">
+<td>
+<p>+URL</p>
+</td>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e605"><code>vcard:hasURL</code></a></p>
+</td>
+<td>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+<td>
+<p>A web site of the kind., i.e., of an individual, an organization, a location or a group.</p>
+</td>
+<td>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind.URL">GA</a></p>
+</td>
+</tr>
+
+  
+</tbody>
+</table>
