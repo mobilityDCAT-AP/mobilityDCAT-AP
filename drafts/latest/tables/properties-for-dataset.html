@@ -25,45 +25,45 @@
 
   
 <tr class="property" id="dataset-applicable-legislation">
-<td>
+<td valign=top>
 <p>applicable legislation</p>
 <p><a href="http://data.europa.eu/r5r/applicableLegislation"><code>dcatap:applicableLegislation</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-legal-resource"><code>eli:LegalResource</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>A legal framework being relevant for the dataset, e.g., an EC Delegated Regulation which stipulates the provisioning of the corresponding dataset, or some other international or national frameworks, e.g., Open Data regulations.</p>
 </td>
-<td>
+<td valign=top>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-assessment-result">
-<td>
+<td valign=top>
 <p>+assessment result</p>
 <p><code>mobilitydcatap:assessmentResult</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-assessment"><code>mobilitydcatap:Assessment</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
   <p>The results and outcomes from an assessment process by an external organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by <a href="https://napcore.eu/national-bodies-3/">National Bodies</a> and installed individually in each Member State.</p>
   <p>The property may point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online.</p>
 </td>
-<td>
+<td valign=top>
   <p>The difference to the property <a href="dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a> is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>
@@ -71,143 +71,143 @@
 
   
 <tr class="property" id="dataset-contact-point">
-<td>
+<td valign=top>
 <p>contact point</p>
 <p><a href="http://www.w3.org/ns/dcat#contactPoint"><code>dcat:contactPoint</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-kind"><code>vcard:Kind</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>Contact information that can be used for communication with a company or person responsible for the dataset. 
   Used for questions or issues about a dataset and its provisioning, as raised by a platform user or a platform operator.</p>
 </td>
-<td>
+<td valign=top>
   <p>The exposure of personal information, such as a personal name and email address, may be restricted to the public. 
     Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point.</p>
    <p>The contact point might be populated with the same information as for property <a href="#dataset-publisher"><code>dct:publisher</code></a>. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-dataset-distribution">
-<td>
+<td valign=top>
 <p>dataset distribution</p>
 <p><a href="http://www.w3.org/ns/dcat#distribution"><code>dcat:distribution</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-distribution"><code>dcat:Distribution</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..*</p>
 </td>
-<td>
+<td valign=top>
 <p>An available Distribution for the Dataset.</p>
 </td>
-<td>
+<td valign=top>
   <p>In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, the obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.datasetdistribution">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-description">
-<td>
+<td valign=top>
 <p>description</p>
 <p><a href="http://purl.org/dc/terms/description"><code>dct:description</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..*</p>
 </td>
-<td>
+<td valign=top>
 <p>	
 Information about the dataset as a free-text description. 
   It is used only for a brief overview, because free-text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation and other aspects about the dataset are described within other properties of the dataset.</p>
 </td>
-<td>
+<td valign=top>
   <p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>. 
     The language version should correspond to property <a href="catalogue-record-language"><code>dct:language</code></a> of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-frequency">
-<td>
+<td valign=top>
 <p>frequency</p>
 <p><a href="http://purl.org/dc/terms/accrualPeriodicity"><code>dct:accrualPeriodicity</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-frequency"><code>dct:Frequency</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..1</p>
 </td>
-<td>
+<td valign=top>
 <p>Describes how often the delivered content is updated. This information tells a data consumer, how often it is updated on the on the data platform, so the data consumer might align the frequency of data retrieval accordingly.</p>
 </td>
-<td>
+<td valign=top>
   <p>For dynamic data feeds, the frequency should correspond to the technical upload / data push frequency. For static datasets, it should correspond to the expected change frequency (see property <a href="#dataset-modification-date"><code>dct:modified</code></a>). 
     The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. </p>
     <p>A <a href="#vocab-update-frequency">controlled vocabulary</a> is provided.</p>
   <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description">E</a></p>
 </td>
 </tr>
 
 
 <tr class="property" id="dataset-geographical-coverage">
-<td>
+<td valign=top>
 <p>geographical coverage</p>
 <p><a href="http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-location"><code>dct:Location</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..n</p>
 </td>
-<td>
+<td valign=top>
 <p>A geographic region that is covered by the delivered content.</p>
 </td>
-<td>
+<td valign=top>
   <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.geographicalcoverage">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-georeferencing-method">
-<td>
+<td valign=top>
 <p>+georeferencing method</p>
 <p><code>mobilitydcatap:georeferencingMethod</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>The georeferencing method used in the delivered content.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-georeferencing-method">controlled vocabulary</a> is provided, denoting commonly used georeferencing methods for mobility data.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>
@@ -215,233 +215,233 @@ Information about the dataset as a free-text description.
   
 
 <tr class="property" id="dataset-has-version">
-<td>
+<td valign=top>
 <p>has version</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version"><code>dcat:hasVersion</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
 <p>A related dataset that is a version, edition, or adaptation of the described dataset.
 Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a>, with a contrary relationship. </p>
 </td>
-<td>
+<td valign=top>
   <p>It might be used to host multiple versions of the same dataset in the data portal, also enabling a version history. 
     Multiple versions should be differentiated via the properties <a href="#dataset-version-info"><code>owl:versionInfo</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion">E</a></p>
 </td>
 </tr>
 
 
 <tr class="property" id="dataset-identifier">
-<td>
+<td valign=top>
 <p>identifier</p>
 <p><a href="http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
 <p>The main identifier for the dataset, e.g. the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
 </td>
-<td>
+<td valign=top>
 <p>This property should populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.identifier">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-in-series">
-<td>
+<td valign=top>
 <p>in series</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series"><code>dcat:inSeries</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>A dataset series of which the dataset is part.</p>
 </td>
-<td>
+<td valign=top>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.inseries">A</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset+intended-information-service">
-<td>
+<td valign=top>
 <p>+intended information service</p>
 <p><code>mmobilitydcatap:intendedInformationService</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>A type of information service, which the data content is intended to support. Such services may be, e.g., information services for multimodal mobility, as specified by <a href="https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng">EC Delegated Regulation 2024/490</a>.</p>
   <p>Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets on timetables.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-intended-information-service">controlled vocabulary</a> is provided.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>
   
 <tr class="property" id="dataset-is-referenced-by">
-<td>
+<td valign=top>
 <p>is referenced by</p>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isReferencedBy"><code>dct:isReferencedBy</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>A related resource, such as a publication, that references, cites, or otherwise points to the dataset. Corresponds to the property <a href="#dataset-relation"><code>dct:relation</code></a>, with a contrary relationship.</p>
 </td>
-<td>
+<td valign=top>
   <p>It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.isreferencedby">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-keyword">
-<td>
+<td valign=top>
 <p>keyword</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword"><code>dcat:keyword</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>A keyword or tag describing the Dataset.</p>
 </td>
-<td>
+<td valign=top>
   <p>For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult.</p>
   <p>Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, <a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a and <a href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a.</p>
   <p>If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of mobilityDCAT-AP, in order to update the Controlled Vocabularies.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.keyword">E</a></p>
 </td>
 </tr>
 
 <tr class="property" id="dataset-language">
-<td>
+<td valign=top>
 <p>language</p>
 <p><a href="http://purl.org/dc/terms/language"><code>dct:language</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p></p>The language of the content data in a dataset, if this content has a natural language embedded, such as text fields, addresses etc. </p>
 </td>
-<td>
+<td valign=top>
   <p>This property can be repeated if there are multiple languages in the dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a></p>
  </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.language">E</a></p>
 </td>
 </tr> 
 
 <tr class="property" id="dataset-mobility-theme">
-<td>
+<td valign=top>
 <p>+mobility theme</p>
 <p><code>mobilitydcatap:mobilityTheme</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..n</p>
 </td>
-<td>
+<td valign=top>
   <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content.</p>
   <p>The theme is described via a controlled vocabulary in two hierarchy levels: The 1st level is a mandatory field labelled "Data content category", describing the classification of the data content on an aggregated level. The 2nd level is an optional field labelled “Data content sub category”, detailing the "Data content category" via one or several sub-categories. When entering the metadata for one dataset, the data provider would first select one or several options of a "Data content category", and then optionally details this with one or more options of corresponding “Data content sub category”. The platform must be able to handle the dependencies between these two levels, i.e., match the allowed options between the 1st and 2nd level.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-mobility-theme">controlled vocabulary</a> is provided.</p>
   <p>This property is a sub-property of <a href="#dataset-theme"><code>dcat:theme</code></a>, being a further property of Dataset. To distinguish these two theme properties, it is recommended to label <code>mobilitydcatap:mobilityTheme</code> as "Mobility Theme", and <code>dcat:theme</code> as "EU Open Data Theme".</p>
   <p>The subject of a dataset may also be described via property <a href="#dataset-keyword"><code>dcat:keyword</code></a>. However, the usage of "mobility theme" is preferred, to avoid ambiguity and uncontrolled theme descriptions.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>
 
   
 <tr class="property" id="dataset-modification-date">
-<td>
+<td valign=top>
 <p>modification date</p>
 <p><a href="http://purl.org/dc/terms/modified"><code>dct:modified</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#datatype-temporal-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
 <p>The most recent date on which the content of the dataset was changed or modified.</p>
 </td>
-<td>
+<td valign=top>
   <p>This is redundant for high-frequency data feeds (e.g., DATEX II feeds), where the change date can be derived from the time stamp within the data feed.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.modificationdate">E</a></p>
 </td>
 </tr>    
 
 <tr class="property" id="dataset-network-coverage">
-<td>
+<td valign=top>
 <p>+network coverage</p>
 <p><code>mobilitydcatap:networkCoverage</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>This property describes the part of the transport network that is covered by the delivered content.</p>
   <p>For road traffic, the property should refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed.</p>
   <p>For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data.</p>
   <p>For all modes, the property should also indicate if the data content relates to the <a href="https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en">EU’s trans-European transport network</a>.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-georeferencing-method">controlled vocabulary</a> is provided, denoting commonly used road and infrastructure network classes.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>
@@ -449,24 +449,24 @@ Corresponds to the property <a href="#dataset-is-version-of"><code>dct:isVersion
   
   
 <tr class="property" id="dataset-other-identifier">
-<td>
+<td valign=top>
 <p>other identifier</p>
 <p><a href="http://www.w3.org/ns/adms#identifier"><code>adms:identifier</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-identifier"><code>adms:Identifier</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>This property may be used as an additional identifier, besides <a href="#dataset-identifier"><code>dct:identifier</code></a>.</p>
 </td>
-<td>
+<td valign=top>
 <p>This property may be referring to a dedicated, EU-wide identificator system of NAP datasets, to be introduced in the future,
 or other identificator systems such as <a href="https://schema.datacite.org/">DataCite</a>, <a href="http://www.doi.org/">DOI</a>, or <a href="https://w3id.org/">W3ID</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier">E</a></p>
 </td>
 </tr>  
@@ -475,141 +475,141 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 
   
 <tr class="property" id="dataset-publisher">
-<td>
+<td valign=top>
 <p>publisher</p>
 <p><a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-agent"><code>foaf:Agent</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..1</p>
 </td>
-<td>
+<td valign=top>
 <p>An entity (company and person) that publishes the  dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.</p>
 </td>
-<td>
+<td valign=top>
   <p>This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset.</p>
   <p>To establish a contact with a company or person responsible for the dataset, the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> should be used.</p>
     <p>However, the publisher and the contact point might be populated with the same information. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
   <p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher">E</a></p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-quality-description">
-<td>
+<td valign=top>
 <p>+quality description</p>
 <p><a href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation"><code>dqv:hasQualityAnnotation</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-quality-annotation"><code>dqv:QualityAnnotation</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>Any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment. This information should assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information should be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
 </td>
-<td>
+<td valign=top>
   <p>Quality aspects should be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” should be given.</p>
   <p>If existing quality frameworks have been applied in the quality assessment, e.g., the <a href="https://napcore.eu/quality/">Quality Frameworks from the NAPCORE project</a>, these frameworks should be referenced.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-reference-system">
-<td>
+<td valign=top>
 <p>+reference system</p>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-standard"><code>dct:Standard</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>The spatial reference system used in the delivered content. To be specified via the <a href="http://www.opengis.net/def/crs/EPSG/">“EPSG coordinate reference systems” register</a> operated by OGC.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-reference-system">controlled vocabulary</a> is provided.</p>
   <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.referencesystem">GA</a></p>
 </td>
 </tr>
 
   
 <tr class="property" id="dataset-related-resource">
-<td>
+<td valign=top>
 <p>related resource</p>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#relationy"><code>dct:relation</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>A reference, citation, or otherwise pointing to another, related resource, such as another datast. Corresponds to the property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, with a contrary relationship.</p>
 </td>
-<td>
+<td valign=top>
   <p>It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.relatedresource">E</a></p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-release-date">
-<td>
+<td valign=top>
 <p>release date</p>
 <p><a href="http://purl.org/dc/terms/issued"><code>dct:issued</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#datatype-temporal-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
 <p>The date of formal issuance (e.g., publication) of the dataset.</p>
 </td>
-<td>
+<td valign=top>
   <p>There might a difference to the creation date of the metadata entry, see the property <a href="#catalogue-record-created"><code>dct:created</code></a> of Class Catalogue Record. 
     Image the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, leading to two different dates. However, both dates can also be the same.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.releasedate">E</a></p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-rights-holder">
-<td>
+<td valign=top>
 <p>+rights holder</p>
 <p><code>dct:rightsHolder</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-agent"><code>foaf:Agent</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</p>
 </td>
-<td>
+<td valign=top>
   <p>The rights holder will be in many cases identical with the publisher of the dataset (see property <a href="#dataset-publisher"><code>dct:publisher</code></a>) and/or of the catalogue record (see property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a>). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.</p>
   <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.rightsholder">GE</a></p>
 </td>
 </tr>
@@ -617,22 +617,22 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
   
 
 <tr class="property" id="dataset-temporal-coverage">
-<td>
+<td valign=top>
 <p>temporal coverage</p>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal"><code>dct:temporal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
 <p>A temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</p>
 </td>
-<td>
+<td valign=top>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalcoverage">E</a></p>
 </td>
 </tr>
@@ -640,69 +640,69 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 
   
 <tr class="property" id="dataset-theme">
-<td>
+<td valign=top>
 <p>theme</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme"><code>dcat:theme</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>The generic theme (i.e., a specific subject, category, or type) of the content of the dataset.</p>
 </td>
-<td>
+<td valign=top>
  <p>A <a href="#vocab-theme">controlled vocabulary</a> is provided.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.theme">E</a></p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-title">
-<td>
+<td valign=top>
 <p>title</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme"><code>dct:title</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>1..*</p>
 </td>
-<td>
+<td valign=top>
 <p>The name given to the dataset in a generic term. The name should be a meaningful, unique and unambiguous label.</p>
 </td>
-<td>
+<td valign=top>
  <p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.
  The language version should correspond to property <a href="catalogue-record-language"><code>dct:language</code></a> of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.title">E</a></p>
 </td>
 </tr>    
 
 
  <tr class="property" id="dataset-transport-mode">
-<td>
+<td valign=top>
 <p>+transport mode</p>
 <p><code>mobilitydcatap:transportMode</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..n</p>
 </td>
-<td>
+<td valign=top>
   <p>The transport mode that is covered by the delivered content.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-transport-mode">controlled vocabulary</a> is provided, denoting commonly used transport modes.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>
@@ -710,48 +710,48 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 
  
 <tr class="property" id="dataset-version">
-<td>
+<td valign=top>
 <p>version</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"><code>dcat:version</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
 <p>The version indicator (name or identifier) of a dataset.</p>
 </td>
-<td>
+<td valign=top>
  <p>The version number should be updated, whenever there are changes to the dataset noted by the property <a href="#dataset-modification-date"><code>dct:modified</code></a>.</p>
  <p>Together with property <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>, this may also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform.</p>
  <p>The property URI has been replaced from <code>owl:versionInfo</code>, comparing to DCAT-AP-v2.0.1 and mobilityDCAT-AP-v-1.0.1. </p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version">E</a></p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-version-notes">
-<td>
+<td valign=top>
 <p>version notes</p>
 <p><a href="http://www.w3.org/ns/adms#versionNotes"><code>adms:versionNotes</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>A textual description of the differences between this version and a previous version of the dataset.</p>
 </td>
-<td>
+<td valign=top>
  <p>This property should be an addition to the property <a href="#dataset-version"><code><code>dcat:version</code></a>.</p>
  <p>This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
-<td>
+<td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.versionnotes">E</a></p>
 </td>
 </tr>  
