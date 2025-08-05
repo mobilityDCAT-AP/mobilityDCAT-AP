@@ -26,20 +26,20 @@ Property name and URI</p>
 
 
 <tr class="property" id="mobility-data-standard-name">
-<td>
+<td valign=top>
 <p>+standard name</p>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
 <p>The name of the mobility data standard.</p>
 </td>
-<td>
+<td valign=top>
   <p>A corresponding <a href="#vocab-mobility-data-standard">controlled vocabulary</a> is provided.</p>
   <p>This property is necessary for the following CASE 1:</p>
   <p>A custom instance of class <a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a> is defined. 
@@ -47,48 +47,48 @@ Property name and URI</p>
   This property would then name the mobility data standard via a controlled vocabulary.</p>
   <p>In the alternative CASE 2, the name the mobility data standard is directly named as range of the class <a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a> , again via the same controlled vocabulary.</p>
 </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>  
 
 <tr class="property" id="mobility-data-standard-version">
-<td>
+<td valign=top>
 <p>+version</p>
 <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"><code>dcat:version</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..1</p>
 </td>
-<td>
+<td valign=top>
 <p>The version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2.</p>
 </td>
-<td>
+<td valign=top>
   <p>This information is provided in a textual format. To avoid ambiguity, only short version identifiers should be used, e.g., "3.2", without redundant acronyms such as "v", underscores etc.</p>
   </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>    
 
 <tr class="property" id="mobility-data-standard+schema">
-<td>
+<td valign=top>
 <p>+schema</p>
 <p><code>mobilitydcatap:schema</code></p>
 </td>
-<td>
+<td valign=top>
 <p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
 </td>
-<td>
+<td valign=top>
 <p>0..*</p>
 </td>
-<td>
+<td valign=top>
 <p>The schema of the mobility data standard, as applied within the delivered content. E.g., an XDS representation of a specific <a href="https://docs.datex2.eu/user-guide/Profiles/">DATEX II profile</a>. </p>
 </td>
-<td>
+<td valign=top>
   <p>This is a sub-property of <a href="#https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a>.</p>
   <p>There are different options how to reference the schema.</p>
   <p>It might be a reference to a platform-hosted catalogue of schemas. In such case, the data platform should keep an own catalogue of commonly used schemas. 
@@ -97,7 +97,7 @@ Property name and URI</p>
   In such case, the data provider should be able to upload an own, individual schema, or to link to an external one.</p>. 
   <p>In any case, the schema should be available as a resource.</p>
   </td>
-<td>
+<td valign=top>
 <p>A</p>
 </td>
 </tr>    
