@@ -476,23 +476,9 @@ table code, table pre {
 
 </section>
 
-<!-- Provenance Statement -->
 
-<section id="properties-for-provenance-statement">
 
-<h3>Provenance Statement</h3>
-
-<aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is only used as the range of the optional property "dct:provenance" for class Dataset. In mobilityDCAT-AP, however, this property is removed. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [[DCAT-AP-v2.0.1]]</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-provenance-statement.html"></div>
-
-</section>
-
-<!-- Quality Annotation,  PL: edited 07.07.23-->
-
+<!-- Quality Annotation3-->
 <section id="class-quality-annotation">
 
 <h3>+Quality Annotation</h3>
@@ -502,72 +488,6 @@ table code, table pre {
 
 </section>
 
-
-
-<!-- Rights Statement -->
-
-<section id="properties-for-rights-statement">
-
-<h3>Rights Statement</h3>
-
-<aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-rights-statement.html"></div>
-
-<section id="mandatory-properties-for-rights-statement">
-
-<h4>Mandatory property for Rights Statement</h4>
-
-<aside class="note">
-<p>The following property is not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#rights-statement-conditions-for-access-and-usage">conditions for access and usage</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-rights-statement.html"></div>
-
-</section>
-
-
-
-<section id="recommended-properties-for-rights-statement">
-
-<h4>Recommended property for Rights Statement</h4>
-
-<aside class="note">
-<p>The following property is not included in [[DCAT-AP-v2.0.1]]:</p>
-<ul>
-<li>+<a href="#rights-statement-additional-information-for-access-and-usage">Additional information for access and usage</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-rights-statement.html"></div>
-
-</section>
-</section>
-
-<!-- Standard -->
-
-<section id="properties-for-standard">
-
-<h3>Standard</h3>
-
-<aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-v2.0.1]].</p>
-<p>In [[DCAT-AP-v2.0.1]], this class is used as the range of property <code>dct:conformsTo</code> for class Catalogue Record (context "application profile"); for class Dataset (context "conforms to"); and for class Distribution (context "linked schemas"). In mobilityDCAT-AP, these properties are removed.</p>
-<p>However, mobilityDCAT-AP uses this class as the range of an added property <a href="#dataset-reference-system""><code>dct:conformsTo</code></a> for class Dataset in a different context "reference system", analogue to a property addition by [[GEODCAT-AP-v2.0.0]].</p>
-<p>For detailed information about data standards in the mobility domain, mobilityDCAT-AP introduces a separate class <a href="#mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a>, as a sub-class to class <code>dct:Standard</code>. </p>
-<p>Further, [[GEODCAT-AP-v2.0.0]] adds several properties to the class <code>dct:Standard</code>. These describe any standards via an identifier, type, release date etc. However, describing standards is not a main use case of mobilityDCAT-AP, so no properties are added here. If necessary, the properties for class Standard, as added by [[GEODCAT-AP-v2.0.0]], MAY be used.</p>
-
-
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
-
-</section>
 
 </section>
   
@@ -646,6 +566,18 @@ table code, table pre {
 <div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-identifier.html"></div>
 
 </section>   
+
+
+<section id="class-legal-resource">
+
+<h3>Legal Resource</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-legal-resource.html"></div>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-legal-resource.html"></div>
+
+</section>  
+  
   
 </section>
   
