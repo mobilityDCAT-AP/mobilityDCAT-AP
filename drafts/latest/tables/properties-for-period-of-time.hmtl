@@ -1,0 +1,72 @@
+
+
+<table class="simple" id="table-properties-for-period-of-time">
+<thead>
+<tr>
+<th>
+<p>Property name and URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property" id="period-of-time-end-date">
+<td valign=top>
+<p>end date</p>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_end_date"><code>dcat:endDate</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The end of the period.</p>
+</td>
+<td valign=top>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.enddate">A</a></p>
+</td>
+</tr>
+
+<tr class="property" id="period-of-time-start-date">
+<td valign=top>
+<p>start date</p>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date"><code>dcat:startDate</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The start of the period</p>
+</td>
+<td valign=top>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime.startdate">A</a></p>
+</td>
+</tr>
+
+  
+</tbody>
+</table>
