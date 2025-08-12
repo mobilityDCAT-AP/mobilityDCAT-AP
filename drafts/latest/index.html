@@ -1000,7 +1000,7 @@ In particular, the class and property definitions are now under new sections "Ma
   <li>Class <a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a> is renamed from previously "Category Scheme".</li>
   <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.</li>
 </ul>   
-<li>Changes in properties, with the goal to be aligned with DCAT-AP v3 data model:</li>
+<li>Changes in properties, with the goal to be aligned with the DCAT-AP v3 data model:</li>
 <ul>
   <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now reused from DCAT-AP v3, 
      previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
@@ -1010,10 +1010,19 @@ In particular, the class and property definitions are now under new sections "Ma
   <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
   <li>Property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a> of class Distribution: cardinality relaxed from "0..1" to "0..*".</li>
   <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
-    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatyp <a href="#class-temporal-literal">Temporal Literal</a>.</li>
+    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
   <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
-    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatyp <a href="#class-temporal-literal">Temporal Literal</a>.</li>
+    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
 </ul> 
+<li>Changes in properties, with the goal to be aligned with the geoDCAT-AP v3 data model:</li>
+<ul>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-url"><code>vcard:hasURL</code></a> of class Kind: range changed from <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+   <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Geometry: range changed from previously
+    "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code>" to a new class <a href="#class-geometry">Geometry</a>.</li>
+</ul>   
 <li>Other changes in properties:</li>
 <ul>
   <li>Property <code>dcat:accessService</code> of class Distribution: property removed, 
