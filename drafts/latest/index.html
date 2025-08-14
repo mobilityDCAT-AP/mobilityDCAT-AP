@@ -1019,6 +1019,8 @@ In particular, the class and property definitions are now under new sections "Ma
   <li>Property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> of class Distribution: cardinality relaxed from "1..1" to "1..*".</li>
   <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
   <li>Property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a> of class Distribution: cardinality relaxed from previously "0..1" to "0..*".</li>
+    <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
+      "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
   <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
   <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
@@ -1033,6 +1035,8 @@ In particular, the class and property definitions are now under new sections "Ma
   <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
    <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Geometry: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code>" to a new class <a href="#class-geometry">Geometry</a>.</li>
+ <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class RIghts Statement: URI changed from previously <code>rdfs:label</code>, 
+   at the same time name changed from previously "additional information for access and usage" to "rights statement text".</li>
 </ul>   
 <li>Other changes in properties:</li>
 <ul>
