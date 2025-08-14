@@ -1007,13 +1007,15 @@ In particular, the class and property definitions are now under new sections "Ma
 </ul>   
 <li>Changes in properties, with the goal of alignment with the DCAT-AP v3 data model:</li>
 <ul>
+  <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
+    <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
   <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
-    Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
+    Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
   <li>Property <a href="#dataset-in-series"><code>dcat:inSeries</code></a> of class Dataset: property added to allow for relating a dataset to a dataset series.</li>
-  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
   <li>Property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> of class Distribution: cardinality relaxed from "1..1" to "1..*".</li>
   <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
-  <li>Property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a> of class Distribution: cardinality relaxed from "0..1" to "0..*".</li>
+  <li>Property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a> of class Distribution: cardinality relaxed from previously "0..1" to "0..*".</li>
   <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
   <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
@@ -1021,10 +1023,10 @@ In particular, the class and property definitions are now under new sections "Ma
 </ul> 
 <li>Changes in properties, with the goal of alignment with the geoDCAT-AP v3 data model:</li>
 <ul>
-  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
-  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from "1..*" to "1..1".</li>
-  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from "1..*" to "1..1".</li>
-  <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
    <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Geometry: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code>" to a new class <a href="#class-geometry">Geometry</a>.</li>
 </ul>   
