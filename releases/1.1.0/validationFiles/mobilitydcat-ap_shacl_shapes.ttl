@@ -953,7 +953,7 @@
 		]
 		[
         sh:nodeKind sh:IRI ;
-        sh:pattern "http://publications.europa.eu/resource/dataset/nuts" ;
+        sh:pattern "^http://data\\.europa\\.eu/nuts/code/.+$" ;
         ]
       );
     sh:name "geographic identifier" ;
@@ -1171,5 +1171,6 @@
 <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
   skos:prefLabel "European Legislation Identifier (ELI)"@en ;
 .
+
 
 
