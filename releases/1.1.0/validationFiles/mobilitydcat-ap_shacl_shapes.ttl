@@ -222,7 +222,7 @@
   [
     # Optional property for Agent
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI ; ;
+    sh:nodeKind sh:IRI ;
     sh:path foaf:workplaceHomepage ;
     sh:name "work place Homepage URL" ;
     sh:description "This property MAY be used to specify the Web site of the Agent." ;
@@ -254,7 +254,7 @@
   [
     # Optional property for Assessment
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI ; ;
+    sh:nodeKind sh:IRI ;
     sh:path oa:hasBody ;
     sh:name "assessment result" ;
     sh:description "This property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes." ;
@@ -790,7 +790,7 @@
   ],
   [
     # Optional property for Distribution
-    sh:nodeKind sh:IRI ; ;
+    sh:nodeKind sh:IRI ;
     sh:path adms:sample ;
     sh:name "sample" ;
     sh:message "ERROR: Invalid sample. If provided, this must be a rdfs:Resource pointing to a sample distribution of the dataset." ;
@@ -994,7 +994,7 @@
   ],
   [
    # Optional property for  Mobility Data Standard
-   sh:nodeKind sh:IRI ;  ;
+   sh:nodeKind sh:IRI ;
    sh:path mobilitydcatap:schema ;
    sh:name "schema" ;
    sh:description "This property describes the schema of the mobility data standard, as applied within the delivered content. There are differet optiions how to reference the schema. It might be a reference to a portal-internal catalogue of schemas, a reference to an individual schema (that is provided by the data publisher), or a reference to an external catalogue of schemas (like a stakeholder-based DATEX II profile published on the datex2.eu page). The data platform SHOULD keep an archive of commonly used schemas. The data provider SHOULD be able to select an applicable schema from this archive, or to upload an own, individual schema. In any case, the schema should be available as a resource. This is a sub-property of dct:conformsTo." ;
@@ -1165,5 +1165,3 @@
 <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
   skos:prefLabel "European Legislation Identifier (ELI)"@en ;
 .
-
-
