@@ -342,11 +342,14 @@
   # Recommended properties
   [
     # Recommended property for Catalogue
-    sh:class dct:LinguisticSystem ;
+    sh:or (
+        [ sh:class dct:LinguisticSystem ]  # Accept if someone has proper class
+        [ sh:pattern "^http://publications\\.europa\\.eu/resource/authority/language/.+$" ]  # Accept EU pattern
+    ) ;
     sh:path dct:language ;
     sh:name "language" ;
     sh:description "This property refers to a language used in the user interface of the mobility data portal." ;
-    sh:message "Language must be a dct:LinguisticSystem" ;
+    sh:message "Language must be either a dct:LinguisticSystem or a valid EU Publications Office language authority URI" ;
     sh:severity sh:Violation
   ],
   [
@@ -1165,3 +1168,4 @@
 <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
   skos:prefLabel "European Legislation Identifier (ELI)"@en ;
 .
+
