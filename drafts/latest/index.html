@@ -535,7 +535,7 @@ table code, table pre {
   
 <section id="class-email-vcard">
 
-<h3>Email (vCard)</h3>
+<h3>+Email (vCard)</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-email-vcard.html"></div>
 
@@ -609,7 +609,7 @@ table code, table pre {
   
 <section id="class-organisation">
 
-<h3>Organisation</h3>
+<h3>+Organisation</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-organisation.html"></div>
 
@@ -1038,6 +1038,13 @@ In particular, the class and property definitions are now under new sections "Ma
   These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
   See - see <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
 </ul>   
+<li>Changes in classes, with the goal of alignment with the geoDCAT-AP v3 data model:</li>
+<ul>
+  <li>Class <a href="#class-geometry"><code>locn:Geometry</code></a> added, to enable the necessary range for property <a href="#location-geometry"><code>locn:geometry</code></a>.</li>
+  <li>Class <a href="#class-address-vcard"><code>vcard:Address</code></a> added, to enable the necessary range for property <a href="#kind-address"><code>vcard:hasAddress</code></a>.</li>
+  <li>Class <a href="#class-email-vcard"><code>vcard:Email</code></a> added, to enable the necessary range for property <a href="#kind-email"><code>vcard:hasEmail</code></a>.</li>
+  <li>Class <a href="#class-organisation"><code>org:Organization</code></a> added, to enable the necessary range for property <a href="#agent-affiliation"><code>org:memberOf</code></a>.</li>
+</ul> 
 <li>Changes in properties, with the goal of alignment with the DCAT-AP v3 data model:</li>
 <ul>
   <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
@@ -1063,7 +1070,7 @@ In particular, the class and property definitions are now under new sections "Ma
   <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
   <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
   <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
- <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class RIghts Statement: URI changed from previously <code>rdfs:label</code>, 
+ <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class Rights Statement: URI changed from previously <code>rdfs:label</code>, 
    at the same time name changed from previously "additional information for access and usage" to "rights statement text".</li>
 </ul>   
 <li>Other changes in properties:</li>
