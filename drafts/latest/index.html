@@ -1031,9 +1031,15 @@ In particular, the class and property definitions are now under new sections "Ma
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
 <li>Changes in classes, with the goal of alignment with the DCAT-AP v3 data model:</li>
 <ul>
+  <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.</li>
+  <li>Class <a href="#class-frequency"><code>dct:Frequency</code></a> added, to enable the necessary range for property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</li>
+  <li>Class <a href="#class-legal-resource"><code>eli:LegalResource</code></a> added, to enable the necessary range for property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</li>
+  <li>Class <a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a> added, to enable the necessary range for property <a href="#dataset-language"><code>dct:language</code></a>, among others.</li>
+  <li>Class <a href="#class-literal"><code>rdfs:Literal</code></a> added, to enable the necessary range for property <a href="#dataset-description"><code>dct:description</code></a>, among others.</li>
+  <li>Class <a href="#class-media-type-or-extent"><code>dct:MediaTypeOrExtent</code></a> added, to enable the necessary range for property <a href="#distribution-format"><code>dct:format</code></a>.</li>
+  <li>Class <a href="#class-resource"><code>rdfs:Resource</code></a> added, to enable the necessary range for property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, among others.</li>
   <li>Class <a href="#class-concept"><code>skos:Concept</code></a> is renamed from previously "Category".</li>
   <li>Class <a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a> is renamed from previously "Category Scheme".</li>
-  <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.</li>
   <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
   These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
   See - see <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
