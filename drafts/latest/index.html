@@ -158,24 +158,19 @@ table code, table pre {
 
 <h2>Provider requirements</h2>
 
-<p>In order to conform to this Application Profile, an application that provides metadata MUST:</p>
+<p>In order to conform to mobilityDCAT-AP, an application that provides metadata must:</p>
 
 <ul>
-<li>Provide a description of the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-catalogue"></a>.</li>
-<li>Provide information for the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-catalogue-record"></a>, if descriptions of Catalogue Records are provided – please note that the provision of descriptions of Catalogue Records is optional.</li>
-<li>Provide descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-dataset"></a>.</li>
-<li>Provide descriptions of Distributions, if any, of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-distribution"></a>.</li>
-<li>Provide descriptions of Data Services, if any, of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-data-service"></a>.</li>
-<li>Provide descriptions of all organisations involved in the descriptions of Catalogue and Datasets, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-agent"></a>.</li>
-<li>Provide descriptions of all category schemes that contain the categories that are asserted in any of the descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-category-scheme"></a>.</li>
-<li>Provide descriptions of all categories involved in the descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-category"></a>.</li>
+<li>Provide a description of the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue"><code>dcat:Catalog</code></a>.</li>
+<li>Provide a description of the Catalogue Records in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>.</li>
+<li>Provide descriptions of Datasets in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-dataset"><code>dcat:Dataset</code></a>.</li>
+<li>Provide descriptions of Distributions of Datasets in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-distribution"><code>dcat:Distribution</code></a>.</li>
+<li>Provide descriptions of persons or organisations involved in the descriptions of Catalogue and Datasets, including at least the mandatory properties for the class<a href="#class-agent"><code>foaf:Agent</code></a>.</li>
+<li>Apply the publication requirements for the controlled vocabularies as mentioned in section <a class="no-secRef" href="#controlled-vocabularies"></a>.</li>
 </ul>
 
-<p>For the properties listed in the table in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, the associated controlled vocabularies MUST be used. Additional controlled vocabularies MAY be used.</p>
-
-<p>In addition to the mandatory properties, any of the recommended and optional properties defined in <a class="no-sectionRef" href="#properties"></a> MAY be provided.</p>
-
-<p>Recommended and optional classes may have mandatory properties, but those only apply if and when an instance of such a class is present in a description.</p>
+<p>For the properties listed in the table in section <a class="no-secRef" href="#controlled-vocabularies"></a>, the associated controlled vocabularies must be used. Additional controlled vocabularies may be used.</p>
+<p>In addition to the mandatory properties, any of the optional properties defined in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a> may be provided.</p>
 
 </section>
 
@@ -183,15 +178,15 @@ table code, table pre {
 
 <h2>Receiver requirements</h2>
 
-<p>In order to conform to this Application Profile, an application that receives metadata MUST be able to:</p>
+<p>In order to conform to this mobilityDCAT-AP, an application that receives metadata must be able to:</p>
 
 <ul>
-<li>Process information for all classes specified in <a class="no-sectionRef" href="#classes"></a>.</li>
-<li>Process information for all properties specified in <a class="no-sectionRef" href="#properties"></a>.</li>
-<li>Process information for all controlled vocabularies specified in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>.</li>
+<li>Process information for all classes ands properties specified in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li>
+<li>Process information for all controlled vocabularies specified in section <a class="no-secRef" href="#controlled-vocabularies"></a>.</li>
 </ul>
 
-<p>As stated in <a class="no-sectionRef" href="#terminology"></a>, "processing" means that receivers must accept incoming data and transparently provide this data to applications and services. It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).</p>
+<p>As stated in <a class="no-sectionRef" href="#terminology"></a>, "processing" means that receivers must accept incoming data and transparently provide this data to applications and services. 
+  It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).</p>
 
 </section>
 
