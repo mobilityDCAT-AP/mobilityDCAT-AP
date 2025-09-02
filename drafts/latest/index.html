@@ -202,11 +202,39 @@ table code, table pre {
   
 <section id="terminology">
 
-<h2>Terminology used in the Application Profile</h2>
+<h2>Terminology used in mobilityDCAT-AP</h2>
+
+<section id="classes-and-properties">
+
+<h2>Classes and properties</h2>
+
+<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as an <a href="https://www.w3.org/TR/rdf11-schema/">RDF schema</a>. An RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and their relationships. This is done via a class and property system.</p>
+
+<p>A <strong>Class</strong> is a group of resources. Classes are themselves resources. They are often identified by IRIs and may be described using properties.</p>
+
+<p>A <strong>Property</strong> is a relation between subject resources and object resources.</p>  
+
+</section>
+  
+<section id="application-profile-and-extension">
+
+<h2>Application profile and extension.</h2>
+
+<p>mobilityDCAT-AP (as well as DCAT-AP) is an extension to DCAT-AP </p>
+
+<p>An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, 
+  as well as recommendations for controlled vocabularies to be used. Application refers to the usage context of the specification. It may be abstract, for instance covering a data theme such as mobility data, 
+  but also it may refer to specific tools like open data portals. For DCAT-AP the usage scope is broad and in the first place taking into account the European legal context.</p>
+
+<p>An <strong>Extension</strong> is a--- </p>
+  
+</section>  
+
+<section id="Dataset-data-portals-metadata-etc">
+
+<h2>Datasets, data-portals, metadata etc.</h2>  
 
 <p>Part of the following text has been reused and adapted from [[DCAT-AP-v2.0.1]].</p>
-
-<p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
 
 <p>A <strong>Dataset</strong> is a collection of data published or curated by a single source and available for access or download in one or more formats. In the mobility context, this might be, e.g., a data collection about static parking information for truck drivers published by a road authority.</p>
 
@@ -221,13 +249,7 @@ table code, table pre {
 
 <p>A <strong>Publication</strong> is an abstract construct that covers a dataset published by a data publisher and which has one or multiple distributions.</p>
 
-<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as an RDF schema [[RDF-SCHEMA]]]. An RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and their relationships. This is done via a class and property system.</p>
 
-<p>A <strong>Class</strong> is a group of resources. Classes are themselves resources. They are often identified by IRIs and may be described using properties.</p>
-
-<p>A <strong>Property</strong> is a relation between subject resources and object resources.</p>
-
-<p>The following figure shows the core elements of the DCAT-AP data model, denoting how the above-mentioned terms and relations are expressed as classes and properties. This figure also shows how NAP-related terms, such as publications, are related to this class and property structure.</p>
 
 
 <p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning, relating to the potential responsibilities of metadata senders and metadata receivers.</p>
@@ -255,7 +277,8 @@ table code, table pre {
 
 <!-- <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>-->
 
-
+</section>
+  
 <section id="namespaces">
 
 <h3>Namespaces</h3>
