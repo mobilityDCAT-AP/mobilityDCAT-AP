@@ -71,7 +71,8 @@ table code, table pre {
 
 <p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, while extending and customizing it for the mobility sector.</p>
   
-<p>Digitalisation in the mobility domain often implies that various data assets from various actors in the mobility system are made discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. These portals often have specific spatial or thematic coverage, e.g., exposing public-transport timetable data for one specific region. In addition, legal obligations, such as those established through the European Union's National Access Points (NAPs) [[NAPCORE-NAPs]], mandate the creation and population of such portals.</p>
+<p>Digitalisation in the mobility domain often implies that various data assets from various actors in the mobility system are made discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. These portals often have specific spatial or thematic coverage, e.g., exposing public-transport timetable data for one specific region. 
+  In addition, legal obligations, such as those established through the <a href="https://napcore.eu/description-naps/">European Union's National Access Points (NAPs)/a>, mandate the creation and population of such portals.</p>
 
 <p>Metadata is a crucial building block for the accessibility and reusability of datasets within NAPs and other mobility data portals. A common metadata approach can act as an important infrastructure and reference basis for providing harmonious and homogenous ITS- and mobility-related data descriptions across Europe, thus accelerating the easiness of searching, discovering, and accessing the proper data resources through the operated relevant data portals.</p>
 
@@ -251,30 +252,6 @@ table code, table pre {
 
 <p>A <strong>Metadata registry</strong> is a digital recording or a database of all metadata entries in a data portal.</p>
 
-<p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning, relating to the potential responsibilities of metadata senders and metadata receivers.</p>
-
-<p>Such metadata senders and receivers are important actors for interoperable metadata, i.e., whenever metadata is exchanged between IT systems. This is the case when a data portal has metadata import and export functions. In this case, metadata senders and receivers are individual data portals. So, the following terms refer to the capability of a data portal to provide corresponding metadata in an export function or to read them in an import function.</p>
-
-<ul>
-<li><strong>Mandatory class</strong>: a receiver MUST be able to process information about instances of the class; a sender MUST provide information about instances of the class.</li>
-<li><strong>Recommended class</strong>: a receiver MUST be able to process information about instances of the class; a sender SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class if such information is available.</li>
-<li><strong>Optional class</strong>: a receiver MUST be able to process information about instances of the class; a sender MAY provide the information but is not obliged to do so.</li>
-<li><strong>Mandatory property</strong>: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
-<li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide information for that property; a sender MUST provide information for that property if such information is available.</li>
-<li><strong>Optional property</strong>: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
-<!-- <li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
-<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>-->
-</ul>
-
-<p>The meaning of the terms MUST, MUST NOT, SHOULD and MAY in this section and in the following sections are as defined in [[RFC2119]].</p>
-
-<p>In the given context, the term "processing" means that receivers must accept incoming data and transparently provide these data to applications and services. It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).</p>
-
-<p>Classes are classified as ‘Mandatory’ in <a class="no-sectionRef" href="#mandatory-classes"></a> if they appear as the range of one of the mandatory properties in <a class="no-sectionRef" href="#properties"></a>.</p>
-
-<p>All other classes are classified as ‘Optional’ in <a class="no-sectionRef" href="#optional-classes"></a>. A further description of the optional classes is only included as a sub-section in <a class="no-sectionRef" href="#properties"></a> if the Application Profile specifies mandatory or recommended properties for them.</p>
-
-<!-- <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>-->
 
 </section>
   
@@ -895,7 +872,17 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <section id="all-classes-and-properties">
 
-<h2>All classes and Properties</h2>
+<h2>Classes and Properties used in mobilityDCAT-AP</h2>
+
+  <p>This section provides a condensed tabular overview of the mentioned classes and properties in mobilityDCAT-AP. 
+    The properties are grouped under headings mandatory, recommended, optional and deprecated. These terms have the following meaning.</p>
+
+<ul>
+<li><strong>Mandatory property</strong>: a receiver must be able to process the information for that property; a sender must provide the information for that property.</li>
+<li><strong>Recommended property</strong>: a receiver must be able to process the information for that property; a sender should provide information for that property if such information is available.</li>
+<li><strong>Optional property</strong>: a receiver must be able to process the information for that property; a sender may provide the information for that property but is not obliged to do so.</li>
+<li><strong>Deprecated property</strong>: a receiver should be able to process information about instances of that property; a sender should not provide the information about instances of that property.</li>
+</ul>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
 
@@ -1044,6 +1031,13 @@ This includes additional explanations and examples for specific vocabulary eleme
 <h2>Changes since mobilityDCAT-AP 1.1.0 (17 January 2025)</h2>
 
 <ul>
+<li>The Introduction  Section <a class="no-sectionRef" href="#introduction"></a> is shortened .
+Generic description about mobilityDCAT-AP is now compiled at the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-1:-Introduction-and-Overview">Wikipage</a>.
+  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/59">#59</a>.</li>
+  
+<li>The Terminology Section <a class="no-sectionRef" href="#terminology"></a> is restructured, with several subsections.
+  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/51">#51</a>.</li>
+  
 <li>The organisation and the layout of the elements of the ReSpec documentation are modified, with the goal of alignment with the ReSpec pages of DCAT-AP v3 and geoDCAT-AP v3.
 In particular, the class and property definitions are now under new sections "Main entities", "Supportive entities" and "Datatypes. 
   Further, all property tables are reformatted with new columns for "Definition", "Usage notes" and "Reusage".
