@@ -1053,9 +1053,6 @@ In particular, the class and property definitions are now under new sections "Ma
   <li>Class <a href="#class-resource"><code>rdfs:Resource</code></a> added, to enable the necessary range for property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, among others.</li>
   <li>Class <a href="#class-concept"><code>skos:Concept</code></a> is renamed from previously "Category".</li>
   <li>Class <a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a> is renamed from previously "Category Scheme".</li>
-  <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
-  These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
-  See - see <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
 </ul>   
 <li>Changes in classes, with the goal of alignment with the geoDCAT-AP v3 data model:</li>
 <ul>
@@ -1092,14 +1089,18 @@ In particular, the class and property definitions are now under new sections "Ma
  <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class Rights Statement: URI changed from previously <code>rdfs:label</code>, 
    at the same time name changed from previously "additional information for access and usage" to "rights statement text".</li>
 </ul>   
-<li>Other changes in properties:</li>
+<li>Class and property removals:</li>
 <ul>
+   <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
+  These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
+  See <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
   <li>Property <code>dcat:accessService</code> of class Distribution property removed, 
-    because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.</li>
+    because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.
+  See <a class="no-secRef" href="#dcat-ap-removed-properties"></a>.</li>
 </ul> 
 <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
 <ul>
-  <li>Property <a href="#mobility-data-standard-specific-content-moodel"><code>mobilitydcatap:specificContentModel</code> of class Mobility Data standard added, 
+  <li>Property <a href="#mobility-data-standard-specific-content-moodel"><code>mobilitydcatap:specificContentModel</code></a> of class Mobility Data Standard added, 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/41">#41</a>.</li>
 </ul> 
 
