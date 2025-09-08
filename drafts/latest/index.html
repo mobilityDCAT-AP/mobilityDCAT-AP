@@ -1044,7 +1044,6 @@ In particular, the class and property definitions are now under new sections "Ma
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
 <li>Changes in classes, with the goal of alignment with the DCAT-AP v3 data model:</li>
 <ul>
-  <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.</li>
   <li>Class <a href="#class-frequency"><code>dct:Frequency</code></a> added, to enable the necessary range for property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</li>
   <li>Class <a href="#class-legal-resource"><code>eli:LegalResource</code></a> added, to enable the necessary range for property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</li>
   <li>Class <a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a> added, to enable the necessary range for property <a href="#dataset-language"><code>dct:language</code></a>, among others.</li>
@@ -1067,7 +1066,6 @@ In particular, the class and property definitions are now under new sections "Ma
     <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
   <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
     Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
-  <li>Property <a href="#dataset-in-series"><code>dcat:inSeries</code></a> of class Dataset: property added to allow for relating a dataset to a dataset series.</li>
   <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
   <li>Property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> of class Distribution: cardinality relaxed from "1..1" to "1..*".</li>
   <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
@@ -1098,8 +1096,15 @@ In particular, the class and property definitions are now under new sections "Ma
     because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.
   See <a class="no-secRef" href="#dcat-ap-removed-properties"></a>.</li>
 </ul> 
-<li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
+<li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
 <ul>
+    <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.
+    See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
+</ul> 
+  <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
+<ul>
+   <li>Property <a href="#dataset-in-series"><code>dcat:inSeries</code></a> of class Dataset: property added to allow for relating a dataset to a dataset series.
+     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
   <li>Property <a href="#mobility-data-standard-specific-content-model"><code>mobilitydcatap:specificContentModel</code></a> of class Mobility Data Standard added, 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/41">#41</a>.</li>
 </ul> 
