@@ -85,11 +85,12 @@
 Information about the dataset series as a free-text description.</p>
 </td>
 <td valign=top>
+ <p>It is recommended to provide an indication about the dimensions the Dataset Series evolves, e.g., if the dataset seriesevolves according to the time, geolocation or other dimensions.</p>
   <p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>. 
     The language version should correspond to property <a href="catalogue-record-language"><code>dct:language</code></a> of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.description">A</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.description">E</a></p>
 </td>
 </tr>
 
@@ -108,7 +109,8 @@ Information about the dataset series as a free-text description.</p>
 <p>Describes how often the dataset series is updated.</p>
 </td>
 <td valign=top>
-  <p>The frequency of a dataset series may or may be not equal to the frequency of the dataset in the collection, as declared via property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</p>
+  <p>The frequency of a dataset series is understood differently to the frequency of the dataset in the collection, as declared via property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.
+  See the examples no. 5 and 6 in the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series">Dataset Series examples section of DCAT-AP v3.0.0</a>.</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.frequency">A</a></p>
@@ -130,11 +132,13 @@ Information about the dataset series as a free-text description.</p>
 <p>A geographic region that is covered by the dataset series.</p>
 </td>
 <td valign=top>
-  <p>When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in the collection should be part of the spatial coverage. 
-    In that case, an open ended value is recommended, e.g. EU or a broad bounding box covering the expected values.</p>
+  <p>When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in the collection should be part of the spatial coverage of the dataset series. 
+     In that case, the value of the spatial coverage of the dataset series should be as wide as possiblie. E.g., if datasets in a collection are about different regions in a country, the spatial coverage of the dataset series should note the entire country. 
+    See also the examples no. 7 and 8 in the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series">Dataset Series examples section of DCAT-AP v3.0.0</a>.</p>
+  <p></p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.geographicalcoverage">A</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.geographicalcoverage">E</a></p>
 </td>
 </tr>
 
@@ -150,12 +154,13 @@ Information about the dataset series as a free-text description.</p>
 <p>0..n</p>
 </td>
 <td valign=top>
-  <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the dataset series. A theme is important for data seekers who are interested in a particular type of data content.</p>
+  <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the dataset series. A theme is important for data seekers who are interested in a particular type of data content.
+  It is recommended that the theme does not change among datasets in the collection, i.e., the theme of the dataset series should be equal to the theme of each dataset in the collection.</p> 
 </td>vered content
 <td valign=top>
   <p>A corresponding <a href="#vocab-mobility-theme">controlled vocabulary</a> is provided.</p>
  <td valign=top>
-<p>A</p>
+<p>P</p>
 </td>
 </tr>
 
@@ -172,11 +177,12 @@ Information about the dataset series as a free-text description.</p>
 <p>0..1</p>
 </td>
 <td valign=top>
-<p>The most recent date on which the content of the dataset series was changed or modified.</p>
+<p>The most recent date on which the dataset series was changed or modified.</p>
 </td>
 <td valign=top>
-  <p>This may or may be not be equal to the most recent modified dataset in the collection of the dataset series, 
+  <p>This should correspond to the most recent modification date of all datasets in the collection, 
     as declared via property <a href="#dataset-modification-date"><code>dct:modified</code></a>.</p></td>
+    See also the example no. 11 in the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series">Dataset Series examples section of DCAT-AP v3.0.0</a>.</p>
 <td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.modificationdate">E</a></p>
 </td>
@@ -221,7 +227,8 @@ Information about the dataset series as a free-text description.</p>
 </td>
 <td valign=top>
   <p>The moment when the dataset series was established as a managed resource. 
-    This may or may be not equal to the release date of the oldest dataset in the collection of the dataset series, as declared via property <a href="#dataset-release-date"><code>dct:issued</code></a>.</p>
+    This might correspond to the earliest release date of the dataset in the collection, as declared via property <a href="#dataset-release-date"><code>dct:issued</code></a>.
+     See also the examples no. 9 and 10 in the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series">Dataset Series examples section of DCAT-AP v3.0.0</a>.</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries.releasedate">E</a></p>
