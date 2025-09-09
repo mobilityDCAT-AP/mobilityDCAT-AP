@@ -1084,6 +1084,8 @@ In particular, the class and property definitions are now under new sections "Ma
 </ul> 
 <li>Changes in properties, with the goal of alignment with the geoDCAT-AP v3 data model. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
 <ul>
+ <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
+   at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
   <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
   <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
   <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
