@@ -230,7 +230,7 @@
 </td>
 <td valign=top>
   <p>A corresponding <a href="#vocab-grammar">controlled vocabulary</a> is provided.</p>
-  <p>This is a sub-property of dct:conformsTo.</p>
+  <p>This is a sub-property of <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a>.</p>
 </td>
 <td valign=top>
 <p>P</p>
@@ -285,29 +285,6 @@
 
 
 
-<tr class="property" id="distribution-status">
-<td valign=top>
-<p>status</p>
-<p><a href="https://www.w3.org/ns/legacy_adms#status"><code>adms:status</code></a></p>
-</td>
-<td valign=top>
-<p><a href="#class-concept"><code>skos:Concept</code></a></p>
-</td>
-<td valign=top>
-<p>0..1</p>
-</td>
-<td valign=top>
-<p>The status of the distribution in the context of maturity lifecycle.</p>
-</td>
-<td valign=top>
-  <p>It must take one of the values Completed, Deprecated, Under Development, Withdrawn.</p>
-</td>
-<td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution.status">A</a></p>
-</td>
-</tr>
-
-  
 
   
 <tr class="property" id="distribution-rights">
@@ -333,6 +310,77 @@
 </td>
 </tr>  
 
+  <tr class="property" id="distribution-sample>
+<td valign=top>
+<p>+sample</p>
+<p><a href="http://www.w3.org/ns/adms#sample"><code>adms:sample</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A sample of the delivered content, using the same conditions (e.g., the same format and licence) as the regular disctribution.
+  A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.</p>
+</td>
+<td valign=top>
+  <p>In <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, 
+    there is a property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.sample"><code>adms:sample</code></a> under class Dataset, with class Distribution as the range.  
+    This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. 
+    To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+  
+
+<tr class="property" id="distribution-status">
+<td valign=top>
+<p>status</p>
+<p><a href="https://www.w3.org/ns/legacy_adms#status"><code>adms:status</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The status of the distribution in the context of maturity lifecycle.</p>
+</td>
+<td valign=top>
+  <p>It must take one of the values Completed, Deprecated, Under Development, Withdrawn.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution.status">A</a></p>
+</td>
+</tr>
+
+<tr class="property" id="distribution-temporal-coverage">
+<td valign=top>
+<p>+temporal coverage</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal"><code>dct:temporal</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The time interval when a distribution is facilitated (i.e., activated) technically via the data platform. Might be used if data access via a distribution is limited in time.</p>
+</td>
+<td valign=top>
+  <p>If there is no entry it means that the distribution has no explicit start time (i.e., it is facilitated immediately) and has no end time (i.e., it is facilitated infinitely).</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+  
 <tr class="property" id="distribution-title">
 <td valign=top>
 <p>title</p>
