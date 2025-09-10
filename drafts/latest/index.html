@@ -1046,62 +1046,7 @@ Generic description about mobilityDCAT-AP is now compiled at the <a href="https:
 In particular, the class and property definitions are now under new sections <a class="no-sectionRef" href="#main-entities"></a>, <a class="no-sectionRef" href="#supportive-entities"></a> and <a class="no-sectionRef" href="#datatypes"></a>. 
   Further, all property tables are reformatted with new columns for "Definition", "Usage notes" and "Reusage".
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
-<li>Changes in classes, with the goal of alignment with the DCAT-AP v3 data model. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
-<ul>
-  <li>Class <a href="#class-frequency"><code>dct:Frequency</code></a> added, to enable the necessary range for property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</li>
-  <li>Class <a href="#class-legal-resource"><code>eli:LegalResource</code></a> added, to enable the necessary range for property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</li>
-  <li>Class <a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a> added, to enable the necessary range for property <a href="#dataset-language"><code>dct:language</code></a>, among others.</li>
-  <li>Class <a href="#class-literal"><code>rdfs:Literal</code></a> added, to enable the necessary range for property <a href="#dataset-description"><code>dct:description</code></a>, among others.</li>
-  <li>Class <a href="#class-media-type-or-extent"><code>dct:MediaTypeOrExtent</code></a> added, to enable the necessary range for property <a href="#distribution-format"><code>dct:format</code></a>.</li>
-  <li>Class <a href="#class-resource"><code>rdfs:Resource</code></a> added, to enable the necessary range for property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, among others.</li>
-  <li>Class <a href="#class-concept"><code>skos:Concept</code></a> is renamed from previously "Category".</li>
-  <li>Class <a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a> is renamed from previously "Category Scheme".</li>
-</ul>   
-<li>Changes in classes, with the goal of alignment with the geoDCAT-AP v3 data model. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
-<ul>
-  <li>Class <a href="#class-geometry"><code>locn:Geometry</code></a> added, to enable the necessary range for property <a href="#location-geometry"><code>locn:geometry</code></a>.</li>
-  <li>Class <a href="#class-address-vcard"><code>vcard:Address</code></a> added, to enable the necessary range for property <a href="#kind-address"><code>vcard:hasAddress</code></a>.</li>
-  <li>Class <a href="#class-email-vcard"><code>vcard:Email</code></a> added, to enable the necessary range for property <a href="#kind-email"><code>vcard:hasEmail</code></a>.</li>
-  <li>Class <a href="#class-organisation"><code>org:Organization</code></a> added, to enable the necessary range for property <a href="#agent-affiliation"><code>org:memberOf</code></a>.</li>
-</ul> 
-<li>Changes in properties, with the goal of alignment with the DCAT-AP v3 data model. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
-<ul>
-  <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
-    <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
-  <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
-    Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
-  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> of class Distribution: cardinality relaxed from "1..1" to "1..*".</li>
-  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
-  <li>Property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a> of class Distribution: cardinality relaxed from previously "0..1" to "0..*".</li>
-    <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
-      "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
-  <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
-    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
-  <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
-    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
-</ul> 
-<li>Changes in properties, with the goal of alignment with the geoDCAT-AP v3 data model. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
-<ul>
- <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
-   at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
-  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
-  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
-  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
-  <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
- <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class Rights Statement: URI changed from previously <code>rdfs:label</code>, 
-   at the same time name changed from previously "additional information for access and usage" to "rights statement text".</li>
-</ul>   
-<li>Class and property removals:</li>
-<ul>
-   <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
-  These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
-  See <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
-  <li>Property <code>dcat:accessService</code> of class Distribution property removed, 
-    because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.
-  See <a class="no-secRef" href="#dcat-ap-removed-properties"></a>.</li>
-</ul> 
+
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
 <ul>
     <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.
@@ -1118,6 +1063,67 @@ In particular, the class and property definitions are now under new sections <a 
   <li>Property <a href="#distribution-status"><code>adms:status</code></a> of class Distribution added, 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/96">#96</a>.</li>
 </ul> 
+  
+  <li>Changes in classes and properties, with the goal of alignment with the DCAT-AP v3 and geoDCAT-AP v3 data models. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
+<ul>
+  <li>Classes aligned with the DCAT-AP v3 data model:</li>
+   <ul>
+   <li>Class <a href="#class-frequency"><code>dct:Frequency</code></a> added, to enable the necessary range for property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</li>
+   <li>Class <a href="#class-legal-resource"><code>eli:LegalResource</code></a> added, to enable the necessary range for property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</li>
+   <li>Class <a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a> added, to enable the necessary range for property <a href="#dataset-language"><code>dct:language</code></a>, among others.</li>
+   <li>Class <a href="#class-literal"><code>rdfs:Literal</code></a> added, to enable the necessary range for property <a href="#dataset-description"><code>dct:description</code></a>, among others.</li>
+   <li>Class <a href="#class-media-type-or-extent"><code>dct:MediaTypeOrExtent</code></a> added, to enable the necessary range for property <a href="#distribution-format"><code>dct:format</code></a>.</li>
+   <li>Class <a href="#class-resource"><code>rdfs:Resource</code></a> added, to enable the necessary range for property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a>, among others.</li>
+   <li>Class <a href="#class-concept"><code>skos:Concept</code></a> is renamed from previously "Category".</li>
+   <li>Class <a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a> is renamed from previously "Category Scheme".</li>
+   </ul>   
+ <li>Classes aligned with the geoDCAT-AP v3 data model:</li>
+  <ul>
+  <li>Class <a href="#class-geometry"><code>locn:Geometry</code></a> added, to enable the necessary range for property <a href="#location-geometry"><code>locn:geometry</code></a>.</li>
+  <li>Class <a href="#class-address-vcard"><code>vcard:Address</code></a> added, to enable the necessary range for property <a href="#kind-address"><code>vcard:hasAddress</code></a>.</li>
+  <li>Class <a href="#class-email-vcard"><code>vcard:Email</code></a> added, to enable the necessary range for property <a href="#kind-email"><code>vcard:hasEmail</code></a>.</li>
+  <li>Class <a href="#class-organisation"><code>org:Organization</code></a> added, to enable the necessary range for property <a href="#agent-affiliation"><code>org:memberOf</code></a>.</li>
+  </ul> 
+<li>Properties aligned with the DCAT-AP v3 data model:</li>
+  <ul>
+  <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
+    <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
+  <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
+    Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
+  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> of class Distribution: cardinality relaxed from "1..1" to "1..*".</li>
+  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+  <li>Property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a> of class Distribution: cardinality relaxed from previously "0..1" to "0..*".</li>
+    <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
+      "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
+  <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
+    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
+  <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
+    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
+  </ul> 
+<li>Properties aligned with the geoDCAT-AP v3 data model:</li>
+  <ul>
+ <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
+   at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+ <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class Rights Statement: URI changed from previously <code>rdfs:label</code>, 
+   at the same time name changed from previously "additional information for access and usage" to "rights statement text".</li>
+  </ul>   
+</ul>  
+<li>Class and property removals:</li>
+<ul>
+   <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
+  These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
+  See <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
+  <li>Property <code>dcat:accessService</code> of class Distribution property removed, 
+    because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.
+  See <a class="no-secRef" href="#dcat-ap-removed-properties"></a>.</li>
+</ul> 
+
 
 </ul>
 
