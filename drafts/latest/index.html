@@ -1102,8 +1102,10 @@ In particular, the class and property definitions are now under new sections <a 
 
      <li>Property <a href="#agent-address"><code>locn:address</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
     <li>Property <a href="#agent-affiliation"><code>org:memberOf</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
-    <li>Property <a href="#agent-email"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
-    <li>Property <a href="#agent-phone"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#agent-email"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1", 
+       at the same time range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+    <li>Property <a href="#agent-phone"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1",
+     at the same time range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
     
     <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
    at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
