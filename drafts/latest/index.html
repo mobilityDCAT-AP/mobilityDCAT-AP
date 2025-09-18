@@ -95,23 +95,23 @@ table code, table pre {
   in conformance with the <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines/release-1">guidelines for the creating of DCAT-AP extensions</a>
  and the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide for Semantic Engineers</a>.</p>
 
-<p>The scope description of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> is also valid for this version of mobilityDCAT-AP. In particular, the purpose of this specification is to facilitate data exchange. Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged. There are no specific requirements for the systems involved in the data exchange process to implement particular technical environments, as long as they can export and import metadata in RDF, in conformance with mobilityDCAT-AP. Further, this specificaition, beyond what is defined in <a class="no-sectionRef" href="#conformance-statement">Conformance Statement</a>, does not cover implementation issues such as data exchange mechanisms and the expected behavior of systems implementing mobilityDCAT-AP.</p>
+<p>The scope description of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> is also valid for this version of mobilityDCAT-AP. In particular, the purpose of this specification is to facilitate data exchange. Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged. There are no specific requirements for the systems involved in the data exchange process to implement particular technical environments, as long as they can export and import metadata in RDF, in conformance with mobilityDCAT-AP. Further, this specification, beyond what is defined in <a class="no-sectionRef" href="#conformance-statement">Conformance Statement</a>, does not cover implementation issues such as data exchange mechanisms and the expected behavior of systems implementing mobilityDCAT-AP.</p>
   
 <p>It is important to consider this dependency on the DCAT-AP specifications when reading and implementing mobilityDCAT-AP. The corresponding specifications should be consulted to address any gaps or missing information in this document.</p>
 
 <p>Comparing mobilityDCAT-AP to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, the following edits have been made:</p>
 
 <ul>
-<li>Addition of classes, including reusage of classes from <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the the creation of new classes under the mobilityDCAT-AP namespace</li>
+<li>Addition of classes, including reusage of classes from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new classes under the mobilityDCAT-AP namespace</li>
 <li>Removal of optional classes from DCAT-AP, see <a class="no-secRef" href="#dcat-ap-removed-classes"></a></li>
-<li>Addition of properties to existing classes in DCAT-AP, including reusage of properties from <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new properties under the mobilityDCAT-AP namespace</li>
+<li>Addition of properties to existing classes in DCAT-AP, including reusage of properties from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new properties under the mobilityDCAT-AP namespace</li>
 <li>Change to obligation levels for some existing properties in DCAT-AP</li>
 <li>Removal of optional properties from DCAT-AP, see <a class="no-secRef" href="#dcat-ap-removed-properties"></a></li>
 <li>Refinement of usage notes for existing classes and properties from DCAT-AP</li>
 <li>Reference to additional controlled vocabularies, including the creation of new controlled vocabularies under the mobilityDCAT-AP namespace</li>
 </ul>
 
-<p>Some of the class and property additions align with the parallel DCAT-AP extension <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, enabling compatibility between the two extensions in terms of class and property additions. 
+<p>Some of the class and property additions align with the parallel DCAT-AP extension <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, enabling compatibility between the two extensions in terms of class and property additions. 
   All classes and property additions are marked with a prepended &ldquo;plus&rdquo; sign (+) in this document.</p>
 <p>The removal of optional classes or properties from DCAT-AP aims to minimise the vocabulary size of mobilityDCAT-AP, avoiding any misinterpretations and multiple usage of properties among data senders.</p>
 
