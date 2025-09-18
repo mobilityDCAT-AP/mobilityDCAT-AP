@@ -1106,7 +1106,13 @@ In particular, the class and property definitions are now under new sections <a 
   </ul> 
 <li>Properties aligned with the geoDCAT-AP v3 data model:</li>
   <ul>
- <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
+
+     <li>Property <a href="#agent-address"><code>locn:address</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#agent-affiliation"><code>org:memberOf</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#agent-email"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#agent-phone"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    
+    <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
    at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
   <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
   <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
