@@ -1,10 +1,8 @@
-<table class="simple" id="table-quick-reference-of-classes-and-properties"> <!-- PL edits 18.07.23 -->
+<table class="simple" id="table-quick-reference-of-classes-and-properties"> 
 <thead>
 <tr>
 <th>Class</th>
-<th>Class URI</th>
 <th>Mandatory prop.</th>
-<th>Recommended prop.</th>
 <th>Optional prop.</th>
 </tr>
 </thead>
@@ -12,79 +10,66 @@
   
 
 <tr>
-<td>+<a href="#address-agent">Address (Agent)</a></td>
-<td><code>locn:Address</code></td>
+<td>+<a href="#class-address-core-location"><code>locn:Address</code></a></td>
 <td>
 </td>
 <td>
-<p>+<a title="country" href="#address-agent-country"><code>locn:adminUnitL1</code></a></p>
-<p>+<a title="administrative area" href="#address-agent-administrative-area"><code>locn:adminUnitL2</code></a></p>
-<p>+<a title="postal code" href="#address-agent-postal-code"><code>locn:postCode</code></a></p>
-<p>+<a title="city" href="#address-agent-city"><code>locn:postName</code></a></p>
-<p>+<a title="street address" href="#address-agent-street-address"><code>locn:thoroughfare</code></a></p>
-</td>
-<td>
+<p>+<a href="#address-administrative-area"><code>locn:adminUnitL2</code></a></p>
+<p>+<a href="#address-city"><code>locn:postName</code></a></p>
+<p>+<a href="#address-country"><code>locn:adminUnitL1</code></a></p>
+<p>+<a href="#address-postal-code"><code>locn:postCode</code></a></p>
+<p>+<a href="#address-street-address"><code>locn:thoroughfare</code></a></p>
 </td>
 </tr>
   
   
 <tr>
-<td><a href="#agent">Agent</a></td>
-<td><code>foaf:Agent</code></td>
+<td><a href="#class-agent"><code>foaf:Agent</code></a></td>
 <td>
-<p>+<a title="email" href="#agent-email"><code>foaf:mbox</code></a></p>
-<p><a title="name" href="#agent-name"><code>foaf:name</code></a></p>
+<p><a href="#agent-name"><code>foaf:name</code></a></p>
 </td>
 <td>
-<p>+<a title="URL" href="#agent-url"><code>foaf:workplaceHomepage</code></a></p>
-<p><a title="type" href="#agent-type"><code>dct:type</code></a></p>
-</td>
-<td>
-<p>+<a title="address" href="#agent-address"><code>locn:address</code></a></p>
-<p>+<a title="affiliation" href="#agent-affiliation"><code>org:memberOf</code></a></p>
-<p>+<a title="first name" href="#agent-first-name"><code>foaf:firstName</code></a></p>
-<p>+<a title="phone" href="#agent-phone"><code>foaf:phone</code></a></p>
-<p>+<a title="surname" href="#agent-surname"><code>foaf:surname</code></a></p>
+<p>+<a href="#agent-address"><code>locn:address</code></a></p>
+<p>+<a href="#agent-affiliation"><code>org:memberOf</code></a></p>
+<p>+<a href="#agent-email"><code>foaf:mbox</code></a></p>
+<p>+<a href="#agent-first-name"><code>foaf:firstName</code></a></p>
+<p>+<a href="#agent-phone"><code>foaf:phone</code></a></p>
+<p>+<a href="#agent-surname"><code>foaf:surname</code></a></p>
+<p><a href="#agent-type"><code>dct:type</code></a></p>
+<p>+<a href="#agent-url"><code>foaf:workplaceHomepage</code></a></p>
 </td>
 </tr>
   
 <tr>
-<td>+<a href="#assessment">Assessment</a></td>
-<td><code>mobilitydcatap:Assessment</code></td>
+<td>+<a href="#assessment"><code>mobilitydcatap:Assessment</code></a></td>
 <td>
 </td>
 <td>
-</td>
-<td>
-<p>+<a title="assessment date" href="#assessment-assessment-date"><code>dct:issued</code></a></p>
-<p>+<a title="assessment date" href="#assessment-assessment-result"><code>oa:hasBody</code></a></p>
+<p>+<a href="#assessment-assessment-date"><code>dct:issued</code></a></p>
+<p>+<a href="#assessment-assessment-result"><code>oa:hasBody</code></a></p>
 </td>
 </tr>
   
 <tr>
-<td><a href="#catalogue">Catalogue</a></td>
-<td><code>dcat:Catalog</code></td>
+<td><a href="#catalogue"><code>dcat:Catalog</code></a></td>
 <td>
-<p><a title="dataset" href="#catalogue-dataset"><code>dcat:dataset</code></a></p>
-<p><a title="description" href="#catalogue-description"><code>dct:description</code></a></p>
-<p><a title="homepage" href="#catalogue-homepage"><code>foaf:homepage</code></a></p>
-<p><a title="publisher" href="#catalogue-publisher"><code>dct:publisher</code></a></p>
-<p><a title="record" href="#catalogue-catalogue-record"><code>dcat:record</code></a></p>
-<p><a title="spatial / geographic" href="#catalogue-spatial-coverage"><code>dct:spatial</code></a></p>
-<p><a title="title" href="#catalogue-title"><code>dct:title</code></a></p>
+<p><a href="#catalogue-description"><code>dct:description</code></a></p>
+<p><a href="#catalogue-geographical-coverage"><code>dct:spatial</code></a></p>
+<p><a href="#catalogue-homepage"><code>foaf:homepage</code></a></p>
+<p><a href="#catalogue-publisher"><code>dct:publisher</code></a></p>
+<p><a href="#catalogue-record"><code>dcat:record</code></a></p>
+<p><a href="#catalogue-title"><code>dct:title</code></a></p>
 </td>
 <td>
-<p><a title="language" href="#catalogue-language"><code>dct:language</code></a></p>
-<p><a title="licence" href="#catalogue-licence"><code>dct:license</code></a></p>
-<p><a title="release date" href="#catalogue-dataset-release-date"><code>dct:issued</code></a></p>
-<p><a title="themes" href="#catalogue-themes"><code>dcat:themeTaxonomy</code></a></p>
-<p><a title="update / modification date" href="#catalogue-modification-date"><code>dct:modified</code></a></p>
-</td>
-<td>
-<p><a title="has part" href="#catalogue-has-part"><code>dct:hasPart</code></a></p>
-<p>+<a title="identifier" href="#catalogue-identifier"><code>dct:identifier</code></a></p>
-<p><a title="is part of" href="#catalogue-is-part-of"><code>dct:isPartOf</code></a></p>
-<p>+<a title="other identifier" href="#catalogue-other-identifier"><code>adms:identifier</code></a></p>
+<p><a href="#catalogue-dataset"><code>dcat:dataset</code></a></p>
+<p><a href="#catalogue-has-part"><code>dct:hasPart</code></a></p>
+<p>+<a href="#catalogue-identifier"><code>dct:identifier</code></a></p>
+<p><a href="#catalogue-language"><code>dct:language</code></a></p>
+<p><a href="#catalogue-licence"><code>dct:license</code></a></p>
+<p><a href="#catalogue-modification-date"><code>dct:modified</code></a></p>
+<p>+<a href="#catalogue-other-identifier"><code>adms:identifier</code></a></p>
+<p><a href="#catalogue-release-date"><code>dct:issued</code></a></p>
+<p><a href="#catalogue-themes"><code>dcat:themeTaxonomy</code></a></p>
 </td>
 </tr>
   
