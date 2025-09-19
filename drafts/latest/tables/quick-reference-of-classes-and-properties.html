@@ -41,7 +41,7 @@
 </tr>
   
 <tr>
-<td valign=top>+<a href="#assessment"><code>mobilitydcatap:Assessment</code></a></td>
+<td valign=top>+<a href="#class-assessment"><code>mobilitydcatap:Assessment</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
@@ -51,7 +51,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#catalogue"><code>dcat:Catalog</code></a></td>
+<td valign=top><a href="#class-catalogue"><code>dcat:Catalog</code></a></td>
 <td valign=top>
 <p><a href="#catalogue-description"><code>dct:description</code></a></p>
 <p><a href="#catalogue-geographical-coverage"><code>dct:spatial</code></a></p>
@@ -74,7 +74,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#catalogue-record">Catalogue Record</a></td>
+<td valign=top><a href="#class-catalogue-record">Catalogue Record</a></td>
 <td valign=top><code>dcat:CatalogRecord</code></td>
 <td valign=top>
 <p>+<a title="creation date" href="#catalogue-record-creation-date"><code>dct:created</code></a></p>
@@ -91,7 +91,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#category">Category</a></td>
+<td valign=top><a href="#class-category">Category</a></td>
 <td valign=top><code>skos:Concept</code></td>
 <td valign=top>
 <p><a title="preferred label" href="#category-preferred-label"><code>skos:prefLabel</code></a></p>
@@ -104,7 +104,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#category-scheme">Category scheme</a></td>
+<td valign=top><a href="#class-category-scheme">Category scheme</a></td>
 <td valign=top><code>skos:ConceptScheme</code></td>
 <td valign=top>
 <p><a title="title" href="#category-scheme-title"><code>dct:title</code></a></p>
@@ -116,7 +116,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#checksum">Checksum</a></td>
+<td valign=top><a href="#class-checksum">Checksum</a></td>
 <td valign=top><code>spdx:Checksum</code></td>
 <td valign=top>
 <p><a title="algorithm" href="#checksum-algorithm"><code>spdx:algorithm</code></a></p>
@@ -128,26 +128,9 @@
 </td>
 </tr>
   
-<tr>
-<td valign=top><a href="#data-service">Data Service</a></td>
-<td valign=top><code>dcat:DataService</code></td>
-<td valign=top>
-<p><a title="endpoint URL" href="#data-service-endpoint-url"><code>dcat:endpointURL</code></a></p>
-<p><a title="title" href="#data-service-title"><code>dct:title</code></a></p>
-</td>
-<td valign=top>
-<p><a title="endpoint description" href="#data-service-endpoint-description"><code>dcat:endpointDescription</code></a></p>
-<p><a title="serves dataset" href="#data-service-serves-dataset"><code>dcat:servesDataset</code></a></p>
-</td>
-<td valign=top>
-<p><a title="access rights" href="#data-service-access-rights"><code>dct:accessRights</code></a></p>
-<p><a title="description" href="#data-service-description"><code>dct:description</code></a></p>
-<p><a title="licence" href="#data-service-licence"><code>dct:license</code></a></p>
-</td>
-</tr>
   
 <tr>
-<td valign=top><a href="#dataset">Dataset</a></td>
+<td valign=top><a href="#class-dataset">Dataset</a></td>
 <td valign=top><code>dcat:Dataset</code></td>
 <td valign=top>
 <p><a title="description" href="#dataset-description"><code>dct:description</code></a></p>
@@ -189,8 +172,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#distribution">Distribution</a></td>
-<td valign=top><code>dcat:Distribution</code></td>
+<td valign=top><a href="#class-distribution"><code>dcat:Distribution</code></a></td>
 <td valign=top>
 <p><a title="access URL" href="#distribution-access-url"><code>dcat:accessURL</code></a></p>
 <p>+<a title="mobility data standard" href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a></p>
@@ -215,21 +197,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#document">Document</a></td>
-<td valign=top><code>foaf:Document</code></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#frequency">Frequency</a></td>
-<td valign=top><code>dct:Frequency</code></td>
-<td valign=top>
-</td>
+<td valign=top><a href="#class-document"><code>foaf:Document</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
@@ -237,11 +205,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#identifier">Identifier</a></td>
-<td valign=top><code>adms:Identifier</code></td>
-<td valign=top>
-<p><a title="notation" href="#identifier-notation"><code>skos:notation</code></a></p>
-</td>
+<td valign=top><a href="#class-frequency"><code>dct:Frequency</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
@@ -249,40 +213,40 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#kind">Kind</a></td>
-<td valign=top><code>vcard:Kind</code></td>
+<td valign=top><a href="#class-identifier"><code>adms:Identifier</code></a></td>
+<td valign=top>
+<p><a href="#identifier-notation"><code>skos:notation</code></a></p>
+</td>
 <td valign=top>
 </td>
+</tr>
+  
+<tr>
+<td valign=top><a href="#class-kind"><code>vcard:Kind</code></a></td>
 <td valign=top>
 <p>+<a title="email" href="#kind-email"><code>vcard:hasEmail</code></a></p>
 <p>+<a title="name" href="#kind-name"><code>vcard:fn</code></a></p>
-<p>+<a title="URL" href="#kind-url"><code>vcard:hasURL</code></a></p>
 </td>
 <td valign=top>
-<p>+<a title="address" href="#kind-address"><code>vcard:hasAddress</code></a></p>
-<p>+<a title="affiliation" href="#kind-affiliation"><code>vcard:organization-name</code></a></p>
-<p>+<a title="phone" href="#kind-phone"><code>vcard:hasTelephone</code></a></p>
+<p>+<a href="#kind-address"><code>vcard:hasAddress</code></a></p>
+<p>+<a href="#kind-affiliation"><code>vcard:organization-name</code></a></p>
+<p>+<a href="#kind-phone"><code>vcard:hasTelephone</code></a></p>
+<p>+<a href="#kind-url"><code>vcard:hasURL</code></a></p>
 </td>
 </tr>
   
 <tr>
-<td valign=top><a href="#licence-document">Licence Document</a></td>
-<td valign=top><code>dct:LicenseDocument</code></td>
+<td valign=top><a href="#class-licence-document"><code>dct:LicenseDocument</code></a></td>
 <td valign=top>
+<p>+<a href="#licence-document-standard-licence"><code>dct:identifier</code></a></p>
 </td>
 <td valign=top>
-<p>+<a title="standard licence" href="#licence-document-standard-licence"><code>dct:identifier</code></a></p>
-</td>
-<td valign=top>
-<p>+<a title="licence text" href="#licence-document-licence-text"><code>rdfs:label</code></a></p>
+<p>+<a href="#licence-document-licence-text"><code>rdfs:label</code></a></p>
 </td>
 </tr>
   
 <tr>
-<td valign=top><a href="#linguistic-system">Linguistic system</a></td>
-<td valign=top><code>dct:LinguisticSystem</code></td>
-<td valign=top>
-</td>
+<td valign=top><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
@@ -290,10 +254,7 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#literal">Literal</a></td>
-<td valign=top><code>rdfs:Literal</code></td>
-<td valign=top>
-</td>
+<td valign=top><a href="#class-literal"><code>rdfs:Literal</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
@@ -301,67 +262,59 @@
 </tr>
   
 <tr>
-<td valign=top><a href="#location">Location</a></td>
-<td valign=top><code>dct:Location</code></td>
+<td valign=top><a href="#class-location"><code>dct:Location</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
-<p>+<a title="gazetteer" href="#location-gazetteer"><code>skos:inScheme</code></a></p>
-<p>+<a title="geographic identifier" href="#location-geographic-identifier"><code>dct:identifier</code></a></p>
-</td>
-<td valign=top>
-<p><a title="bounding box" href="#location-bbox"><code>dcat:bbox</code></a></p>
-<p><a title="centroid" href="#location-centroid"><code>dcat:centroid</code></a></p>
-<p>+<a title="geographic name" href="#location-geographic-name"><code>skos:prefLabel</code></a></p>
-<p><a title="geometry" href="#location-geometry"><code>locn:geometry</code></a></p>
+<p><a href="#location-bbox"><code>dcat:bbox</code></a></p>
+<p><a href="#location-centroid"><code>dcat:centroid</code></a></p>
+<p>+<a href="#location-gazetteer"><code>skos:inScheme</code></a></p>
+<p>+<a href="#location-geographic-identifier"><code>dct:identifier</code></a></p>
+<p>+<a href="#location-geographic-name"><code>skos:prefLabel</code></a></p>
+<p><a href="#location-geometry"><code>locn:geometry</code></a></p>
 </td>
 </tr>
   
 
 <tr>
-<td valign=top>+<a href="#mobility-data-standard">Mobility Data Standard</a></td>
-<td valign=top><code>mobilitydcatap:MobilityDataStandard</code></td>
+<td valign=top>+<a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
-</td>
-<td valign=top>
-<p>+<a title="version" href="#mobility-data-standard-version"><code>owl:versionInfo</code></a></p>
-<p>+<a title="schema" href="#mobility-data-standard-schema"><code>mobilitydcatap:schema</code></a></p>
+<p>+<a href="#mobility-data-standard-specific-content-model"><code>mobilitydcatap:specificContentModel</code></a></p>
+<p>+<a href="#mobility-data-standard-name"><code>dct:conformsTo</code></a></p>
+<p>+<a href="#mobility-data-standard-version"><code>dcat:version</code></a></p>
+<p>+<a href="#mobility-data-standard-schema"><code>mobilitydcatap:schema</code></a></p>
 </td>
 </tr>
 
 
   
 <tr>
-<td valign=top><a href="#period-of-time">Period of time</a></td>
-<td valign=top><code>dct:PeriodOfTime</code></td>
+<td valign=top><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></td>
 <td valign=top>
-</td>
-<td valign=top>
-<p><a title="end date" href="#period-of-time-end-date"><code>dcat:endDate</code></a></p>
-<p><a title="start date" href="#period-of-time-start-date"><code>dcat:startDate</code></a></p>
+<p><a href="#period-of-time-end-date"><code>dcat:endDate</code></a></p>
+<p><a href="#period-of-time-start-date"><code>dcat:startDate</code></a></p>
 </td>
 <td valign=top>
 </td>
 </tr>
   
+
+  
 <tr>
-<td valign=top><a href="#provenance-statement">Provenance Statement</a></td>
-<td valign=top><code>dct:ProvenanceStatement</code></td>
+<td valign=top>+<a href="#class-quality-annotation"><code>dqv:QualityAnnotation</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
-</td>
-<td valign=top>
+<p>+<a href="#quality-annotation-quality-annotation-ressource"><code>oa:hasBody</code></a></p>
+<p>+<a href="#quality-annotation-quality-annotation-target"><code>oa:hasTarget</code></a></p>
 </td>
 </tr>
   
+  
 <tr>
-<td valign=top><a href="#publisher-type">Publisher type</a></td>
-<td valign=top><code>skos:Concept</code></td>
-<td valign=top>
-</td>
+<td valign=top><a href="#class-resource"><code>rdfs:Resource</code></a></td>
 <td valign=top>
 </td>
 <td valign=top>
@@ -369,86 +322,19 @@
 </tr>
   
 <tr>
-<td valign=top>+<a href="#quality-annotation">Quality Annotation</a></td>
-<td valign=top><code>dqv:QualityAnnotation</code></td>
+<td valign=top><a href="#class-rights-statement"><code>dct:RightsStatement</code></a></td>
 <td valign=top>
+<p>+<a href="#rights-statement-conditions-for-access-and-usage"><code>dct:type</code></a></p>
 </td>
 <td valign=top>
-</td>
-<td valign=top>
-<p>+<a title="quality annotation ressource" href="#quality-annotation-quality-annotation-ressource"><code>oa:hasBody</code></a></p>
-<p>+<a title="quality annotation target" href="#quality-annotation-quality-annotation-target"><code>oa:hasTarget</code></a></p>
+<p>+<a href="#rights-statement-text"><code>dct:description</code></a></p>
 </td>
 </tr>
   
-<tr>
-<td valign=top><a href="#relationship">Relationship</a></td>
-<td valign=top><code>dcat:Relationship</code></td>
-<td valign=top>
-<p><a title="had role" href="#relationship-had-role"><code>dcat:hadRole</code></a></p>
-<p><a title="relation" href="#relationship-relation"><code>dct:relation</code></a></p>
-</td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
   
-<tr>
-<td valign=top><a href="#resource">Resource</a></td>
-<td valign=top><code>rdfs:Resource</code></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
   
-<tr>
-<td valign=top><a href="#rights-statement">Rights statement</a></td>
-<td valign=top><code>dct:RightsStatement</code></td>
-<td valign=top>
-<p>+<a title="conditions for access and usage" href="#rights-statement-conditions-for-access-and-usage"><code>dct:type</code></a></p>
-</td>
-<td valign=top>
-<p>+<a title="rights statement text" href="#rights-statement-additional-information-for-access-and-usage"><code>rdfs:label</code></a></p>
-</td>
-<td valign=top>
-</td>
-</tr>
+
+
   
-<tr>
-<td valign=top><a href="#role">Role</a></td>
-<td valign=top><code>dcat:Role</code></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#standard">Standard</a></td>
-<td valign=top><code>dct:Standard</code></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#status">Status</a></td>
-<td valign=top><code>skos:Concept</code></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
 </tbody>
 </table>
