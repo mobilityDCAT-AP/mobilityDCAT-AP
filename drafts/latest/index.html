@@ -1044,7 +1044,8 @@ In particular, the class and property definitions are now under new sections <a 
     <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
 </ul> 
-  <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
+  
+<li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
 <ul>
    <li>Property <a href="#dataset-in-series"><code>dcat:inSeries</code></a> of class Dataset added, to allow for relating a dataset to a dataset series.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
@@ -1063,6 +1064,16 @@ In particular, the class and property definitions are now under new sections <a 
     <li>Property <a href="#distribution-status"><code>adms:status</code></a> of class Distribution added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/96">#96</a>.</li>
 </ul> 
+
+<li>Other changes of existing properties:</li>
+<ul>
+   <li>Cardinality of property <a href="#distribution-data-format-notes"><code>mobilitydcatap:dataFormatNotes</code></a> of class Distribution changed from 0..1 to 0..*, to allow for multilingual versions of such notes.
+     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/120">#120</a>.</li>
+</ul> 
+
+
+
+  
   
   <li>Changes in classes and properties, with the goal of alignment with the DCAT-AP v3 and geoDCAT-AP v3 data models. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
 <ul>
