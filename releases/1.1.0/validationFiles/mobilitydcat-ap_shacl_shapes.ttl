@@ -919,12 +919,12 @@
   sh:name "Location"@en ;
   sh:property [
     # Recommended property for  Location
-    sh:class skos:ConceptScheme ;
+    sh:nodeKind sh:IRI ;
     sh:path skos:inScheme ;
     sh:maxCount 1 ;
     sh:name "gazetteer" ;
-    sh:description "This property MAY be used to specify the gazetteer to which the Location belongs. " ;
-    sh:message "ERROR: Invalid gazetteer. If provided, this must be a skos:ConceptScheme instance representing the geographic naming system, and you cannot specify more than one."@en ;
+    sh:description "This property MAY be used to specify the gazetteer to which the Location belongs. The value should be an IRI identifying the gazetteer (e.g., http://sws.geonames.org/, http://data.europa.eu/nuts)." ;
+    sh:message "ERROR: Invalid gazetteer. If provided, this must be a valid IRI identifying a geographic naming system, and you cannot specify more than one."@en ;
     sh:severity sh:Violation
   ],
   [
@@ -1171,6 +1171,7 @@
 <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
   skos:prefLabel "European Legislation Identifier (ELI)"@en ;
 .
+
 
 
 
