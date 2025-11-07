@@ -1,0 +1,27 @@
+@prefix : <https://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+:Category_Shape
+  a sh:NodeShape ;
+  sh:targetClass skos:Concept ;
+  sh:name "Category"@en ;
+  sh:property [
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path skos:prefLabel ;
+    sh:name "preferred label" ;
+    sh:description "This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label." ;
+    sh:message "Category must have at least one preferred label" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:maxCount 1 ;
+    sh:class skos:ConceptScheme ;
+    sh:path skos:inScheme ;
+    sh:name "category scheme" ;
+    sh:description "This property MAY be used to specify the Category Scheme to which the Category belongs. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]." ;
+    sh:message "Category scheme must be a skos:ConceptScheme and can appear at most once" ;
+    sh:severity sh:Violation
+  ] .
