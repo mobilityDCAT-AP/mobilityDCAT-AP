@@ -55,7 +55,7 @@ docker run mobilitydcat-validator "https://transportdata.be/catalog.ttl"
 docker run -v $(pwd)/examples:/data mobilitydcat-validator /data/my-catalog.ttl
 ```
 
-### 💾Save validation report
+### Save validation report
 
 ```bash
 docker run mobilitydcat-validator "https://example.com/catalog.ttl" > validation_report.ttl
