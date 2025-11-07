@@ -138,10 +138,6 @@ uv pip install -r requirements.txt
 - [SHACL Specification](https://www.w3.org/TR/shacl/)
 - [Contributing Guide](../../CONTRIBUTING.md)
 
-## Credits
-
-This SHACL validation setup builds upon the work by @MikiDi in [PR #129](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/pull/129).
-
 ## License
 
 Same as mobilityDCAT-AP - see root LICENSE file.
