@@ -6,13 +6,13 @@
 
 This directory contains SHACL shapes for validating mobilityDCAT-AP metadata. The shapes are organized into individual files for easier maintenance and can be automatically combined into a single validation file.
 
-## 📊 Statistics
+## Statistics
 
 - **Total Shapes:** 10
 - **Total Properties:** 19
 - **Mandatory Properties:** 22
 
-## 📁 Directory Structure
+## Directory Structure
 ```
 validationFiles/
 ├── shapes/                    # Individual SHACL shape files
@@ -27,7 +27,7 @@ validationFiles/
 └── mobilitydcat-ap_shacl_shapes.ttl  # Combined shapes file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Combine Shapes
 ```bash
@@ -54,7 +54,7 @@ docker run -v $(pwd)/examples:/data mobilitydcat-validator /data/your-file.ttl
 docker run mobilitydcat-validator "https://example.com/catalog.ttl" > report.ttl
 ```
 
-## 📋 Available Shapes
+## Available Shapes
 
 | Shape | File | Properties | Mandatory |
 |-------|------|------------|----------|
@@ -70,7 +70,7 @@ docker run mobilitydcat-validator "https://example.com/catalog.ttl" > report.ttl
 | **Distribution** | `Distribution_shape.ttl` | 1 | 4 |
 
 
-## 🔧 Development
+## Development
 
 ### Setup
 ```bash
@@ -177,7 +177,7 @@ uv pip install -r requirements.txt
 
 *No example files yet. Examples will be added for each shape.*
 
-## 🐛 Validation Tips
+## Validation Tips
 
 ### Common Issues
 
@@ -197,17 +197,17 @@ uv pip install -r requirements.txt
 | **Docker** | ✅ | Pre-configured |
 | **Apache Jena** | ⚠️ | Manual setup |
 
-## 📖 Documentation
+## Documentation
 
 - [mobilityDCAT-AP Specification](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/)
 - [SHACL Specification](https://www.w3.org/TR/shacl/)
 - [Contributing Guide](../../CONTRIBUTING.md)
 
-## 🤝 Credits
+## Credits
 
 This SHACL validation setup builds upon the work by @MikiDi in [PR #129](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/pull/129).
 
-## 📄 License
+## License
 
 Same as mobilityDCAT-AP - see root LICENSE file.
 
