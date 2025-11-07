@@ -23,9 +23,6 @@ docker run -v $(pwd)/examples:/data mobilitydcat-validator /data/my-catalog.ttl
 docker run mobilitydcat-validator "https://example.com/catalog.ttl" > validation_report.ttl
 ```
 
-## What it does
+## Credits
 
-1. Downloads all required ontologies and controlled vocabularies
-2. Combines them with your data
-3. Runs SHACL validation with RDFS reasoning
-4. Outputs validation report in Turtle format
+This SHACL validation setup builds upon the work by @MikiDi in [PR #129](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/pull/129).
