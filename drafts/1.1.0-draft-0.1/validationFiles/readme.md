@@ -19,3 +19,6 @@ The following shape files ensure that an instances of a specific class has the n
 - The [QualityAnnotation_Shape](quality_annotation_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dqv:QualityAnnotation](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-quality-annotation) class.
 - The [RightsStatement_Shape](rights_statement_shape.ttl) is a SHACL node shape that defines the structure and constraints for the [dct:RightsStatement](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-rights-statement) class. 
 
+
+
+

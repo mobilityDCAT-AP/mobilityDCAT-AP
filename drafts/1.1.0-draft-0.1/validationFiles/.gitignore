@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Output (if you want to ignore combined file)
+# mobilitydcat-ap_shacl_shapes.ttl
+
+# Docker
+.docker/*.log
+
+# Validation outputs
+validation_report.ttl
+combined.nt
+input_data.ttl

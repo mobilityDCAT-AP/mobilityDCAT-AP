@@ -1,0 +1,30 @@
+@prefix : <https://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Assessment_Shape a sh:NodeShape ;
+    sh:targetClass mobilitydcatap:Assessment ;
+    sh:name "Assessment"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:path dct:issued ;
+        sh:or (
+            [ sh:datatype xsd:date ]
+            [ sh:datatype xsd:dateTime ]
+        ) ;
+        sh:name "assessment date" ;
+        sh:description "This property MAY be used to describe the date of the latest assessment procedure." ;
+        sh:message "ERROR: Invalid assessment date. If provided, this must be either an xsd:date (YYYY-MM-DD) or xsd:dateTime format, and you cannot specify more than one date."@en ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path oa:hasBody ;
+        sh:name "assessment result" ;
+        sh:description "This property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model." ;
+        sh:message "ERROR: Invalid assessment result. If provided, this must be a rdfs:Resource (either a URL linking to details or using the Web Annotation Data Model format), and you cannot specify more than one."@en ;
+        sh:severity sh:Violation
+    ] .

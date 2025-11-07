@@ -1,0 +1,164 @@
+@prefix : <https://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+
+:Distribution_Shape
+  a sh:NodeShape ;
+  sh:targetClass dcat:Distribution ;
+  sh:name "Distribution"@en ;
+  sh:property [
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path dcat:accessURL ;
+    sh:name "access URL" ;
+    sh:description "This property contains a URL that gives access to a Distribution of the Dataset." ;
+    sh:message "Distribution must have exactly one access URL" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path mobilitydcatap:mobilityDataStandard ;
+    sh:or (
+      [
+        sh:nodeKind sh:IRI ;
+        sh:pattern "https://w3id.org/mobilitydcat-ap/mobility-data-standard/"
+      ]
+      [
+        sh:class mobilitydcatap:MobilityDataStandard
+      ]
+    ) ;
+    sh:name "mobility data standard" ;
+    sh:message "ERROR: Missing or invalid mobility data standard. You must specify exactly one standard from https://w3id.org/mobilitydcat-ap/mobility-data-standard/ or provide a mobilitydcatap:MobilityDataStandard instance." ;
+    sh:description "This property describes the mobility data standard, as applied for the delivered content within the Distribution." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class dct:MediaTypeOrExtent ;
+    sh:path dct:format ;
+    sh:name "format" ;
+    sh:description "This property refers to the technical syntax of the delivered content within the Distribution." ;
+    sh:message "Distribution must have exactly one format" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class dct:RightsStatement ;
+    sh:path dct:rights ;
+    sh:name "rights" ;
+    sh:description "This property links to a Rights Statement, i.e., a statement about the intellectual property rights (IPR)." ;
+    sh:message "Distribution must have exactly one rights statement" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:pattern "https://w3id.org/mobilitydcat-ap/application-layer-protocol" ;
+    sh:path mobilitydcatap:applicationLayerProtocol ;
+    sh:maxCount 1 ;
+    sh:name "application layer protocol" ;
+    sh:message "ERROR: Invalid application layer protocol. If provided, this must be from https://w3id.org/mobilitydcat-ap/application-layer-protocol and you cannot specify more than one." ;
+    sh:description "This property describes the transmitting channel, i.e., the Application Layer Protocol, of the distribution." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:nodeKind sh:Literal ;
+    sh:path dct:description ;
+    sh:name "description" ;
+    sh:message "Description must be a literal" ;
+    sh:description "This property contains a free-text account of the Distribution. This property can be repeated for parallel language versions of the description." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:maxCount 1 ;
+    sh:class dct:LicenseDocument ;
+    sh:path dct:license ;
+    sh:name "licence" ;
+    sh:description "This property refers to the licence under which the Distribution is made available." ;
+    sh:message "License must be a dct:LicenseDocument and can appear at most once" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:class dcat:DataService ;
+    sh:path dcat:accessService ;
+    sh:name "access service" ;
+    sh:description "This property refers to a Data Service that gives access to the Distribution of the Dataset." ;
+    sh:message "Access service must be a dcat:DataService" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:nodeKind sh:Literal ;
+    sh:path cnt:characterEncoding ;
+    sh:maxCount 1 ;
+    sh:name "character encoding" ;
+    sh:message "ERROR: Invalid character encoding. If provided, this must be a literal value (e.g., 'UTF-8') and you cannot specify more than one." ;
+    sh:description "This property describes the technical encoding format of the delivered content within the Distribution." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:pattern "https://w3id.org/mobilitydcat-ap/communication-method" ;
+    sh:path mobilitydcatap:communicationMethod ;
+    sh:maxCount 1 ;
+    sh:name "communication method" ;
+    sh:message "ERROR: Invalid communication method. If provided, this must be from https://w3id.org/mobilitydcat-ap/communication-method (e.g., push or pull) and you cannot specify more than one." ;
+    sh:description "This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:nodeKind sh:Literal ;
+    sh:path mobilitydcatap:dataFormatNotes ;
+    sh:maxCount 1 ;
+    sh:name "data format notes" ;
+    sh:message "ERROR: Invalid data format notes. If provided, this must be a literal text value and you cannot specify more than one." ;
+    sh:description "This property contains any additional information about the format of the delivered content within the Distribution." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:nodeKind sh:IRI ;
+    sh:path dcat:downloadURL ;
+    sh:name "download URL" ;
+    sh:description "This property contains a URL that is a direct link to a downloadable file in a given format." ;
+    sh:message "Download URL must be a resource (IRI)" ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:pattern "https://w3id.org/mobilitydcat-ap/grammar" ;
+    sh:path mobilitydcatap:grammar ;
+    sh:maxCount 1 ;
+    sh:name "grammar" ;
+    sh:message "ERROR: Invalid grammar. If provided, this must be from https://w3id.org/mobilitydcat-ap/grammar and you cannot specify more than one." ;
+    sh:description "This property describes the technical data grammar format of the delivered content within the Distribution." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:nodeKind sh:IRI ;
+    sh:path adms:sample ;
+    sh:name "sample" ;
+    sh:message "ERROR: Invalid sample. If provided, this must be a rdfs:Resource pointing to a sample distribution of the dataset." ;
+    sh:description "This property refers to a sample Distribution of the Dataset." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:class dct:PeriodOfTime ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:maxCount 1 ;
+    sh:path dct:temporal ;
+    sh:name "temporal coverage" ;
+    sh:message "ERROR: Invalid temporal coverage. If provided, this must be a dct:PeriodOfTime instance specifying the beginning and end times, and you cannot specify more than one." ;
+    sh:description "This property describes the beginning and end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform." ;
+    sh:severity sh:Violation
+  ],
+  [
+    sh:nodeKind sh:Literal ;
+    sh:path dct:title ;
+    sh:name "title" ;
+    sh:description "This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description." ;
+    sh:message "Title must be a literal" ;
+    sh:severity sh:Violation
+  ] .
