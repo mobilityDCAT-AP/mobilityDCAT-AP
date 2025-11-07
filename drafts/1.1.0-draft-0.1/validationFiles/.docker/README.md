@@ -32,7 +32,7 @@ Here’s how you can extend it **cleanly** with a `### 🧩 To-Do / Next Steps` 
 
 ---
 
-### ✅ Updated README.md (suggested version)
+### Updated README.md (suggested version)
 
 ````markdown
 ## Build the Image
@@ -43,19 +43,19 @@ docker build -f .docker/Dockerfile -t mobilitydcat-validator .
 
 ## Run Validation
 
-### ✅ Validate from URL
+### Validate from URL
 
 ```bash
 docker run mobilitydcat-validator "https://transportdata.be/catalog.ttl"
 ```
 
-### ✅ Validate local file
+### Validate local file
 
 ```bash
 docker run -v $(pwd)/examples:/data mobilitydcat-validator /data/my-catalog.ttl
 ```
 
-### 💾 Save validation report
+### Save validation report
 
 ```bash
 docker run mobilitydcat-validator "https://example.com/catalog.ttl" > validation_report.ttl
@@ -63,7 +63,7 @@ docker run mobilitydcat-validator "https://example.com/catalog.ttl" > validation
 
 ---
 
-## 🧩 Credits
+## Credits
 
 This SHACL validation setup builds upon the work by [@MikiDi](https://github.com/MikiDi) in PR [#129](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/pull/129).
 
