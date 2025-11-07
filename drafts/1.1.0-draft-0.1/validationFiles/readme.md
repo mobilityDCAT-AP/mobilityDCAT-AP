@@ -99,7 +99,7 @@ uv pip install -r requirements.txt
 3. Run `python scripts/combine_shapes.py`
 4. Run `python scripts/generate_readme.py` to update docs
 
-## 📚 Shape Files
+## Shape Files
 
 ### Address Agent Shape
 
@@ -173,7 +173,7 @@ uv pip install -r requirements.txt
 
 
 
-## 🧪 Examples
+## Examples
 
 *No example files yet. Examples will be added for each shape.*
 
@@ -202,10 +202,6 @@ uv pip install -r requirements.txt
 - [mobilityDCAT-AP Specification](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/)
 - [SHACL Specification](https://www.w3.org/TR/shacl/)
 - [Contributing Guide](../../CONTRIBUTING.md)
-
-## Credits
-
-This SHACL validation setup builds upon the work by @MikiDi in [PR #129](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/pull/129).
 
 ## License
 
