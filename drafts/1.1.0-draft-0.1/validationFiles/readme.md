@@ -4,7 +4,7 @@
 
 **Last Updated:** 2025-11-07
 
-## 📊 Quick Stats
+## Quick Stats
 
 | Metric | Count |
 |--------|-------|
@@ -12,7 +12,7 @@
 | **Total Properties** | 19 |
 | **Mandatory Properties** | 22 |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Combine Shapes
 ```bash
@@ -28,7 +28,7 @@ docker build -f .docker/Dockerfile -t mobilitydcat-validator .
 docker run mobilitydcat-validator "https://example.com/catalog.ttl"
 ```
 
-## 📁 Directory Structure
+## Directory Structure
 ```
 validationFiles/
 ├── shapes/                           # Individual SHACL shapes
@@ -39,7 +39,7 @@ validationFiles/
 └── mobilitydcat-ap_shacl_shapes.ttl # Combined output
 ```
 
-## 📋 Available Shapes
+## Available Shapes
 
 | Shape | Documentation | File | Properties | Mandatory |
 |-------|---------------|------|------------|----------|
@@ -55,7 +55,7 @@ validationFiles/
 | **Distribution** | [📖 Spec](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-distribution) | [`Distribution_shape.ttl`](shapes/Distribution_shape.ttl) | 1 | 4 |
 
 
-## 🔧 Development Setup
+## Development Setup
 ```bash
 # Create environment
 uv venv

@@ -48,7 +48,7 @@ README_TEMPLATE = """# mobilityDCAT-AP SHACL Validation
 
 **Last Updated:** {date}
 
-## 📊 Quick Stats
+## Quick Stats
 
 | Metric | Count |
 |--------|-------|
@@ -56,7 +56,7 @@ README_TEMPLATE = """# mobilityDCAT-AP SHACL Validation
 | **Total Properties** | {total_properties} |
 | **Mandatory Properties** | {mandatory_properties} |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Combine Shapes
 ```bash
@@ -72,7 +72,7 @@ docker build -f .docker/Dockerfile -t mobilitydcat-validator .
 docker run mobilitydcat-validator "https://example.com/catalog.ttl"
 ```
 
-## 📁 Directory Structure
+## Directory Structure
 ```
 validationFiles/
 ├── shapes/                           # Individual SHACL shapes
@@ -83,11 +83,11 @@ validationFiles/
 └── mobilitydcat-ap_shacl_shapes.ttl # Combined output
 ```
 
-## 📋 Available Shapes
+## Available Shapes
 
 {shapes_table}
 
-## 🔧 Development Setup
+## Development Setup
 ```bash
 # Create environment
 uv venv
