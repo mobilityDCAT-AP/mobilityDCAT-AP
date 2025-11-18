@@ -891,12 +891,12 @@
   sh:name "License Document"@en ;
   sh:property [
     # Recommended property for License Document
-    sh:pattern "http://publications.europa.eu/resource/authority/access-right" ;
+    sh:pattern "https://publications.europa.eu/resource/authority/licence" ;
     sh:path dct:identifier ;
     sh:name "standard licence" ;
     sh:maxCount 1 ;
     sh:description "This property MAY be be used to link to a concrete standard license.  " ;
-    sh:message "ERROR: Invalid standard license identifier. If provided, this must reference a license from http://publications.europa.eu/resource/authority/access-right and you cannot specify more than one."@en ;
+	sh:message "ERROR: Invalid standard license identifier. If provided, this must reference a license from https://publications.europa.eu/resource/authority/licence and you cannot specify more than one."@en ;
     sh:severity sh:Violation
   ],
   [
@@ -1165,3 +1165,4 @@
 <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
   skos:prefLabel "European Legislation Identifier (ELI)"@en ;
 .
+
