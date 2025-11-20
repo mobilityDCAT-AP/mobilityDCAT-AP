@@ -25,7 +25,7 @@
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_deprecateduris.ttl> ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
-  owl:imports <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/serialisationFiles/mobilitydcat-ap.ttl> ;
+  owl:imports <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/mobilitydcat-ap.ttl> ;
   owl:imports <http://www.w3.org/ns/dqv.ttl> ;
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/SpatialDataServiceCategory.en.rdf> ;
   owl:imports <http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/ConditionsApplyingToAccessAndUse.en.rdf> ;
@@ -75,7 +75,7 @@
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
       <http://www.w3.org/ns/formats/data/Turtle> ;
       dct:title "SHACL (Turtle)"@en ;
-      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.1.0/serialisationFiles/mobilitydcat-ap.shacl.ttl> ;
+      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.1.0/mobilitydcat-ap.shacl.ttl> ;
       dcat:mediaType "text/turtle"^^dct:IMT
   ] ;
   .
