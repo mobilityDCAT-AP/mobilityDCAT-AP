@@ -51,15 +51,15 @@ var respecConfig = {
 */
     {
       label: "RDF/XML",
-      uri: "./serialisationFiles/mobilitydcat-ap.rdf",
+      uri: "./mobilitydcat-ap.rdf",
     },
     {
       label: "Turtle",
-      uri: "./serialisationFiles/mobilitydcat-ap.ttl",
+      uri: "./mobilitydcat-ap.ttl",
     },
     {
       label: "JSON-LD",
-      uri: "./serialisationFiles/mobilitydcat-ap.jsonld",
+      uri: "./mobilitydcat-ap.jsonld",
     },
     {
        label: "SHACL (Turtle)",
