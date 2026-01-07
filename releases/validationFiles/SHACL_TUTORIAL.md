@@ -1,15 +1,15 @@
-# 📚 mobilityDCAT-AP SHACL Documentation  
+#  mobilityDCAT-AP SHACL Documentation  
 
-## 🔍 Introduction to SHACL  
+##  Introduction to SHACL  
 
-### 🎯 What is SHACL and Why Use It?  
+### What is SHACL and Why Use It?  
 SHACL (Shapes Constraint Language) is a powerful tool for validating RDF data against predefined rules. It helps to:  
 
 1. **Define** the structure of RDF data. 
 2. **Validate** RDF data against specific constraints.  
 3. **Ensure** high-quality, well-structured data  .
 
-### 🧩 SHACL: A Real-World Analogy  
+###  SHACL: A Real-World Analogy  
 <details>  
   <summary>Click to expand</summary>  
 
