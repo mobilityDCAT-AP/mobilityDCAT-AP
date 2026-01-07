@@ -1,0 +1,202 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix mdcap11: <https://w3id.org/mobilitydcat-ap/releases/1.1.0#> .
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> 
+  a owl:Ontology , adms:Asset ;
+  
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/shacl/dcat-ap-SHACL-ranges.ttl> ;
+  
+  owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> ;
+  owl:versionInfo "1.1.0" ;
+  dct:title "mobilityDCAT-AP 1.1.0 SHACL - Range Constraints"@en ;
+  dct:description "Adds sh:class constraints to mobilityDCAT-AP properties."@en .
+
+#===========================================================================
+# RANGE CONSTRAINTS - Strict Class Membership
+# 
+# This file adds sh:class constraints to enforce strict typing.
+# It imports the basic file, so you get both basic + range validation.
+#===========================================================================
+
+#---------------------------------------------------------------------------
+# AGENT SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Agent_Shape_ranges>
+  a sh:NodeShape ;
+  sh:targetClass foaf:Agent ;
+  sh:name "Agent (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Agent mobility extensions. Enforces sh:class for address and affiliation properties."@en ;
+  
+  sh:property 
+    :Agent_Shape_address_range ,
+    :Agent_Shape_affiliation_range .
+
+#---------------------------------------------------------------------------
+# Range Property Shapes - Agent
+#---------------------------------------------------------------------------
+
+:Agent_Shape_address_range
+  sh:path locn:address ;
+  sh:class locn:Address ;
+  sh:name "address (range)"@en ;
+  sh:description "The postal address must be of type locn:Address"@en ;
+  sh:message "Address must be a locn:Address instance"@en ;
+  sh:severity sh:Violation .
+
+:Agent_Shape_affiliation_range
+  sh:path org:memberOf ;
+  sh:class org:Organization ;
+  sh:name "affiliation (range)"@en ;
+  sh:description "The affiliation must be of type org:Organization"@en ;
+  sh:message "Affiliation must be an org:Organization instance"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# CATALOGUE SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Catalogue_Shape_ranges>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Catalog ;
+  sh:name "Catalogue (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Catalogue mobility extensions. Other range constraints (dataset, publisher, record, spatial, etc.) are inherited from DCAT-AP 3.0.1 ranges."@en ;
+  
+  sh:property 
+    :Catalogue_Shape_otherIdentifier_range .
+
+#---------------------------------------------------------------------------
+# Range Constraints
+# NOTE: Range constraints for dataset, publisher, record, spatial, language,
+# licence, themeTaxonomy, hasPart, isPartOf are ALL inherited from:
+# owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/shacl/dcat-ap-SHACL-ranges.ttl>
+#---------------------------------------------------------------------------
+
+:Catalogue_Shape_otherIdentifier_range
+  sh:path adms:identifier ;
+  sh:class adms:Identifier ;
+  sh:name "other identifier (range)"@en ;
+  sh:description "Other identifier must be of type adms:Identifier"@en ;
+  sh:message "Other identifier must be an adms:Identifier instance"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# CATALOGUE RECORD SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#CatalogueRecord_Shape_ranges>
+  a sh:NodeShape ;
+  sh:targetClass dcat:CatalogRecord ;
+  sh:name "Catalogue Record (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Catalogue Record mobility extensions. Other range constraints (language, primary topic, source metadata) are inherited from DCAT-AP 3.0.1 ranges."@en ;
+  
+  sh:property 
+    :CatalogueRecord_Shape_publisher_range .
+
+#---------------------------------------------------------------------------
+# Range Constraints
+#---------------------------------------------------------------------------
+
+:CatalogueRecord_Shape_publisher_range
+  sh:path dct:publisher ;
+  sh:class foaf:Agent ;
+  sh:name "publisher (range)"@en ;
+  sh:description "Publisher must be of type foaf:Agent"@en ;
+  sh:message "Publisher must be a foaf:Agent instance"@en ;
+  sh:severity sh:Violation .
+
+# NOTE: Range constraints for language (dct:LinguisticSystem), 
+# primary topic (dcat:Dataset), and source metadata (dcat:CatalogRecord) 
+# are ALL inherited from:
+# owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/shacl/dcat-ap-SHACL-ranges.ttl>
+
+#---------------------------------------------------------------------------
+# CATEGORY SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Category_Shape_ranges>
+  a sh:NodeShape ;
+  sh:targetClass skos:Concept ;
+  sh:name "Category (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Category. Enforces that category scheme is a skos:ConceptScheme."@en ;
+  
+  sh:property 
+    :Category_Shape_inScheme_range .
+
+#---------------------------------------------------------------------------
+# Range Property Shapes - Category
+#---------------------------------------------------------------------------
+
+:Category_Shape_inScheme_range
+  sh:path skos:inScheme ;
+  sh:class skos:ConceptScheme ;
+  sh:name "category scheme (range)"@en ;
+  sh:description "Category scheme must be of type skos:ConceptScheme"@en ;
+  sh:message "Category scheme must be a skos:ConceptScheme instance"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# DATA SERVICE SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#DataService_Shape_ranges>
+  a sh:NodeShape ;
+  sh:targetClass dcat:DataService ;
+  sh:name "Data Service (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Data Service. Enforces class membership for serves dataset, access rights, and licence properties."@en ;
+  
+  sh:property 
+    :DataService_Shape_servesDataset_range ,
+    :DataService_Shape_accessRights_range ,
+    :DataService_Shape_licence_range .
+
+#---------------------------------------------------------------------------
+# Range Property Shapes - Data Service
+#---------------------------------------------------------------------------
+
+:DataService_Shape_servesDataset_range
+  sh:path dcat:servesDataset ;
+  sh:class dcat:Dataset ;
+  sh:name "serves dataset (range)"@en ;
+  sh:description "Serves dataset must be of type dcat:Dataset"@en ;
+  sh:message "Serves dataset must be a dcat:Dataset instance"@en ;
+  sh:severity sh:Violation .
+
+:DataService_Shape_accessRights_range
+  sh:path dct:accessRights ;
+  sh:class dct:RightsStatement ;
+  sh:name "access rights (range)"@en ;
+  sh:description "Access rights must be of type dct:RightsStatement"@en ;
+  sh:message "Access rights must be a dct:RightsStatement instance"@en ;
+  sh:severity sh:Violation .
+
+:DataService_Shape_licence_range
+  sh:path dct:license ;
+  sh:class dct:LicenseDocument ;
+  sh:name "licence (range)"@en ;
+  sh:description "Licence must be of type dct:LicenseDocument"@en ;
+  sh:message "Licence must be a dct:LicenseDocument instance"@en ;
+  sh:severity sh:Violation .
+
