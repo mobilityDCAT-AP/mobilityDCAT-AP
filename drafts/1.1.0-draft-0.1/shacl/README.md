@@ -1,21 +1,26 @@
-##  Quick Guide: When to Use Which File
+# ⚠️ DEPRECATION NOTICE
 
-### ** Simple Table**
+**This directory will be removed in the next release.**
 
-| **Scenario** | **File to Use** | **Why** |
-|-------------|----------------|---------|
-| **Quick development testing** | `mobilitydcat-ap-shacl.ttl` only | Fast checks: cardinality, datatype, nodeKind |
-| **Strict compliance testing** | BOTH files merged | Full validation: everything must be correct |
-| **Production data validation** | BOTH files merged | Ensure high-quality data before publishing |
-| **Debugging errors** | ONE file at a time | Isolate the problem (basic vs. ranges) |
-| **CI/CD pipeline** | BOTH files merged | Automated quality checks |
-| **End-user validation tools** | `mobilitydcat-ap-shacl.ttl` only | More forgiving, better UX |
-| **Publishing to portal** | BOTH files merged | Strict quality control |
+The SHACL validation structure has been refactored to align with DCAT-AP 3.0.1:
+
+## Changes:
+-  **Old**: `validationFiles/mobilitydcat-ap_shacl_shapes.ttl` (single file)
+-  **New**: `shacl/` directory with two files:
+  - `mobilitydcat-ap-shacl.ttl` (basic validation)
+  - `mobilitydcat-ap-shacl-ranges.ttl` (range constraints)
+
+## Migration:
+- Update imports from `./validationFiles/mobilitydcat-ap_shacl_shapes.ttl`
+- To: `./shacl/mobilitydcat-ap-shacl.ttl`
+- Optionally add: `./shacl/mobilitydcat-ap-shacl-ranges.ttl` for strict validation
+
+See: [Issue #140](https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/140)
 
 ---
 
-##  **The Two Files Explained**
 
+##  **The Two Files Explained**
 ### **File 1: `mobilitydcat-ap-shacl.ttl` (BASIC)**
 **Contains:**
 -  Cardinality (min/max count)
