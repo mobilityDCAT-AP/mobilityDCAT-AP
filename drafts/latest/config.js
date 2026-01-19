@@ -78,7 +78,7 @@ var respecConfig = {
 //    crEnd:"2020-10-12",
 //    prEnd:"2020-12-23",
 // Avoid Latest published version: to be automatically generated with the wrong URI
-    latestVersion: null,
+    latestVersion: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     shortName: "mobilitydcat-ap",
     canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
