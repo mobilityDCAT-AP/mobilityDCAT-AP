@@ -8,32 +8,30 @@
 <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c"></script>
 <script src="./config.js" class="remove" defer></script>
 <style>
-table.simple {width:100%;}
-table.definition {width:100%;}
-table:not(.definition).simple {font-size:small;}
-table.definition th {width:20%;}
-table.definition td {width:80%;}
-.note ul {column-count:2;}
-/*
-.disclaimer {font-size:.9em;}
-.disclaimer:before {content:"\2605\00a0 Disclaimer: ";font-weight:bold;}
-.scope {font-variant:small-caps;}
-table code, table pre {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-all;
-}
-.code {
-  margin: 1em auto;
-  padding: .5em;
-  border: .5em;
-  border-left-style: solid;
-  page-break-inside: avoid;
-  border-color: #52E052;
-  background: #E9FBE9;
-  overflow: auto;
-}
-*/
+  table.simple {
+    font-size: small;
+    border-spacing:0;
+    border-collapse:collapse;
+    border-bottom:3px solid #005a9c;
+    margin-bottom: 2rem;
+  }
+  .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+  .simple th a{color:#fff;padding:3px 5px;text-align:left}
+  .simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+  .simple td{padding:3px 10px;border-top:1px solid #ddd}
+  .simple tr:nth-child(even){background:#f0f6ff}
+  body.darkmode .simple th{background:#005a9c94;color:#ddd}
+  body.darkmode .simple th a{color:#ddd}
+  body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+  body.darkmode :is(h4,h5,h6)+a.self-link::before {
+    color: var(--heading-text);
+  }
+  body.darkmode img {
+    background: none;
+  }
+  body.darkmode section#references :target {
+    background: #04162d;
+  }
 </style>
 </head>
 <body>
@@ -124,6 +122,8 @@ table code, table pre {
 <section id="revision history">
 
 <h3>Revision history</h3>
+
+<p>The revision history of the mobilityDCAT-AP specification is documented in the table below.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/document-history.html"></div>
   

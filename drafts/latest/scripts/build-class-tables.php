@@ -59,7 +59,7 @@
     $html = '';
     if (isset($c[$k]['href']) && trim($c[$k]['href']) != '') {
 //      $html .= '<table class="simple definition" id="table-class-' . $k . '">' . "\n";
-      $html .= '<table class="def" id="table-class-' . $k . '">' . "\n";
+      $html .= '<table class="simple" id="table-class-' . $k . '">' . "\n";
       $html .= '<tbody>' . "\n";
       $html .= '<tr>' . "\n";
       $html .= '<th>Class name</th>' . "\n";
