@@ -726,7 +726,7 @@
   # Mandatory property for Distribution
     sh:minCount 1 ;
     sh:maxCount 1 ;
-    sh:path mobilitydcatap:mobilityDataStandard ;
+    sh:path mobilitydcatap:MobilityDataStandard;
     sh:or (
       # First approach: Direct reference to controlled vocabulary
       [
@@ -1172,6 +1172,7 @@
 <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
   skos:prefLabel "European Legislation Identifier (ELI)"@en ;
 .
+
 
 
 
