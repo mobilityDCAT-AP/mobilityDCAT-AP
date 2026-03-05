@@ -335,7 +335,8 @@
 
 :Catalogue_Shape_identifier
   sh:path dct:identifier ;
-  sh:minCount 1 ;
+  sh:minCount 0 ;         
+  sh:maxCount 1 ;      
   sh:nodeKind sh:Literal ;
   sh:datatype xsd:string ;
   sh:name "identifier"@en ;
@@ -1089,9 +1090,12 @@
 :Distribution_Shape_description
   sh:path dct:description ;
   sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
   sh:name "description"@en ;
   sh:description "A free-text account of the Distribution. May be repeated for parallel language versions (§4.11.2)."@en ;
-  sh:message "Description must be a literal"@en ;
+  sh:message "Description must have valid EU language tag, cannot be empty, each language only once"@en ;
   sh:severity sh:Violation .
 
 :Distribution_Shape_licence
@@ -1187,6 +1191,8 @@
   sh:description "A name given to the Distribution. May be repeated for parallel language versions (§4.11.3)."@en ;
   sh:message "Title must be a literal"@en ;
   sh:severity sh:Violation .
+
+
 
 #-------------------------------------------------------------------------
 # Controlled Vocabulary Declarations (keep as-is)
