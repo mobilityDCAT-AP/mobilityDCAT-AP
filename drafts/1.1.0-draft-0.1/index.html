@@ -44,7 +44,7 @@ table code, table pre {
 
 <p>mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </p>
 
-<p>This document is a product of sub-working group 4.4 of the NAPCORE project [[NAPCORE]] consortium.</p>
+<p>This document is a product of sub-working group 4.4 of the (NAPCORE) [[NAPCORE]] consortium.</p>
 
 <p>Comments and queries should be sent via <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
 
@@ -116,7 +116,7 @@ table code, table pre {
 
 <p>This document aims to present the initial release of mobilityDCAT-AP, building upon preceding preparatory activities that include requirement analysis, a roadmap development and conceptual modeling. For detailed information about these preparatory activities, please refer to the relevant documentation at [[NAPCORE-Metadata-preparatory-activities]].</p>
 
-<p>As [[DCAT-AP]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. mobilityDCAT-AP incorporates additional classes and properties from other well-known vocabularies are re-used, where necessary.</p>
+<p>As [[DCAT-AP]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT) [[DCAT]] , originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. mobilityDCAT-AP incorporates additional classes and properties from other well-known vocabularies are re-used, where necessary.</p>
 
 <p>This document, beyond what is defined in <a class="no-sectionRef" href="#conformance">Conformance Statement</a>, does not cover implementation issues such as data exchange mechanisms and the expected behavior of systems implementing mobilityDCAT-AP.</p>
 
@@ -174,7 +174,7 @@ table code, table pre {
 
 <p>A <strong>Publication</strong> is an abstract construct that covers a dataset published by a data publisher and which has one or multiple distributions.</p>
 
-<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as an RDF schema [[RDF-SCHEMA]]]. An RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and their relationships. This is done via a class and property system.</p>
+<p>mobilityDCAT-AP (as well as DCAT-AP) is expressed as an RDF schema [[RDF-SCHEMA]]. An RDF schema provides a data-modelling vocabulary for RDF data. It provides mechanisms for describing groups of related resources and their relationships. This is done via a class and property system.</p>
 
 <p>A <strong>Class</strong> is a group of resources. Classes are themselves resources. They are often identified by IRIs and may be described using properties.</p>
 
@@ -1431,7 +1431,7 @@ table code, table pre {
 
 <h2>Privacy and security considerations </h2>
 
-<p>The mobilityDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with catalogued Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as <a data-cite="VOCAB-ODRL#privacy-consideration">described</a> in [[VOCAB-ODRL]].</p>
+<p>The mobilityDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with catalogued Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as described</a> in [[VOCAB-ODRL]].</p>
 
 <p>Implementations that produce, maintain, publish or consume such vocabulary terms must take steps to ensure security and privacy considerations are addressed at the application level.</p>
 
@@ -1524,7 +1524,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <h2>Mapping to Coordinated Metadata Catalogue (CMC)</h2>
 
-<p>A previous European activity to harmonise metadata at National Access Point was the Coordinated Metadata Catalogue (CMC) [[EU-EIP-CMC]].) This Catalogue describes a common minimum metadata set for NAP. The most recent version from 2019 contains definitions for 32 Metadata elements, including their description, types and obligation levels. These definitions are in a proprietary, human-readable format only.</p>
+<p>A previous European activity to harmonise metadata at National Access Point was the Coordinated Metadata Catalogue (CMC) [[EU-EIP-CMC]]. This Catalogue describes a common minimum metadata set for NAP. The most recent version from 2019 contains definitions for 32 Metadata elements, including their description, types and obligation levels. These definitions are in a proprietary, human-readable format only.</p>
 <p>The following mapping table has been prepared to show how the Metadata elements from the original Coordinated Metadata Catalogue compare to the classes and properties of mobilityDCAT-AP.</p>
 <p>Please note that some CMC elements are mapped to 2 properties of mobilityDCAT-AP, due to semantic ambiguities of some CMC elements. When mapping such elements, the correct semantics need to be considered.</p>
 

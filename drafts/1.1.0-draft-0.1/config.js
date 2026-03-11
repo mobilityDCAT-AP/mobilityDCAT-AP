@@ -701,7 +701,7 @@ var respecConfig = {
       "Web-Annotation-Data-Model": {
         "href": "https://www.w3.org/TR/annotation-model/",
         "title": "Web Annotation Data Model",
-        "publisher":"W3C",
+        "publisher":"World Wide Web Consortium. W3C",
         "date": "23 February 2017"
       },
       "OpenSearch": {
@@ -770,17 +770,17 @@ var respecConfig = {
       "DXWG":{
         "href":"https://www.w3.org/2017/dxwg/",
         "title":"Dataset Exchange Working Group (DXWG)",
-        "publisher":"W3C"
+        "publisher":"World Wide Web Consortium. W3C"
        },
       "GLD":{
         "href":"https://www.w3.org/2011/gld/",
         "title":"Government Linked Data (GLD) Working Group",
-        "publisher":"W3C"
+        "publisher":"World Wide Web Consortium. W3C"
        },
       "VOCAB-DCAT-QA": {
         "title":"Data Catalog Vocabulary (DCAT) - Version 2. Section 13.1",
         "href":"https://www.w3.org/TR/vocab-dcat-2/#qualified-attribution",
-        "publisher":"W3C"
+        "publisher":"World Wide Web Consortium. W3C"
       },
       "DataCite-Types": {
         "href":"https://schema.datacite.org/meta/kernel-3/doc/DataCite-MetadataKernel_v3.1.pdf",
@@ -844,6 +844,11 @@ var respecConfig = {
         "href":"https://www.w3.org/TR/annotation-vocab/",
         "title":"Web Annotation Ontology",
         "date":"23 February 2017",
+      },
+      "DCAT": {
+        "title":"Data Catalog Vocabulary (DCAT) - Version 3",
+        "href":"https://www.w3.org/TR/vocab-dcat-3/",
+        "publisher":"World Wide Web Consortium. W3C",
       }
 
     }
