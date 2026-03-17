@@ -12,7 +12,3 @@ For the full validation toolkit — Docker setup, Python scripts, and example te
 
 ➡️ **https://github.com/mobilityDCAT-AP/validation**
 
-## References
-
-- [mobilityDCAT-AP Specification](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/)
-- [SHACL Specification](https://www.w3.org/TR/shacl/)
