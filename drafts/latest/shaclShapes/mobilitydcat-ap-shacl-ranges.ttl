@@ -3,7 +3,6 @@
 @prefix geodcatap: <http://www.w3.org/ns/geodcat#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
 
-@prefix mdcap11: <https://w3id.org/mobilitydcat-ap/drafts/latest#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
@@ -64,7 +63,7 @@
   sh:name "address (range)"@en ;
   sh:description "The postal address must be of type locn:Address"@en ;
   sh:message "Address must be a locn:Address instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Agent_Shape_affiliation_range
   sh:path org:memberOf ;
@@ -72,7 +71,7 @@
   sh:name "affiliation (range)"@en ;
   sh:description "The affiliation must be of type org:Organization"@en ;
   sh:message "Affiliation must be an org:Organization instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 #---------------------------------------------------------------------------
 # CATALOGUE SHAPE - Range Constraints
@@ -100,7 +99,7 @@
   sh:name "other identifier (range)"@en ;
   sh:description "Other identifier must be of type adms:Identifier"@en ;
   sh:message "Other identifier must be an adms:Identifier instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 #---------------------------------------------------------------------------
 # CATALOGUE RECORD SHAPE - Range Constraints
@@ -125,7 +124,7 @@
   sh:name "publisher (range)"@en ;
   sh:description "Publisher must be of type foaf:Agent"@en ;
   sh:message "Publisher must be a foaf:Agent instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 # NOTE: Range constraints for language (dct:LinguisticSystem), 
 # primary topic (dcat:Dataset), and source metadata (dcat:CatalogRecord) 
@@ -155,7 +154,7 @@
   sh:name "category scheme (range)"@en ;
   sh:description "Category scheme must be of type skos:ConceptScheme"@en ;
   sh:message "Category scheme must be a skos:ConceptScheme instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 #---------------------------------------------------------------------------
 # DATASET SHAPE - Range Constraints
@@ -246,7 +245,7 @@
   sh:name "georeferencing method (range)"@en ;
   sh:description "Georeferencing method must be of type skos:Concept"@en ;
   sh:message "Georeferencing method must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_contactPoint_range
   sh:path dcat:contactPoint ;
@@ -254,7 +253,7 @@
   sh:name "contact point (range)"@en ;
   sh:description "Contact point must be of type vcard:Kind"@en ;
   sh:message "Contact point must be a vcard:Kind instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_networkCoverage_range
   sh:path mobilitydcatap:networkCoverage ;
@@ -262,7 +261,7 @@
   sh:name "network coverage (range)"@en ;
   sh:description "Network coverage must be of type skos:Concept"@en ;
   sh:message "Network coverage must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_referenceSystem_range
   sh:path geodcatap:referenceSystem ;
@@ -270,7 +269,7 @@
   sh:name "reference system (range)"@en ;
   sh:description "Reference system must be of type dct:Standard"@en ;
   sh:message "Reference system must be a dct:Standard instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_rightsHolder_range
   sh:path dct:rightsHolder ;
@@ -278,7 +277,7 @@
   sh:name "rights holder (range)"@en ;
   sh:description "Rights holder must be of type foaf:Agent"@en ;
   sh:message "Rights holder must be a foaf:Agent instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_theme_range
   sh:path dcat:theme ;
@@ -286,7 +285,7 @@
   sh:name "theme / category (range)"@en ;
   sh:description "Theme must be of type skos:Concept"@en ;
   sh:message "Theme must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_temporal_range
   sh:path dct:temporal ;
@@ -294,7 +293,7 @@
   sh:name "temporal coverage (range)"@en ;
   sh:description "Temporal coverage must be of type dct:PeriodOfTime"@en ;
   sh:message "Temporal coverage must be a dct:PeriodOfTime instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_transportMode_range
   sh:path mobilitydcatap:transportMode ;
@@ -302,7 +301,7 @@
   sh:name "transport mode (range)"@en ;
   sh:description "Transport mode must be of type skos:Concept"@en ;
   sh:message "Transport mode must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 #---------------------------------------------------------------------------
 # OPTIONAL PROPERTIES - Range Constraints
@@ -312,9 +311,9 @@
   sh:path dcatap:applicableLegislation ;
   sh:class eli:LegalResource ;
   sh:name "applicable legislation (range)"@en ;
-  sh:description "Applicable legislation must be of type skos:Concept"@en ;
-  sh:message "Applicable legislation must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:description "Applicable legislation must be of type eli:LegalResource"@en ;
+  sh:message "Applicable legislation must be an eli:LegalResource instance"@en ;
+  sh:severity sh:Info .
 
 :Dataset_Shape_assessmentResult_range
   sh:path mobilitydcatap:assessmentResult ;
@@ -322,7 +321,7 @@
   sh:name "assessment result (range)"@en ;
   sh:description "Assessment result must be of type mobilitydcatap:Assessment"@en ;
   sh:message "Assessment result must be a mobilitydcatap:Assessment instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Dataset_Shape_hasVersion_range
   sh:path dcat:hasVersion ;
@@ -330,7 +329,7 @@
   sh:name "has version (range)"@en ;
   sh:description "Has version must be of type dcat:Dataset"@en ;
   sh:message "Has version must be a dcat:Dataset instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Dataset_Shape_intendedInformationService_range
   sh:path mobilitydcatap:intendedInformationService ;
@@ -338,7 +337,7 @@
   sh:name "intended information service (range)"@en ;
   sh:description "Intended information service must be of type skos:Concept"@en ;
   sh:message "Intended information service must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Dataset_Shape_otherIdentifier_range
   sh:path adms:identifier ;
@@ -346,7 +345,7 @@
   sh:name "other identifier (range)"@en ;
   sh:description "Other identifier must be of type adms:Identifier"@en ;
   sh:message "Other identifier must be an adms:Identifier instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Dataset_Shape_hasQualityAnnotation_range
   sh:path dqv:hasQualityAnnotation ;
@@ -354,7 +353,7 @@
   sh:name "quality description (range)"@en ;
   sh:description "Quality annotation must be of type dqv:QualityAnnotation"@en ;
   sh:message "Quality annotation must be a dqv:QualityAnnotation instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 #---------------------------------------------------------------------------
 # DISTRIBUTION SHAPE - Range Constraints
@@ -409,7 +408,7 @@
   sh:name "application layer protocol (range)"@en ;
   sh:description "Application layer protocol must be of type skos:Concept"@en ;
   sh:message "Application layer protocol must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Distribution_Shape_licence_range
   sh:path dct:license ;
@@ -417,7 +416,7 @@
   sh:name "licence (range)"@en ;
   sh:description "Licence must be of type dct:LicenseDocument"@en ;
   sh:message "Licence must be a dct:LicenseDocument instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 #---------------------------------------------------------------------------
 # OPTIONAL Properties - Range Constraints
@@ -429,7 +428,7 @@
   sh:name "communication method (range)"@en ;
   sh:description "Communication method must be of type skos:Concept"@en ;
   sh:message "Communication method must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Distribution_Shape_grammar_range
   sh:path mobilitydcatap:grammar ;
@@ -437,7 +436,7 @@
   sh:name "grammar (range)"@en ;
   sh:description "Grammar must be of type skos:Concept"@en ;
   sh:message "Grammar must be a skos:Concept instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 :Distribution_Shape_temporal_range
   sh:path dct:temporal ;
@@ -445,7 +444,7 @@
   sh:name "temporal coverage (range)"@en ;
   sh:description "Temporal coverage must be of type dct:PeriodOfTime"@en ;
   sh:message "Temporal coverage must be a dct:PeriodOfTime instance"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Info .
 
 # DatasetSeries
 <https://w3id.org/mobilitydcat-ap/drafts/latest#DatasetSeries_Shape_ranges>
