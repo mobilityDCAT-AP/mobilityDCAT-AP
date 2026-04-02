@@ -399,7 +399,7 @@ mobilitydcatap:networkCoverage a rdf:Property,
            skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Dataset ;
-           dcam:rangeIncludes eli:LegalResource .
+           dcam:rangeIncludes skos:Concept .
 		   
 ###  https://w3id.org/mobilitydcat-ap#transportMode
 mobilitydcatap:transportMode a rdf:Property,
