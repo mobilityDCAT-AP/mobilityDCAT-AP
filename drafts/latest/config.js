@@ -62,8 +62,12 @@ var respecConfig = {
       uri: "./mobilitydcat-ap.jsonld",
     },
     {
-       label: "SHACL (Turtle)",
-       uri: "./validationFiles/mobilitydcat-ap_shacl_shapes.ttl",
+      label: "SHACL basic validation (Turtle)",
+      uri: "./shaclShapes/mobilitydcat-ap-shacl.ttl",
+    },
+    {
+      label: "SHACL range constraints (Turtle)",
+      uri: "./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl",
     }
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
