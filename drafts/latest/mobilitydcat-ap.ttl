@@ -90,7 +90,7 @@ mobilitydcatap: a voaf:Vocabulary,
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
         <http://www.w3.org/ns/formats/data/RDF_XML> ;
       dct:title "RDF/XML"@en ;
-      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.rdf> ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.xml> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ],
     [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
@@ -891,7 +891,7 @@ rdfs:label rdf:type owl:DatatypeProperty ;
 
 
 ###  https://www.w3.org/TR/vocab-dcat-2/
-<https://www.w3.org/TR/vocab-dcat-2/> rdf:type owl:NamedIndividual .
+<https://www.w3.org/TR/vocab-dcat-3/> rdf:type owl:NamedIndividual .
 
 
 dct:LicenseDocument skos:scopeNote "A legal document giving official permission to do something with a resource. The ''dct:identifier'' recommended property is not included in [DCAT-AP-v2.0.1]. The licence type recommended property is removed from [DCAT-AP-v2.0.1]. The ''rdfs:label'' optional property is not included in [DCAT-AP-v2.0.1]."@en .
