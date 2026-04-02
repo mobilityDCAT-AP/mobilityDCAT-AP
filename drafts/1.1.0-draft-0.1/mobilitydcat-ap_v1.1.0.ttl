@@ -346,7 +346,7 @@ dct:publisher a rdf:Property,
 dct:source a rdf:Property,
            owl:ObjectProperty ;
            rdfs:comment "This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested."@en ;
-           rdfs:label "source"@en ;
+           rdfs:label "source metadata"@en ;
            vs:term_status "stable" ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -764,7 +764,7 @@ mobilitydcatap:dataFormatNotes rdf:type owl:DatatypeProperty ;
 		   
 ###  http://www.w3.org/2011/content#characterEncoding
 cnt:characterEncoding rdf:type owl:DatatypeProperty ;
-           rdfs:comment "This property describes the technical encoding format of the delivered content within the Distribution. It is described via a character set standard. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. This is a sub-property of dct:conformsTo "@en ;
+           rdfs:comment "This property describes the technical encoding format of the delivered content within the Distribution. It SHOULD be expressed using a character set name defined in the IANA register [IANA-CHARSETS]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. This is a sub-property of dct:conformsTo."@en ;
            rdfs:label "character encoding"@en ;
            vs:term_status "stable" ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
