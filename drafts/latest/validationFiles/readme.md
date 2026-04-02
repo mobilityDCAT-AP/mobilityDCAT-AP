@@ -1,3 +1,22 @@
+# ⚠️ DEPRECATED
+
+This folder is deprecated as of mobilityDCAT-AP v3.0.0.
+
+The SHACL validation files have been moved to:
+ `../shaclShapes/`
+
+## New files:
+- `../shaclShapes/mobilitydcat-ap-shacl.ttl` — Basic validation (cardinality, nodeKind, patterns)
+- `../shaclShapes/mobilitydcat-ap-shacl-ranges.ttl` — Range constraints (sh:class)
+
+## Why deprecated?
+The individual per-class files in this folder were replaced by two consolidated 
+files that extend DCAT-AP 3.0.1 SHACL shapes via owl:imports.
+
+The files in this folder will be removed in a future release.
+
+
+
 # mobilityDCAT-AP Validation files
 
 The [SHACL shapes file](mobilitydcat-ap_shacl_shapes.ttl) contains constraints for a Data Graph expressed as RDF. 
