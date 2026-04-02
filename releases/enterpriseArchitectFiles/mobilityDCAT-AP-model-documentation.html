@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mobilityDCAT-AP Enterprise Architect Model Documentation</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --text: #16212b;
+      --muted: #516171;
+      --primary: #0f5e9c;
+      --primary-soft: #e6f1fb;
+      --border: #d5e0eb;
+      --ok: #0f7b3b;
+      --warn: #8b5a00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #edf3fa 0%, var(--bg) 220px);
+      line-height: 1.5;
+    }
+
+    header {
+      background: radial-gradient(circle at 15% 20%, #2f80c0, #124a77 55%, #0b2f4b 100%);
+      color: #ffffff;
+      padding: 2.5rem 1rem 2.8rem;
+    }
+
+    .wrap {
+      width: min(1100px, 96vw);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 1.4rem + 1.2vw, 2.4rem);
+      letter-spacing: 0.01em;
+    }
+
+    .subtitle {
+      margin-top: 0.7rem;
+      max-width: 76ch;
+      color: #e2effb;
+    }
+
+    main {
+      width: min(1100px, 96vw);
+      margin: -1.2rem auto 2rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1rem 1.1rem;
+      box-shadow: 0 8px 26px rgba(18, 55, 82, 0.08);
+    }
+
+    .card h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .muted {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .status {
+      border-left: 4px solid var(--warn);
+      background: #fffaf0;
+      padding: 0.8rem;
+      border-radius: 6px;
+    }
+
+    .status strong {
+      color: var(--warn);
+    }
+
+    ul {
+      margin: 0.4rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    code {
+      background: #f0f5fb;
+      border: 1px solid #dbe6f2;
+      border-radius: 4px;
+      padding: 0.05rem 0.35rem;
+      font-size: 0.95em;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .ok {
+      color: var(--ok);
+      font-weight: 600;
+    }
+
+    footer {
+      width: min(1100px, 96vw);
+      margin: 1rem auto 2.4rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        padding-top: 1.8rem;
+        padding-bottom: 2.3rem;
+      }
+
+      main {
+        margin-top: -0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>mobilityDCAT-AP Enterprise Architect Model Documentation</h1>
+      <p class="subtitle">
+        Reconstructed documentation page for the Enterprise Architect model area.
+        This page links to the authoritative MobilityDCAT-AP release artifacts and
+        explains the expected EA deliverables.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Current File Status</h2>
+      <div class="status">
+        <p>
+          <strong>Note:</strong> The file <code>mobilityDCAT-AP.qea</code> in this folder is currently HTML content,
+          not a valid Enterprise Architect project database.
+        </p>
+        <p class="muted">
+          A valid EA project file should be a binary SQLite-based file that opens directly in Enterprise Architect.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Intended EA Model Contents</h2>
+      <p class="muted">
+        Based on repository documentation, the EA package is expected to include:
+      </p>
+      <ul>
+        <li>An architecture diagram of mobilityDCAT-AP.</li>
+        <li>A full model including all classes and properties.</li>
+        <li>An overview model containing mandatory properties.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Canonical Release Resources</h2>
+      <p class="muted">Use these as the reference for model semantics and constraints:</p>
+      <ul>
+        <li><a href="../1.1.0/index.html">Specification page (v1.1.0)</a></li>
+        <li><a href="../1.1.0/mobilitydcat-ap.ttl">RDF/Turtle model (v1.1.0)</a></li>
+        <li><a href="../1.1.0/mobilitydcat-ap.rdf">RDF/XML model (v1.1.0)</a></li>
+        <li><a href="../1.1.0/mobilitydcat-ap.jsonld">JSON-LD model (v1.1.0)</a></li>
+        <li><a href="../1.1.0/validationFiles/mobilitydcat-ap_shacl_shapes.ttl">SHACL shapes (v1.1.0)</a></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Expected EA Export Outputs</h2>
+      <p class="muted">If regenerating from Enterprise Architect, the usual outputs are:</p>
+      <ul>
+        <li><span class="ok">EA Project:</span> <code>.qea</code> (binary SQLite project file).</li>
+        <li><span class="ok">Model Interchange:</span> <code>.xmi</code> or <code>.xml</code> package export.</li>
+        <li><span class="ok">HTML Report:</span> a folder with <code>index.html</code> plus asset files.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Repository Context</h2>
+      <p class="muted">
+        Repository documentation states that Enterprise Architect files are provided for working with
+        the mobilityDCAT-AP model in EA tooling.
+      </p>
+      <ul>
+        <li><a href="readme.md">Readme in this folder</a></li>
+        <li><a href="../README.md">Releases overview</a></li>
+        <li><a href="../index.html">Releases landing page</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Generated by atibaut on 2026-03-12 as a repair page for missing/corrupted EA model documentation.
+  </footer>
+</body>
+</html>
