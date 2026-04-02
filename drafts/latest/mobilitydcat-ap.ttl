@@ -6,9 +6,11 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcam: <http://purl.org/dc/dcam/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geodcatap: <http://www.w3.org/ns/geodcat#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,26 +27,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @base <https://w3id.org/mobilitydcat-ap/> .
 
-
 mobilitydcatap: a voaf:Vocabulary,
     owl:Ontology,
     adms:Asset ;
   rdfs:label "mobilityDCAT-AP"@en ;
-  dct:abstract "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. "@en ;
-  dct:alternative "mobilityDCAT-AP - Version 1.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
+  dct:abstract "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance."@en ;
+  dct:alternative "mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
   dct:conformsTo dcatap:,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements>,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap>,
-    <https://www.w3.org/TR/vocab-dcat-2/> ;
+    <https://www.w3.org/TR/vocab-dcat-3/> ;
   dct:created "2023-05-11"^^xsd:date ;
   dct:creator [ a foaf:Group ;
       foaf:name "NAPCORE SWG 4.4" ;
       foaf:page <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> ] ;
   dct:dateCopyrighted "2023"^^xsd:gYear ;
-  dct:description "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. "@en ;
+  dct:description "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance."@en ;
   dct:issued "2023-05-11"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2023-10-15"^^xsd:date ;
+  dct:modified "2025-04-02"^^xsd:date ;
   dct:publisher <https://napcore.eu/> ;
   dct:rightsHolder <https://napcore.eu/> ;
   dct:title "mobilityDCAT-AP"@en ;
@@ -52,69 +53,51 @@ mobilitydcatap: a voaf:Vocabulary,
     <http://publications.europa.eu/resource/authority/dataset-type/APROF>,
     <http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY> ;
   bibo:editor [ a foaf:Person ;
-      foaf:name "Lina Molinas Comet" ],
-    <https://lina-molinas-comet.name/foaf/#me> ;
+      foaf:name "Lina Molinas Comet" ;
+      owl:sameAs <https://lina-molinas-comet.name/foaf/#me> ],
+    [ a foaf:Person ;
+      foaf:name "Daham Mohammed Mustafa" ;
+      owl:sameAs <https://github.com/Daham-Mustaf> ] ;
   vann:preferredNamespacePrefix "mobilitydcatap" ;
-  vann:preferredNamespaceUri "http://w3id.org/mobilitydcat-ap/"^^xsd:anyURI ;
-  voaf:reliesOn dcatap:,
-    dct:,
-    spdx:,
-    rdfs:,
-    owl:,
-    skos:,
-    vcard:,
-    cnt:,
-    adms:,
-    dcat:,
-    dqv:,
-    locn:,
-    org:,
-    prov:,
-    foaf: ;
-  rdfs:comment "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. "@en ;
-  rdfs:isDefinedBy <http://w3id.org/mobilityDCAT-AP/releases/1.0.0/> ;
-  owl:backwardCompatibleWith <http://w3id.org/mobilityDCAT-AP/releases/1.0.0/>;
-  owl:priorVersion <http://w3id.org/mobilityDCAT-AP/releases/1.0.0/> ;
-  owl:versionIRI <http://w3id.org/mobilityDCAT-AP/releases/1.0.0/> ;
-  owl:versionInfo "Version 1.0.0"@en ;
-  skos:altLabel "mobilityDCAT-AP - Version 1.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
+  vann:preferredNamespaceUri "https://w3id.org/mobilitydcat-ap#"^^xsd:anyURI ;
+  voaf:reliesOn dcatap:, dct:, spdx:, rdfs:, owl:, skos:,
+    vcard:, cnt:, adms:, dcat:, dqv:, locn:, org:, prov:, foaf:, eli: ;
+  rdfs:comment "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance."@en ;
+  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/drafts/latest/> ;
+  owl:backwardCompatibleWith <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
+  owl:priorVersion <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
+  owl:versionIRI <https://w3id.org/mobilitydcat-ap/drafts/latest/> ;
+  owl:versionInfo "3.0.0"@en ;
+  skos:altLabel "mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
   adms:last mobilitydcatap: ;
-  adms:prev <http://w3id.org/mobilitydcat-ap/releases/1.0.0/> ;
+  adms:prev <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
-  adms:versionNotes "This version of mobilityDCAT-AP extends [DCAT-AP-v2.0.1] with 2 additional classes and 48 additional properties (some of which re-used across classes)."@en ;
-  dcat:distribution [ a adms:AssetDistribution ;
+  adms:versionNotes "Version 3.0.0 extends DCAT-AP v3.0.0, adds DatasetSeries, aligns with geoDCAT-AP v3.0.0, and includes new properties for Dataset and Distribution."@en ;
+  dcat:distribution
+    [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>,
         <http://www.w3.org/ns/formats/data/JSON-LD> ;
       dct:title "JSON-LD"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
-        <http://purl.org/adms/representationtechnique/RDFSchema> ;
-      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.jsonld> ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.jsonld> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ],
     [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
         <http://www.w3.org/ns/formats/data/Turtle> ;
       dct:title "Turtle"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
-        <http://purl.org/adms/representationtechnique/RDFSchema> ;
-      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.ttl> ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.ttl> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ],
     [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
         <http://www.w3.org/ns/formats/data/RDF_XML> ;
       dct:title "RDF/XML"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
-        <http://purl.org/adms/representationtechnique/RDFSchema> ;
-      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.0.0/mobilitydcat-ap.rdf> ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.rdf> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ],
     [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
       dct:title "HTML"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
-      dcat:downloadURL <http://w3id.org/mobilitydcat-ap/releases/1.0.0/> ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/> ;
       dcat:mediaType "text/html"^^dct:IMT ] ;
-      foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/mobilityDCAT-AP_uml-diagramm_230719.png> .
-
-
+  foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/figures/mobilityDCAT-AP_uml-diagramm_240816.png> .
 
 #################################################################
 #    Annotation properties
@@ -123,99 +106,77 @@ mobilitydcatap: a voaf:Vocabulary,
 ###  http://purl.org/dc/terms/abstract
 dct:abstract rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/alternative
 dct:alternative rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/conformsTo
 dct:conformsTo rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/contributor
 dct:contributor rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/created
 dct:created rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/creator
 dct:creator rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/dateCopyrighted
 dct:dateCopyrighted rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/issued
 dct:issued rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/license
 dct:license rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/modified
 dct:modified rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/publisher
 dct:publisher rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/rightsHolder
 dct:rightsHolder rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/type
 dct:type rdf:type owl:AnnotationProperty .
 
-
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
-
 ###  http://www.w3.org/2000/01/rdf-schema#label
 rdfs:label rdf:type owl:AnnotationProperty .
-
 
 ###  http://www.w3.org/2002/07/owl#backwardCompatibleWith
 owl:backwardCompatibleWith rdf:type owl:AnnotationProperty .
 
-
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/prov#component
-prov:component rdf:type owl:AnnotationProperty .
-
 
 ###  http://xmlns.com/foaf/0.1/depiction
 foaf:depiction rdf:type owl:AnnotationProperty .
 
-
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
-
 
 ###  http://www.w3.org/ns/adms#versionNotes
 adms:versionNotes  rdf:type owl:AnnotationProperty .
 
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
 
+###  http://www.w3.org/ns/dcat#version
+dcat:version rdf:type owl:AnnotationProperty .
 
 #################################################################
 #    Classes
@@ -256,7 +217,13 @@ dqv:QualityAnnotation rdf:type owl:Class ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional class."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> .
 
-
+###  http://www.w3.org/ns/dcat#DatasetSeries
+dcat:DatasetSeries rdf:type owl:Class ;
+           rdfs:comment "A collection of datasets that are published separately, but share some characteristics that group them."@en ;
+           rdfs:label "Dataset Series"@en ;
+           vs:term_status "stable" ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional class added in v3.0.0."@en ;
+           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> .
 #################################################################
 #    Object Properties
 #################################################################
@@ -388,29 +355,39 @@ mobilitydcatap:georeferencingMethod a rdf:Property,
            dcam:domainIncludes dcat:Dataset ;
            dcam:rangeIncludes skos:Concept .
 		   
-###  http://purl.org/dc/terms/conformsTo
-dct:conformsTo a rdf:Property,
+###  http://www.w3.org/ns/geodcat#referenceSystem
+geodcatap:referenceSystem a rdf:Property,
            owl:ObjectProperty ;
-           rdfs:comment "This property SHOULD be used to specify the spatial reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by OGC [OGC-EPSG]. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. "@en ;
+           rdfs:comment "The spatial reference system used in the dataset. Spatial reference systems SHOULD be specified using URIs from the EPSG coordinate reference systems register operated by OGC."@en ;
            rdfs:label "reference system"@en ;
+           rdfs:isDefinedBy geodcatap: ;
            vs:term_status "stable" ;
-           skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Dataset. "@en ;
+           skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Dataset."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Dataset ;
-           dcam:rangeIncludes dct:Standard .
+           dcam:rangeIncludes skos:Concept .
 	
-
-###  http://purl.org/dc/terms/rightsHolder
-dct:rightsHolder a rdf:Property,
+###  http://www.w3.org/ns/dcat#inSeries
+dcat:inSeries a rdf:Property,
            owl:ObjectProperty ;
-           rdfs:comment "This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property dqv:hasQualityAnnotation) and/or the relevance to legal frameworks (if applicable, see property dcatap:applicableLegislation). This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset. The Rights Holder will be in many cases identical with the Publisher information for class Dataset (see property dct:publisher) and/or for class Catalogue Record (see property dct:publisher). In this case, the contact data MAY be copied from the corresponding Publisher entries. There might be also cases with non-identical entities: e.g., when one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."@en ;
-           rdfs:label "rights holder"@en ;
+           rdfs:comment "A dataset series of which the dataset is part."@en ;
+           rdfs:label "in series"@en ;
            vs:term_status "stable" ;
-           skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Dataset. "@en ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Dataset."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Dataset ;
-           dcam:rangeIncludes foaf:Agent .
-		   
+           dcam:rangeIncludes dcat:DatasetSeries .
+
+  ###  http://xmlns.com/foaf/0.1/page
+foaf:page a rdf:Property,
+           owl:ObjectProperty ;
+           rdfs:comment "A page or document about this dataset or distribution."@en ;
+           rdfs:label "documentation"@en ;
+           vs:term_status "stable" ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Dataset and Distribution."@en ;
+           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+           dcam:domainIncludes dcat:Dataset, dcat:Distribution ;
+           dcam:rangeIncludes foaf:Document . 
 
 ###  https://w3id.org/mobilitydcat-ap#networkCoverage
 mobilitydcatap:networkCoverage a rdf:Property,
@@ -422,7 +399,7 @@ mobilitydcatap:networkCoverage a rdf:Property,
            skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Dataset ;
-           dcam:rangeIncludes skos:Concept .
+           dcam:rangeIncludes eli:LegalResource .
 		   
 ###  https://w3id.org/mobilitydcat-ap#transportMode
 mobilitydcatap:transportMode a rdf:Property,
@@ -446,7 +423,7 @@ dcatap:applicableLegislation a rdf:Property,
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Dataset ;
-           dcam:rangeIncludes skos:Concept .		   
+           dcam:rangeIncludes eli:LegalResource .		   
 
 ###  https://w3id.org/mobilitydcat-ap#assessmentResult
 mobilitydcatap:assessmentResult a rdf:Property,
@@ -528,7 +505,8 @@ mobilitydcatap:grammar a rdf:Property,
            rdfs:comment "This property describes the technical data grammar format of the delivered content within the Distribution. It describes the standard on top of the elementary syntax that describe data structures in the dataset. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. This is a sub-property of dct:conformsTo."@en ;
            rdfs:label "grammar"@en ;
            rdfs:isDefinedBy mobilitydcatap:;
-           vs:term_status "stable" ;
+           vs:term_status "deprecated" ;
+           owl:deprecated true ;
            skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes dcat:Distribution ;
@@ -634,6 +612,18 @@ mobilitydcatap:schema a rdf:Property,
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
            dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
            dcam:rangeIncludes rdfs:Resource .
+
+###  https://w3id.org/mobilitydcat-ap#specificContentModel
+mobilitydcatap:specificContentModel a rdf:Property,
+           owl:ObjectProperty ;
+           rdfs:comment "The specific content model of the applied mobility data standard, e.g., SituationPublication or ParkingTablePublication for DATEX II."@en ;
+           rdfs:label "specific content model"@en ;
+           rdfs:isDefinedBy mobilitydcatap: ;
+           vs:term_status "stable" ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard."@en ;
+           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+           dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
+           dcam:rangeIncludes skos:Concept .         
 	
 ###   http://www.w3.org/ns/oa#hasTarget
 oa:hasTarget a rdf:Property,
@@ -891,7 +881,7 @@ rdfs:label rdf:type owl:DatatypeProperty ;
 
 
 ###  https://w3id.org/mobilitydcatap/
-<https://w3id.org/mobilitydcatap/> rdf:type owl:NamedIndividual ;
+<https://w3id.org/mobilitydcat-ap/> rdf:type owl:NamedIndividual ;
                                    dct:conformsTo <http://data.europa.eu/r5r/> ,
                                                   <https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24> ,
                                                   <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements> ,
@@ -928,7 +918,7 @@ dct:format skos:scopeNote "This property refers to the technical syntax of the d
 
 dct:hasPart skos:scopeNote "This property refers to a related Catalogue that is part of the described mobility data portal. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal. "@en .
 
-dct:hasVersion skos:scopeNote "This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to the property ''dct:isVersionOf'', with a contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties ''owl:versionInfo'' and ''adms:versionNotes''."@en .
+dct:hasVersion skos:scopeNote "This property refers to a related dataset that is a version, edition, or adaptation of the described dataset. Corresponds to the property ''dct:isVersionOf'', with a contrary relationship. It might be used to host multiple versions of the same data set in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties ''dcat:version'' and ''adms:versionNotes''."@en .
 
 dct:isPartOf skos:scopeNote "This property refers to a related Catalogue in which the described mobility data portal is physically or logically included. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from the mobility data portal into this other portal. "@en .
 
@@ -962,7 +952,7 @@ spdx:algorithm skos:scopeNote "This property identifies the algorithm used to pr
 
 spdx:checksumValue skos:scopeNote "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm."@en .
 
-owl:versionInfo skos:scopeNote "This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property dct:modified. Together with property adms:versionNotes, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow W3C Data on the Web Best Practices [DWBP]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [SEMVER]."@en .
+owl:versionInfo skos:scopeNote "Deprecated in v3.0.0. Use dcat:version instead for Dataset and MobilityDataStandard version information."@en .
 
 skos:Concept skos:scopeNote "A category of a dataset, i.e. a specific subject, theme, or a class about its content. The category is described via a categorisation scheme, i.e. a classification or a taxonomy. Such scheme lists all potential categories, see class ''Category Scheme''. In mobilityDCAT-AP, this class SHOULD only be used in the context of a data set (via property ''dcat:theme''). In other contexts, e.g. under [geoDCAT-AP-v2.0.0], this might also be used to describe the theme of a Catalogue or Data Service."@en .
 
@@ -974,7 +964,7 @@ skos:prefLabel skos:scopeNote "This property contains a preferred label of the C
 
 vcard:Kind skos:scopeNote "A description following the [VCARD-RDF] specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class vcard:Kind is the parent class for the four explicit types of vCards (vcard:Individual, vcard:Organization, vcard:Location, vcard:Group). This class is not explicitly associated with any property in [DCAT-AP-v2.0.1]. In [DCAT-AP-v2.0.1], this class is only used as the range of the recommended property ''dcat:contactPoint'' for class Dataset. In mobilityDCAT-AP, however, this property is removed, and any contact details are compiled under the Agent class, see § 7. Agent Types, Agent Roles and Agent Properties. Thus, this class SHOULD NOT be used but is kept for compatibility reasons with [DCAT-AP-v2.0.1]."@en .
 
-adms:versionNotes skos:scopeNote "This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property owl:versionInfo. This property can be repeated for parallel language versions of the version notes - see § 8. Accessibility and Multilingual Aspects."@en .
+adms:versionNotes skos:scopeNote "This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property dcat:version. This property can be repeated for parallel language versions of the version notes - see § 8. Accessibility and Multilingual Aspects."@en .
 
 dcat:Catalog skos:scopeNote "A concrete mobility data portal, i.e, a web portal, where mobility-related datasets and their distributions are described via metadata and discoverable for data users."@en .
 
@@ -1037,3 +1027,6 @@ foaf:homepage skos:scopeNote "This property refers to a Web page that acts as th
 foaf:name skos:scopeNote "This property contains a name of the Agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects."@en .
 
 foaf:primaryTopic skos:scopeNote "This property links the metadata entry to the dataset described in the entry."@en .
+
+dcat:DatasetSeries skos:scopeNote "A collection of datasets sharing common characteristics. Added in mobilityDCAT-AP v3.0.0. It is recommended that at least one Dataset refers to a Dataset Series using dcat:inSeries."@en .
+dcat:inSeries skos:scopeNote "Links a dataset to a dataset series of which it is part."@en .
