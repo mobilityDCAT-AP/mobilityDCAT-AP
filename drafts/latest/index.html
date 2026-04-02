@@ -284,8 +284,8 @@
   Secondly, there is the Catalogue Record, which describes the metadata entry, including its publication date. 
   Thirdly, the Dataset is described. In fact, most metadata elements are covered here, including the content theme; the spatial and temporal context; quality information and others. 
   Finally, the distribution describes a technical and organisational way to access the Dataset. In addition to the data format (e.g., a machine-readable syntax standard), the licensing terms are described here. </p>
-<p>Please note that two of the connecting properties, <a href="#catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-dataset-distribution"><code>dcat:distribution</code></a>, are mandatory, in contrast to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.
-  Thus, a complete metadata set in accordance with mobilityDCAT-AP should contain at least one instance of these four classes. See also the usage notes for properties <a href="#catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-dataset-distribution"><code>dcat:distribution</code></a>. </p>
+<p>Please note that two of the connecting properties, <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-dataset-distribution"><code>dcat:distribution</code></a>, are mandatory, in contrast to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.
+  Thus, a complete metadata set in accordance with mobilityDCAT-AP should contain at least one instance of these four classes. See also the usage notes for properties <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#dataset-dataset-distribution"><code>dcat:distribution</code></a>. </p>
 
 <p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a more complex UML diagram with selected classes and properties included in mobilityDCAT-AP.</p>
 <p>It shows the four central classes (marked in orange), as explained above, as well as some supportive classes (marked in yellow).</p>
@@ -705,7 +705,7 @@
 <h3>Other controlled vocabularies</h3>
 
 <p>In [[DCAT-AP-v2.0.1]], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and sevaral licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p>
-<p>Regarding license-related vocabularies, [[DCAT-AP-v2.0.1]] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]], which seems rather complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [[ODRS]]. This vocabulary is introducing a central class called <code>odrs:RightsStatement</code>, which is semantically equal to class <a href="#rights-statement"><code>dct:RightsStatement</code></a> from [[DCAT-AP-v2.0.1]]; and reusing some properties from [[DCAT-AP-v2.0.1]], such as <a href="#distribution-rights"><code>dct:rights</code></a>. Again, no explicit recommendation for the usage of such license-related vocabularies is given. </p>
+<p>Regarding license-related vocabularies, [[DCAT-AP-v2.0.1]] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]], which seems rather complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [[ODRS]]. This vocabulary is introducing a central class called <code>odrs:RightsStatement</code>, which is semantically equal to class <a href="#class-rights-statement"><code>dct:RightsStatement</code></a> from [[DCAT-AP-v2.0.1]]; and reusing some properties from [[DCAT-AP-v2.0.1]], such as <a href="#distribution-rights"><code>dct:rights</code></a>. Again, no explicit recommendation for the usage of such license-related vocabularies is given. </p>
 
 </section>
 
@@ -727,10 +727,10 @@
 
 <p>mobilityDCAT-AP specifies this note as follows:</p>
 
-<p>According to [[FOAF]], an Agent (via class <a href="#agent"><code>foaf:Agent</code></a>) may be of a type of a person (via sub-class <code>foaf:Person</code>), an organisation (via sub-class <code>foaf:Organization</code>), or a group (via sub-class <code>foaf:Group</code>). </p>
-<p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicitly mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property <a href="#agent-affiliation"><code>org:memberOf</code></a>, and, additionally, attributed with the personal name via properties <a href="#agent-first-name"><code>foaf:firstName</code></a> and <a href="#agent-surname"><code>foaf:surname</code></a>.</p>
+<p>According to [[FOAF]], an Agent (via class <a href="#class-agent"><code>foaf:Agent</code></a>) may be of a type of a person (via sub-class <code>foaf:Person</code>), an organisation (via sub-class <code>foaf:Organization</code>), or a group (via sub-class <code>foaf:Group</code>). </p>
+<p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicitly mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property <a href="#class-agent"><code>org:memberOf</code></a>, and, additionally, attributed with the personal name via properties <a href="#agent-first-name"><code>foaf:firstName</code></a> and <a href="#agent-surname"><code>foaf:surname</code></a>.</p>
 
-<p>mobilityDCAT-AP uses the class <a href="#agent"><code>foaf:Agent</code></a> in the context of describing entities:</p>
+<p>mobilityDCAT-AP uses the class <a href="#class-agent"><code>foaf:Agent</code></a> in the context of describing entities:</p>
 <ul>
 <li>responsible for the creation and maintenance of the data platform;</li>
 <li>responsible for the creation and maintenance of a metadata entry;</li>
@@ -738,22 +738,22 @@
 <li>responsible for the content of the data.</li>
 </ul>
 
-<p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#catalogue-publisher"><code>dct:publisher</code></a>), Catalogue Record (<a href="#catalogue-record-publisher"><code>dct:publisher</code></a>), and Dataset (<a href="#dataset-publisher"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as <code>dct:creator</code> are not used.</p>
-<p><p><a href="#fig-mobilitydcat-ap-uml-class-diagram-withAgent"></a> shows how the potential usages of <a href="#agent"><code>foaf:Agent</code></a> are represented in a UML diagram.</p>
+<p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#class-catalogue"><code>dct:publisher</code></a>), Catalogue Record (<a href="#class-catalogue-record"><code>dct:publisher</code></a>), and Dataset (<a href="#class-dataset"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#class-dataset"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as <code>dct:creator</code> are not used.</p>
+<p><p><a href="#fig-mobilitydcat-ap-uml-class-diagram-withAgent"></a> shows how the potential usages of <a href="#class-agent"><code>foaf:Agent</code></a> are represented in a UML diagram.</p>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram-withAgent">
 <a href="./figures/mobilityDCAT-AP_uml-diagramm_240816_AgentRelated.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240816_AgentRelated.png" alt="mobilityDCAT-AP UML Class Diagram with Agent"/></a>
 <figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on agent-role properties</figcaption>
 </figure>
 
-<p>The class <a href="#agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles. The properties under the class <a href="#agent"><code>foaf:Agent</code></a> also allow for providing (optional) contact details.</p>
-<p>There is one further, recommended property <a href="#agent-type"><code>dct:type</code></a> describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regional, national, supranational). Such organisation types are often data providers at mobility data portals, so much information is seen beneficial.</p>
+<p>The class <a href="#class-agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles. The properties under the class <a href="#class-agent"><code>foaf:Agent</code></a> also allow for providing (optional) contact details.</p>
+<p>There is one further, recommended property <a href="#class-agent"><code>dct:type</code></a> describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regional, national, supranational). Such organisation types are often data providers at mobility data portals, so much information is seen beneficial.</p>
 
 
-<p>In contrast, contact details with the goal to establish a direct contact between a data provider and a data user SHOULD be provided via the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> under class <a href="#dataset"><code>dcat:Dataset</code></a>.</p>
-<p>The range of <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> is the class <a href="#kind"><code>vcard:Kind</code></a>. A couple of properties for this class are defined, specifying contact information. Of these properties, <a href="#kind-name"><code>vcard:fn</code></a> and <a href="#kind-email"><code>vcard:hasEmail</code></a> are mandatory. The usage note of <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> gives more details on how to handle such contact information.</p>
+<p>In contrast, contact details with the goal to establish a direct contact between a data provider and a data user SHOULD be provided via the property <a href="#class-dataset"><code>dcat:contactPoint</code></a> under class <a href="#dataset"><code>dcat:Dataset</code></a>.</p>
+<p>The range of <a href="#class-dataset"><code>dcat:contactPoint</code></a> is the class <a href="#class-kind"><code>vcard:Kind</code></a>. A couple of properties for this class are defined, specifying contact information. Of these properties, <a href="#class-kind"><code>vcard:fn</code></a> and <a href="#class-kind"><code>vcard:hasEmail</code></a> are mandatory. The usage note of <a href="#class-dataset"><code>dcat:contactPoint</code></a> gives more details on how to handle such contact information.</p>
 
-<p>With such concept, there might be overlaps of the contact information under the properties <a href="#dataset-publisher"><code>dct:publisher</code></a> and <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a>. Depending on the portal system, the contact information can be populated to the data portal's user registry (in case, e.g., users are required to sign in before they use the data portal and/or from a dataset-specific contact information. A recommended way is to populate all information for <a href="#dataset-publisher"><code>dct:publisher</code></a> automatically from the user's registry, and to allow an optional field "contact information" (name and email) when entering dataset-specific metadata, which can be freely entered be the metadata publisher. If such optional field is not entered (or not implemented), the user registry can still be retrieved.</p>
+<p>With such concept, there might be overlaps of the contact information under the properties <a href="#class-dataset"><code>dct:publisher</code></a> and <a href="#class-dataset"><code>dcat:contactPoint</code></a>. Depending on the portal system, the contact information can be populated to the data portal's user registry (in case, e.g., users are required to sign in before they use the data portal and/or from a dataset-specific contact information. A recommended way is to populate all information for <a href="#class-dataset"><code>dct:publisher</code></a> automatically from the user's registry, and to allow an optional field "contact information" (name and email) when entering dataset-specific metadata, which can be freely entered be the metadata publisher. If such optional field is not entered (or not implemented), the user registry can still be retrieved.</p>
 
 </section>
 
@@ -1057,23 +1057,23 @@ In particular, the class and property definitions are now under new sections <a 
   
 <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP:</li>
 <ul>
-   <li>Property <a href="#dataset-in-series"><code>dcat:inSeries</code></a> of class Dataset added, to allow for relating a dataset to a dataset series.
+   <li>Property <a href="#class-dataset"><code>dcat:inSeries</code></a> of class Dataset added, to allow for relating a dataset to a dataset series.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
-  <li>Property <a href="#dataset-documentation"><code>foaf:page</code></a> of class Dataset added. 
+  <li>Property <a href="#class-dataset"><code>foaf:page</code></a> of class Dataset added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/121">#121</a>.</li>
-  <li>Property <a href="#dataset-source"><code>dct:source</code></a> of class Dataset added. 
+  <li>Property <a href="#class-dataset"><code>dct:source</code></a> of class Dataset added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/122">#122</a>.</li>
-  <li>Property <a href="#mobility-data-standard-specific-content-model"><code>mobilitydcatap:specificContentModel</code></a> of class Mobility Data Standard added. 
+  <li>Property <a href="#class-mobility-data-standard"><code>mobilitydcatap:specificContentModel</code></a> of class Mobility Data Standard added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/41">#41</a>.</li>
-  <li>Property <a href="#distribution-documentation"><code>foaf:page</code></a> of class Distribution added. 
+  <li>Property <a href="#class-distribution"><code>foaf:page</code></a> of class Distribution added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/89">#89</a>.</li>
-  <li>Property <a href="#distribution-language"><code>dct:language</code></a> of class Distribution added. 
+  <li>Property <a href="#class-distribution"><code>dct:language</code></a> of class Distribution added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/92">#92</a>.</li>
-    <li>Property <a href="#distribution-modification-date"><code>dct:modified</code></a> of class Distribution added. 
+    <li>Property <a href="#class-distribution"><code>dct:modified</code></a> of class Distribution added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/94">#94</a>.</li>
-    <li>Property <a href="#distribution-release-date"><code>dct:issued</code></a> of class Distribution added. 
+    <li>Property <a href="#class-distribution"><code>dct:issued</code></a> of class Distribution added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/94">#94</a>.</li>
-    <li>Property <a href="#distribution-status"><code>adms:status</code></a> of class Distribution added. 
+    <li>Property <a href="#class-distribution"><code>adms:status</code></a> of class Distribution added. 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/96">#96</a>.</li>
 </ul> 
 
@@ -1085,11 +1085,11 @@ In particular, the class and property definitions are now under new sections <a 
   
 <li>Other changes of existing properties:</li>
 <ul>
-   <li>Cardinality of property <a href="#distribution-data-format-notes"><code>mobilitydcatap:dataFormatNotes</code></a> of class Distribution changed from 0..1 to 0..*, to allow for multilingual versions of such notes.
+   <li>Cardinality of property <a href="#class-distribution"><code>mobilitydcatap:dataFormatNotes</code></a> of class Distribution changed from 0..1 to 0..*, to allow for multilingual versions of such notes.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/120">#120</a>.</li>
-    <li>Usage notes revised for property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> of classes Dataset and DatasetSeries. 
+    <li>Usage notes revised for property <a href="#class-dataset"><code>dcat:contactPoint</code></a> of classes Dataset and DatasetSeries. 
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/61">#61</a>.</li>
-   <li>Property <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a> of class Distribution is deprecated.
+   <li>Property <a href="#class-distribution"><code>mobilitydcatap:grammar</code></a> of class Distribution is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/90">#90</a>.</li>
 </ul> 
   
@@ -1104,48 +1104,48 @@ In particular, the class and property definitions are now under new sections <a 
   
 <li>Properties aligned with the DCAT-AP v3 data model:</li>
   <ul>
-  <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
+  <li>Property <a href="#class-catalogue"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
     <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
-  <li>Property <a href="#catalogue-dataset"><code>dcat:dataset</code></a> of class Catalogue: cardinality relaxed from previously "1..*" to "0..*".</li>
-  <li>Property <a href="#catalogue-geographical-coverage"><code>dct:spatial</code></a> of class Catalogue: label changed from previously "spatial/geographic" to "geographical coverage".</li>
-  <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
+  <li>Property <a href="#class-catalogue"><code>dcat:dataset</code></a> of class Catalogue: cardinality relaxed from previously "1..*" to "0..*".</li>
+  <li>Property <a href="#class-catalogue"><code>dct:spatial</code></a> of class Catalogue: label changed from previously "spatial/geographic" to "geographical coverage".</li>
+  <li>Property <a href="#class-dataset"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
     Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
-  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
-  <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
+  <li>Property <a href="#class-dataset"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#class-distribution"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+  <li>Property <a href="#class-location"><code>locn:geometry</code></a> of class Location: range changed from previously 
       "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
-  <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
-    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
-  <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
-    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#class-temporal-literal">Temporal Literal</a>.</li>
+  <li>Property <a href="#class-mobility-data-standard"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#class-period-of-time"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
+    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#datatypes">Temporal Literal</a>.</li>
+  <li>Property <a href="#class-period-of-time"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
+    "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#datatypes">Temporal Literal</a>.</li>
   </ul> 
   
 <li>Properties aligned with the geoDCAT-AP v3 data model:</li>
   <ul>
-     <li>Property <a href="#agent-address"><code>locn:address</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
-    <li>Property <a href="#agent-affiliation"><code>org:memberOf</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
-    <li>Property <a href="#agent-email"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1", 
+     <li>Property <a href="#class-agent"><code>locn:address</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#class-agent"><code>org:memberOf</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#class-agent"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1", 
        at the same time range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
-    <li>Property <a href="#agent-phone"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1",
+    <li>Property <a href="#class-agent"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1",
      at the same time range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
-  <li>Property <a href="#catalogue-identifier"><code>dct:identifier</code></a> of class Catalogue: cardinality relaxed from previously "0..1" to "0..*".</li>
-   <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
+  <li>Property <a href="#class-catalogue"><code>dct:identifier</code></a> of class Catalogue: cardinality relaxed from previously "0..1" to "0..*".</li>
+   <li>Property <a href="#class-dataset"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
    at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
-  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
-  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
-  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
-  <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
- <li>Property <a href="#rights-statement-rights-statement-text"><code>dct:description</code></a> of class Rights Statement: URI changed from previously <code>rdfs:label</code>, 
+  <li>Property <a href="#class-kind"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
+  <li>Property <a href="#class-kind"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#class-kind"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#class-kind"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+ <li>Property <a href="#class-rights-statement"><code>dct:description</code></a> of class Rights Statement: URI changed from previously <code>rdfs:label</code>, 
    at the same time name changed from previously "additional information for access and usage" to "rights statement text".</li>
   </ul>   
 </ul>  
   
 <li>Class and property removals:</li>
 <ul>
-  <li>Property <code>dct:isPartOf</code> of class Catalogue removed, being an inverse property to <a href="#catalogue-has-part"><code>dct:hasPart</code></a>.
+  <li>Property <code>dct:isPartOf</code> of class Catalogue removed, being an inverse property to <a href="#class-catalogue"><code>dct:hasPart</code></a>.
     This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties."</li>  
-  <li>Property <code>dct:isVersionOf</code> of class Dataset removed, being an inverse property to <a href="#dataset-has-version"><code>dcat:hasVersion</code></a>.
+  <li>Property <code>dct:isVersionOf</code> of class Dataset removed, being an inverse property to <a href="#class-dataset"><code>dcat:hasVersion</code></a>.
     This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties."</li>
     <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
   These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
@@ -1169,14 +1169,14 @@ In particular, the class and property definitions are now under new sections <a 
 <h2>Changes since mobilityDCAT-AP 1.0.1 (04 April 2024)</h2>
 
 <ul>
-<li>Property <a href="#catalogue-record-source-metadata"><code>dct:source</code></a> added under <a href="#optional-properties-for-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <a href="#catalogue-record-source-metadata"><code>dct:source</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/57">#57.</a> </li>
-<li>Cardinality of property <a href="#mobility-data-standard-schema">"schema"</a> changed from from 0..1 to 0..n. Reason: allow for naming multiple schemas. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/56">#56</a></li>
-<li>Property <a href="#mobility-data-standard-standard-name"><code>dct:conformsTo</code></a> added under <a href="#optional-properties-for-mobility-data-standard">optional properties for Class Mobility Data Standard</a>. This property describes the name of the mobility data standard. This property is used when a custom instance of class <code>mobilitydcatap:MobilityDataStandard</code> is defined, see the usage note for this property.  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/65">#65.</a> </li>
+<li>Property <a href="#class-catalogue-record"><code>dct:source</code></a> added under <a href="#class-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <a href="#class-catalogue-record"><code>dct:source</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/57">#57.</a> </li>
+<li>Cardinality of property <a href="#class-mobility-data-standard">"schema"</a> changed from from 0..1 to 0..n. Reason: allow for naming multiple schemas. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/56">#56</a></li>
+<li>Property <a href="#class-mobility-data-standard"><code>dct:conformsTo</code></a> added under <a href="#class-mobility-data-standard">optional properties for Class Mobility Data Standard</a>. This property describes the name of the mobility data standard. This property is used when a custom instance of class <code>mobilitydcatap:MobilityDataStandard</code> is defined, see the usage note for this property.  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/65">#65.</a> </li>
 <li>Errata and editorial improvements:</li>
 <ul>
-  <li>Corrected usage note for property <a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a> (now linking to IANA register [[IANA-CHARSETS]]). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/34">#34</a>.</li>
+  <li>Corrected usage note for property <a href="#class-distribution"><code>cnt:characterEncoding</code></a> (now linking to IANA register [[IANA-CHARSETS]]). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/34">#34</a>.</li>
   <li>Corrected all figures showing UML diagrams (new arrow types). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/37">#37</a>.</li>
-  <li>Corrected reference to [[NUTS-CODES]] under <a href="#vocab-spatial">controlled vocabularies for property <code>dct:spatial</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/58">#58</a>.</li>
+  <li>Corrected reference to [[NUTS-CODES]] under <a href="#controlled-vocabularies-to-be-used">controlled vocabularies for property <code>dct:spatial</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/58">#58</a>.</li>
   <li>All controlled vocabularies that are referenced at class and property descriptions are now directly hyperlinked to the specific controlled vocabulary. Before, a generic link to <a href="#controlled-vocabularies-to-be-used">chapter 5.2 Controlled Vocabularies</a> was only given.</li>
   <li>several typos corrected</li>
 </ul>
@@ -1185,9 +1185,9 @@ In particular, the class and property definitions are now under new sections <a 
 <li><a href="#eap-files">Appendix H (mobilityDCAT-AP Enterprise Architect files)</a> added.</li>
 <li>Changes in controlled vocabularies: </li>
 <ul>
-  <li><a href="#vocab-update-frequency">Frequency:</a> The <a href="https://w3id.org/mobilitydcat-ap/update-frequency">original controlled vocabulary "update frequency" by mobilityDCAT-AP </a> is deprecated, as it is not needed any longer. Only the EU Authority Table "Frequency" is now used, as it now contains all necessary values. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>.</li>
-  <li><a href="#vocab-mobility-theme">Mobility Theme:</a> Added references to EC Delegated Regulations via additional <code>dcatap:applicableLegislation</code> properties for all values used in this vocabulary. This allows for an automated tagging of EC Regulations to individual datasets. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/8">#8</a>.</li>
-  <li><a href="#vocab-conditionsforusage">Conditions for access and usage:</a> Value list extended to allow for constellations such as "Licence provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> </li>
+  <li><a href="#controlled-vocabularies-to-be-used">Frequency:</a> The <a href="https://w3id.org/mobilitydcat-ap/update-frequency">original controlled vocabulary "update frequency" by mobilityDCAT-AP </a> is deprecated, as it is not needed any longer. Only the EU Authority Table "Frequency" is now used, as it now contains all necessary values. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>.</li>
+  <li><a href="#controlled-vocabularies-to-be-used">Mobility Theme:</a> Added references to EC Delegated Regulations via additional <code>dcatap:applicableLegislation</code> properties for all values used in this vocabulary. This allows for an automated tagging of EC Regulations to individual datasets. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/8">#8</a>.</li>
+  <li><a href="#controlled-vocabularies-to-be-used">Conditions for access and usage:</a> Value list extended to allow for constellations such as "Licence provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> </li>
 </ul>  
 <li>Ongoing refinements and additions in <a href="#wikipage">mobilityDCAT-AP Wikipage</a> </li>
 </ul>
