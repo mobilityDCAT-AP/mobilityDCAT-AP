@@ -101,10 +101,10 @@
 
 <ul>
 <li>Addition of classes, including reusage of classes from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new classes under the mobilityDCAT-AP namespace</li>
-<li>Removal of optional classes from DCAT-AP, see <a class="no-secRef" href="#dcat-ap-removed-classes"></a></li>
+<li>Removal of optional classes from DCAT-AP, see <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a></li>
 <li>Addition of properties to existing classes in DCAT-AP, including reusage of properties from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new properties under the mobilityDCAT-AP namespace</li>
 <li>Change to obligation levels for some existing properties in DCAT-AP</li>
-<li>Removal of optional properties from DCAT-AP, see <a class="no-secRef" href="#dcat-ap-removed-properties"></a></li>
+<li>Removal of optional properties from DCAT-AP, see <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a></li>
 <li>Refinement of usage notes for existing classes and properties from DCAT-AP</li>
 <li>Reference to additional controlled vocabularies, including the creation of new controlled vocabularies under the mobilityDCAT-AP namespace</li>
 </ul>
@@ -1149,10 +1149,10 @@ In particular, the class and property definitions are now under new sections <a 
     This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties."</li>
     <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
   These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
-  See <a class="no-secRef" href="#dcat-ap-removed-classes"></a>.</li>
+  See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
   <li>Property <code>dcat:accessService</code> of class Distribution removed, 
     because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.
-  See <a class="no-secRef" href="#dcat-ap-removed-properties"></a>.</li>
+  See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
 </ul> 
 
 
@@ -1206,7 +1206,7 @@ In particular, the class and property definitions are now under new sections <a 
   <li>Class <code>mobilitydcatap:MobilityDataStandard</code> was sometimes misspelled as <code>mobilitydcatap:mobilityDataStandard</code>, corrected </li>
   <li>Property <code>mobilitydcatap:mobilityDataStandard</code> of class <code>dcat:Distribution</code> had the range <code>skos:Concept</code> instead of <code>mobilitydcatap:MobilityDataStandard</code>, corrected </li>
   <li>URL linking to Controlled Vocabulary "http://publications.europa.eu/resource/authority/licence" repaired</li>
-  <li>text at the beginning of <a href="#properties"></a> was leading to a wrong directory with examples, removed (examples are now published under Appendix D)</li>
+  <li>text at the beginning of the properties section was leading to a wrong directory with examples, removed (examples are now published under Appendix D)</li>
   <li>several typos corrected</li>
 </ul></li>
 <li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl">SHACL file</a> updated:</li>
