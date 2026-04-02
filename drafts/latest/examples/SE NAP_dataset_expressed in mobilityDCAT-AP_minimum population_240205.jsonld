@@ -1,112 +1,5 @@
 [
   {
-    "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits",
-    "@type": [
-      "http://www.w3.org/ns/dcat#CatalogRecord"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-12-04"
-      }
-    ],
-    "http://purl.org/dc/terms/language": [
-      {
-        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-12-04"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/primaryTopic": [
-      {
-        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Agent"
-    ],
-    "http://xmlns.com/foaf/0.1/mbox": [
-      {
-        "@id": "mailto:datex@trafikverket.se"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "sv",
-        "@value": "Trafikverket"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/workplaceHomepage": [
-      {
-        "@id": "https://www.trafikverket.se"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa",
-    "@type": [
-      "http://www.w3.org/ns/dcat#Dataset"
-    ],
-    "http://purl.org/dc/terms/accrualPeriodicity": [
-      {
-        "@id": "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Traffic signs expressing traffic regulations and identifying dangers from the Swedish Transport Administration. Datex II format."
-      }
-    ],
-    "http://purl.org/dc/terms/publisher": [
-      {
-        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
-      }
-    ],
-    "http://purl.org/dc/terms/spatial": [
-      {
-        "@id": "_:n5d9a57b184c640e7b72b17922314951fb2"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "Traffic signs expressing traffic regulations and identifying dangers, Speed limits"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#distribution": [
-      {
-        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"
-      }
-    ],
-    "https://w3id.org/mobilitydcat-ap#mobilityTheme": [
-      {
-        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"
-      },
-      {
-        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"
-      }
-    ]
-  },
-  {
-    "@id": "_:n5d9a57b184c640e7b72b17922314951fb2",
-    "@type": [
-      "http://purl.org/dc/terms/Location"
-    ],
-    "http://purl.org/dc/terms/identifier": [
-      {
-        "@id": "http://publications.europa.eu/resource/authority/country/SWE"
-      }
-    ]
-  },
-  {
     "@id": "https://www.trafikverket.se/",
     "@type": [
       "http://xmlns.com/foaf/0.1/Agent"
@@ -130,7 +23,7 @@
     ],
     "http://purl.org/dc/terms/rights": [
       {
-        "@id": "_:n5d9a57b184c640e7b72b17922314951fb3"
+        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b3"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
@@ -140,12 +33,12 @@
     ],
     "https://w3id.org/mobilitydcat-ap#mobilityDataStandard": [
       {
-        "@id": "_:n5d9a57b184c640e7b72b17922314951fb4"
+        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b4"
       }
     ]
   },
   {
-    "@id": "_:n5d9a57b184c640e7b72b17922314951fb3",
+    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b3",
     "@type": [
       "http://purl.org/dc/terms/RightsStatement"
     ],
@@ -156,7 +49,7 @@
     ]
   },
   {
-    "@id": "_:n5d9a57b184c640e7b72b17922314951fb4",
+    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b4",
     "@type": [
       "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
     ],
@@ -189,7 +82,7 @@
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-        "@id": "_:n5d9a57b184c640e7b72b17922314951fb1"
+        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b1"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -215,13 +108,120 @@
     ]
   },
   {
-    "@id": "_:n5d9a57b184c640e7b72b17922314951fb1",
+    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b1",
     "@type": [
       "http://purl.org/dc/terms/Location"
     ],
     "http://purl.org/dc/terms/identifier": [
       {
         "@id": "http://publications.europa.eu/resource/authority/country/SWE"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://purl.org/dc/terms/accrualPeriodicity": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Traffic signs expressing traffic regulations and identifying dangers from the Swedish Transport Administration. Datex II format."
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b2"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Traffic signs expressing traffic regulations and identifying dangers, Speed limits"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#mobilityTheme": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b2",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/country/SWE"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@id": "mailto:datex@trafikverket.se"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "sv",
+        "@value": "Trafikverket"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/workplaceHomepage": [
+      {
+        "@id": "https://www.trafikverket.se"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits",
+    "@type": [
+      "http://www.w3.org/ns/dcat#CatalogRecord"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-12-04"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-12-04"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/primaryTopic": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"
       }
     ]
   }
