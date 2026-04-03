@@ -421,7 +421,7 @@
         <rdfs:label xml:lang="en">applicable legislation</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -468,7 +468,7 @@
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
         <skos:scopeNote xml:lang="en">This property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -489,7 +489,7 @@
         <rdfs:label xml:lang="en">application layer protocol</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is recommended to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -504,7 +504,7 @@
         <rdfs:label xml:lang="en">assessment result</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -519,7 +519,7 @@
         <rdfs:label xml:lang="en">communication method</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -534,7 +534,7 @@
         <rdfs:label xml:lang="en">georeferencing method</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -550,7 +550,7 @@
         <rdfs:label xml:lang="en">grammar</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -565,7 +565,7 @@
         <rdfs:label xml:lang="en">intended information service</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -581,7 +581,7 @@
         <rdfs:label xml:lang="en">mobility data standard</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -596,7 +596,7 @@
         <rdfs:label xml:lang="en">mobility theme</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for  Dataset.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -611,7 +611,7 @@
         <rdfs:label xml:lang="en">network coverage</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -627,7 +627,7 @@
         <rdfs:label xml:lang="en">schema</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -642,7 +642,7 @@
         <rdfs:label xml:lang="en">transportation mode</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -660,7 +660,7 @@
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for  Location.</skos:scopeNote>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for  Category.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -674,7 +674,7 @@
         <rdfs:label xml:lang="en">address</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Kind.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -688,7 +688,7 @@
         <rdfs:label xml:lang="en">email</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Kind.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -702,7 +702,7 @@
         <rdfs:label xml:lang="en">phone</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Kind.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -716,7 +716,7 @@
         <rdfs:label xml:lang="en">URL</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Kind.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -729,7 +729,7 @@
         <rdfs:comment xml:lang="en">This property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future.</rdfs:comment>
         <rdfs:label xml:lang="en">other identifier</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Catalogue. </skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -743,7 +743,7 @@
         <rdfs:label xml:lang="en">sample</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -766,7 +766,7 @@
         <rdfs:label xml:lang="en">quality description</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -779,7 +779,7 @@
         <rdfs:comment xml:lang="en">This property MAY be used to specify the postal address of the Agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
         <rdfs:label xml:lang="en">address</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -798,7 +798,7 @@
         <rdfs:comment xml:lang="en">This property MAY be used to describe the target of the quality annotation, referring back to the dataset being described. I.e., it is the inverse property of “dqv:hasQualityAnnotation” for class Dataset.</rdfs:comment>
         <rdfs:label xml:lang="en">quality annotation target</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. </skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -811,7 +811,7 @@
         <rdfs:comment xml:lang="en">If the agent is of type person, this property SHOULD be used to specify the affiliation of the Agent, see § 7. Agent Types, Agent Roles and Contact Information. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
         <rdfs:label xml:lang="en">affiliation</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -824,7 +824,7 @@
         <rdfs:comment xml:lang="en">This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]. The email SHOULD be used to establish a communication channel to the agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
         <rdfs:label xml:lang="en">email</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -837,7 +837,7 @@
         <rdfs:comment xml:lang="en">This property MAY be used to provide the phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
         <rdfs:label xml:lang="en">phone</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -850,7 +850,7 @@
         <rdfs:comment xml:lang="en">This property MAY be used to specify the Web site of the Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">URL</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:ObjectProperty>
 
 
@@ -894,7 +894,7 @@
         <rdfs:label xml:lang="en">data format notes</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -921,7 +921,7 @@
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Location.</skos:scopeNote>
         <skos:scopeNote xml:lang="en">This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -935,7 +935,7 @@
         <rdfs:label xml:lang="en">name</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Kind.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -949,7 +949,7 @@
         <rdfs:label xml:lang="en">affiliation</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Kind.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -963,7 +963,7 @@
         <rdfs:label xml:lang="en">character encoding</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Distributions.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -976,7 +976,7 @@
         <rdfs:comment xml:lang="en">The country of an Address of the Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">country</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -989,7 +989,7 @@
         <rdfs:comment xml:lang="en">The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state.</rdfs:comment>
         <rdfs:label xml:lang="en">administrative area</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -1002,7 +1002,7 @@
         <rdfs:comment xml:lang="en">The postal code of an Address of the Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">postal code</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -1015,7 +1015,7 @@
         <rdfs:comment xml:lang="en">The city of an Address of the Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">city</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -1028,7 +1028,7 @@
         <rdfs:comment xml:lang="en">The street name and civic number of an Address of the Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">street address</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Address (Agent)</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -1047,7 +1047,7 @@
         <rdfs:comment xml:lang="en">If the agent is of type person, this property SHOULD be used to specify the first name of the Agent, see section § 7. Agent Types, Agent Roles and Contact Information.</rdfs:comment>
         <rdfs:label xml:lang="en">first name</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -1060,7 +1060,7 @@
         <rdfs:comment xml:lang="en">If the agent is of type person, this property SHOULD be used to specify the surname of the Agent, see section 7.</rdfs:comment>
         <rdfs:label xml:lang="en">surname</rdfs:label>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:DatatypeProperty>
 
 
@@ -1098,7 +1098,7 @@
         <rdfs:label xml:lang="en">Assessment</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional class.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:Class>
 
 
@@ -1112,7 +1112,7 @@
         <rdfs:label xml:lang="en">Mobility Data Standard</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory class.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:Class>
 
 
@@ -1136,7 +1136,7 @@
         <rdfs:label xml:lang="en">Quality Annotation</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional class.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:Class>
 
 
@@ -1148,7 +1148,7 @@
         <rdfs:label xml:lang="en">Address (Agent)</rdfs:label>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional class.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </owl:Class>
 
 
@@ -1404,7 +1404,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Dataset. </skos:scopeNote>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Standard"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/created">
         <rdfs:comment xml:lang="en">This property contains the date stamp (date and time) when the metadata entry was created for the first time. It SHOULD be generated by the system, whenever a platform user enters the metadata entry. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -1412,7 +1412,7 @@
         <rdfs:label xml:lang="en">creation date</rdfs:label>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue Record. Its range is rdfs:Literal typed as xsd:date or xsd:dateTime. </skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
         <skos:scopeNote xml:lang="en">This property refers to a related Catalogue that is part of the described mobility data portal. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal. </skos:scopeNote>
@@ -1422,7 +1422,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
         <vs:term_status>stable</vs:term_status>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <rdfs:comment xml:lang="en">This property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals. This property SHOULD populated by the URI used within the RDF statement (via rdf:about). This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
         <rdfs:comment xml:lang="en">This property MAY be be used to link to a concrete standard license. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided.  </rdfs:comment>
         <rdfs:label xml:lang="en">standard licence</rdfs:label>
@@ -1454,14 +1454,14 @@
         <skos:scopeNote xml:lang="en">This property contains the date of formal issuance (e.g., publication) of the Catalogue.</skos:scopeNote>
         <rdfs:comment xml:lang="en">This property MAY be used to describe the date of the latest assessment procedure.</rdfs:comment>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Assessment. Its range is rdfs:Literal typed as xsd:date or xsd:dateTime. </skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/language">
         <skos:scopeNote xml:lang="en">This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the metadata entry. The value should be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see § 8. Accessibility and Multilingual Aspects. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
         <dcam:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <rdfs:comment xml:lang="en">This property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property “Publisher” of the corresponding dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. </rdfs:comment>
         <rdfs:label xml:lang="en">publisher</rdfs:label>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
@@ -1470,7 +1470,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/source">
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <rdfs:comment xml:lang="en">This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested.</rdfs:comment>
         <rdfs:label xml:lang="en">source metadata</rdfs:label>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
@@ -1485,7 +1485,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/rightsHolder">
         <rdfs:comment xml:lang="en">This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property dqv:hasQualityAnnotation) and/or the relevance to legal frameworks (if applicable, see property dcatap:applicableLegislation). This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset. The Rights Holder will be in many cases identical with the Publisher information for class Dataset (see property dct:publisher) and/or for class Catalogue Record (see property dct:publisher). In this case, the contact data MAY be copied from the corresponding Publisher entries. There might be also cases with non-identical entities: e.g., when one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Dataset. </skos:scopeNote>
         <vs:term_status>stable</vs:term_status>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
@@ -1503,7 +1503,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property SHOULD be used to indicate the conditions if any contracts, licences and/or are applied for the use of the dataset. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset. A controlled vocabulary § 5.2 Controlled vocabularies to be used is provided. The values can be logically mapped with the property dct:identifier from class dct:LicenseDocument. </rdfs:comment>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Rights Statement.</skos:scopeNote>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://spdx.org/rdf/terms#Checksum">
         <skos:scopeNote xml:lang="en">A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented. In [DCAT-AP-v2.0.1], this class is defined as the range for the optional property &apos;&apos;spdx:checksum&apos;&apos; of class Distribution. However, in mobilityDCAT-AP, this property is removed. So, the class and its properties are without function but kept for compatibility reasons.</skos:scopeNote>
@@ -1524,7 +1524,7 @@
         <rdfs:label xml:lang="en">Additional information for access and usage</rdfs:label>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
@@ -1532,7 +1532,7 @@
         <rdfs:comment xml:lang="en">This property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary.</rdfs:comment>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. </skos:scopeNote>
         <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
@@ -1541,7 +1541,7 @@
         <skos:scopeNote xml:lang="en">This property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property dct:modified. Together with property adms:versionNotes, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow W3C Data on the Web Best Practices [DWBP]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [SEMVER].</skos:scopeNote>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Mobility Data Standard. </skos:scopeNote>
         <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
@@ -1636,7 +1636,7 @@
         <dcam:domainIncludes rdf:resource="http://w3id.org/mobilitydcat-ap#Assessment"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Assessment. </skos:scopeNote>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/authority/concept-status/CURRENT"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. </skos:scopeNote>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>

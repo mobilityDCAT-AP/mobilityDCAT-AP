@@ -492,7 +492,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       }
     },
     {
@@ -514,7 +514,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       }
     },
     {
@@ -539,7 +539,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       }
     },
     {
@@ -561,7 +561,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       }
     },
     {
@@ -583,7 +583,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -611,7 +611,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -639,7 +639,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -667,7 +667,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -695,7 +695,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -723,7 +723,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "mobilitydcatap:Assessment"
@@ -751,7 +751,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Catalog"
@@ -780,7 +780,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:CatalogRecord"
@@ -809,7 +809,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:CatalogRecord"
@@ -838,7 +838,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "skos:Concept"
@@ -870,7 +870,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -902,7 +902,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -931,7 +931,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -960,7 +960,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -992,7 +992,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -1024,7 +1024,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -1056,7 +1056,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -1088,7 +1088,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -1120,7 +1120,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -1152,7 +1152,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Dataset"
@@ -1187,7 +1187,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1219,7 +1219,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1251,7 +1251,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1286,7 +1286,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1315,7 +1315,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1344,7 +1344,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1373,7 +1373,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "vcard:Kind"
@@ -1402,7 +1402,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "vcard:Kind"
@@ -1431,7 +1431,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "vcard:Kind"
@@ -1460,7 +1460,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "vcard:Kind"
@@ -1489,7 +1489,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:LicenseDocument"
@@ -1518,7 +1518,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:Location"
@@ -1553,7 +1553,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "mobilitydcatap:MobilityDataStandard"
@@ -1581,7 +1581,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dqv:QualityAnnotation"
@@ -1610,7 +1610,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:RightsStatement"
@@ -1637,7 +1637,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1664,7 +1664,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1691,7 +1691,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1718,7 +1718,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1745,7 +1745,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1772,7 +1772,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "mobilitydcatap:Assessment"
@@ -1799,7 +1799,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1826,7 +1826,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "locn:Address"
@@ -1853,7 +1853,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Catalog"
@@ -1880,7 +1880,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:CatalogRecord"
@@ -1911,7 +1911,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1939,7 +1939,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dcat:Distribution"
@@ -1967,7 +1967,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "vcard:Kind"
@@ -1995,7 +1995,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "vcard:Kind"
@@ -2023,7 +2023,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:LicenseDocument"
@@ -2051,7 +2051,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:Location"
@@ -2079,7 +2079,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:Location"
@@ -2106,7 +2106,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "mobilitydcatap:MobilityDataStandard"
@@ -2133,7 +2133,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "mobilitydcatap:MobilityDataStandard"
@@ -2160,7 +2160,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dqv:QualityAnnotation"
@@ -2188,7 +2188,7 @@
         "@language": "en"
       },
       "adms:status": {
-        "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+        "@id": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
       },
       "dcam:domainIncludes": {
         "@id": "dct:RightsStatement"
