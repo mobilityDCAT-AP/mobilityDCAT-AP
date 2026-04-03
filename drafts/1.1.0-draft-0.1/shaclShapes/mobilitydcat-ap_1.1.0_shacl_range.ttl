@@ -1,0 +1,769 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix mdcap11: <https://w3id.org/mobilitydcat-ap/releases/1.1.0#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> 
+  a owl:Ontology , adms:Asset ;
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
+  
+  owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> ;
+  owl:versionInfo "1.1.0" ;
+  dct:title "mobilityDCAT-AP 1.1.0 SHACL - Range Constraints"@en ;
+  dct:description "Adds sh:class constraints to mobilityDCAT-AP properties."@en .
+
+#===========================================================================
+# RANGE CONSTRAINTS - Strict Class Membership
+# 
+# This file adds sh:class constraints to enforce strict typing.
+# It imports the basic file, so you get both basic + range validation.
+#===========================================================================
+
+#---------------------------------------------------------------------------
+# AGENT SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Agent_Shape_ranges>
+  a sh:NodeShape ;
+  sh:targetClass foaf:Agent ;
+  sh:name "Agent (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Agent mobility extensions. Enforces sh:class for address and affiliation properties."@en ;
+  
+  sh:property 
+    :Agent_Shape_address_range ,
+    :Agent_Shape_affiliation_range .
+
+#---------------------------------------------------------------------------
+# Range Property Shapes - Agent
+#---------------------------------------------------------------------------
+
+:Agent_Shape_address_range
+  sh:path locn:address ;
+  sh:class locn:Address ;
+  sh:name "address (range)"@en ;
+  sh:description "The postal address must be of type locn:Address"@en ;
+  sh:message "Address must be a locn:Address instance"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_affiliation_range
+  sh:path org:memberOf ;
+  sh:class org:Organization ;
+  sh:name "affiliation (range)"@en ;
+  sh:description "The affiliation must be of type org:Organization"@en ;
+  sh:message "Affiliation must be an org:Organization instance"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# ASSESSMENT SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Assessment_Shape>
+  a sh:NodeShape ;
+  sh:targetClass mobilitydcatap:Assessment ;
+  sh:name "Assessment (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :Assessment_Shape_assessmentResult_range .
+
+:Assessment_Shape_assessmentResult_range
+  a sh:PropertyShape ;
+  sh:path oa:hasBody ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+#---------------------------------------------------------------------------
+# CATALOGUE SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Catalogue_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Catalog ;
+  sh:name "Catalogue (mobilityDCAT-AP)"@en ;
+  sh:description "Extends DCAT-AP 2.0.1 Catalogue. Raises homepage, spatial, record to mandatory. Adds identifier and otherIdentifier. publisher, title, description, dataset are redefined with mobility cardinality. licence, issued, modified, themeTaxonomy, hasPart, isPartOf inherited from DCAT-AP 2.0.1."@en ;
+  sh:property
+    :Catalogue_Shape_dataset ,
+    :Catalogue_Shape_description ,
+    :Catalogue_Shape_homepage ,
+    :Catalogue_Shape_record ,
+    :Catalogue_Shape_spatial ,
+    :Catalogue_Shape_title ,
+    :Catalogue_Shape_language ,
+    :Catalogue_Shape_identifier ,
+    :Catalogue_Shape_otherIdentifier .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:Catalogue_Shape_dataset
+  a sh:PropertyShape ;
+  sh:path dcat:dataset ;
+  sh:minCount 1 ;
+  sh:name "dataset"@en ;
+  sh:description "Links the Catalogue to a Dataset. Mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Catalogue must have at least one dataset"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_description
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "description"@en ;
+  sh:description "Free-text name of the mobility data platform. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_homepage
+  a sh:PropertyShape ;
+  sh:path foaf:homepage ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "homepage"@en ;
+  sh:description "Main web page of the mobility data portal. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Homepage is mandatory and must appear exactly once"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_record
+  a sh:PropertyShape ;
+  sh:path dcat:record ;
+  sh:minCount 1 ;
+  sh:name "catalogue record"@en ;
+  sh:description "Metadata record that is part of the Catalogue. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Catalogue must have at least one catalogue record"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_spatial
+  a sh:PropertyShape ;
+  sh:path dct:spatial ;
+  sh:minCount 1 ;
+  sh:name "spatial / geographic coverage"@en ;
+  sh:description "Country code where the data platform is hosted. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Spatial coverage is mandatory. At least one location must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "title"@en ;
+  sh:description "Name of the mobility data portal. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:Catalogue_Shape_language
+  a sh:PropertyShape ;
+  sh:path dct:language ;
+  sh:name "language"@en ;
+  sh:description "Language of the metadata in the portal. Repeated for multiple languages (§8)."@en ;
+  sh:message "Language must be a dct:LinguisticSystem instance or EU language authority URI"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:Catalogue_Shape_identifier
+  a sh:PropertyShape ;
+  sh:path dct:identifier ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "identifier"@en ;
+  sh:description "Identifier for the mobility data portal. SHOULD be the URI from rdf:about. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Identifier must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Catalogue_Shape_otherIdentifier
+  a sh:PropertyShape ;
+  sh:path adms:identifier ;
+  sh:maxCount 1 ;
+  sh:name "other identifier"@en ;
+  sh:description "Additional identifier besides dct:identifier. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Other identifier can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# CATALOGUE RECORD SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#CatalogueRecord_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:CatalogRecord ;
+  sh:name "Catalogue Record (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Catalogue Record mobility extensions. Range constraints for language (dct:LinguisticSystem), primaryTopic (dcat:Dataset), source (dcat:CatalogRecord) inherited from DCAT-AP 2.0.1."@en ;
+  sh:property
+    :CatalogueRecord_Shape_publisher_range .
+
+:CatalogueRecord_Shape_publisher_range
+  a sh:PropertyShape ;
+  sh:path dct:publisher ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class foaf:Agent ;
+  sh:severity sh:Info .
+#---------------------------------------------------------------------------
+# CATEGORY SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Category_Shape>
+  a sh:NodeShape ;
+  sh:targetClass skos:Concept ;
+  sh:name "Category (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :Category_Shape_inScheme_range .
+
+:Category_Shape_inScheme_range
+  a sh:PropertyShape ;
+  sh:path skos:inScheme ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class skos:ConceptScheme ;
+  sh:severity sh:Info .
+#---------------------------------------------------------------------------
+# DATA SERVICE SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#DataService_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:DataService ;
+  sh:name "Data Service (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Data Service mobility extensions."@en ;
+  sh:property
+    :DataService_Shape_endpointURL_range ,
+    :DataService_Shape_endpointDescription_range ,
+    :DataService_Shape_servesDataset_range ,
+    :DataService_Shape_accessRights_range ,
+    :DataService_Shape_licence_range .
+
+:DataService_Shape_endpointURL_range
+  a sh:PropertyShape ;
+  sh:path dcat:endpointURL ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Violation .
+
+:DataService_Shape_endpointDescription_range
+  a sh:PropertyShape ;
+  sh:path dcat:endpointDescription ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Warning .
+
+:DataService_Shape_servesDataset_range
+  a sh:PropertyShape ;
+  sh:path dcat:servesDataset ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dcat:Dataset ;
+  sh:severity sh:Warning .
+
+:DataService_Shape_accessRights_range
+  a sh:PropertyShape ;
+  sh:path dct:accessRights ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:RightsStatement ;
+  sh:severity sh:Info .
+
+:DataService_Shape_licence_range
+  a sh:PropertyShape ;
+  sh:path dct:license ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:LicenseDocument ;
+  sh:severity sh:Info .
+#---------------------------------------------------------------------------
+# DATASET SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Dataset_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  sh:name "Dataset (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Dataset. description, title, keyword, identifier, issued, modified, versionInfo, versionNotes handled in main file."@en ;
+  sh:property
+    # === MANDATORY ===
+    :Dataset_Shape_distribution_range ,
+    :Dataset_Shape_accrualPeriodicity_range ,
+    :Dataset_Shape_mobilityTheme_range ,
+    :Dataset_Shape_spatial_range ,
+    :Dataset_Shape_publisher_range ,
+    # === RECOMMENDED ===
+    :Dataset_Shape_georeferencingMethod_range ,
+    :Dataset_Shape_contactPoint_range ,
+    :Dataset_Shape_networkCoverage_range ,
+    :Dataset_Shape_conformsTo_range ,
+    :Dataset_Shape_rightsHolder_range ,
+    :Dataset_Shape_theme_range ,
+    :Dataset_Shape_temporal_range ,
+    :Dataset_Shape_transportMode_range ,
+    # === OPTIONAL ===
+    :Dataset_Shape_applicableLegislation_range ,
+    :Dataset_Shape_assessmentResult_range ,
+    :Dataset_Shape_hasVersion_range ,
+    :Dataset_Shape_intendedInformationService_range ,
+    :Dataset_Shape_isReferencedBy_range ,
+    :Dataset_Shape_isVersionOf_range ,
+    :Dataset_Shape_language_range ,
+    :Dataset_Shape_otherIdentifier_range ,
+    :Dataset_Shape_relation_range ,
+    :Dataset_Shape_hasQualityAnnotation_range .
+
+#---------------------------------------------------------------------------
+# MANDATORY - Range Constraints (sh:Violation)
+#---------------------------------------------------------------------------
+:Dataset_Shape_distribution_range
+  a sh:PropertyShape ;
+  sh:path dcat:distribution ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dcat:Distribution ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_accrualPeriodicity_range
+  a sh:PropertyShape ;
+  sh:path dct:accrualPeriodicity ;
+  sh:nodeKind sh:IRI ;
+  sh:class dct:Frequency ;
+  sh:or (
+    [ sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/.+$" ]
+    [ sh:pattern "^https://w3id\\.org/mobilitydcat-ap/update-frequency/.+$" ]
+  ) ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_mobilityTheme_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:mobilityTheme ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/mobility-theme/.+$" ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_spatial_range
+  a sh:PropertyShape ;
+  sh:path dct:spatial ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:Location ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_publisher_range
+  a sh:PropertyShape ;
+  sh:path dct:publisher ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class foaf:Agent ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# RECOMMENDED - Range Constraints (sh:Warning)
+#---------------------------------------------------------------------------
+:Dataset_Shape_georeferencingMethod_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:georeferencingMethod ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/georeferencing-method/.+$" ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_contactPoint_range
+  a sh:PropertyShape ;
+  sh:path dcat:contactPoint ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class vcard:Kind ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_networkCoverage_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:networkCoverage ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/network-coverage/.+$" ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_conformsTo_range
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:nodeKind sh:IRI ;
+  sh:class dct:Standard ;
+  sh:pattern "^http://www\\.opengis\\.net/def/crs/EPSG/0/.+$" ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_rightsHolder_range
+  a sh:PropertyShape ;
+  sh:path dct:rightsHolder ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class foaf:Agent ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_theme_range
+  a sh:PropertyShape ;
+  sh:path dcat:theme ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^http://publications\\.europa\\.eu/resource/authority/data-theme/.+$" ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_temporal_range
+  a sh:PropertyShape ;
+  sh:path dct:temporal ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:PeriodOfTime ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_transportMode_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:transportMode ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/transport-mode/.+$" ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# OPTIONAL - Range Constraints (sh:Info)
+#---------------------------------------------------------------------------
+:Dataset_Shape_applicableLegislation_range
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_assessmentResult_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:assessmentResult ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class mobilitydcatap:Assessment ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_hasVersion_range
+  a sh:PropertyShape ;
+  sh:path dct:hasVersion ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dcat:Dataset ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_intendedInformationService_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:intendedInformationService ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/intended-information-service/.+$" ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_isReferencedBy_range
+  a sh:PropertyShape ;
+  sh:path dct:isReferencedBy ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_isVersionOf_range
+  a sh:PropertyShape ;
+  sh:path dct:isVersionOf ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dcat:Dataset ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_language_range
+  a sh:PropertyShape ;
+  sh:path dct:language ;
+  sh:nodeKind sh:IRI ;
+  sh:class dct:LinguisticSystem ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_otherIdentifier_range
+  a sh:PropertyShape ;
+  sh:path adms:identifier ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class adms:Identifier ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_relation_range
+  a sh:PropertyShape ;
+  sh:path dct:relation ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_hasQualityAnnotation_range
+  a sh:PropertyShape ;
+  sh:path dqv:hasQualityAnnotation ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dqv:QualityAnnotation ;
+  sh:severity sh:Info .#---------------------------------------------------------------------------
+# DISTRIBUTION SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Distribution_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Distribution ;
+  sh:name "Distribution (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:description "Range constraints for Distribution. description, characterEncoding, dataFormatNotes, title handled in main file."@en ;
+  sh:property
+    # === MANDATORY ===
+    :Distribution_Shape_accessURL_range ,
+    :Distribution_Shape_mobilityDataStandard_range ,
+    :Distribution_Shape_format_range ,
+    :Distribution_Shape_rights_range ,
+    # === RECOMMENDED ===
+    :Distribution_Shape_applicationLayerProtocol_range ,
+    :Distribution_Shape_licence_range ,
+    # === OPTIONAL ===
+    :Distribution_Shape_accessService_range ,
+    :Distribution_Shape_communicationMethod_range ,
+    :Distribution_Shape_downloadURL_range ,
+    :Distribution_Shape_grammar_range ,
+    :Distribution_Shape_sample_range ,
+    :Distribution_Shape_temporal_range .
+
+#---------------------------------------------------------------------------
+# MANDATORY - Range Constraints (sh:Violation)
+#---------------------------------------------------------------------------
+:Distribution_Shape_accessURL_range
+  a sh:PropertyShape ;
+  sh:path dcat:accessURL ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Violation .
+
+:Distribution_Shape_mobilityDataStandard_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:mobilityDataStandard ;
+  sh:or (
+    [
+      sh:nodeKind sh:IRI ;
+      sh:pattern "^https://w3id\\.org/mobilitydcat-ap/mobility-data-standard/.+$" ;
+    ]
+    [
+      sh:nodeKind sh:BlankNodeOrIRI ;
+      sh:class mobilitydcatap:MobilityDataStandard ;
+    ]
+  ) ;
+  sh:severity sh:Violation .
+
+:Distribution_Shape_format_range
+  a sh:PropertyShape ;
+  sh:path dct:format ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:MediaTypeOrExtent ;
+  sh:pattern "^http://publications\\.europa\\.eu/resource/authority/file-type/.+$" ;
+  sh:severity sh:Violation .
+
+:Distribution_Shape_rights_range
+  a sh:PropertyShape ;
+  sh:path dct:rights ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:RightsStatement ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# RECOMMENDED - Range Constraints (sh:Warning)
+#---------------------------------------------------------------------------
+:Distribution_Shape_applicationLayerProtocol_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:applicationLayerProtocol ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/application-layer-protocol/.+$" ;
+  sh:severity sh:Warning .
+
+:Distribution_Shape_licence_range
+  a sh:PropertyShape ;
+  sh:path dct:license ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:LicenseDocument ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# OPTIONAL - Range Constraints (sh:Info)
+#---------------------------------------------------------------------------
+:Distribution_Shape_accessService_range
+  a sh:PropertyShape ;
+  sh:path dcat:accessService ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dcat:DataService ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_communicationMethod_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:communicationMethod ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/communication-method/.+$" ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_downloadURL_range
+  a sh:PropertyShape ;
+  sh:path dcat:downloadURL ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_grammar_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:grammar ;
+  sh:nodeKind sh:IRI ;
+  sh:class skos:Concept ;
+  sh:pattern "^https://w3id\\.org/mobilitydcat-ap/grammar/.+$" ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_sample_range
+  a sh:PropertyShape ;
+  sh:path adms:sample ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_temporal_range
+  a sh:PropertyShape ;
+  sh:path dct:temporal ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dct:PeriodOfTime ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# KIND SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Kind_Shape>
+  a sh:NodeShape ;
+  sh:targetClass vcard:Kind ;
+  sh:name "Kind (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :Kind_Shape_email_range ,
+    :Kind_Shape_hasURL_range ,
+    :Kind_Shape_hasAddress_range ,
+    :Kind_Shape_hasTelephone_range .
+
+:Kind_Shape_email_range
+  a sh:PropertyShape ;
+  sh:path vcard:hasEmail ;
+  sh:nodeKind sh:IRI ;
+  sh:severity sh:Violation .
+
+:Kind_Shape_hasURL_range
+  a sh:PropertyShape ;
+  sh:path vcard:hasURL ;
+  sh:nodeKind sh:IRI ;
+  sh:severity sh:Warning .
+
+:Kind_Shape_hasAddress_range
+  a sh:PropertyShape ;
+  sh:path vcard:hasAddress ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class vcard:Address ;
+  sh:severity sh:Info .
+
+:Kind_Shape_hasTelephone_range
+  a sh:PropertyShape ;
+  sh:path vcard:hasTelephone ;
+  sh:nodeKind sh:IRI ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# LICENCE DOCUMENT SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#LicenceDocument_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:LicenseDocument ;
+  sh:name "Licence Document (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :LicenceDocument_Shape_identifier_range .
+
+:LicenceDocument_Shape_identifier_range
+  a sh:PropertyShape ;
+  sh:path dct:identifier ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class skos:Concept ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# LOCATION SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Location_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:Location ;
+  sh:name "Location (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :Location_Shape_inScheme_range .
+
+:Location_Shape_inScheme_range
+  a sh:PropertyShape ;
+  sh:path skos:inScheme ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class skos:ConceptScheme ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# MOBILITY DATA STANDARD SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#MobilityDataStandard_Shape>
+  a sh:NodeShape ;
+  sh:targetClass mobilitydcatap:MobilityDataStandard ;
+  sh:name "Mobility Data Standard (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :MobilityDataStandard_Shape_conformsTo_range ,
+    :MobilityDataStandard_Shape_schema_range .
+
+:MobilityDataStandard_Shape_conformsTo_range
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class skos:Concept ;
+  sh:severity sh:Info .
+
+:MobilityDataStandard_Shape_schema_range
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:schema ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# PERIOD OF TIME - No range file entry needed
+# Both properties are datatype constraints fully handled in main file.
+#---------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------
+# QUALITY ANNOTATION SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#QualityAnnotation_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dqv:QualityAnnotation ;
+  sh:name "Quality Annotation (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :QualityAnnotation_Shape_hasBody_range ,
+    :QualityAnnotation_Shape_hasTarget_range .
+
+:QualityAnnotation_Shape_hasBody_range
+  a sh:PropertyShape ;
+  sh:path oa:hasBody ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:severity sh:Info .
+
+:QualityAnnotation_Shape_hasTarget_range
+  a sh:PropertyShape ;
+  sh:path oa:hasTarget ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class dcat:Dataset ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# RIGHTS STATEMENT SHAPE - Range Constraints
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#RightsStatement_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:RightsStatement ;
+  sh:name "Rights Statement (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :RightsStatement_Shape_type_range .
+
+:RightsStatement_Shape_type_range
+  a sh:PropertyShape ;
+  sh:path dct:type ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:class skos:Concept ;
+  sh:severity sh:Violation .

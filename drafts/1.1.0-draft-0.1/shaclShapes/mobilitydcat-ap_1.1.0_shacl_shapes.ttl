@@ -1,0 +1,1557 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/1.1.0#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#>
+  a owl:Ontology , adms:Asset ;
+
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/releases/1.1.0/mobilitydcat-ap_1.1.0_shacl_range.ttl> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/releases/1.1.0/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl> ;
+
+  owl:versionInfo "1.1.0" ;
+  adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
+  dcatap:availability dcatap:stable ;
+
+  dct:conformsTo <https://www.w3.org/TR/shacl> ;
+  dct:license <https://creativecommons.org/licenses/by/4.0> ;
+  dct:created "2023-08-14"^^xsd:date ;
+  dct:issued "2023-08-14"^^xsd:date ;
+  dct:modified "2025-01-17"^^xsd:date ;
+  dct:dateCopyrighted "2023"^^xsd:gYear ;
+
+  dct:title "mobilityDCAT-AP 1.1.0 SHACL Constraints - Basic Validation"@en ;
+  dct:description "SHACL validation constraints for mobilityDCAT-AP 1.1.0, extending DCAT-AP 2.0.1. Contains cardinality, nodeKind and datatype checks. Range constraints are in the range file. Controlled vocabulary constraints are in the MDR file."@en ;
+
+  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
+
+  bibo:editor [
+    a foaf:Person ;
+    owl:sameAs <https://lina-molinas-comet.name/foaf/#me> ;
+    owl:sameAs <https://orcid.org/0000-0001-5446-6947> ;
+    foaf:name "Lina Molinas Comet"
+  ] ;
+  bibo:editor [
+    a foaf:Person ;
+    owl:sameAs <https://github.com/Daham-Mustaf> ;
+    owl:sameAs <https://orcid.org/0000-0003-1867-4428> ;
+    foaf:name "Daham Mustafa"
+  ] ;
+
+  dct:creator [
+    a foaf:Group ;
+    foaf:name "NAPCORE SWG 4.4" ;
+    foaf:page <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP>
+  ] ;
+  dct:publisher <https://napcore.eu/> ;
+  dct:rightsHolder <https://napcore.eu/> ;
+
+  dcat:distribution [
+    a adms:AssetDistribution ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ,
+               <http://www.w3.org/ns/formats/data/Turtle> ;
+    dct:title "SHACL Basic Validation (Turtle)"@en ;
+    dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/1.1.0/mobilitydcat-ap_1.1.0_shacl_shapes.ttl> ;
+    dcat:mediaType "text/turtle"^^dct:IMT
+  ] .
+
+#---------------------------------------------------------------------------
+# AGENT SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Agent_Shape>
+  a sh:NodeShape ;
+  sh:targetClass foaf:Agent ;
+  sh:name "Agent (mobilityDCAT-AP) - Extensions"@en ;
+  sh:description "Extends DCAT-AP 2.0.1 Agent with mobility-specific contact and organizational properties. Base properties (foaf:name, dct:type) are inherited from DCAT-AP 2.0.1."@en ;
+  
+  sh:property 
+    :Agent_Shape_address ,
+    :Agent_Shape_affiliation ,
+    :Agent_Shape_email ,
+    :Agent_Shape_firstName ,
+    :Agent_Shape_phone ,
+    :Agent_Shape_surname ,
+    :Agent_Shape_workplaceHomepage .
+
+#---------------------------------------------------------------------------
+# Named Property Shapes - Agent (Basic Validation)
+#---------------------------------------------------------------------------
+:Agent_Shape_address
+  sh:path locn:address ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  # sh:maxCount 1 ;
+  sh:name "address"@en ;
+  sh:description "The postal address of the Agent. This property is analogous to an addition by GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Address must be a blank node or IRI and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_affiliation
+  sh:path org:memberOf ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:name "affiliation"@en ;
+  sh:description "If the agent is a person, this property specifies their organizational affiliation. This property is analogous to an addition by GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Affiliation must be a blank node or IRI"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_email
+  sh:path foaf:mbox ;
+  sh:nodeKind sh:IRI ;
+  sh:name "email"@en ;
+  sh:description "The email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]."@en ;
+  sh:message "Email must be an IRI using the mailto: scheme (e.g., mailto:example@example.com)"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_firstName
+  sh:path foaf:firstName ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "first name"@en ;
+  sh:description "If the agent is a person, this property specifies their first name."@en ;
+  sh:message "First name must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_phone
+  sh:path foaf:phone ;
+  sh:nodeKind sh:IRI ;
+  sh:name "phone"@en ;
+  sh:description "The phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogous to an addition by GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Phone must be an IRI using the tel: scheme (e.g., tel:+1234567890)"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_surname
+  sh:path foaf:surname ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "surname"@en ;
+  sh:description "If the agent is a person, this property specifies their surname."@en ;
+  sh:message "Surname must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Agent_Shape_workplaceHomepage
+  sh:path foaf:workplaceHomepage ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 ;
+  sh:name "workplace homepage"@en ;
+  sh:description "The website of the Agent."@en ;
+  sh:message "Workplace homepage must be an IRI and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# ADDRESS SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Address_Shape>
+  a sh:NodeShape ;
+  sh:targetClass locn:Address ;
+  sh:name "Address (mobilityDCAT-AP)"@en ;
+  sh:description "Postal address of an Agent. This class and its properties are analogous to additions by GeoDCAT-AP v2.0.0."@en ;
+  
+  sh:property 
+    :Address_Shape_adminUnitL1 ,
+    :Address_Shape_adminUnitL2 ,
+    :Address_Shape_postCode ,
+    :Address_Shape_postName ,
+    :Address_Shape_thoroughfare .
+
+#---------------------------------------------------------------------------
+# Named Property Shapes - Address (Basic Validation)
+#---------------------------------------------------------------------------
+
+:Address_Shape_adminUnitL1
+  sh:path locn:adminUnitL1 ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "country"@en ;
+  sh:description "The country of an Address. Depending on the context, this may be a country name or a country code."@en ;
+  sh:message "Country must be a literal and can appear at most once"@en ;
+  sh:severity sh:Violation .
+
+:Address_Shape_adminUnitL2
+  sh:path locn:adminUnitL2 ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "administrative area"@en ;
+  sh:description "The administrative area of an Address. Depending on the country, this corresponds to a province, a county, a region, or a state."@en ;
+  sh:message "Administrative area must be a literal and can appear at most once"@en ;
+  sh:severity sh:Violation .
+
+:Address_Shape_postCode
+  sh:path locn:postCode ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "postal code"@en ;
+  sh:description "The postal code of an Address."@en ;
+  sh:message "Postal code must be a literal and can appear at most once"@en ;
+  sh:severity sh:Violation .
+
+:Address_Shape_postName
+  sh:path locn:postName ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "city"@en ;
+  sh:description "The city of an Address."@en ;
+  sh:message "City must be a literal and can appear at most once"@en ;
+  sh:severity sh:Violation .
+
+:Address_Shape_thoroughfare
+  sh:path locn:thoroughfare ;
+  sh:nodeKind sh:Literal ;
+  sh:maxCount 1 ;
+  sh:name "street address"@en ;
+  sh:description "The street name and civic number of an Address."@en ;
+  sh:message "Street address must be a literal and can appear at most once"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# ASSESSMENT SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Assessment_Shape>
+  a sh:NodeShape ;
+  sh:targetClass mobilitydcatap:Assessment ;
+  sh:name "Assessment (mobilityDCAT-AP)"@en ;
+  sh:description "An assessment procedure by an external organisation. This organisation may be a National Body in the context of EU Delegated Regulations."@en ;
+  sh:property
+    :Assessment_Shape_assessmentDate ,
+    :Assessment_Shape_assessmentResult .
+
+:Assessment_Shape_assessmentDate
+  a sh:PropertyShape ;
+  sh:path dct:issued ;
+  sh:maxCount 1 ;
+  sh:or (
+    [ sh:datatype xsd:date ]
+    [ sh:datatype xsd:dateTime ]
+  ) ;
+  sh:name "assessment date"@en ;
+  sh:description "The date of the latest assessment procedure."@en ;
+  sh:message "Assessment date must be xsd:date or xsd:dateTime and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Assessment_Shape_assessmentResult
+  a sh:PropertyShape ;
+  sh:path oa:hasBody ;
+  sh:maxCount 1 ;
+  sh:name "assessment result"@en ;
+  sh:description "The result of the latest assessment procedure, as a URL or Embedded Textual Body."@en ;
+  sh:message "Assessment result can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# CATALOGUE SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Catalogue_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Catalog ;
+  sh:name "Catalogue (mobilityDCAT-AP)"@en ;
+  sh:description "Extends DCAT-AP 2.0.1 Catalogue. Raises homepage, spatial, record to mandatory. Adds identifier and otherIdentifier. publisher, title, description, dataset are redefined with mobility cardinality. licence, issued, modified, themeTaxonomy, hasPart, isPartOf inherited from DCAT-AP 2.0.1."@en ;
+  sh:property
+    :Catalogue_Shape_dataset ,
+    :Catalogue_Shape_description ,
+    :Catalogue_Shape_homepage ,
+    :Catalogue_Shape_record ,
+    :Catalogue_Shape_spatial ,
+    :Catalogue_Shape_title ,
+    :Catalogue_Shape_language ,
+    :Catalogue_Shape_identifier ,
+    :Catalogue_Shape_otherIdentifier .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:Catalogue_Shape_dataset
+  a sh:PropertyShape ;
+  sh:path dcat:dataset ;
+  sh:minCount 1 ;
+  sh:name "dataset"@en ;
+  sh:description "Links the Catalogue to a Dataset. Mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Catalogue must have at least one dataset"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_description
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "description"@en ;
+  sh:description "Free-text name of the mobility data platform. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_homepage
+  a sh:PropertyShape ;
+  sh:path foaf:homepage ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "homepage"@en ;
+  sh:description "Main web page of the mobility data portal. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Homepage is mandatory and must appear exactly once"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_record
+  a sh:PropertyShape ;
+  sh:path dcat:record ;
+  sh:minCount 1 ;
+  sh:name "catalogue record"@en ;
+  sh:description "Metadata record that is part of the Catalogue. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Catalogue must have at least one catalogue record"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_spatial
+  a sh:PropertyShape ;
+  sh:path dct:spatial ;
+  sh:minCount 1 ;
+  sh:name "spatial / geographic coverage"@en ;
+  sh:description "Country code where the data platform is hosted. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Spatial coverage is mandatory. At least one location must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Catalogue_Shape_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "title"@en ;
+  sh:description "Name of the mobility data portal. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:Catalogue_Shape_language
+  a sh:PropertyShape ;
+  sh:path dct:language ;
+  sh:name "language"@en ;
+  sh:description "Language of the metadata in the portal. Repeated for multiple languages (§8)."@en ;
+  sh:message "Language must be a dct:LinguisticSystem instance or EU language authority URI"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:Catalogue_Shape_identifier
+  a sh:PropertyShape ;
+  sh:path dct:identifier ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "identifier"@en ;
+  sh:description "Identifier for the mobility data portal. SHOULD be the URI from rdf:about. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Identifier must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Catalogue_Shape_otherIdentifier
+  a sh:PropertyShape ;
+  sh:path adms:identifier ;
+  sh:maxCount 1 ;
+  sh:name "other identifier"@en ;
+  sh:description "Additional identifier besides dct:identifier. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Other identifier can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# CATALOGUE RECORD SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#CatalogueRecord_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:CatalogRecord ;
+  sh:name "Catalogue Record (mobilityDCAT-AP)"@en ;
+  sh:description "Extends DCAT-AP 2.0.1 Catalogue Record. Raises language to mandatory (1..n). Adds creation date (mandatory) and publisher (optional). primaryTopic, modified, source inherited from DCAT-AP 2.0.1."@en ;
+  sh:property
+    :CatalogueRecord_Shape_language ,
+    :CatalogueRecord_Shape_creationDate ,
+    :CatalogueRecord_Shape_publisher .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:CatalogueRecord_Shape_language
+  a sh:PropertyShape ;
+  sh:path dct:language ;
+  sh:minCount 1 ;
+  sh:name "language"@en ;
+  sh:description "Language of the textual metadata. Raised to mandatory in mobilityDCAT-AP (1..n). Range constraint dct:LinguisticSystem inherited from DCAT-AP 2.0.1."@en ;
+  sh:message "Language is mandatory. At least one language must be provided"@en ;
+  sh:severity sh:Violation .
+
+:CatalogueRecord_Shape_creationDate
+  a sh:PropertyShape ;
+  sh:path dct:created ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:or (
+    [ sh:datatype xsd:date ]
+    [ sh:datatype xsd:dateTime ]
+  ) ;
+  sh:name "creation date"@en ;
+  sh:description "Date when the metadata entry was created. Should be system-generated. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Creation date is mandatory. Exactly one value must be provided as xsd:date or xsd:dateTime"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:CatalogueRecord_Shape_publisher
+  a sh:PropertyShape ;
+  sh:path dct:publisher ;
+  sh:maxCount 1 ;
+  sh:name "publisher"@en ;
+  sh:description "Entity responsible for creation and maintenance of the metadata entry. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Publisher can appear at most once"@en ;
+  sh:severity sh:Info .
+#---------------------------------------------------------------------------
+# CATEGORY SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Category_Shape>
+  a sh:NodeShape ;
+  sh:targetClass skos:Concept ;
+  sh:name "Category (mobilityDCAT-AP)"@en ;
+  sh:description "A category of a dataset. Used in context of dcat:theme. Not defined in DCAT-AP 2.0.1."@en ;
+  sh:property
+    :Category_Shape_prefLabel ,
+    :Category_Shape_inScheme .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:Category_Shape_prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "preferred label"@en ;
+  sh:description "Preferred label of the Category. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Preferred label is mandatory. At least one literal must be provided"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:Category_Shape_inScheme
+  a sh:PropertyShape ;
+  sh:path skos:inScheme ;
+  sh:maxCount 1 ;
+  sh:name "category scheme"@en ;
+  sh:description "The Category Scheme to which the Category belongs. Analogous to GeoDCAT-AP v2.0.0."@en ;
+  sh:message "Category scheme can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# CATEGORY SCHEME SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#CategoryScheme_Shape>
+  a sh:NodeShape ;
+  sh:targetClass skos:ConceptScheme ;
+  sh:name "Category Scheme (mobilityDCAT-AP)"@en ;
+  sh:description "A categorisation scheme listing all potential categories. skos:ConceptScheme exists in DCAT-AP 2.0.1 but has no properties defined. mobilityDCAT-AP adds mandatory title."@en ;
+  sh:property
+    :CategoryScheme_Shape_title .
+
+:CategoryScheme_Shape_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "title"@en ;
+  sh:description "Name of the Category Scheme. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Title is mandatory. At least one literal must be provided"@en ;
+  sh:severity sh:Violation .
+#---------------------------------------------------------------------------
+# CHECKSUM SHAPE - Compatibility Class (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Checksum_Shape>
+  a sh:NodeShape ;
+  sh:targetClass spdx:Checksum ;
+  sh:name "Checksum (mobilityDCAT-AP)"@en ;
+  sh:description "A value that allows the contents of a file to be authenticated. Kept for compatibility with DCAT-AP 2.0.1. spdx:checksum on Distribution is removed in mobilityDCAT-AP."@en ;
+  sh:property
+    :Checksum_Shape_algorithm ,
+    :Checksum_Shape_checksumValue .
+
+:Checksum_Shape_algorithm
+  a sh:PropertyShape ;
+  sh:path spdx:algorithm ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:hasValue spdx:checksumAlgorithm_sha1 ;
+  sh:name "algorithm"@en ;
+  sh:description "Algorithm used to produce the checksum. Only SHA-1 is currently supported."@en ;
+  sh:message "Algorithm is mandatory. Exactly one value must be spdx:checksumAlgorithm_sha1"@en ;
+  sh:severity sh:Violation .
+
+:Checksum_Shape_checksumValue
+  a sh:PropertyShape ;
+  sh:path spdx:checksumValue ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype xsd:hexBinary ;
+  sh:name "checksum value"@en ;
+  sh:description "Lower case hexadecimal encoded digest value produced using the specified algorithm."@en ;
+  sh:message "Checksum value is mandatory. Exactly one xsd:hexBinary literal must be provided"@en ;
+  sh:severity sh:Violation .
+#---------------------------------------------------------------------------
+# DATA SERVICE SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#DataService_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:DataService ;
+  sh:name "Data Service (mobilityDCAT-AP)"@en ;
+  sh:description "Kept for compatibility with DCAT-AP 2.0.1. Optional class in mobilityDCAT-AP. All properties from DCAT-AP 2.0.1 are retained."@en ;
+  sh:property
+    :DataService_Shape_endpointURL ,
+    :DataService_Shape_title ,
+    :DataService_Shape_endpointDescription ,
+    :DataService_Shape_servesDataset ,
+    :DataService_Shape_accessRights ,
+    :DataService_Shape_description ,
+    :DataService_Shape_licence .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:DataService_Shape_endpointURL
+  a sh:PropertyShape ;
+  sh:path dcat:endpointURL ;
+  sh:minCount 1 ;
+  sh:name "endpoint URL"@en ;
+  sh:description "Root location or primary endpoint of the Data Service (1..n)."@en ;
+  sh:message "Endpoint URL is mandatory. At least one must be provided"@en ;
+  sh:severity sh:Violation .
+
+:DataService_Shape_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "title"@en ;
+  sh:description "Name of the Data Service. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Title is mandatory. At least one literal must be provided"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:DataService_Shape_endpointDescription
+  a sh:PropertyShape ;
+  sh:path dcat:endpointDescription ;
+  sh:name "endpoint description"@en ;
+  sh:description "Description of the services available via the endpoints, including operations and parameters (0..n)."@en ;
+  sh:message "Endpoint description must be a resource"@en ;
+  sh:severity sh:Warning .
+
+:DataService_Shape_servesDataset
+  a sh:PropertyShape ;
+  sh:path dcat:servesDataset ;
+  sh:name "serves dataset"@en ;
+  sh:description "A Dataset that this Data Service can distribute (0..n)."@en ;
+  sh:message "Serves dataset must be a dcat:Dataset instance"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:DataService_Shape_accessRights
+  a sh:PropertyShape ;
+  sh:path dct:accessRights ;
+  sh:maxCount 1 ;
+  sh:name "access rights"@en ;
+  sh:description "Information regarding access or restrictions based on privacy, security, or other policies (0..1)."@en ;
+  sh:message "Access rights can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:DataService_Shape_description
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:nodeKind sh:Literal ;
+  sh:name "description"@en ;
+  sh:description "Free-text account of the Data Service. Repeated for parallel language versions (§8) (0..n)."@en ;
+  sh:message "Description must be a literal"@en ;
+  sh:severity sh:Info .
+
+:DataService_Shape_licence
+  a sh:PropertyShape ;
+  sh:path dct:license ;
+  sh:maxCount 1 ;
+  sh:name "licence"@en ;
+  sh:description "Licence under which the Data Service is made available (0..1)."@en ;
+  sh:message "Licence can appear at most once"@en ;
+  sh:severity sh:Info .
+#---------------------------------------------------------------------------
+# DATASET SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Dataset_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  sh:name "Dataset (mobilityDCAT-AP)"@en ;
+  sh:description "Extends DCAT-AP 2.0.1 Dataset. Raises distribution, frequency, spatial, publisher to mandatory. Adds mobilityTheme. identifier, issued, modified inherited from DCAT-AP 2.0.1 but redefined here for datatype constraints."@en ;
+  sh:property
+    # === MANDATORY (§4.10.1) ===
+    :Dataset_Shape_description ,
+    :Dataset_Shape_distribution ,
+    :Dataset_Shape_accrualPeriodicity ,
+    :Dataset_Shape_mobilityTheme ,
+    :Dataset_Shape_spatial ,
+    :Dataset_Shape_title ,
+    :Dataset_Shape_publisher ,
+    # === RECOMMENDED (§4.10.2) ===
+    :Dataset_Shape_georeferencingMethod ,
+    :Dataset_Shape_contactPoint ,
+    :Dataset_Shape_keyword ,
+    :Dataset_Shape_networkCoverage ,
+    :Dataset_Shape_conformsTo ,
+    :Dataset_Shape_rightsHolder ,
+    :Dataset_Shape_theme ,
+    :Dataset_Shape_temporal ,
+    :Dataset_Shape_transportMode ,
+    # === OPTIONAL (§4.10.3) ===
+    :Dataset_Shape_applicableLegislation ,
+    :Dataset_Shape_assessmentResult ,
+    :Dataset_Shape_hasVersion ,
+    :Dataset_Shape_identifier ,
+    :Dataset_Shape_intendedInformationService ,
+    :Dataset_Shape_isReferencedBy ,
+    :Dataset_Shape_isVersionOf ,
+    :Dataset_Shape_language ,
+    :Dataset_Shape_otherIdentifier ,
+    :Dataset_Shape_relation ,
+    :Dataset_Shape_issued ,
+    :Dataset_Shape_modified ,
+    :Dataset_Shape_versionInfo ,
+    :Dataset_Shape_versionNotes ,
+    :Dataset_Shape_hasQualityAnnotation .
+
+#---------------------------------------------------------------------------
+# MANDATORY PROPERTIES (sh:Violation)
+#---------------------------------------------------------------------------
+:Dataset_Shape_description
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "description"@en ;
+  sh:description "Free-text description of the dataset. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_distribution
+  a sh:PropertyShape ;
+  sh:path dcat:distribution ;
+  sh:minCount 1 ;
+  sh:name "dataset distribution"@en ;
+  sh:description "Links the dataset to an available distribution. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Distribution is mandatory. At least one distribution must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_accrualPeriodicity
+  a sh:PropertyShape ;
+  sh:path dct:accrualPeriodicity ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "frequency"@en ;
+  sh:description "How often the delivered content is updated. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Frequency is mandatory. Exactly one value must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_mobilityTheme
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:mobilityTheme ;
+  sh:minCount 1 ;
+  sh:name "mobility theme"@en ;
+  sh:description "Mobility-related theme of the delivered content. New mandatory property in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Mobility theme is mandatory. At least one value must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_spatial
+  a sh:PropertyShape ;
+  sh:path dct:spatial ;
+  sh:minCount 1 ;
+  sh:name "spatial / geographic coverage"@en ;
+  sh:description "Geographic region covered by the delivered content. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
+  sh:message "Spatial coverage is mandatory. At least one location must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "title"@en ;
+  sh:description "Name of the dataset. Repeated for parallel language versions (§8)."@en ;
+  sh:message "Title is mandatory, cannot be empty, each language only once"@en ;
+  sh:severity sh:Violation .
+
+:Dataset_Shape_publisher
+  a sh:PropertyShape ;
+  sh:path dct:publisher ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "publisher"@en ;
+  sh:description "Entity that publishes the dataset. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Publisher is mandatory. Exactly one publisher must be provided"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# RECOMMENDED PROPERTIES (sh:Warning)
+#---------------------------------------------------------------------------
+:Dataset_Shape_georeferencingMethod
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:georeferencingMethod ;
+  sh:name "georeferencing method"@en ;
+  sh:description "Georeferencing method used in the dataset (0..n)."@en ;
+  sh:message "Georeferencing method must be from the controlled vocabulary"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_contactPoint
+  a sh:PropertyShape ;
+  sh:path dcat:contactPoint ;
+  sh:name "contact point"@en ;
+  sh:description "Contact information for communication about the dataset (0..n)."@en ;
+  sh:message "Contact point must be a vcard:Kind instance"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_keyword
+  a sh:PropertyShape ;
+  sh:path dcat:keyword ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:minLength 1 ;
+  sh:name "keyword / tag"@en ;
+  sh:description "Keyword or tag describing the dataset (0..n)."@en ;
+  sh:message "Keywords must have valid EU language tags and cannot be empty"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_networkCoverage
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:networkCoverage ;
+  sh:name "network coverage"@en ;
+  sh:description "Part of the transport network covered by the delivered content (0..n)."@en ;
+  sh:message "Network coverage must be from the controlled vocabulary"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_conformsTo
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:name "reference system"@en ;
+  sh:description "Spatial reference system used in the dataset. Analogous to GeoDCAT-AP v2.0.0 (0..n)."@en ;
+  sh:message "Reference system must be from the OGC EPSG register"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_rightsHolder
+  a sh:PropertyShape ;
+  sh:path dct:rightsHolder ;
+  sh:name "rights holder"@en ;
+  sh:description "Entity that legally owns or holds the rights of the data. Analogous to GeoDCAT-AP v2.0.0 (0..n)."@en ;
+  sh:message "Rights holder must be a foaf:Agent instance"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_theme
+  a sh:PropertyShape ;
+  sh:path dcat:theme ;
+  sh:name "theme / category"@en ;
+  sh:description "Generic theme of the delivered content from EU Data Themes vocabulary (0..n)."@en ;
+  sh:message "Theme must be from the EU Data Themes vocabulary"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_temporal
+  a sh:PropertyShape ;
+  sh:path dct:temporal ;
+  sh:name "temporal coverage"@en ;
+  sh:description "Temporal period of the time reference of the delivered content (0..n)."@en ;
+  sh:message "Temporal coverage must be a dct:PeriodOfTime instance"@en ;
+  sh:severity sh:Warning .
+
+:Dataset_Shape_transportMode
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:transportMode ;
+  sh:name "transport mode"@en ;
+  sh:description "Transport mode covered by the delivered content (0..n)."@en ;
+  sh:message "Transport mode must be from the controlled vocabulary"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# OPTIONAL PROPERTIES (sh:Info)
+#---------------------------------------------------------------------------
+:Dataset_Shape_applicableLegislation
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:name "applicable legislation"@en ;
+  sh:description "Legal frameworks relevant for the dataset (0..n)."@en ;
+  sh:message "Applicable legislation must be an IRI"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_assessmentResult
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:assessmentResult ;
+  sh:maxCount 1 ;
+  sh:name "assessment result"@en ;
+  sh:description "Results from an assessment process by an external organisation (0..1)."@en ;
+  sh:message "Assessment result can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_hasVersion
+  a sh:PropertyShape ;
+  sh:path dct:hasVersion ;
+  sh:name "has version"@en ;
+  sh:description "Related dataset that is a version of the described dataset (0..n)."@en ;
+  sh:message "Has version must be a dcat:Dataset instance"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_identifier
+  a sh:PropertyShape ;
+  sh:path dct:identifier ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "identifier"@en ;
+  sh:description "Identifier for the dataset. SHOULD be the URI from rdf:about (0..1)."@en ;
+  sh:message "Identifier must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_intendedInformationService
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:intendedInformationService ;
+  sh:name "intended information service"@en ;
+  sh:description "Predefined information services the data content is intended to support (0..n)."@en ;
+  sh:message "Intended information service must be from the controlled vocabulary"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_isReferencedBy
+  a sh:PropertyShape ;
+  sh:path dct:isReferencedBy ;
+  sh:name "is referenced by"@en ;
+  sh:description "Another related dataset that references this dataset (0..n)."@en ;
+  sh:message "Is referenced by must be a resource"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_isVersionOf
+  a sh:PropertyShape ;
+  sh:path dct:isVersionOf ;
+  sh:name "is version of"@en ;
+  sh:description "Related dataset of which this dataset is a version (0..n)."@en ;
+  sh:message "Is version of must be a dcat:Dataset instance"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_language
+  a sh:PropertyShape ;
+  sh:path dct:language ;
+  sh:name "language"@en ;
+  sh:description "Language of content data embedded in the dataset (0..n)."@en ;
+  sh:message "Language must be a dct:LinguisticSystem instance or EU language authority URI"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_otherIdentifier
+  a sh:PropertyShape ;
+  sh:path adms:identifier ;
+  sh:name "other identifier"@en ;
+  sh:description "Additional identifier besides dct:identifier (0..n)."@en ;
+  sh:message "Other identifier must be an adms:Identifier instance"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_relation
+  a sh:PropertyShape ;
+  sh:path dct:relation ;
+  sh:name "related resource"@en ;
+  sh:description "Another related dataset (0..n)."@en ;
+  sh:message "Related resource must be a resource"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_issued
+  a sh:PropertyShape ;
+  sh:path dct:issued ;
+  sh:maxCount 1 ;
+  sh:or (
+    [ sh:datatype xsd:date ]
+    [ sh:datatype xsd:dateTime ]
+  ) ;
+  sh:name "release date"@en ;
+  sh:description "Date of formal issuance of the dataset (0..1)."@en ;
+  sh:message "Release date must be xsd:date or xsd:dateTime and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_modified
+  a sh:PropertyShape ;
+  sh:path dct:modified ;
+  sh:maxCount 1 ;
+  sh:or (
+    [ sh:datatype xsd:date ]
+    [ sh:datatype xsd:dateTime ]
+  ) ;
+  sh:name "update / modification date"@en ;
+  sh:description "Most recent date on which the dataset content was changed (0..1)."@en ;
+  sh:message "Modification date must be xsd:date or xsd:dateTime and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_versionInfo
+  a sh:PropertyShape ;
+  sh:path owl:versionInfo ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "version"@en ;
+  sh:description "Version number or designation of the dataset (0..1)."@en ;
+  sh:message "Version must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_versionNotes
+  a sh:PropertyShape ;
+  sh:path adms:versionNotes ;
+  sh:nodeKind sh:Literal ;
+  sh:name "version notes"@en ;
+  sh:description "Textual description of differences from previous version. Repeated for parallel language versions (§8) (0..n)."@en ;
+  sh:message "Version notes must be a literal"@en ;
+  sh:severity sh:Info .
+
+:Dataset_Shape_hasQualityAnnotation
+  a sh:PropertyShape ;
+  sh:path dqv:hasQualityAnnotation ;
+  sh:name "quality description"@en ;
+  sh:description "Quality aspects regarding the delivered content (0..n)."@en ;
+  sh:message "Quality annotation must be a dqv:QualityAnnotation instance"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# DISTRIBUTION SHAPE - Mobility Extensions (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Distribution_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Distribution ;
+  sh:name "Distribution (mobilityDCAT-AP)"@en ;
+  sh:description "Extends DCAT-AP 2.0.1 Distribution. Raises format, rights to mandatory. Adds mobilityDataStandard. Removes availability, byteSize, checksum, compressFormat, mediaType, packageFormat, status. accessURL redefined with maxCount 1."@en ;
+  sh:property [ sh:path dcat:accessURL ; sh:deactivated true ] ;
+  sh:property
+    :Distribution_Shape_accessURL ,
+    :Distribution_Shape_mobilityDataStandard ,
+    :Distribution_Shape_format ,
+    :Distribution_Shape_rights ,
+    :Distribution_Shape_applicationLayerProtocol ,
+    :Distribution_Shape_description ,
+    :Distribution_Shape_licence ,
+    :Distribution_Shape_accessService ,
+    :Distribution_Shape_characterEncoding ,
+    :Distribution_Shape_communicationMethod ,
+    :Distribution_Shape_dataFormatNotes ,
+    :Distribution_Shape_downloadURL ,
+    :Distribution_Shape_grammar ,
+    :Distribution_Shape_sample ,
+    :Distribution_Shape_temporal ,
+    :Distribution_Shape_title .
+
+#---------------------------------------------------------------------------
+# MANDATORY PROPERTIES (sh:Violation)
+#---------------------------------------------------------------------------
+:Distribution_Shape_accessURL
+  a sh:PropertyShape ;
+  sh:path dcat:accessURL ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "access URL"@en ;
+  sh:description "URL giving access to the Distribution. Redefined from DCAT-AP 2.0.1 to enforce maxCount 1 (1..1)."@en ;
+  sh:message "Access URL is mandatory. Exactly one must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Distribution_Shape_mobilityDataStandard
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:mobilityDataStandard ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "mobility data standard"@en ;
+  sh:description "Mobility data standard applied for the delivered content. New mandatory property in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Mobility data standard is mandatory. Exactly one must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Distribution_Shape_format
+  a sh:PropertyShape ;
+  sh:path dct:format ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "format"@en ;
+  sh:description "Technical syntax of the delivered content. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Format is mandatory. Exactly one must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Distribution_Shape_rights
+  a sh:PropertyShape ;
+  sh:path dct:rights ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:name "rights"@en ;
+  sh:description "Rights statement about intellectual property rights. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
+  sh:message "Rights is mandatory. Exactly one rights statement must be provided"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# RECOMMENDED PROPERTIES (sh:Warning)
+#---------------------------------------------------------------------------
+:Distribution_Shape_applicationLayerProtocol
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:applicationLayerProtocol ;
+  sh:maxCount 1 ;
+  sh:name "application layer protocol"@en ;
+  sh:description "Transmitting channel of the distribution. New recommended property in mobilityDCAT-AP (0..1)."@en ;
+  sh:message "Application layer protocol can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+:Distribution_Shape_description
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "description"@en ;
+  sh:description "Free-text account of the Distribution. Repeated for parallel language versions (§8) (0..n)."@en ;
+  sh:message "Description must have valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Warning .
+
+:Distribution_Shape_licence
+  a sh:PropertyShape ;
+  sh:path dct:license ;
+  sh:maxCount 1 ;
+  sh:name "licence"@en ;
+  sh:description "Licence under which the Distribution is made available (0..1)."@en ;
+  sh:message "Licence can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# OPTIONAL PROPERTIES (sh:Info)
+#---------------------------------------------------------------------------
+:Distribution_Shape_accessService
+  a sh:PropertyShape ;
+  sh:path dcat:accessService ;
+  sh:name "access service"@en ;
+  sh:description "Data Service that gives access to the Distribution (0..n)."@en ;
+  sh:message "Access service must be a dcat:DataService instance"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_characterEncoding
+  a sh:PropertyShape ;
+  sh:path cnt:characterEncoding ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "character encoding"@en ;
+  sh:description "Technical encoding format of the delivered content. Analogous to GeoDCAT-AP v2.0.0 (0..1)."@en ;
+  sh:message "Character encoding must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_communicationMethod
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:communicationMethod ;
+  sh:maxCount 1 ;
+  sh:name "communication method"@en ;
+  sh:description "Push or pull mode of the data interface. New optional property in mobilityDCAT-AP (0..1)."@en ;
+  sh:message "Communication method can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_dataFormatNotes
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:dataFormatNotes ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "data format notes"@en ;
+  sh:description "Additional textual information about the format. New optional property in mobilityDCAT-AP (0..1)."@en ;
+  sh:message "Data format notes must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_downloadURL
+  a sh:PropertyShape ;
+  sh:path dcat:downloadURL ;
+  sh:maxCount 1 ;
+  sh:name "download URL"@en ;
+  sh:description "Direct link to a downloadable file in a given format (0..1)."@en ;
+  sh:message "Download URL can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_grammar
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:grammar ;
+  sh:maxCount 1 ;
+  sh:name "grammar"@en ;
+  sh:description "Technical data grammar format of the delivered content. New optional property in mobilityDCAT-AP (0..1)."@en ;
+  sh:message "Grammar can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_sample
+  a sh:PropertyShape ;
+  sh:path adms:sample ;
+  sh:name "sample"@en ;
+  sh:description "Sample Distribution of the Dataset (0..n)."@en ;
+  sh:message "Sample must be a resource"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_temporal
+  a sh:PropertyShape ;
+  sh:path dct:temporal ;
+  sh:maxCount 1 ;
+  sh:name "temporal coverage"@en ;
+  sh:description "Time interval when the data service is delivered. New optional property in mobilityDCAT-AP (0..1)."@en ;
+  sh:message "Temporal coverage can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Distribution_Shape_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:nodeKind sh:Literal ;
+  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
+  sh:uniqueLang true ;
+  sh:minLength 1 ;
+  sh:name "title"@en ;
+  sh:description "Name of the Distribution. Repeated for parallel language versions (§8) (0..n)."@en ;
+  sh:message "Title must be a literal with valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# KIND SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Kind_Shape>
+  a sh:NodeShape ;
+  sh:targetClass vcard:Kind ;
+  sh:name "Kind (mobilityDCAT-AP)"@en ;
+  sh:description "Contact information following vCard specification. Not explicitly associated with any property in DCAT-AP 2.0.1. All properties are analogous to additions by GeoDCAT-AP v2.0.0."@en ;
+  sh:property
+    :Kind_Shape_email ,
+    :Kind_Shape_fn ,
+    :Kind_Shape_hasURL ,
+    :Kind_Shape_hasAddress ,
+    :Kind_Shape_organizationName ,
+    :Kind_Shape_hasTelephone .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:Kind_Shape_email
+  a sh:PropertyShape ;
+  sh:path vcard:hasEmail ;
+  sh:minCount 1 ;
+  sh:name "email"@en ;
+  sh:description "Email address of the Kind using fully qualified mailto: URI scheme [RFC6068] (1..n)."@en ;
+  sh:message "Email is mandatory. At least one must be provided"@en ;
+  sh:severity sh:Violation .
+
+:Kind_Shape_fn
+  a sh:PropertyShape ;
+  sh:path vcard:fn ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "name"@en ;
+  sh:description "Name of the Kind. Repeated for different language versions (§8) (1..n)."@en ;
+  sh:message "Name is mandatory. At least one literal must be provided"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:Kind_Shape_hasURL
+  a sh:PropertyShape ;
+  sh:path vcard:hasURL ;
+  sh:maxCount 1 ;
+  sh:name "URL"@en ;
+  sh:description "Web site of the Kind (0..1)."@en ;
+  sh:message "URL can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:Kind_Shape_hasAddress
+  a sh:PropertyShape ;
+  sh:path vcard:hasAddress ;
+  sh:maxCount 1 ;
+  sh:name "address"@en ;
+  sh:description "Postal address of the Kind (0..1)."@en ;
+  sh:message "Address can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Kind_Shape_organizationName
+  a sh:PropertyShape ;
+  sh:path vcard:organization-name ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "affiliation"@en ;
+  sh:description "Affiliation of the Kind. Repeated for different language versions (§8) (0..1)."@en ;
+  sh:message "Affiliation must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Kind_Shape_hasTelephone
+  a sh:PropertyShape ;
+  sh:path vcard:hasTelephone ;
+  sh:maxCount 1 ;
+  sh:name "phone"@en ;
+  sh:description "Phone number of the Kind using fully qualified tel: URI scheme [RFC3966] (0..1)."@en ;
+  sh:message "Phone can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# LICENCE DOCUMENT SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#LicenceDocument_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:LicenseDocument ;
+  sh:name "Licence Document (mobilityDCAT-AP)"@en ;
+  sh:description "A legal document giving official permission to use a resource. Extends DCAT-AP 2.0.1. Removes licence type property. Adds standard licence and licence text."@en ;
+  sh:property
+    :LicenceDocument_Shape_identifier ,
+    :LicenceDocument_Shape_label .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:LicenceDocument_Shape_identifier
+  a sh:PropertyShape ;
+  sh:path dct:identifier ;
+  sh:maxCount 1 ;
+  sh:name "standard licence"@en ;
+  sh:description "Link to a concrete standard licence from the EU licence authority table (0..1)."@en ;
+  sh:message "Standard licence can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:LicenceDocument_Shape_label
+  a sh:PropertyShape ;
+  sh:path rdfs:label ;
+  sh:nodeKind sh:Literal ;
+  sh:name "licence text"@en ;
+  sh:description "Full text of the Licence Document as free text. Repeated for parallel language versions (§8) (0..n)."@en ;
+  sh:message "Licence text must be a literal"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# LOCATION SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Location_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:Location ;
+  sh:name "Location (mobilityDCAT-AP)"@en ;
+  sh:description "A spatial region or named place. Extends DCAT-AP 2.0.1 Location. Adds gazetteer, geographic identifier, geographic name. Keeps bbox, centroid, geometry from DCAT-AP 2.0.1."@en ;
+  sh:property
+    :Location_Shape_inScheme ,
+    :Location_Shape_identifier ,
+    :Location_Shape_bbox ,
+    :Location_Shape_centroid ,
+    :Location_Shape_prefLabel ,
+    :Location_Shape_geometry .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:Location_Shape_inScheme
+  a sh:PropertyShape ;
+  sh:path skos:inScheme ;
+  sh:maxCount 1 ;
+  sh:name "gazetteer"@en ;
+  sh:description "Gazetteer to which the Location belongs. Analogous to GeoDCAT-AP v2.0.0 (0..1)."@en ;
+  sh:message "Gazetteer can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+:Location_Shape_identifier
+  a sh:PropertyShape ;
+  sh:path dct:identifier ;
+  sh:nodeKind sh:Literal ;
+  sh:name "geographic identifier"@en ;
+  sh:description "Geographic identifier for the Location, e.g., URI from EU authority tables, NUTS or GeoNames. Analogous to GeoDCAT-AP v2.0.0 (0..n)."@en ;
+  sh:message "Geographic identifier must be a literal"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:Location_Shape_bbox
+  a sh:PropertyShape ;
+  sh:path dcat:bbox ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "bounding box"@en ;
+  sh:description "Geographic bounding box of the Location typed as gsp:wktLiteral or gsp:gmlLiteral (0..1)."@en ;
+  sh:message "Bounding box must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Location_Shape_centroid
+  a sh:PropertyShape ;
+  sh:path dcat:centroid ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "centroid"@en ;
+  sh:description "Geographic centre of the Location typed as gsp:wktLiteral or gsp:gmlLiteral (0..1)."@en ;
+  sh:message "Centroid must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:Location_Shape_prefLabel
+  a sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:nodeKind sh:Literal ;
+  sh:name "geographic name"@en ;
+  sh:description "Preferred label of the Location. Repeated for parallel language versions (§8). Analogous to GeoDCAT-AP v2.0.0 (0..n)."@en ;
+  sh:message "Geographic name must be a literal"@en ;
+  sh:severity sh:Info .
+
+:Location_Shape_geometry
+  a sh:PropertyShape ;
+  sh:path locn:geometry ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "geometry"@en ;
+  sh:description "Geometry of the Location typed as gsp:wktLiteral or gsp:gmlLiteral (0..1)."@en ;
+  sh:message "Geometry must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# MOBILITY DATA STANDARD SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#MobilityDataStandard_Shape>
+  a sh:NodeShape ;
+  sh:targetClass mobilitydcatap:MobilityDataStandard ;
+  sh:name "Mobility Data Standard (mobilityDCAT-AP)"@en ;
+  sh:description "The mobility data standard applied for the delivered content. Sub-class of dct:Standard. New class in mobilityDCAT-AP not defined in DCAT-AP 2.0.1."@en ;
+  sh:property
+    :MobilityDataStandard_Shape_conformsTo ,
+    :MobilityDataStandard_Shape_versionInfo ,
+    :MobilityDataStandard_Shape_schema .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:MobilityDataStandard_Shape_conformsTo
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:maxCount 1 ;
+  sh:name "standard name"@en ;
+  sh:description "Name of the mobility data standard from the controlled vocabulary. Used when a custom MobilityDataStandard instance is defined (0..1)."@en ;
+  sh:message "Standard name can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:MobilityDataStandard_Shape_versionInfo
+  a sh:PropertyShape ;
+  sh:path owl:versionInfo ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:name "version"@en ;
+  sh:description "Version of the mobility data standard as applied in the delivered content (0..1)."@en ;
+  sh:message "Version must be a literal and can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:MobilityDataStandard_Shape_schema
+  a sh:PropertyShape ;
+  sh:path mobilitydcatap:schema ;
+  sh:name "schema"@en ;
+  sh:description "Schema of the mobility data standard as applied in the delivered content. Sub-property of dct:conformsTo (0..n)."@en ;
+  sh:message "Schema must be a resource"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# PERIOD OF TIME SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#PeriodOfTime_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:PeriodOfTime ;
+  sh:name "Period of Time (mobilityDCAT-AP)"@en ;
+  sh:description "An interval of time defined by its start and end dates. Extends DCAT-AP 2.0.1. Removes time:hasBeginning and time:hasEnd (§4.19.2)."@en ;
+  sh:property
+    :PeriodOfTime_Shape_startDate ,
+    :PeriodOfTime_Shape_endDate .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+# NOTE: spec states one of the two MUST be present if the class is used.
+#---------------------------------------------------------------------------
+:PeriodOfTime_Shape_startDate
+  a sh:PropertyShape ;
+  sh:path dcat:startDate ;
+  sh:maxCount 1 ;
+  sh:or (
+    [ sh:datatype xsd:date ]
+    [ sh:datatype xsd:dateTime ]
+  ) ;
+  sh:name "start date"@en ;
+  sh:description "Start of the Period of Time (0..1)."@en ;
+  sh:message "Start date must be xsd:date or xsd:dateTime and can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+:PeriodOfTime_Shape_endDate
+  a sh:PropertyShape ;
+  sh:path dcat:endDate ;
+  sh:maxCount 1 ;
+  sh:or (
+    [ sh:datatype xsd:date ]
+    [ sh:datatype xsd:dateTime ]
+  ) ;
+  sh:name "end date"@en ;
+  sh:description "End of the Period of Time (0..1)."@en ;
+  sh:message "End date must be xsd:date or xsd:dateTime and can appear at most once"@en ;
+  sh:severity sh:Warning .
+
+#---------------------------------------------------------------------------
+# QUALITY ANNOTATION SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#QualityAnnotation_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dqv:QualityAnnotation ;
+  sh:name "Quality Annotation (mobilityDCAT-AP)"@en ;
+  sh:description "An annotation about quality aspects of the delivered content. New class in mobilityDCAT-AP not defined in DCAT-AP 2.0.1."@en ;
+  sh:property
+    :QualityAnnotation_Shape_hasBody ,
+    :QualityAnnotation_Shape_hasTarget .
+
+#---------------------------------------------------------------------------
+# Optional Properties (sh:Info)
+#---------------------------------------------------------------------------
+:QualityAnnotation_Shape_hasBody
+  a sh:PropertyShape ;
+  sh:path oa:hasBody ;
+  sh:maxCount 1 ;
+  sh:name "quality annotation resource"@en ;
+  sh:description "URL linking to quality details or Embedded Textual Body via Web Annotation Data Model (0..1)."@en ;
+  sh:message "Quality annotation resource can appear at most once"@en ;
+  sh:severity sh:Info .
+
+:QualityAnnotation_Shape_hasTarget
+  a sh:PropertyShape ;
+  sh:path oa:hasTarget ;
+  sh:maxCount 1 ;
+  sh:name "quality annotation target"@en ;
+  sh:description "Target of the quality annotation, referring back to the described dataset. Inverse of dqv:hasQualityAnnotation (0..1)."@en ;
+  sh:message "Quality annotation target can appear at most once"@en ;
+  sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# RIGHTS STATEMENT SHAPE - Mobility Extension (Basic Validation)
+#---------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0#RightsStatement_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dct:RightsStatement ;
+  sh:name "Rights Statement (mobilityDCAT-AP)"@en ;
+  sh:description "A statement about intellectual property rights. New mandatory class in mobilityDCAT-AP not defined in DCAT-AP 2.0.1. Adds mandatory conditions for access and usage and recommended additional information."@en ;
+  sh:property
+    :RightsStatement_Shape_type ,
+    :RightsStatement_Shape_label .
+
+#---------------------------------------------------------------------------
+# Mandatory Properties (sh:Violation)
+#---------------------------------------------------------------------------
+:RightsStatement_Shape_type
+  a sh:PropertyShape ;
+  sh:path dct:type ;
+  sh:minCount 1 ;
+  sh:name "conditions for access and usage"@en ;
+  sh:description "Conditions for access and usage from the mobilityDCAT-AP controlled vocabulary (1..n)."@en ;
+  sh:message "Conditions for access and usage is mandatory. At least one value must be provided"@en ;
+  sh:severity sh:Violation .
+
+#---------------------------------------------------------------------------
+# Recommended Properties (sh:Warning)
+#---------------------------------------------------------------------------
+:RightsStatement_Shape_label
+  a sh:PropertyShape ;
+  sh:path rdfs:label ;
+  sh:nodeKind sh:Literal ;
+  sh:name "additional information for access and usage"@en ;
+  sh:description "Additional textual access, usage or licensing information. Repeated for parallel language versions (§8) (0..n)."@en ;
+  sh:message "Additional information must be a literal"@en ;
+  sh:severity sh:Warning .
+
+#-------------------------------------------------------------------------
+# Controlled Vocabulary Declarations (keep as-is)
+#-------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/application-layer-protocol> a skos:ConceptScheme ;
+  skos:prefLabel "Application layer protocol"@en .
+
+<https://w3id.org/mobilitydcat-ap/communication-method> a skos:ConceptScheme ;
+  skos:prefLabel "Communication method"@en .
+
+<https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> a skos:ConceptScheme ;
+  skos:prefLabel "Conditions for access and usage"@en .
+
+<https://w3id.org/mobilitydcat-ap/mobility-theme> a skos:ConceptScheme ;
+  skos:prefLabel "Mobility Theme"@en .
+
+<https://w3id.org/mobilitydcat-ap/mobility-data-standard> a skos:ConceptScheme ;
+  skos:prefLabel "Mobility Data Standard"@en .
+
+<https://w3id.org/mobilitydcat-ap/georeferencing-method> a skos:ConceptScheme ;
+  skos:prefLabel "Georeferencing Method"@en .
+
+<https://w3id.org/mobilitydcat-ap/grammar> a skos:ConceptScheme ;
+  skos:prefLabel "Grammar"@en .
+
+<https://w3id.org/mobilitydcat-ap/network-coverage> a skos:ConceptScheme ;
+  skos:prefLabel "Network coverage"@en .
+
+<https://w3id.org/mobilitydcat-ap/intended-information-service> a skos:ConceptScheme ;
+  skos:prefLabel "Intended Information Service"@en .
+
+<https://w3id.org/mobilitydcat-ap/transport-mode> a skos:ConceptScheme ;
+  skos:prefLabel "Transport mode"@en .
+
+<https://w3id.org/mobilitydcat-ap/update-frequency> a skos:ConceptScheme ;
+  skos:prefLabel "Update frequency"@en .
+
+<http://publications.europa.eu/resource/authority/data-theme> a skos:ConceptScheme ;
+  skos:prefLabel "Data Themes"@en , "Dataset Theme Vocabulary"@en .
+
+<http://publications.europa.eu/resource/authority/access-right> a skos:ConceptScheme ;
+  skos:prefLabel "Access right"@en .
+
+<http://publications.europa.eu/resource/authority/frequency> a skos:ConceptScheme ;
+  skos:prefLabel "Frequency"@en .
+
+<http://www.opengis.net/def/crs/EPSG/0/> a skos:ConceptScheme ;
+  skos:prefLabel "OGC EPSG Coordinate Reference Systems Register"@en .
+
+<http://publications.europa.eu/resource/authority/file-type> a skos:ConceptScheme ;
+  skos:prefLabel "File Type"@en .
+
+<http://publications.europa.eu/resource/authority/language> a skos:ConceptScheme ;
+  skos:prefLabel "Language"@en .
+
+<http://publications.europa.eu/resource/authority/corporate-body> a skos:ConceptScheme ;
+  skos:prefLabel "Corporate body"@en .
+
+<http://publications.europa.eu/resource/authority/continent> a skos:ConceptScheme ;
+  skos:prefLabel "Continents"@en .
+
+<http://publications.europa.eu/resource/authority/country> a skos:ConceptScheme ;
+  skos:prefLabel "Countries"@en .
+
+<http://publications.europa.eu/resource/authority/place> a skos:ConceptScheme ;
+  skos:prefLabel "Places"@en .
+
+<http://sws.geonames.org/> a skos:ConceptScheme ;
+  skos:prefLabel "GeoNames"@en .
+
+<http://nuts.geovocab.org/> a skos:ConceptScheme ;
+  skos:prefLabel "NUTS (Nomenclature of Territorial Units for Statistics)"@en .
+
+<http://purl.org/adms/publishertype/> a skos:ConceptScheme ;
+  skos:prefLabel "ADMS publisher type"@en .
+
+<https://eur-lex.europa.eu/eli-register/eu_publications_office.html> a skos:ConceptScheme ;
+  skos:prefLabel "European Legislation Identifier (ELI)"@en .
