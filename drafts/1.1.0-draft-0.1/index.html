@@ -1604,14 +1604,16 @@ This includes additional explanations and examples for specific vocabulary eleme
 
   
 <!-- mobilityDCAT-AP Validation Guidance -->
-
 <section id="validation-guidance" class="appendix">
-
 <h2>mobilityDCAT-AP Validation Guidance</h2>
-
-<p>A SHACL file enabling the automated validation of mobilityDCAT-AP instances and a set of shape files is available at <a href="./validationFiles">this Github subfolder</a>.</p>
+<p>Three SHACL files enabling the automated validation of mobilityDCAT-AP 1.1.0 instances are available in <a href="./shaclShapes">this Github subfolder</a>. All three files extend and inherit from <a href="https://semiceu.github.io/DCAT-AP/releases/2.0.1/">DCAT-AP 2.0.1</a> SHACL shapes:</p>
+<ul>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl">Basic validation</a> — cardinality, datatype and literal constraints</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl">Range validation</a> — nodeKind and class membership for object properties</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl">Controlled vocabulary validation</a> — property values must be from correct vocabularies per §5.2</li>
+</ul>
+<p>A dedicated validation toolkit — including Python scripts, Docker setup, and test cases — is available in the <a href="https://github.com/mobilityDCAT-AP/validation">mobilityDCAT-AP validation repository</a>.</p>
 <p>Further guidance can be found in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-4:-Validating-mobilityDCAT%E2%80%90AP-via-SHACL">validation section of the Wikipage</a>.</p>
-
 </section>
   
 
