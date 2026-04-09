@@ -25,7 +25,7 @@ var respecConfig = {
         {
         src: 'https://mobilitydcat-ap.github.io/respec-style/logos/mobilityDCAT-AP-V3-logo.png',
         width: 250,
-        height: 140,
+        height: 250,
         alt: "mobilitydcat-ap logo"
   }
       ],
