@@ -23,7 +23,7 @@ var respecConfig = {
     subtitle: "A mobility extension for the DCAT application profile for data portals in Europe",
     logos: [
         {
-        src: 'https://mobilitydcat-ap.github.io/respec-style/logos/mobilitydcat-ap.png',
+        src: 'https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/blob/gh-pages/drafts/latest/figures/mobilityDCAT-AP-V3-logo.png',
         width: 250,
         height: 140,
         alt: "mobilitydcat-ap logo"
