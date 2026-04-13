@@ -354,7 +354,12 @@ In contrast, the property <a href="#distribution-description"><code>dct:descript
 </td>
 <td valign=top>
   <p>A corresponding <a href="#vocab-mobility-data-standard">controlled vocabulary</a> is provided, listing common mobility data standards. 
-    If no established mobility data standard is applied, an information "proprietary standard" is requested.</p>
+   At least one value from this controlled vocabulary is required. If no suitable standard is found in this vocabulary, the "other" entry should be used. </p>
+  <p> Optionally, a new individual instance of class <code></code>mobilitydcatap:MobilityDataStandard</code> can be provided. 
+  This instance might be used to (a) reference a mobility data standard that is not listed in the controlled vocabulary; 
+  or (b) provide additional information on an applied mobility data standard (even if listed in the controlled vocabulary), such as version or schema details. 
+  See the Wiki page for a code example with a reference to a mobility data standard (listed in the controlled vocabulary), and detailed information via an individual instance of class <code></code>mobilitydcatap:MobilityDataStandard</code>.
+  </p>
 </td>
 <td valign=top>
 <p>P</p>
