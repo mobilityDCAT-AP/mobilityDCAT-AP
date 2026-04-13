@@ -53,32 +53,7 @@ Property name and URI</p>
 
 
   
-<tr class="property" id="mobility-data-standard-standard-name">
-<td valign=top>
-<p>+standard name</p>
-<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a></p>
-</td>
-<td valign=top>
-<p><a href="#class-concept"><code>skos:Concept</code></a></p>
-</td>
-<td valign=top>
-<p>0..1</p>
-</td>
-<td valign=top>
-<p>The name of the mobility data standard.</p>
-</td>
-<td valign=top>
-  <p>A corresponding <a href="##controlled-vocabularies-to-be-used">controlled vocabulary</a> is provided.</p>
-  <p>This property is necessary for the following CASE 1:</p>
-  <p>A custom instance of class <a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a> is defined. 
-    Such custom instance is recommended when the mobility data standard is detailed out via properties <a href="#mobility-data-standard-version"><code>owl:versionInfo</code></a> and/or <a href="#mobility-data-standard-schema"><code>mobilitydcatap:schema</code></a>. 
-  This property would then name the mobility data standard via a controlled vocabulary.</p>
-  <p>In the alternative CASE 2, the name the mobility data standard is directly named as range of the class <a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a> , again via the same controlled vocabulary.</p>
-</td>
-<td valign=top>
-<p>P</p>
-</td>
-</tr>  
+ 
 
 <tr class="property" id="mobility-data-standard-version">
 <td valign=top>
@@ -129,6 +104,28 @@ Property name and URI</p>
 <p>P</p>
 </td>
 </tr>    
+
+<tr class="property" id="mobility-data-standard--title">
+<td valign=top>
+<p>title</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title"><code>dct:title</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A name given to the mobility data standard.</p>
+</td>
+<td valign=top>
+  <p>This property can be repeated for parallel language versions of the title  - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr> 
   
 </tbody>
 </table>
