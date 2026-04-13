@@ -77,35 +77,9 @@ Property name and URI</p>
 </td>
 </tr>    
 
-<tr class="property" id="mobility-data-standard-schema">
-<td valign=top>
-<p>+schema</p>
-<p><code>mobilitydcatap:schema</code></p>
-</td>
-<td valign=top>
-<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
-</td>
-<td valign=top>
-<p>0..*</p>
-</td>
-<td valign=top>
-<p>The schema of the mobility data standard, as applied within the delivered content. E.g., an XDS representation of a specific <a href="https://docs.datex2.eu/user-guide/Profiles/">DATEX II profile</a>. </p>
-</td>
-<td valign=top>
-  <p>This is a sub-property of <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a>.</p>
-  <p>There are different options how to reference the schema.</p>
-  <p>It might be a reference to a platform-hosted catalogue of schemas. In such case, the data platform should keep an own catalogue of commonly used schemas. 
-    The data provider should then be able to select an applicable schema from this catalogue when providing the metadata. </p>
-  <p>It might be also a reference to an individual schema that is provided by the data publisher, or a reference to an schema that is hosted externally (like a stakeholder-based DATEX II profile published on the datex2.eu page).
-  In such case, the data provider should be able to upload an own, individual schema, or to link to an external one.</p>. 
-  <p>In any case, the schema should be available as a resource.</p>
-  </td>
-<td valign=top>
-<p>P</p>
-</td>
-</tr>    
+   
 
-<tr class="property" id="mobility-data-standard--title">
+<tr class="property" id="mobility-data-standard-title">
 <td valign=top>
 <p>title</p>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title"><code>dct:title</code></a></p>
