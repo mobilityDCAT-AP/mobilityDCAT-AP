@@ -88,123 +88,6 @@
   sh:path oa:hasBody ;
   sh:nodeKind sh:BlankNodeOrIRI ;
   sh:severity sh:Info .
-#---------------------------------------------------------------------------
-# CATALOGUE SHAPE - Mobility Extensions (Basic Validation)
-#---------------------------------------------------------------------------
-<https://w3id.org/mobilitydcat-ap/releases/1.1.0#Catalogue_Shape>
-  a sh:NodeShape ;
-  sh:targetClass dcat:Catalog ;
-  sh:name "Catalogue (mobilityDCAT-AP)"@en ;
-  sh:description "Extends DCAT-AP 2.0.1 Catalogue. Raises homepage, spatial, record to mandatory. Adds identifier and otherIdentifier. publisher, title, description, dataset are redefined with mobility cardinality. licence, issued, modified, themeTaxonomy, hasPart, isPartOf inherited from DCAT-AP 2.0.1."@en ;
-  sh:property
-    :Catalogue_Shape_dataset ,
-    :Catalogue_Shape_description ,
-    :Catalogue_Shape_homepage ,
-    :Catalogue_Shape_record ,
-    :Catalogue_Shape_spatial ,
-    :Catalogue_Shape_title ,
-    :Catalogue_Shape_language ,
-    :Catalogue_Shape_identifier ,
-    :Catalogue_Shape_otherIdentifier .
-
-#---------------------------------------------------------------------------
-# Mandatory Properties (sh:Violation)
-#---------------------------------------------------------------------------
-:Catalogue_Shape_dataset
-  a sh:PropertyShape ;
-  sh:path dcat:dataset ;
-  sh:minCount 1 ;
-  sh:name "dataset"@en ;
-  sh:description "Links the Catalogue to a Dataset. Mandatory in mobilityDCAT-AP (1..n)."@en ;
-  sh:message "Catalogue must have at least one dataset"@en ;
-  sh:severity sh:Violation .
-
-:Catalogue_Shape_description
-  a sh:PropertyShape ;
-  sh:path dct:description ;
-  sh:minCount 1 ;
-  sh:nodeKind sh:Literal ;
-  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
-  sh:uniqueLang true ;
-  sh:minLength 1 ;
-  sh:name "description"@en ;
-  sh:description "Free-text name of the mobility data platform. Repeated for parallel language versions (§8)."@en ;
-  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
-  sh:severity sh:Violation .
-
-:Catalogue_Shape_homepage
-  a sh:PropertyShape ;
-  sh:path foaf:homepage ;
-  sh:minCount 1 ;
-  sh:maxCount 1 ;
-  sh:name "homepage"@en ;
-  sh:description "Main web page of the mobility data portal. Raised to mandatory in mobilityDCAT-AP (1..1)."@en ;
-  sh:message "Homepage is mandatory and must appear exactly once"@en ;
-  sh:severity sh:Violation .
-
-:Catalogue_Shape_record
-  a sh:PropertyShape ;
-  sh:path dcat:record ;
-  sh:minCount 1 ;
-  sh:name "catalogue record"@en ;
-  sh:description "Metadata record that is part of the Catalogue. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
-  sh:message "Catalogue must have at least one catalogue record"@en ;
-  sh:severity sh:Violation .
-
-:Catalogue_Shape_spatial
-  a sh:PropertyShape ;
-  sh:path dct:spatial ;
-  sh:minCount 1 ;
-  sh:name "spatial / geographic coverage"@en ;
-  sh:description "Country code where the data platform is hosted. Raised to mandatory in mobilityDCAT-AP (1..n)."@en ;
-  sh:message "Spatial coverage is mandatory. At least one location must be provided"@en ;
-  sh:severity sh:Violation .
-
-:Catalogue_Shape_title
-  a sh:PropertyShape ;
-  sh:path dct:title ;
-  sh:minCount 1 ;
-  sh:nodeKind sh:Literal ;
-  sh:languageIn ("bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv") ;
-  sh:uniqueLang true ;
-  sh:minLength 1 ;
-  sh:name "title"@en ;
-  sh:description "Name of the mobility data portal. Repeated for parallel language versions (§8)."@en ;
-  sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
-  sh:severity sh:Violation .
-
-#---------------------------------------------------------------------------
-# Recommended Properties (sh:Warning)
-#---------------------------------------------------------------------------
-:Catalogue_Shape_language
-  a sh:PropertyShape ;
-  sh:path dct:language ;
-  sh:name "language"@en ;
-  sh:description "Language of the metadata in the portal. Repeated for multiple languages (§8)."@en ;
-  sh:message "Language must be a dct:LinguisticSystem instance or EU language authority URI"@en ;
-  sh:severity sh:Warning .
-
-#---------------------------------------------------------------------------
-# Optional Properties (sh:Info)
-#---------------------------------------------------------------------------
-:Catalogue_Shape_identifier
-  a sh:PropertyShape ;
-  sh:path dct:identifier ;
-  sh:maxCount 1 ;
-  sh:nodeKind sh:Literal ;
-  sh:name "identifier"@en ;
-  sh:description "Identifier for the mobility data portal. SHOULD be the URI from rdf:about. Analogous to GeoDCAT-AP v2.0.0."@en ;
-  sh:message "Identifier must be a literal and can appear at most once"@en ;
-  sh:severity sh:Info .
-
-:Catalogue_Shape_otherIdentifier
-  a sh:PropertyShape ;
-  sh:path adms:identifier ;
-  sh:maxCount 1 ;
-  sh:name "other identifier"@en ;
-  sh:description "Additional identifier besides dct:identifier. Analogous to GeoDCAT-AP v2.0.0."@en ;
-  sh:message "Other identifier can appear at most once"@en ;
-  sh:severity sh:Info .
 
 #---------------------------------------------------------------------------
 # CATALOGUE RECORD SHAPE - Range Constraints
@@ -341,7 +224,7 @@
     [ sh:pattern "^http://publications\\.europa\\.eu/resource/authority/frequency/.+$" ]
     [ sh:pattern "^https://w3id\\.org/mobilitydcat-ap/update-frequency/.+$" ]
   ) ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_mobilityTheme_range
   a sh:PropertyShape ;
@@ -355,7 +238,6 @@
   a sh:PropertyShape ;
   sh:path dct:spatial ;
   sh:nodeKind sh:BlankNodeOrIRI ;
-  sh:class dct:Location ;
   sh:severity sh:Violation .
 
 :Dataset_Shape_publisher_range
@@ -554,7 +436,7 @@
   sh:nodeKind sh:BlankNodeOrIRI ;
   sh:class dct:MediaTypeOrExtent ;
   sh:pattern "^http://publications\\.europa\\.eu/resource/authority/file-type/.+$" ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Distribution_Shape_rights_range
   a sh:PropertyShape ;

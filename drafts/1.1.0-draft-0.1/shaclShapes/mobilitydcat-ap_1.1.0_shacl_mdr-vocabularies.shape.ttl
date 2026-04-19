@@ -53,7 +53,8 @@
     sh:hasValue <http://publications.europa.eu/resource/authority/corporate-body> ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
-    sh:path skos:inScheme
+    sh:path skos:inScheme ;
+    sh:severity sh:Warning
   ] .
 
 :CountryRestriction
