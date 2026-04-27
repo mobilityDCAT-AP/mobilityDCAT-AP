@@ -1,0 +1,79 @@
+name: Validate spec — ReSpec + W3C markup
+
+# Runs on every push to gh-pages to 'drafts/latest/**' path.
+# No deployment — this is a testing tool and artefacts builder only.
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:  # only run when these change
+      - 'drafts/latest/**'
+  workflow_dispatch:
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5  # avoids runaway jobs
+    permissions:
+      contents: write   # required by peaceiris/actions-gh-pages
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Generate ontology serializations
+        run: |
+          pip install rdflib
+          (cd drafts/latest/scripts && bash serialise-all.sh)
+
+      - name: Copy static files to dist
+        run: |
+          mkdir -p dist/tables dist/examples dist/figures dist/js dist/shaclShapes
+
+          # Ontology source
+          cp drafts/latest/mobilitydcat-ap.rdf    dist/ 2>/dev/null || true
+          cp drafts/latest/mobilitydcat-ap.ttl    dist/ 2>/dev/null || true
+          cp drafts/latest/mobilitydcat-ap.jsonld dist/ 2>/dev/null || true
+
+          # Example files
+          cp drafts/latest/examples/*.rdf     dist/examples/ 2>/dev/null || true
+          cp drafts/latest/examples/*.ttl     dist/examples/ 2>/dev/null || true
+          cp drafts/latest/examples/*.jsonld  dist/examples/ 2>/dev/null || true
+          cp drafts/latest/examples/*.xml     dist/examples/ 2>/dev/null || true
+
+          # Assets
+          cp -r drafts/latest/figures/.     dist/figures/     2>/dev/null || true
+          cp -r drafts/latest/shaclShapes/. dist/shaclShapes/ 2>/dev/null || true
+
+      - name: Install respec globally
+        # spec-prod installs respec locally via pnpm but the shell it spawns
+        # to run the build cannot find it. A global install makes it available
+        # system-wide regardless of what pnpm does with PATH.
+        run: npm install -g respec@36.0.0
+
+      - name: Validate spec with ReSpec + W3C checker
+        uses: w3c/spec-prod@v2
+        continue-on-error: true
+        with:
+          TOOLCHAIN: respec
+          SOURCE: drafts/latest/index.html
+          DESTINATION: dist/index.html
+          VALIDATE_INPUT_MARKUP: true
+          VALIDATE_MARKUP: true
+          # Disabled until this issue is resolved (the validation tool is not compatible with node.js 24)
+          # See: https://github.com/w3c/spec-prod/issues/222
+          # VALIDATE_LINKS: true
+
+      - name: Copy built index.html into dist
+        # spec-prod writes its output to a sibling directory (<repo>.common/dist/),
+        # not to the workspace dist/. Copy it back so peaceiris picks up a complete dist/.
+        run: cp "${GITHUB_WORKSPACE}.common/dist/index.html" dist/index.html
+
+      - name: List dist contents
+        run: find dist/ -type f | sort
+
+      - name: Upload built spec as artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: spec-built
+          path: dist/
