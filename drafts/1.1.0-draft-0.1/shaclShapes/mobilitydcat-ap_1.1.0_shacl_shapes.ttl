@@ -23,12 +23,7 @@
 
 <https://w3id.org/mobilitydcat-ap/releases/1.1.0#>
   a owl:Ontology , adms:Asset ;
-
   owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
-  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
-  owl:imports <https://w3id.org/mobilitydcat-ap/releases/1.1.0/mobilitydcat-ap_1.1.0_shacl_range.ttl> ;
-  owl:imports <https://w3id.org/mobilitydcat-ap/releases/1.1.0/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl> ;
-
   owl:versionInfo "1.1.0" ;
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
   dcatap:availability dcatap:stable ;
@@ -434,21 +429,21 @@
   sh:name "Category (mobilityDCAT-AP)"@en ;
   sh:description "A category of a dataset. Used in context of dcat:theme. Not defined in DCAT-AP 2.0.1."@en ;
   sh:property
-    :Category_Shape_prefLabel ,
+    # :Category_Shape_prefLabel ,
     :Category_Shape_inScheme .
 
-#---------------------------------------------------------------------------
-# Mandatory Properties (sh:Violation)
-#---------------------------------------------------------------------------
-:Category_Shape_prefLabel
-  a sh:PropertyShape ;
-  sh:path skos:prefLabel ;
-  sh:minCount 1 ;
-  sh:nodeKind sh:Literal ;
-  sh:name "preferred label"@en ;
-  sh:description "Preferred label of the Category. Repeated for parallel language versions (§8)."@en ;
-  sh:message "Preferred label is mandatory. At least one literal must be provided"@en ;
-  sh:severity sh:Violation .
+# #---------------------------------------------------------------------------
+# # Mandatory Properties (sh:Violation)
+# #---------------------------------------------------------------------------
+# :Category_Shape_prefLabel
+#   a sh:PropertyShape ;
+#   sh:path skos:prefLabel ;
+#   sh:minCount 1 ;
+#   sh:nodeKind sh:Literal ;
+#   sh:name "preferred label"@en ;
+#   sh:description "Preferred label of the Category. Repeated for parallel language versions (§8)."@en ;
+#   sh:message "Preferred label is mandatory. At least one literal must be provided"@en ;
+#   sh:severity sh:Violation .
 
 #---------------------------------------------------------------------------
 # Optional Properties (sh:Info)

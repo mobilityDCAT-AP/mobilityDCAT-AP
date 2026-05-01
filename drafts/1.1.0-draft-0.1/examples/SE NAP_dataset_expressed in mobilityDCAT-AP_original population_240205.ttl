@@ -8,7 +8,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://trafficdata.se/>
-  a dcat:Catalog ;
+  a dcat:Catalog, foaf:Document;
   dc:title "Trafficdata.se"@en ;
   dc:description "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."@en ;
   foaf:homepage <https://trafficdata.se/> ;
@@ -54,13 +54,8 @@
   dc:issued "2017-05-09T11:49:47.718613"^^xsd:dateTime ;
   dc:modified "2019-12-04T09:48:27.432387"^^xsd:dateTime ;
   dc:publisher <https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> ;
-  # dcat:contactPoint [
-  #   a vcard:Organization ;
-  #   vcard:hasEmail <mailto:datex@trafikverket.se> ;
-  #   vcard:fn "Trafikverket"
-  # ] ;
   dcat:contactPoint [
-    a vcard:Kind ;              # was: a vcard:Organization
+    a vcard:Kind, vcard:Organization ;       
     vcard:hasEmail <mailto:datex@trafikverket.se> ;
     vcard:fn "Trafikverket"
   ];
@@ -90,19 +85,60 @@
 # Note: <http://njh.me/> removed (was a test placeholder).
 
 <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided>
-  a skos:Concept .
+  a skos:Concept ;
+  skos:prefLabel "Licence provided"@en .
 
 <https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations>
-  a skos:Concept .
+  a skos:Concept ;
+  skos:prefLabel "Dynamic traffic signs and regulations"@en .
 
 <https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits>
-  a skos:Concept .
+  a skos:Concept ;
+  skos:prefLabel "Dynamic speed limits"@en .
 
 <https://w3id.org/mobilitydcat-ap/network-coverage/motorways>
-  a skos:Concept .
+  a skos:Concept ;
+  skos:prefLabel "Motorways"@en .
 
 <https://w3id.org/mobilitydcat-ap/network-coverage/arterial-roads>
-  a skos:Concept .
+  a skos:Concept ;
+  skos:prefLabel "Arterial roads"@en .
 
 <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II>
-  a skos:Concept .
+  a skos:Concept ;
+  skos:prefLabel "DATEX II"@en .
+
+
+# EU data-theme ConceptScheme (title required by §4.7.1) + used Concept
+<http://publications.europa.eu/resource/authority/data-theme>
+  a skos:ConceptScheme ;
+  dc:title "Data theme"@en .
+
+<http://publications.europa.eu/resource/authority/data-theme/TRAN>
+  a skos:Concept ;
+  skos:prefLabel "Transport"@en .
+
+# EU file-type
+<http://publications.europa.eu/resource/authority/file-type/XML>
+  a dc:MediaTypeOrExtent ;
+  skos:prefLabel "XML"@en .
+
+# OGC EPSG CRS
+<http://www.opengis.net/def/crs/EPSG/0/4326>
+  a dc:Standard ;
+  skos:prefLabel "EPSG:4326 (WGS 84)"@en .
+
+# EU update frequency
+<http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT>
+  a dc:Frequency ;
+  skos:prefLabel "Continuously updated"@en .
+
+# EU licence
+<http://publications.europa.eu/resource/authority/licence/CC0>
+  a dc:LicenseDocument ;
+  skos:prefLabel "Creative Commons Zero (CC0)"@en .
+
+# EU language
+<http://publications.europa.eu/resource/authority/language/ENG>
+  a dc:LinguisticSystem ;
+  skos:prefLabel "English"@en .

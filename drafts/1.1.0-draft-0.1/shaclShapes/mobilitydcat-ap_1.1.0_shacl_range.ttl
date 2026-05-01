@@ -24,8 +24,8 @@
 
 <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> 
   a owl:Ontology , adms:Asset ;
-  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
-  owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
+  # owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
+  # owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
   
   owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> ;
   owl:versionInfo "1.1.0" ;
@@ -88,6 +88,20 @@
   sh:path oa:hasBody ;
   sh:nodeKind sh:BlankNodeOrIRI ;
   sh:severity sh:Info .
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#Catalogue_Shape>
+  a sh:NodeShape ;
+  sh:targetClass dcat:Catalog ;
+  sh:name "Catalogue (mobilityDCAT-AP) - Range Constraints"@en ;
+  sh:property
+    :Catalogue_Shape_spatial_range .
+
+:Catalogue_Shape_spatial_range
+  a sh:PropertyShape ;
+  sh:path dct:spatial ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:message "Catalogue spatial coverage must be a Blank Node or an IRI (e.g. country code from EU authority table or Geonames)."@en ;
+  sh:severity sh:Violation .
 
 #---------------------------------------------------------------------------
 # CATALOGUE RECORD SHAPE - Range Constraints
