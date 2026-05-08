@@ -24,9 +24,6 @@
 
 <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> 
   a owl:Ontology , adms:Asset ;
-  # owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
-  # owl:imports <https://semiceu.github.io/DCAT-AP/releases/2.0.1/dcat-ap_2.0.1_shacl_mdr-vocabularies.shape.ttl> ;
-  
   owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/1.1.0/ranges#> ;
   owl:versionInfo "1.1.0" ;
   dct:title "mobilityDCAT-AP 1.1.0 SHACL - Range Constraints"@en ;
