@@ -117,7 +117,12 @@ var respecConfig = {
         company: "Cefriel",
         orcid: "0000-0002-8235-7331",
 //        companyURL: ""
-      }
+      },
+      {
+        name:    "Daham Mohammed Mustafa",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
+        orcid:   "0000-0003-1867-4428",
+      },
 
     ],
     authors: [
