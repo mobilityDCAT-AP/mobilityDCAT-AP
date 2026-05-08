@@ -81,9 +81,6 @@
   mobilitydcatap:mobilityDataStandard <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II> ;
   dc:description "Datex is the Swedish Transport Administration resource for Traffic signs expressing traffic regulations and identifying dangers"@en .
 
-# Local class assertions to satisfy DCAT-AP 2.0.1 class checks and mobilityDCAT-AP CV restrictions.
-# Note: <http://njh.me/> removed (was a test placeholder).
-
 <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided>
   a skos:Concept ;
   skos:prefLabel "Licence provided"@en .
