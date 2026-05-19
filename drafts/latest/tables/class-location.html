@@ -19,10 +19,15 @@ geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Locati
 <tr>
 <th>Usage note</th>
 <td>
-   <p>It can be represented via a named place (controlled vocabulary) or with geographic coordinates, according to <a href="https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used">DCAT-AP guidelines</a>.</p>
-   <p>For mobility data portals, usage of a named place is preferred. Many mobility data providers represent public authorities such as states, regions, municipalities etc, which can be easily represented via named places. In contrast, defining of coordinates per dataset might be error-prone and inconsistent.</p>
-    <p>As named spaces, identifiers should be used via property <a href="#location-geographic-identifier"><code>dct:identifier</code></a>. These are coded via <a href="#vocab-spatial">controlled vocabularies</a> such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. 
-      Alternatively, geographic clear names may be used via property <a href="#location-geographic-name"><code>skos:prefLabel</code></a>.</p>
+   <p>It can be represented via a geocode (= a named place) or with geographic coordinates, according to <a href="https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used">DCAT-AP guidelines</a>.</p>
+   <p>For mobility data portals, usage of geocodes is preferred. Many mobility data providers represent public authorities such as states, regions, municipalities
+      etc, which can be easily represented via named places. In contrast, defining of coordinates per dataset might be error-prone and inconsistent.</p>
+    <p>As geocodes, IRIs from predefined <a href="#vocab-spatial">controlled vocabularies</a> such as the EU authority tables, NUTS (Nomenclature des unités territoriales 
+       statistiques) or Geonames.org should be used.</p>
+    <p>These IRIs can be linked directly from class <code>dct:Location</code>, or indirectly via custom instances of class <code>dct:Location</code>,
+       from the <code>dct:identifier</code> property of this class. </p>
+     <p>See the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#5-geographical-coverage">Wiki section</a>
+        for more guidance and code examples on how to use the class <code>dct:Location</code>.</p>
 </td></tr>
 
 <tr>
