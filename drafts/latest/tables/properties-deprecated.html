@@ -27,6 +27,31 @@
 </thead>
 <tbody>
 
+<tr class="property" id="catalogue-is-part-of">
+<td valign=top>
+<p>Catalogue</p>
+</td>
+<td valign=top>
+<p>is part of</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf"><code>dct:isPartOf</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-catalogue"><code>dcat:Catalog</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>This property refers to a related Catalogue in which the described mobility data portal is physically or logically included. 
+ This property could be used to link the mobility data portal to another data portal,
+ by e.g. harvesting metadata from the mobility data portal into this other portal.</p>
+</td>
+<td valign=top> 
+</td>
+<td valign=top>
+<p>A</p>
+</td>
+</tr> 
 
 <tr class="property" id="catalogue-record-creation-date">
 <td valign=top>
@@ -52,6 +77,32 @@
 <p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#CatalogueRecord.creationdate">GE</a></p>
 </td>
 </tr> 
+
+<tr class="property" id="dataset-is-version-of">
+<td valign=top>
+<p>Dataset</p>
+</td>
+<td valign=top>
+<p>is version of</p>
+<p><code>dct:isVersionOf</code></p>
+</td>
+<td valign=top>
+<p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>	
+This property may refer to a related dataset of which the described dataset is a version, edition, or adaptation.
+ Corresponds to property <code>dct:hasVersion</code> with contrary relationship.</p>
+</td>
+<td valign=top>
+ </td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
 
 <tr class="property" id="distribution-grammar">
 <td valign=top>
