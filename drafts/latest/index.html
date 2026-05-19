@@ -1166,18 +1166,12 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
   </ul>   
 </ul>  
   
-<li>Deprecations of classes and properties:</li>
+<li>Deprecations of properties:</li>
 <ul>
   <li>Property <a href="#catalogue-is-part-of"><code>dct:isPartOf</code></a> of class Catalogue is deprecated, being an inverse property to <a href="#class-catalogue"><code>dct:hasPart</code></a>.
     This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>  
   <li>Property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a> of class Dataset is deprecated, being an inverse property to <a href="#class-dataset"><code>dcat:hasVersion</code></a>.
     This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>
-  <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, <code>dcat:Relationship</code> are removed. 
-   These were listed in mobilityDCAT-AP v1 for compatibility reasons, but they are without function in mobilityDCAT-AP. 
-   See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
-  <li>Property <code>dcat:accessService</code> of class Distribution removed, 
-    because the class <code>dcat:DataService</code>, as well as all properties using this class as a range, are not used in mobilityDCAT-AP.
-    See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
   <li>Property <a href="#catalogue-record-creation-date"><code>dct:created</code></a> of class Catalogue Record is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/167">#167</a>.</li>
   <li>Property <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a> of class Distribution is deprecated.
@@ -1190,7 +1184,20 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
 </ul> 
 
+<li>Relabeling of classes and properties as "not used from DCAT-AP":</li>
+<ul>
+  <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, 
+    <code>dcat:Relationship</code> do exist in DCAT-AP v3, and were also listed in mobilityDCAT-AP v1 for compatibility reasons.
+    However, they are without function in mobilityDCAT-AP, so they are labeled as "not used from DCAT-AP". 
+   See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
+  <li>Property <code>dcat:accessService</code> of class Distribution does exist in DCAT-AP v3, and were also listed in mobilityDCAT-AP v1 for compatibility reasons.
+    However, the class <code>dcat:DataService</code>, as well as all properties using this class as a range, 
+    are without function in mobilityDCAT-AP, so they are labeled as "not used from DCAT-AP". 
+    See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
+</ul> 
 
+
+  
 </ul>
 
 </section>
