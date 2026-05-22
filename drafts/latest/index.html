@@ -1105,18 +1105,20 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
   
 <li>Other changes of existing properties:</li>
 <ul>
-   <li>Cardinality of property <a href="#class-distribution"><code>mobilitydcatap:dataFormatNotes</code></a> of class Distribution changed from 0..1 to 0..*, to allow for multilingual versions of such notes.
+  <li>Usage notes revised for class Location <a href="#class-location"><code>dct:Location</code></a>.
+     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/134">#134</a>.</li> 
+  <li>Cardinality of property <a href="#class-distribution"><code>mobilitydcatap:dataFormatNotes</code></a> of class Distribution changed from 0..1 to 0..*, to allow for multilingual versions of such notes.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/120">#120</a>.</li>
-    <li>Usage notes revised for property <a href="#class-dataset"><code>dcat:contactPoint</code></a> of classes Dataset and DatasetSeries. 
+  <li>Usage notes revised for property <a href="#class-dataset"><code>dcat:contactPoint</code></a> of classes Dataset and DatasetSeries. 
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/61">#61</a>.</li>
-    <li>Property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> of class Distribution is defined as a sub-property of <code>dct:conformsTo</code>. 
+  <li>Property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> of class Distribution is defined as a sub-property of <code>dct:conformsTo</code>. 
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
-    <li>Cardinality of property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> of class Distribution changed from 1..1 to 1..*, to allow for information about an applied common mobility data standard 
+  <li>Cardinality of property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> of class Distribution changed from 1..1 to 1..*, to allow for information about an applied common mobility data standard 
       PLUS information about individual/national/content-specific profiles or representations of the applied standard.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
-    <li>Usage notes revised for property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> of class Distribution.
+  <li>Usage notes revised for property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> of class Distribution.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
-      <li>New semantic concept for property <a href="#mobility-data-standard-conforms-to"><code>dct:conformsTo</code></a> of class Mobility Data Standard: Label changed from "standard name" to "conforms to". 
+  <li>New semantic concept for property <a href="#mobility-data-standard-conforms-to"><code>dct:conformsTo</code></a> of class Mobility Data Standard: Label changed from "standard name" to "conforms to". 
         Range changed from <code>skos:Concept</code> to <code>dct:Standard</code>.
         Cardinality changed from "0..1" to "0..*". Usage notes revised. 
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
