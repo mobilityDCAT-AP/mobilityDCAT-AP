@@ -888,7 +888,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#mobilityDataStandard -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#mobilityDataStandard">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <rdfs:comment xml:lang="en">This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. A controlled vocabulary is provided, listing common mobility data standards. If no established mobility data standard is applied, an information &quot;proprietary standard&quot; is requested.</rdfs:comment>
