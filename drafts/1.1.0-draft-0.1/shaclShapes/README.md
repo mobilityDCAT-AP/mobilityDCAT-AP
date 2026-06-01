@@ -11,34 +11,19 @@ All shapes extend and inherit from **DCAT-AP 2.0.1** SHACL shapes.
 | `mobilitydcat-ap_1.1.0_shacl_range.ttl` | Range validation — nodeKind and class membership for object properties |
 | `mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl` | Controlled vocabulary validation — property values must be from correct vocabularies per §5.2 |
 
-> **Note:** `mobilitydcat-ap_shacl_shapes.ttl` is deprecated and will be removed.
-
-## Usage
-
-All three files must be loaded together:
-
-```bash
-pyshacl \
-  --shacl mobilitydcat-ap_1.1.0_shacl_shapes.ttl \
-  --shacl mobilitydcat-ap_1.1.0_shacl_range.ttl \
-  --shacl mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl \
-  --data your-catalogue.ttl
-```
-
 ## Inheritance
 
 ```
-DCAT-AP 2.0.1 shacl_shapes.ttl           (base structural rules)
-DCAT-AP 2.0.1 shacl_mdr-vocabularies.ttl (base CV rules)
+DCAT-AP 2.0.1 base shapes
         +
-mobilityDCAT-AP 1.1.0 shacl_shapes.ttl   (mobility structural extensions)
-mobilityDCAT-AP 1.1.0 shacl_range.ttl    (mobility range extensions)
-mobilityDCAT-AP 1.1.0 shacl_mdr.ttl      (mobility CV extensions)
+mobilityDCAT-AP 1.1.0 shacl_shapes.ttl                  (mobility structural extensions)
+mobilityDCAT-AP 1.1.0 shacl_range.ttl                   (mobility range extensions)
+mobilityDCAT-AP 1.1.0 shacl_mdr-vocabularies.shape.ttl  (mobility CV extensions)
 ```
 
 ## Validation toolkit
 
 For Docker setup, Python scripts, and example test cases see:
 **https://github.com/mobilityDCAT-AP/validation**
-```
+
 
