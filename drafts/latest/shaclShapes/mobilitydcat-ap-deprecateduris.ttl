@@ -1,0 +1,118 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/drafts/latest#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+#-------------------------------------------------------------------------
+# mobilityDCAT-AP 3.0.0 — Deprecated URIs
+#
+# All shapes use sh:Warning: legacy catalogues remain valid while authors
+# are guided to the current term.
+#
+# SECTION A.2 — Properties deprecated by mobilityDCAT-AP
+#   Present in mobilityDCAT-AP v1.1.0, deprecated in v3.0.0 (spec Appendix A.2):
+#     Catalogue              dct:isPartOf
+#     Catalogue Record       dct:created
+#     Dataset                dct:isVersionOf
+#     Distribution           mobilitydcatap:grammar
+#     Licence Document       dct:identifier
+#     Licence Document       rdfs:label
+#     Mobility Data Standard mobilitydcatap:schema
+#
+# URI MIGRATIONS (mobility classes; alignment section of the change log)
+#     Mobility Data Standard owl:versionInfo -> dcat:version
+#
+# INHERITED (NOT restated — covered by DCAT-AP v3 deprecateduris.ttl,
+# loaded/imported alongside):
+#     dct:PeriodOfTime  schema:startDate / schema:endDate -> dcat:*
+#     dcat:Dataset      dct:hasVersion -> dcat:hasVersion
+#     dcat:Dataset      owl:versionInfo -> dcat:version
+#     dcat:Distribution adms:status (codelist change DCAT-AP 2.1 -> 3.0)
+#   NOTE: dcat:Dataset dct:isVersionOf is also flagged by DCAT-AP, but is
+#   listed in mobilityDCAT-AP Appendix A.2, so it is encoded here with the
+#   mobilityDCAT-AP message (use dcat:hasVersion). This intentionally
+#   overlaps the DCAT-AP shape.
+#-------------------------------------------------------------------------
+#=========================================================================
+# A.2 — Properties deprecated by mobilityDCAT-AP
+#=========================================================================
+
+#--- Catalogue: dct:isPartOf deprecated (inverse of dct:hasPart)
+:CatalogueDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Catalogue deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dcat:Catalog ;
+    sh:property [
+        sh:path dct:isPartOf ;
+        sh:severity sh:Warning ;
+        sh:message "dct:isPartOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dct:hasPart on the parent Catalogue."@en
+    ] .
+
+#--- Catalogue Record: dct:created deprecated
+:CatalogueRecordDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Catalogue Record deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:property [
+        sh:path dct:created ;
+        sh:severity sh:Warning ;
+        sh:message "dct:created is deprecated in mobilityDCAT-AP 3.0.0; use dct:issued (#167)."@en
+    ] .
+
+#--- Dataset: dct:isVersionOf deprecated (inverse of dcat:hasVersion).
+#    Listed in Appendix A.2; encoded with mobilityDCAT-AP message.
+:DatasetDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Dataset deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [
+        sh:path dct:isVersionOf ;
+        sh:severity sh:Warning ;
+        sh:message "dct:isVersionOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dcat:hasVersion on the related Dataset."@en
+    ] .
+
+#--- Distribution: mobilitydcatap:grammar deprecated
+:DistributionDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Distribution deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dcat:Distribution ;
+    sh:property [
+        sh:path mobilitydcatap:grammar ;
+        sh:severity sh:Warning ;
+        sh:message "mobilitydcatap:grammar is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#90)."@en
+    ] .
+
+#--- Licence Document: dct:identifier and rdfs:label deprecated
+:LicenseDocumentDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Licence Document deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dct:LicenseDocument ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:severity sh:Warning ;
+        sh:message "dct:identifier on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."@en
+    ], [
+        sh:path rdfs:label ;
+        sh:severity sh:Warning ;
+        sh:message "rdfs:label on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."@en
+    ] .
+
+#--- Mobility Data Standard: mobilitydcatap:schema deprecated;
+#    owl:versionInfo -> dcat:version (URI migration, mobility class)
+:MobilityDataStandardDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Mobility Data Standard deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass mobilitydcatap:MobilityDataStandard ;
+    sh:property [
+        sh:path mobilitydcatap:schema ;
+        sh:severity sh:Warning ;
+        sh:message "mobilitydcatap:schema is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#153)."@en
+    ], [
+        sh:path owl:versionInfo ;
+        sh:severity sh:Warning ;
+        sh:message "owl:versionInfo is deprecated on Mobility Data Standard; use dcat:version."@en
+    ] .
