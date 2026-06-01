@@ -76,6 +76,7 @@
 <https://w3id.org/mobilitydcat-ap/releases/1.1.0#Agent_Shape>
   a sh:NodeShape ;
   sh:targetClass foaf:Agent ;
+  sh:targetClass foaf:Organization ;
   sh:name "Agent (mobilityDCAT-AP) - Extensions"@en ;
   sh:description "Extends DCAT-AP 2.0.1 Agent with mobility-specific contact and organizational properties. Base properties (foaf:name, dct:type) are inherited from DCAT-AP 2.0.1."@en ;
   
@@ -87,7 +88,7 @@
     :Agent_Shape_phone ,
     :Agent_Shape_surname ,
     :Agent_Shape_workplaceHomepage .
-
+  
 #---------------------------------------------------------------------------
 # Named Property Shapes - Agent (Basic Validation)
 #---------------------------------------------------------------------------

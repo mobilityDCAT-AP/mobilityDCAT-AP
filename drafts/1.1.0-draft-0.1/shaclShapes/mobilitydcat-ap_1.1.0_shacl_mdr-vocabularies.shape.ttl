@@ -299,7 +299,6 @@
 
 #---------------------------------------------------------------------------
 # AGENT
-# FIX 1: dct:type obligation is Recommended (§4.2.2) → sh:Warning not sh:Violation
 #---------------------------------------------------------------------------
 :Agent_ShapeCV
   a sh:NodeShape ;
@@ -379,7 +378,6 @@
 
 #---------------------------------------------------------------------------
 # DATA SERVICE
-# FIX 3: Added missing dct:accessRights CV check (§5.2)
 #---------------------------------------------------------------------------
 :DataService_ShapeCV
   a sh:NodeShape ;
@@ -394,7 +392,6 @@
 
 #---------------------------------------------------------------------------
 # DATASET
-# FIX 2: dct:language obligation is Optional (§4.10.3) → sh:Info not sh:Violation
 #---------------------------------------------------------------------------
 :Dataset_ShapeCV
   a sh:NodeShape ;

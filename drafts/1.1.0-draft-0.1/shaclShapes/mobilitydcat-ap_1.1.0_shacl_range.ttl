@@ -43,6 +43,7 @@
 <https://w3id.org/mobilitydcat-ap/releases/1.1.0#Agent_Shape_ranges>
   a sh:NodeShape ;
   sh:targetClass foaf:Agent ;
+  sh:targetClass foaf:Organization ;
   sh:name "Agent (mobilityDCAT-AP) - Range Constraints"@en ;
   sh:description "Range constraints for Agent mobility extensions. Enforces sh:class for address and affiliation properties."@en ;
   
