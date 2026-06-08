@@ -294,7 +294,7 @@
   sh:name "description"@en ;
   sh:description "Free-text name of the mobility data platform. Repeated for parallel language versions (§8)."@en ;
   sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Catalogue_Shape_homepage
   a sh:PropertyShape ;
@@ -335,7 +335,7 @@
   sh:name "title"@en ;
   sh:description "Name of the mobility data portal. Repeated for parallel language versions (§8)."@en ;
   sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 #---------------------------------------------------------------------------
 # Recommended Properties (sh:Warning)
@@ -659,7 +659,7 @@
   sh:name "description"@en ;
   sh:description "Free-text description of the dataset. Repeated for parallel language versions (§8)."@en ;
   sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_distribution
   a sh:PropertyShape ;
@@ -708,7 +708,7 @@
   sh:name "title"@en ;
   sh:description "Name of the dataset. Repeated for parallel language versions (§8)."@en ;
   sh:message "Title is mandatory, cannot be empty, each language only once"@en ;
-  sh:severity sh:Violation .
+  sh:severity sh:Warning .
 
 :Dataset_Shape_publisher
   a sh:PropertyShape ;
@@ -1125,7 +1125,7 @@
   sh:name "title"@en ;
   sh:description "Name of the Distribution. Repeated for parallel language versions (§8) (0..n)."@en ;
   sh:message "Title must be a literal with valid EU language tag, cannot be empty, each language only once"@en ;
-  sh:severity sh:Info .
+  sh:severity sh:Warning .
 
 #---------------------------------------------------------------------------
 # KIND SHAPE - Mobility Extension (Basic Validation)
