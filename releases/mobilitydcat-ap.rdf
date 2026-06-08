@@ -42,7 +42,7 @@
         <dct:description xml:lang="en">mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. </dct:description>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-11</dct:issued>
         <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-27</dct:modified>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-08</dct:modified>
         <dct:title xml:lang="en">mobilityDCAT-AP</dct:title>
         <dct:type rdf:resource="http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7"/>
         <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
@@ -888,7 +888,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#mobilityDataStandard -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#mobilityDataStandard">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <rdfs:comment xml:lang="en">This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. A controlled vocabulary is provided, listing common mobility data standards. If no established mobility data standard is applied, an information &quot;proprietary standard&quot; is requested.</rdfs:comment>

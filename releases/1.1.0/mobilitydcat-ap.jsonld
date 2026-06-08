@@ -2672,7 +2672,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-05-27"
+    "@value" : "2026-06-08"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://napcore.eu/"

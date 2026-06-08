@@ -44,7 +44,7 @@ mobilitydcatap: a voaf:Vocabulary,
   dct:description "mobilityDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [DCAT-AP]. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about datasets and data services with a mobility relevance. "@en ;
   dct:issued "2023-05-11"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2026-05-27"^^xsd:date ;
+  dct:modified "2026-06-08"^^xsd:date ;
   dct:publisher <https://napcore.eu/> ;
   dct:rightsHolder <https://napcore.eu/> ;
   dct:title "mobilityDCAT-AP"@en ;
@@ -743,7 +743,7 @@ dqv:hasQualityAnnotation a rdf:Property,
 ###  https://w3id.org/mobilitydcat-ap#mobilityDataStandard
 mobilitydcatap:mobilityDataStandard a rdf:Property,
            owl:ObjectProperty ;
-           rdfs:subPropertyOf dct:format ;
+           rdfs:subPropertyOf dct:conformsTo ;
            rdfs:comment """This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. A controlled vocabulary is provided, listing common mobility data standards. If no established mobility data standard is applied, an information "proprietary standard" is requested."""@en ;
            rdfs:label "mobility data standard"@en ;
            rdfs:isDefinedBy mobilitydcatap:;
@@ -1471,8 +1471,6 @@ dcat:startDate
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Periods of Time."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date> .
 
-dcat:temporalResolution 
-    rdfs:comment """In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."""@en .
 
 ### https://www.w3.org/ns/dcat#theme
 dcat:theme 

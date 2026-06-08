@@ -1962,12 +1962,6 @@
     "@value" : "In mobilityDCAT-AP, this is a recommended property to be used for Periods of Time."
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/dcat#temporalResolution",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/dcat#theme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
@@ -2678,7 +2672,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-05-27"
+    "@value" : "2026-06-08"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://napcore.eu/"
@@ -3114,7 +3108,7 @@
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html#vocab-mobility-data-standard"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/dc/terms/format"
+    "@id" : "http://purl.org/dc/terms/conformsTo"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
