@@ -38,7 +38,8 @@ var respecConfig = {
     }
     ],
     errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
-    specStatus: "unofficial",
+// ED stands for Editor's draft, see other possible follow-up statuses: https://respec.org/docs/#specStatus
+    specStatus: "ED",
 // Avoid Latest published version: to be automatically generated with the wrong URI
     latestVersion: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     shortName: "mobilitydcat-ap",
