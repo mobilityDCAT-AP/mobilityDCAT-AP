@@ -1471,8 +1471,6 @@ dcat:startDate
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Periods of Time."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date> .
 
-dcat:temporalResolution 
-    rdfs:comment """In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."""@en .
 
 ### https://www.w3.org/ns/dcat#theme
 dcat:theme 

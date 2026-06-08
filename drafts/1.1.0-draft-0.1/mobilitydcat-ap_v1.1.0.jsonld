@@ -1962,12 +1962,6 @@
     "@value" : "In mobilityDCAT-AP, this is a recommended property to be used for Periods of Time."
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/dcat#temporalResolution",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/dcat#theme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
