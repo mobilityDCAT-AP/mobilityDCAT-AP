@@ -13,7 +13,7 @@
   dc:description "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."@en ;
   foaf:homepage <https://trafficdata.se/> ;
   dc:publisher <https://www.trafikverket.se/> ;
-  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
+  dcat:themeTaxonomy <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
   dc:spatial [
     a dc:Location ;
     dc:identifier <http://publications.europa.eu/resource/authority/country/SWE>
