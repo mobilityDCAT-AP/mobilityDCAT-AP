@@ -40,8 +40,8 @@ var respecConfig = {
     errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
 // ED stands for Editor's draft, see other possible follow-up statuses: https://respec.org/docs/#specStatus
     specStatus: "ED",
-// Avoid Latest published version: to be automatically generated with the wrong URI
-    latestVersion: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
+  // Latest published version should point to releases, not the editor's draft
+    latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
     shortName: "mobilitydcat-ap",
     canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
@@ -138,7 +138,7 @@ var respecConfig = {
       "CORE-LOCATION-VOCABULARY":{
         "href":"https://www.w3.org/TR/Content-in-RDF/",
         "title":"ISA Programme Location Core Vocabulary",
-        "author":["EU ISA Programme Core Vocabularies Working Group (Location Task Force)"],
+        "authors":["EU ISA Programme Core Vocabularies Working Group (Location Task Force)"],
         "date":"23 March 2015",
       },
       "LOCN-MAPPING": {
@@ -450,11 +450,6 @@ var respecConfig = {
       "INSPIRE-SDST": {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType",
         "title":"INSPIRE Registry: Spatial data service types",
-        "publisher":"European Commission"
-      },
-      "INSPIRE-RPR": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole",
-        "title":"INSPIRE Registry: Responsible party roles",
         "publisher":"European Commission"
       },
       "INSPIRE-RT": {
