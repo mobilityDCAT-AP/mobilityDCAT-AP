@@ -1,21 +1,4 @@
 var respecConfig = {
-//	preProcess: [dfn_index],
-//    logos: [
-//    {
-////      src: './images/eu-isa-programme.png',
-//      src: "./images/eu-isa2-programme.jpg",
-////      url: 'https://ec.europa.eu/isa',
-//      url: "https://ec.europa.eu/isa2",
-////      alt: "EU ISA Programme",
-////      title: "EU ISA Programme",
-//      alt: "EU ISA² Programme",
-//      title: "EU ISA² Programme",
-//      width: 150,
-////      height: 42,
-//      id: 'logo-eu-isa-programme',
-//    }
-//    ],
-//    includePermalinks: true,
     addSectionLinks: true,
     maxTocLevel: 3,
     doJsonLd: true,
@@ -29,26 +12,10 @@ var respecConfig = {
         alt: "mobilitydcat-ap logo"
   }
       ],
-//    copyrightHolder: "European Union",
-//    copyrightURL: "https://europa.eu/",
     copyrightStart: 2023,
     publishDate: "2025-04-02",
 
     alternateFormats: [
-/*
-    {
-      label: "PDF (TBD)",
-      uri: "./geodcat-ap_v2.0.0.pdf",
-    },
-    {
-      label: "DOCX (TBD)",
-      uri: "./geodcat-ap_v2.0.0.docx",
-    },
-    {
-      label: "ODT (TBD)",
-      uri: "./geodcat-ap_v2.0.0.odt",
-    },
-*/
     {
       label: "RDF/XML",
       uri: "./mobilitydcat-ap.rdf",
@@ -70,25 +37,13 @@ var respecConfig = {
       uri: "./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl",
     }
     ],
-//    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
-//    specStatus: "base",
     specStatus: "unofficial",
-//    specStatus: "FPWD",
-//    specStatus: "WD",
-//    specStatus: "LC",
-//    specStatus: "PR",
-//    specStatus: "RE",
-//    crEnd:"2020-10-12",
-//    prEnd:"2020-12-23",
 // Avoid Latest published version: to be automatically generated with the wrong URI
     latestVersion: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     shortName: "mobilitydcat-ap",
     canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
-//    previousPublishDate:  "2016-08-02",
-//    previousMaturity:     "final",
-//    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* MOBILITYDCAT-AP specific - start */
     thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
     prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
@@ -101,26 +56,22 @@ var respecConfig = {
       {
         name:    "Daham Mohammed Mustafa",
         company: "Fraunhofer Institute for Applied Information Technology FIT",
-        orcid:   "0000-0003-1867-4428",
-//        companyURL: ""
+        orcid:   "0000-0003-1867-4428"
       },
       {
         name:    "Lina Molinas Comet",
         company: "Fraunhofer Institute for Applied Information Technology FIT",
-        orcid:   "0000-0001-5446-6947",
-//        companyURL: ""
+        orcid:   "0000-0001-5446-6947"
       },
       {
         name: "Peter Lubrich",
         company: "Federal Highway Research Institute (BASt)",
-        orcid: "0000-0002-0023-1234",
-//        companyURL: ""
+        orcid: "0000-0002-0023-1234"
       },
       {
         name: "Mario Scrocca",
         company: "Cefriel",
-        orcid: "0000-0002-8235-7331",
-//        companyURL: ""
+        orcid: "0000-0002-8235-7331"
       }
 
     ],
@@ -137,7 +88,6 @@ var respecConfig = {
       key: "Document status",
       data: [
       {
-//        value: "Under development"
         value: "Completed"
       }
       ]
@@ -146,54 +96,20 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-//        value: "0.2"
         value: "3.0.0"
       }
       ]
     },
   ],
-
-//    {
-//      key: "Reviewed by",
-//      data: [
-//      {
-//        value: "Someone (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      {
-//        value: "Someone Else (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      ]
-//    },
-//    {
-//     key: "Approved by",
-//      data: [
-//      {
-//        value: "Someone (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      {
-//        value: "Someone Else (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      ]
-//    }
-
-//    ],
     wg: "NAPCORE Sub-Working Group (SWG) 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
-//    wgURI: "https://joinup.ec.europa.eu/solution/geodcat-ap",
-//    wgPublicList: "",
-//    wgPatentURI: "",
     inlineCSS: "true",
     lint: "false",
     localBiblio: {
       "ADMS-SKOS":{
         "href":"https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf",
         "title":"Joinup. ADMS Controlled Vocabularies",
-        "publisher":"European Commission",
-//        "date":"2016"
+        "publisher":"European Commission"
       },
       "DCAT-AP-DA":{
         "href":"http://data.europa.eu/r5r/availability/",
@@ -288,8 +204,7 @@ var respecConfig = {
       "DCAT-AP-IG":{
         "href":"https://joinup.ec.europa.eu/solution/dcat-application-profile-implementation-guidelines",
         "title":"Joinup. DCAT application profile implementation guidelines",
-        "publisher":"European Commission",
-//        "date":"2016"
+        "publisher":"European Commission"
       },
       "DCAT-AP-HVD": {
         "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
@@ -301,8 +216,7 @@ var respecConfig = {
         "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
         "title":"Dublin Core™ User Guide: Publishing Metadata",
         "authors":["Stefanie Rühle","Tom Baker","Pete Johnston"],
-        "publisher":"Dublin Core Metadata Initiative",
-//        "date":"9 March 2007"
+        "publisher":"Dublin Core Metadata Initiative"
       },
       "ELI": {
         "href":"https://eur-lex.europa.eu/eli-register/eu_publications_office.html",
@@ -318,9 +232,7 @@ var respecConfig = {
       "EPSG-RDF":{
         "href":"https://github.com/semiceu/epsg-to-rdf/",
         "title":"Proof of concept for the RDF representation of the OGC EPSG register of coordinate reference systems",
-//        "authors":["Andrea Perego"],
-        "publisher":"European Commission",
-//        "date":"2015"
+        "publisher":"European Commission"
        },
       "EU-OD-DIR": {
         "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
@@ -397,16 +309,12 @@ var respecConfig = {
       "GeoDCAT-ACV":{
         "href":"https://joinup.ec.europa.eu/node/148245/",
         "title":"Joinup. GeoDCAT-AP: Alignment of controlled vocabularies",
-//        "authors":["Andrea Perego"],
-        "publisher":"European Commission",
-//        "date":"2015"
+        "publisher":"European Commission"
        },
       "GeoDCAT-XSLT":{
         "href":"https://github.com/semiceu/iso-19139-to-dcat-ap/",
         "title":"Reference XSLT-based implementation of GeoDCAT-AP",
-//        "authors":["Andrea Perego"],
-        "publisher":"European Commission",
-//        "date":"2015"
+        "publisher":"European Commission"
        },
       "GEOHASH":{
         "href":"http://en.wikipedia.org/wiki/Geohash",
@@ -449,14 +357,12 @@ var respecConfig = {
       "INSPIRE-DC": {
         "href":"https://inspire.ec.europa.eu/reports/ImplementingRules/metadata/MD_IR_and_DC_state%20of%20progress.pdf",
         "title":"State of progress in the development of guidelines to express elements of the INSPIRE metadata implementing rules using ISO 15836 (Dublin core)",
-//        "authors":["European Commission"],
         "publisher":"European Commission",
         "date":"6 May 2008"
       },
       "INSPIRE-DCAT": {
         "href":"https://ies-svn.jrc.ec.europa.eu/projects/metadata/wiki/Alignment_of_INSPIRE_metadata_with_DCAT-AP",
         "title":"Alignment of INSPIRE metadata with DCAT-AP",
-//        "authors":["European Commission"],
         "publisher":"European Commission",
         "date":"2014"
       },
@@ -491,7 +397,6 @@ var respecConfig = {
       "INSPIRE-MT": {
         "href":"http://inspire.ec.europa.eu/media-types",
         "title":"INSPIRE Media Type Register",
-//        "authors":["European Commission"],
         "publisher":"European Commission",
         "date":"7 November 2011"
       },
@@ -503,7 +408,6 @@ var respecConfig = {
       "INSPIRE-DS": {
         "href":"https://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf",
         "title":"Technical Guidance for the implementation of INSPIRE Discovery Services. Version 3.1",
-//        "authors":["European Commission"],
         "publisher":"European Commission",
         "date":"7 November 2011"
       },
@@ -586,7 +490,6 @@ var respecConfig = {
         "title": "OGC KML 2.3",
         "authors": ["David Burggraf"],
         "publisher":"OGC",
-//        "status":"OGC® Implementation Standard",
         "date": "4 August 2015"
       },
       "LD-BOOK": {
