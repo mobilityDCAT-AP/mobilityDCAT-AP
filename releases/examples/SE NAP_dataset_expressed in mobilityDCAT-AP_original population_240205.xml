@@ -101,7 +101,7 @@ ADDED = new element
               <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/><!-- ADDED; mandatory property for class RightsStetement -->
             </dct:RightsStatement>
           </dct:rights>
-          <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC0"/> <!-- MODIFIED from originally <dct:license rdf:resource="http://www.opendefinition.org/licenses/cc-zero"/>; recommended property for class Distribution-->
+          <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC0"/> <!-- MODIFIED from originally <dct:license rdf:resource="http://www.opendefinition.org/licenses/cc-zero"/>; recommended property for class Distribution-->>
           <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/><!--MODIFIED from originally <dct:format>application/xml</dct:Format>; mandatory property for class Distribution-->
           <mobilitydcatap:mobilityDataStandard rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"/> <!-- ADDED; mandatory property for class Distribution-->
           <dct:description>Datex is the Swedish Transport Administration resource for Traffic signs expressing traffic regulations and identifying dangers</dct:description><!-- OK; recommended property for class Distribution-->

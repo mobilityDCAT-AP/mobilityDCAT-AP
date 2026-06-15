@@ -1140,8 +1140,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "uri": "./mobilitydcat-ap.jsonld"
     },
     {
-      "label": "SHACL (Turtle)",
-      "uri": "./validationFiles/mobilitydcat-ap_shacl_shapes.ttl"
+      "label": "SHACL Basic Validation (Turtle)",
+      "uri": "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl"
+    },
+    {
+      "label": "SHACL Range Constraints (Turtle)",
+      "uri": "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl"
+    },
+    {
+      "label": "SHACL Controlled Vocabulary Constraints (Turtle)",
+      "uri": "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl"
     }
   ],
   "errata": "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
@@ -2092,9 +2100,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           issues reported since publication.
         </p>
 
-    <p>
+<p>
           This document is also available in these non-normative formats:
-          <a rel="alternate" href="./mobilitydcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./mobilitydcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./mobilitydcat-ap.jsonld">JSON-LD</a>, and <a rel="alternate" href="./validationFiles/mobilitydcat-ap_shacl_shapes.ttl">SHACL (Turtle)</a>
+          <a rel="alternate" href="./mobilitydcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./mobilitydcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./mobilitydcat-ap.jsonld">JSON-LD</a>, and <a rel="alternate" href="./shaclShapes/">SHACL (Turtle)</a>
         </p>
     <p class="copyright">
     <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright-notice">Copyright</a>
@@ -10124,12 +10132,15 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 
 <section id="validation-guidance" class="appendix">
-
 <h2 id="g-mobilitydcat-ap-validation-guidance"><bdi class="secno">G. </bdi>mobilityDCAT-AP Validation Guidance<a class="self-link" aria-label="§" href="#validation-guidance"></a></h2>
-
-<p>A SHACL file enabling the automated validation of mobilityDCAT-AP instances and a set of shape files is available at <a href="./validationFiles">this Github subfolder</a>.</p>
+<p>Three SHACL files enabling the automated validation of mobilityDCAT-AP 1.1.0 instances are available in <a href="./shaclShapes">this Github subfolder</a>. All three files extend <a href="https://semiceu.github.io/DCAT-AP/releases/2.0.1/">DCAT-AP 2.0.1</a> SHACL shapes:</p>
+<ul>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl">Basic validation</a>: cardinality, datatype and literal constraints</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl">Range validation</a>: nodeKind and class membership for object properties</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl">Controlled vocabulary validation</a>: property values must be from correct vocabularies per §5.2</li>
+</ul>
+<p>A dedicated validation toolkit, including Python scripts, Docker setup, and test cases, is available in the <a href="https://github.com/mobilityDCAT-AP/validation">mobilityDCAT-AP validation repository</a>.</p>
 <p>Further guidance can be found in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-4:-Validating-mobilityDCAT%E2%80%90AP-via-SHACL">validation section of the Wikipage</a>.</p>
-
 </section>
 
 
