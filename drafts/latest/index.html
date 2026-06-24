@@ -64,7 +64,7 @@
 
 <h3>Context</h3>
 
-<p>This document presents version 3.0.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the DCAT application profile for data portals in Europe <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>. 
+<p>This document presents version 3.0.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the "DCAT Application profile for data portals in Europe" (<a href="https://op.europa.eu/de/web/eu-vocabularies/dcat-ap">DCAT-AP)</a>. 
   mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
 
 <p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1 specification</a>, while extending and customizing it for the mobility sector.</p>
@@ -89,17 +89,17 @@
 
 <h3>Scope of this DCAT-AP extension: Enhancing DCAT-AP for Mobility</h3>
 
-<p> mobilityDCAT-AP is designed as an extension of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> 
+<p> mobilityDCAT-AP is designed as an extension of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a> 
   in conformance with <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines/release-1">guidelines for creating of DCAT-AP extensions</a>
  and the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide for Semantic Engineers</a>.</p>
 
-<p>The scope description of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> is also valid for this version of mobilityDCAT-AP. In particular, the purpose of this specification is to facilitate data exchange. 
+<p>The scope description of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a> is also valid for this version of mobilityDCAT-AP. In particular, the purpose of this specification is to facilitate data exchange. 
   Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged. There are no specific requirements for the systems involved in the data exchange process to implement particular technical environments, as long as they can export and import metadata in RDF, in conformance with mobilityDCAT-AP. 
   Further, this specification, beyond what is defined in <a class="no-sectionRef" href="#conformance">Conformance Statement</a>, does not cover implementation issues such as data exchange mechanisms and the expected behavior of systems implementing mobilityDCAT-AP.</p>
   
 <p>It is important to consider this dependency on the DCAT-AP specifications when reading and implementing mobilityDCAT-AP. The corresponding specifications should be consulted to address any gaps or missing information in this document.</p>
 
-<p>Comparing mobilityDCAT-AP to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, the following edits have been made:</p>
+<p>Comparing mobilityDCAT-AP to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>, the following edits have been made:</p>
 
 <ul>
 <li>Addition of classes, including reusage of classes from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new classes under the mobilityDCAT-AP namespace</li>
@@ -233,7 +233,7 @@
 
 <h3>mobilityDCAT-AP core definitions</h3>
 
-<p><i>Part of the following text has been reused from <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> and the <a href="https://napcore.eu/description-naps/">NAPCORE website</a>.</i></p>
+<p><i>Part of the following text has been reused from <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a> and the <a href="https://napcore.eu/description-naps/">NAPCORE website</a>.</i></p>
 
 <p>A <strong>Dataset</strong> is a collection of data published or curated by a single source and available for access or download in one or more formats. 
   In the mobility context, this might be, e.g., a data collection about static parking information for truck drivers published by a road authority. This data collection might be published parallely in  DATEX II and APDS formats.</p>
@@ -286,12 +286,12 @@
   Secondly, there is the Catalogue Record, which describes the metadata entry, including its publication date. 
   Thirdly, the Dataset is described. In fact, most metadata elements are covered here, including the content theme; the spatial and temporal context; quality information and others. 
   Finally, the distribution describes a technical and organisational way to access the Dataset. In addition to the data format (e.g., a machine-readable syntax standard), the licensing terms are described here. </p>
-<p>Please note that two of the connecting properties, <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#class-distribution"><code>dcat:distribution</code></a>, are mandatory, in contrast to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.
+<p>Please note that two of the connecting properties, <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#class-distribution"><code>dcat:distribution</code></a>, are mandatory, in contrast to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>.
   Thus, a complete metadata set in accordance with mobilityDCAT-AP should contain at least one instance of these four classes. See also the usage notes for properties <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#class-distribution"><code>dcat:distribution</code></a>. </p>
 
 <p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a more complex UML diagram with selected classes and properties included in mobilityDCAT-AP.</p>
 <p>It shows the four central classes (marked in orange), as explained above, as well as some supportive classes (marked in yellow).</p>
-<p>In this diagram, the focus is on classes and properties which have been added in mobilityDCAT-AP in comparison to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>. 
+<p>In this diagram, the focus is on classes and properties which have been added in mobilityDCAT-AP in comparison to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>. 
   All additions are marked with a prepended &ldquo;plus&rdquo; sign (+).</p>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram">
@@ -306,7 +306,7 @@
 <figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on mandatory classes and properties</figcaption>
 </figure>
 
-<p>A complete UML diagram with all elements is not shown here, but can be reconstructed from the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#application-profile-diagram">DCAT-AP v3.0.0 UML diagram</a>.</p>
+<p>A complete UML diagram with all elements is not shown here, but can be reconstructed from the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#application-profile-diagram">DCAT-AP v3.0.1 UML diagram</a>.</p>
 
 </section>
 
@@ -1057,7 +1057,7 @@ In particular, the class and property definitions are now under new sections <a 
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
 
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP.
-These classes have been already defined in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, but now are also explicitly used in mobilityDCAT-AP.</li>
+These classes have been already defined in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>, but now are also explicitly used in mobilityDCAT-AP.</li>
 <ul>
     <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
@@ -1068,7 +1068,7 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
 </ul> 
   
 <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP. 
-  These properties have been already defined in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, but now are also explicitly used in mobilityDCAT-AP.</li>
+  These properties have been already defined in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>, but now are also explicitly used in mobilityDCAT-AP.</li>
 <ul>
   <li>Property <a href="#catalogue-record-application-profile"><code>dct:conformsTo</code></a> of class Catalogue Record added.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/82">#82</a>.</li>
@@ -1175,9 +1175,9 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
 <li>Deprecations of properties:</li>
 <ul>
   <li>Property <a href="#catalogue-is-part-of"><code>dct:isPartOf</code></a> of class Catalogue is deprecated, being an inverse property to <a href="#class-catalogue"><code>dct:hasPart</code></a>.
-    This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>  
+    This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>  
   <li>Property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a> of class Dataset is deprecated, being an inverse property to <a href="#class-dataset"><code>dcat:hasVersion</code></a>.
-    This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>
+    This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>
   <li>Property <a href="#catalogue-record-creation-date"><code>dct:created</code></a> of class Catalogue Record is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/167">#167</a>.</li>
   <li>Property <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a> of class Distribution is deprecated.
