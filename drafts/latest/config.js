@@ -37,7 +37,7 @@ var respecConfig = {
       uri: "./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl",
     }
     ],
-    errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
+    // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
     // Status for drafts is set to "unofficial" as it is visually more explicit that the spec is not stable: https://respec.org/docs/#specStatus
     specStatus: "unofficial",
     // Latest published version should point to releases, not the editor's draft
