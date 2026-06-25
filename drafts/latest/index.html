@@ -720,19 +720,23 @@
 
 
 
-<!-- Agent types, agent roles and agent properties; PL edits 03.07.23 -->
+<!-- Agent types, agent roles and agent properties -->
 
 <section id="agent-roles" class="informative">
 
 <h2>Agent Types, Agent Roles and Contact Information</h2>
 
-<p>[[DCAT-AP-v2.0.1]] has the following note about agent roles:</p>
+<p>According to the [[DCAT-AP-v3.0.1-Agent Roles]] note, the only original agent role within the DCAT-AP data model was to declare a publisher (typically, an organisation) of a dataset 
+  via property <a href="#dataset-publisher"><code>dct:publisher</code></a>.</p>
 
-<p><i>The DCAT Application Profile [...] has a single property to relate an Agent (typically, an organisation) to a Dataset. The only such ‘agent role’ that can be expressed in the current version of the profile is through the property dct:publisher (http://purl.org/dc/terms/publisher), defined as “An entity responsible for making the dataset available”. A second property is available in the DCAT recommendation, dcat:contactPoint (http://www.w3.org/TR/vocab-dcat/#Property:dataset_contactPoint), defined as “Link a dataset to relevant contact information which is provided using VCard”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</i></p>
+<p>Besides that, the DCAT-AP data model allows for declaring a contact point of a dataset via property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a>. 
+  However, this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</p>
 
-<p><i>In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles. In such cases, extensions to the base profile may be defined using additional properties with more specific meanings. ...</i> </p>
-
-<p>mobilityDCAT-AP specifies this note as follows:</p>
+<p>The[[DCAT-AP-v3.0.1-Agent Roles]] note also discusses two approaches to express other, more specific agent roles, via additional properties with more specific meanings. </p>
+<p>One approach is to introduce further properties that represent additional types of relationships between Datasets and Agents. 
+  This option is also followed by mobilityDCAT-AP, via introducing the property  <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>. </p>
+<p>The approach approach is to use W3C’s PROV ontology [[prov-o]], which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information,
+However, this mechanism is not introduced by mobilityDCAT-AP.</p>
 
 <p>According to [[FOAF]], an Agent (via class <a href="#class-agent"><code>foaf:Agent</code></a>) may be of a type of a person (via sub-class <code>foaf:Person</code>), an organisation (via sub-class <code>foaf:Organization</code>), or a group (via sub-class <code>foaf:Group</code>). </p>
 <p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation SHOULD be used. A person MAY be explicitly mentioned as an agent. In this case, he or she SHOULD be attributed to an organisation via the property <a href="#class-agent"><code>org:memberOf</code></a>, and, additionally, attributed with the personal name via properties <a href="#class-agent"><code>foaf:firstName</code></a> and <a href="#class-agent"><code>foaf:surname</code></a>.</p>
@@ -741,7 +745,7 @@
 <ul>
 <li>responsible for the creation and maintenance of the data platform;</li>
 <li>responsible for the creation and maintenance of a metadata entry;</li>
-<li>responsible for the provisioning of a dataset; or</li>
+<li>responsible for the provisioning of a dataset or a dataset series; or</li>
 <li>responsible for the content of the data.</li>
 </ul>
 
