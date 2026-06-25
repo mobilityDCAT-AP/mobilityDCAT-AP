@@ -633,56 +633,77 @@ foaf:workplaceHomepage a rdf:Property,
     rdfs:seeAlso <http://xmlns.com/foaf/0.1/#term_workplaceHomepage> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
-###   http://www.w3.org/ns/oa#hasBody
+###   https://www.w3.org/TR/annotation-vocab/#hasbody
 oa:hasBody a rdf:Property ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    rdfs:comment """For Assessments, this property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes.
-    For Quality Annotations, this property MAY be used to describe any quality aspects regarding the delivered content, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes."""@en ;
+    rdfs:comment """For Assessments, this property indicates the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information is provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.
+
+    For Quality Annotations, this property contains any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.
+    Textual information should be provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Assessments and Quality Annotations. "@en ;
     dcam:domainIncludes mobilitydcatap:Assessment ,
                         dqv:QualityAnnotation ;
     dcam:rangeIncludes rdfs:Resource ,
                        rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hasbody> ;
-    rdfs:seeAlso <https://www.w3.org/TR/annotation-model/> .
+    rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hasbody> ,
+                <https://www.w3.org/TR/annotation-model/> .
 
 
-###   http://www.w3.org/ns/adms#identifier 
+###   http://www.w3.org/ns/adms#identifier
 adms:identifier a rdf:Property,
     owl:ObjectProperty ;
     rdfs:label "other identifier"@en ;
-    rdfs:comment """For Catalogue, this property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAPS or other portals, to be introduced in the future.
-    For Dataset, this property MAY be used as an additional identifier, besides dct:identifier. It MAY be referring to a dedicated, EU-wide identificator system of NAP datasets, to be introduced in the future, or other identificator systems such as MAST/ADS [MAST-ADS], [DataCite], [DOI], [EZID] or [W3ID]."""@en ;
+    rdfs:comment """For Catalogue, this property may be used as an additional identifier, besides dct:identifier.
+    This property may be referring to a dedicated, EU-wide identificator system of NAPs or other portals, to be introduced in the future.
+    This property is an addition by mobilityDCAT-AP.
+
+    For Dataset, This property may be used as an additional identifier, besides dct:identifier.This property may be referring to a dedicated, EU-wide identificator system of NAP datasets, to be introduced in the future, or other identificator systems such as DataCite, DOI, or W3ID."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogues and Datasets. "@en ;           
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Catalog ,
                         dcat:Dataset ;
     dcam:rangeIncludes adms:Identifier ;
     rdfs:seeAlso <http://www.w3.org/ns/adms#identifier> ,
-                <http://archive.stsci.edu/pub_dsn.html> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-identifier> ,
                 <https://schema.datacite.org/> ,
                 <http://www.doi.org/> ,
-                <http://n2t.net/ezid> ,
                 <https://w3id.org/> .
            			   			   
 		   
-###  http://purl.org/dc/terms/publisher
+### http://purl.org/dc/terms/publisher
 dct:publisher a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """For Catalogue, this property refers to an organisation, if applicable a person, which is responsible for creation and maintenance of the mobility data platform. This organisation is the direct contact for platform users, who have questions or issues about the platform and its system. This information is mandatory and should correspond to the information in the disclaimer of the platform website.
+    rdfs:comment """For Catalogue, this property refers an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry.
+    This information can be natively created by a data platform, corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. The information might be identical to the property dct:publisher of the corresponding dataset.
+    This property is analogue to an addition by GEODCAT-AP-v3.0.0.
+
     For Catalogue Record, this property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property "Publisher" of the corresponding dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. 
-    For Dataset, this property refers to an entity (company and person) that publishes the corresponding dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. This information can be also harvested from other portals. The information might be identical to the property dct:publisher of class Catalogue Record and/or dct:rightsHolder of class Dataset. The obligation of this property is raised to "mandatory", compared to [DCAT-AP-v2.0.1]. To establish a contact with a company or person responsible for the datase, the recommended property dcat:contactPoint SHOULD be used."""@en ;
+
+    For Dataset, this property refers to an entity (company and person) that publishes the dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.
+    This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property dct:publisher of class Catalogue Record and/or dct:rightsHolder of class Dataset.
+    To establish a contact with a company or person responsible for the dataset, the property dcat:contactPoint should be used.
+    However, the publisher and the contact point might be populated with the same information. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
+    The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.
+
+    For Dataset Series, it refers to an entity (company and person) that publishes the dataset series. This entity is also responsible for ensuring the coherency of the dataset series.
+    The publisher of the dataset series may or may be not the publisher of all datasets, as declared via property dct:publisher. E.g. a digital archive could take over the publishing of older datasets in the series.
+    The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0."""@en ;
     rdfs:label "publisher"@en ;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues and Datasets, and it is an optional property to be used for Catalogue Records."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Catalog ,
                         dcat:CatalogRecord ,
-                        dcat:Dataset ;
+                        dcat:Dataset ,
+                        dcat:DatasetSeries ;
     dcam:rangeIncludes foaf:Agent ;
     rdfs:seeAlso <http://purl.org/dc/terms/publisher> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-rights-holder> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-contact-point> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
 
 
 ###  http://purl.org/dc/terms/source
@@ -1112,16 +1133,35 @@ dct:type
 ###   http://purl.org/dc/terms/issued
 dct:issued rdf:type owl:DatatypeProperty ;
     rdfs:comment """In mobilityDCAT-AP, this property corresponds to the notion of "temporal reference - publication date - assessment date".
-    For Catalogue, this property contains the date of formal issuance (e.g., publication) of the Catalogue.
-    For Assessment, this property MAY be used to describe the date of the latest assessment procedure.
-    For Dataset, this property contains the date of formal issuance (e.g., publication) of the Dataset. This is redundant to property "created" from class "Catalogue Record" and should not be used."""@en ;
+
+    For Catalogue, this property indicates the date of formal issuance (e.g., publication) of the mobility data portal.
+
+    For Catalogue Record, this property indicates the date on which the metadata entry was included in the Catalogue.
+    It should be generated by the system, whenever a platform user enters the metadata entry.
+
+    For Assessment, this property describes the date of the latest assessment procedure.
+
+    For Dataset, this property contains the date of formal issuance (e.g., publication) of the dataset. 
+    There might be a difference to the creation date of the metadata entry, see the property dct:created of Class Catalogue Record. Imagine the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, leading to two different dates. However, both dates can also be the same.
+
+    For Dataset Series, this property indicates the date of formal issuance (e.g., publication) of the dataset series. 
+    The moment when the dataset series was established as a managed resource. This might correspond to the earliest release date of the dataset in the collection, as declared via property dct:issued. See also the examples no. 9 and 10 in the Dataset Series examples section of DCAT-AP v3.0.0.
+
+    For Distribution, this property contains the date of formal issuance (e.g., publication) of the Distribution. 
+    There is the same property dct:issued at the Dataset level. Under the distribution level, this property relates to the release time of a distribution, which might be different than the release time of a dataset."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Assessments and Datasets; and it is a recommended property to be used for Catalogues. Its range is rdfs:Literal typed as xsd:date or xsd:dateTime. "@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes mobilitydcatap:Assessment ,
                         dcat:Catalog ,
-                        dcat:Dataset ;
+                        dcat:CatalogRecord ,
+                        dcat:Dataset ,
+                        dcat:DatasetSeries ,
+                        dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <http://purl.org/dc/terms/issued> .
+    rdfs:seeAlso <http://purl.org/dc/terms/issued> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-creation-date> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-release-date> .
 
 ###  http://xmlns.com/foaf/spec/#term_firstName
 foaf:firstName rdf:type owl:DatatypeProperty ;
@@ -1151,24 +1191,25 @@ foaf:surname rdf:type owl:DatatypeProperty ;
 dct:identifier a rdf:Property ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    rdfs:comment """A unique identifier assigned to the resource.
-    For Catalogues, this property MAY contain an identifier for the mobility data portal. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals. This property SHOULD be populated by the URI used within the RDF statement (via rdf:about). This property is analogue to an addition by [GEODCAT-AP-v2.0.0].
-    For Location, this property contains the geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer. Identifiers SHOULD be coded via controlled vocabularies such as the EU authority tables, NUTS (Nomenclature des unités territoriales statistiques) or Geonames. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].
-    For Dataset, this property MAY contain an identifier for the dataset. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data portals. This property SHOULD be populated by the URI used within the RDF statement (via rdf:about).
-    For Licence Document, this property MAY be used to link to a concrete standard license. A controlled vocabulary is provided."""@en ;
+    rdfs:comment """For Catalogues, it is the main identifier for the mobility data portal, e.g. the URI or other unique identifier. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals.
+    This property should populated by the URI used within the RDF statement (via rdf:about).
+    This property is analogue to an addition by geoDCAT-AP v3.0.0.
+
+    For Location, this property contains the geographic identifier for the location, e.g., the URI or other unique identifier in the context of the relevant gazetteer.
+    Corresponding controlled vocabularies are provided, denoting commonly used geographic identifiers.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0.
+
+    For Dataset, it is the main identifier for the dataset, e.g. the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data portals.
+    This property should populated by the URI used within the RDF statement (via rdf:about)."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogues and Datasets, and it is a recommended property to be used for Licence Documents, and Locations. "@en ;
     dcam:domainIncludes dcat:Catalog ,
                         dct:Location ,
                         dcat:Dataset ,
                         dct:LicenseDocument ;
-    dcam:rangeIncludes rdfs:Literal ,
-                       skos:Concept ;
-    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#identifier> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> ,
-                <http://archive.stsci.edu/pub_dsn.html> ,
-                <http://www.doi.org/> ,
-                <http://n2t.net/ezid> ,
-                <https://w3id.org/> .
+    dcam:rangeIncludes rdfs:Literal ;
+    rdfs:seeAlso <http://purl.org/dc/terms/identifier> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-spatial> .
 
  	   
 ###   http://purl.org/dc/terms/created
@@ -1280,17 +1321,32 @@ dct:accrualPeriodicity
 
 ### http://purl.org/dc/terms/description
 dct:description 
-    rdfs:comment """For Catalogue, this property contains a free-text, individual name of the mobility data platform itself. This property MAY be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects.
-    For Data Service, this property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects.
-    For Dataset, this property contains more information about the dataset as a brief, free-text description. It is used only for a brief overview, because free-text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation and other aspects about the dataset are described within other properties of the dataset. This property can be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects. The language versions should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
-    For Distribution, this property contains a free-text account of the Distribution. This property can be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues and Datasets, it is a recommended property to be used for Distributions, and it is an optional property to be used for Data Services "@en ;
+    rdfs:comment """For Catalogue, this property contains a free-text account of the Catalogue.
+    This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects.
+
+    For Dataset, this property contains information about the dataset as a free-text description. It is used only for a brief overview, because free-text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation and other aspects about the dataset are described within other properties of the dataset.
+    This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
+
+    For Dataset Series, this property contains information about the dataset series as a free-text description.
+    It is recommended to provide an indication about the dimensions the Dataset Series evolves, e.g., if the dataset seriesevolves according to the time, geolocation or other dimensions.
+    This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
+
+    For Distribution, this property contains a free-text account of the Distribution. This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects.
+
+    For Rights Statements, this property contains the text of the Rights Statement. I.e., any textual information about access, usage or licensing conditions, beyond information given via other properties under classes dct:RightsStatement and dct:LicenseDocument.
+    This property can be repeated for parallel language versions of the information - see 12. Accessibility and Multilingual Aspects.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues and Datasets, it is a recommended property to be used for Distributions, and it is an optional property to be used for Data Services."@en ;
     dcam:domainIncludes dcat:Catalog ,
-                        dcat:DataService ,
-                        dcat:Dataset ;
+                        dcat:DatasetSeries ,
+                        dcat:Dataset ,
+                        dcat:Distribution ,
+                        dct:RightsStatement ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/description> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#accessibility-and-multilingual-aspects> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/catalogue-record-language> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ### http://purl.org/dc/terms/format 
 dct:format 
@@ -1304,11 +1360,12 @@ dct:format
    
 ### http://purl.org/dc/terms/hasPart
 dct:hasPart 
-    rdfs:comment """This property refers to a related Catalogue that is part of the described mobility data portal. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal."""@en ;
+    rdfs:comment """This property refers to a related Catalogue that is part of the described Catalogue.
+    This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogues."@en ;
     dcam:domainIncludes dcat:Catalog ;
     dcam:rangeIncludes dcat:Catalog ;
-    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#hasPart> .
+    rdfs:seeAlso <http://purl.org/dc/terms/hasPart> .
 
 ### http://purl.org/dc/terms/hasVersion
 dct:hasVersion 
@@ -1317,14 +1374,6 @@ dct:hasVersion
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#hasVersion> .
-
-### http://purl.org/dc/terms/isPartOf
-dct:isPartOf 
-    rdfs:comment """This property refers to a related Catalogue in which the described mobility data portal is physically or logically included. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from the mobility data portal into this other portal."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogues."@en ;
-    dcam:domainIncludes dcat:Catalog ;
-    dcam:rangeIncludes dcat:Catalog ;
-    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf> .
 
 ### http://purl.org/dc/terms/isReferencedBy
 dct:isReferencedBy 
@@ -1342,43 +1391,70 @@ dct:isVersionOf
     dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isVersionOf> .
 
-### http://purl.org/dc/elements/1.1/language
+### http://purl.org/dc/terms/language
 dct:language 
-    rdfs:comment """For Catalogue, this property refers to a language used in the user interface of the mobility data portal, in particular the textual metadata describing the datasets registered in the portal. This property can be repeated if the metadata is provided in multiple languages - see § 8. Accessibility and Multilingual Aspects. A controlled vocabulary is provided.
-    For Catalogue Record, this property refers to a language used in the textual metadata describing titles, descriptions, etc. of the metadata entry. The value MAY be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see § 8. Accessibility and Multilingual Aspects. A controlled vocabulary is provided."@en ;
-    For Dataset, this property refers to a language of content data, if this data has a natural language embedded. Such data contents include text fields, addresses etc. This property can be repeated if there are multiple languages in the Dataset - see § 8. Accessibility and Multilingual Aspects. A controlled vocabulary is provided."""@en ;
+    rdfs:comment """For Catalogue, this property refers to a language used in the user interface of the mobility data portal, in particular the textual metadata describing the datasets registered in the portal. This property can be repeated if the user interface and textual metadata are provided in multiple languages - see 12. Accessibility and Multilingual Aspects.
+
+    For Catalogue Record, it refers to the language used in the textual metadata describing titles, descriptions, etc. of the metadata entry.
+    The value may be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see 12. Accessibility and Multilingual Aspects.
+    The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.
+
+    For Dataset, it refers to the language of the content data in a dataset, if this content has a natural language embedded, such as text fields, addresses etc.
+    The language of the content data in a dataset, if this content has a natural language embedded, such as text fields, addresses etc.
+
+    For Distribution, it describes the language of the content data in a distribution, if this content has a natural language embedded, such as text fields, addresses etc.
+    There is the same property dct:language under class Dataset. Language information on the distribution level is only recommended, if there are multiple distributions for the same dataset with a different language each.
+    This property can be repeated if there are multiple languages in the distribution - see 12. Accessibility and Multilingual Aspects"""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Catalogues, it is a mandatory property to be used for Catalogue Records, and it is an optional property to be used for Datasets."@en ;
     dcam:domainIncludes dcat:Catalog ,
                         dcat:CatalogRecord ,
-                        dcat:Dataset ;
+                        dcat:Dataset ,
+                        dcat:Distribution ;
     dcam:rangeIncludes dct:LinguisticSystem ;
-    rdfs:seeAlso <http://purl.org/dc/elements/1.1/language> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#accessibility-and-multilingual-aspects> ,<https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-language> .
+    rdfs:seeAlso <http://purl.org/dc/terms/language> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-language> .
 
-### http://purl.org/dc/terms/license
+### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license
 dct:license 
     rdfs:comment """ For Catalogue, this property refers to the licence under which the Catalogue can be used or reused.
-    For Data Service, this property contains the licence under which the Data Service is made available.
-    For Distribution, this property refers to the licence under which the Distribution is made available. This SHOULD be a reference to a concrete standard license. A controlled vocabulary is provided."""@en ;
+
+    For Distribution, it refers to the licence under which the distribution is made available. This should be a reference to a concrete (standard) licence.
+    A controlled vocabulary is provided."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Catalogues and Distributions, and it is an optional property to be used for Data Services."@en ;
     dcam:domainIncludes dcat:Catalog ,
                         dcat:DataService ,
                         dcat:Distribution ;
     dcam:rangeIncludes dct:LicenseDocument ;
-    rdfs:seeAlso <http://purl.org/dc/terms/license> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-licence> .
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-standard-licence> .
 
 ### http://purl.org/dc/terms/modified
 dct:modified 
-    rdfs:comment """For Catalogue, this property contains the most recent date on which the Catalogue was modified.
-    For Catalogue Record, this property contains the date stamp (date and time) when the metadata entry was last modified. It SHOULD be generated by the system, whenever a platform user updates the metadata entry. If there has been no update yet, the value from the property ''creation date'' SHOULD be taken.
-    For Dataset, this property MAY contain the most recent date on which the content of a dataset was changed or modified. This is redundant for high-frequency data services, e.g., via a data feed service, where the change date can be derived from the time stamp within the data feed."""@en ;
+    rdfs:comment """For Catalogue, this property contains the most recent date on which the Catalogue was modified. It is recommended to indicate modifications of the portal system as such (e.g., major technical updates of the portal or its features), rather than modifications of the hosted datasets, since datasets on mobility data portals are updaded frequently.
+
+    For Catalogue Record, this property contains the most recent date on which the metadata entry was changed or modified.
+    It should be generated by the system, whenever a platform user updates the metadata entry. If there has been no update yet, the value from the property dct:created should be taken.
+
+    For Dataset, this property contains the most recent date on which the content of the dataset was changed or modified.
+    This is redundant for high-frequency data feeds (e.g., DATEX II feeds), where the change date can be derived from the time stamp within the data feed.
+
+    For Dataset Series, it refers to the most recent date on which the dataset series was changed or modified.
+    This should correspond to the most recent modification date of all datasets in the collection, as declared via property dct:modified.
+
+    For Distribution, it contains the most recent date on which the Distribution was changed or modified. 
+    There is the same property dct:modified under the Dataset level. Under the distribution level, this property describes temporal changes in the characteristics of a distribution, e.g., a new data format or similar."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Catalogues, it is a mandatory property to be used for Catalogue Records, and is an optional property to be used for Datasets."@en ;
     dcam:domainIncludes dcat:Catalog ,
                         dcat:CatalogRecord ,
-                        dcat:Dataset ;
+                        dcat:Dataset ,
+                        dcat:DatasetSeries ,
+                        dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;  
-    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified> .
+    rdfs:seeAlso <http://purl.org/dc/terms/modified> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/catalogue-record-creation-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-modification-date> .
 
 ### http://purl.org/dc/terms/relation
 dct:relation 
@@ -1400,34 +1476,54 @@ dct:rights
 
 ### http://purl.org/dc/terms/spatial
 dct:spatial 
-    rdfs:comment """For Catalogue, this property refers to a country code where the data platform is hosted. For National Access Points (NAPs), this corresponds to the EC Member State or a country that installs such NAP. The property might be used for analyses about available data sets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property dct:spatial, which might be different. The obligation of this property is raised to "mandatory", comparing to [DCAT-AP-v2.0.1].
-    For Dataset, this property refers to a geographic region that is covered by the delivered content. There are different options how to describe the geographic region under the class Location, see § 4.16 Location. One of these options MUST be used, as the geographic reference is essential for data seekers. Several options of controlled vocabularies are provided. Thus, the obligation of this property is raised to "mandatory", compared to [DCAT-AP-v2.0.1]."""@en ;
+    rdfs:comment """For Catalogue, this property refers to a geographical area covered by the Catalogue.
+    For National Access Points (NAPs), this corresponds to the EU Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. It is not to be mixed up with country codes used within the dataset property dct:spatial, which might be different.
+    The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.
+
+    For Dataset, this property refers to a geographic region that is covered by the delivered content.
+    The obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0.
+
+    For DatasetSeries, this property refers to a geographic region that is covered by the dataset series.
+    When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in the collection should be part of the spatial coverage of the dataset series. In that case, the value of the spatial coverage of the dataset series should be as wide as possiblie. E.g., if datasets in a collection are about different regions in a country, the spatial coverage of the dataset series should note the entire country. See also the examples no. 7 and 8 in the Dataset Series examples section of DCAT-AP v3.0.0."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues, and Datasets."@en ;
     dcam:domainIncludes dcat:Catalog ,
-                        dcat:Dataset ;
+                        dcat:Dataset ,
+                        dcat:DatasetSeries ;
     dcam:rangeIncludes dct:Location ;  
     rdfs:seeAlso <http://purl.org/dc/terms/spatial> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#properties-for-location> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-spatial> .
-
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-geographical-coverage> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> .
 
 ### http://purl.org/dc/terms/title
 dct:title
-    rdfs:comment """For Catalogue, this property contains a name given to the mobility data portal, a name of the Category Scheme, a name given to the Data Service, a name given to the Dataset in a generic term. The name should be a meaningful, unique and unambiguous label. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. The language versions should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.
-    For Category Scheme, this property contains a name of the Category Scheme. May be repeated for different versions of the name - see § 8. Accessibility and Multilingual Aspects.
-    For Data Service, this property contains a name given to the Data Service. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects.
-    For Dataset, this property contains a name given to the dataset in a generic term. The name should be a meaningful, unique and unambiguous label. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects.The language versions should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.
-    For Distribution, this property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description - see § 8. Accessibility and Multilingual Aspects."""@en ;
+    rdfs:comment """For Catalogue, this property contains a name given to the mobility data portal.
+    This property can be repeated for parallel language versions of the name - see 12. Accessibility and Multilingual Aspects.
+
+    For Concept Scheme, this property contains a name of the concept scheme.
+    This property can be repeated for parallel language versions of the name - see 12. Accessibility and Multilingual Aspects.
+
+    For Dataset, this property contains a the name given to the dataset in a generic term. The name should be a meaningful, unique and unambiguous label.
+    This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.
+
+    For Dataset Series, this property contains the name given to the dataset series in a generic term. The name should be a meaningful, unique and unambiguous label.
+    This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects.
+
+    For Distribution, this property contains a name given to the Distribution. This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects.
+
+    For Mobility Data Standard, this property contains a name given to the mobility data standard.
+    This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues, Category Schemes,Data Services, and Datasets; and it is an optional property to be used for Distributions."@en ;
     dcam:domainIncludes dcat:Catalog ,
                         skos:ConceptScheme ,
-                        dcat:DataService ,
+                        dcat:DatasetSeries ,
                         dcat:Dataset ,
-                        dcat:Distribution ;
+                        dcat:Distribution ,
+                        mobilitydcatap:MobilityDataStandard ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <http://purl.org/dc/terms/title> ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#accessibility-and-multilingual-aspects> .
+    rdfs:seeAlso <http://purl.org/dc/terms/title> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#accessibility-and-multilingual-aspects> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/catalogue-record-language> .
 
 
 ### https://spdx.org/rdf/3.0.1/terms/Core/algorithm
@@ -1521,12 +1617,13 @@ dcat:centroid
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Locations."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid> .
 
-### https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_datase
+### https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset
 dcat:dataset 
-    rdfs:comment """This property links the mobility data portal with a data set that is described at the mobility data portal. This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets SHOULD be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is also mandatory to use the property dcat:record."""@en ;
+    rdfs:comment """This property links the mobility data portal with a data set that is described at the mobility data portal. 
+    This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets should be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is mandatory to use the property dcat:record to link to a data set. The usage of dcat:dataset may be then redundant."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues."@en ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset> ,
-                <https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record> .
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record> .
 
 ### https://www.w3.org/ns/dcat#downloadURL
 dcat:downloadURL 
@@ -1574,10 +1671,11 @@ dcat:keyword
     
 ### https://www.w3.org/ns/dcat#record
 dcat:record 
-    rdfs:comment """This property refers to a metadata record that is part of the mobility data portal. mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to "mandatory", comparing to [DCAT-AP-v2.0.1]."""@en;
+    rdfs:comment """This property refers to a metadata record that is part of the mobility data portal. 
+    mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to "mandatory", comparing to DCAT-AP v3.0.0."""@en;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues."@en ;
     rdfs:seeAlso <https://www.w3.org/ns/dcat#record> ;
-    rdfs:seeAlso <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> .
+    rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 ### https://www.w3.org/ns/dcat#servesDataset
 dcat:servesDataset 
@@ -1606,13 +1704,15 @@ dcat:theme
     rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-theme> .
     
 
-### https://www.w3.org/ns/dcat#themeTaxonomy
+### http://www.w3.org/ns/dcat#themeTaxonomy
 dcat:themeTaxonomy 
-    rdfs:comment """This property refers to a knowledge organization system used to classify the mobility data portal's Datasets."""@en ;
+    rdfs:comment """This property refers to a knowledge organization system used to classify the mobility data portal's datasets.
+    Recommended to indicate the version of the controlled vocabulary for property mobilitydcatap:mobilityTheme, that is used in the mobility data portal."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Catalogues."@en ;
     dcam:domainIncludes dcat:Catalog ;
     dcam:rangeIncludes skos:ConceptScheme ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_themes> .
+    rdfs:seeAlso <http://www.w3.org/ns/dcat#themeTaxonomy> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-mobility-theme> .
 
 ### https://www.w3.org/ns/legacy_locn#locn:geometry
 locn:geometry 
@@ -1623,10 +1723,11 @@ locn:geometry
 
 ### https://xmlns.com/foaf/spec/#term_homepage
 foaf:homepage 
-    rdfs:comment """This property refers to a Web page that acts as the main page for the mobility data portal. The obligation of this property is raised to "mandatory", comparing to [DCAT-AP-v2.0.1]."""@en ;
+    rdfs:comment """This property refers to a web page that acts as the main page for the Catalogue. This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.
+    The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues."@en ;
     rdfs:seeAlso <https://xmlns.com/foaf/spec/#term_homepage> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> .
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 ### https://xmlns.com/foaf/spec/#term_primaryTopic
 foaf:primaryTopic 
