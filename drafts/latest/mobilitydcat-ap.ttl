@@ -677,7 +677,9 @@ dct:publisher a rdf:Property,
     This information can be natively created by a data platform, corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. The information might be identical to the property dct:publisher of the corresponding dataset.
     This property is analogue to an addition by GEODCAT-AP-v3.0.0.
 
-    For Catalogue Record, this property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry. This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. It should include, as a minimum, the name and email address of the entity. The information might be identical to the property "Publisher" of the corresponding dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. 
+    For Catalogue Record, this property refers to an entity (an organisation or a person), which is responsible for creation and maintenance of the metadata entry on the data platform. This entity is the direct contact for the data platform operators or data-searching users, who have questions or issues about the metadata entry.
+    This information can be natively created by a data platform, corresponding to the entity that is registered to the data platform and has the role of a metadata creator. This information can be also harvested from other portals. The information might be identical to the property dct:publisher of the corresponding dataset.
+    This property is analogue to an addition by GEODCAT-AP-v3.0.0.
 
     For Dataset, this property refers to an entity (company and person) that publishes the dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.
     This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property dct:publisher of class Catalogue Record and/or dct:rightsHolder of class Dataset.
@@ -709,7 +711,8 @@ dct:publisher a rdf:Property,
 ###  http://purl.org/dc/terms/source
 dct:source a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested."""@en ;
+    rdfs:comment """The original metadata record that was used in creating the metadata record.
+    Used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property should link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested."""@en ;
     rdfs:label "source metadata"@en ;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Records."@en ;
@@ -748,7 +751,8 @@ mobilitydcatap:mobilityTheme a rdf:Property,
 ###  https://w3id.org/mobilitydcat-ap#georeferencingMethod
 mobilitydcatap:georeferencingMethod a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property SHOULD be used to specify the georeferencing method used in the dataset. A controlled vocabulary is provided, denoting commonly used georeferencing methods for mobility data."""@en ;
+    rdfs:comment """The georeferencing method used in the delivered content.
+    A corresponding controlled vocabulary is provided, denoting commonly used georeferencing methods for mobility data."""@en ;
     rdfs:label "georeferencing method"@en  ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
@@ -756,26 +760,32 @@ mobilitydcatap:georeferencingMethod a rdf:Property,
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-georeferencing-method> . 
+    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-georeferencing-method> .
 
 		   
-###  http://purl.org/dc/terms/conformsTo
+###  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo
 dct:conformsTo a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """In the context of Datasets, this property SHOULD be used to specify the spatial reference system used in the dataset. Spatial reference systems SHOULD be specified by using the corresponding URIs from the "EPSG coordinate reference systems" register operated by OGC [OGC-EPSG]. A controlled vocabulary is provided. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].
-    In the context of Mobility Data Standard, this property describes the name of the mobility data standard. This property is necessary for the following CASE 1: A custom instance of mobilitydcatap:MobilityDataStandard is defined. Such custom instance is recommended when the mobility data standard is detailed out via properties owl:versionInfo and/or mobilitydcatap:schema. The property dct:conformsTo would then name the mobility data standard via a controlled vocabulary. In the alternative CASE 2, the name the mobility data standard is directly named as range of mobilitydcatap:MobilityDataStandard, again via the same controlled vocabulary."""@en ;
+    rdfs:comment """For Catalogue Record, this property refers to an Application Profile that the catalogued resource's metadata conforms to. In particular, specify which mobilityDCAT-AP version is used to describe the metadata.
+    As the range, it is recommended to use the mobilityDCAT-AP IRI with versioning, e.g., "https://w3id.org/mobilitydcat-ap/releases/1.1.0". The value may be generated automatically by the NAP system, corresponding to the currently used mobilityDCAT-AP version.
+
+    For Distribution, it refers to an established schema to which the described Distribution conforms.
+    To inform about a mobility data standard (and also related profiles) applied to the delivered data, property mobilitydcatap:mobilityDataStandard should be preferably used. In addition, property dct:conformsTo can be used to serve the needs of standard DCAT/DCAT‑AP open data portals. Such portals usually cannot process information exposed indirectly via property mobilitydcatap:mobilityDataStandard, i.e., they cannot dereference or validate such references. Thus, this property would expose the standards/profiles information directly at the Distribution.
+
+    For Mobility Data Standard, it refers to the reference to the applied mobility data standard, as well as to individual/national/content-specific profiles or representations of the applied standard.
+    This property is necessary if a custom instance of class mobilitydcatap:MobilityDataStandard is defined. This property would then reference a common mobility data standard (e.g., "NeTeX" via the controlled vocabulary), as well as additionally further individual/national/content-specific profiles or representations of the applied standard (e.g., an Italian NeTEx profile)."""@en ;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets, and an optional property to be used for Mobility Data Standards. "@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    dcam:domainIncludes dcat:Dataset ,
+    dcam:domainIncludes dcat:CatalogRecord ,
+                        dcat:Distribution ,
                         mobilitydcatap:MobilityDataStandard ;
     dcam:rangeIncludes dct:Standard ,
                        skos:Concept ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
-                <http://www.opengis.net/def/crs/EPSG/> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-conforms-to> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-mobility-data-standard> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#class-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-mobility-data-standard> .
 
 ###  http://purl.org/dc/terms/rightsHolder
 dct:rightsHolder a rdf:Property,
@@ -821,17 +831,26 @@ mobilitydcatap:transportMode a rdf:Property,
 ###  http://data.europa.eu/r5r/applicableLegislation
 dcatap:applicableLegislation a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property MAY refer to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations. For European legal frameworks, it is recommended to use the European Legislation Identifier [ELI] to refer to legislation whenever possible. This property is derived from the DCAT-AP HVD extension [DCAT-AP-HVD]."""@en ;
+    rdfs:comment """For Dataset, it describes the legal framework being relevant for the dataset, e.g., an EC Delegated Regulation which stipulates the provisioning of the corresponding dataset, or some other international or national frameworks, e.g., Open Data regulations.
+    
+    For Dataset Series, it refers to a legal framework being relevant for the dataset series.
+
+    For Distribution, it contains information about a legal framework being relevant for the distribution.
+    The legal framework is usually provided on the dataset level, see property dcatap:applicableLegislation. However, there is a special case of if a High Value Dataset (HVD) is provided on a portal. Here, the DCAT-AP profile for HVD stipulates that this property links to the EC regulation 2013/138 on HVD both on the dataset and distribution levels. In other words, a RDF statement is required under the dataset and distribution class, if a HVD is published on the portal. For other cases outside HVD, the use of this property is not recommended."""@en ;
     rdfs:label "applicable legislation"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    dcam:domainIncludes dcat:Dataset ;
-    dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/#applicableLegislation> ,
-                <https://eur-lex.europa.eu/eli-register/eu_publications_office.html> ,
-                <https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/> .
+    dcam:domainIncludes dcat:Dataset ,
+                        dcat:DatasetSeries ,
+                        dcat:Distribution ;
+    dcam:rangeIncludes eli:LegalResource ;
+    rdfs:seeAlso <https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/#applicableLegislation>  ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-applicable-legislation> ,
+                <https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/> ,
+                <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138> .
+
 
 ###  https://w3id.org/mobilitydcat-ap#assessmentResult
 mobilitydcatap:assessmentResult a rdf:Property,
@@ -849,7 +868,9 @@ mobilitydcatap:assessmentResult a rdf:Property,
 ###  https://w3id.org/mobilitydcat-ap#intendedInformationService
 mobilitydcatap:intendedInformationService a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property MAY describe predefined information services, which the data content is intended to support. Such services MAY be, e.g., information services for multimodal mobility, as specified by EC Delegated Regulation 2017/1926 [EC-MMTIS-DR]. Examples of such services include "location search", which is based on a datasets with address identifiers, or "trip plan computation", which is based on datasets about a road network. A controlled vocabulary is provided."""@en ;
+    rdfs:comment """A type of information service, which the data content is intended to support. Such services may be, e.g., information services for multimodal mobility, as specified by EC Delegated Regulation 2024/490.
+    Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets on timetables.
+    A corresponding controlled vocabulary is provided."""@en ;
     rdfs:label "intended information service"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
@@ -857,10 +878,11 @@ mobilitydcatap:intendedInformationService a rdf:Property,
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;		
-    rdfs:seeAlso <https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32017R1926> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service> .
-		      
-		   
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#intendedInformationService> ,
+                <https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-intended-information-service> .
+ 		   
 ###  http://www.w3.org/ns/dqv#hasQualityAnnotation
 dqv:hasQualityAnnotation a rdf:Property,
     owl:ObjectProperty ;
@@ -1037,17 +1059,42 @@ oa:hasTarget a rdf:Property,
     dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hastarget> . 		
 
-###   http://www.w3.org/ns/oa#hasTarget
+###   http://www.w3.org/ns/dcat#distribution
 dcat:distribution a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property links the dataset to an available distribution. 
-    In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, the obligation of this property is raised to "mandatory", compared to [DCAT-AP-v2.0.1]."""@en ;
+    rdfs:comment """An available Distribution for the Dataset.
+    In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, the obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Datasets. "@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes dcat:Distribution ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> .
+    rdfs:seeAlso <http://www.w3.org/ns/dcat#distribution> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
+
+###  https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version
+dcat:hasVersion a rdf:Property,
+    owl:ObjectProperty ;
+    rdfs:comment """A related dataset that is a version, edition, or adaptation of the described dataset.
+    It might be used to host multiple versions of the same dataset in the data portal, also enabling a version history. Multiple versions should be differentiated via the properties dcat:version and adms:versionNotes."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Datasets. "@en ;
+    adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+    dcam:domainIncludes dcat:Dataset ;
+    dcam:rangeIncludes dcat:Dataset ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version-notes> .
+
+###  https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series
+dcat:inSeries a rdf:Property,
+    owl:ObjectProperty ;
+    rdfs:comment """A dataset series of which the dataset is part."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Datasets. "@en ;
+    adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+    dcam:domainIncludes dcat:Dataset ;
+    dcam:rangeIncludes dcat:DatasetSeries ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version-notes> .
 		   
 ###  http://www.w3.org/ns/locn#adminUnitL2
 locn:adminUnitL2 rdf:type owl:DatatypeProperty ;
@@ -1108,6 +1155,23 @@ foaf:name
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://xmlns.com/foaf/0.1/name> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> .
+
+###  http://xmlns.com/foaf/spec/#term_page
+foaf:name 
+    rdfs:comment """For Dataset, it describes a page or document about this dataset.
+    This property is meant to link to other ressources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.
+
+    For Distribution, it describes a page or document about the distribution.
+    This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    Please note there is also the same property foaf:page on the dataset level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Agents."@en ;
+    dcam:domainIncludes dcat:Dataset ,
+                        dcat:Distribution ;
+    dcam:rangeIncludes foaf:Document ;
+    rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_page> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-description> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-documentation> .
 
 
 ### http://purl.org/dc/terms/type
@@ -1311,13 +1375,23 @@ dct:accessRights
 
 ### http://purl.org/dc/terms/accrualPeriodicity
 dct:accrualPeriodicity 
-    rdfs:comment """This property describes how often the delivered content is updated. This information tells a data consumer, how often it is updated on the on the data platform, so the data consumer might align the frequency of data retrieval accordingly. For data services, e.g., data feeds, the frequency should correspond to the technical upload / data push frequency. For static datasets, it should correspond to the expected change frequency (see property dct:modified). The frequency might be a specific time interval, or a general remark such as "updated on occurrence". A controlled vocabulary is provided. The obligation of this property is raised to "mandatory", compared to [DCAT-AP-v2.0.1]."""@en ;
+    rdfs:comment """For Datasets, it describes how often the delivered content is updated. This information tells a data consumer, how often it is updated on the on the data platform, so the data consumer might align the frequency of data retrieval accordingly.
+    For dynamic data feeds, the frequency should correspond to the technical upload / data push frequency. For static datasets, it should correspond to the expected change frequency (see property dct:modified). The frequency might be a specific time interval, or a general remark such as “updated on occurrence”.
+    A controlled vocabulary is provided.
+    The obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0.
+
+    For DatasetSeries, it describes how often the dataset series is updated. 
+    The frequency of a dataset series is understood differently to the frequency of the dataset in the collection, as declared via property dct:accrualPeriodicity. See the examples no. 5 and 6 in the Dataset Series examples section of DCAT-AP v3.0.0."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Datasets."@en ;
-    dcam:domainIncludes dcat:Dataset ;
+    dcam:domainIncludes dcat:Dataset ,
+                        dcat:DatasetSeries ;
     dcam:rangeIncludes dct:Frequency ;
-    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accrualPeriodicity> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-update-frequency> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> .
+    rdfs:seeAlso <http://purl.org/dc/terms/accrualPeriodicity> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-modification-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-update-frequency> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-frequency> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> .
 
 ### http://purl.org/dc/terms/description
 dct:description 
@@ -1661,14 +1735,20 @@ dcat:hadRole
     skos:scopeNote "In mobilityDCAT-AP, this is an mandatory property for Relationship."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole> .
 
-### https://www.w3.org/ns/dcat#keyword
+### https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword
 dcat:keyword 
-    rdfs:comment """This property contains a keyword or tag describing the Dataset. For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependent and make data search difficult. Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular dcat:theme, mobilitydcatap:networkCoverage and mobilitydcatap:transportMode. If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of "mobilityDCAT-AP", in order to update the Controlled Vocabularies."""@en ;
+    rdfs:comment """This property contains a keyword or tag describing the Dataset. 
+    For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependent and make data search difficult.
+    Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular mobilitydcatap:mobilityTheme, mobilitydcatap:networkCoverage, mobilitydcatap:transportMode.
+    If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of mobilityDCAT-AP, in order to update the Controlled Vocabularies."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets."@en ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword> .
-    
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-mobility-theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-network-coverage> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-transport-mode> .
+
 ### https://www.w3.org/ns/dcat#record
 dcat:record 
     rdfs:comment """This property refers to a metadata record that is part of the mobility data portal. 
@@ -1714,7 +1794,7 @@ dcat:themeTaxonomy
     rdfs:seeAlso <http://www.w3.org/ns/dcat#themeTaxonomy> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-mobility-theme> .
 
-### https://www.w3.org/ns/legacy_locn#locn:geometry
+### http://www.w3.org/ns/legacy_locn#locn:geometry
 locn:geometry 
     rdfs:comment """This property associates any resource with the corresponding geometry."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Locations."@en ;
@@ -1734,17 +1814,29 @@ foaf:primaryTopic
     rdfs:comment """This property links the metadata entry to the dataset described in the entry."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property for Catalogue Records." ;
     dcam:domainIncludes dcat:CatalogRecord ;
-    dcam:rangeIncludes dcat:Dataset ;
+    dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://xmlns.com/foaf/spec/#term_primaryTopic> .
 
 
-### https://www.w3.org/ns/dcat#contactPoint
+### http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint 
-    rdfs:comment """This property contains contact information that can be used for communication with a company or person responsible for the dataset. Such contact is important for any questions or issues about a dataset and its provisioning, which might raised by a platform user or a platform operator. The provided contact information, such as a personal name and email address, MAY NOT be exposed to platform users, but MAY be anonymously used via, e.g. a contact button on the GUI that triggers an email to the contact point."""@en ;
+    rdfs:comment """For Dataset, it refers to a contact information that can be used for communication with a company or person responsible for the dataset. Used for questions or issues about a dataset and its provisioning, as raised by a platform user or a platform operator.
+    When providing contact information, data publishers SHOULD prioritize organizational information over personal details.
+    The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 13. Privacy and security considerations.
+    The contact point might be populated with the same information as for property dct:publisher. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
+
+    For Dataset Series, it contains information about the contact information that can be used for communication with a company or person responsible for the dataset series. Used for questions or issues about a dataset series and its provisioning, as raised by a platform user or a platform operator.
+    When providing contact information, data publishers SHOULD prioritize organizational information over personal details.
+    The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 13. Privacy and security considerations."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property for Datasets." ;
-    dcam:domainIncludes dcat:Dataset ;
+    dcam:domainIncludes dcat:Dataset ,
+                        dcat:DatasetSeries ;
     dcam:rangeIncludes vcard:Kind ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point> .
+    rdfs:seeAlso <http://www.w3.org/ns/dcat#contactPoint> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#privsec> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
+
 
 
 
