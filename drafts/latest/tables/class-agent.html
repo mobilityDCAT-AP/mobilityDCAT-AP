@@ -19,9 +19,6 @@ geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent"
 <th>Usage note</th>
 <td>
   <p>According to [[FOAF]], an Agent may be of a type of a person (via sub-class <code>foaf:Person</code>), an organisation (via sub-class <code>foaf:Organization</code>), or a group (via sub-class <code>foaf:Group</code>).</p>
-  <p>When providing agent information, data publishers should prioritize organizational information over personal details. 
-    The exposure of personal information, such as a personal name and email address, may be restricted to the public. 
-    Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See <a class="no-sectionRef" href="#privsec"></a>.</p>
   <p>For mobility data portals, it is expected that organisations are the main data actors, so the type organisation is preferred.
     In such case, the use of the <a href="https://www.w3.org/TR/vocab-org/">Organization Ontology</a> is recommended. </p>
   <p> If a person is mentioned as an agent, he or she should be attributed to an organisation via the property <a href="#class-agent"><code>org:memberOf</code></a>, 
@@ -29,6 +26,11 @@ geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent"
   <p>The agent might be populated with the same information as for a kind, see class <a href="#class-kind"><code>vcard:Kind</code></a>. 
     See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
   <p>See <a class="no-sectionRef" href="#agent-roles"></a> for a discussion on Agent types, roles and properties.</p>
+  <p>When providing agent information, data publishers should prioritize organizational information over personal details. 
+    The exposure of personal information, such as a personal name and email address, may be restricted to the public. 
+    Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See <a class="no-sectionRef" href="#privsec"></a>.
+    See also the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#8-organisational-and-personal-information">Wiki page</a> 
+    with more recommendations on the usage of organisational and personal information.</p>
 </td></tr>
 <tr>
 <th>Properties</th>
