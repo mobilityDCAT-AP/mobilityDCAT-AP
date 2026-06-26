@@ -726,42 +726,6 @@
 
 <h2>Agent Types, Agent Roles and Contact Information</h2>
 
-<p>According to the [[DCAT-AP-v3.0.1-Agent Roles]] note, the only original agent role within the DCAT-AP data model was to declare a publisher (typically, an organisation) of a dataset 
-  via property <a href="#dataset-publisher"><code>dct:publisher</code></a>.</p>
-
-<p>Besides that, the DCAT-AP data model allows for declaring a contact point of a dataset via property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a>. 
-  However, this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</p>
-
-<p>The[[DCAT-AP-v3.0.1-Agent Roles]] note also discusses two approaches to express other, more specific agent roles, via additional properties with more specific meanings. </p>
-<p>One approach is to introduce further properties that represent additional types of relationships between Datasets and Agents. 
-  This option is also followed by mobilityDCAT-AP, via introducing the property  <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a>. </p>
-<p>The approach approach is to use W3C’s PROV ontology [[prov-o]], which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information,
-However, this mechanism is not introduced by mobilityDCAT-AP.</p>
-
-<p>mobilityDCAT-AP uses the class <a href="#class-agent"><code>foaf:Agent</code></a> in the context of describing entities:</p>
-<ul>
-<li>responsible for the creation and maintenance of the data platform;</li>
-<li>responsible for the creation and maintenance of a metadata entry;</li>
-<li>responsible for the provisioning of a dataset or a dataset series; or</li>
-<li>responsible for the content of the data.</li>
-</ul>
-
-<p>Thus, two different agent-role properties are used: Publisher for classes Catalogue (<a href="#class-catalogue"><code>dct:publisher</code></a>), Catalogue Record (<a href="#class-catalogue-record"><code>dct:publisher</code></a>), and Dataset (<a href="#class-dataset"><code>dct:publisher</code></a>); and Rights Holder for class Dataset (<a href="#class-dataset"><code>dct:rightsHolder</code></a>). In contrast, other agent-role properties such as <code>dct:creator</code> are not used.</p>
-<p><p><a href="#fig-mobilitydcat-ap-uml-class-diagram-withAgent"></a> shows how the potential usages of <a href="#class-agent"><code>foaf:Agent</code></a> are represented in a UML diagram.</p>
-
-<figure id="fig-mobilitydcat-ap-uml-class-diagram-withAgent">
-<a href="./figures/mobilityDCAT-AP_uml-diagramm_240816_AgentRelated.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240816_AgentRelated.png" alt="mobilityDCAT-AP UML Class Diagram with Agent"/></a>
-<figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on agent-role properties</figcaption>
-</figure>
-
-<p>The class <a href="#class-agent"><code>foaf:Agent</code></a> is used to identify the entity with the above-mentioned roles. The properties under the class <a href="#class-agent"><code>foaf:Agent</code></a> also allow for providing (optional) contact details.</p>
-<p>There is one further, recommended property <a href="#class-agent"><code>dct:type</code></a> describing the agent's type via a controlled vocabulary. This property MAY be used to determine, among others, the hierarchy of a public authority (local, regional, national, supranational). Such organisation types are often data providers at mobility data portals, so much information is seen beneficial.</p>
-
-
-<p>In contrast, contact details with the goal to establish a direct contact between a data provider and a data user SHOULD be provided via the property <a href="#class-dataset"><code>dcat:contactPoint</code></a> under class <a href="#class-dataset"><code>dcat:Dataset</code></a>.</p>
-<p>The range of <a href="#class-dataset"><code>dcat:contactPoint</code></a> is the class <a href="#class-kind"><code>vcard:Kind</code></a>. A couple of properties for this class are defined, specifying contact information. Of these properties, <a href="#class-kind"><code>vcard:fn</code></a> and <a href="#class-kind"><code>vcard:hasEmail</code></a> are mandatory. The usage note of <a href="#class-dataset"><code>dcat:contactPoint</code></a> gives more details on how to handle such contact information.</p>
-
-<p>With such concept, there might be overlaps of the contact information under the properties <a href="#class-dataset"><code>dct:publisher</code></a> and <a href="#class-dataset"><code>dcat:contactPoint</code></a>. Depending on the portal system, the contact information can be populated to the data portal's user registry (in case, e.g., users are required to sign in before they use the data portal and/or from a dataset-specific contact information. A recommended way is to populate all information for <a href="#class-dataset"><code>dct:publisher</code></a> automatically from the user's registry, and to allow an optional field "contact information" (name and email) when entering dataset-specific metadata, which can be freely entered be the metadata publisher. If such optional field is not entered (or not implemented), the user registry can still be retrieved.</p>
 
 </section>
 
