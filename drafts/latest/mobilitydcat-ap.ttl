@@ -24,6 +24,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix geodcatap: <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#> .
 @base <https://w3id.org/mobilitydcat-ap/> .
 
 
@@ -636,11 +637,11 @@ foaf:workplaceHomepage a rdf:Property,
 ###   https://www.w3.org/TR/annotation-vocab/#hasbody
 oa:hasBody a rdf:Property ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    rdfs:comment """For Assessments, this property indicates the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information is provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.
+    rdfs:comment """For Assessment, this property indicates the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information is provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.
 
-    For Quality Annotations, this property contains any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.
+    For Quality Annotation, this property contains any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.
     Textual information should be provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Assessments and Quality Annotations. "@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Assessment and Quality Annotation. "@en ;
     dcam:domainIncludes mobilitydcatap:Assessment ,
                         dqv:QualityAnnotation ;
     dcam:rangeIncludes rdfs:Resource ,
@@ -711,42 +712,62 @@ dct:publisher a rdf:Property,
 ###  http://purl.org/dc/terms/source
 dct:source a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """The original metadata record that was used in creating the metadata record.
-    Used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property should link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested."""@en ;
+    rdfs:comment """For Catalogue Records, it refers to the original metadata record that was used in creating the metadata record.
+    Used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property should link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested.
+
+    For Datasets, it refers to a related Dataset from which the described Dataset is derived.
+    There is the same property dct:source on the Catalogue Record level. The source of a dataset relates to the content data, whereas the source of a catalogue record relates to the metadata."""@en ;
     rdfs:label "source metadata"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Records."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Records and Datasets."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    dcam:domainIncludes dcat:CatalogRecord ;
-    dcam:rangeIncludes dcat:CatalogRecord ;
-    rdfs:seeAlso <http://purl.org/dc/terms/source> .	
+    dcam:domainIncludes dcat:CatalogRecord ,
+                        dcat:Dataset ;
+    dcam:rangeIncludes dcat:CatalogRecord ,
+                       dcat:Dataset ;
+    rdfs:seeAlso <http://purl.org/dc/terms/source> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-source-metadata> .	
 
-###  http://www.w3.org/2004/02/skos/core#inScheme
+###  https://www.w3.org/2009/08/skos-reference/skos.html#inScheme
 skos:inScheme a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """For Category, this property MAY be used to specify the Category Scheme to which the Category belongs. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].
-    For Location, this property MAY be used to specify the gazetteer to which the Location belongs. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """For Location, it refers to the gazetteer, i.e., a codelist to which the location belongs.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0.
+
+    For Concept, relates a concept to a concept scheme in which it is included.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Categories, and it is a recommended property to be used for Locations."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Location and Concept."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes skos:Concept ,
                         dct:Location ;
     dcam:rangeIncludes skos:ConceptScheme ;
-    rdfs:seeAlso <http://www.w3.org/2004/02/skos/core#inScheme> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .     
+    rdfs:seeAlso <https://www.w3.org/2009/08/skos-reference/skos.html#inScheme> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .     
 		   
 ###  https://w3id.org/mobilitydcat-ap#mobilityTheme
 mobilitydcatap:mobilityTheme a rdf:Property,
     owl:ObjectProperty ;
 	rdfs:subPropertyOf dcat:theme ;
-    rdfs:comment """This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content. The theme is described via a controlled vocabulary in two hierarchy levels: The 1st level is a mandatory field labelled "Data content category", describing the classification of the data content on an aggregated level. The 2nd level is an optional field labelled "Data content sub category", detailing the "Data content category" via one or several sub-categories. When entering the metadata for one dataset, the data provider would first select one or several options of a "Data content category", and then optionally details this with one or more options of corresponding "Data content sub category". The platform must be able to handle the dependencies between these two levels, i.e., match the allowed options between the 1st and 2nd level. A corresponding controlled vocabulary is provided. This property is a sub-property of dcat:theme, which is also a further, recommended property of Dataset. To distinguish the both theme properties, it is recommended to label mobilitydcatap:mobilityTheme as "Mobility Theme", and dcat:theme as "EU Open Data Theme". The subject of a dataset MAY also be described via a property dcat:keyword. However, the usage of "theme / category" is preferred, to avoid ambiguity and uncontrolled theme descriptions."""@en ;
+    rdfs:comment """For Dataset, this property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content.
+    The theme is described via a controlled vocabulary in two hierarchy levels: The 1st level is a mandatory field labelled "Data content category", describing the classification of the data content on an aggregated level. The 2nd level is an optional field labelled “Data content sub category”, detailing the "Data content category" via one or several sub-categories. When entering the metadata for one dataset, the data provider would first select one or several options of a "Data content category", and then optionally details this with one or more options of corresponding “Data content sub category”. The platform must be able to handle the dependencies between these two levels, i.e., match the allowed options between the 1st and 2nd level.
+    A corresponding controlled vocabulary is provided.
+    This property is a sub-property of dcat:theme, being a further property of Dataset. To distinguish these two theme properties, it is recommended to label mobilitydcatap:mobilityTheme as "Mobility Theme", and dcat:theme as "EU Open Data Theme".
+    The subject of a dataset may also be described via property dcat:keyword. However, the usage of "mobility theme" is preferred, to avoid ambiguity and uncontrolled theme descriptions.
+
+    For Dataset Series, this property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the dataset series. A theme is important for data seekers who are interested in a particular type of data content. It is recommended that the theme does not change among datasets in the collection, i.e., the theme of the dataset series should be equal to the theme of each dataset in the collection.
+    A corresponding controlled vocabulary is provided."""@en ;
     rdfs:label "mobility theme"@en  ;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for  Datasets."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    dcam:domainIncludes dcat:Dataset ;
+    dcam:domainIncludes dcat:Dataset ,
+                        dcat:DatasetSeries ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-mobility-theme> . 
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#mobilityTheme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-mobility-theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-keyword> .
 
 ###  https://w3id.org/mobilitydcat-ap#georeferencingMethod
 mobilitydcatap:georeferencingMethod a rdf:Property,
@@ -775,7 +796,7 @@ dct:conformsTo a rdf:Property,
     For Mobility Data Standard, it refers to the reference to the applied mobility data standard, as well as to individual/national/content-specific profiles or representations of the applied standard.
     This property is necessary if a custom instance of class mobilitydcatap:MobilityDataStandard is defined. This property would then reference a common mobility data standard (e.g., "NeTeX" via the controlled vocabulary), as well as additionally further individual/national/content-specific profiles or representations of the applied standard (e.g., an Italian NeTEx profile)."""@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets, and an optional property to be used for Mobility Data Standards. "@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue Record, Distribution, and Mobility Data Standard. "@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:CatalogRecord ,
                         dcat:Distribution ,
@@ -790,20 +811,29 @@ dct:conformsTo a rdf:Property,
 ###  http://purl.org/dc/terms/rightsHolder
 dct:rightsHolder a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property dqv:hasQualityAnnotation) and/or the relevance to legal frameworks (if applicable, see property dcatap:applicableLegislation). This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset. The Rights Holder will be in many cases identical with the Publisher information for class Dataset (see property dct:publisher) and/or for class Catalogue Record (see property dct:publisher). In this case, the contact data MAY be copied from the corresponding Publisher entries. There might be also cases with non-identical entities: e.g., when one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property dcatap:applicableLegislation.
+    The rights holder will be in many cases identical with the publisher of the dataset (see property dct:publisher) and/or of the catalogue record (see property dct:publisher). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "rights holder"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets. "@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets. "@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes foaf:Agent ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> . 
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-applicable-legislation> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-publisher> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ###  https://w3id.org/mobilitydcat-ap#networkCoverage
 mobilitydcatap:networkCoverage a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed. For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. For all modes, the property SHOULD also indicate if the data content relates to the EU’s trans-European transport network [EU-TEN-T]. A controlled vocabulary is provided, denoting commonly used road and infrastructure network classes."""@en ;
+    rdfs:comment """This property describes the part of the transport network that is covered by the delivered content.
+    For road traffic, the property should refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed.
+    For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data.
+    For all modes, the property should also indicate if the data content relates to the EU’s trans-European transport network.
+    A corresponding controlled vocabulary is provided, denoting commonly used road and infrastructure network classes."""@en ;
     rdfs:label "network coverage"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
@@ -811,22 +841,25 @@ mobilitydcatap:networkCoverage a rdf:Property,
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-network-coverage> .
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#networkCoverage> , 
+                <https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-georeferencing-method> .
 
 		   
 ###  https://w3id.org/mobilitydcat-ap#transportMode
 mobilitydcatap:transportMode a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property describes the transport mode that is covered by the delivered content. Data can be valid for more than one mode, so a multiple choice should be applied. A controlled vocabulary is provided, denoting commonly used transport modes."""@en ;
+    rdfs:comment """The transport mode that is covered by the delivered content.
+    A corresponding controlled vocabulary is provided, denoting commonly used transport modes."""@en ;
     rdfs:label "transport mode"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-transport-mode> .
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#transportMode> , 
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-transport-mode> .
 		   
 ###  http://data.europa.eu/r5r/applicableLegislation
 dcatap:applicableLegislation a rdf:Property,
@@ -886,22 +919,28 @@ mobilitydcatap:intendedInformationService a rdf:Property,
 ###  http://www.w3.org/ns/dqv#hasQualityAnnotation
 dqv:hasQualityAnnotation a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property MAY describe any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Rights Holder (see property dct:rightsHolder). This information SHOULD assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information SHOULD be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations. Quality aspects SHOULD be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note "quality information is unknown" SHOULD be given. If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects [EU-EIP-QP], these frameworks should be referenced. """@en ;
+    rdfs:comment """Any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment. This information should assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information should be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.
+    Quality aspects should be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” should be given.
+    If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Frameworks from the NAPCORE project, these frameworks should be referenced."""@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes dqv:QualityAnnotation ;
-    rdfs:seeAlso <https://www.its-platform.eu/achievement/quality-of-european-its-services-and-their-data/> ,
-                <https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation> .
+    rdfs:seeAlso <http://www.w3.org/ns/dqv#hasQualityAnnotation> ,
+                <https://napcore.eu/quality/> .
 
 
 ###  https://w3id.org/mobilitydcat-ap#mobilityDataStandard
 mobilitydcatap:mobilityDataStandard a rdf:Property,
     owl:ObjectProperty ;
     rdfs:subPropertyOf dct:conformsTo ;
-    rdfs:comment """This property describes the mobility data standard, as applied for the delivered content within the Distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. A controlled vocabulary is provided, listing common mobility data standards. If no established mobility data standard is applied, an information "proprietary standard" is requested."""@en ;
+    rdfs:comment """mobilitydcatap:mobilityDataStandardThe mobility data standard, as applied for the delivered content within the distribution. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange.
+    This is a sub-property of dct:conformsTo.
+
+    A corresponding controlled vocabulary is provided, listing common mobility data standards. At least one value from this controlled vocabulary is required. If no suitable standard is found in this vocabulary, the "other" entry should be used.
+    Optionally, a new individual instance of class mobilitydcatap:MobilityDataStandard can be provided. This instance might be used to (a) reference a mobility data standard that is not listed in the controlled vocabulary; or (b) provide additional information on an applied mobility data standard (even if listed in the controlled vocabulary), such as version or schema details. See the Wiki page for a code example with a reference to a mobility data standard (listed in the controlled vocabulary), and detailed information via an individual instance of class mobilitydcatap:MobilityDataStandard."""@en ;
     rdfs:label "mobility data standard"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
@@ -909,26 +948,32 @@ mobilitydcatap:mobilityDataStandard a rdf:Property,
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes mobilitydcatap:MobilityDataStandard ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-mobility-data-standard> .
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> ,
+                <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-mobility-data-standard> ,
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard> .
 
 		   
 ###  https://w3id.org/mobilitydcat-ap#applicationLayerProtocol
 mobilitydcatap:applicationLayerProtocol a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property describes the transmitting channel, i.e., the Application Layer Protocol, of the distribution. A controlled vocabulary is provided. """@en ;
+    rdfs:comment """The transmitting channel, i.e., the Application Layer Protocol, of the distribution.
+    A corresponding controlled vocabulary is provided."""@en ;
     rdfs:label "application layer protocol"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this property is recommended to be used for Distributions."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this property is an optional property to be used for Distributions."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-application-layer-protocol> .
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#applicationLayerProtocol> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-application-layer-protocol> .
 		   
 ###  https://w3id.org/mobilitydcat-ap#communicationMethod
 mobilitydcatap:communicationMethod a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode. A controlled vocabulary is provided."""@en ;
+    rdfs:comment """Indicates for dynamically provided distributions, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode.
+    A corresponding controlled vocabulary is provided."""@en ;
     rdfs:label "communication method"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
@@ -936,8 +981,8 @@ mobilitydcatap:communicationMethod a rdf:Property,
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-communication-method> .
-   
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#communicationMethod> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-communication-method> .
 		   
 ###  https://w3id.org/mobilitydcat-ap#grammar
 mobilitydcatap:grammar a rdf:Property,
@@ -957,7 +1002,8 @@ mobilitydcatap:grammar a rdf:Property,
 ###  http://www.w3.org/ns/adms#sample
 adms:sample a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. In [DCAT-AP-v2.0.1], there is a property adms:sample under the class dcat:Dataset , with a range of dcat:Distribution. This implies, that all mandatory properties from dcat:Distribution, e.g., mobilitydcatap:mobilityDataStandard, must be applied. To simplify the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class dcat:Distribution. It is assumed that all other properties, as already populated for dcat:Distribution, e.g., mobilitydcatap:mobilityDataStandard, also apply for the description of the data sample."""@en ;
+    rdfs:comment """A sample of the delivered content, using the same conditions (e.g., the same format and licence) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.
+    In DCAT-AP v3.0.0, there is a property adms:sample under class Dataset, with class Distribution as the range. This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset."""@en ;
     rdfs:label "sample"@en ;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
@@ -965,74 +1011,101 @@ adms:sample a rdf:Property,
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes rdfs:Resource ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-adms/#adms-sample> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> .
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.sample> .
+
+###  https://www.w3.org/ns/legacy_adms#status
+adms:status a rdf:Property,
+    owl:ObjectProperty ;
+    rdfs:comment """The status of the distribution in the context of maturity lifecycle.
+    It must take one of the values Completed, Deprecated, Under Development, Withdrawn. A corresponding controlled vocabulary is provided."""@en ;
+    rdfs:label "status"@en ;
+    vs:term_status "stable" ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
+    adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+    dcam:domainIncludes dcat:Distribution ;
+    dcam:rangeIncludes skos:Concept ;
+    rdfs:seeAlso <https://www.w3.org/ns/legacy_adms#status> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-status> .
 
 ###  http://purl.org/dc/terms/temporal
 dct:temporal a rdf:Property,
     owl:ObjectProperty ;
     rdfs:comment """For Dataset, this property refers to a temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).
-    For Distribution, this property describes the beginning and end of the time interval when a data service, e.g., a data feed, is delivered technically via the data platform. If there is no entry it means that the publication gets valid immediately and the timestamp is the same as the metadata timestamp."""@en ;
+
+    For Dataset Series, it refers to atemporal period, i.e., the beginning and the end, of the time reference that the Dataset Series covers.
+    When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open ended value is recommended, e.g. "after 2012".
+
+    For Distribution, it refers to a time interval when a distribution is facilitated (i.e., activated) technically via the data platform. Might be used if data access via a distribution is limited in time.
+    If there is no entry it means that the distribution has no explicit start time (i.e., it is facilitated immediately) and has no end time (i.e., it is facilitated infinitely)."""@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets, and it is an optional property to be used for Distributions. "@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets, Dataset Series and Distributions."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Distribution ,
-                        dcat:Dataset ;
+                        dcat:Dataset ,
+                        dcat:DatasetSeries ;
     dcam:rangeIncludes dct:PeriodOfTime ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal> .
 
 		   
-###  http://www.w3.org/2006/vcard/ns#hasEmail
+###  https://www.w3.org/TR/vcard-rdf/#d4e183
 vcard:hasEmail a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property contains an email address of the Kind, specified using fully qualified mailto: URI scheme [RFC6068]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """The email address of the kind (i.e., an individual, an organization, a location or a group), specified using fully qualified mailto: URI scheme RFC6068.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0, however, with an raised obligation level."""@en ;
     rdfs:label "email"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Kinds."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Kind."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes vcard:Kind ;
-    dcam:rangeIncludes owl:Thing ;
+    dcam:rangeIncludes vcard:Email ;
     rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e183> ,
                 <https://www.rfc-editor.org/rfc/rfc6068> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
-###  http://www.w3.org/2006/vcard/ns#hasURL
+###  https://www.w3.org/TR/vcard-rdf/#d4e605
 vcard:hasURL a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property points to a Web site of the Kind. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """A web site of the kind., i.e., of an individual, an organization, a location or a group.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "URL"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Kinds."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kind."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes vcard:Kind ;
-    dcam:rangeIncludes owl:Thing ;
-    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e876> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .
+    dcam:rangeIncludes rdfs:Resource ;
+    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e605> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 	
-###  http://www.w3.org/2006/vcard/ns#hasAddress
+###  https://www.w3.org/TR/vcard-rdf/#d4e101
 vcard:hasAddress a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property MAY be used to specify the postal address of the Kind. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """	
+    The postal address of the kind, i.e., of an individual, an organization, a location or a group.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "address"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kinds."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kind."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes vcard:Kind ;
     dcam:rangeIncludes vcard:Address ;
-    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e876> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .
+    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e101> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
-###  http://www.w3.org/2006/vcard/ns#hasTelephone
+###  https://www.w3.org/TR/vcard-rdf/#d4e563
 vcard:hasTelephone a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property MAY be used to provide the phone number of the Kind, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """The phone number of the kind (i.e., an individual, an organization, a location or a group), specified using fully qualified tel: URI scheme RFC3966.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "phone"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kinds."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kind."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes vcard:Kind ;
-    dcam:rangeIncludes owl:Thing ;
-    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e876> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .
+    dcam:rangeIncludes rdfs:Resource ;
+    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e563> ,
+                <https://www.rfc-editor.org/rfc/rfc3966> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
            
 
 ###  https://w3id.org/mobilitydcat-ap#schema
@@ -1051,13 +1124,15 @@ mobilitydcatap:schema a rdf:Property,
 ###   http://www.w3.org/ns/oa#hasTarget
 oa:hasTarget a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """This property MAY be used to describe the target of the quality annotation, referring back to the dataset being described. I.e., it is the inverse property of "dqv:hasQualityAnnotation" for class Dataset."""@en ;
+    rdfs:comment """The target of the quality annotation, referring back to the dataset being described.
+    It is the inverse property of dqv:hasQualityAnnotation for class Dataset."""@en ;
     rdfs:label "quality annotation target"@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Quality Annotations. "@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dqv:QualityAnnotation ;
     dcam:rangeIncludes dcat:Dataset ;
-    rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hastarget> . 		
+    rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hastarget> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-quality-description> .	
 
 ###   http://www.w3.org/ns/dcat#distribution
 dcat:distribution a rdf:Property,
@@ -1098,49 +1173,59 @@ dcat:inSeries a rdf:Property,
 		   
 ###  http://www.w3.org/ns/locn#adminUnitL2
 locn:adminUnitL2 rdf:type owl:DatatypeProperty ;
-    rdfs:comment """The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state."""@en ;
+    rdfs:comment """The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "administrative area"@en  ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Addresses (Agent)"@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Addresses (Agent)"@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes locn:Address ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <http://www.w3.org/ns/locn#adminUnitL2> .
+    rdfs:seeAlso <http://www.w3.org/ns/locn#adminUnitL2> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 		   
 ###  http://www.w3.org/ns/locn#postName
 locn:postName rdf:type owl:DatatypeProperty ;
-    rdfs:comment "The city of an Address of the Agent."@en ;
+    rdfs:comment """The name of the city of the address.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "city"@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Addresses (Agent)"@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Addresses (Agent)"@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes locn:Address ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <http://www.w3.org/ns/locn#postName> .
+    rdfs:seeAlso <http://www.w3.org/ns/locn#postName> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 		   
 ###  http://www.w3.org/ns/locn#adminUnitL1
 locn:adminUnitL1 rdf:type owl:DatatypeProperty ;
-    rdfs:comment "The country of an Address of the Agent."@en ;
+    rdfs:comment """The country of an address.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "country"@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Addresses (Agent)"@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Addresses (Agent)"@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes locn:Address ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <http://www.w3.org/ns/locn#adminUnitL1> .
+    rdfs:seeAlso <http://www.w3.org/ns/locn#adminUnitL1> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ###  http://www.w3.org/ns/locn#postCode
 locn:postCode rdf:type owl:DatatypeProperty ;
-    rdfs:comment "The postal code of an Address of the Agent."@en ;
+    rdfs:comment """The postal code of an address.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "postal code" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Addresses (Agent)"@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Addresses (Agent)"@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes locn:Address ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <http://www.w3.org/ns/locn#postCode> .
+    rdfs:seeAlso <http://www.w3.org/ns/locn#postCode> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
+
 		   
 ###  http://www.w3.org/ns/locn#thoroughfare
 locn:thoroughfare rdf:type owl:DatatypeProperty ;
-    rdfs:comment "The street name and civic number of an Address of the Agent."@en ;
+    rdfs:comment """The street name and civic number of the address.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "street address"@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Addresses (Agent)"@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Addresses (Agent)"@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes locn:Address ;
     dcam:rangeIncludes rdfs:Literal ;
@@ -1157,7 +1242,7 @@ foaf:name
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> .
 
 ###  http://xmlns.com/foaf/spec/#term_page
-foaf:name 
+foaf:page
     rdfs:comment """For Dataset, it describes a page or document about this dataset.
     This property is meant to link to other ressources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.
@@ -1289,52 +1374,57 @@ dct:created rdf:type owl:DatatypeProperty ;
 		   
 ###  https://w3id.org/mobilitydcat-ap#dataFormatNotes
 mobilitydcatap:dataFormatNotes rdf:type owl:DatatypeProperty ;
-    rdfs:comment """This property contains any additional information about the format of the delivered content within the Distribution (see the corresponding properties dct:format, mobilitydcatap:mobilityDataStandard, mobilitydcatap:grammar), in a textual format. This might be about, e.g., extensions being used in a mobilitydcatap:mobilityDataStandard."""@en ;
+    rdfs:comment """Any additional information about the format of the delivered content within the distribution in a textual format.This property can be repeated for parallel language versions of the data format notes - see 12. Accessibility and Multilingual Aspects."""@en ;
     rdfs:label "data format notes"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Distribution ;
-    dcam:rangeIncludes rdfs:Literal .		   
+    dcam:rangeIncludes rdfs:Literal ;
+    rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#dataFormatNotes> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects>   .
 		   
 ###  http://www.w3.org/2011/content#characterEncoding
 cnt:characterEncoding rdf:type owl:DatatypeProperty ;
-    rdfs:comment """This property describes the technical encoding format of the delivered content within the Distribution. It SHOULD be expressed using a character set name defined in the IANA register [IANA-CHARSETS]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. This is a sub-property of dct:conformsTo."""@en ;
+    rdfs:comment """The technical encoding format of the delivered content within the distribution.
+    It SHOULD be expressed using a character set name defined in the IANA character sets register.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "character encoding"@en ;
     vs:term_status "stable" ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.iana.org/assignments/character-sets> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .	 
+    rdfs:seeAlso <http://www.w3.org/2011/content#characterEncoding> ,
+                <https://www.iana.org/assignments/character-sets/character-sets.xhtml> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .	 
 		  
-###  http://www.w3.org/2006/vcard/ns#fn
+###  https://www.w3.org/TR/vcard-rdf/#d4e891
 vcard:fn rdf:type owl:DatatypeProperty ;
-    rdfs:comment """This property contains a name of the Kind. This property can be repeated for different versions of the name (e.g., the name in different languages) - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """A name of the kind, i.e., a unique name of an individual, an organization, a location or a group.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0, however, with an raised obligation level."""@en ;
     rdfs:label "name"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Kinds."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Kind."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes vcard:Kind ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e876> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .	   
+    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e891> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .	   
 		   
-###  http://www.w3.org/2006/vcard/ns#organization-name
+###  https://www.w3.org/TR/vcard-rdf/#d4e1077
 vcard:organization-name rdf:type owl:DatatypeProperty ;
-    rdfs:comment """This property MAY be used to specify the affiliation of the Kind. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """The affiliation of the kind, i.e., of an individual, an organization, a location or a group.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "affiliation"@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kinds."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kind."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes vcard:Kind ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e876> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .			   
+    rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1077> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .			   
 		   
 ###  http://www.w3.org/2000/01/rdf-schema#label
 rdfs:label rdf:type owl:DatatypeProperty ;
@@ -1352,17 +1442,21 @@ rdfs:label rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:DatatypeProperty ;
-    rdfs:comment """This property contains a preferred label of the Category. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects."@en ;
-    For Locations, this property contains a preferred label of the Location. This property can be repeated for parallel language versions of the label - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."""@en ;
+    rdfs:comment """For Location, it refers to a preferred label of the location.
+    This property can be repeated for parallel language versions of the label - see 12. Accessibility and Multilingual Aspects.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0.
+
+    For Concept, it refers to a preferred label of the concept.
+    This property can be repeated for parallel language versions of the label - see 12. Accessibility and Multilingual Aspects."""@en ;
     vs:term_status "stable" ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Locations, and a mandatory property to be used for Categories."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Location, and a mandatory property to be used for Concept."@en ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dct:Location ,
                         skos:Concept ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/2012/09/odrl/semantic/draft/doco/skos_prefLabel.html> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .		   
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .		   
 
 ### http://purl.org/dc/terms/accessRights
 dct:accessRights 
@@ -1424,13 +1518,16 @@ dct:description
 
 ### http://purl.org/dc/terms/format 
 dct:format 
-    rdfs:comment """This property refers to the technical syntax of the delivered content within the Distribution. It describes the base standard that specifies syntactically correct documents. On this level, only base elements of building documents properly are specified and can be proved by syntax checks. A controlled vocabulary is provided. The obligation of this property is raised to "mandatory", compared to [DCAT-AP-v2.0.1]. There is a similar property in [DCAT-AP-v2.0.1] dcat:mediaType, which is removed in mobilityDCAT-AP. The reason is the use of Controlled vocabularies: dct:format uses the EU Authority List [EUV-FT], whereas dcat:mediaType uses the IANA media types [IANA-MEDIA-TYPES]. The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals."""@en ;
+    rdfs:comment """The technical syntax of the delivered content within the distribution. It describes the base standard that specifies syntactically correct documents. On this level, base elements are properly specified on how to build a document. The resulting document can then be validated by syntax checks.
+    A controlled vocabulary is provided.
+    The obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0.
+    There is a similar property in DCAT-AP v3.0.0 called dcat:mediaType. This one is not used in mobilityDCAT-AP. The reason is the use of Controlled vocabularies: dct:format uses the EU Authority List about file types, whereas dcat:mediaType uses the IANA media types list. The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Distributions. "@en ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-format> ,
-                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> ,
-                <https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type> ,
-                <https://www.iana.org/assignments/media-types/> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-format> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
+                <https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/file-type> ,
+                <https://www.iana.org/assignments/media-types/media-types.xhtml> .
    
 ### http://purl.org/dc/terms/hasPart
 dct:hasPart 
@@ -1498,7 +1595,6 @@ dct:license
     A controlled vocabulary is provided."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Catalogues and Distributions, and it is an optional property to be used for Data Services."@en ;
     dcam:domainIncludes dcat:Catalog ,
-                        dcat:DataService ,
                         dcat:Distribution ;
     dcam:rangeIncludes dct:LicenseDocument ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license> ,
@@ -1532,20 +1628,25 @@ dct:modified
 
 ### http://purl.org/dc/terms/relation
 dct:relation 
-    rdfs:comment """For Datasets, this property MAY reference, cite, or otherwise point to another, related dataset. Corresponds to the property dct:isReferencedBy, with contrary relationship. It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.
-    For Relationships, this property refers to the resource related to the source resource."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets; and a mandatory property to be used for Relationships. "@en ;
+    rdfs:comment """A reference, citation, or otherwise pointing to another, related resource, such as another dataset.
+    It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets. "@en ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes rdfs:Resource ;  
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#relation> .
 
 ### http://purl.org/dc/terms/rights
 dct:rights 
-    rdfs:comment """This property links to a Rights Statement, i.e., a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage. A concrete (standard) license can be referred via the recommended property dct:license. The obligation of this property is raised to "mandatory", compared to [DCAT-AP-v2.0.1]."""@en ;
+    rdfs:comment """A statement that specifies rights associated with the distribution. In particular, a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage.
+
+    A concrete (standard) license can be referred via the recommended property dct:license.
+    The obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Distributions."@en ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes dct:RightsStatement ;  
-    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights> .
+    rdfs:seeAlso <http://purl.org/dc/terms/rights> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-licence> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 
 ### http://purl.org/dc/terms/spatial
@@ -1587,7 +1688,7 @@ dct:title
 
     For Mobility Data Standard, this property contains a name given to the mobility data standard.
     This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogues, Category Schemes,Data Services, and Datasets; and it is an optional property to be used for Distributions."@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue, Category Scheme,and Datasets; and it is an optional property to be used for Distribution and Mobility Data Standard."@en ;
     dcam:domainIncludes dcat:Catalog ,
                         skos:ConceptScheme ,
                         dcat:DatasetSeries ,
@@ -1616,17 +1717,22 @@ spdx:checksumValue
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://spdx.org/rdf/terms#checksumValue> .
 
-### https://www.w3.org/TR/owl-ref/#versionInfo-def
-owl:versionInfo a rdf:Property ;
-    rdfs:comment """For Dataset, this property contains a version number or other version designation of the dataset. The version should be updated, whenever there are changes to the dataset noted by the property dct:modified. Together with property adms:versionNotes, this MAY also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform. It is recommended to follow W3C Data on the Web Best Practices [DWBP]. Version identifiers should enable comparison of versions and distinguishing major from minor versions, such as Semantic Versioning [SEMVER].
-    For Mobility Data Standard, this property describes the version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2. This information is provided in a textual format. To avoid ambiguity, only short version identifiers SHOULD be used, e.g., only "3.2", without redundant acronyms such as "v", underscores etc."""@en ;
+### https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version
+dcat:version a rdf:Property ;
+    rdfs:comment """For Dataset, it refers to the version indicator (name or identifier) of a dataset.
+    The version number should be updated, whenever there are changes to the dataset noted by the property dct:modified.
+    Together with property adms:versionNotes, this may also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform.
+    The property URI has been replaced from owl:versionInfo, comparing to DCAT-AP-v2.0.1 and mobilityDCAT-AP-v-1.0.1.
+
+    For Mobility Data Standards, this property refers to the version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2.
+    This information is provided in a textual format. To avoid ambiguity, only short version identifiers should be used, e.g., "3.2", without redundant acronyms such as "v", underscores etc."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property for Datasets and for Mobility Data Standards."@en ;
     dcam:domainIncludes mobilitydcatap:MobilityDataStandard ,
                         dcat:Dataset ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/TR/owl-ref/#versionInfo-def> ,
-                <https://www.w3.org/TR/dwbp/> ,
-                <https://semver.org/> .
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-modification-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version-notes> .
 
 ### https://www.w3.org/TR/skos-reference/#notation
 skos:notation 
@@ -1656,14 +1762,17 @@ vcard:Kind
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#privsec> .
                  
 
-### https://www.w3.org/ns/adms#version
+### http://www.w3.org/ns/adms#versionNotes
 adms:versionNotes 
-    rdfs:comment """This property contains a textual description of the differences between this version and a previous version of the dataset, as an addition to the property owl:versionInfo. This property can be repeated for parallel language versions of the version notes - see § 8. Accessibility and Multilingual Aspects."""@en ;
+    rdfs:comment """A textual description of the differences between this version and a previous version of the dataset.
+    This property should be an addition to the property dcat:version.
+    This property can be repeated for parallel language versions of the version notes - see 12. Accessibility and Multilingual Aspects."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
-    dcam:domainIncludes dcat:DataService ;
+    dcam:domainIncludes dcat:DataSet ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-adms/#adms-versionnotes> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> .
 
 ### https://www.w3.org/ns/dcat#accessService
 dcat:accessService 
@@ -1672,23 +1781,28 @@ dcat:accessService
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_service> .
     
 
-### https://www.w3.org/ns/dcat#accessURL  
+### https://www.w3.org/ns/dcat#accessURL 
 dcat:accessURL 
-    rdfs:comment """This property contains a URL that gives access to a Distribution of the Dataset. Depending on the type of data provision, there are different options for describing the URL. For data services, e.g., API, broker services, data feeds, etc., the URL MAY be the end point of such service. However, if some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process. For data which can be downloaded directly, the download URL should be copied from the optional property dcat:downloadURL. For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL MAY be a link to an external service or a website which enables access to the data. This way, this property is the primary key to link to a data service. There is also specific class dcat:DataService, which can be linked via property dcat:accessService. See § 4.9 Data Service for a usage note about the class Data Service."""@en ;
+    rdfs:comment """A URL that gives access to a distribution of the dataset.
+    Depending on the type of data provision, there are different options for describing the URL.
+    For data services, e.g., API, broker services, data feeds, etc., the URL may be the end point of such service.
+    If some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process.
+    For data which can be downloaded directly, the download URL should be copied from the property dcat:downloadURL.
+    For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL may be a link to an external service or a website which enables access to the data."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Distributions."@en ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#properties-for-data-service> .
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#accessURL> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-download-url> .
 
-### https://www.w3.org/ns/dcat#bbox
+### https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox
 dcat:bbox 
-    rdfs:comment """This property refers to the geographic bounding box of a resource."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Locations."@en ;
+    rdfs:comment """The geographic bounding box of the location."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Location."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox> .
     
-### https://www.w3.org/ns/dcat#centroid
+### https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid
 dcat:centroid 
-    rdfs:comment """This property refers to the geographic centre (centroid) of a resource."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Locations."@en ;
+    rdfs:comment """The geographic centre (centroid) of the location."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Location."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:location_centroid> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset
@@ -1701,9 +1815,9 @@ dcat:dataset
 
 ### https://www.w3.org/ns/dcat#downloadURL
 dcat:downloadURL 
-    rdfs:comment """This property contains a URL that is a direct link to a downloadable file in a given format."""@en ;
+    rdfs:comment """A URL that is a direct link to a downloadable file in a given format."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distributions."@en ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url> .
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#downloadURL> .
     
 
 ### https://www.w3.org/ns/dcat#endDate
@@ -1772,16 +1886,15 @@ dcat:startDate
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date> .
 
 
-### https://www.w3.org/ns/dcat#theme
+### https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme
 dcat:theme 
-    rdfs:comment """This property refers to the generic theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. The category is described via a controlled vocabulary "Data Themes" by the Publications Office of the European Union [EUV-THEMES]. In most cases, it is assumed that the relevant value from this EU vocabulary is "Transport" [EUV-THEMES-TRANSPORT]. A controlled vocabulary is provided."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Datasets."@en ;
+    rdfs:comment """The generic theme (i.e., a specific subject, category, or type) of the content of the dataset.
+    A controlled vocabulary is provided."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme> ;
-    rdfs:seeAlso <https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme> ;
-    rdfs:seeAlso <https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#vocab-theme> .
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-theme> .
     
 
 ### http://www.w3.org/ns/dcat#themeTaxonomy
@@ -1794,11 +1907,11 @@ dcat:themeTaxonomy
     rdfs:seeAlso <http://www.w3.org/ns/dcat#themeTaxonomy> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-mobility-theme> .
 
-### http://www.w3.org/ns/legacy_locn#locn:geometry
+### https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.geometry
 locn:geometry 
-    rdfs:comment """This property associates any resource with the corresponding geometry."""@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Locations."@en ;
-    rdfs:seeAlso <https://www.w3.org/ns/legacy_locn#locn:geometry> .
+    rdfs:comment """The corresponding geometry for the location."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Location."@en ;
+    rdfs:seeAlso <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.geometry> .
 
 
 ### https://xmlns.com/foaf/spec/#term_homepage
@@ -1811,7 +1924,7 @@ foaf:homepage
 
 ### https://xmlns.com/foaf/spec/#term_primaryTopic
 foaf:primaryTopic 
-    rdfs:comment """This property links the metadata entry to the dataset described in the entry."""@en ;
+    rdfs:comment """Links the metadata entry to the dataset described in the entry."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property for Catalogue Records." ;
     dcam:domainIncludes dcat:CatalogRecord ;
     dcam:rangeIncludes rdfs:Literal ;
@@ -1836,6 +1949,21 @@ dcat:contactPoint
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#privsec> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
+
+### https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/#referenceSystem
+geodcatap:referenceSystem
+    rdfs:comment """The spatial reference system used in the delivered content. To be specified via the “EPSG coordinate reference systems” register operated by OGC.
+    A corresponding controlled vocabulary is provided.
+    This is a sub-property of dct:conformsTo.
+    This property is analogue to an addition by geoDCAT-AP v3.0.0."""@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Datasets."@en ;
+    dcam:domainIncludes dcat:Dataset ;
+    dcam:rangeIncludes skos:Concept ;
+    rdfs:seeAlso <https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/#referenceSystem> ,
+                <http://www.opengis.net/def/crs/EPSG/> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-reference-system> ,
+                <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 
 
