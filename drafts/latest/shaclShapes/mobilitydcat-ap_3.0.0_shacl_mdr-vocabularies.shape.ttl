@@ -1,0 +1,183 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+#-------------------------------------------------------------------------
+# mobilityDCAT-AP 3.0.0 - Controlled-vocabulary constraints (mobility deltas)
+# Extends DCAT-AP 3.0.1.
+#
+# Encodes ONLY the mobility-specific CV bindings from spec section 10.2.
+# The EU NAL bindings (Frequency, Language, FileType, CorporateBody,
+# Country/Place/Continent, Distribution-Status, ADMS publisher-type, etc.)
+# are inherited by loading DCAT-AP's own mdr-vocabularies.shape.ttl as a
+# sibling in the ITB profile - not restated here.
+#
+# Restriction pattern follows DCAT-AP: a :XxxRestriction NodeShape checks
+# skos:inScheme of the value; bound to a property inside a per-class
+# :Class_MobilityShapeCV via sh:node. Severity reflects obligation
+# (Violation = mandatory CV in 10.2, Warning = recommended/optional).
+#
+# >>> VERIFICATION REQUIRED before release: the skos:inScheme values below
+#     use each CV's base IRI (e.g. .../network-coverage). Confirm against
+#     the published controlled-vocabularies repo that each CV's
+#     skos:ConceptScheme IRI is exactly that base IRI (not a versioned or
+#     /scheme-suffixed one). If the scheme IRI differs, sh:hasValue must be
+#     updated to match, or every CV check fails. Verify one CV (e.g.
+#     network-coverage) and apply the pattern.
+#
+# NOT encoded (deprecated in v3): mobilitydcatap:grammar (#90),
+#   update-frequency CV, dct:identifier on Licence Document (#165).
+# NOT encoded here (external register, no SKOS scheme):
+#   geodcatap:referenceSystem points to the OGC EPSG register - node-kind
+#   IRI + skos:Concept is checked in range.ttl; register membership is not
+#   SKOS-checkable here.
+#-------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
+    a owl:Ontology ;
+    dct:title "Controlled Vocabulary Constraints of mobilityDCAT-AP"@en ;
+    dct:description "Controlled vocabulary constraints on mobility-specific properties expressed by mobilityDCAT-AP in SHACL, extending DCAT-AP 3.0.1."@en ;
+    owl:versionInfo "3.0.0" ;
+    dct:modified "2026-06-21"^^xsd:date .
+#=========================================================================
+# Restriction NodeShapes - one per active mobility CV
+#=========================================================================
+:MobilityThemeRestriction
+    a sh:NodeShape ; rdfs:label "Mobility Theme restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:TransportModeRestriction
+    a sh:NodeShape ; rdfs:label "Transport Mode restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/transport-mode> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:NetworkCoverageRestriction
+    a sh:NodeShape ; rdfs:label "Network Coverage restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/network-coverage> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:GeoreferencingMethodRestriction
+    a sh:NodeShape ; rdfs:label "Georeferencing Method restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/georeferencing-method> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:IntendedInformationServiceRestriction
+    a sh:NodeShape ; rdfs:label "Intended Information Service restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/intended-information-service> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:ApplicationLayerProtocolRestriction
+    a sh:NodeShape ; rdfs:label "Application Layer Protocol restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:CommunicationMethodRestriction
+    a sh:NodeShape ; rdfs:label "Communication Method restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/communication-method> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:ConditionsForAccessAndUsageRestriction
+    a sh:NodeShape ; rdfs:label "Conditions for Access and Usage restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+:MobilityDataStandardRestriction
+    a sh:NodeShape ; rdfs:label "Mobility Data Standard restriction"@en ;
+    sh:property [ sh:path skos:inScheme ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+#=========================================================================
+# Per-class CV bindings (section 10.2)
+#=========================================================================
+#--- Dataset -------------------------------------------------------------
+:Dataset_MobilityShapeCV
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [
+        sh:path mobilitydcatap:mobilityTheme ;          # 1..n MANDATORY
+        sh:node :MobilityThemeRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "mobilityTheme must use a concept from the Mobility Theme vocabulary."@en ;
+        sh:message "mobilityTheme value must be in the Mobility Theme scheme (skos:inScheme)."@en ;
+        sh:severity sh:Violation
+    ] , [
+        sh:path mobilitydcatap:transportMode ;           # 0..n recommended
+        sh:node :TransportModeRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "transportMode should use a concept from the Transport Mode vocabulary."@en ;
+        sh:message "transportMode value should be in the Transport Mode scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] , [
+        sh:path mobilitydcatap:networkCoverage ;         # 0..n recommended
+        sh:node :NetworkCoverageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "networkCoverage should use a concept from the Network Coverage vocabulary."@en ;
+        sh:message "networkCoverage value should be in the Network Coverage scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] , [
+        sh:path mobilitydcatap:georeferencingMethod ;    # 0..n recommended
+        sh:node :GeoreferencingMethodRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "georeferencingMethod should use a concept from the Georeferencing Method vocabulary."@en ;
+        sh:message "georeferencingMethod value should be in the Georeferencing Method scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] , [
+        sh:path mobilitydcatap:intendedInformationService ;  # 0..n optional
+        sh:node :IntendedInformationServiceRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "intendedInformationService should use a concept from the Intended Information Service vocabulary."@en ;
+        sh:message "intendedInformationService value should be in the Intended Information Service scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] .
+#--- Dataset Series (reuses mobilityTheme, 0..n) -------------------------
+:DatasetSeries_MobilityShapeCV
+    a sh:NodeShape ;
+    sh:targetClass dcat:DatasetSeries ;
+    sh:property [
+        sh:path mobilitydcatap:mobilityTheme ;
+        sh:node :MobilityThemeRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "mobilityTheme should use a concept from the Mobility Theme vocabulary."@en ;
+        sh:message "mobilityTheme value should be in the Mobility Theme scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] .
+#--- Distribution --------------------------------------------------------
+:Distribution_MobilityShapeCV
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    # mobilityDataStandard (1..* MANDATORY): values may be a CV concept OR a
+    # custom MobilityDataStandard instance; spec requires AT LEAST ONE value
+    # from the CV -> qualified shape, not a blanket sh:node on all values.
+    sh:property [
+        sh:path mobilitydcatap:mobilityDataStandard ;
+        sh:qualifiedValueShape :MobilityDataStandardRestriction ;
+        sh:qualifiedMinCount 1 ;
+        sh:description "At least one mobilityDataStandard value must be a concept from the Mobility Data Standard vocabulary (use 'other' if none fits)."@en ;
+        sh:message "At least one mobilityDataStandard value must be in the Mobility Data Standard scheme."@en ;
+        sh:severity sh:Violation
+    ] , [
+        sh:path mobilitydcatap:applicationLayerProtocol ;    # 0..1 optional
+        sh:node :ApplicationLayerProtocolRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "applicationLayerProtocol should use a concept from the Application Layer Protocol vocabulary."@en ;
+        sh:message "applicationLayerProtocol value should be in the Application Layer Protocol scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] , [
+        sh:path mobilitydcatap:communicationMethod ;         # 0..1 optional
+        sh:node :CommunicationMethodRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "communicationMethod should use a concept from the Communication Method vocabulary."@en ;
+        sh:message "communicationMethod value should be in the Communication Method scheme (skos:inScheme)."@en ;
+        sh:severity sh:Warning
+    ] .
+#--- Rights Statement ----------------------------------------------------
+# dct:type on dct:RightsStatement (1..* MANDATORY) -> Conditions CV.
+# (dct:type on foaf:Agent uses the inherited ADMS publisher-type shape.)
+:RightsStatement_MobilityShapeCV
+    a sh:NodeShape ;
+    sh:targetClass dct:RightsStatement ;
+    sh:property [
+        sh:path dct:type ;
+        sh:node :ConditionsForAccessAndUsageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "Conditions for access and usage (dct:type) must use a concept from the Conditions for Access and Usage vocabulary."@en ;
+        sh:message "Conditions for access and usage (dct:type) value must be in the Conditions scheme (skos:inScheme)."@en ;
+        sh:severity sh:Violation
+    ] .
