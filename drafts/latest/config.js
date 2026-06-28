@@ -30,11 +30,15 @@ var respecConfig = {
     },
     {
       label: "SHACL basic validation (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap-shacl.ttl",
+      uri: "./shaclShapes/mobilitydcat-ap_3.0.0_shacl_shapes.ttl",
     },
     {
       label: "SHACL range constraints (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl",
+      uri: "./shaclShapes/mobilitydcat-ap_3.0.0_shacl_range.ttl",
+    },
+    {
+      label: "SHACL controlled-vocabulary constraints (Turtle)",
+      uri: "./shaclShapes/mobilitydcat-ap_3.0.0_shacl_mdr-vocabularies.shape.ttl",
     }
     ],
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
