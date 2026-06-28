@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <dcat:Catalog rdf:about="https://trafficdata.se/">
+    <dct:title xml:lang="en">Trafficdata.se</dct:title>
+    <dct:description xml:lang="en">The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data.</dct:description>
+    <foaf:homepage rdf:resource="https://trafficdata.se/"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://www.trafikverket.se/">
+        <foaf:name xml:lang="sv">Trafikverket</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:spatial>
+      <dct:Location rdf:nodeID="n33ef35fa4fe64fd992d047c92261e3bab1">
+        <dct:identifier rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+      </dct:Location>
+    </dct:spatial>
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa">
+        <dct:title xml:lang="en">Traffic signs expressing traffic regulations and identifying dangers, Speed limits</dct:title>
+        <dct:description xml:lang="en">Traffic signs from the Swedish Transport Administration. Datex II format.</dct:description>
+        <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"/>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
+        <dct:spatial>
+          <dct:Location rdf:nodeID="n33ef35fa4fe64fd992d047c92261e3bab2">
+            <dct:identifier rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+          </dct:Location>
+        </dct:spatial>
+        <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+        <dcat:distribution rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"/>
+      </dcat:Dataset>
+    </dcat:dataset>
+    <dcat:record>
+      <dcat:CatalogRecord rdf:about="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits">
+        <foaf:primaryTopic rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:modified>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+      </dcat:CatalogRecord>
+    </dcat:record>
+  </dcat:Catalog>
+  <dcat:Distribution rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d">
+    <dcat:accessURL rdf:resource="http://www.trafikverket.se/tjanster/x/"/>
+    <dct:rights>
+      <dct:RightsStatement rdf:nodeID="n33ef35fa4fe64fd992d047c92261e3bab3">
+        <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/>
+      </dct:RightsStatement>
+    </dct:rights>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+    <mobilitydcatap:mobilityDataStandard>
+      <mobilitydcatap:MobilityDataStandard rdf:nodeID="n33ef35fa4fe64fd992d047c92261e3bab4">
+        <dct:conformsTo rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"/>
+        <dcat:version>3.2</dcat:version>
+      </mobilitydcatap:MobilityDataStandard>
+    </mobilitydcatap:mobilityDataStandard>
+  </dcat:Distribution>
+  <foaf:Agent rdf:about="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b">
+    <foaf:name xml:lang="sv">Trafikverket</foaf:name>
+    <foaf:mbox rdf:resource="mailto:datex@trafikverket.se"/>
+    <foaf:workplaceHomepage rdf:resource="https://www.trafikverket.se"/>
+  </foaf:Agent>
+</rdf:RDF>
