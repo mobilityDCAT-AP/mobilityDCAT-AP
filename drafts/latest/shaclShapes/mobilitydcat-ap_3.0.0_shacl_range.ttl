@@ -25,27 +25,22 @@
 #
 # STRUCTURE (import + deltas):
 #   This file owl:imports the DCAT-AP 3.0.1 range.ttl and contains ONLY the
-#   mobilityDCAT-AP-specific sh:class / sh:nodeKind constraints. Ranges that
+#   mobilityDCAT-AP-specific node-kind / class constraints. Ranges that
 #   DCAT-AP already constrains identically are NOT restated (inherited via
 #   the import), per the "inherit, do not re-encode" rule.
 #
-#   What is encoded here:
-#    (1) Ranges of mobilityDCAT-AP / geoDCAT properties not in DCAT-AP
-#        (mobilityTheme, georeferencingMethod, networkCoverage,
-#        transportMode, intendedInformationService, communicationMethod,
-#        applicationLayerProtocol, mobilityDataStandard, assessmentResult,
-#        referenceSystem, rightsHolder, hasQualityAnnotation).
-#    (2) Range shapes for mobility classes with no DCAT-AP shape
-#        (MobilityDataStandard, Assessment, QualityAnnotation, Kind,
-#        RightsStatement).
-#    (3) Catalogue / Dataset geographical-coverage nodeKind raised to
-#        sh:Violation (mobilityDCAT-AP makes spatial mandatory).
-#    (4) Catalogue homepage range foaf:Document (spec 7.3): DCAT-AP only
-#        checks nodeKind, so the foaf:Document class is a mobility delta.
-#
-#   CV membership (mobilityTheme, transportMode, conditions, etc.) is NOT
-#   checked here; it is enforced in mdr-vocabularies.shape.ttl via
-#   skos:inScheme. This file only checks node class / kind.
+# DESIGN NOTE on sh:nodeKind vs sh:class:
+#   Properties whose values are IRI references into EXTERNAL vocabularies
+#   (controlled-vocabulary codes, EU authority tables, agent/scheme IRIs)
+#   are constrained with sh:nodeKind sh:IRI, NOT sh:class. The referenced
+#   resource's rdf:type lives in the external vocabulary, not in the
+#   instance data, so sh:class would wrongly reject every real-world file
+#   that references a code by IRI without inlining its type. Actual CV
+#   membership is checked in mdr-vocabularies.shape.ttl (via skos:inScheme
+#   / sh:hasValue), not here. sh:class is used ONLY where the value is an
+#   inline-typed blank-node structure in normal data (RightsStatement,
+#   MobilityDataStandard, Assessment, QualityAnnotation, vCard structures,
+#   Address, Organisation).
 #
 # INHERITED from DCAT-AP 3.0.1 range.ttl (NOT restated here):
 #   Dataset distribution, contactPoint, publisher, temporal, inSeries,
@@ -54,22 +49,16 @@
 #   conformsTo, language, status, applicableLegislation, accessURL,
 #   downloadURL; Location geometry (locn:Geometry - DCAT-AP 3.0.1
 #   changelog issues 177/247).
-#
-# REMOVED vs 1.1.0: Phase 2 (DataService, accessService, isReferencedBy),
-#   Phase 9 (isVersionOf, grammar, MDS schema, LicenceDocument identifier).
 #===========================================================================
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
   a owl:Ontology ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.1/html/shacl/range.ttl> ;
   owl:versionInfo "3.0.0" ;
-  dct:modified "2026-06-21"^^xsd:date ;
+  dct:modified "2026-06-28"^^xsd:date ;
   dct:title "mobilityDCAT-AP 3.0.0 SHACL - Range Constraints"@en ;
-  dct:description "Adds mobilityDCAT-AP-specific sh:class / sh:nodeKind range constraints, extending DCAT-AP 3.0.1. DCAT-AP ranges are inherited via owl:imports and not restated."@en .
+  dct:description "Adds mobilityDCAT-AP-specific node-kind / class range constraints, extending DCAT-AP 3.0.1. CV-code and external-IRI references use sh:nodeKind sh:IRI; CV membership is checked in the MDR file. DCAT-AP ranges are inherited via owl:imports and not restated."@en .
 #---------------------------------------------------------------------------
-# AGENT
-# DCAT-AP has no range shape for Agent contact properties; these are
-# geoDCAT-AP additions. (mbox/phone owl:Thing->rdfs:Resource adds no
-# SHACL class constraint, so it is omitted.)
+# AGENT  (geoDCAT additions; address/affiliation are inline-typed structures)
 #---------------------------------------------------------------------------
 :Agent_Shape_ranges
   a sh:NodeShape ;
@@ -103,9 +92,9 @@
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
 # CATALOGUE
-# Mobility deltas: spatial nodeKind raised to Violation (spatial is
-# mandatory in mobilityDCAT-AP); homepage range foaf:Document (spec 7.3;
-# DCAT-AP only checks nodeKind, so foaf:Document is a mobility delta).
+# spatial nodeKind raised to Violation (spatial mandatory). homepage range
+# is foaf:Document per the v3 changelog, but enforced as sh:nodeKind sh:IRI
+# because homepages are referenced as bare IRIs in instance data.
 #---------------------------------------------------------------------------
 :Catalogue_Shape
   a sh:NodeShape ;
@@ -121,16 +110,15 @@
   sh:severity sh:Violation .
 :Catalogue_Shape_homepage_range
   a sh:PropertyShape ;
-  sh:path foaf:homepage ; sh:class foaf:Document ;
+  sh:path foaf:homepage ; sh:nodeKind sh:IRI ;
   sh:name "homepage (range)"@en ;
-  sh:description "Homepage range is foaf:Document in mobilityDCAT-AP (spec 7.3). DCAT-AP only enforces nodeKind, so this class constraint is a mobility delta. Homepage values are often untyped IRIs; severity is Warning to avoid over-firing."@en ;
-  sh:message "Homepage must be a foaf:Document"@en ;
+  sh:description "Homepage range is foaf:Document in mobilityDCAT-AP (v3 changelog), enforced here as sh:nodeKind sh:IRI since homepages are referenced as bare IRIs, not inline-typed in instance data."@en ;
+  sh:message "Homepage must be an IRI"@en ;
   sh:severity sh:Warning .
 #---------------------------------------------------------------------------
 # CATALOGUE RECORD
-# publisher (geoDCAT addition) and conformsTo range (mobility usage as
-# application profile). conformsTo existence is inherited; the dct:Standard
-# range target is the mobility specialization.
+# publisher (geoDCAT addition; bare agent IRI -> nodeKind) and conformsTo
+# (application profile; CV/standard IRI -> nodeKind).
 # NOTE: spec allows conformsTo 0..* but DCAT-AP caps it at maxCount 1; the
 # import inherits that cap (looser mobility cardinality cannot be enforced
 # via import + deltas). Open item for discussion.
@@ -144,11 +132,11 @@
     :CatalogueRecord_Shape_conformsTo_range .
 :CatalogueRecord_Shape_publisher_range
   a sh:PropertyShape ;
-  sh:path dct:publisher ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class foaf:Agent ;
+  sh:path dct:publisher ; sh:nodeKind sh:BlankNodeOrIRI ;
   sh:severity sh:Info .
 :CatalogueRecord_Shape_conformsTo_range
   a sh:PropertyShape ;
-  sh:path dct:conformsTo ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class dct:Standard ;
+  sh:path dct:conformsTo ; sh:nodeKind sh:IRI ;
   sh:name "application profile (range)"@en ;
   sh:severity sh:Warning .
 #---------------------------------------------------------------------------
@@ -161,14 +149,10 @@
   sh:property :Concept_Shape_inScheme_range .
 :Concept_Shape_inScheme_range
   a sh:PropertyShape ;
-  sh:path skos:inScheme ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class skos:ConceptScheme ;
+  sh:path skos:inScheme ; sh:nodeKind sh:BlankNodeOrIRI ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
-# DATASET  (mobility/geoDCAT property ranges only)
-# Inherited from DCAT-AP (not restated): distribution, contactPoint,
-# publisher, temporal, inSeries, hasVersion, language, theme,
-# accrualPeriodicity, applicableLegislation, source, relation,
-# adms:identifier.
+# DATASET  (mobility/geoDCAT property ranges only; CV codes -> nodeKind IRI)
 #---------------------------------------------------------------------------
 :Dataset_Shape
   a sh:NodeShape ;
@@ -187,7 +171,7 @@
     :Dataset_Shape_hasQualityAnnotation_range .
 :Dataset_Shape_mobilityTheme_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:mobilityTheme ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:mobilityTheme ; sh:nodeKind sh:IRI ;
   sh:severity sh:Violation .
 :Dataset_Shape_spatial_range
   a sh:PropertyShape ;
@@ -195,25 +179,25 @@
   sh:severity sh:Violation .
 :Dataset_Shape_georeferencingMethod_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:georeferencingMethod ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:georeferencingMethod ; sh:nodeKind sh:IRI ;
   sh:severity sh:Warning .
 :Dataset_Shape_networkCoverage_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:networkCoverage ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:networkCoverage ; sh:nodeKind sh:IRI ;
   sh:severity sh:Warning .
 :Dataset_Shape_referenceSystem_range
   a sh:PropertyShape ;
-  sh:path geodcatap:referenceSystem ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path geodcatap:referenceSystem ; sh:nodeKind sh:IRI ;
   sh:name "reference system (range)"@en ;
   sh:description "Spatial reference system (OGC EPSG register). geoDCAT-AP addition. CV/register membership is checked separately."@en ;
   sh:severity sh:Warning .
 :Dataset_Shape_rightsHolder_range
   a sh:PropertyShape ;
-  sh:path dct:rightsHolder ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class foaf:Agent ;
+  sh:path dct:rightsHolder ; sh:nodeKind sh:BlankNodeOrIRI ;
   sh:severity sh:Warning .
 :Dataset_Shape_transportMode_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:transportMode ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:transportMode ; sh:nodeKind sh:IRI ;
   sh:severity sh:Warning .
 :Dataset_Shape_assessmentResult_range
   a sh:PropertyShape ;
@@ -221,7 +205,7 @@
   sh:severity sh:Info .
 :Dataset_Shape_intendedInformationService_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:intendedInformationService ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:intendedInformationService ; sh:nodeKind sh:IRI ;
   sh:severity sh:Info .
 :Dataset_Shape_hasQualityAnnotation_range
   a sh:PropertyShape ;
@@ -229,9 +213,6 @@
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
 # DATASET SERIES
-# Only the mobility delta: mobilityTheme range. publisher, contactPoint,
-# accrualPeriodicity, spatial, temporal, applicableLegislation ranges are
-# inherited from DCAT-AP.
 #---------------------------------------------------------------------------
 :DatasetSeries_Shape
   a sh:NodeShape ;
@@ -240,12 +221,10 @@
   sh:property :DatasetSeries_Shape_mobilityTheme_range .
 :DatasetSeries_Shape_mobilityTheme_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:mobilityTheme ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:mobilityTheme ; sh:nodeKind sh:IRI ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
 # DISTRIBUTION  (mobility property ranges only)
-# Inherited from DCAT-AP (not restated): format, license, conformsTo,
-# language, status, applicableLegislation, accessURL, downloadURL.
 #---------------------------------------------------------------------------
 :Distribution_Shape
   a sh:NodeShape ;
@@ -272,14 +251,14 @@
   sh:severity sh:Violation .
 :Distribution_Shape_applicationLayerProtocol_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:applicationLayerProtocol ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:applicationLayerProtocol ; sh:nodeKind sh:IRI ;
   sh:severity sh:Warning .
 :Distribution_Shape_communicationMethod_range
   a sh:PropertyShape ;
-  sh:path mobilitydcatap:communicationMethod ; sh:nodeKind sh:IRI ; sh:class skos:Concept ;
+  sh:path mobilitydcatap:communicationMethod ; sh:nodeKind sh:IRI ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
-# KIND  (no DCAT-AP shape; Phase 7: hasEmail -> vcard:Email)
+# KIND  (vCard structures are inline-typed; hasEmail -> vcard:Email)
 #---------------------------------------------------------------------------
 :Kind_Shape
   a sh:NodeShape ;
@@ -308,8 +287,8 @@
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
 # LOCATION
-# Only geoDCAT delta: gazetteer (inScheme). locn:geometry -> locn:Geometry
-# is INHERITED from DCAT-AP 3.0.1 (changelog 177/247), not restated.
+# gazetteer (inScheme) -> nodeKind (scheme referenced by bare IRI).
+# locn:geometry -> locn:Geometry inherited from DCAT-AP 3.0.1 (177/247).
 #---------------------------------------------------------------------------
 :Location_Shape
   a sh:NodeShape ;
@@ -318,10 +297,10 @@
   sh:property :Location_Shape_inScheme_range .
 :Location_Shape_inScheme_range
   a sh:PropertyShape ;
-  sh:path skos:inScheme ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class skos:ConceptScheme ;
+  sh:path skos:inScheme ; sh:nodeKind sh:BlankNodeOrIRI ;
   sh:severity sh:Warning .
 #---------------------------------------------------------------------------
-# MOBILITY DATA STANDARD  (no DCAT-AP shape)
+# MOBILITY DATA STANDARD  (conformsTo -> CV/standard IRI -> nodeKind)
 #---------------------------------------------------------------------------
 :MobilityDataStandard_Shape
   a sh:NodeShape ;
@@ -330,7 +309,7 @@
   sh:property :MobilityDataStandard_Shape_conformsTo_range .
 :MobilityDataStandard_Shape_conformsTo_range
   a sh:PropertyShape ;
-  sh:path dct:conformsTo ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class dct:Standard ;
+  sh:path dct:conformsTo ; sh:nodeKind sh:IRI ;
   sh:name "conforms to (range)"@en ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
@@ -352,7 +331,7 @@
   sh:path oa:hasTarget ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class dcat:Dataset ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
-# RIGHTS STATEMENT  (no DCAT-AP shape)
+# RIGHTS STATEMENT  (conditions-for-access CV -> nodeKind IRI)
 #---------------------------------------------------------------------------
 :RightsStatement_Shape
   a sh:NodeShape ;
@@ -361,5 +340,5 @@
   sh:property :RightsStatement_Shape_type_range .
 :RightsStatement_Shape_type_range
   a sh:PropertyShape ;
-  sh:path dct:type ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class skos:Concept ;
+  sh:path dct:type ; sh:nodeKind sh:IRI ;
   sh:severity sh:Violation .
