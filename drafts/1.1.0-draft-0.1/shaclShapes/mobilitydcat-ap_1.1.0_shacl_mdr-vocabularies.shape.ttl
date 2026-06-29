@@ -1,0 +1,568 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/1.1.0/mdr#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/mobilitydcat-ap/releases/1.1.0/mdr#>
+  a owl:Ontology ;
+  dct:title "mobilityDCAT-AP 1.1.0 SHACL - Controlled Vocabulary Constraints"@en ;
+  dct:description "Validates that property values come from the correct controlled vocabularies as required by mobilityDCAT-AP 1.1.0. Extends and adapts DCAT-AP 2.0.1 MDR constraints. Removes CV checks for properties removed in mobilityDCAT-AP (dct:language on Distribution, adms:status, dcatap:availability). Adds CV checks for all new mobility-specific properties."@en ;
+  owl:versionInfo "1.1.0" ;
+  dct:license <https://creativecommons.org/licenses/by/4.0> .
+
+#===========================================================================
+# RESTRICTION SHAPES
+# Each restriction shape checks that a concept belongs to a specific scheme
+#===========================================================================
+
+#---------------------------------------------------------------------------
+# EU NAL Restrictions
+#---------------------------------------------------------------------------
+:AccessRightRestriction
+  a sh:NodeShape ;
+  rdfs:label "Access right restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/access-right> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:ContinentRestriction
+  a sh:NodeShape ;
+  rdfs:label "Continent restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/continent> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:CorporateBodyRestriction
+  a sh:NodeShape ;
+  rdfs:label "Corporate Body Restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/corporate-body> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme ;
+    sh:severity sh:Warning
+  ] .
+
+:CountryRestriction
+  a sh:NodeShape ;
+  rdfs:label "Country restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/country> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:DataThemeRestriction
+  a sh:NodeShape ;
+  rdfs:label "Data Theme Restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:FileTypeRestriction
+  a sh:NodeShape ;
+  rdfs:label "File Type Restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:FrequencyRestriction
+  a sh:NodeShape ;
+  rdfs:label "Frequency Restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/frequency> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:GeoNamesRestriction
+  a sh:NodeShape ;
+  rdfs:label "GeoNames restriction" ;
+  sh:property [
+    sh:hasValue <http://sws.geonames.org> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:LanguageRestriction
+  a sh:NodeShape ;
+  rdfs:label "Language Restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:LicenceRestriction
+  a sh:NodeShape ;
+  rdfs:label "Licence restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/licence> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:NUTSRestriction
+  a sh:NodeShape ;
+  rdfs:label "NUTS restriction" ;
+  sh:property [
+    sh:hasValue <http://nuts.geovocab.org/> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:PlaceRestriction
+  a sh:NodeShape ;
+  rdfs:label "Place restriction" ;
+  sh:property [
+    sh:hasValue <http://publications.europa.eu/resource/authority/place> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:PublisherTypeRestriction
+  a sh:NodeShape ;
+  rdfs:label "Publisher type restriction" ;
+  sh:property [
+    sh:hasValue <http://purl.org/adms/publishertype/1.0> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+#---------------------------------------------------------------------------
+# mobilityDCAT-AP Vocabulary Restrictions
+#---------------------------------------------------------------------------
+:ApplicationLayerProtocolRestriction
+  a sh:NodeShape ;
+  rdfs:label "Application layer protocol restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:CommunicationMethodRestriction
+  a sh:NodeShape ;
+  rdfs:label "Communication method restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/communication-method> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:ConditionsAccessUsageRestriction
+  a sh:NodeShape ;
+  rdfs:label "Conditions for access and usage restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:EPSGRestriction
+  a sh:NodeShape ;
+  rdfs:label "OGC EPSG restriction" ;
+  sh:property [
+    sh:hasValue <http://www.opengis.net/def/crs/EPSG/0/> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:GeoreferencingMethodRestriction
+  a sh:NodeShape ;
+  rdfs:label "Georeferencing method restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/georeferencing-method> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:GrammarRestriction
+  a sh:NodeShape ;
+  rdfs:label "Grammar restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/grammar> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:IntendedInformationServiceRestriction
+  a sh:NodeShape ;
+  rdfs:label "Intended information service restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/intended-information-service> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:MobilityDataStandardRestriction
+  a sh:NodeShape ;
+  rdfs:label "Mobility data standard restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:MobilityThemeRestriction
+  a sh:NodeShape ;
+  rdfs:label "Mobility theme restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:NetworkCoverageRestriction
+  a sh:NodeShape ;
+  rdfs:label "Network coverage restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/network-coverage> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:TransportModeRestriction
+  a sh:NodeShape ;
+  rdfs:label "Transport mode restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/transport-mode> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+:UpdateFrequencyRestriction
+  a sh:NodeShape ;
+  rdfs:label "Update frequency restriction" ;
+  sh:property [
+    sh:hasValue <https://w3id.org/mobilitydcat-ap/update-frequency> ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme
+  ] .
+
+#===========================================================================
+# PUBLISHER CV SHAPE (reusable)
+#===========================================================================
+:Publisher_ShapeCV
+  a sh:NodeShape ;
+  sh:property [
+    sh:node :PublisherTypeRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:type ;
+    sh:description "Publisher type must be from the ADMS publisher type codelist." ;
+    sh:severity sh:Warning
+  ] .
+
+#===========================================================================
+# CLASS CV SHAPES
+#===========================================================================
+
+#---------------------------------------------------------------------------
+# AGENT
+#---------------------------------------------------------------------------
+:Agent_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass foaf:Agent ;
+  sh:property [
+    sh:node :PublisherTypeRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:type ;
+    sh:description "Agent type must be from the ADMS publisher type codelist." ;
+    sh:severity sh:Warning
+  ] .
+
+#---------------------------------------------------------------------------
+# CATALOGUE
+#---------------------------------------------------------------------------
+:Catalogue_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dcat:Catalog ;
+  sh:property [
+    sh:node :LanguageRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:language ;
+    sh:description "Language must be from the EU language authority table." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :CorporateBodyRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:publisher ;
+    sh:description "Publisher must be from the EU corporate bodies NAL." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node [
+      a sh:NodeShape ;
+      sh:or (
+        :CountryRestriction
+        :PlaceRestriction
+        :ContinentRestriction
+        :GeoNamesRestriction
+        :NUTSRestriction
+      )
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:spatial ;
+    sh:description "Spatial must be from EU country, place, continent, GeoNames or NUTS." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+    sh:nodeKind sh:IRI ;
+    sh:path dcat:themeTaxonomy ;
+    sh:description "At least the EU data-theme concept scheme must be present." ;
+    sh:severity sh:Warning
+  ] .
+
+#---------------------------------------------------------------------------
+# CATALOGUE RECORD
+#---------------------------------------------------------------------------
+:CatalogueRecord_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dcat:CatalogRecord ;
+  sh:property [
+    sh:node :LanguageRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:language ;
+    sh:description "Language must be from the EU language authority table." ;
+    sh:severity sh:Violation
+  ] ,
+  [
+    sh:node :CorporateBodyRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:publisher ;
+    sh:description "Publisher must be from the EU corporate bodies NAL." ;
+    sh:severity sh:Warning
+  ] .
+
+#---------------------------------------------------------------------------
+# DATA SERVICE
+#---------------------------------------------------------------------------
+:DataService_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dcat:DataService ;
+  sh:property [
+    sh:node :AccessRightRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:accessRights ;
+    sh:description "Access rights must be from the EU access-right authority table." ;
+    sh:severity sh:Info
+  ] .
+
+#---------------------------------------------------------------------------
+# DATASET
+#---------------------------------------------------------------------------
+:Dataset_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  # Mandatory properties
+  sh:property [
+    sh:node [
+      a sh:NodeShape ;
+      sh:or (
+        :FrequencyRestriction
+        :UpdateFrequencyRestriction
+      )
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:accrualPeriodicity ;
+    sh:description "Frequency must be from EU frequency NAL or mobilityDCAT-AP update-frequency vocabulary." ;
+    sh:severity sh:Violation
+  ] ,
+  [
+    sh:node :MobilityThemeRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:mobilityTheme ;
+    sh:description "Mobility theme must be from the mobilityDCAT-AP mobility-theme vocabulary." ;
+    sh:severity sh:Violation
+  ] ,
+  # Recommended properties
+  [
+    sh:node [
+      a sh:NodeShape ;
+      sh:or (
+        :CountryRestriction
+        :PlaceRestriction
+        :ContinentRestriction
+        :GeoNamesRestriction
+        :NUTSRestriction
+      )
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:spatial ;
+    sh:description "Spatial must be from EU country, place, continent, GeoNames or NUTS." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :CorporateBodyRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:publisher ;
+    sh:description "Publisher must be from the EU corporate bodies NAL." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :GeoreferencingMethodRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:georeferencingMethod ;
+    sh:description "Georeferencing method must be from the mobilityDCAT-AP georeferencing-method vocabulary." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :NetworkCoverageRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:networkCoverage ;
+    sh:description "Network coverage must be from the mobilityDCAT-AP network-coverage vocabulary." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :DataThemeRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dcat:theme ;
+    sh:description "Theme must be from the EU data-theme vocabulary." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :TransportModeRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:transportMode ;
+    sh:description "Transport mode must be from the mobilityDCAT-AP transport-mode vocabulary." ;
+    sh:severity sh:Warning
+  ] ,
+  [
+    sh:node :EPSGRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:conformsTo ;
+    sh:description "Reference system must be from the OGC EPSG register." ;
+    sh:severity sh:Warning
+  ] ,
+  # Optional properties
+  [
+    sh:node :LanguageRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:language ;
+    sh:description "Language must be from the EU language authority table." ;
+    sh:severity sh:Info
+  ] ,
+  [
+    sh:node :IntendedInformationServiceRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:intendedInformationService ;
+    sh:description "Intended information service must be from the mobilityDCAT-AP intended-information-service vocabulary." ;
+    sh:severity sh:Info
+  ] .
+
+#---------------------------------------------------------------------------
+# DISTRIBUTION
+# NOTE: dct:language, adms:status, dcatap:availability removed from
+# Distribution in mobilityDCAT-AP — CV checks for these are NOT included.
+#---------------------------------------------------------------------------
+:Distribution_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dcat:Distribution ;
+  # Mandatory properties
+  sh:property [
+    sh:node :FileTypeRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:format ;
+    sh:description "Format must be from the EU file-type authority table." ;
+    sh:severity sh:Violation
+  ] ,
+  [
+    sh:node :MobilityDataStandardRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:mobilityDataStandard ;
+    sh:description "Mobility data standard must be from the mobilityDCAT-AP mobility-data-standard vocabulary." ;
+    sh:severity sh:Violation
+  ] ,
+  # Recommended properties
+  [
+    sh:node :ApplicationLayerProtocolRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:applicationLayerProtocol ;
+    sh:description "Application layer protocol must be from the mobilityDCAT-AP application-layer-protocol vocabulary." ;
+    sh:severity sh:Warning
+  ] ,
+  # Optional properties
+  [
+    sh:node :CommunicationMethodRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:communicationMethod ;
+    sh:description "Communication method must be from the mobilityDCAT-AP communication-method vocabulary." ;
+    sh:severity sh:Info
+  ] ,
+  [
+    sh:node :GrammarRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path mobilitydcatap:grammar ;
+    sh:description "Grammar must be from the mobilityDCAT-AP grammar vocabulary." ;
+    sh:severity sh:Info
+  ] .
+
+#---------------------------------------------------------------------------
+# RIGHTS STATEMENT
+#---------------------------------------------------------------------------
+:RightsStatement_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dct:RightsStatement ;
+  sh:property [
+    sh:node :ConditionsAccessUsageRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:type ;
+    sh:description "Conditions for access and usage must be from the mobilityDCAT-AP conditions-for-access-and-usage vocabulary." ;
+    sh:severity sh:Violation
+  ] .
+
+#---------------------------------------------------------------------------
+# LICENCE DOCUMENT
+#---------------------------------------------------------------------------
+:LicenseDocument_ShapeCV
+  a sh:NodeShape ;
+  sh:targetClass dct:LicenseDocument ;
+  sh:property [
+    sh:node :LicenceRestriction ;
+    sh:nodeKind sh:IRI ;
+    sh:path dct:identifier ;
+    sh:description "Standard licence must be from the EU licence authority table." ;
+    sh:severity sh:Warning
+  ] .
