@@ -162,6 +162,12 @@ var respecConfig = {
         "authors":["Silvio Peroni","David Shotton","Jan Ashton","Amy Barton","Egbert Gramsbergen","Marie-Christine Jacquemot"],
         "date":"2016"
       },
+     "DataCite-Metadata-Schema": {
+        "href":"https://schema.datacite.org/",
+        "title":"DataCite-Metadata-Schema3",
+         "publisher":"DataCite",,
+        "date":"3 March 2026"
+      },  
       "DC2AP": {
         "href":"https://groups.google.com/a/datacite.org/group/dc2map/attach/624ec3cd533a3/DataCite%20Dublin%20Core%20AP%20-%20Draft%201_8.pdf",
         "title":"DataCite Dublin Core Application Profile (DC2AP). Version 1.8",
@@ -208,6 +214,13 @@ var respecConfig = {
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
+
+         "DCAT-AP-v3.0.1-Usage-guide-on-Dataset-Series":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+        "title":"DCAT-AP v3.0.1 Usage guide on Dataset Series",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },   
 
     "DCAT-AP-v3.0.1-Note-on-Inverse-Properties":{
         "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
