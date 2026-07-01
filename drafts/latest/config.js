@@ -13,7 +13,7 @@ var respecConfig = {
   }
       ],
     copyrightStart: 2023,
-    publishDate: "2025-04-02",
+    publishDate: "2026-10-01",
 
     alternateFormats: [
     {
