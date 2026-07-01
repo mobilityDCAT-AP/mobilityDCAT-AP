@@ -194,6 +194,14 @@ var respecConfig = {
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
+              
+    "DCAT-AP v3.0.1 Examples for Dataset Series":{
+        "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+        "title":"DCAT-AP v3.0.1 Examples for Dataset Series",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+
 
       "DCAT-AP-v2.1.0-Guideline-Dataservices":{
         "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
