@@ -174,18 +174,19 @@ var respecConfig = {
         "publisher":"W3C Recommendation",
         "date":"22 August 2024"
        },
-      "DCAT-AP-v3.0.0":{
-        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0",
-        "title":"DCAT Application Profile for data portals in Europe. Version 3.0.0.",
-        "publisher":"European Commission",
-        "date":"14 June 2024"
-       },
 
       "DCAT-AP-v2.0.1":{
         "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0",
         "title":"DCAT Application Profile for data portals in Europe. Version 2.0.1.",
         "publisher":"European Commission",
         "date":"08 June 2020"
+       },
+    
+        
+        "DCAT-AP-v2.1.0-Guideline-Dataservices":{
+        "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
+        "title":"DCAT-AP Usage guide on Datasets, Distributions and Data Services",
+        "publisher":"European Commission"
        },
 
        "DCAT-AP":{
@@ -207,18 +208,33 @@ var respecConfig = {
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
-   
-        "DCAT-AP v3.0.1 Note on Inverse Properties":{
+
+    "DCAT-AP v3.0.1 Note on Inverse Properties":{
         "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
         "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
 
-      "DCAT-AP-v2.1.0-Guideline-Dataservices":{
-        "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
-        "title":"DCAT-AP Usage guide on Datasets, Distributions and Data Services",
-        "publisher":"European Commission"
+   
+   "DCAT-AP implementation guidelines":{
+        "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
+        "title":"DCAT-AP implementation guidelines",
+        "publisher":"SEMIC",
+        "date":"11 December 2015"
+       },
+
+    "SEMIC Style Guide for Semantic Engineers":{
+        "https://semiceu.github.io/style-guide/1.0.0/index.html",
+        "title":"SEMIC Style Guide for Semantic Engineers",
+        "publisher":"SEMIC"
+       },
+  
+    "DCAT-AP Reuse Guidelines":{
+        "https://semiceu.github.io/DCAT-AP-reuse-guidelines/",
+        "title":"DCAT-AP Reuse Guidelines",
+        "publisher":"SEMIC",
+        "date":"17 June 2026"
        },
 
       "DCAT-AP-SDO": {
@@ -540,7 +556,7 @@ var respecConfig = {
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-Metadata-Working-Group":{
+      "NAPCORE Metadata Working Group":{
         "href":"https://napcore.eu/metadata/",
         "title":"Information about the NAPCORE Sub-Working Group on Metadata",
         "publisher":"NAPCORE Consortium"
@@ -662,6 +678,14 @@ var respecConfig = {
          "date":"17 April 2018",
          "publisher":"OpenSearch"
       },
+     
+        "RDF Primer":{
+        "href":"http://schema.org/",
+        "title":"RDF Primer",
+        "date":"24 June 2014",
+        "publisher":"W3C Working Group"
+      },
+        
       "SCHEMA-ORG":{
         "href":"http://schema.org/",
         "title":"Schema.org"
