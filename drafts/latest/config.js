@@ -734,7 +734,7 @@ var respecConfig = {
         "publisher":"W3C Working Group"
       },
 
-       "Tags for Identifying Languages":{
+       "Tags-for-Identifying-Languages":{
         "href":"https://datatracker.ietf.org/doc/html/rfc5646",
         "title":"Tags for Identifying Languages",
         "date":"September 2009",
