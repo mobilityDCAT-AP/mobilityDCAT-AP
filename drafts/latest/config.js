@@ -188,6 +188,13 @@ var respecConfig = {
         "date":"08 June 2020"
        },
 
+      "DCAT-AP-v3.0.1":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
+        "title":"DCAT-AP 3.0.1",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+
       "DCAT-AP-v2.1.0-Guideline-Dataservices":{
         "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
         "title":"DCAT-AP Usage guide on Datasets, Distributions and Data Services",
