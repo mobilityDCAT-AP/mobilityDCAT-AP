@@ -540,7 +540,7 @@ var respecConfig = {
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-NAPs":{
+      "NAPCORE Information about NAPs":{
         "href":"https://napcore.eu/description-naps/",
         "title":"NAPCORE information about National Access Points (NAPs)",
         "publisher":"NAPCORE Consortium"
