@@ -188,6 +188,12 @@ var respecConfig = {
         "date":"08 June 2020"
        },
 
+       "DCAT-AP":{
+        "href":"https://op.europa.eu/de/web/eu-vocabularies/dcat-ap",
+        "title":"DCAT-AP",
+        "publisher":"European Commission"
+       },
+
       "DCAT-AP-v3.0.1":{
         "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
         "title":"DCAT-AP 3.0.1",
