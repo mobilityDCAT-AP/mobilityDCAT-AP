@@ -136,10 +136,10 @@ var respecConfig = {
         "date":"2 February 2017",
       },
       "CORE-LOCATION-VOCABULARY":{
-        "href":"https://www.w3.org/TR/Content-in-RDF/",
-        "title":"ISA Programme Location Core Vocabulary",
-        "authors":["EU ISA Programme Core Vocabularies Working Group (Location Task Force)"],
-        "date":"23 March 2015",
+        "href":"https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/",
+        "title":"Core Location Vocabulary",
+        "publisher":"SEMIC",
+        "date":"06 May 2024",
       },
       "LOCN-MAPPING": {
         "href": "https://semiceu.github.io/locn-mapping/",
