@@ -165,9 +165,17 @@ var respecConfig = {
      "DataCite-Metadata-Schema": {
         "href":"https://schema.datacite.org/",
         "title":"DataCite-Metadata-Schema3",
-         "publisher":"DataCite",,
+         "publisher":"DataCite",
         "date":"3 March 2026"
       },  
+
+     "Data-Quality-Vocabulary":{
+        "href":"https://www.w3.org/TR/vocab-dqv/",
+        "title":"Data Quality Vocabulary",
+        "publisher":"W3C",
+        "date":"15 December 2016"
+      },
+        
       "DC2AP": {
         "href":"https://groups.google.com/a/datacite.org/group/dc2map/attach/624ec3cd533a3/DataCite%20Dublin%20Core%20AP%20-%20Draft%201_8.pdf",
         "title":"DataCite Dublin Core Application Profile (DC2AP). Version 1.8",
@@ -772,7 +780,7 @@ var respecConfig = {
        "DCAT-AP-guideline-spatial":{
         "href":"https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used",
         "title":"How should dct:spatial and dct:Location be used?",
-        "publisher":"European Commission"
+        "publisher":"SEMIC"
        },
       "DXWG":{
         "href":"https://www.w3.org/2017/dxwg/",
@@ -847,6 +855,14 @@ var respecConfig = {
         "title":"Core organization ontology",
         "date":"16 January 2014"
       },
+        
+    "vCard-Ontology": {
+        "href":"https://www.w3.org/TR/vcard-rdf/",
+        "title":"vCard Ontology",
+        "date":"22 May 2014",
+       "publisher":"W3C "
+      },
+        
       "WEB-ANOTATION-ONTOLOGY": {
         "href":"https://www.w3.org/TR/annotation-vocab/",
         "title":"Web Annotation Ontology",
