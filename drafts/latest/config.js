@@ -201,7 +201,13 @@ var respecConfig = {
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
-
+   
+        "DCAT-AP v3.0.1 Note on Inverse Properties":{
+        "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
+        "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
 
       "DCAT-AP-v2.1.0-Guideline-Dataservices":{
         "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
@@ -316,7 +322,7 @@ var respecConfig = {
         "publisher":"European Commission",
         "date":"23 December 2020"
       },
-      "GEODCAT-AP-v3.0.0":{
+      "GeoDCAT-AP-v3.0.0":{
         "href":"https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
         "title":"GeoDCAT-AP - Version 3.0.0",
         "publisher":"European Commission",
