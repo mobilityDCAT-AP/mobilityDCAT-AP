@@ -263,11 +263,11 @@ var respecConfig = {
         "title":"Joinup. DCAT application profile implementation guidelines",
         "publisher":"European Commission"
       },
-      "DCAT-AP-HVD": {
+      "DCAT-AP-High-Value-Datasets": {
         "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
-        "title":"Usage guidelines of DCAT-AP for High-Value Datasets",
-        "publisher":"European Commission",
-        "date":"19 June 2023"
+        "title":"DCAT-AP High Value Datasets",
+        "publisher":"SEMIC",
+        "date":"25 October 2024"
       },
     "DC-UG-PM": {
         "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
@@ -312,6 +312,13 @@ var respecConfig = {
         "title":"Commission Delegated Regulation (EU) 2017/1926 of 31 May 2017 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services (Text with EEA relevance.)",
         "publisher":"European Commission"
       },
+
+    "EC-Regulation-2013/138-on-HVD": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32017R1926",
+        "title":"Commission Delegated Regulation (EU) 2017/1926 of 31 May 2017 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services (Text with EEA relevance.)",
+        "publisher":"European Commission"
+      },
+        
       "EU-TEN-T": {
         "href":"https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en",
         "title":"Information about Trans-European Transport Network (TEN-T)",
@@ -391,6 +398,11 @@ var respecConfig = {
       "IANA-CHARACTER-SETS":{
         "href":"https://www.iana.org/assignments/character-sets/",
         "title":"Character Sets",
+        "publisher":"IANA"
+       },
+        "IANA-Media-Types":{
+        "href":"https://www.iana.org/assignments/media-types/media-types.xhtml",
+        "title":"IANA Media Types",
         "publisher":"IANA"
        },
       "iiWAS17-JRC": {
