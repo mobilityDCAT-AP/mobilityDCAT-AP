@@ -575,9 +575,9 @@ var respecConfig = {
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-NB":{
-        "href":"https://napcore.eu/national-bodies/",
-        "title":"NAPCORE information about National Bodies (NAPs)",
+      "NAPCORE-Information-about-National-Bodies":{
+        "href":"https://napcore.eu/national-bodies-3/",
+        "title":"NAPCORE information about National Bodies",
         "publisher":"NAPCORE Consortium"
       },
 
