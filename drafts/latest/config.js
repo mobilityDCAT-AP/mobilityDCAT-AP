@@ -203,14 +203,14 @@ var respecConfig = {
        },
               
     "DCAT-AP-v3.0.1-Examples-for-Dataset-Series":{
-        "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
         "title":"DCAT-AP v3.0.1 Examples for Dataset Series",
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
 
     "DCAT-AP-v3.0.1-Note-on-Inverse-Properties":{
-        "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
         "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
         "publisher":"SEMIC",
         "date":"27 October 2025"
@@ -218,20 +218,20 @@ var respecConfig = {
 
    
    "DCAT-AP-Implementation-Guidelines":{
-        "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
+        "href":"https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
         "title":"DCAT-AP implementation guidelines",
         "publisher":"SEMIC",
         "date":"11 December 2015"
        },
 
     "SEMIC-Style-Guide-for-Semantic-Engineers":{
-        "https://semiceu.github.io/style-guide/1.0.0/index.html",
+        "href":"https://semiceu.github.io/style-guide/1.0.0/index.html",
         "title":"SEMIC Style Guide for Semantic Engineers",
         "publisher":"SEMIC"
        },
   
     "DCAT-AP-Reuse-Guidelines":{
-        "https://semiceu.github.io/DCAT-AP-reuse-guidelines/",
+        "href":"https://semiceu.github.io/DCAT-AP-reuse-guidelines/",
         "title":"DCAT-AP Reuse Guidelines",
         "publisher":"SEMIC",
         "date":"17 June 2026"
