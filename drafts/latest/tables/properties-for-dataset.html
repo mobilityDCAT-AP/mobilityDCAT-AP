@@ -207,7 +207,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-location"><code>dct:Location</code></a></p>
 </td>
 <td valign=top>
-<p>1..n</p>
+<p>1..*</p>
 </td>
 <td valign=top>
 <p>A geographic region that is covered by the delivered content.</p>
@@ -229,7 +229,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>The georeferencing method used in the delivered content.</p>
@@ -253,7 +253,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
 <p>A related dataset that is a version, edition, or adaptation of the described dataset </p>
@@ -320,7 +320,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>A type of information service, which the data content is intended to support. Such services may be, e.g., information services for multimodal mobility, as specified by <a href="https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng">EC Delegated Regulation 2024/490</a>.</p>
@@ -392,7 +392,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>1..n</p>
+<p>1..*</p>
 </td>
 <td valign=top>
   <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content.</p>
@@ -440,7 +440,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>This property describes the part of the transport network that is covered by the delivered content.</p>
@@ -518,7 +518,7 @@ or other identificator systems such as [[DataCite-Metadata-Schema]], [[DOI]], or
 <p><a href="#class-quality-annotation"><code>dqv:QualityAnnotation</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>Any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment. This information should assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information should be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
@@ -541,7 +541,7 @@ or other identificator systems such as [[DataCite-Metadata-Schema]], [[DOI]], or
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>The spatial reference system used in the delivered content. To be specified via the <a href="http://www.opengis.net/def/crs/EPSG/">“EPSG coordinate reference systems” register</a> operated by OGC.</p>
@@ -611,7 +611,7 @@ or other identificator systems such as [[DataCite-Metadata-Schema]], [[DOI]], or
 <p><a href="#class-agent"><code>foaf:Agent</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</p>
@@ -659,7 +659,7 @@ or other identificator systems such as [[DataCite-Metadata-Schema]], [[DOI]], or
 <p><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
 <p>A temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</p>
@@ -728,7 +728,7 @@ or other identificator systems such as [[DataCite-Metadata-Schema]], [[DOI]], or
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>The transport mode that is covered by the delivered content.</p>
