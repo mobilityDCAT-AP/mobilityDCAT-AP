@@ -283,9 +283,15 @@ var respecConfig = {
         "authors":["Stefanie Rühle","Tom Baker","Pete Johnston"],
         "publisher":"Dublin Core Metadata Initiative"
       },
-      "ELI": {
-        "href":"https://eur-lex.europa.eu/eli-register/eu_publications_office.html",
-        "title":"European Legislation Identifier (ELI) system",
+      "ELI-Standard": {
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/eli",
+        "title":"European Legislation Identifier (ELI) Standard",
+        "publisher":"EU Publications Office"
+      },
+
+        "ELI-Ontology": {
+        "href":"https://op.europa.eu/documents/3938058/11669184/eli.owl/",
+        "title":"European Legislation Identifier (ELI) Standard",
         "publisher":"EU Publications Office"
       },
 
