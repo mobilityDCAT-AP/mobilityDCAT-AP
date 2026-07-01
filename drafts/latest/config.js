@@ -544,13 +544,20 @@ var respecConfig = {
         "publisher":"OSGeo"
       },
 
+     "mobilityDCAT-AP v1.1.0":{
+        "href":"https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html",
+        "title":"mobilityDCAT-AP v1.1.0",
+        "publisher":"NAPCORE Consortium",
+        "date": "17 January 2025"
+      }, 
+
       "NAPCORE":{
         "href":"https://napcore.eu/",
         "title":"Website of the NAPCORE project",
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-Metadata-preparatory-activities":{
+      "NAPCORE Metadata Preparatory Activities":{
         "href":"https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/",
         "title":"Documentation about preparatory activities for mobilityDCAT-AP",
         "publisher":"NAPCORE Consortium"
