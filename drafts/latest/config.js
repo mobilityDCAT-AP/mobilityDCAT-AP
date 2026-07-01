@@ -543,12 +543,12 @@ var respecConfig = {
         "authors": [
             "ISO/TC 154"
         ],
-        "href": "https://www.iso.org/standard/40874.html",
-        "title": "Data elements and interchange formats -- Information interchange -- Representation of dates and times",
+        "href": "https://www.iso.org/standard/70907.html",
+        "title": "Date and time — Representations for information interchange",
         "publisher": "ISO",
         "status": "International Standard",
-        "date": "2004",
-        "isoNumber": "ISO 8061:2004"
+        "date": "2019",
+        "isoNumber": "ISO 8601-1:2019"
       },
       "JRC-DP": {
         "href": "https://doi.org/10.2788/607378",
