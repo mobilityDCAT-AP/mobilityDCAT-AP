@@ -202,14 +202,14 @@ var respecConfig = {
         "date":"27 October 2025"
        },
               
-    "DCAT-AP v3.0.1 Examples for Dataset Series":{
+    "DCAT-AP-v3.0.1-Examples-for-Dataset-Series":{
         "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
         "title":"DCAT-AP v3.0.1 Examples for Dataset Series",
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
 
-    "DCAT-AP v3.0.1 Note on Inverse Properties":{
+    "DCAT-AP-v3.0.1-Note-on-Inverse-Properties":{
         "https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
         "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
         "publisher":"SEMIC",
@@ -217,20 +217,20 @@ var respecConfig = {
        },
 
    
-   "DCAT-AP implementation guidelines":{
+   "DCAT-AP-Implementation-Guidelines":{
         "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
         "title":"DCAT-AP implementation guidelines",
         "publisher":"SEMIC",
         "date":"11 December 2015"
        },
 
-    "SEMIC Style Guide for Semantic Engineers":{
+    "SEMIC-Style-Guide-for-Semantic-Engineers":{
         "https://semiceu.github.io/style-guide/1.0.0/index.html",
         "title":"SEMIC Style Guide for Semantic Engineers",
         "publisher":"SEMIC"
        },
   
-    "DCAT-AP Reuse Guidelines":{
+    "DCAT-AP-Reuse-Guidelines":{
         "https://semiceu.github.io/DCAT-AP-reuse-guidelines/",
         "title":"DCAT-AP Reuse Guidelines",
         "publisher":"SEMIC",
@@ -544,7 +544,7 @@ var respecConfig = {
         "publisher":"OSGeo"
       },
 
-     "mobilityDCAT-AP v1.1.0":{
+     "mobilityDCAT-AP-v1.1.0":{
         "href":"https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html",
         "title":"mobilityDCAT-AP v1.1.0",
         "publisher":"NAPCORE Consortium",
@@ -557,19 +557,19 @@ var respecConfig = {
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE Metadata Preparatory Activities":{
+      "NAPCORE-Metadata-Preparatory-Activities":{
         "href":"https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/",
         "title":"Documentation about preparatory activities for mobilityDCAT-AP",
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE Metadata Working Group":{
+      "NAPCORE-Metadata-Working-Group":{
         "href":"https://napcore.eu/metadata/",
         "title":"Information about the NAPCORE Sub-Working Group on Metadata",
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE Information about NAPs":{
+      "NAPCORE-Information-about-NAPs":{
         "href":"https://napcore.eu/description-naps/",
         "title":"NAPCORE information about National Access Points (NAPs)",
         "publisher":"NAPCORE Consortium"
@@ -686,7 +686,7 @@ var respecConfig = {
          "publisher":"OpenSearch"
       },
      
-        "RDF Primer":{
+    "RDF-Primer":{
         "href":"http://schema.org/",
         "title":"RDF Primer",
         "date":"24 June 2014",
