@@ -1,5 +1,5 @@
-@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
-@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix : <https://w3id.org/mobilityDCAT-AP/releases/3.0.0#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilityDCAT-AP#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -50,7 +50,7 @@
 #   downloadURL; Location geometry (locn:Geometry - DCAT-AP 3.0.1
 #   changelog issues 177/247).
 #===========================================================================
-<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
+<https://w3id.org/mobilityDCAT-AP/releases/3.0.0#>
   a owl:Ontology ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.1/html/shacl/range.ttl> ;
   owl:versionInfo "3.0.0" ;

@@ -18,7 +18,7 @@
 # skos:Concept instances and ODRL's skos:Concepts do not comply.
 # NOTE: locn and adms are served by w3.org under "legacy_" paths.
 #-------------------------------------------------------------------------
-<https://w3id.org/mobilitydcat-ap/imports>
+<https://w3id.org/mobilityDCAT-AP/imports>
   rdf:type owl:Ontology ;
   owl:imports <https://www.w3.org/ns/dcat2.ttl> ;
   owl:imports <https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl> ;
