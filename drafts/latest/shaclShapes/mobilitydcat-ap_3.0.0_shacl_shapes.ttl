@@ -1,5 +1,5 @@
-@prefix : <https://w3id.org/mobilityDCAT-AP/releases/3.0.0#> .
-@prefix mobilitydcatap: <https://w3id.org/mobilityDCAT-AP#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
@@ -58,7 +58,7 @@
 #     looser cardinality cannot be enforced via import + deltas). Open
 #     item for discussion.
 #=========================================================================
-<https://w3id.org/mobilityDCAT-AP/releases/3.0.0#>
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
   a owl:Ontology , adms:Asset ;
   owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.1/html/shacl/shapes.ttl> ;
   owl:versionInfo "3.0.0" ;
@@ -72,7 +72,7 @@
   dct:dateCopyrighted "2023"^^xsd:gYear ;
   dct:title "mobilityDCAT-AP 3.0.0 SHACL Constraints - Basic Validation"@en ;
   dct:description "SHACL validation constraints for mobilityDCAT-AP 3.0.0, extending DCAT-AP 3.0.1. Contains only the mobilityDCAT-AP-specific cardinality, nodeKind and datatype deltas; properties unchanged from DCAT-AP are inherited via owl:imports. Range constraints are in the range file. Controlled vocabulary constraints are in the MDR file."@en ;
-  rdfs:isDefinedBy <https://w3id.org/mobilityDCAT-AP/releases/3.0.0/> ;
+  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
   bibo:editor [
     a foaf:Person ;
     owl:sameAs <https://orcid.org/0000-0001-5446-6947> ;

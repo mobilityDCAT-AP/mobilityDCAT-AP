@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 #
 # mobilityDCAT-AP v3.0.0 -- recommended controlled-vocabulary imports.
-# Extends DCAT-AP 3.0.1. Populates https://w3id.org/mobilityDCAT-AP/codelist_imports.
+# Extends DCAT-AP 3.0.1. Populates https://w3id.org/mobilitydcat-ap/codelist_imports.
 # Mirrors the DCAT-AP 3.0.1 mdr_imports.ttl design.
 #
 # NOTE on resolution: per DCAT-AP, these owl:imports are "not transitive". The ITB
@@ -20,20 +20,20 @@
 #   - update-frequency : dropped in favour of the EU Frequency NAL table (issue #11).
 #   - grammar          : mobilitydcatap:grammar deprecated (issue #90).
 #
-<https://w3id.org/mobilityDCAT-AP/codelist_imports>
+<https://w3id.org/mobilitydcat-ap/codelist_imports>
   rdf:type owl:Ontology ;
   rdfs:label "mobilityDCAT-AP recommended controlled-vocabulary imports"@en ;
   dct:title "mobilityDCAT-AP 3.0.0 Recommended Controlled-Vocabulary Imports"@en ;
   dct:description "owl:imports of the mobilityDCAT-AP controlled vocabularies for ITB validation, extending DCAT-AP 3.0.1. EU NAL codelists are inherited via DCAT-AP's mdr_imports.ttl and not restated here."@en ;
   owl:versionInfo "3.0.0" ;
   dct:modified "2026-06-21"^^xsd:date ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/mobility-theme> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/mobility-data-standard> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/network-coverage> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/transport-mode> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/georeferencing-method> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/intended-information-service> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/application-layer-protocol> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/communication-method> ;
-  owl:imports <https://w3id.org/mobilityDCAT-AP/conditions-for-access-and-usage>
+  owl:imports <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/network-coverage> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/transport-mode> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/georeferencing-method> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/intended-information-service> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/communication-method> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage>
   .

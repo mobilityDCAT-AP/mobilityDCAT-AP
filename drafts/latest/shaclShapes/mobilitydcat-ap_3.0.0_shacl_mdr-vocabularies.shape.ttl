@@ -1,5 +1,5 @@
-@prefix : <https://w3id.org/mobilityDCAT-AP/releases/3.0.0#> .
-@prefix mobilitydcatap: <https://w3id.org/mobilityDCAT-AP#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -38,7 +38,7 @@
 #   IRI + skos:Concept is checked in range.ttl; register membership is not
 #   SKOS-checkable here.
 #-------------------------------------------------------------------------
-<https://w3id.org/mobilityDCAT-AP/releases/3.0.0#>
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
     a owl:Ontology ;
     dct:title "Controlled Vocabulary Constraints of mobilityDCAT-AP"@en ;
     dct:description "Controlled vocabulary constraints on mobility-specific properties expressed by mobilityDCAT-AP in SHACL, extending DCAT-AP 3.0.1."@en ;
@@ -50,47 +50,47 @@
 :MobilityThemeRestriction
     a sh:NodeShape ; rdfs:label "Mobility Theme restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/mobility-theme> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :TransportModeRestriction
     a sh:NodeShape ; rdfs:label "Transport Mode restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/transport-mode> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/transport-mode> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :NetworkCoverageRestriction
     a sh:NodeShape ; rdfs:label "Network Coverage restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/network-coverage> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/network-coverage> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :GeoreferencingMethodRestriction
     a sh:NodeShape ; rdfs:label "Georeferencing Method restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/georeferencing-method> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/georeferencing-method> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :IntendedInformationServiceRestriction
     a sh:NodeShape ; rdfs:label "Intended Information Service restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/intended-information-service> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/intended-information-service> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :ApplicationLayerProtocolRestriction
     a sh:NodeShape ; rdfs:label "Application Layer Protocol restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/application-layer-protocol> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :CommunicationMethodRestriction
     a sh:NodeShape ; rdfs:label "Communication Method restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/communication-method> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/communication-method> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :ConditionsForAccessAndUsageRestriction
     a sh:NodeShape ; rdfs:label "Conditions for Access and Usage restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/conditions-for-access-and-usage> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 :MobilityDataStandardRestriction
     a sh:NodeShape ; rdfs:label "Mobility Data Standard restriction"@en ;
     sh:property [ sh:path skos:inScheme ;
-        sh:hasValue <https://w3id.org/mobilityDCAT-AP/mobility-data-standard> ;
+        sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ;
         sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 #=========================================================================
 # Per-class CV bindings (section 10.2)

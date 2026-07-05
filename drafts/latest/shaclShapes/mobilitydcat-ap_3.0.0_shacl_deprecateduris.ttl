@@ -1,5 +1,5 @@
-@prefix : <https://w3id.org/mobilityDCAT-AP/drafts/latest#> .
-@prefix mobilitydcatap: <https://w3id.org/mobilityDCAT-AP#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/drafts/latest#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
