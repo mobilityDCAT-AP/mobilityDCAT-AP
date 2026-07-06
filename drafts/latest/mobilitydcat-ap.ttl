@@ -24,7 +24,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
-@prefix geodcatap: <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
 @base <https://w3id.org/mobilitydcat-ap#> .
 
 
