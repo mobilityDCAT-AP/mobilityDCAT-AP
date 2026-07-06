@@ -46,7 +46,7 @@ mobilitydcatap: a voaf:Vocabulary,
   dct:description "mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance."@en ;
   dct:issued "2026-06-17"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2026-06-29"^^xsd:date ;
+  dct:modified "2026-07-06"^^xsd:date ;
   dct:publisher <https://napcore.eu/> ;
   dct:rightsHolder <https://napcore.eu/> ;
   dct:title "mobilityDCAT-AP"@en ;
@@ -118,7 +118,6 @@ mobilitydcatap: a voaf:Vocabulary,
       dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
       dcat:mediaType "text/html"^^dct:IMT ] ;
       foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/figures/mobilityDCAT-AP_uml-diagramm_230921.png> .
-
 
 
 #################################################################
@@ -243,7 +242,7 @@ dct:LicenseDocument rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenceDocument> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-standard-licence> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence> ,
                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Location
@@ -259,7 +258,7 @@ dct:Location rdf:type owl:Class ;
                  <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location> ,
                  <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Location> ,
                  <https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used> ,
-                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-spatial> ,
+                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-spatial> ,
                  <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#5-geographical-coverage> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#PeriodOfTime
@@ -280,7 +279,7 @@ dct:RightsStatement rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#RightsStatement> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#class-licence-document> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document> ,
                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard
@@ -293,11 +292,11 @@ dct:Standard rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Standard> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Standard> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#class-mobility-data-standard> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-mobility-data-standard> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-linked-schemas> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#mobility-data-standard-conforms-to> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-application-profile> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-linked-schemas> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#mobility-data-standard-conforms-to> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-application-profile> .
 
 ### https://www.w3.org/2009/08/skos-reference/skos.html#Concept
 skos:Concept rdf:type owl:Class ;
@@ -308,7 +307,7 @@ skos:Concept rdf:type owl:Class ;
     rdfs:seeAlso <https://www.w3.org/2009/08/skos-reference/skos.html#Concept> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Concept> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Concept> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#controlled-vocabularies> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#controlled-vocabularies> .
 
 
 ### https://www.w3.org/2009/08/skos-reference/skos.html#ConceptScheme
@@ -320,7 +319,7 @@ skos:ConceptScheme rdf:type owl:Class ;
     rdfs:seeAlso <https://www.w3.org/2009/08/skos-reference/skos.html#ConceptScheme> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ConceptScheme> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#ConceptScheme> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#controlled-vocabularies> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#controlled-vocabularies> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog
 dcat:Catalog rdf:type owl:Class ;
@@ -388,7 +387,7 @@ foaf:Agent rdf:type owl:Class ;
                 <https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#privsec> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec> .
 
 ### http://xmlns.com/foaf/spec/#term_Document
 foaf:Document rdf:type owl:Class ;
@@ -457,9 +456,9 @@ vcard:Kind rdf:type owl:Class ;
                 <https://www.w3.org/TR/vcard-rdf/#d4e2121> ,
                 <https://www.w3.org/TR/vcard-rdf/#d4e1865> ,
                 <https://www.w3.org/TR/vcard-rdf/#d4e1667> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#class-agent> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#privsec> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-agent> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec> .
 
 ### https://www.w3.org/TR/rdf11-schema/#ch_literal
 rdfs:Literal rdf:type owl:Class ;
@@ -478,7 +477,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#MediaTypeOrExtent> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#MediaTypeorExtent> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-format> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-format> .
 
 ### https://www.w3.org/ns/org#Organization
 org:Organization rdf:type owl:Class ;
@@ -599,7 +598,7 @@ adms:identifier a rdf:Property,
                         dcat:Dataset ;
     dcam:rangeIncludes adms:Identifier ;
     rdfs:seeAlso <http://www.w3.org/ns/adms#identifier> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-identifier> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-identifier> ,
                 <https://schema.datacite.org/> ,
                 <http://www.doi.org/> ,
                 <https://w3id.org/> .
@@ -635,12 +634,12 @@ dct:publisher a rdf:Property,
                         dcat:DatasetSeries ;
     dcam:rangeIncludes foaf:Agent ;
     rdfs:seeAlso <http://purl.org/dc/terms/publisher> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-publisher> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-rights-holder> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-contact-point> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-rights-holder> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-contact-point> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
 
 
 ###  http://purl.org/dc/terms/source
@@ -660,7 +659,7 @@ dct:source a rdf:Property,
     dcam:rangeIncludes dcat:CatalogRecord ,
                        dcat:Dataset ;
     rdfs:seeAlso <http://purl.org/dc/terms/source> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-source-metadata> .	
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-source-metadata> .	
 
 ###  https://www.w3.org/2009/08/skos-reference/skos.html#inScheme
 skos:inScheme a rdf:Property,
@@ -700,9 +699,9 @@ mobilitydcatap:mobilityTheme a rdf:Property,
                         dcat:DatasetSeries ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#mobilityTheme> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-mobility-theme> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-theme> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-keyword> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-keyword> .
 
 ###  https://w3id.org/mobilitydcat-ap#georeferencingMethod
 mobilitydcatap:georeferencingMethod a rdf:Property,
@@ -716,7 +715,7 @@ mobilitydcatap:georeferencingMethod a rdf:Property,
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
-    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-georeferencing-method> .
+    rdfs:seeAlso <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-georeferencing-method> .
 
 		   
 ###  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo
@@ -739,9 +738,9 @@ dct:conformsTo a rdf:Property,
     dcam:rangeIncludes dct:Standard ,
                        skos:Concept ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-mobility-data-standard> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#class-mobility-data-standard> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-mobility-data-standard> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-data-standard> .
 
 ###  http://purl.org/dc/terms/rightsHolder
 dct:rightsHolder a rdf:Property,
@@ -756,9 +755,9 @@ dct:rightsHolder a rdf:Property,
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes foaf:Agent ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-applicable-legislation> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ###  https://w3id.org/mobilitydcat-ap#networkCoverage
@@ -778,7 +777,7 @@ mobilitydcatap:networkCoverage a rdf:Property,
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#networkCoverage> , 
                 <https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-georeferencing-method> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-georeferencing-method> .
 
 		   
 ###  https://w3id.org/mobilitydcat-ap#transportMode
@@ -794,7 +793,7 @@ mobilitydcatap:transportMode a rdf:Property,
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#transportMode> , 
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-transport-mode> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-transport-mode> .
 		   
 ###  http://data.europa.eu/r5r/applicableLegislation
 dcatap:applicableLegislation a rdf:Property,
@@ -814,7 +813,7 @@ dcatap:applicableLegislation a rdf:Property,
                         dcat:Distribution ;
     dcam:rangeIncludes eli:LegalResource ;
     rdfs:seeAlso <http://data.europa.eu/r5r/applicableLegislation>  ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-applicable-legislation> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation> ,
                 <https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/> ,
                 <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138> .
 
@@ -848,7 +847,7 @@ mobilitydcatap:intendedInformationService a rdf:Property,
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#intendedInformationService> ,
                 <https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-intended-information-service> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-intended-information-service> .
  		   
 ###  http://www.w3.org/ns/dqv#hasQualityAnnotation
 dqv:hasQualityAnnotation a rdf:Property,
@@ -884,7 +883,7 @@ mobilitydcatap:mobilityDataStandard a rdf:Property,
     dcam:rangeIncludes mobilitydcatap:MobilityDataStandard ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> ,
                 <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-mobility-data-standard> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-data-standard> ,
                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard> .
 
 		   
@@ -901,7 +900,7 @@ mobilitydcatap:applicationLayerProtocol a rdf:Property,
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#applicationLayerProtocol> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-application-layer-protocol> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-application-layer-protocol> .
 		   
 ###  https://w3id.org/mobilitydcat-ap#communicationMethod
 mobilitydcatap:communicationMethod a rdf:Property,
@@ -916,7 +915,7 @@ mobilitydcatap:communicationMethod a rdf:Property,
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#communicationMethod> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-communication-method> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-communication-method> .
 
 ###  https://w3id.org/mobilitydcat-ap#grammar
 mobilitydcatap:grammar a owl:ObjectProperty ;
@@ -959,7 +958,7 @@ adms:status a rdf:Property,
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://www.w3.org/ns/legacy_adms#status> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-status> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-status> .
 
 ###  http://purl.org/dc/terms/temporal
 dct:temporal a rdf:Property,
@@ -1135,7 +1134,7 @@ oa:hasTarget a rdf:Property,
     dcam:domainIncludes dqv:QualityAnnotation ;
     dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hastarget> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-quality-description> .	
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-quality-description> .	
 
 ###   http://www.w3.org/ns/dcat#distribution
 dcat:distribution a rdf:Property,
@@ -1159,8 +1158,8 @@ dcat:hasVersion a rdf:Property,
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_has_version> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version-notes> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-version-notes> .
 
 ###  https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series
 dcat:inSeries a rdf:Property,
@@ -1171,8 +1170,8 @@ dcat:inSeries a rdf:Property,
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes dcat:DatasetSeries ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version-notes> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-version-notes> .
 		   
 ###  http://www.w3.org/ns/locn#adminUnitL2
 locn:adminUnitL2 rdf:type owl:DatatypeProperty ;
@@ -1242,7 +1241,7 @@ foaf:name
     dcam:domainIncludes foaf:Agent ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://xmlns.com/foaf/0.1/name> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> .
 
 ###  http://xmlns.com/foaf/spec/#term_page
 foaf:page
@@ -1258,8 +1257,8 @@ foaf:page
                         dcat:Distribution ;
     dcam:rangeIncludes foaf:Document ;
     rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_page> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-description> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-documentation> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-description> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-documentation> .
 
 
 ### http://purl.org/dc/terms/type
@@ -1276,9 +1275,9 @@ dct:type a owl:ObjectProperty ;
                         foaf:Agent ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <http://purl.org/dc/terms/type> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-publisher-type> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-conditions-for-access-and-usage> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#licence-document-standard-licence> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-publisher-type> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-conditions-for-access-and-usage> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#licence-document-standard-licence> .
  
 	   
 ###   http://purl.org/dc/terms/issued
@@ -1310,9 +1309,9 @@ dct:issued rdf:type owl:DatatypeProperty ;
                         dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/issued> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record-creation-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-creation-date> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-release-date> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-release-date> .
 
 ###  http://xmlns.com/foaf/spec/#term_firstName
 foaf:firstName rdf:type owl:DatatypeProperty ;
@@ -1323,7 +1322,7 @@ foaf:firstName rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes foaf:Agent ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_firstName> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
 
 		   
 ### http://xmlns.com/foaf/spec/#term_surname
@@ -1335,7 +1334,7 @@ foaf:surname rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes foaf:Agent ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_surname> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
 
 		   
 ###   http://purl.org/dc/terms/identifier
@@ -1361,7 +1360,7 @@ dct:identifier a owl:DatatypeProperty ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/identifier> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-spatial> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-spatial> .
 
 ###   http://purl.org/dc/terms/created
 dct:created rdf:type owl:DatatypeProperty ;
@@ -1387,7 +1386,7 @@ mobilitydcatap:dataFormatNotes rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#dataFormatNotes> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects>   .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects>   .
 		   
 ###  http://www.w3.org/2011/content#characterEncoding
 cnt:characterEncoding rdf:type owl:DatatypeProperty ;
@@ -1442,7 +1441,7 @@ rdfs:label rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes dct:RightsStatement ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/TR/rdf-schema/#ch_label> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html#accessibility-and-multilingual-aspects> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/> .			   
 		   
 
@@ -1461,8 +1460,8 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
                         skos:Concept ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/2012/09/odrl/semantic/draft/doco/skos_prefLabel.html> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .		   
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/> .		   
 
 
 ### http://purl.org/dc/terms/accrualPeriodicity
@@ -1479,10 +1478,10 @@ dct:accrualPeriodicity
                         dcat:DatasetSeries ;
     dcam:rangeIncludes dct:Frequency ;
     rdfs:seeAlso <http://purl.org/dc/terms/accrualPeriodicity> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-modification-date> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-update-frequency> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-modification-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-update-frequency> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-frequency> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-frequency> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> .
 
 ### http://purl.org/dc/terms/description
@@ -1510,8 +1509,8 @@ dct:description a owl:DatatypeProperty ;
                         dct:RightsStatement ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/description> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/catalogue-record-language> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ### http://purl.org/dc/terms/format 
@@ -1524,7 +1523,7 @@ dct:format a owl:ObjectProperty ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes dct:MediaTypeOrExtent ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-format> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-format> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
                 <https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/file-type> ,
                 <https://www.iana.org/assignments/media-types/media-types.xhtml> .
@@ -1545,8 +1544,8 @@ dct:hasVersion a owl:ObjectProperty ;
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <http://purl.org/dc/terms/hasVersion> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/index.html#dataset-version> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/index.html#dataset-version-notes> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#dataset-version-notes> .
 
 ### http://purl.org/dc/terms/isPartOf
 dct:isPartOf a owl:ObjectProperty ;
@@ -1592,9 +1591,9 @@ dct:language
                         dcat:Distribution ;
     dcam:rangeIncludes dct:LinguisticSystem ;
     rdfs:seeAlso <http://purl.org/dc/terms/language> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-language> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-language> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license
 dct:license 
@@ -1607,7 +1606,7 @@ dct:license
                         dcat:Distribution ;
     dcam:rangeIncludes dct:LicenseDocument ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-standard-licence> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence> .
 
 ### http://purl.org/dc/terms/modified
 dct:modified 
@@ -1632,8 +1631,8 @@ dct:modified
                         dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;  
     rdfs:seeAlso <http://purl.org/dc/terms/modified> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/catalogue-record-creation-date> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-modification-date> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-creation-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-modification-date> .
 
 ### http://purl.org/dc/terms/relation
 dct:relation 
@@ -1654,7 +1653,7 @@ dct:rights
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes dct:RightsStatement ;  
     rdfs:seeAlso <http://purl.org/dc/terms/rights> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-licence> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 
@@ -1675,7 +1674,7 @@ dct:spatial a owl:ObjectProperty ;
                         dcat:DatasetSeries ;
     dcam:rangeIncludes dct:Location ;  
     rdfs:seeAlso <http://purl.org/dc/terms/spatial> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-geographical-coverage> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-geographical-coverage> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> .
 
@@ -1706,8 +1705,8 @@ dct:title a owl:DatatypeProperty ;
                         mobilitydcatap:MobilityDataStandard ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/title> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#accessibility-and-multilingual-aspects> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/catalogue-record-language> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version
 dcat:version a owl:DatatypeProperty ;
@@ -1723,8 +1722,8 @@ dcat:version a owl:DatatypeProperty ;
                         dcat:Dataset ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-modification-date> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version-notes> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-modification-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-version-notes> .
 
 ### https://www.w3.org/2009/08/skos-reference/skos.html#notation
 skos:notation 
@@ -1744,8 +1743,8 @@ adms:versionNotes
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-adms/#adms-versionnotes> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-version> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#accessibility-and-multilingual-aspects> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-version> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> .
 
 ### https://www.w3.org/ns/dcat#accessURL 
 dcat:accessURL 
@@ -1757,7 +1756,7 @@ dcat:accessURL
     For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL may be a link to an external service or a website which enables access to the data."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Distributions."@en ;
     rdfs:seeAlso <https://www.w3.org/ns/dcat#accessURL> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#distribution-download-url> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-download-url> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Property:location_bbox
 dcat:bbox 
@@ -1777,7 +1776,7 @@ dcat:dataset
     This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets should be linked indirectly, i.e., via the metadata record of this dataset. Thus, it is mandatory to use the property dcat:record to link to a data set. The usage of dcat:dataset may be then redundant."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue."@en ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#catalogue-record> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record> .
 
 ### https://www.w3.org/ns/dcat#downloadURL
 dcat:downloadURL 
@@ -1815,9 +1814,9 @@ dcat:keyword
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-mobility-theme> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-network-coverage> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-transport-mode> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-mobility-theme> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-network-coverage> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-transport-mode> .
 
 ### https://www.w3.org/ns/dcat#record
 dcat:record 
@@ -1836,7 +1835,7 @@ dcat:theme
     dcam:domainIncludes dcat:Dataset ;
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-theme> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-theme> .
     
 
 ### http://www.w3.org/ns/dcat#themeTaxonomy
@@ -1847,7 +1846,7 @@ dcat:themeTaxonomy
     dcam:domainIncludes dcat:Catalog ;
     dcam:rangeIncludes skos:ConceptScheme ;
     rdfs:seeAlso <http://www.w3.org/ns/dcat#themeTaxonomy> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-mobility-theme> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-mobility-theme> .
 
 ### https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.geometry
 locn:geometry 
@@ -1892,9 +1891,9 @@ dcat:contactPoint
                         dcat:DatasetSeries ;
     dcam:rangeIncludes vcard:Kind ;
     rdfs:seeAlso <http://www.w3.org/ns/dcat#contactPoint> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#privsec> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#dataset-publisher> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#agent-roles> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
 
 ### https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/#referenceSystem
 geodcatap:referenceSystem
@@ -1907,7 +1906,7 @@ geodcatap:referenceSystem
     dcam:rangeIncludes skos:Concept ;
     rdfs:seeAlso <https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/#referenceSystem> ,
                 <http://www.opengis.net/def/crs/EPSG/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/#vocab-reference-system> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-reference-system> ,
                 <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
