@@ -1021,24 +1021,26 @@ Generic description about mobilityDCAT-AP is now compiled at the <a href="https:
   is now compiled in a new <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#8-organisational-and-personal-information">Wiki Section "Organisational and personal information"</a>
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/228">#228</a>.</li>
   
-<li>The organisation and the layout of the elements of the ReSpec documentation are modified, with the goal of alignment with the ReSpec pages of DCAT-AP v3 and geoDCAT-AP v3.
+<li>The organisation and the layout of the elements of the ReSpec documentation are modified, with the goal of alignment with the ReSpec pages of [[DCAT-AP-v3.0.1]] and [[GeoDCAT-AP-v3.0.0]].
 In particular, the class and property definitions are now under new sections <a class="no-sectionRef" href="#main-entities"></a>, <a class="no-sectionRef" href="#supportive-entities"></a> and <a class="no-sectionRef" href="#datatypes"></a>. 
   Further, all property tables are reformatted with new columns for "Definition", "Usage notes" and "Reusage".
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
 
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP.
-These classes have been already defined in [[DCAT-AP-v3.0.1]], but now are also explicitly used in mobilityDCAT-AP.</li>
+These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
 <ul>
     <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
-      <li>Class <a href="#class-standard"><code>dct:Standard</code></a> is added to allow the necessary ranges for
+    <li>Class <a href="#class-standard"><code>dct:Standard</code></a> is added to allow the necessary ranges for
        property <a href="#distribution-linked-schemas"><code>dct:conformsTo</code></a> of class Distribution 
        and property <a href="#mobility-data-standard-conforms-to"><code>dct:conformsTo</code></a> of class Mobility Data Standard.
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
+    <li>Class <a href="#class-address-vcard"><code>vcard:Address</code></a> is added to allow the necessary range for
+       property <a href="#kind-address"><code>vcard:hasAddress</code></a> of class Kind.</li>
 </ul> 
   
 <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP. 
-  These properties have been already defined in [[DCAT-AP-v3.0.1]], but now are also explicitly used in mobilityDCAT-AP.</li>
+  These properties have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
 <ul>
   <li>Property <a href="#catalogue-record-application-profile"><code>dct:conformsTo</code></a> of class Catalogue Record added.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/82">#82</a>.</li>
@@ -1067,8 +1069,9 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]], but now are also 
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
    <li>Property <a href="#class-rights-statement"><code>dct:description</code></a> of class Rights Statement added.
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
-    <li>All properties of class Dataset Serues, as defined for the same class <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries"><code>dcat:DatasetSeries</code></a> in [[DCAT-AP-v3.0.1]], added.
+    <li>All properties of class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a>, as defined for the same class <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries"><code>dcat:DatasetSeries</code></a> in [[DCAT-AP-v3.0.1]], added.
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
+    <li>All properties of class <a href="#class-address-vcard"><code>vcard:Address</code></a>, as defined for the same class <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(vCard)"><code>vcard:Address</code></a> in [[GeoDCAT-AP-v3.0.0]], added.</li>
 </ul> 
 
 <li>Other changes of existing classes:</li>
