@@ -11,20 +11,6 @@ This directory contains the SHACL shapes for validating mobilityDCAT-AP v3.0.0 m
 - `mobilitydcat-ap_3.0.0_shacl_imports.ttl` — Imports the DCAT-AP 3.0.1 SHACL shapes and other base ontologies.
 - `mobilitydcat-ap_3.0.0_shacl_mdr_imports.ttl` — Imports the controlled-vocabulary codelists needed for validation.
 
-## Usage
-
-Validate metadata against the core shapes:
-```
-pyshacl -s mobilitydcat-ap_3.0.0_shacl_shapes.ttl -d your_metadata.ttl
-```
-
-For full validation (core + range), load the additional shape files:
-```
-pyshacl -s mobilitydcat-ap_3.0.0_shacl_shapes.ttl -e mobilitydcat-ap_3.0.0_shacl_range.ttl -d your_metadata.ttl
-```
-
-Note: full validation depends on the DCAT-AP 3.0.1 base and the controlled vocabularies being loaded. See the validation toolkit below for the complete, tested setup.
-
 ## Severity levels
 
 - `sh:Violation` — Mandatory properties. Must be fixed.
