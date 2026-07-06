@@ -17,11 +17,8 @@ This directory contains the SHACL shapes for validating mobilityDCAT-AP v3.0.0 m
 - `sh:Warning` — Recommended / deprecated properties. Should be addressed.
 - `sh:Info` — Optional properties. May be added.
 
-## Validation toolkit
-
-For Docker setup, Python scripts, and test cases, see:
-**https://github.com/mobilityDCAT-AP/validation**
+## Validation
+For validation, see: **https://github.com/mobilityDCAT-AP/validation**
 
 ## Previous version
-
 SHACL shapes for v1.1.0 are in `drafts/1.1.0-draft-0.1/shaclShapes`.
