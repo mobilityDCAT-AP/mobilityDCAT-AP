@@ -138,7 +138,7 @@
 
 <h2>Status</h2>
 
-<p>This application profile is currently published as an Editor's Draft and may change before publication as a NAPCORE Recommendation.</p>
+<p>This version is currently published as an Editor's Draft and may change before publication as a NAPCORE Recommendation.</p>
 
 <p>Information about the process and the decisions involved in the creation of this specification are consultable at the Changelog - see <a class="no-secRef" href="#change-log"></a>.</p>
 
@@ -226,7 +226,8 @@
   It also may refer to specific tools like open data portals. For DCAT-AP the usage scope is broad and in the first place taking into account the European legal context.</p>
 
 <p>An <strong>Extension</strong> is further specifying a given Application Profile like DCAT-AP. Many groups, who are interested in sharing Datasets related to very specific application domains, 
-  or within a certain European country, found the need to define application profiles that are more specific than DCAT-AP. As a result, there exist a number of DCAT-AP extensions (or synonymously derivatives). mobilityDCAT-AP is such an extension for the mobility domain.</p>
+  or within a certain European country, found the need to define application profiles that are more specific than DCAT-AP. As a result, there exist a number of DCAT-AP extensions (or synonymously derivatives). 
+  mobilityDCAT-AP is such an extension for the mobility domain.</p>
   
 </section>  
 
@@ -258,7 +259,7 @@
 
 <p>The suggested namespace prefix is: <code>mobilitydcatap</code></p>
 
-<p>The Application Profile reuses terms from various existing specifications, following <a data-cite="?DWBP#dataVocabularies">established best practices</a> [[?DWBP]]. The following table indicates the full list of corresponding namespaces used in this document.</p>
+<p>mobilityDCAT-AP reuses terms from various existing specifications, following <a data-cite="?DWBP#dataVocabularies">established best practices</a> [[?DWBP]]. The following table indicates the full list of corresponding namespaces used in this document.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/namespaces.html"></div>
 
@@ -272,7 +273,7 @@
 
 <section id="application-profile-diagram">
 
-<h3>Application profile diagram</h3>
+<h3>mobilityDCAT-AP UML diagram</h3>
 
 <p>For a first orientation in mobilityDCAT-AP, these four central classes should be considered: <a href="#class-catalogue"><code>dcat:Catalog</code></a>, <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>, <a href="#class-dataset"><code>dcat:Dataset</code></a> and <a href="#class-distribution"><code>dcat:Distribution</code></a>; as well as the properties connecting these four classes. </p>
 
@@ -492,6 +493,8 @@
 
 <h2>Supportive entities</h2>
 
+<p>The supportive entities are supporting the main entities in mobilityDCAT-AP. They are included because they form the range of properties.</p>  
+
   <!-- Address (Core Location)-->
 
 <section id="class-address-core-location">
@@ -700,7 +703,7 @@
 
 <h3>Requirements for controlled vocabularies</h3>
 
-<p>The following is a list of requirements that were identified for the controlled vocabularies to be recommended in this Application Profile.</p>
+<p>The following is a list of requirements that were identified for the controlled vocabularies to be recommended in mobilityDCAT-AP.</p>
 
 <p>Controlled vocabularies SHOULD:</p>
 
@@ -714,7 +717,7 @@
 <li>Have associated persistence and versioning policies.</li>
 </ul>
 
-<p>These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for this Application Profile.</p>
+<p>These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for mobilityDCAT-AP.</p>
 
 </section>
 
@@ -746,7 +749,7 @@
 <p><strong>Accessibility</strong> in the context of mobilityDCAT-AP is limited to information about the technical format of distributions of datasets. 
   There are three format-related properties <code>cnt:characterEncoding, <code>dct:format</code> and <code>mobilitydcatap:mobilityDataStandard</code> providing information that can be used to determine what software can be deployed to process the data. 
   See the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#3-format-information">Wiki page on Format information</a> for further guidance on these three properties.
-  The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of this Application Profile.</p>
+  The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of mobilityDCAT-AP.</p>
 
 <p><strong>Multilingual aspects</strong> related to mobilityDCAT-AP concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. 
   Wherever such properties are used, the string values are of one of two types:</p>
