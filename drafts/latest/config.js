@@ -330,15 +330,15 @@ var respecConfig = {
         "title":"Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance",
         "publisher":"European Commission"
       },
-      "EC-MMTIS-DR": {
-        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32017R1926",
-        "title":"Commission Delegated Regulation (EU) 2017/1926 of 31 May 2017 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services (Text with EEA relevance.)",
+      "EC-Regulation-2024/490-on-MMTIS": {
+        "href":"https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng",
+        "title":"Commission Delegated Regulation (EU) 2024/490 of 29 November 2023 amending Delegated Regulation (EU) 2017/1926 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services",
         "publisher":"European Commission"
       },
 
     "EC-Regulation-2013/138-on-HVD": {
-        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32017R1926",
-        "title":"Commission Delegated Regulation (EU) 2017/1926 of 31 May 2017 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services (Text with EEA relevance.)",
+        "href":"https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng",
+        "title":"Commission Implementing Regulation (EU) 2023/138 of 21 December 2022 laying down a list of specific high-value datasets and the arrangements for their publication and re-use",
         "publisher":"European Commission"
       },
         
@@ -737,7 +737,7 @@ var respecConfig = {
       },
      
     "RDF-Primer":{
-        "href":"http://schema.org/",
+        "href":"https://www.w3.org/TR/rdf11-primer/",
         "title":"RDF Primer",
         "date":"24 June 2014",
         "publisher":"W3C Working Group"
