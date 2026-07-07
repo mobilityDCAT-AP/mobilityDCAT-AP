@@ -878,7 +878,7 @@ var respecConfig = {
        "publisher":"W3C "
       },
         
-      "WEB-ANOTATION-ONTOLOGY": {
+      "WEB-ANNOTATION-ONTOLOGY": {
         "href":"https://www.w3.org/TR/annotation-vocab/",
         "title":"Web Annotation Ontology",
         "date":"23 February 2017",
