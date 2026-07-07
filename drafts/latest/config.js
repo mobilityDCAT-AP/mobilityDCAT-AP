@@ -232,8 +232,8 @@ var respecConfig = {
         "date":"27 October 2025"
        },
 
-         "DCAT-AP-v3.0.1-Usage-guide-on-Dataset-Series":{
-        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+    "DCAT-AP-v3.0.1-Usage-guide-on-Dataset-Series":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#usage-guide-on-dataset-series",
         "title":"DCAT-AP v3.0.1 Usage guide on Dataset Series",
         "publisher":"SEMIC",
         "date":"27 October 2025"
