@@ -81,7 +81,7 @@ var respecConfig = {
       },
      {
         name: "Andrej Tibaut",
-        company: "University of Maribor,
+        company: "University of Maribor",
         orcid: "0000-0002-1706-5981"
       }
     ],
