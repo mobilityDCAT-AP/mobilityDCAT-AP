@@ -184,7 +184,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>1..1</p>
 </td>
 <td valign=top>
-<p>Describes how often the delivered content is updated. This information tells a data consumer, how often it is updated on the on the data platform, so the data consumer might align the frequency of data retrieval accordingly.</p>
+<p>Describes how often the delivered content is updated. This information tells a data consumer how often it is updated on the data platform, so the data consumer might align the frequency of data retrieval accordingly.</p>
 </td>
 <td valign=top>
   <p>For dynamic data feeds, the frequency should correspond to the technical upload / data push frequency. For static datasets, it should correspond to the expected change frequency (see property <a href="#dataset-modification-date"><code>dct:modified</code></a>). 
@@ -283,7 +283,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>The main identifier for the dataset, e.g. the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
 </td>
 <td valign=top>
-<p>This property should populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
+<p>This property should be populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.identifier">E</a></p>
@@ -350,7 +350,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>A keyword or tag describing the Dataset.</p>
 </td>
 <td valign=top>
-  <p>For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult.</p>
+  <p>For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependent and make data search difficult.</p>
   <p>Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular 
     <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, 
     <a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a> and
