@@ -60,21 +60,30 @@ var respecConfig = {
         orcid:   "0000-0003-1867-4428"
       },
       {
+        name:    "Valentina Carriero",
+        company: "Cefriel",
+        orcid:   "0000-0003-1427-3723"
+      }, 
+      {
         name:    "Lina Molinas Comet",
         company: "Fraunhofer Institute for Applied Information Technology FIT",
         orcid:   "0000-0001-5446-6947"
       },
       {
         name: "Peter Lubrich",
-        company: "Federal Highway Research Institute (BASt)",
+        company: "Federal Highway and Transport Research Institute (BASt)",
         orcid: "0000-0002-0023-1234"
       },
       {
         name: "Mario Scrocca",
         company: "Cefriel",
         orcid: "0000-0002-8235-7331"
+      },
+     {
+        name: "Andrej Tibaut",
+        company: "University of Maribor,
+        orcid: "0000-0002-1706-5981"
       }
-
     ],
     authors: [
     {
