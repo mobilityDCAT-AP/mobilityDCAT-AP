@@ -733,13 +733,6 @@ var respecConfig = {
         "date":"24 June 2014",
         "publisher":"W3C Working Group"
       },
-
-       "Tags-for-Identifying-Languages":{
-        "href":"https://datatracker.ietf.org/doc/html/rfc5646",
-        "title":"Tags for Identifying Languages",
-        "date":"September 2009",
-        "publisher":"Network Working Group"
-      },
         
       "SCHEMA-ORG":{
         "href":"http://schema.org/",
