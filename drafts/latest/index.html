@@ -723,13 +723,19 @@
 
 <!-- Accessibility and Multilingual Aspects -->
 
-<section id="accessibility-and-multilingual-aspects" class="informative">
+<section id="accessibility-and-multilingual-aspects">
 
 <h2>Accessibility and Multilingual Aspects</h2>
 
-<p><strong>Accessibility</strong> in the context of this Application Profile is limited to information about the technical format of distributions of datasets. The properties <code>dcat:mediaType</code> and <code>dct:format</code> provide information that can be used to determine what software can be deployed to process the data. The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of this Application Profile.</p>
+<p>This section aligns with the secation of the same name in [[DCAT-AP-v3.0.1]].</p>
+  
+<p><strong>Accessibility</strong> in the context of mobilityDCAT-AP is limited to information about the technical format of distributions of datasets. 
+  There are three format-related properties <code>cnt:characterEncoding, <code>dct:format</code> and <code>mobilitydcatap:mobilityDataStandard</code> providing information that can be used to determine what software can be deployed to process the data. 
+  See the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#3-format-information">Wiki page on Format information</a> for further guidance on these three properties.
+  The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of this Application Profile.</p>
 
-<p><strong>Multilingual aspects</strong> related to this Application Profile concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. Wherever such properties are used, the string values are of one of two types:</p>
+<p><strong>Multilingual aspects</strong> related to mobilityDCAT-AP concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. 
+  Wherever such properties are used, the string values are of one of two types:</p>
 
 <ul>
 <li>The string is free text. Examples are descriptions and labels. Such text may be translated into several languages.</li>
@@ -748,7 +754,7 @@
 
 <p>All the occurrences of the property <code>dct:language</code>, which can be repeated if the metadata is provided in multiple languages, must have a URI as their object, not a literal string from the [[ISO-639]] code list.</p>
 
-<p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of this Application Profile.</p>
+<p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of mobilityDCAT-AP.</p>
 
 </section>
 
