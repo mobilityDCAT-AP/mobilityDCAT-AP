@@ -74,6 +74,14 @@ var respecConfig = {
         company: "Federal Highway and Transport Research Institute (BASt)",
         orcid: "0000-0002-0023-1234"
       },
+        {
+        name: "Julien Martineau",
+        company: "Nationaal Geografisch Instituut"
+      },
+        {
+        name: "Ed Ooms",
+        company: "Nationaal Dataportaal Wegverkeer"
+      },
       {
         name: "Mario Scrocca",
         company: "Cefriel",
