@@ -87,6 +87,22 @@
     <tr><td></td><td><a href="#catalogue-record-publisher">+dct:publisher</a></td></tr>
     <tr><td></td><td><a href="#catalogue-record-source-metadata">dct:source</a></td></tr>
 
+    
+    <!-- CONCEPT -->
+    <tr>
+      <td rowspan="2"><a href="#class-concept">skos:Concept</a></td>
+      <td></td>
+      <td><a href="#concept-preferred-label">skos:prefLabel</a></td>
+    </tr>
+    <tr><td></td><td><a href="#concept-concept-scheme">skos:inScheme</a></td></tr>
+
+    <!-- CONCEPT SCHEME -->
+    <tr>
+      <td><a href="#class-concept-scheme">skos:ConceptScheme</a></td>
+      <td></td>
+      <td><a href="#concept-scheme-title">dct:title</a></td>
+    </tr>
+    
     <!-- DATASET -->
     <tr>
       <td rowspan="32"><a href="#class-dataset">dcat:Dataset</a></td>
@@ -161,7 +177,7 @@
     <tr><td></td><td><a href="#distribution-download-url">dcat:downloadURL</a></td></tr>
     <tr><td></td><td><a href="#distribution-release-date">dct:issued</a></td></tr>
     <tr><td></td><td><a href="#distribution-language">dct:language</a></td></tr>
-    <tr><td></td><td><a href="#distribution-license">dct:license</a></td></tr>
+    <tr><td></td><td><a href="#distribution-licence">dct:license</a></td></tr>
     <tr><td></td><td><a href="#distribution-modification-date">dct:modified</a></td></tr>
     <tr><td></td><td><a href="#distribution-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
     <tr><td></td><td><a href="#distribution-sample">adms:sample</a></td></tr>
@@ -169,6 +185,34 @@
     <tr><td></td><td><a href="#distribution-temporal-coverage">dct:temporal</a></td></tr>
     <tr><td></td><td><a href="#distribution-title">dct:title</a></td></tr>
 
+    <!-- DOCUMENT -->
+    <tr>
+      <td><a href="#class-document">foaf:Document</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- EMAIL (VCARD) -->
+    <tr>
+      <td><a href="#class-email-vcard">+vcard:Email</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- FREQUENCY -->
+    <tr>
+      <td><a href="#class-frequency">dct:Frequency</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- GEOMETRY -->
+    <tr>
+      <td><a href="#class-geometry">locn:Geometry</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
     <!-- IDENTIFIER -->
     <tr>
       <td><a href="#class-identifier">adms:Identifier</a></td>
@@ -188,9 +232,30 @@
     <tr><td></td><td><a href="#kind-phone">vcard:hasTelephone</a></td></tr>
     <tr><td></td><td><a href="#kind-URL">vcard:hasURL</a></td></tr>
 
+    <!-- LEGAL RESOURCE-->
+    <tr>
+      <td><a href="#class-legal-resource">eli:LegalResource</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
     <!-- LICENCE DOCUMENT -->
     <tr>
       <td><a href="#class-licence-document">dct:LicenseDocument</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+     <!-- LINGUISTIC SYSTEM-->
+    <tr>
+      <td><a href="#class-linguistic-system">dct:LinguisticSystem</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- LITERAL-->
+    <tr>
+      <td><a href="#class-literal">rdfs:Literal</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -207,6 +272,14 @@
     <tr><td></td><td><a href="#location-geographic-name">skos:prefLabel</a></td></tr>
     <tr><td></td><td><a href="#location-geometry">locn:geometry</a></td></tr>
 
+
+    <!-- MEDIA TYPE OR EXTENT-->
+    <tr>
+      <td><a href="#class-media-type-or-extent">dct:MediaTypeOrExtent</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
     <!-- +MOBILITY DATA STANDARD -->
     <tr>
       <td rowspan="3"><a href="#class-mobility-data-standard">+mobilitydcatap:MobilityDataStandard</a></td>
@@ -216,53 +289,51 @@
     <tr><td></td><td><a href="#mobility-data-standard-title">dct:title</a></td></tr>
     <tr><td></td><td><a href="#mobility-data-standard-version">dcat:version</a></td></tr>
 
-    <!-- CONCEPT -->
+    <!-- ORGANISATION -->
     <tr>
-      <td rowspan="2"><a href="#class-concept">skos:Concept</a></td>
+      <td><a href="#class-organisation">+org:Organization</a></td>
       <td></td>
-      <td><a href="#concept-preferred-label">skos:prefLabel</a></td>
-    </tr>
-    <tr><td></td><td><a href="#concept-concept-scheme">skos:inScheme</a></td></tr>
-
-    <!-- CONCEPT SCHEME -->
-    <tr>
-      <td><a href="#class-concept-scheme">skos:ConceptScheme</a></td>
       <td></td>
-      <td><a href="#concept-scheme-title">dct:title</a></td>
     </tr>
-
+    
     <!-- PERIOD OF TIME -->
     <tr>
       <td rowspan="2"><a href="#class-period-of-time">dct:PeriodOfTime</a></td>
       <td></td>
-      <td><a href="#period-enddate">dcat:endDate</a></td>
+      <td><a href="#period-end-date">dcat:endDate</a></td>
     </tr>
-    <tr><td></td><td><a href="#period-startdate">dcat:startDate</a></td></tr>
+    <tr><td></td><td><a href="#period-start-date">dcat:startDate</a></td></tr>
 
     <!-- +QUALITY ANNOTATION -->
     <tr>
-      <td rowspan="2"><a href="#class-quality-annotation">+dqv:QualityAnnotation</a></td>
+      <td><a href="#class-quality-annotation">+dqv:QualityAnnotation</a></td>
       <td></td>
-      <td><a href="#qa-resource">+oa:hasBody</a></td>
+      <td><a href="#quality-annotation-quality-annotation-resource">+oa:hasBody</a></td>
     </tr>
-    <tr><td></td><td><a href="#qa-target">+oa:hasTarget</a></td></tr>
 
+    <!-- RESOURCE -->
+    <tr>
+      <td><a href="#class-resource">rdfs:Resource</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
     <!-- RIGHTS STATEMENT -->
     <tr>
       <td rowspan="2"><a href="#class-rights-statement">dct:RightsStatement</a></td>
       <td></td>
-      <td><a href="#rights-statement-conditions">dct:license</a></td>
+      <td><a href="#rights-statement-conditions-for-access-and-usages">dct:type</a></td>
     </tr>
-    <tr><td></td><td><a href="#rights-statement-text">dct:description</a></td></tr>
+    <tr><td></td><td><a href="#rights-statement-rights-statement-text">dct:description</a></td></tr>
+
+    <!-- STANDARD -->
+    <tr>
+      <td><a href="#class-standard">dct:Standard</a></td>
+      <td></td>
+      <td></td>
+    </tr>
 
   </tbody>
 </table>
 
-<p class="note">
-  The following properties are deprecated in mobilityDCAT-AP v3.0.0 and should not be used in new implementations:
-  <code>dct:isPartOf</code> (Catalogue),
-  <code>dct:created</code> (Catalogue Record),
-  <code>dct:isVersionOf</code> (Dataset),
-  <code>mobilitydcatap:grammar</code> (Distribution),
-  <code>mobilitydcatap:schema</code> (Mobility Data Standard).
-</p>
+
