@@ -54,11 +54,7 @@ var respecConfig = {
     issueBase:            "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/",
     github:               "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP",
     editors: [
-      {
-        name:    "Daham Mohammed Mustafa",
-        company: "Fraunhofer Institute for Applied Information Technology FIT",
-        orcid:   "0000-0003-1867-4428"
-      },
+
       {
         name:    "Valentina Carriero",
         company: "Cefriel",
@@ -78,7 +74,12 @@ var respecConfig = {
         name: "Julien Martineau",
         company: "Nationaal Geografisch Instituut"
       },
-        {
+      {
+        name:    "Daham Mohammed Mustafa",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
+        orcid:   "0000-0003-1867-4428"
+      }, 
+       {
         name: "Ed Ooms",
         company: "Nationaal Dataportaal Wegverkeer"
       },
