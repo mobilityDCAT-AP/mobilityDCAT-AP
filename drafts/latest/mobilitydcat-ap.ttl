@@ -2008,7 +2008,7 @@ foaf:homepage a owl:ObjectProperty ;
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 ### https://xmlns.com/foaf/spec/#term_primaryTopic
-foaf:primaryTopic a owl:DatatypeProperty ;
+foaf:primaryTopic a owl:ObjectProperty ;
     rdfs:comment """Links the metadata entry to the dataset described in the entry."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property for Catalogue Record." ;
     vs:term_status "stable" ;
