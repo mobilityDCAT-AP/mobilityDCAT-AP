@@ -86,7 +86,7 @@ mobilitydcatap: a voaf:Vocabulary,
   adms:last mobilitydcatap: ;
   adms:prev <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
-  adms:versionNotes ""@en ;
+  adms:versionNotes "Major semantic release of mobilityDCAT-AP. See Change Log for concrete changes applied."@en ;
   dcat:distribution [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>,
         <http://www.w3.org/ns/formats/data/JSON-LD> ;
@@ -2014,7 +2014,7 @@ foaf:primaryTopic a owl:DatatypeProperty ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes dcat:CatalogRecord ;
-    dcam:rangeIncludes rdfs:Literal ;
+    dcam:rangeIncludes dcat:Dataset ;
     rdfs:seeAlso <https://xmlns.com/foaf/spec/#term_primaryTopic> .
 
 

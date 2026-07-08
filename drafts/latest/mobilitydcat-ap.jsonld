@@ -3465,7 +3465,7 @@
     "@id" : "http://www.w3.org/ns/dcat#CatalogRecord"
   } ],
   "http://purl.org/dc/dcam/rangeIncludes" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -3727,7 +3727,7 @@
   } ],
   "http://www.w3.org/ns/adms#versionNotes" : [ {
     "@language" : "en",
-    "@value" : ""
+    "@value" : "Major semantic release of mobilityDCAT-AP. See Change Log for concrete changes applied."
   } ],
   "http://www.w3.org/ns/dcat#distribution" : [ {
     "@id" : "_:genid3"

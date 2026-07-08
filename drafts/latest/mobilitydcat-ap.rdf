@@ -2135,7 +2135,7 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-17</dct:issued>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-06</dct:modified>
         <dct:title xml:lang="en">mobilityDCAT-AP</dct:title>
-        <adms:versionNotes xml:lang="en"></adms:versionNotes>
+        <adms:versionNotes xml:lang="en">Major semantic release of mobilityDCAT-AP. See Change Log for concrete changes applied.</adms:versionNotes>
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid3">
         <rdf:type rdf:resource="http://www.w3.org/ns/adms#AssetDistribution"/>
@@ -3670,7 +3670,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/primaryTopic">
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:comment xml:lang="en">Links the metadata entry to the dataset described in the entry.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://xmlns.com/foaf/spec/#term_primaryTopic"/>
         <vs:term_status>stable</vs:term_status>
