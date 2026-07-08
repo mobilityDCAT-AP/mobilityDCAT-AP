@@ -1029,15 +1029,6 @@ This includes additional explanations and examples for specific vocabulary eleme
 </section>
   
 
-<!-- mobilityDCAT-AP Enterprise Architect files -->
-
-<section id="eap-files" class="appendix">
-
-<h2>mobilityDCAT-AP Enterprise Architect files</h2>
-
-<p>Enterprise Architect files describing the mobilityDCAT-AP data model are available at <a href="./enterpriseArchitectFiles">this Github subfolder</a>.</p>
-
-</section>
 
 <!-- Change log --> 
 
@@ -1073,6 +1064,15 @@ Specific Wiki references are made for classes <a href="#class-agent"><code>foaf:
 In particular, the class and property definitions are now under new sections <a class="no-sectionRef" href="#main-entities"></a>, <a class="no-sectionRef" href="#supportive-entities"></a> and <a class="no-sectionRef" href="#datatypes"></a>. 
   Further, all property tables are reformatted with new columns for "Definition", "Usage notes" and "Reusage".
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
+
+<li>Reorganisation of obligation settings for classes and properties.
+  In [[mobilityDCAT-AP-v1.1.0]], classes and properties were classified as "mandatory", "recommended" and "optional, similar to previous versions of [[DCAT-AP]]. This is reorganised as follows:
+  <ul>
+    <li>Classes are not classified any longer, adopting the approach of [[DCAT-AP-v3.0.1]].</li>
+    <li>Properties are only classified as "mandatory" and "optional", thus dropping the "recommended" option. Even in [[DCAT-AP-v3.0.1]], the "recommended" option is only used at parts of the documentation.
+      Without the "recommended" option, the mobilityDCAT-AP specification is simplified, also avoiding lenghty discussions how to classify individual properties.</li>
+  </ul> 
+  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/155">#155</a>.</li> 
 
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP.
 These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
