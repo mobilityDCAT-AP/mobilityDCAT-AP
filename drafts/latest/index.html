@@ -869,16 +869,10 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <h2>Classes and Properties used in mobilityDCAT-AP</h2>
 
-  <p>This section provides a condensed tabular overview of the mentioned classes and properties in mobilityDCAT-AP. 
-    The properties are grouped under headings mandatory, recommended, optional and deprecated. These terms have the following meaning.</p>
-
-<ul>
-<li><strong>Mandatory property</strong>: a receiver must be able to process the information for that property; a sender must provide the information for that property.</li>
-<li><strong>Recommended property</strong>: a receiver must be able to process the information for that property; a sender should provide information for that property if such information is available.</li>
-<li><strong>Optional property</strong>: a receiver must be able to process the information for that property; a sender may provide the information for that property but is not obliged to do so.</li>
-<li><strong>Deprecated property</strong>: a receiver should be able to process information about instances of that property; a sender should not provide the information about instances of that property.</li>
-</ul>
-
+  <p>This section provides a tabular overview of the mentioned classes and properties in mobilityDCAT-AP. 
+    The properties are grouped under headings mandatory and optional. Properties are mandatory, if their cardinalities are defined as "1..1" or "1..*", otherwise they are optional.
+    The classification as mandatory or optional properties has implications on the conformance requirements, see the <a class="no-sectionRef" href="#conformance">Conformance Statement</a>.</p>
+  
 <div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
 
 </section>
