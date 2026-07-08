@@ -1,0 +1,274 @@
+<!--
+  mobilityDCAT-AP v3.0.0 – Quick Reference: All Classes and Properties
+  DEFINITIEVE versie op basis van handmatige verificatie door Ed Ooms
+  tegen de v3 draft spec (sectie 7.x detailtabellen)
+  
+  Anchor hrefs zijn placeholders; aanpassen aan definitieve sectie-id's in ReSpec-bron.
+-->
+
+<table class="simple" id="tbl-all-classes-properties">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Mandatory prop.</th>
+      <th>Optional prop.</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- +ADDRESS (locn) -->
+    <tr>
+      <td rowspan="5"><a href="#class-address">+locn:Address</a></td>
+      <td></td>
+      <td><a href="#address-administrative-area">+locn:adminUnitL2</a></td>
+    </tr>
+    <tr><td></td><td><a href="#address-city">+locn:postName</a></td></tr>
+    <tr><td></td><td><a href="#address-country">+locn:adminUnitL1</a></td></tr>
+    <tr><td></td><td><a href="#address-postal-code">+locn:postCode</a></td></tr>
+    <tr><td></td><td><a href="#address-street-address">+locn:thoroughfare</a></td></tr>
+
+    <!-- +ADDRESS (vcard) -->
+    <tr>
+      <td rowspan="5"><a href="#class-address-vcard">+vcard:Address</a></td>
+      <td></td>
+      <td><a href="#address-vcard-administrative-area">+vcard:region</a></td>
+    </tr>
+    <tr><td></td><td><a href="#address-vcard-city">+vcard:locality</a></td></tr>
+    <tr><td></td><td><a href="#address-vcard-country">+vcard:country-name</a></td></tr>
+    <tr><td></td><td><a href="#address-vcard-postal-code">+vcard:postal-code</a></td></tr>
+    <tr><td></td><td><a href="#address-vcard-street-address">+vcard:street-address</a></td></tr>
+
+    <!-- AGENT -->
+    <tr>
+      <td rowspan="9"><a href="#class-agent">foaf:Agent</a></td>
+      <td><a href="#agent-name">foaf:name</a></td>
+      <td></td>
+    </tr>
+    <tr><td></td><td><a href="#agent-address">+locn:address</a></td></tr>
+    <tr><td></td><td><a href="#agent-affiliation">+org:memberOf</a></td></tr>
+    <tr><td></td><td><a href="#agent-email">+foaf:mbox</a></td></tr>
+    <tr><td></td><td><a href="#agent-first-name">+foaf:firstName</a></td></tr>
+    <tr><td></td><td><a href="#agent-phone">+foaf:phone</a></td></tr>
+    <tr><td></td><td><a href="#agent-surname">+foaf:surname</a></td></tr>
+    <tr><td></td><td><a href="#agent-type">dct:type</a></td></tr>
+    <tr><td></td><td><a href="#agent-url">+foaf:homepage</a></td></tr>
+
+    <!-- +ASSESSMENT -->
+    <tr>
+      <td rowspan="2"><a href="#class-assessment">+mobilitydcatap:Assessment</a></td>
+      <td></td>
+      <td><a href="#assessment-date">+dct:issued</a></td>
+    </tr>
+    <tr><td></td><td><a href="#assessment-result">+oa:hasBody</a></td></tr>
+
+    <!-- CATALOGUE -->
+    <tr>
+      <td rowspan="15"><a href="#class-catalogue">dcat:Catalog</a></td>
+      <td><a href="#catalogue-description">dct:description</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#catalogue-homepage">foaf:homepage</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-publisher">dct:publisher</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record">dcat:record</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-spatial">dct:spatial</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-title">dct:title</a></td><td></td></tr>
+    <tr><td></td><td><a href="#catalogue-dataset">dcat:dataset</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-haspart">dct:hasPart</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-identifier">dct:identifier</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-other-identifier">adms:identifier</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-language">dct:language</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-license">dct:license</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-modified">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-issued">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-themetaxonomy">dcat:themeTaxonomy</a></td></tr>
+
+    <!-- CATALOGUE RECORD -->
+    <tr>
+      <td rowspan="7"><a href="#class-catalogue-record">dcat:CatalogRecord</a></td>
+      <td><a href="#catalogue-record-issued">+dct:issued</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#catalogue-record-language">dct:language</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record-modified">dct:modified</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record-primarytopic">foaf:primaryTopic</a></td><td></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-conformsto">dct:conformsTo</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-publisher">+dct:publisher</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-source">dct:source</a></td></tr>
+
+    <!-- DATASET -->
+    <tr>
+      <td rowspan="31"><a href="#class-dataset">dcat:Dataset</a></td>
+      <td><a href="#dataset-accrualperiodicity">dct:accrualPeriodicity</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#dataset-description">dct:description</a></td><td></td></tr>
+    <tr><td><a href="#dataset-distribution">dcat:distribution</a></td><td></td></tr>
+    <tr><td><a href="#dataset-mobilitytheme">+mobilitydcatap:mobilityTheme</a></td><td></td></tr>
+    <tr><td><a href="#dataset-publisher">dct:publisher</a></td><td></td></tr>
+    <tr><td><a href="#dataset-title">dct:title</a></td><td></td></tr>
+    <tr><td></td><td><a href="#dataset-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-assessmentresult">+mobilitydcatap:assessmentResult</a></td></tr>
+    <tr><td></td><td><a href="#dataset-contactpoint">dcat:contactPoint</a></td></tr>
+    <tr><td></td><td><a href="#dataset-georeferencingmethod">+mobilitydcatap:georeferencingMethod</a></td></tr>
+    <tr><td></td><td><a href="#dataset-hasversion">dcat:hasVersion</a></td></tr>
+    <tr><td></td><td><a href="#dataset-qualityannotation">+dqv:hasQualityAnnotation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-identifier">dct:identifier</a></td></tr>
+    <tr><td></td><td><a href="#dataset-inseries">dcat:inSeries</a></td></tr>
+    <tr><td></td><td><a href="#dataset-intendedinformationservice">+mobilitydcatap:intendedInformationService</a></td></tr>
+    <tr><td></td><td><a href="#dataset-issued">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#dataset-keyword">dcat:keyword</a></td></tr>
+    <tr><td></td><td><a href="#dataset-language">dct:language</a></td></tr>
+    <tr><td></td><td><a href="#dataset-modified">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#dataset-networkcoverage">+mobilitydcatap:networkCoverage</a></td></tr>
+    <tr><td></td><td><a href="#dataset-identifier-adms">adms:identifier</a></td></tr>
+    <tr><td></td><td><a href="#dataset-page">foaf:page</a></td></tr>
+    <tr><td></td><td><a href="#dataset-referencesystem">+geodcatap:referenceSystem</a></td></tr>
+    <tr><td></td><td><a href="#dataset-relation">dct:relation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-rightsholder">dct:rightsHolder</a></td></tr>
+    <tr><td></td><td><a href="#dataset-source">dct:source</a></td></tr>
+    <tr><td></td><td><a href="#dataset-temporal">dct:temporal</a></td></tr>
+    <tr><td></td><td><a href="#dataset-theme">dcat:theme</a></td></tr>
+    <tr><td></td><td><a href="#dataset-transportmode">+mobilitydcatap:transportMode</a></td></tr>
+    <tr><td></td><td><a href="#dataset-version">dcat:version</a></td></tr>
+    <tr><td></td><td><a href="#dataset-versionnotes">adms:versionNotes</a></td></tr>
+
+    <!-- DATASET SERIES -->
+    <tr>
+      <td rowspan="10"><a href="#class-dataset-series">dcat:DatasetSeries</a></td>
+      <td><a href="#dataset-series-description">dct:description</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#dataset-series-publisher">dct:publisher</a></td><td></td></tr>
+    <tr><td><a href="#dataset-series-title">dct:title</a></td><td></td></tr>
+    <tr><td></td><td><a href="#dataset-series-accrualperiodicity">dct:accrualPeriodicity</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-contactpoint">dcat:contactPoint</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-issued">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-mobilitytheme">+mobilitydcatap:mobilityTheme</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-modified">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-temporal">dct:temporal</a></td></tr>
+
+    <!-- DISTRIBUTION -->
+    <tr>
+      <td rowspan="21"><a href="#class-distribution">dcat:Distribution</a></td>
+      <td><a href="#distribution-accessurl">dcat:accessURL</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#distribution-format">dct:format</a></td><td></td></tr>
+    <tr><td><a href="#distribution-mobilitydatastandard">+mobilitydcatap:mobilityDataStandard</a></td><td></td></tr>
+    <tr><td><a href="#distribution-rights">dct:rights</a></td><td></td></tr>
+    <tr><td></td><td><a href="#distribution-applicationlayerprotocol">+mobilitydcatap:applicationLayerProtocol</a></td></tr>
+    <tr><td></td><td><a href="#distribution-characterencoding">+cnt:characterEncoding</a></td></tr>
+    <tr><td></td><td><a href="#distribution-communicationmethod">+mobilitydcatap:communicationMethod</a></td></tr>
+    <tr><td></td><td><a href="#distribution-conformsto">dct:conformsTo</a></td></tr>
+    <tr><td></td><td><a href="#distribution-dataformatnotes">+mobilitydcatap:dataFormatNotes</a></td></tr>
+    <tr><td></td><td><a href="#distribution-description">dct:description</a></td></tr>
+    <tr><td></td><td><a href="#distribution-page">foaf:page</a></td></tr>
+    <tr><td></td><td><a href="#distribution-downloadurl">dcat:downloadURL</a></td></tr>
+    <tr><td></td><td><a href="#distribution-issued">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#distribution-language">dct:language</a></td></tr>
+    <tr><td></td><td><a href="#distribution-license">dct:license</a></td></tr>
+    <tr><td></td><td><a href="#distribution-modified">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#distribution-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
+    <tr><td></td><td><a href="#distribution-sample">adms:sample</a></td></tr>
+    <tr><td></td><td><a href="#distribution-status">adms:status</a></td></tr>
+    <tr><td></td><td><a href="#distribution-temporal">dct:temporal</a></td></tr>
+    <tr><td></td><td><a href="#distribution-title">dct:title</a></td></tr>
+
+    <!-- IDENTIFIER -->
+    <tr>
+      <td><a href="#class-identifier">adms:Identifier</a></td>
+      <td></td>
+      <td><a href="#identifier-notation">skos:notation</a></td>
+    </tr>
+
+    <!-- KIND -->
+    <tr>
+      <td rowspan="6"><a href="#class-kind">vcard:Kind</a></td>
+      <td><a href="#kind-email">vcard:hasEmail</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#kind-fn">vcard:fn</a></td><td></td></tr>
+    <tr><td></td><td><a href="#kind-address">vcard:hasAddress</a></td></tr>
+    <tr><td></td><td><a href="#kind-affiliation">vcard:organization-name</a></td></tr>
+    <tr><td></td><td><a href="#kind-phone">vcard:hasTelephone</a></td></tr>
+    <tr><td></td><td><a href="#kind-url">vcard:hasURL</a></td></tr>
+
+    <!-- LICENCE DOCUMENT -->
+    <tr>
+      <td><a href="#class-licence-document">dct:LicenseDocument</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- LOCATION -->
+    <tr>
+      <td rowspan="6"><a href="#class-location">dct:Location</a></td>
+      <td></td>
+      <td><a href="#location-bbox">dcat:bbox</a></td>
+    </tr>
+    <tr><td></td><td><a href="#location-centroid">dcat:centroid</a></td></tr>
+    <tr><td></td><td><a href="#location-gazetteer">skos:inScheme</a></td></tr>
+    <tr><td></td><td><a href="#location-geographic-identifier">dct:identifier</a></td></tr>
+    <tr><td></td><td><a href="#location-geographic-name">rdfs:label</a></td></tr>
+    <tr><td></td><td><a href="#location-geometry">locn:geometry</a></td></tr>
+
+    <!-- +MOBILITY DATA STANDARD -->
+    <tr>
+      <td rowspan="3"><a href="#class-mobility-data-standard">+mobilitydcatap:MobilityDataStandard</a></td>
+      <td></td>
+      <td><a href="#mds-conformsto">dct:conformsTo</a></td>
+    </tr>
+    <tr><td></td><td><a href="#mds-title">dct:title</a></td></tr>
+    <tr><td></td><td><a href="#mds-version">dcat:version</a></td></tr>
+
+    <!-- CONCEPT -->
+    <tr>
+      <td rowspan="2"><a href="#class-concept">skos:Concept</a></td>
+      <td></td>
+      <td><a href="#concept-preferred-label">skos:prefLabel</a></td>
+    </tr>
+    <tr><td></td><td><a href="#concept-concept-scheme">skos:inScheme</a></td></tr>
+
+    <!-- CONCEPT SCHEME -->
+    <tr>
+      <td><a href="#class-concept-scheme">skos:ConceptScheme</a></td>
+      <td></td>
+      <td><a href="#concept-scheme-title">dct:title</a></td>
+    </tr>
+
+    <!-- PERIOD OF TIME -->
+    <tr>
+      <td rowspan="2"><a href="#class-period-of-time">dct:PeriodOfTime</a></td>
+      <td></td>
+      <td><a href="#period-enddate">dcat:endDate</a></td>
+    </tr>
+    <tr><td></td><td><a href="#period-startdate">dcat:startDate</a></td></tr>
+
+    <!-- +QUALITY ANNOTATION -->
+    <tr>
+      <td rowspan="2"><a href="#class-quality-annotation">+dqv:QualityAnnotation</a></td>
+      <td></td>
+      <td><a href="#qa-resource">+oa:hasBody</a></td>
+    </tr>
+    <tr><td></td><td><a href="#qa-target">+oa:hasTarget</a></td></tr>
+
+    <!-- RIGHTS STATEMENT -->
+    <tr>
+      <td rowspan="2"><a href="#class-rights-statement">dct:RightsStatement</a></td>
+      <td></td>
+      <td><a href="#rights-statement-conditions">dct:license</a></td>
+    </tr>
+    <tr><td></td><td><a href="#rights-statement-text">dct:description</a></td></tr>
+
+  </tbody>
+</table>
+
+<p class="note">
+  The following properties are deprecated in mobilityDCAT-AP v3.0.0 and should not be used in new implementations:
+  <code>dct:isPartOf</code> (Catalogue),
+  <code>dct:created</code> (Catalogue Record),
+  <code>dct:isVersionOf</code> (Dataset),
+  <code>mobilitydcatap:grammar</code> (Distribution),
+  <code>mobilitydcatap:schema</code> (Mobility Data Standard).
+</p>
