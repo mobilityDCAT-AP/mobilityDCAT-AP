@@ -1,12 +1,4 @@
-<!--
-  mobilityDCAT-AP v3.0.0 – Quick Reference: All Classes and Properties
-  DEFINITIEVE versie op basis van handmatige verificatie door Ed Ooms
-  tegen de v3 draft spec (sectie 7.x detailtabellen)
-  
-  Anchor hrefs zijn placeholders; aanpassen aan definitieve sectie-id's in ReSpec-bron.
--->
-
-<table class="simple" id="tbl-all-classes-properties">
+<table class="simple" id="table-quick-reference-of-classes-and-properties">
   <thead>
     <tr>
       <th>Class</th>
@@ -20,12 +12,12 @@
     <tr>
       <td rowspan="5"><a href="#class-address">+locn:Address</a></td>
       <td></td>
-      <td><a href="#address-administrative-area">+locn:adminUnitL2</a></td>
+      <td><a href="#address-core-location-administrative-area">+locn:adminUnitL2</a></td>
     </tr>
-    <tr><td></td><td><a href="#address-city">+locn:postName</a></td></tr>
-    <tr><td></td><td><a href="#address-country">+locn:adminUnitL1</a></td></tr>
-    <tr><td></td><td><a href="#address-postal-code">+locn:postCode</a></td></tr>
-    <tr><td></td><td><a href="#address-street-address">+locn:thoroughfare</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-city">+locn:postName</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-country">+locn:adminUnitL1</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-postal-code">+locn:postCode</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-street-address">+locn:thoroughfare</a></td></tr>
 
     <!-- +ADDRESS (vcard) -->
     <tr>
@@ -51,15 +43,15 @@
     <tr><td></td><td><a href="#agent-phone">+foaf:phone</a></td></tr>
     <tr><td></td><td><a href="#agent-surname">+foaf:surname</a></td></tr>
     <tr><td></td><td><a href="#agent-type">dct:type</a></td></tr>
-    <tr><td></td><td><a href="#agent-url">+foaf:homepage</a></td></tr>
+    <tr><td></td><td><a href="#agent-url">+foaf:workplaceHomepage</a></td></tr>
 
     <!-- +ASSESSMENT -->
     <tr>
       <td rowspan="2"><a href="#class-assessment">+mobilitydcatap:Assessment</a></td>
       <td></td>
-      <td><a href="#assessment-date">+dct:issued</a></td>
+      <td><a href="#assessment-assessment-date">+dct:issued</a></td>
     </tr>
-    <tr><td></td><td><a href="#assessment-result">+oa:hasBody</a></td></tr>
+    <tr><td></td><td><a href="#assessment-assessment-result">+oa:hasBody</a></td></tr>
 
     <!-- CATALOGUE -->
     <tr>
@@ -70,30 +62,30 @@
     <tr><td><a href="#catalogue-homepage">foaf:homepage</a></td><td></td></tr>
     <tr><td><a href="#catalogue-publisher">dct:publisher</a></td><td></td></tr>
     <tr><td><a href="#catalogue-record">dcat:record</a></td><td></td></tr>
-    <tr><td><a href="#catalogue-spatial">dct:spatial</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-geographical-coverage">dct:spatial</a></td><td></td></tr>
     <tr><td><a href="#catalogue-title">dct:title</a></td><td></td></tr>
     <tr><td></td><td><a href="#catalogue-dataset">dcat:dataset</a></td></tr>
-    <tr><td></td><td><a href="#catalogue-haspart">dct:hasPart</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-has-part">dct:hasPart</a></td></tr>
     <tr><td></td><td><a href="#catalogue-identifier">dct:identifier</a></td></tr>
     <tr><td></td><td><a href="#catalogue-other-identifier">adms:identifier</a></td></tr>
     <tr><td></td><td><a href="#catalogue-language">dct:language</a></td></tr>
-    <tr><td></td><td><a href="#catalogue-license">dct:license</a></td></tr>
-    <tr><td></td><td><a href="#catalogue-modified">dct:modified</a></td></tr>
-    <tr><td></td><td><a href="#catalogue-issued">dct:issued</a></td></tr>
-    <tr><td></td><td><a href="#catalogue-themetaxonomy">dcat:themeTaxonomy</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-licence">dct:license</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-modification-date">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-release-date">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-themes">dcat:themeTaxonomy</a></td></tr>
 
     <!-- CATALOGUE RECORD -->
     <tr>
       <td rowspan="7"><a href="#class-catalogue-record">dcat:CatalogRecord</a></td>
-      <td><a href="#catalogue-record-issued">+dct:issued</a></td>
+      <td><a href="#catalogue-record-listing-date">+dct:issued</a></td>
       <td></td>
     </tr>
     <tr><td><a href="#catalogue-record-language">dct:language</a></td><td></td></tr>
-    <tr><td><a href="#catalogue-record-modified">dct:modified</a></td><td></td></tr>
-    <tr><td><a href="#catalogue-record-primarytopic">foaf:primaryTopic</a></td><td></td></tr>
-    <tr><td></td><td><a href="#catalogue-record-conformsto">dct:conformsTo</a></td></tr>
+    <tr><td><a href="#catalogue-record-modification-date">dct:modified</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record-primary-topic">foaf:primaryTopic</a></td><td></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-application-profile">dct:conformsTo</a></td></tr>
     <tr><td></td><td><a href="#catalogue-record-publisher">+dct:publisher</a></td></tr>
-    <tr><td></td><td><a href="#catalogue-record-source">dct:source</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-source-metadata">dct:source</a></td></tr>
 
     <!-- DATASET -->
     <tr>
