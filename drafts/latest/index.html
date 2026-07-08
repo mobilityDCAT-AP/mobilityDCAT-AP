@@ -173,16 +173,20 @@ It is compatible with the parallel specifcations [[DCAT-AP-v3.0.1]] and [[GeoDCA
 <p>In order to conform to mobilityDCAT-AP, an application that provides metadata must:</p>
 
 <ul>
-<li>Provide a description of the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue"><code>dcat:Catalog</code></a>.</li>
-<li>Provide a description of the Catalogue Records in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>.</li>
+<li>Provide a description of the Catalogue (i.e., a concrete mobility data portal), including at least the mandatory properties specified for the class <a href="#class-catalogue"><code>dcat:Catalog</code></a>.</li>
+<li>Provide descriptiona of the Catalogue Records in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>.</li>
 <li>Provide descriptions of Datasets in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-dataset"><code>dcat:Dataset</code></a>.</li>
 <li>Provide descriptions of Distributions of Datasets in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-distribution"><code>dcat:Distribution</code></a>.</li>
-<li>Provide descriptions of persons or organisations involved in the descriptions of Catalogue and Datasets, including at least the mandatory properties for the class <a href="#class-agent"><code>foaf:Agent</code></a>.</li>
+<li>Provide descriptions of persons or organisations involved in the descriptions of the Catalogue, Catalogue Records, Datasets, and Dataset Series, including at least the mandatory properties for the class <a href="#class-agent"><code>foaf:Agent</code></a>.</li>
+<li>Provide other mandatory properties defined for classes that are used as ranges of properties of the above-mentioned classes.</li>
 <li>Apply the publication requirements for the controlled vocabularies as mentioned in section <a class="no-secRef" href="#controlled-vocabularies"></a>.</li>
 </ul>
 
+<p>In addition to the mandatory properties, any of the optional properties defined in mobilityDCAT-AP may be provided. 
+  All properties are specified in the sections <a class="no-sectionRef" href="#main-entities"></a> and <a class="no-sectionRef" href="#supportive-entities"></a>,
+  and also summarised in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li></p>
+
 <p>For the properties listed in the table in section <a class="no-secRef" href="#controlled-vocabularies"></a>, the associated controlled vocabularies must be used. Additional controlled vocabularies may be used.</p>
-<p>In addition to the mandatory properties, any of the optional properties defined in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a> may be provided.</p>
 
 </section>
 
@@ -190,10 +194,12 @@ It is compatible with the parallel specifcations [[DCAT-AP-v3.0.1]] and [[GeoDCA
 
 <h2>Receiver requirements</h2>
 
-<p>In order to conform to this mobilityDCAT-AP, an application that receives metadata must be able to:</p>
+<p>In order to conform to mobilityDCAT-AP, an application that receives metadata must be able to:</p>
 
 <ul>
-<li>Process information for all classes and properties specified in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li>
+<li>Process information for all classes and properties defined in mobilityDCAT-AP.
+  These classes and properties are specified in the sections <a class="no-sectionRef" href="#main-entities"></a> and <a class="no-sectionRef" href="#supportive-entities"></a>,
+  and also summarised d in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li>
 <li>Process information for all controlled vocabularies specified in section <a class="no-secRef" href="#controlled-vocabularies"></a>.</li>
 </ul>
 
