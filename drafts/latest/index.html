@@ -714,8 +714,9 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 
 <h3>Requirements for controlled vocabularies</h3>
 
-<p>mobilityDCAT-AP makes use of several controlled vocabularies, i.e., standardized URI sets to be used as ranges for several of the properties introduced above. 
-  The selection of the used controlled vocabularies adheres to requirements defined by [[DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies]].</p>
+<p>mobilityDCAT-AP makes use of several controlled vocabularies for selected properties introduced above. 
+  These define harmonised value spaces, or, more concretely, harmonised URI sets to be used as ranges for  the related properties. 
+  The selection of the applied controlled vocabularies adheres to requirements defined by [[DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies]].</p>
 
 </section>
 
@@ -723,8 +724,14 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 
 <h3>Expected usage of controlled vocabulariesd</h3>
 
-<p>...</p>
-
+<p>[[DCAT-AP-v3.0.1]] introduces controlled vocabularies in four categeries, each with a different usage expectations. These are:</p>
+<ul>
+<li>The property MUST use as range values codes from the controlled vocabulary.</li>
+<li>The property MUST have at least one value from the controlled vocabulary.</li>
+<li>The property IS RECOMMENDED to use as range values codes from the controlled vocabulary.</li>
+<li>The property MAY use as range values codes from the controlled vocabulary.</li>  
+</ul>
+  
 </section>    
 
 <section id="controlled-vocabularies-to-be-used">
@@ -734,8 +741,6 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 <p>In the table below, some properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
 <p>Compared with [[DCAT-AP-v3.0.1]], mobilityDCAT-AP makes use of additional controlled vocabularies. External organisations maintain some of these additional controlled vocabularies, and others are created and maintained by mobilityDCAT-AP.</p>
-<p>Further, mobilityDCAT-AP is removing some optional properties from [[DCAT-AP-v3.0.1]], which are linked with controlled vocabularies. 
-  Thus, these controlled vocabularies are not relevant for mobilityDCAT-AP and are not listed in the following table.</p>
 
 <section id="properties-with-controlled-vocabularies-must">
 <h4>Properties with controlled vocabularies that MUST be used for the listed properties</h4>
