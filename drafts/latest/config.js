@@ -255,6 +255,13 @@ var respecConfig = {
         "date":"27 October 2025"
        },
 
+    "DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#requirements-for-controlled-vocabularies",
+        "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+
    
    "DCAT-AP-Implementation-Guidelines":{
         "href":"https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
