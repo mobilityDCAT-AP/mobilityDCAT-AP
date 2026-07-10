@@ -733,19 +733,25 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 
 <section id="properties-with-controlled-vocabularies-must">
 <h4>Properties with controlled vocabularies that MUST be used for the listed properties</h4>
-  <p>The property MUST use as range values codes from the controlled vocabulary.</p>
+  <p>Usage expectation:</p>
+  <p>The property MUST use as range values codes from the controlled vocabulary. This means the value space is closed under the controlled vocabularies. Validation systems SHOULD produce errors.</p>
   <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used-must.html"></div>
 </section>
 
 <section id="properties-with-controlled-vocabularies-at-least-1-value">
 <h4>Properties with AT LEAST 1 value from the controlled vocabularies</h4>
-  <p>The property MUST have at least one value from the controlled vocabulary.</p>  
+  <p>Usage expectation:</p>
+  <p>The property MUST have at least one value from the controlled vocabulary. This means the value space minimally constrained. 
+  If no applicable value is found in the controlled vocabulary, the "other" value SHOULD be used.
+    Validation systems SHOULD produce warnings. In addition, values not included in the controlled vocabulary MAY be used.</p>  
   <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used-at-least-1-value.html"></div>
 </section>  
 
 <section id="properties-with-controlled-vocabularies-recommended">
 <h4>Properties with a RECOMMENDED use of controlled vocabularies</h4>
-  <p>The property IS RECOMMENDED to use as range values codes from the controlled vocabulary.</p>
+  <p>Usage expectation:</p>
+  <p>The property IS RECOMMENDED to use as range values codes from the controlled vocabulary.
+  This means other values are tolerated. Validation systems SHOULD produce warnings.</p>
    <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used-recommended.html"></div>
 </section>
 
