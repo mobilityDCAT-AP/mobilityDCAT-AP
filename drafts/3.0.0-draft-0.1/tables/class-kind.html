@@ -1,0 +1,43 @@
+<table class="simple" id="table-class-kind">
+<tbody>
+<tr>
+<th>Definition</th>
+<td>A description following the <a href="https://www.w3.org/TR/vcard-rdf/">VCARD-RDF specification</a>, e.g., to provide telephone number and e-mail address for a contact point.</td>
+</tr>
+<tr>
+<th>URI</th>
+<td>
+<p><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819"><code>vcard:Kind</code></a></p>
+</td></tr>
+<tr>
+<th>References</th>
+<td><p>DCAT: none<br>
+DCAT-AP: <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Kind">Link</a><br>
+geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Kind">Link</a></p></td>
+</tr>
+<tr>
+<th>Usage note</th>
+<td>
+<p>This class is the parent class for the four explicit types of vCards (<a href="https://www.w3.org/TR/vcard-rdf/#d4e1749"><code>vcard:Individual</code></a>,
+  <a href="https://www.w3.org/TR/vcard-rdf/#d4e2121"><code>vcard:Organization</code></a>, 
+  <a href="https://www.w3.org/TR/vcard-rdf/#d4e1865"><code>vcard:Location</code></a>,
+  <a href="https://www.w3.org/TR/vcard-rdf/#d4e1667"><code>vcard:Group</code></a>).</p>
+   <p>The contact point might be populated with the same information as for an agent, see class <a href="#class-agent"><code>foaf:Agent</code></a>. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
+   <p>When providing contact information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See <a class="no-sectionRef" href="#privsec"></a>.</p>
+  </td></tr>
+
+<tr>
+<th>Properties</th>
+<td>
+<p>For this entity the following properties are defined: 
+  <a href="#kind-address">address</a>, 
+  <a href="#kind-affiliation">affiliation</a>, 
+  <a href="#kind-email">email</a>, 
+  <a href="#kind-name">name</a>, 
+  <a href="#kind-phone">phone</a>, 
+  <a href="#kind-URL">URL</a>
+  .</p>
+</td></tr>
+  
+</tbody>
+</table>

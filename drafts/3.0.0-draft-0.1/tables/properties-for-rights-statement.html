@@ -1,0 +1,78 @@
+
+<table class="simple" id="table-properties-for-rights-statement">
+<thead>
+<tr>
+<th>
+<p>Property name and URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property" id="rights-statement-conditions-for-access-and-usage">
+<td valign=top>
+<p>+conditions for access and usage</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#type"><code>dct:type</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td valign=top>
+<p>1..*</p>
+</td>
+<td valign=top>
+<p>An indication of the conditions if any contracts, licences and/or are applied for the use of the distribution. 
+  The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset.</p>
+</td>
+<td valign=top>
+    <p>A <a href="#vocab-conditions-for-access-and-usage">controlled vocabulary</a> is provided.</p>
+  <p>The values can be logically mapped with the property <a href="#licence-document-standard-licence"><code>dct:identifier</code></a> from class Licence Document, denoting a concrete standard license. 
+    For example, if the property <code>dct:identifier</code> is referring to standard licence "CC BY 4.0", the property <code>dct:type</code> can be given the value "Licence provided, free of charge".</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+
+<tr class="property" id="rights-statement-rights-statement-text">
+<td valign=top>
+<p>+Rights statement text</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description"><code>dct:description</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>The text of the Rights Statement. I.e., any textual information about access, usage or licensing conditions, beyond information given via other properties under 
+  classes <a href="class-rights-statement"><code>dct:RightsStatement</code></a> and <a href="#class-licence-document"><code>dct:LicenseDocument</code></a>.</p>
+</td>
+<td valign=top>
+  <p>This property can be repeated for parallel language versions of the information - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement.rightsstatementtext">GE</a></p>
+</td>
+</tr>
+
+  
+</tbody>
+</table>

@@ -1,0 +1,74 @@
+<table class="simple" id="table-properties-for-quality-annotation">
+<thead>
+<tr>
+<th>
+<p>
+Property name and URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr class="property" id="quality-annotation-quality-annotation-resource">
+<td valign=top>
+<p>+quality annotation resource</p>
+<p><a href="https://www.w3.org/TR/vocab-dqv/#oa:hasBody"><code>oa:hasBody</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>Any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.</p>
+</td>
+<td valign=top>
+  <p>Textual information should be provided using the Embedded Textual Body construction of the <a href="https://www.w3.org/TR/annotation-model/">Web Annotation Data Model</a>, which allows to specify text formats and languages which might be relevant for multilingual purposes.</p>
+</td>
+<td valign=top>
+<p>A</p>
+</td>
+</tr>  
+
+<tr class="property" id="quality-annotation-quality-annotation-target">
+<td valign=top>
+<p>+quality annotation target</p>
+<p><a href="https://www.w3.org/TR/vocab-dqv/#oa:hasTarget"><code>oa:hasTarget</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>the target of the quality annotation, referring back to the dataset being described. </p>
+</td>
+<td valign=top>
+  <p>It is the inverse property of <a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a> for class Dataset.</p>
+</td>
+<td valign=top>
+<p>A</p>
+</td>
+</tr>  
+
+  
+</tbody>
+</table>

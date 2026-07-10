@@ -1,0 +1,100 @@
+<table class="simple" id="table-properties-for-mobility-data-standard">
+<thead>
+<tr>
+<th>
+<p>
+Property name and URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property" id="mobility-data-standard-conforms-to">
+ <td valign=top>
+<p>+conforms to</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-standard"><code>dct:Standard</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>Reference to the applied mobility data standard, as well as to individual/national/content-specific profiles or representations of the applied standard.</p>
+</td>
+<td valign=top>
+  <p>This property is necessary if a custom instance of class <a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a> is defined. 
+  This property would then reference a common mobility data standard (e.g., "NeTeX" via the <a href="#vocab-mobility-data-standard">controlled vocabulary</a>), 
+    as well as additionally further individual/national/content-specific profiles or representations of the applied standard (e.g., an Italian NeTEx profile). </p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr> 
+
+  
+
+<tr class="property" id="mobility-data-standard-title">
+<td valign=top>
+<p>+title</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title"><code>dct:title</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A name given to the mobility data standard.</p>
+</td>
+<td valign=top>
+  <p>This property can be repeated for parallel language versions of the title  - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr> 
+
+<tr class="property" id="mobility-data-standard-version">
+<td valign=top>
+<p>+version</p>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"><code>dcat:version</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The version of the mobility data standard, as applied within the delivered content. A version might be, e.g., DATEX II v3.2.</p>
+</td>
+<td valign=top>
+  <p>This information is provided in a textual format. To avoid ambiguity, only short version identifiers should be used, e.g., "3.2", without redundant acronyms such as "v", underscores etc.</p>
+  </td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>    
+
+
+  
+</tbody>
+</table>

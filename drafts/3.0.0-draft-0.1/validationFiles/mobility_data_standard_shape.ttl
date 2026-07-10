@@ -1,0 +1,119 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+# Valid and Invalid Examples for MobilityDataStandard_Shape
+
+# Valid Example 1: Both properties present and valid
+# Explanation for Valid Example 1:
+# This example is valid because:
+# 1. It has the correct class (mobilitydcatap:mobilityDataStandard).
+# 2. The owl:versionInfo is a literal with a short version identifier.
+# 3. The mobilitydcatap:schema is a resource (:Schema1) that is explicitly typed as rdfs:Resource.
+# 4. Both properties appear only once.
+:ValidStandard1 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "3.2" ;
+    mobilitydcatap:schema :Schema1 .
+
+:Schema1 a rdfs:Resource .
+
+
+
+# Valid Example 2: Only version property present
+# Explanation for Valid Example 2:
+# This example is valid because:
+# 1. It has the correct class.
+# 2. The owl:versionInfo is a valid literal.
+# 3. The schema property is optional and can be omitted.
+:ValidStandard2 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "2.0" .
+
+
+
+# Valid Example 3: Only schema property present
+# Explanation for Valid Example 3:
+# This example is valid because:
+# 1. It has the correct class.
+# 2. The mobilitydcatap:schema is a valid resource URI.
+# 3. The version property is optional and can be omitted.
+
+:ValidStandard3 a mobilitydcatap:mobilityDataStandard ;
+    mobilitydcatap:schema <http://datex2.eu/profiles/urban-traffic> .
+
+
+# Invalid Example 1: Multiple version properties
+ex:InvalidStandard1 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "3.2" ;
+    owl:versionInfo "3.3" ;
+    mobilitydcatap:schema <http://example.org/schemas/datex2> .
+
+# Explanation for Invalid Example 1:
+# This example is invalid because:
+# 1. It has multiple owl:versionInfo properties, violating the sh:maxCount 1 constraint.
+
+# Invalid Example 2: Invalid version format
+ex:InvalidStandard2 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "DATEX II v3.2" ;
+    mobilitydcatap:schema <http://example.org/schemas/datex2> .
+
+# Explanation for Invalid Example 2:
+# This example is invalid because:
+# 1. The owl:versionInfo contains redundant acronyms and "v", which should be avoided.
+
+# Valid Example 3: Only schema property present
+# Explanation for Valid Example 3:
+# This example is valid because:
+# 1. It has the correct class.
+# 2. The mobilitydcatap:schema is a valid resource explicitly typed as rdfs:Resource.
+# 3. The version property is optional and can be omitted.
+:ValidStandard3 a mobilitydcatap:mobilityDataStandard ;
+    mobilitydcatap:schema :Schema2 .
+
+:Schema2 a rdfs:Resource .
+
+# Invalid Example 1: Multiple version properties
+:InvalidStandard1 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "3.2" ;
+    owl:versionInfo "3.3" ;
+    mobilitydcatap:schema :Schema3 .
+
+:Schema3 a rdfs:Resource .
+
+# Invalid Example 2: Invalid version format
+# Validation Result for Invalid Example 2
+# Note: This is a semantic violation, not a syntactic one, so it might not be caught by all SHACL validators
+
+:InvalidStandard2 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "DATEX II v3.2" ;
+    mobilitydcatap:schema :Schema4 .
+
+:Schema4 a rdfs:Resource .
+
+
+# Invalid Example 3: Schema is a literal instead of a resource
+#  "mobilitydcatap:schema  does not have class rdfs:Resource" ;
+:InvalidStandard3 a mobilitydcatap:mobilityDataStandard ;
+    owl:versionInfo "4.0" ;
+    mobilitydcatap:schema "http://example.org/schemas/datex2-v4.0" .
+
+
+

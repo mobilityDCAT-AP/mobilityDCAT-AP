@@ -1,0 +1,61 @@
+@prefix : <http://w3id.org/mobilitydcat-ap#> .
+@prefix mobilitydcatap: <http://w3id.org/mobilitydcat-ap#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Valid License Documents
+
+# Public EU Open Data License
+:EUOpenDataLicense a dct:LicenseDocument ;
+    dct:identifier <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    rdfs:label "This dataset is provided under the EU Open Data License. Free to use with attribution to the data provider."@en .
+
+# Fraunhofer Research Data License
+:FraunhoferResearchLicense a dct:LicenseDocument ;
+    dct:identifier <http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC> ;
+    rdfs:label "For research and academic use only. Contact Fraunhofer FIT for commercial usage rights."@en .
+
+# Custom Municipal Data License
+:CologneOpenDataLicense a dct:LicenseDocument ;
+    rdfs:label "Diese Daten werden unter der Datenlizenz Deutschland – Namensnennung – Version 2.0 bereitgestellt. Siehe: www.govdata.de/dl-de/by-2-0"@de .
+
+# Invalid Examples
+
+# Invalid: Wrong Pattern for Identifier
+:InvalidMobilityLicense1 a dct:LicenseDocument ;
+    dct:identifier <https://creativecommons.org/licenses/by/4.0/> ; # *Invalid: Wrong identifier pattern*
+    rdfs:label "Creative Commons Attribution 4.0 International License"@en .
+
+# Invalid: Multiple Identifiers
+:InvalidMobilityLicense2 a dct:LicenseDocument ;
+    dct:identifier <http://publications.europa.eu/resource/authority/access-right/PUBLIC>, # *Invalid: Multiple identifiers*
+                  <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
+    rdfs:label "Mixed Access License"@en .
+
+# Invalid: Multiple Labels
+:InvalidMobilityLicense3 a dct:LicenseDocument ;
+    dct:identifier <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    rdfs:label "Public Transport Data License"@en, # *Invalid: Multiple labels*
+              "Lizenz für ÖPNV-Daten"@de .
+
+# Invalid: Non-literal Label
+:InvalidMobilityLicense4 a dct:LicenseDocument ;
+    dct:identifier <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    rdfs:label <http://example.org/license-text> . # *Invalid: Label must be literal*

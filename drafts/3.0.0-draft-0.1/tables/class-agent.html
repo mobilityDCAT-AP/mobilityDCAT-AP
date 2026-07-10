@@ -1,0 +1,41 @@
+<table class="simple" id="table-class-agent">
+<tbody>
+<tr>
+<th>Definition</th>
+<td>An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, or Datasets.</td>
+</tr>
+<tr>
+<th>URI</th>
+<td>
+<p><a href="http://xmlns.com/foaf/spec/#term_Agent"><code>foaf:Agent</code></a></p>
+</td></tr>
+<tr>
+<th>References</th>
+<td><p>DCAT: <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person">Link</a><br>
+DCAT-AP: <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent">Link</a><br>
+geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent">Link</a></p></td>
+</tr>
+<tr>
+<th>Usage note</th>
+<td>
+  <p>If the agent is an organisation, the use of the <a href="https://www.w3.org/TR/vocab-org/">Organization Ontology</a> is recommended. See <a class="no-sectionRef" href="#agent-roles"></a> for a discussion on Agent types, roles and properties.</p>
+  <p>The agent might be populated with the same information as for a kind, see class <a href="#class-kind"><code>vcard:Kind</code></a>. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
+  <p>When providing agent information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See <a class="no-sectionRef" href="#privsec"></a>.</p>
+</td></tr>
+<tr>
+<th>Properties</th>
+<td>
+<p>For this entity the following properties are defined:
+  address,
+  affiliation,
+  email,
+  first name,
+  name,
+  phone,
+  surname,
+  type,
+  URL.
+</p>
+</td></tr>
+</tbody>
+</table>

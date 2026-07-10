@@ -1,0 +1,541 @@
+<table class="simple" id="table-properties-for-distribution">
+<thead>
+<tr>
+<th>
+<p>Property name and URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property" id="distribution-access-url">
+<td valign=top>
+<p>access url</p>
+<p><a href="https://www.w3.org/ns/dcat#accessURL"><code>dcat:accessURL</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td valign=top>
+<p>1..1</p>
+</td>
+<td valign=top>
+<p>A URL that gives access to a distribution of the dataset.</p>
+</td>
+<td valign=top>
+  <p>Depending on the type of data provision, there are different options for describing the URL.</p>
+  <p>For data services, e.g., API, broker services, data feeds, etc., the URL may be the end point of such service.</p>
+  <p>If some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process.</p>
+  <p>For data which can be downloaded directly, the download URL should be copied from the property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a>.</p>
+  <p>For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL may be a link to an external service or a website which enables access to the data.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.accessURL">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="distribution-application-layer-protocol">
+<td valign=top>
+<p>+application layer protocol</p>
+<p><code>mobilitydcatap:applicationLayerProtocol</code></p>
+</td>
+<td valign=top>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+  <p>The transmitting channel, i.e., the Application Layer Protocol, of the distribution.</p>
+</td>
+<td valign=top>
+  <p>A corresponding <a href="#vocab-application-layer-protocol">controlled vocabulary</a> is provided.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>  
+  
+<tr class="property" id="distribution-applicable-legislation">
+<td valign=top>
+<p>applicable legislation</p>
+<p><a href="http://data.europa.eu/r5r/applicableLegislation"><code>dcatap:applicableLegislation</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-legal-resource"><code>eli:LegalResource</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A legal framework being relevant for the distribution.</p>
+</td>
+<td valign=top>
+  <p>The legal framework is usually provided on the dataset level, see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>. 
+    However, there is a special case of if a High Value Dataset (HVD) is provided on a portal. Here, the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a> stipulates that
+      this property links to the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">EC regulation 2013/138 on HVD</a> both on the dataset and distribution levels.
+    In other words, a RDF statement <code><dcatap:applicableLegislation rdf:resource="http://data.europa.eu/eli/reg_impl/2023/138/oj"/></code> is required under the dataset and distribution class, if a HVD is published on the portal.
+   For other cases outside HVD, the use of this property is not recommended.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation">E</a></p>
+</td>
+</tr>
+
+
+<tr class="property" id="distribution-character-encoding">
+<td valign=top>
+<p>+character encoding</p>
+<p><code>cnt:characterEncoding</code></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+  <p>The technical encoding format of the delivered content within the distribution. </p>
+</td>
+<td valign=top>
+  <p> It SHOULD be expressed using a character set name defined in the <a href="https://www.iana.org/assignments/character-sets/character-sets.xhtml">IANA character sets register</a>.</p>
+  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Distribution.characterencoding">GE</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="distribution-communication-method">
+<td valign=top>
+<p>+communication method</p>
+<p><code>mobilitydcatap:communicationMethod</code></p>
+</td>
+<td valign=top>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+  <p>Indicates for dynamically provided distributions, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode.</p>
+</td>
+<td valign=top>
+  <p>A corresponding <a href="#vocab-communication-method">controlled vocabulary</a> is provided.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>  
+
+<tr class="property" id="distribution-data-format-notes">
+<td valign=top>
+<p>+data format notes</p>
+<p><code>mobilitydcatap:dataFormatNotes</code></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+  <p>Any additional information about the format of the delivered content within the distribution in a textual format.</p>
+</td>
+<td valign=top>
+    <p>This property can be repeated for parallel language versions of the data format notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+
+  
+<tr class="property" id="distribution-description">
+<td valign=top>
+<p>description</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description"><code>dct:description</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A free-text account of the Distribution.</p>
+</td>
+<td valign=top>
+  <p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.applicablelegislation">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="distribution-documentation">
+<td valign=top>
+<p>documentation</p>
+<p><a href="http://xmlns.com/foaf/spec/#term_page"><code>foaf:page</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-document"><code>foaf:Document</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A page or document about the distribution.</p>
+</td>
+<td valign=top>
+  <p>This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar.
+In contrast, the property <a href="#distribution-description"><code>dct:description</code></a> is meant to provide a textual documentation.</p>
+    <p>Please note there is also the same property <a href="#dataset-documentation"><code>foaf:page</code></a> on the dataset level. 
+    Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.documentation">A</a></p>
+</td>
+</tr>
+  
+
+ <tr class="property" id="distribution-download-url">
+<td valign=top>
+<p>download url</p>
+<p><a href="https://www.w3.org/ns/dcat#downloadURL"><code>dcat:downloadURL</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>A URL that is a direct link to a downloadable file in a given format.</p>
+</td>
+<td valign=top>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.downloadURL">A</a></p>
+</td>
+</tr>
+
+
+<tr class="property" id="distribution-format">
+<td valign=top>
+<p>format</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format"><code>dct:format</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-media-type-or-extent"><code>dct:MediaTypeOrExtent</code></a></p>
+</td>
+<td valign=top>
+<p>1..1</p>
+</td>
+<td valign=top>
+<p>The technical syntax of the delivered content within the distribution. It describes the base standard that specifies syntactically correct documents. On this level, base elements are properly specified on how to build a document. The resulting document can then be validated by syntax checks.</p>
+</td>
+<td valign=top>
+  <p>A <a href="#vocab-format">controlled vocabulary</a> is provided.</p>
+  <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+  <p>There is a similar property in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a> called <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.mediatype"><code>dcat:mediaType</code></a>.
+    This one is not used in mobilityDCAT-AP. The reason is the use of Controlled vocabularies: 
+    <code>dct:format</code> uses the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/file-type">EU Authority List about file types</a>, whereas <code>dcat:mediaType</code> uses the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA media types list</a>. 
+    The first one, however, is sufficient to describe the syntaxes commonly used in mobility data portals.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.format">E</a></p>
+</td>
+</tr> 
+
+
+ <tr class="property" id="distribution-language">
+<td valign=top>
+<p>language</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language"><code>dct:language</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>The language of the content data in a distribution, if this content has a natural language embedded, such as text fields, addresses etc.</p>
+</td>
+<td valign=top>
+  <p>There is the same property <a href="#dataset-language"><code>dct:language</code></a> under class Dataset. 
+    Language information on the distribution level is only recommended, if there are multiple distributions for the same dataset with a different language each.</p>
+    <p>This property can be repeated if there are multiple languages in the distribution - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a></p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.language">E</a></p>
+</td>
+</tr>
+
+
+  
+
+<tr class="property" id="distribution-licence">
+<td valign=top>
+<p>licence</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license"><code>dct:license</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-licence-document"><code>dct:LicenseDocument</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The licence under which the distribution is made available. This should be a reference to a concrete (standard) licence.</p>
+</td>
+<td valign=top>
+  <p>A <a href="#vocab-standard-licence">controlled vocabulary</a> is provided.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.licence">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="distribution-linked-schemas">
+<td valign=top>
+<p>linked schemas</p>
+<p><a href="http://purl.org/dc/terms/conformsTo"><code>dct:conformsTo</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-standard"><code>dct:Standard</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>An established schema to which the described Distribution conforms.</p>
+</td>
+<td valign=top>
+   <p>To inform about a mobility data standard (and also related profiles) applied to the delivered data, 
+   property <a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a> should be preferably used.
+   In addition, property <code>dct:conformsTo</code> can be used to serve the needs of standard DCAT/DCAT‑AP open data portals.
+     Such portals usually cannot process information exposed indirectly via property <code>mobilitydcatap:mobilityDataStandard</code>, i.e., they cannot dereference or validate such references. 
+    Thus, this property would expose the standards/profiles information directly at the Distribution.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.linkedschemas">E</a></p>
+</td>
+</tr>
+  
+
+<tr class="property" id="distribution-mobility-data-standard">
+<td valign=top>
+<p>+mobility data standard</p>
+<p><code>mobilitydcatap:mobilityDataStandard</code></p>
+</td>
+<td valign=top>
+<p><a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a></p>
+</td>
+<td valign=top>
+<p>1..*</p>
+</td>
+<td valign=top>
+  <p>The mobility data standard, as applied for the delivered content within the distribution. 
+    A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange.</p>
+  <p>This is a sub-property of <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a>.</p>
+</td>
+<td valign=top>
+  <p>A corresponding <a href="#vocab-mobility-data-standard">controlled vocabulary</a> is provided, listing common mobility data standards. 
+   At least one value from this controlled vocabulary is required. If no suitable standard is found in this vocabulary, the "other" entry should be used. </p>
+  <p> Optionally, a new individual instance of class <code>mobilitydcatap:MobilityDataStandard</code> can be provided. 
+  This instance might be used to (a) reference a mobility data standard that is not listed in the controlled vocabulary; 
+  or (b) provide additional information on an applied mobility data standard (even if listed in the controlled vocabulary), such as version or schema details. 
+  See the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard">Wiki page</a> for a code example with a reference to a mobility data standard (listed in the controlled vocabulary), and detailed information via an individual instance 
+    of class <code>mobilitydcatap:MobilityDataStandard</code>.
+  </p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+
+
+<tr class="property" id="distribution-modification-date">
+<td valign=top>
+<p>modification date</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified"><code>dct:modified</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The most recent date on which the Distribution was changed or modified.</p>
+</td>
+<td valign=top>
+  <p>There is the same property <a href="#dataset-modification-date"><code>dct:modified</code></a> under the Dataset level. Under the distribution level, this property describes temporal changes in the characteristics of a distribution, e.g., a new data format or similar.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.modificationdate">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="distribution-release-date">
+<td valign=top>
+<p>release date</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued"><code>dct:issued</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The date of formal issuance (e.g., publication) of the Distribution.</p>
+</td>
+<td valign=top>
+  <p>There is the same property <a href="#dataset-release-date"><code>dct:issued</code></a> at the Dataset level. 
+    Under the distribution level, this property relates to the release time of a distribution, which might be different than the release time of a dataset.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.releasedate">E</a></p>
+</td>
+</tr>
+
+
+
+  
+<tr class="property" id="distribution-rights">
+<td valign=top>
+<p>rights</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights"><code>dct:rights</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-rights-statement"><code>dct:RightsStatement</code></a></p>
+</td>
+<td valign=top>
+<p>1..1</p>
+</td>
+<td valign=top>
+<p>A statement that specifies rights associated with the distribution. In particular, a statement about the intellectual property rights (IPR). As a minimum, it should include an information on the type of conditions for access and usage.</p>
+</td>
+<td valign=top>
+  <p>A concrete (standard) license can be referred via the recommended property <a href="#distribution-licence"><code>dct:license</code></a>.</p>
+  <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.rights">E</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="distribution-sample">
+<td valign=top>
+<p>+sample</p>
+<p><a href="http://www.w3.org/ns/adms#sample"><code>adms:sample</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-resource"><code>rdfs:Resource</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A sample of the delivered content, using the same conditions (e.g., the same format and licence) as the regular disctribution.
+  A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.</p>
+</td>
+<td valign=top>
+  <p>In <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>, 
+    there is a property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.sample"><code>adms:sample</code></a> under class Dataset, with class Distribution as the range.  
+    This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. 
+    To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset.</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+  
+
+<tr class="property" id="distribution-status">
+<td valign=top>
+<p>status</p>
+<p><a href="https://www.w3.org/ns/legacy_adms#status"><code>adms:status</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-concept"><code>skos:Concept</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The status of the distribution in the context of maturity lifecycle.</p>
+</td>
+<td valign=top>
+  <p>It must take one of the values Completed, Deprecated, Under Development, Withdrawn.
+    A corresponding <a href="#vocab-status">controlled vocabulary</a> is provided.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution.status">A</a></p>
+</td>
+</tr>
+
+<tr class="property" id="distribution-temporal-coverage">
+<td valign=top>
+<p>+temporal coverage</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal"><code>dct:temporal</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The time interval when a distribution is facilitated (i.e., activated) technically via the data platform. Might be used if data access via a distribution is limited in time.</p>
+</td>
+<td valign=top>
+  <p>If there is no entry it means that the distribution has no explicit start time (i.e., it is facilitated immediately) and has no end time (i.e., it is facilitated infinitely).</p>
+</td>
+<td valign=top>
+<p>P</p>
+</td>
+</tr>
+  
+<tr class="property" id="distribution-title">
+<td valign=top>
+<p>title</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title"><code>dct:title</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A name given to the distribution.</p>
+</td>
+<td valign=top>
+  <p>This property can be repeated for parallel language versions of the title  - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.title">E</a></p>
+</td>
+</tr>  
+  
+</tbody>
+</table>

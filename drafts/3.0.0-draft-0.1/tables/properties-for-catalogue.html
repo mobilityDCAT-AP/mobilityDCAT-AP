@@ -1,0 +1,363 @@
+<table class="simple" id="table-properties-for-catalogue">
+<thead>
+<tr>
+<th>
+<p>Property name and URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+<th>
+<p>Definition</p>
+</th>  
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Reuse</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr class="property" id="catalogue-dataset">
+<td valign=top>
+<p>dataset</p>
+<p><a href="http://www.w3.org/ns/dcat#dataset"><code>dcat:dataset</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>Links the mobility data portal with a dataset that is described at the mobility data portal.</p>
+</td>
+<td valign=top>
+<p>This is a direct link from the mobility data portal to a dataset. However, in mobilityDCAT-AP, datasets should be linked indirectly, i.e., via the metadata record of this dataset. 
+  Thus, it is mandatory to use the property <a href="#catalogue-record"><code>dcat:record</code></a> to link to a data set. The usage of <code>dcat:dataset</code> may be then redundant.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.dataset">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-description">
+<td valign=top>
+<p>description</p>
+<p><a href="http://purl.org/dc/terms/description"><code>dct:description</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>1..*</p>
+</td>
+<td valign=top>
+<p>A free-text account of the Catalogue.</p>
+</td>
+<td valign=top>
+<p>This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.description">E</a></p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-geographical-coverage">
+<td valign=top>
+<p>geographical coverage</p>
+<p><a href="http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-location"><code>dct:Location</code></a></p>
+</td>
+<td valign=top>
+<p>1..*</p>
+</td>
+<td valign=top>
+<p>A geographical area covered by the Catalogue.</p>
+</td>
+<td valign=top>
+<p>For National Access Points (NAPs), this corresponds to the EU Member State or a country that installs such NAP. The property might be used for analyses about available datasets per country, or to identify country-specific metadata in case metadata are federated from multiple national portals into an international portal. 
+  It is not to be mixed up with country codes used within the dataset property <a href="#dataset-geographical-coverage"><code>dct:spatial</code></a>, which might be different.</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.geographicalcoverage">E</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="catalogue-has-part">
+<td valign=top>
+<p>has part</p>
+<p><a href="http://purl.org/dc/terms/hasPart"><code>dct:hasPart</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-catalogue"><code>dcat:Catalog</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A related Catalogue that is part of the described Catalogue.</p>
+</td>
+<td valign=top>
+<p>This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.haspart">E</a></p>
+</td>
+</tr>    
+
+<tr class="property" id="catalogue-homepage">
+<td valign=top>
+<p>homepage</p>
+<p><a href="http://xmlns.com/foaf/0.1/homepage"><code>foaf:homepage</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-document"><code>foaf:Document</code></a></p>
+</td>
+<td valign=top>
+<p>1..1</p>
+</td>
+<td valign=top>
+<p>A web page that acts as the main page for the Catalogue.</p>
+</td>
+<td valign=top>
+<p>This property could be used to link the mobility data portal to another data portal, by e.g. harvesting metadata from this other portal into the mobility data portal.</p>
+<p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.homepage">E</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="catalogue-identifier">
+<td valign=top>
+<p>+identifier</p>
+<p><a href="http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>The main identifier for the mobility data portal, e.g. the URI or other unique identifier. Allows a unique identification of the individual portal and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
+</td>
+<td valign=top>
+<p>This property should populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
+<p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Catalogue.identifier">GE</a></p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-language">
+<td valign=top>
+<p>language</p>
+<p><a href="http://purl.org/dc/terms/language"><code>dct:language</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>Language used in the user interface of the mobility data portal, in particular the textual metadata describing the datasets registered in the portal.</p>
+</td>
+<td valign=top>
+<p>This property can be repeated if the user interface and textual metadata are provided in multiple languages - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.language">E</a></p>
+</td>
+</tr>   
+
+<tr class="property" id="catalogue-licence">
+<td valign=top>
+<p>licence</p>
+<p><a href="http://purl.org/dc/terms/license"><code>dct:license</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-licence-document"><code>dct:LicenseDocument</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>A licence under which the Catalogue can be used or reused.</p>
+</td>
+<td valign=top>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.licence">A</a></p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-modification-date">
+<td valign=top>
+<p>modification date</p>
+<p><a href="http://purl.org/dc/terms/modified"><code>dct:modified</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The most recent date on which the Catalogue was modified. It is recommended to indicate modifications of the portal system as such (e.g., major technical updates of the portal or its features), rather than modifications of the hosted datasets, since datasets on mobility data portals are updaded frequently.</p>
+</td>
+<td valign=top>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.modificationdate">E</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="catalogue-other-identifier">
+<td valign=top>
+<p>+other identifier</p>
+<p><a href="http://www.w3.org/ns/adms#identifier"><code>adms:identifier</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-identifier"><code>adms:Identifier</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>This property may be used as an additional identifier, besides <a href="#catalogue-identifier"><code>dct:identifier</code></a>.</p>
+</td>
+<td valign=top>
+<p>This property may be referring to a dedicated, EU-wide identificator system of NAPs or other portals, to be introduced in the future.</p>
+<p>This property is an addition by mobilityDCAT-AP.</p>
+</td>
+<td valign=top>
+<p>A</p>
+</td>
+</tr>
+
+<tr class="property" id="catalogue-publisher">
+<td valign=top>
+<p>publisher</p>
+<p><a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-agent"><code>foaf:Agent</code></a></p>
+</td>
+<td valign=top>
+<p>1..1</p>
+</td>
+<td valign=top>
+<p>An entity (organisation) responsible for making the Catalogue available. This organisation is the direct contact for platform users, who have questions or issues about the platform and its system.</p>
+</td>
+<td valign=top>
+<p> This information should correspond to the information in the disclaimer of the platform website.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.publisher">E</a></p>
+</td>
+</tr>  
+
+<tr class="property" id="catalogue-record">
+<td valign=top>
+<p>record</p>
+<p><a href="http://www.w3.org/ns/dcat#record"><code>dcat:record</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a></p>
+</td>
+<td valign=top>
+<p>1..n</p>
+</td>
+<td valign=top>
+<p>A metadata record that is part of the mobility data portal.</p>
+</td>
+<td valign=top>
+<p>mobilityDCAT-AP assumes that metadata records are essential in mobility data portals, so the obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.record">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="catalogue-release-date">
+<td valign=top>
+<p>release date</p>
+<p><a href="http://purl.org/dc/terms/issued"><code>dct:issued</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>0..1</p>
+</td>
+<td valign=top>
+<p>The date of formal issuance (e.g., publication) of the mobility data portal.</p>
+</td>
+<td valign=top>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.releasedate">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="catalogue-themes">
+<td valign=top>
+<p>themes</p>
+<p><a href="http://www.w3.org/ns/dcat#themeTaxonomy"><code>dcat:themeTaxonomy</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a></p>
+</td>
+<td valign=top>
+<p>0..*</p>
+</td>
+<td valign=top>
+<p>A knowledge organization system used to classify the mobility data portal's datasets.</p>
+</td>
+<td valign=top>
+<p>Recommended to indicate the version of the controlled vocabulary for property <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, that is used in the mobility data portal.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.themes">E</a></p>
+</td>
+</tr> 
+
+<tr class="property" id="catalogue-title">
+<td valign=top>
+<p>title</p>
+<p><a href="http://purl.org/dc/terms/title"><code>dct:title</code></a></p>
+</td>
+<td valign=top>
+<p><a href="#class-literal"><code>rdfs:Literal</code></a></p>
+</td>
+<td valign=top>
+<p>1..*</p>
+</td>
+<td valign=top>
+<p>A name given to the mobility data portal.</p>
+</td>
+<td valign=top>
+<p>This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td valign=top>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.title">E</a></p>
+</td>
+</tr>   
+
+  
+  
+</tbody>
+</table>
