@@ -4,7 +4,7 @@
    xmlns:dcat="http://www.w3.org/ns/dcat#"
    xmlns:dcatap="http://data.europa.eu/r5r/"
    xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:geodcatap="http://www.w3.org/ns/geodcat#"
+   xmlns:geodcatap="http://data.europa.eu/930/"
    xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"

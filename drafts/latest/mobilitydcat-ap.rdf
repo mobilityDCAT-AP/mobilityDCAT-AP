@@ -158,12 +158,12 @@
     <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
     <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/geodcat#referenceSystem">
+  <rdf:Description rdf:about="http://data.europa.eu/930/referenceSystem">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The spatial reference system used in the dataset. Spatial reference systems SHOULD be specified using URIs from the EPSG coordinate reference systems register operated by OGC.</rdfs:comment>
     <rdfs:label xml:lang="en">reference system</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/geodcat#"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <vs:term_status>stable</vs:term_status>
     <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Dataset.</skos:scopeNote>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>

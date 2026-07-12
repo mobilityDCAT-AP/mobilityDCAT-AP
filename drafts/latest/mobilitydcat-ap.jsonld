@@ -625,7 +625,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/geodcat#referenceSystem",
+    "@id": "http://data.europa.eu/930/referenceSystem",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -648,7 +648,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.w3.org/ns/geodcat#"
+        "@id": "http://data.europa.eu/930/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [

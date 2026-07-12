@@ -1,6 +1,6 @@
 @prefix : <https://w3id.org/mobilitydcat-ap/drafts/latest#> .
 @prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
-@prefix geodcatap: <http://www.w3.org/ns/geodcat#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
 
 @prefix adms: <http://www.w3.org/ns/adms#> .

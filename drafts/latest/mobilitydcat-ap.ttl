@@ -8,7 +8,7 @@
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geodcatap: <http://www.w3.org/ns/geodcat#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
@@ -281,12 +281,14 @@ foaf:workplaceHomepage a rdf:Property,
 ###   http://www.w3.org/ns/oa#hasBody
 oa:hasBody a rdf:Property,
            owl:ObjectProperty ;
-           rdfs:comment "This property MAY be used to describe the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes."@en ;
-           rdfs:label "assessment result"@en ;
-           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Assessment. "@en ;
+           rdfs:comment "This property MAY be used to describe the result of the latest assessment procedure (class Assessment) or any quality aspects regarding the delivered content (class Quality Annotation), in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes."@en ;
+           rdfs:label "has body"@en ;
+           skos:scopeNote "In mobilityDCAT-AP, this is an optional property (named 'assessment result') to be used for Assessment. "@en ,
+                          "In mobilityDCAT-AP, this is an optional property (named 'quality annotation resource') to be used for Quality Annotation. "@en ;
            adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-           dcam:domainIncludes mobilitydcatap:Assessment ;
-           dcam:rangeIncludes rdfs:Resource .	   		   	   
+           dcam:domainIncludes mobilitydcatap:Assessment ,
+                               dqv:QualityAnnotation ;
+           dcam:rangeIncludes rdfs:Resource .
 		   
 ###   http://www.w3.org/ns/adms#identifier 
 adms:identifier a rdf:Property,
@@ -355,7 +357,7 @@ mobilitydcatap:georeferencingMethod a rdf:Property,
            dcam:domainIncludes dcat:Dataset ;
            dcam:rangeIncludes skos:Concept .
 		   
-###  http://www.w3.org/ns/geodcat#referenceSystem
+###  http://data.europa.eu/930/referenceSystem
 geodcatap:referenceSystem a rdf:Property,
            owl:ObjectProperty ;
            rdfs:comment "The spatial reference system used in the dataset. Spatial reference systems SHOULD be specified using URIs from the EPSG coordinate reference systems register operated by OGC."@en ;
@@ -783,12 +785,7 @@ vcard:organization-name rdf:type owl:DatatypeProperty ;
            dcam:rangeIncludes rdfs:Literal .		   
 		   
 ###  http://www.w3.org/2000/01/rdf-schema#label
-rdfs:label rdf:type owl:DatatypeProperty ;
-           rdfs:comment "This property MAY be used to contain the full text of a Licence Document, as a free text. This MAY be used when there is no standard license that can be linked via property dct:identifier. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."@en ;
-           rdfs:label "licence text"@en ;
-           vs:term_status "stable" ;
-           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Licence Document."@en ;
-           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+rdfs:label skos:scopeNote "In mobilityDCAT-AP, this is an optional property (named 'licence text') to be used for Licence Document. It MAY be used to contain the full text of a Licence Document, as a free text, when there is no standard license that can be linked via property dct:identifier. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."@en ;
            dcam:domainIncludes dct:LicenseDocument ;
            dcam:rangeIncludes rdfs:Literal .
 
@@ -830,22 +827,8 @@ owl:versionInfo rdf:type owl:DatatypeProperty ;
            dcam:domainIncludes mobilitydcatap:MobilityDataStandard ;
            dcam:rangeIncludes rdfs:Literal .		   
 
-###   http://www.w3.org/ns/oa#hasBody
-oa:hasBody rdf:type owl:DatatypeProperty ;
-           rdfs:comment "This property MAY be used to describe any quality aspects regarding the delivered content, in form of a URL linking to further details or results. Alternatively, textual information MAY be provided using the Embedded Textual Body construction of the Web Annotation Data Model [Web-Annotation-Data-Model], which allows to specify text formats and languages which might be relevant for multilingual purposes."@en ;
-           rdfs:label "quality annotation resource"@en ;
-           skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Quality Annotation. "@en ;
-           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-           dcam:domainIncludes dqv:QualityAnnotation ;
-           dcam:rangeIncludes rdfs:Literal .
-
 ###  http://www.w3.org/2000/01/rdf-schema#label
-rdfs:label rdf:type owl:DatatypeProperty ;
-           rdfs:comment "This property MAY describes in a textual form any additional access, usage or licensing information, besides other information under classes dct:RightsStatement and dct:LicenseDocument. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."@en ;
-           rdfs:label "Additional information for access and usage"@en ;
-           vs:term_status "stable" ;
-           skos:scopeNote "In mobilityDCAT-AP, this is a recommended property to be used for Rights Statement"@en ;
-           adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
+rdfs:label skos:scopeNote "In mobilityDCAT-AP, this is a recommended property (named 'additional information for access and usage') to be used for Rights Statement. It MAY describe in a textual form any additional access, usage or licensing information, besides other information under classes dct:RightsStatement and dct:LicenseDocument. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]."@en ;
            dcam:domainIncludes dct:RightsStatement ;
            dcam:rangeIncludes rdfs:Literal .
 		  
