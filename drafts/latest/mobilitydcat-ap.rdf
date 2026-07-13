@@ -29,7 +29,7 @@
      xmlns:geodcatap="http://data.europa.eu/930/"
      xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#">
     <owl:Ontology rdf:about="https://w3id.org/mobilitydcat-ap#">
-        <owl:versionIRI rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0"/>
         <dct:abstract xml:lang="en">mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance.</dct:abstract>
         <dct:alternative xml:lang="en">mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe</dct:alternative>
         <dct:creator rdf:nodeID="genid1"/>
@@ -54,14 +54,13 @@
         <voaf:reliesOn rdf:resource="http://www.w3.org/ns/prov#"/>
         <voaf:reliesOn rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <rdfs:comment xml:lang="en">mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0"/>
         <rdfs:label xml:lang="en">mobilityDCAT-AP</rdfs:label>
-        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0/"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0/"/>
-        <owl:versionInfo xml:lang="en">Version 3.0.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0"/>
+        <owl:versionInfo xml:lang="en">Version 3.0.0 - Introduces breaking changes: see changelog.</owl:versionInfo>
         <skos:altLabel xml:lang="en">mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe</skos:altLabel>
         <adms:last rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
-        <adms:prev rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0/"/>
+        <adms:prev rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0"/>
         <foaf:depiction rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/mobilityDCAT-AP_uml-diagramm_230921.png"/>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
@@ -512,6 +511,12 @@
     
 
 
+    <!-- http://www.w3.org/ns/oa#hasBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasBody"/>
+    
+
+
     <!-- http://www.w3.org/ns/oa#hasTarget -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasTarget"/>
@@ -545,6 +550,12 @@
     <!-- http://xmlns.com/foaf/0.1/phone -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/phone"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
     
 
 
@@ -675,12 +686,6 @@
     
 
 
-    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#notation -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
@@ -792,12 +797,6 @@
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
-
-    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
     
 
 
@@ -1073,7 +1072,6 @@
 
     <owl:NamedIndividual rdf:about="http://data.europa.eu/r5r/applicableLegislation">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">applicable legislation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1228,7 +1226,6 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/created">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"/>
-        <rdfs:label xml:lang="en">creation date</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1325,7 +1322,6 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/publisher">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">publisher</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1350,7 +1346,6 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/rightsHolder">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">rights holder</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1359,7 +1354,6 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/source">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">source metadata</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1368,7 +1362,6 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/spatial">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">geographical coverage</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1416,7 +1409,7 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+        <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"/>
     </owl:NamedIndividual>
     
 
@@ -1465,7 +1458,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#Address">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">Address (vCard)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1490,7 +1482,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">country</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1499,7 +1490,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#fn">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1508,7 +1498,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">address</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1517,7 +1506,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">email</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1526,7 +1514,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">phone</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1535,7 +1522,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#hasURL">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">URL</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1544,7 +1530,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#locality">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">city</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1553,7 +1538,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">affiliation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1562,7 +1546,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">postal code</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1571,7 +1554,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#region">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">administrative area</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1580,7 +1562,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">street address</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1589,7 +1570,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2011/content#characterEncoding">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">character encoding</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1598,7 +1578,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#Identifier">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">Identifier</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1607,7 +1586,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#identifier">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">other identifier</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1616,7 +1594,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#sample">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">sample</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1625,7 +1602,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#status">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">status</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1810,7 +1786,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/dqv#QualityAnnotation">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">Quality Annotation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1845,7 +1820,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#Address">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">Address (Core Location)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1862,7 +1836,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#address">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">address</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1871,7 +1844,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#adminUnitL1">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">country</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1880,7 +1852,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#adminUnitL2">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">administrative area</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1897,7 +1868,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#postCode">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label>postal code</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1906,7 +1876,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#postName">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">city</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1915,7 +1884,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/locn#thoroughfare">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">street address</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1924,18 +1892,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasBody">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
-        <dcam:domainIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <rdfs:comment xml:lang="en">For Assessment, this property indicates the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information is provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.
-
-    For Quality Annotation, this property contains any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.
-    Textual information should be provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/annotation-model/"/>
-        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/annotation-vocab/#hasbody"/>
-        <vs:term_status>stable</vs:term_status>
-        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Assessment and Quality Annotation. </skos:scopeNote>
     </owl:NamedIndividual>
     
 
@@ -1944,7 +1900,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasTarget">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"/>
-        <rdfs:label xml:lang="en">quality annotation target</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1961,7 +1916,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/org#memberOf">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">affiliation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1986,7 +1940,6 @@
 
     <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/firstName">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">first name</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2003,7 +1956,6 @@
 
     <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/mbox">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">email</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2028,7 +1980,6 @@
 
     <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/phone">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">phone</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2045,7 +1996,6 @@
 
     <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/surname">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">surname</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2054,7 +2004,6 @@
 
     <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/workplaceHomepage">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">URL</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2104,9 +2053,9 @@
     
 
 
-    <!-- https://semiceu.github.io/DCAT-AP/releases/3.0.0/ -->
+    <!-- https://semiceu.github.io/DCAT-AP/releases/3.0.0 -->
 
-    <owl:NamedIndividual rdf:about="https://semiceu.github.io/DCAT-AP/releases/3.0.0/"/>
+    <owl:NamedIndividual rdf:about="https://semiceu.github.io/DCAT-AP/releases/3.0.0"/>
     
 
 
@@ -2118,7 +2067,7 @@
         <dct:conformsTo rdf:resource="http://data.europa.eu/r5r/"/>
         <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"/>
         <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"/>
-        <dct:conformsTo rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/"/>
+        <dct:conformsTo rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0"/>
         <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dct:publisher rdf:resource="https://napcore.eu/"/>
         <dct:rightsHolder rdf:resource="https://napcore.eu/"/>
@@ -2135,7 +2084,7 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-17</dct:issued>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-06</dct:modified>
         <dct:title xml:lang="en">mobilityDCAT-AP</dct:title>
-        <adms:versionNotes xml:lang="en">Major semantic release of mobilityDCAT-AP. See Change Log for concrete changes applied.</adms:versionNotes>
+        <adms:versionNotes xml:lang="en">Major semantic release of mobilityDCAT-AP. See changelog for concrete changes applied.</adms:versionNotes>
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid3">
         <rdf:type rdf:resource="http://www.w3.org/ns/adms#AssetDistribution"/>
@@ -2182,7 +2131,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#Assessment">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">Assessment</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2191,7 +2139,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#MobilityDataStandard">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">Mobility Data Standard</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2200,7 +2147,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">application layer protocol</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2209,7 +2155,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#assessmentResult">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">assessment result</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2218,7 +2163,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#communicationMethod">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">communication method</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2227,7 +2171,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#dataFormatNotes">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">data format notes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2236,7 +2179,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#georeferencingMethod">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">georeferencing method</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2245,7 +2187,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#grammar">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"/>
-        <rdfs:label xml:lang="en">grammar</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2254,7 +2195,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#intendedInformationService">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">intended information service</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2263,7 +2203,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#mobilityDataStandard">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">mobility data standard</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2272,7 +2211,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#mobilityTheme">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">mobility theme</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2281,7 +2219,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#networkCoverage">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">network coverage</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2290,7 +2227,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#schema">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"/>
-        <rdfs:label xml:lang="en">schema</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2299,7 +2235,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcat-ap#transportMode">
         <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
-        <rdfs:label xml:lang="en">transport mode</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2392,6 +2327,7 @@
 
     For Distribution, it contains information about a legal framework being relevant for the distribution.
     The legal framework is usually provided on the dataset level, see property dcatap:applicableLegislation. However, there is a special case of if a High Value Dataset (HVD) is provided on a portal. Here, the DCAT-AP profile for HVD stipulates that this property links to the EC regulation 2013/138 on HVD both on the dataset and distribution levels. In other words, a RDF statement is required under the dataset and distribution class, if a HVD is published on the portal. For other cases outside HVD, the use of this property is not recommended.</rdfs:comment>
+        <rdfs:label xml:lang="en">applicable legislation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://data.europa.eu/r5r/applicableLegislation"/>
         <rdfs:seeAlso rdf:resource="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation"/>
@@ -2410,12 +2346,12 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
         <rdfs:comment xml:lang="en">A legal document, e.g., a concrete license, giving official permission to do something with a resource.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"/>
-        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument"/>
-        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenceDocument"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"/>
+        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument"/>
+        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenseDocument"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument"/>
         <vs:term_status>stable</vs:term_status>
-        <skos:scopeNote xml:lang="en">This property is used to reference an applicable (standard) licence via an IRI, so a data user can assess the license conditions in machine- and human-readable formats, before using the data.
+        <skos:scopeNote xml:lang="en">This property is used to reference an applicable (standard) license via an IRI, so a data user can assess the license conditions in machine- and human-readable formats, before using the data.
     Via an instance of this class, a reference to a standard or a organisation-specific license can be given. For standard licenses, a Controlled Vocabulary is provided.
     See the Wiki page on Rights and Licenses for further guidance.
     This specification does not impose any additional requirements to properties for this entity.</skos:scopeNote>
@@ -2465,7 +2401,7 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/RightsStatement">
         <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-license-document"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#RightsStatement"/>
@@ -2535,9 +2471,9 @@
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">This property is deprecated.</rdfs:comment>
+        <rdfs:label xml:lang="en">creation date</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#created"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <vs:term_status>deprecated</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is deprecated. </skos:scopeNote>
     </rdf:Description>
@@ -2632,7 +2568,6 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:comment xml:lang="en">This property is deprecated, being an inverse property to dct:hasPart. This adheres to the rule of DCAT-AP v3 not to use the inverse of properties.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <vs:term_status>deprecated</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is deprecated</skos:scopeNote>
     </rdf:Description>
@@ -2641,7 +2576,6 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:comment xml:lang="en">This property is deprecated, being an inverse property to dcat:hasVersion. This adheres to the rule of DCAT-AP v3 not to use the inverse of properties.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isVersionOf"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <vs:term_status>deprecated</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is deprecated.</skos:scopeNote>
     </rdf:Description>
@@ -2706,11 +2640,11 @@
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
-        <rdfs:comment xml:lang="en"> For Catalogue, this property refers to the licence under which the Catalogue can be used or reused.
+        <rdfs:comment xml:lang="en"> For Catalogue, this property refers to the license under which the Catalogue can be used or reused.
 
-    For Distribution, it refers to the licence under which the distribution is made available. This should be a reference to a concrete (standard) licence.
+    For Distribution, it refers to the license under which the distribution is made available. This should be a reference to a concrete (standard) license.
     A controlled vocabulary is provided.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Catalogue and Distribution.</skos:scopeNote>
@@ -2764,6 +2698,7 @@
     For Dataset Series, it refers to an entity (company and person) that publishes the dataset series. This entity is also responsible for ensuring the coherency of the dataset series.
     The publisher of the dataset series may or may be not the publisher of all datasets, as declared via property dct:publisher. E.g. a digital archive could take over the publishing of older datasets in the series.
     The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/publisher"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher"/>
@@ -2791,7 +2726,7 @@
     A concrete (standard) license can be referred via the recommended property dct:license.
     The obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/rights"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-license"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Distribution.</skos:scopeNote>
@@ -2802,6 +2737,7 @@
         <rdfs:comment xml:lang="en">An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property dcatap:applicableLegislation.
     The rights holder will be in many cases identical with the publisher of the dataset (see property dct:publisher) and/or of the catalogue record (see property dct:publisher). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">rights holder</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher"/>
@@ -2820,6 +2756,7 @@
 
     For Datasets, it refers to a related Dataset from which the described Dataset is derived.
     There is the same property dct:source on the Catalogue Record level. The source of a dataset relates to the content data, whereas the source of a catalogue record relates to the metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">source metadata</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/source"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-source-metadata"/>
         <vs:term_status>stable</vs:term_status>
@@ -2839,6 +2776,7 @@
 
     For DatasetSeries, this property refers to a geographic region that is covered by the dataset series.
     When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in the collection should be part of the spatial coverage of the dataset series. In that case, the value of the spatial coverage of the dataset series should be as wide as possiblie. E.g., if datasets in a collection are about different regions in a country, the spatial coverage of the dataset series should note the entire country. See also the examples no. 7 and 8 in the Dataset Series examples section of DCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">geographical coverage</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/spatial"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-geographical-coverage"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/"/>
@@ -2899,10 +2837,10 @@
         <rdfs:comment xml:lang="en">For Agent, refers to the nature of the agent.
     A controlled vocabulary is provided.
 
-    For Right Statement, it is an indication of the conditions if any contracts, licences and/or are applied for the use of the distribution. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset.
-    The values can be logically mapped with the property dct:identifier from class Licence Document, denoting a concrete standard license. For example, if the property dct:identifier is referring to standard licence &quot;CC BY 4.0&quot;, the property dct:type can be given the value &quot;Licence provided, free of charge&quot;.</rdfs:comment>
+    For Right Statement, it is an indication of the conditions if any contracts, licenses and/or are applied for the use of the distribution. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a license has to be agreed on to use a dataset.
+    The values can be logically mapped with the property dct:identifier from class License Document, denoting a concrete standard license. For example, if the property dct:identifier is referring to standard license &quot;CC BY 4.0&quot;, the property dct:type can be given the value &quot;License provided, free of charge&quot;.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/type"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#licence-document-standard-licence"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#license-document-standard-license"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-conditions-for-access-and-usage"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-publisher-type"/>
         <vs:term_status>stable</vs:term_status>
@@ -2926,17 +2864,11 @@
         <vs:term_status>stable</vs:term_status>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">For Right Statement, this property MAY describes in a textual form any additional access, usage or licensing information, besides other information under classes dct:RightsStatement and dct:LicenseDocument. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects.
-    This property corresponds to the addition by [GEODCAT-AP-v2.0.0].
-
-    NOTE: Usage of rdfs:label for class Licence Document is deprecated as of v3.0.0. </rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/rdf-schema/#ch_label"/>
-        <vs:term_status>stable</vs:term_status>
-        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Rights Statements. It is deprecated for License Document.</skos:scopeNote>
+        <vs:term_status>deprecated</vs:term_status>
+        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is deprecated as of v3.0.0, for use with both Rights Statement and License Document.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
         <rdfs:comment xml:lang="en">An idea or notion; a unit of thought.</rdfs:comment>
@@ -3000,11 +2932,12 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
         <rdfs:comment xml:lang="en">A postal address used for contact point information.</rdfs:comment>
+        <rdfs:label xml:lang="en">Address (vCard)</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(vCard)"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1292"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">This class corresponds to the addition by geoDCAT-AP v3.0.0.
-    For this entity the following properties are defivcard:street-addressed: &quot;administrative area (vcard:region)&quot;, &quot;city (vcard:locality)&quot;, &quot;country (vcard:country-name)&quot;, &quot;postal code (vcard:postal-code)&quot;, and &quot;street address (vcard:street-address)&quot;.</skos:scopeNote>
+    For this entity the following properties are defined: &quot;administrative area (vcard:region)&quot;, &quot;city (vcard:locality)&quot;, &quot;country (vcard:country-name)&quot;, &quot;postal code (vcard:postal-code)&quot;, and &quot;street address (vcard:street-address)&quot;.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Email">
         <rdfs:comment xml:lang="en">The electronic mail address for communication with the object.
@@ -3039,6 +2972,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The country of an address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e844"/>
         <vs:term_status>stable</vs:term_status>
@@ -3049,6 +2983,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">A name of the kind, i.e., a unique name of an individual, an organization, a location or a group.
     This property corresponds to the addition by geoDCAT-AP v3.0.0, however, with an raised obligation level.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e891"/>
         <vs:term_status>stable</vs:term_status>
@@ -3060,6 +2995,7 @@
         <rdfs:comment xml:lang="en">	
     The postal address of the kind, i.e., of an individual, an organization, a location or a group.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">address</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e101"/>
         <vs:term_status>stable</vs:term_status>
@@ -3070,6 +3006,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
         <rdfs:comment xml:lang="en">The email address of the kind (i.e., an individual, an organization, a location or a group), specified using fully qualified mailto: URI scheme RFC6068.
     This property corresponds to the addition by geoDCAT-AP v3.0.0, however, with an raised obligation level.</rdfs:comment>
+        <rdfs:label xml:lang="en">email</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.rfc-editor.org/rfc/rfc6068"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e183"/>
@@ -3081,6 +3018,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">The phone number of the kind (i.e., an individual, an organization, a location or a group), specified using fully qualified tel: URI scheme RFC3966.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">phone</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.rfc-editor.org/rfc/rfc3966"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e563"/>
@@ -3092,6 +3030,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">A web site of the kind., i.e., of an individual, an organization, a location or a group.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">URL</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e605"/>
         <vs:term_status>stable</vs:term_status>
@@ -3102,6 +3041,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The name of the city of the address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">city</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e999"/>
         <vs:term_status>stable</vs:term_status>
@@ -3112,6 +3052,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The affiliation of the kind, i.e., of an individual, an organization, a location or a group.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">affiliation</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1077"/>
         <vs:term_status>stable</vs:term_status>
@@ -3122,6 +3063,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The postal code of an address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">postal code</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1126"/>
         <vs:term_status>stable</vs:term_status>
@@ -3132,6 +3074,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The administrative area of an address. Depending on the country, this corresponds to a province, a county, a region, or a state.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">administrative area</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1157"/>
         <vs:term_status>stable</vs:term_status>
@@ -3142,6 +3085,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The street name and civic number of the address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">street address</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vcard-rdf/#d4e1218"/>
         <vs:term_status>stable</vs:term_status>
@@ -3153,6 +3097,7 @@
         <rdfs:comment xml:lang="en">The technical encoding format of the delivered content within the distribution.
     It SHOULD be expressed using a character set name defined in the IANA character sets register.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">character encoding</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/2011/content#characterEncoding"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/character-sets/character-sets.xhtml"/>
@@ -3161,6 +3106,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/adms#Identifier">
         <rdfs:comment xml:lang="en">This is based on the UN/CEFACT Identifier class.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Identifier"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-adms/#identifier"/>
@@ -3176,6 +3122,7 @@
     This property is an addition by mobilityDCAT-AP.
 
     For Dataset, This property may be used as an additional identifier, besides dct:identifier.This property may be referring to a dedicated, EU-wide identifier system of NAP datasets, to be introduced in the future, or other identifier systems such as DataCite, DOI, or W3ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">other identifier</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.doi.org/"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/adms#identifier"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-identifier"/>
@@ -3187,8 +3134,9 @@
     <rdf:Description rdf:about="http://www.w3.org/ns/adms#sample">
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <rdfs:comment xml:lang="en">A sample of the delivered content, using the same conditions (e.g., the same format and licence) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.
+        <rdfs:comment xml:lang="en">A sample of the delivered content, using the same conditions (e.g., the same format and license) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.
     In DCAT-AP v3.0.0, there is a property adms:sample under class Dataset, with class Distribution as the range. This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">sample</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.sample"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-adms/#adms-sample"/>
@@ -3200,6 +3148,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">The status of the distribution in the context of maturity lifecycle.
     It must take one of the values Completed, Deprecated, Under Development, Withdrawn. A corresponding controlled vocabulary is provided.</rdfs:comment>
+        <rdfs:label xml:lang="en">status</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-status"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/ns/legacy_adms#status"/>
         <vs:term_status>stable</vs:term_status>
@@ -3223,7 +3172,7 @@
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Catalogue"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog"/>
         <vs:term_status>stable</vs:term_status>
-        <skos:scopeNote xml:lang="en">For this entity the following properties are defined: &quot;dataset (dcat:dataset)&quot;, &quot;description (dct:description)&quot;, &quot;geographical coverage (dct:spatial)&quot;, &quot;has part (dcat:hasPart)&quot;, &quot;homepage (foaf:homepage)&quot;, &quot;identifier (dct:identifier)&quot;, &quot;language (dct:language)&quot;, &quot;licence (dct:licence)&quot;, &quot;modification date (dct:modified)&quot;, &quot;other identifier (adms:identifier)&quot;, &quot;publisher (dct:publisher)&quot;, &quot;record (dcat:record)&quot;, &quot;release date (dct:issued)&quot;, &quot;themes (dcat:themeTaxonomy)&quot;, &quot;title (dct:title)&quot;.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">For this entity the following properties are defined: &quot;dataset (dcat:dataset)&quot;, &quot;description (dct:description)&quot;, &quot;geographical coverage (dct:spatial)&quot;, &quot;has part (dcat:hasPart)&quot;, &quot;homepage (foaf:homepage)&quot;, &quot;identifier (dct:identifier)&quot;, &quot;language (dct:language)&quot;, &quot;license (dct:license)&quot;, &quot;modification date (dct:modified)&quot;, &quot;other identifier (adms:identifier)&quot;, &quot;publisher (dct:publisher)&quot;, &quot;record (dcat:record)&quot;, &quot;release date (dct:issued)&quot;, &quot;themes (dcat:themeTaxonomy)&quot;, &quot;title (dct:title)&quot;.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
         <rdfs:comment xml:lang="en">A description of a metadata entry in the mobility data portal, referring to one dataset and its distributions published on the portal.</rdfs:comment>
@@ -3263,7 +3212,7 @@
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">For the context of mobility data portals, it can be expected that all datasets have one or more distributions. Thus, there must be at least one instance of class Distribution related to one dataset. This is in contrast to DCAT-AP v3.0.0, which allows for datasets without distributions.
-    For this entity the following properties are defined: &quot;access url (dcat:accessURL)&quot;, &quot;application layer protocol (mobilitydcatap:applicationLayerProtocol)&quot;, &quot;applicable legislation (dcatap:applicableLegislation)&quot;, &quot;character encoding (cnt:characterEncoding)&quot;, &quot;communication method (mobilitydcatap:communicationMethod)&quot;, &quot;data format notes (mobilitydcatap:dataFormatNotes)&quot;, &quot;description (dct:description)&quot;, &quot;documentation (foaf:page)&quot;, &quot;download url (dcat:downloadURL)&quot;, &quot;format (dct:format)&quot;, &quot;language (dct:language)&quot;, &quot;licence (dct:license)&quot;, &quot;linked schemas (dct:conformsTo)&quot;, &quot;mobility data standard (mobilitydcatap:mobilityDataStandard)&quot;, &quot;modification date (dct:modified)&quot;, &quot;release date (dct:issued)&quot;, &quot;rights (dct:rights)&quot;, &quot;sample (adms:sample)&quot;, &quot;status (adms:status)&quot;, &quot;temporal coverage (dct:temporal)&quot;, &quot;title (dct:title)&quot;.</skos:scopeNote>
+    For this entity the following properties are defined: &quot;access url (dcat:accessURL)&quot;, &quot;application layer protocol (mobilitydcatap:applicationLayerProtocol)&quot;, &quot;applicable legislation (dcatap:applicableLegislation)&quot;, &quot;character encoding (cnt:characterEncoding)&quot;, &quot;communication method (mobilitydcatap:communicationMethod)&quot;, &quot;data format notes (mobilitydcatap:dataFormatNotes)&quot;, &quot;description (dct:description)&quot;, &quot;documentation (foaf:page)&quot;, &quot;download url (dcat:downloadURL)&quot;, &quot;format (dct:format)&quot;, &quot;language (dct:language)&quot;, &quot;license (dct:license)&quot;, &quot;linked schemas (dct:conformsTo)&quot;, &quot;mobility data standard (mobilitydcatap:mobilityDataStandard)&quot;, &quot;modification date (dct:modified)&quot;, &quot;release date (dct:issued)&quot;, &quot;rights (dct:rights)&quot;, &quot;sample (adms:sample)&quot;, &quot;status (adms:status)&quot;, &quot;temporal coverage (dct:temporal)&quot;, &quot;title (dct:title)&quot;.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL">
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -3444,6 +3393,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/dqv#QualityAnnotation">
         <rdfs:comment xml:lang="en">An annotation about any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Data Owner.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quality Annotation</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#QualityMeasurement"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-dqv/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation"/>
@@ -3465,6 +3415,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/locn#Address">
         <rdfs:comment xml:lang="en">A postal address used for agent information.</rdfs:comment>
+        <rdfs:label xml:lang="en">Address (Core Location)</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Address"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(CoreLocation)"/>
         <vs:term_status>stable</vs:term_status>
@@ -3485,6 +3436,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <rdfs:comment xml:lang="en">The postal address of the agent. 
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">address</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/locn#address"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent.</skos:scopeNote>
@@ -3494,6 +3446,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The country of an address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
@@ -3504,6 +3457,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The administrative area of an Address of the Agent. Depending on the country, this corresponds to a province, a county, a region, or a state.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">administrative area</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
@@ -3522,6 +3476,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The postal code of an address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label>postal code</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/locn#postCode"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
@@ -3532,6 +3487,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The name of the city of the address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">city</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/locn#postName"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
@@ -3542,20 +3498,34 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The street name and civic number of the address.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">street address</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Address (Core Location).</skos:scopeNote>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
+        <dcam:domainIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
+        <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">For Assessment, this property indicates the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information is provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.
+
+    For Quality Annotation, this property contains any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.
+    Textual information should be provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/annotation-model/"/>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/annotation-vocab/#hasbody"/>
+        <vs:term_status>stable</vs:term_status>
+        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Assessment and Quality Annotation. </skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasTarget">
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:comment xml:lang="en">The target of the quality annotation, referring back to the dataset being described.
     It is the inverse property of dqv:hasQualityAnnotation for class Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">quality annotation target</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-quality-description"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/annotation-vocab/#hastarget"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <vs:term_status>deprecated</vs:term_status>
-        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Quality Annotations. </skos:scopeNote>
+        <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is deprecated. </skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
         <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.
@@ -3571,6 +3541,7 @@
         <dcam:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/org#Organization"/>
         <rdfs:comment xml:lang="en">The affiliation of the agent. This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">affiliation</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-org/#org:memberOf"/>
         <vs:term_status>stable</vs:term_status>
@@ -3607,6 +3578,7 @@
         <dcam:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The first name of the agent. To be used if the agent is of type person, see 11. Agent Types, Agent Roles and Contact Information.</rdfs:comment>
+        <rdfs:label xml:lang="en">first name</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/#term_firstName"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
         <vs:term_status>stable</vs:term_status>
@@ -3626,6 +3598,7 @@
         <dcam:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">The email address of the agent, specified using fully qualified mailto: URI scheme RFC6068. This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">email</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.rfc-editor.org/rfc/rfc6068"/>
@@ -3662,6 +3635,7 @@
         <dcam:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">The phone number of the agent, specified using fully qualified tel: URI scheme RFC3966. This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">phone</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/phone"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <rdfs:seeAlso rdf:resource="https://www.rfc-editor.org/rfc/rfc3966"/>
@@ -3680,6 +3654,7 @@
         <dcam:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The surname of the agent. To be used if the agent is of type person, see 11. Agent Types, Agent Roles and Contact Information.</rdfs:comment>
+        <rdfs:label xml:lang="en">surname</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/#term_surname"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
         <vs:term_status>stable</vs:term_status>
@@ -3690,6 +3665,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">The Web site of the agent.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">URL</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/#term_workplaceHomepage"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
@@ -3698,6 +3674,7 @@
     <rdf:Description rdf:about="https://w3id.org/mobilitydcat-ap#Assessment">
         <rdfs:comment xml:lang="en">An assessment procedure by an external organisation. This organisation may be a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance with the applicable Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies and installed individually in each Member State.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">Assessment</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://napcore.eu/national-bodies-3/"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">The information is optional and needed for the documentation of the assessment procedure. It may be an internal information, only visible for assessment organisations or other authorised users.
@@ -3707,6 +3684,7 @@
         <rdfs:comment xml:lang="en">The mobility data standard applied for the delivered content. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange.
     For this entity the following properties are defined: &quot;conforms to (dct:conformsTo)&quot;, &quot;title (dct:title)&quot;, &quot;version (dcat:version)&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">Mobility Data Standard</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard"/>
         <vs:term_status>stable</vs:term_status>
     </rdf:Description>
@@ -3716,6 +3694,7 @@
         <rdfs:comment xml:lang="en">The transmitting channel, i.e., the Application Layer Protocol, of the distribution.
     A corresponding controlled vocabulary is provided.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">application layer protocol</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-application-layer-protocol"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"/>
         <vs:term_status>stable</vs:term_status>
@@ -3726,6 +3705,7 @@
         <dcam:rangeIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
         <rdfs:comment xml:lang="en">This property MAY refer to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [NAPCORE-NB] and installed individually in each Member State. The property MAY point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online. The difference to the property dqv:hasQualityAnnotation is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">assessment result</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://napcore.eu/national-bodies/"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Dataset.</skos:scopeNote>
@@ -3736,6 +3716,7 @@
         <rdfs:comment xml:lang="en">Indicates for dynamically provided distributions, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode.
     A corresponding controlled vocabulary is provided.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">communication method</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-communication-method"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#communicationMethod"/>
         <vs:term_status>stable</vs:term_status>
@@ -3746,6 +3727,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">Any additional information about the format of the delivered content within the distribution in a textual format.This property can be repeated for parallel language versions of the data format notes - see 12. Accessibility and Multilingual Aspects.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">data format notes</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#dataFormatNotes"/>
         <vs:term_status>stable</vs:term_status>
@@ -3757,6 +3739,7 @@
         <rdfs:comment xml:lang="en">The georeferencing method used in the delivered content.
     A corresponding controlled vocabulary is provided, denoting commonly used georeferencing methods for mobility data.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">georeferencing method</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-georeferencing-method"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Dataset.</skos:scopeNote>
@@ -3766,6 +3749,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property is deprecated.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">grammar</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <vs:term_status>deprecated</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is deprecated.</skos:scopeNote>
@@ -3777,6 +3761,7 @@
     Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets on timetables.
     A corresponding controlled vocabulary is provided.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">intended information service</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-intended-information-service"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service"/>
@@ -3793,6 +3778,7 @@
     A corresponding controlled vocabulary is provided, listing common mobility data standards. At least one value from this controlled vocabulary is required. If no suitable standard is found in this vocabulary, the &quot;other&quot; entry should be used.
     Optionally, a new individual instance of class mobilitydcatap:MobilityDataStandard can be provided. This instance might be used to (a) reference a mobility data standard that is not listed in the controlled vocabulary; or (b) provide additional information on an applied mobility data standard (even if listed in the controlled vocabulary), such as version or schema details. See the Wiki page for a code example with a reference to a mobility data standard (listed in the controlled vocabulary), and detailed information via an individual instance of class mobilitydcatap:MobilityDataStandard.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">mobility data standard</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-data-standard"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
@@ -3813,6 +3799,7 @@
     For Dataset Series, this property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the dataset series. A theme is important for data seekers who are interested in a particular type of data content. It is recommended that the theme does not change among datasets in the collection, i.e., the theme of the dataset series should be equal to the theme of each dataset in the collection.
     A corresponding controlled vocabulary is provided.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">mobility theme</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-keyword"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-theme"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-theme"/>
@@ -3829,6 +3816,7 @@
     For all modes, the property should also indicate if the data content relates to the EU’s trans-European transport network.
     A corresponding controlled vocabulary is provided, denoting commonly used road and infrastructure network classes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">network coverage</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-georeferencing-method"/>
         <rdfs:seeAlso rdf:resource="https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#networkCoverage"/>
@@ -3840,6 +3828,7 @@
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">This property is deprecated.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">schema</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <vs:term_status>deprecated</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this property is deprecated.</skos:scopeNote>
@@ -3850,6 +3839,7 @@
         <rdfs:comment xml:lang="en">The transport mode that is covered by the delivered content.
     A corresponding controlled vocabulary is provided, denoting commonly used transport modes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
+        <rdfs:label xml:lang="en">transport mode</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-transport-mode"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#transportMode"/>
         <vs:term_status>stable</vs:term_status>

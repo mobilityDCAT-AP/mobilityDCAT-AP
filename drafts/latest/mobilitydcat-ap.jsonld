@@ -290,11 +290,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"
   }, {
-    "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument"
+    "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument"
   }, {
-    "@id" : "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenceDocument"
+    "@id" : "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenseDocument"
   }, {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument"
   } ],
@@ -303,7 +303,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "This property is used to reference an applicable (standard) licence via an IRI, so a data user can assess the license conditions in machine- and human-readable formats, before using the data.\r\n    Via an instance of this class, a reference to a standard or a organisation-specific license can be given. For standard licenses, a Controlled Vocabulary is provided.\r\n    See the Wiki page on Rights and Licenses for further guidance.\r\n    This specification does not impose any additional requirements to properties for this entity."
+    "@value" : "This property is used to reference an applicable (standard) license via an IRI, so a data user can assess the license conditions in machine- and human-readable formats, before using the data.\r\n    Via an instance of this class, a reference to a standard or a organisation-specific license can be given. For standard licenses, a Controlled Vocabulary is provided.\r\n    See the Wiki page on Rights and Licenses for further guidance.\r\n    This specification does not impose any additional requirements to properties for this entity."
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
     "@id" : "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
@@ -414,7 +414,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-license-document"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement"
   }, {
@@ -569,10 +569,6 @@
     "@id" : "https://semiceu.github.io/GeoDCAT-AP/releases/"
   }, {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#created"
-  } ],
-  "http://www.w3.org/2002/07/owl#deprecated" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "deprecated"
@@ -770,10 +766,6 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf"
   } ],
-  "http://www.w3.org/2002/07/owl#deprecated" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "deprecated"
   } ],
@@ -799,10 +791,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isVersionOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#deprecated" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "deprecated"
@@ -907,10 +895,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : " For Catalogue, this property refers to the licence under which the Catalogue can be used or reused.\r\n\r\n    For Distribution, it refers to the licence under which the distribution is made available. This should be a reference to a concrete (standard) licence.\r\n    A controlled vocabulary is provided."
+    "@value" : " For Catalogue, this property refers to the license under which the Catalogue can be used or reused.\r\n\r\n    For Distribution, it refers to the license under which the distribution is made available. This should be a reference to a concrete (standard) license.\r\n    A controlled vocabulary is provided."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"
   }, {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license"
   } ],
@@ -1052,7 +1040,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/rights"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-license"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/"
   } ],
@@ -1263,12 +1251,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "For Agent, refers to the nature of the agent.\r\n    A controlled vocabulary is provided.\r\n\r\n    For Right Statement, it is an indication of the conditions if any contracts, licences and/or are applied for the use of the distribution. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset.\r\n    The values can be logically mapped with the property dct:identifier from class Licence Document, denoting a concrete standard license. For example, if the property dct:identifier is referring to standard licence \"CC BY 4.0\", the property dct:type can be given the value \"Licence provided, free of charge\"."
+    "@value" : "For Agent, refers to the nature of the agent.\r\n    A controlled vocabulary is provided.\r\n\r\n    For Right Statement, it is an indication of the conditions if any contracts, licenses and/or are applied for the use of the distribution. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a license has to be agreed on to use a dataset.\r\n    The values can be logically mapped with the property dct:identifier from class License Document, denoting a concrete standard license. For example, if the property dct:identifier is referring to standard license \"CC BY 4.0\", the property dct:type can be given the value \"License provided, free of charge\"."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/type"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#licence-document-standard-licence"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#license-document-standard-license"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-conditions-for-access-and-usage"
   }, {
@@ -1343,17 +1331,7 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/dcam/domainIncludes" : [ {
-    "@id" : "http://purl.org/dc/terms/RightsStatement"
-  } ],
-  "http://purl.org/dc/dcam/rangeIncludes" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "For Right Statement, this property MAY describes in a textual form any additional access, usage or licensing information, besides other information under classes dct:RightsStatement and dct:LicenseDocument. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects.\r\n    This property corresponds to the addition by [GEODCAT-AP-v2.0.0].\r\n\r\n    NOTE: Usage of rdfs:label for class Licence Document is deprecated as of v3.0.0. "
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects"
   }, {
@@ -1362,14 +1340,14 @@
     "@id" : "https://www.w3.org/TR/rdf-schema/#ch_label"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
-    "@value" : "stable"
+    "@value" : "deprecated"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "In mobilityDCAT-AP, this is an optional property to be used for Rights Statements. It is deprecated for License Document."
+    "@value" : "In mobilityDCAT-AP, this property is deprecated as of v3.0.0, for use with both Rights Statement and License Document."
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
-    "@id" : "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+    "@id" : "http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"
   } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
@@ -1549,7 +1527,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "This class corresponds to the addition by geoDCAT-AP v3.0.0.\r\n    For this entity the following properties are defivcard:street-addressed: \"administrative area (vcard:region)\", \"city (vcard:locality)\", \"country (vcard:country-name)\", \"postal code (vcard:postal-code)\", and \"street address (vcard:street-address)\"."
+    "@value" : "This class corresponds to the addition by geoDCAT-AP v3.0.0.\r\n    For this entity the following properties are defined: \"administrative area (vcard:region)\", \"city (vcard:locality)\", \"country (vcard:country-name)\", \"postal code (vcard:postal-code)\", and \"street address (vcard:street-address)\"."
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
     "@id" : "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
@@ -2092,7 +2070,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A sample of the delivered content, using the same conditions (e.g., the same format and licence) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.\r\n    In DCAT-AP v3.0.0, there is a property adms:sample under class Dataset, with class Distribution as the range. This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset."
+    "@value" : "A sample of the delivered content, using the same conditions (e.g., the same format and license) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.\r\n    In DCAT-AP v3.0.0, there is a property adms:sample under class Dataset, with class Distribution as the range. This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2196,7 +2174,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "For this entity the following properties are defined: \"dataset (dcat:dataset)\", \"description (dct:description)\", \"geographical coverage (dct:spatial)\", \"has part (dcat:hasPart)\", \"homepage (foaf:homepage)\", \"identifier (dct:identifier)\", \"language (dct:language)\", \"licence (dct:licence)\", \"modification date (dct:modified)\", \"other identifier (adms:identifier)\", \"publisher (dct:publisher)\", \"record (dcat:record)\", \"release date (dct:issued)\", \"themes (dcat:themeTaxonomy)\", \"title (dct:title)\"."
+    "@value" : "For this entity the following properties are defined: \"dataset (dcat:dataset)\", \"description (dct:description)\", \"geographical coverage (dct:spatial)\", \"has part (dcat:hasPart)\", \"homepage (foaf:homepage)\", \"identifier (dct:identifier)\", \"language (dct:language)\", \"license (dct:license)\", \"modification date (dct:modified)\", \"other identifier (adms:identifier)\", \"publisher (dct:publisher)\", \"record (dcat:record)\", \"release date (dct:issued)\", \"themes (dcat:themeTaxonomy)\", \"title (dct:title)\"."
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
     "@id" : "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
@@ -2300,7 +2278,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "For the context of mobility data portals, it can be expected that all datasets have one or more distributions. Thus, there must be at least one instance of class Distribution related to one dataset. This is in contrast to DCAT-AP v3.0.0, which allows for datasets without distributions.\r\n    For this entity the following properties are defined: \"access url (dcat:accessURL)\", \"application layer protocol (mobilitydcatap:applicationLayerProtocol)\", \"applicable legislation (dcatap:applicableLegislation)\", \"character encoding (cnt:characterEncoding)\", \"communication method (mobilitydcatap:communicationMethod)\", \"data format notes (mobilitydcatap:dataFormatNotes)\", \"description (dct:description)\", \"documentation (foaf:page)\", \"download url (dcat:downloadURL)\", \"format (dct:format)\", \"language (dct:language)\", \"licence (dct:license)\", \"linked schemas (dct:conformsTo)\", \"mobility data standard (mobilitydcatap:mobilityDataStandard)\", \"modification date (dct:modified)\", \"release date (dct:issued)\", \"rights (dct:rights)\", \"sample (adms:sample)\", \"status (adms:status)\", \"temporal coverage (dct:temporal)\", \"title (dct:title)\"."
+    "@value" : "For the context of mobility data portals, it can be expected that all datasets have one or more distributions. Thus, there must be at least one instance of class Distribution related to one dataset. This is in contrast to DCAT-AP v3.0.0, which allows for datasets without distributions.\r\n    For this entity the following properties are defined: \"access url (dcat:accessURL)\", \"application layer protocol (mobilitydcatap:applicationLayerProtocol)\", \"applicable legislation (dcatap:applicableLegislation)\", \"character encoding (cnt:characterEncoding)\", \"communication method (mobilitydcatap:communicationMethod)\", \"data format notes (mobilitydcatap:dataFormatNotes)\", \"description (dct:description)\", \"documentation (foaf:page)\", \"download url (dcat:downloadURL)\", \"format (dct:format)\", \"language (dct:language)\", \"license (dct:license)\", \"linked schemas (dct:conformsTo)\", \"mobility data standard (mobilitydcatap:mobilityDataStandard)\", \"modification date (dct:modified)\", \"release date (dct:issued)\", \"rights (dct:rights)\", \"sample (adms:sample)\", \"status (adms:status)\", \"temporal coverage (dct:temporal)\", \"title (dct:title)\"."
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
     "@id" : "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
@@ -3091,15 +3069,13 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/oa#hasBody",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
     "@id" : "http://www.w3.org/ns/dqv#QualityAnnotation"
   }, {
     "@id" : "https://w3id.org/mobilitydcat-ap#Assessment"
   } ],
   "http://purl.org/dc/dcam/rangeIncludes" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  }, {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3143,16 +3119,12 @@
   }, {
     "@id" : "https://www.w3.org/TR/annotation-vocab/#hastarget"
   } ],
-  "http://www.w3.org/2002/07/owl#deprecated" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "deprecated"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "In mobilityDCAT-AP, this is an optional property to be used for Quality Annotations. "
+    "@value" : "In mobilityDCAT-AP, this is deprecated. "
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
     "@id" : "http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED"
@@ -3460,7 +3432,7 @@
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/primaryTopic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
     "@id" : "http://www.w3.org/ns/dcat#CatalogRecord"
   } ],
@@ -3575,7 +3547,7 @@
   "@id" : "https://napcore.eu/",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
+  "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/mobilitydcat-ap#",
@@ -3595,7 +3567,7 @@
   }, {
     "@id" : "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"
   }, {
-    "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/"
+    "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0"
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3693,24 +3665,21 @@
     "@value" : "mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/mobilitydcat-ap/releases/3.0.0/"
+    "@id" : "https://w3id.org/mobilitydcat-ap/releases/3.0.0"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "mobilityDCAT-AP"
   } ],
-  "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
-    "@id" : "https://w3id.org/mobilitydcat-ap/releases/1.1.0/"
-  } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://w3id.org/mobilitydcat-ap/releases/1.1.0/"
+    "@id" : "https://w3id.org/mobilitydcat-ap/releases/1.1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/mobilitydcat-ap/releases/3.0.0/"
+    "@id" : "https://w3id.org/mobilitydcat-ap/releases/3.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 3.0.0"
+    "@value" : "Version 3.0.0 - Introduces breaking changes: see changelog."
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -3720,14 +3689,14 @@
     "@id" : "https://w3id.org/mobilitydcat-ap#"
   } ],
   "http://www.w3.org/ns/adms#prev" : [ {
-    "@id" : "https://w3id.org/mobilitydcat-ap/releases/1.1.0/"
+    "@id" : "https://w3id.org/mobilitydcat-ap/releases/1.1.0"
   } ],
   "http://www.w3.org/ns/adms#status" : [ {
     "@id" : "http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"
   } ],
   "http://www.w3.org/ns/adms#versionNotes" : [ {
     "@language" : "en",
-    "@value" : "Major semantic release of mobilityDCAT-AP. See Change Log for concrete changes applied."
+    "@value" : "Major semantic release of mobilityDCAT-AP. See changelog for concrete changes applied."
   } ],
   "http://www.w3.org/ns/dcat#distribution" : [ {
     "@id" : "_:genid3"
