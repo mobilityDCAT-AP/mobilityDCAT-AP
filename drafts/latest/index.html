@@ -1013,12 +1013,23 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Validation Guidance</h2>
 
-<p>SHACL validation files for mobilityDCAT-AP are available at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/shaclShapes">this Github subfolder</a>:
-  <a href="./shaclShapes/mobilitydcat-ap-shacl.ttl"><code>mobilitydcat-ap-shacl.ttl</code></a> (basic validation) and
-  <a href="./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl"><code>mobilitydcat-ap-shacl-ranges.ttl</code></a> (range constraints).
-  A full validation toolkit with Docker, Python scripts and test cases is available at the 
-  <a href="https://github.com/mobilityDCAT-AP/validation">dedicated validation repository</a>.</p>
-<p>Further guidance can be found in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-4:-Validating-mobilityDCAT%E2%80%90AP-via-SHACL">validation section of the Wikipage</a>.</p>
+<p>SHACL validation files for mobilityDCAT-AP are available at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/shaclShapes">this Github subfolder</a>. It  contains the following files:
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl"><code>mobilitydcat-ap_shacl_shapes.ttl</code></a> (cardinality / nodeKind constraints (import + deltas over DCAT-AP 3.0.1)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_ranges.ttl"><code>mobilitydcat-ap_shacl_ranges.ttl</code></a> (sh:class / nodeKind range constraints (import + deltas)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_imports.ttl"><code>mobilitydcat-ap_shacl_imports.ttl</code></a> (owl:imports for base vocabularies; pulls in DCAT-AP 3.0.1).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_mdr_vocabularies.ttl"><code>mobilitydcat-ap_mdr_vocabularies.ttl</code></a> (controlled-vocabulary (skos:inScheme) constraints).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_mdr_deprecateduris.ttl"><code>mobilitydcat-ap_mdr_deprecateduris.ttl</code></a> (sh:Warning shapes for properties deprecated in v3.0.0 (Appendix A.2)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_mdr_imports.ttl"><code>mobilitydcat-ap_shacl_mdr_imports.ttl</code></a> (owl:imports of the mobility controlled vocabularies).</li>
+</section>
+  
+
+<!-- mobilityDCAT-AP Enterprise Architect files -->
+
+<section id="eap-files" class="appendix">
+
+<h2>mobilityDCAT-AP Enterprise Architect files</h2>
+
+<p>Enterprise Architect files describing the mobilityDCAT-AP data model are available at <a href="./enterpriseArchitectFiles">this Github subfolder</a>.</p>
 </section>
   
 
