@@ -37,7 +37,7 @@ mobilitydcatap: a voaf:Vocabulary,
   dct:conformsTo dcatap:,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements>,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap>,
-    <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> ;
+    <https://semiceu.github.io/DCAT-AP/releases/3.0.0> ;
   dct:created "2026-06-17"^^xsd:date ;
   dct:creator [ a foaf:Group ;
       foaf:name "NAPCORE SWG 4.4" ;
@@ -77,16 +77,15 @@ mobilitydcatap: a voaf:Vocabulary,
     foaf: , 
     eli: ;
   rdfs:comment "mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance."@en ;
-  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
-  owl:backwardCompatibleWith <https://w3id.org/mobilitydcat-ap/releases/1.1.0/>;
-  owl:priorVersion <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
-  owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
-  owl:versionInfo "Version 3.0.0"@en ;
+  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/3.0.0> ;
+  owl:priorVersion <https://w3id.org/mobilitydcat-ap/releases/1.1.0> ;
+  owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/3.0.0> ;
+  owl:versionInfo "Version 3.0.0 - Introduces breaking changes: see changelog."@en ;
   skos:altLabel "mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
   adms:last mobilitydcatap: ;
-  adms:prev <https://w3id.org/mobilitydcat-ap/releases/1.1.0/> ;
+  adms:prev <https://w3id.org/mobilitydcat-ap/releases/1.1.0> ;
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
-  adms:versionNotes "Major semantic release of mobilityDCAT-AP. See Change Log for concrete changes applied."@en ;
+  adms:versionNotes "Major semantic release of mobilityDCAT-AP. See changelog for concrete changes applied."@en ;
   dcat:distribution [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>,
         <http://www.w3.org/ns/formats/data/JSON-LD> ;
@@ -192,7 +191,7 @@ vcard:Address rdf:type owl:Class ;
     rdfs:comment  "A postal address used for contact point information."@en  ;
     rdfs:label "Address (vCard)"@en ;
     skos:scopeNote """This class corresponds to the addition by geoDCAT-AP v3.0.0.
-    For this entity the following properties are defivcard:street-addressed: "administrative area (vcard:region)", "city (vcard:locality)", "country (vcard:country-name)", "postal code (vcard:postal-code)", and "street address (vcard:street-address)"."""@en ;
+    For this entity the following properties are defined: "administrative area (vcard:region)", "city (vcard:locality)", "country (vcard:country-name)", "postal code (vcard:postal-code)", and "street address (vcard:street-address)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1292> ,
@@ -235,16 +234,16 @@ adms:Identifier rdf:type owl:Class ;
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument
 dct:LicenseDocument rdf:type owl:Class ;
     rdfs:comment "A legal document, e.g., a concrete license, giving official permission to do something with a resource."@en ;
-    skos:scopeNote """This property is used to reference an applicable (standard) licence via an IRI, so a data user can assess the license conditions in machine- and human-readable formats, before using the data.
+    skos:scopeNote """This property is used to reference an applicable (standard) license via an IRI, so a data user can assess the license conditions in machine- and human-readable formats, before using the data.
     Via an instance of this class, a reference to a standard or a organisation-specific license can be given. For standard licenses, a Controlled Vocabulary is provided.
     See the Wiki page on Rights and Licenses for further guidance.
     This specification does not impose any additional requirements to properties for this entity."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument> ,
-                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenceDocument> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenceDocument> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument> ,
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenseDocument> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license> ,
                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Location
@@ -287,7 +286,7 @@ dct:RightsStatement rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#RightsStatement> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-license-document> ,
                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard
@@ -338,7 +337,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 ### https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog
 dcat:Catalog rdf:type owl:Class ;
     rdfs:comment """A concrete mobility data portal, i.e, a web portal, where mobility-related datasets and their distributions are described via metadata and discoverable for data users."""@en ;
-    skos:scopeNote """For this entity the following properties are defined: "dataset (dcat:dataset)", "description (dct:description)", "geographical coverage (dct:spatial)", "has part (dcat:hasPart)", "homepage (foaf:homepage)", "identifier (dct:identifier)", "language (dct:language)", "licence (dct:licence)", "modification date (dct:modified)", "other identifier (adms:identifier)", "publisher (dct:publisher)", "record (dcat:record)", "release date (dct:issued)", "themes (dcat:themeTaxonomy)", "title (dct:title)"."""@en ;
+    skos:scopeNote """For this entity the following properties are defined: "dataset (dcat:dataset)", "description (dct:description)", "geographical coverage (dct:spatial)", "has part (dcat:hasPart)", "homepage (foaf:homepage)", "identifier (dct:identifier)", "language (dct:language)", "license (dct:license)", "modification date (dct:modified)", "other identifier (adms:identifier)", "publisher (dct:publisher)", "record (dcat:record)", "release date (dct:issued)", "themes (dcat:themeTaxonomy)", "title (dct:title)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog> ,
@@ -386,7 +385,7 @@ dcat:DatasetSeries rdf:type owl:Class ;
 dcat:Distribution rdf:type owl:Class ;
     rdfs:comment """A distribution describes the data formats and communication methods for a dataset. There may be one or multiple distributions for one dataset. For example, the same data set (e.g. static parking information for truck drivers) can be provided in different ways e.g. as downloadable zip file or as XML using a REST web service. These are two distributions based on one dataset."""@en ;
     skos:scopeNote """For the context of mobility data portals, it can be expected that all datasets have one or more distributions. Thus, there must be at least one instance of class Distribution related to one dataset. This is in contrast to DCAT-AP v3.0.0, which allows for datasets without distributions.
-    For this entity the following properties are defined: "access url (dcat:accessURL)", "application layer protocol (mobilitydcatap:applicationLayerProtocol)", "applicable legislation (dcatap:applicableLegislation)", "character encoding (cnt:characterEncoding)", "communication method (mobilitydcatap:communicationMethod)", "data format notes (mobilitydcatap:dataFormatNotes)", "description (dct:description)", "documentation (foaf:page)", "download url (dcat:downloadURL)", "format (dct:format)", "language (dct:language)", "licence (dct:license)", "linked schemas (dct:conformsTo)", "mobility data standard (mobilitydcatap:mobilityDataStandard)", "modification date (dct:modified)", "release date (dct:issued)", "rights (dct:rights)", "sample (adms:sample)", "status (adms:status)", "temporal coverage (dct:temporal)", "title (dct:title)"."""@en ;
+    For this entity the following properties are defined: "access url (dcat:accessURL)", "application layer protocol (mobilitydcatap:applicationLayerProtocol)", "applicable legislation (dcatap:applicableLegislation)", "character encoding (cnt:characterEncoding)", "communication method (mobilitydcatap:communicationMethod)", "data format notes (mobilitydcatap:dataFormatNotes)", "description (dct:description)", "documentation (foaf:page)", "download url (dcat:downloadURL)", "format (dct:format)", "language (dct:language)", "license (dct:license)", "linked schemas (dct:conformsTo)", "mobility data standard (mobilitydcatap:mobilityDataStandard)", "modification date (dct:modified)", "release date (dct:issued)", "rights (dct:rights)", "sample (adms:sample)", "status (adms:status)", "temporal coverage (dct:temporal)", "title (dct:title)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution> ,
@@ -620,7 +619,8 @@ foaf:workplaceHomepage a rdf:Property,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ###   https://www.w3.org/TR/annotation-vocab/#hasbody
-oa:hasBody a rdf:Property ; # mixed range (Resource or Literal); intentionally untyped as Object/DatatypeProperty
+oa:hasBody a rdf:Property ,
+    owl:ObjectProperty ;
     rdfs:comment """For Assessment, this property indicates the result of the latest assessment procedure, in form of a URL linking to further details or results. Alternatively, textual information is provided using the Embedded Textual Body construction of the Web Annotation Data Model, which allows to specify text formats and languages which might be relevant for multilingual purposes.
 
     For Quality Annotation, this property contains any quality aspects regarding the delivered content, in form of a URL linking to further details or results, or textual information.
@@ -630,8 +630,7 @@ oa:hasBody a rdf:Property ; # mixed range (Resource or Literal); intentionally u
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     dcam:domainIncludes mobilitydcatap:Assessment ,
                         dqv:QualityAnnotation ;
-    dcam:rangeIncludes rdfs:Resource ,
-                       rdfs:Literal ;
+    dcam:rangeIncludes rdfs:Resource ;
     rdfs:seeAlso <https://www.w3.org/TR/annotation-vocab/#hasbody> ,
                 <https://www.w3.org/TR/annotation-model/> .
 
@@ -988,7 +987,7 @@ mobilitydcatap:grammar a owl:ObjectProperty ;
 ###  http://www.w3.org/ns/adms#sample
 adms:sample a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """A sample of the delivered content, using the same conditions (e.g., the same format and licence) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.
+    rdfs:comment """A sample of the delivered content, using the same conditions (e.g., the same format and license) as the regular disctribution. A sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set.
     In DCAT-AP v3.0.0, there is a property adms:sample under class Dataset, with class Distribution as the range. This implies that all mandatory properties for a distribution, e.g., the applied Mobility Data Standard, must be applied for a sample. To simplify the description of the sample, mobilityDCAT-AP recommends to describe the sample via a property under class Distribution, instead under class Dataset."""@en ;
     rdfs:label "sample"@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distribution."@en ;
@@ -1180,11 +1179,10 @@ mobilitydcatap:schema a owl:ObjectProperty ;
 ###   http://www.w3.org/ns/oa#hasTarget
 oa:hasTarget a rdf:Property,
     owl:ObjectProperty ;
-    owl:deprecated true ;
     rdfs:comment """The target of the quality annotation, referring back to the dataset being described.
     It is the inverse property of dqv:hasQualityAnnotation for class Dataset."""@en ;
     rdfs:label "quality annotation target"@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Quality Annotations. "@en ;
+    skos:scopeNote "In mobilityDCAT-AP, this is deprecated. "@en ;
     vs:term_status "deprecated" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED> ;
     dcam:domainIncludes dqv:QualityAnnotation ;
@@ -1334,8 +1332,8 @@ dct:type a owl:ObjectProperty ;
     rdfs:comment """For Agent, refers to the nature of the agent.
     A controlled vocabulary is provided.
 
-    For Right Statement, it is an indication of the conditions if any contracts, licences and/or are applied for the use of the distribution. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a licence has to be agreed on to use a dataset.
-    The values can be logically mapped with the property dct:identifier from class Licence Document, denoting a concrete standard license. For example, if the property dct:identifier is referring to standard licence "CC BY 4.0", the property dct:type can be given the value "Licence provided, free of charge"."""@en ;
+    For Right Statement, it is an indication of the conditions if any contracts, licenses and/or are applied for the use of the distribution. The conditions are declared on an aggregated level: whether a free and unrestricted use is possible, a contract has to be concluded and/or a license has to be agreed on to use a dataset.
+    The values can be logically mapped with the property dct:identifier from class License Document, denoting a concrete standard license. For example, if the property dct:identifier is referring to standard license "CC BY 4.0", the property dct:type can be given the value "License provided, free of charge"."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Agent, and it is a mandatory property to be used for Rights Statement."@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -1345,7 +1343,7 @@ dct:type a owl:ObjectProperty ;
     rdfs:seeAlso <http://purl.org/dc/terms/type> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-publisher-type> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-conditions-for-access-and-usage> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#licence-document-standard-licence> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#license-document-standard-license> .
  
 	   
 ###   http://purl.org/dc/terms/issued
@@ -1435,7 +1433,6 @@ dct:identifier a owl:DatatypeProperty ;
 
 ###   http://purl.org/dc/terms/created
 dct:created rdf:type owl:DatatypeProperty ;
-    owl:deprecated true ;
     rdfs:comment """This property is deprecated."""@en ;
     rdfs:label "creation date"@en ;
     skos:scopeNote "In mobilityDCAT-AP, this property is deprecated. "@en ;
@@ -1501,19 +1498,13 @@ vcard:organization-name rdf:type owl:DatatypeProperty ;
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .	
 
 ###  http://www.w3.org/2000/01/rdf-schema#label
-rdfs:label rdf:type owl:DatatypeProperty ;
-    rdfs:comment """For Right Statement, this property MAY describes in a textual form any additional access, usage or licensing information, besides other information under classes dct:RightsStatement and dct:LicenseDocument. This property can be repeated for parallel language versions of the name - see § 8. Accessibility and Multilingual Aspects.
-    This property corresponds to the addition by [GEODCAT-AP-v2.0.0].
-
-    NOTE: Usage of rdfs:label for class Licence Document is deprecated as of v3.0.0. """@en ;
-    skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Rights Statements. It is deprecated for License Document."@en ;
-    vs:term_status "stable" ;
-    adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    dcam:domainIncludes dct:RightsStatement ;
-    dcam:rangeIncludes rdfs:Literal ;
+rdfs:label
+    skos:scopeNote """In mobilityDCAT-AP, this property is deprecated as of v3.0.0, for use with both Rights Statement and License Document."""@en ;
+    vs:term_status "deprecated" ;
+    adms:status <http://publications.europa.eu/resource/dataset/concept-status/DEPRECATED> ;
     rdfs:seeAlso <https://www.w3.org/TR/rdf-schema/#ch_label> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#accessibility-and-multilingual-aspects> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/> .			   
+                <https://semiceu.github.io/GeoDCAT-AP/releases/> .		   
 		   
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
@@ -1630,7 +1621,6 @@ dct:hasVersion a owl:ObjectProperty ;
 
 ### http://purl.org/dc/terms/isPartOf
 dct:isPartOf a owl:ObjectProperty ;
-    owl:deprecated true ;
     rdfs:comment """This property is deprecated, being an inverse property to dct:hasPart. This adheres to the rule of DCAT-AP v3 not to use the inverse of properties."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this property is deprecated"@en ;
     vs:term_status "deprecated" ;
@@ -1641,7 +1631,6 @@ dct:isPartOf a owl:ObjectProperty ;
 
 ### http://purl.org/dc/terms/isVersionOf
 dct:isVersionOf a owl:ObjectProperty ;
-    owl:deprecated true ;
     rdfs:comment """This property is deprecated, being an inverse property to dcat:hasVersion. This adheres to the rule of DCAT-AP v3 not to use the inverse of properties."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this property is deprecated."@en ;
     vs:term_status "deprecated" ;
@@ -1680,9 +1669,9 @@ dct:language a owl:ObjectProperty ;
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license
 dct:license a owl:ObjectProperty ;
-    rdfs:comment """ For Catalogue, this property refers to the licence under which the Catalogue can be used or reused.
+    rdfs:comment """ For Catalogue, this property refers to the license under which the Catalogue can be used or reused.
 
-    For Distribution, it refers to the licence under which the distribution is made available. This should be a reference to a concrete (standard) licence.
+    For Distribution, it refers to the license under which the distribution is made available. This should be a reference to a concrete (standard) license.
     A controlled vocabulary is provided."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Catalogue and Distribution."@en ;
     vs:term_status "stable" ;
@@ -1691,7 +1680,7 @@ dct:license a owl:ObjectProperty ;
                         dcat:Distribution ;
     dcam:rangeIncludes dct:LicenseDocument ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license> .
 
 ### http://purl.org/dc/terms/modified
 dct:modified a owl:DatatypeProperty ;
@@ -1744,7 +1733,7 @@ dct:rights a owl:ObjectProperty ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes dct:RightsStatement ;  
     rdfs:seeAlso <http://purl.org/dc/terms/rights> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-license> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 
