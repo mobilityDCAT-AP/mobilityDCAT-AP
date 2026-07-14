@@ -3679,7 +3679,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 3.0.0 - Introduces breaking changes: see changelog."
+    "@value" : "3.0.0"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",

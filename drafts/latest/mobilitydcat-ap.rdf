@@ -57,7 +57,7 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0"/>
         <rdfs:label xml:lang="en">mobilityDCAT-AP</rdfs:label>
         <owl:priorVersion rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0"/>
-        <owl:versionInfo xml:lang="en">Version 3.0.0 - Introduces breaking changes: see changelog.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">3.0.0</owl:versionInfo>
         <skos:altLabel xml:lang="en">mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe</skos:altLabel>
         <adms:last rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
         <adms:prev rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0"/>
