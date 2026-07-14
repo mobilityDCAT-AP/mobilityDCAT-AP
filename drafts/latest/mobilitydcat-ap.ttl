@@ -80,7 +80,7 @@ mobilitydcatap: a voaf:Vocabulary,
   rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/3.0.0> ;
   owl:priorVersion <https://w3id.org/mobilitydcat-ap/releases/1.1.0> ;
   owl:versionIRI <https://w3id.org/mobilitydcat-ap/releases/3.0.0> ;
-  owl:versionInfo "Version 3.0.0 - Introduces breaking changes: see changelog."@en ;
+  owl:versionInfo "3.0.0"@en ;
   skos:altLabel "mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe"@en ;
   adms:last mobilitydcatap: ;
   adms:prev <https://w3id.org/mobilitydcat-ap/releases/1.1.0> ;
