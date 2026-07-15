@@ -450,11 +450,11 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 
 </section>
 
-<!-- Licence Document --> 
+<!-- License Document --> 
 
 <section id="class-licence-document">
 
-<h3>Licence Document</h3>
+<h3>License Document</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-licence-document.html"></div>
 
@@ -1025,7 +1025,7 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Serialisation Files</h2>
 
-<p>Serialisation files the allow for IT implementations of mobilityDCAT-AP are available as RDF/XML, Turtle, and JSON-LD syntaxes at <a href="./">this Github subfolder</a>.</p>
+<p>Serialisation files the allow for IT implementations of mobilityDCAT-AP are available as RDF/XML, Turtle, and JSON-LD syntaxes at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases">this Github subfolder</a>.</p>
 
 </section>
 
@@ -1036,12 +1036,23 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Validation Guidance</h2>
 
-<p>SHACL validation files for mobilityDCAT-AP are available at <a href="./shaclShapes">this Github subfolder</a>:
-  <a href="./shaclShapes/mobilitydcat-ap-shacl.ttl"><code>mobilitydcat-ap-shacl.ttl</code></a> (basic validation) and
-  <a href="./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl"><code>mobilitydcat-ap-shacl-ranges.ttl</code></a> (range constraints).
-  A full validation toolkit with Docker, Python scripts and test cases is available at the 
-  <a href="https://github.com/mobilityDCAT-AP/validation">dedicated validation repository</a>.</p>
-<p>Further guidance can be found in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-4:-Validating-mobilityDCAT%E2%80%90AP-via-SHACL">validation section of the Wikipage</a>.</p>
+<p>SHACL validation files for mobilityDCAT-AP are available at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/shaclShapes">this Github subfolder</a>. It  contains the following files:
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl"><code>mobilitydcat-ap_shacl_shapes.ttl</code></a> (cardinality / nodeKind constraints (import + deltas over DCAT-AP 3.0.1)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_ranges.ttl"><code>mobilitydcat-ap_shacl_ranges.ttl</code></a> (sh:class / nodeKind range constraints (import + deltas)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_imports.ttl"><code>mobilitydcat-ap_shacl_imports.ttl</code></a> (owl:imports for base vocabularies; pulls in DCAT-AP 3.0.1).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_mdr_vocabularies.ttl"><code>mobilitydcat-ap_mdr_vocabularies.ttl</code></a> (controlled-vocabulary (skos:inScheme) constraints).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_mdr_deprecateduris.ttl"><code>mobilitydcat-ap_mdr_deprecateduris.ttl</code></a> (sh:Warning shapes for properties deprecated in v3.0.0 (Appendix A.2)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_mdr_imports.ttl"><code>mobilitydcat-ap_shacl_mdr_imports.ttl</code></a> (owl:imports of the mobility controlled vocabularies).</li>
+</section>
+  
+
+<!-- mobilityDCAT-AP Enterprise Architect files -->
+
+<section id="eap-files" class="appendix">
+
+<h2>mobilityDCAT-AP Enterprise Architect files</h2>
+
+<p>Enterprise Architect files describing the mobilityDCAT-AP data model are available at <a href="./enterpriseArchitectFiles">this Github subfolder</a>.</p>
 </section>
   
 
@@ -1247,9 +1258,9 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/90">#90</a>.</li>
   <li>Property <a href="#mobility-data-standard-schema"><code>mobilitydcatap:schema</code></a> of class Mobility Data Standard is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
-  <li>Property <a href="#licence-document-standard-licence"><code>dct:identifier</code></a> of class Licence Document is deprecated.
+  <li>Property <a href="#license-document-standard-license"><code>dct:identifier</code></a> of class License Document is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
-  <li>Property <a href="#licence-document-licence-text"><code>rdfs:label</code></a> of class Licence Document is deprecated.
+  <li>Property <a href="#licence-document-licence-text"><code>rdfs:label</code></a> of class License Document is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
    <li>Property <a href="#rights-statement-additional-information-for-access-and-usage"><code>rdfs:label</code></a> of class Rights Statementt is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
@@ -1304,7 +1315,7 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
 <ul>
   <li><a href="#controlled-vocabularies-to-be-used">Frequency:</a> The <a href="https://w3id.org/mobilitydcat-ap/update-frequency">original controlled vocabulary "update frequency" by mobilityDCAT-AP </a> is deprecated, as it is not needed any longer. Only the EU Authority Table "Frequency" is now used, as it now contains all necessary values. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>.</li>
   <li><a href="#controlled-vocabularies-to-be-used">Mobility Theme:</a> Added references to EC Delegated Regulations via additional <code>dcatap:applicableLegislation</code> properties for all values used in this vocabulary. This allows for an automated tagging of EC Regulations to individual datasets. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/8">#8</a>.</li>
-  <li><a href="#controlled-vocabularies-to-be-used">Conditions for access and usage:</a> Value list extended to allow for constellations such as "Licence provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> </li>
+  <li><a href="#controlled-vocabularies-to-be-used">Conditions for access and usage:</a> Value list extended to allow for constellations such as "License provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> </li>
 </ul>  
 <li>Ongoing refinements and additions in <a href="#wikipage">mobilityDCAT-AP Wikipage</a> </li>
 </ul>
