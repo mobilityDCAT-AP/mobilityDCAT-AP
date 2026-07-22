@@ -25,14 +25,14 @@
   owl:imports <https://www.w3.org/ns/dcat2.ttl> ;
   owl:imports <https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl> ;
   owl:imports <http://xmlns.com/foaf/spec/index.rdf> ;
-  owl:imports <https://www.w3.org/ns/legacy_locn.ttl> ;
+  owl:imports <https://www.w3.org/ns/locn.ttl> ;
   owl:imports <https://www.w3.org/ns/org.ttl> ;
-  owl:imports <https://www.w3.org/ns/legacy_adms.ttl> ;
-  owl:imports <https://www.w3.org/2006/vcard/ns.ttl> ;
+  owl:imports <http://www.w3.org/ns/adms.ttl> ;
+  owl:imports <http://www.w3.org/2006/vcard/ns.ttl> ;
   owl:imports <https://www.w3.org/ns/dqv.ttl> ;
   owl:imports <https://www.w3.org/ns/oa.ttl> ;
   owl:imports <https://www.w3.org/2011/content.rdf> ;
-  owl:imports <https://www.w3.org/2006/time.ttl> ;
+  owl:imports <http://www.w3.org/2006/time.ttl> ;
   owl:imports <https://schema.org/version/30.0/schemaorg-current-https.ttl> ;
   owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
   owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
