@@ -35,7 +35,7 @@
   owl:imports <https://www.w3.org/2006/time.ttl> ;
   owl:imports <https://schema.org/version/30.0/schemaorg-current-https.ttl> ;
   owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
-  owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
+  owl:imports <https://www.w3.org/ns/prov-o.ttl> ;
   # DCAT-AP's own deprecateduris.ttl, pulls in the upstream (PeriodOfTime,
   # Dataset versioning, adms:status) deprecations so they are not restated
   owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/deprecateduris.ttl> .
