@@ -24,7 +24,7 @@
   owl:imports <https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/voc/r5r.ttl> ;
   owl:imports <https://www.w3.org/ns/dcat2.ttl> ;
   owl:imports <https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl> ;
-  owl:imports <https://xmlns.com/foaf/spec/index.rdf> ;
+  owl:imports <http://xmlns.com/foaf/spec/index.rdf> ;
   owl:imports <https://www.w3.org/ns/legacy_locn.ttl> ;
   owl:imports <https://www.w3.org/ns/org.ttl> ;
   owl:imports <https://www.w3.org/ns/legacy_adms.ttl> ;
@@ -35,7 +35,7 @@
   owl:imports <https://www.w3.org/2006/time.ttl> ;
   owl:imports <https://schema.org/version/30.0/schemaorg-current-https.ttl> ;
   owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
-  owl:imports <https://www.w3.org/ns/prov-o.ttl> ;
+  owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
   # DCAT-AP's own deprecateduris.ttl, pulls in the upstream (PeriodOfTime,
   # Dataset versioning, adms:status) deprecations so they are not restated
   owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/deprecateduris.ttl> .
