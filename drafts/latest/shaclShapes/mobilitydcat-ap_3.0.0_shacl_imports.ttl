@@ -20,6 +20,8 @@
 #-------------------------------------------------------------------------
 <https://w3id.org/mobilitydcat-ap/imports>
   rdf:type owl:Ontology ;
+  # DCAT-AP vocabulary. 3.0.1 did not republish the vocabulary, so 3.0.0 is current.
+  owl:imports <https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/voc/r5r.ttl> ;
   owl:imports <https://www.w3.org/ns/dcat2.ttl> ;
   owl:imports <https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl> ;
   owl:imports <https://xmlns.com/foaf/spec/index.rdf> ;
@@ -32,7 +34,6 @@
   owl:imports <https://www.w3.org/2011/content.rdf> ;
   owl:imports <https://www.w3.org/2006/time.ttl> ;
   owl:imports <https://schema.org/version/30.0/schemaorg-current-https.ttl> ;
-owl:imports <http://xmlns.com/foaf/spec/index.rdf> ;
   owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
   owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
   # DCAT-AP's own deprecateduris.ttl, pulls in the upstream (PeriodOfTime,
