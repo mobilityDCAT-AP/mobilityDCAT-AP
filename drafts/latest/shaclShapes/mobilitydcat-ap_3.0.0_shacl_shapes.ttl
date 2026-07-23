@@ -55,10 +55,11 @@
 #   - PeriodOfTime start/endDate: the "Temporal Literal" datatype equals
 #     DCAT-AP's DateOrDateTimeDataType (date/dateTime/gYear/gYearMonth),
 #     so it is inherited; no PeriodOfTime shape is restated here.
-#   - CatalogueRecord dct:conformsTo: spec allows 0..* but DCAT-AP caps
-#     it at maxCount 1; the import inherits that cap (mobilityDCAT-AP's
-#     looser cardinality cannot be enforced via import + deltas). Open
-#     item for discussion.
+#   - CatalogueRecord dct:conformsTo: the mobilityDCAT-AP spec allows 0..*,
+#     but the DCAT-AP 3.0.1 SHACL caps it at maxCount 1, and that cap is
+#     inherited through the import (a looser cardinality cannot be relaxed
+#     by a delta). DCAT-AP's SHACL is not aligned with the text in their
+#     ReSpec page here; to be reported to the DCAT-AP maintainers.
 #=========================================================================
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
   a owl:Ontology , adms:Asset ;
