@@ -47,7 +47,9 @@
 #   deprecateduris.ttl; base vocabulary owl:imports -> imports.ttl.
 #
 # NOTES:
-#   - Location locn:geometry: range locn:Geometry is inherited from
+#   - Property locn:geometry changed range to locn:Geometry in DCAT-AP 3.0.1
+#     (cf. DCAT-AP issues 177/247). The same is applied to mobilityDCAT-AP,
+#     but the corresponding shape is not restated here.
 #     DCAT-AP 3.0.1 (DCAT-AP changelog issues 177/247 made the same
 #     change), so no mobility shape is restated here.
 #   - PeriodOfTime start/endDate: the "Temporal Literal" datatype equals
