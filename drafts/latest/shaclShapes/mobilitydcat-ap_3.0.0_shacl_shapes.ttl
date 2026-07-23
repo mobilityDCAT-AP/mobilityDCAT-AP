@@ -861,21 +861,13 @@
   sh:name "Quality Annotation (mobilityDCAT-AP)"@en ;
   sh:description "An annotation about quality aspects of the delivered content."@en ;
   sh:property
-    :QualityAnnotation_Shape_hasBody ,
-    :QualityAnnotation_Shape_hasTarget .
+    :QualityAnnotation_Shape_hasBody .
 :QualityAnnotation_Shape_hasBody
   a sh:PropertyShape ;
   sh:path oa:hasBody ; sh:maxCount 1 ;
   sh:name "quality annotation resource"@en ;
   sh:description "URL or Embedded Textual Body with quality details (0..1)."@en ;
   sh:message "Quality annotation resource can appear at most once"@en ;
-  sh:severity sh:Info .
-:QualityAnnotation_Shape_hasTarget
-  a sh:PropertyShape ;
-  sh:path oa:hasTarget ; sh:maxCount 1 ;
-  sh:name "quality annotation target"@en ;
-  sh:description "Target of the quality annotation, referring back to the dataset (0..1)."@en ;
-  sh:message "Quality annotation target can appear at most once"@en ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
 # RIGHTS STATEMENT SHAPE  (no DCAT-AP shape)

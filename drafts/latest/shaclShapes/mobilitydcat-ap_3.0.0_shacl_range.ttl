@@ -320,15 +320,11 @@
   sh:targetClass dqv:QualityAnnotation ;
   sh:name "Quality Annotation (mobilityDCAT-AP) - Range Constraints"@en ;
   sh:property
-    :QualityAnnotation_Shape_hasBody_range ,
-    :QualityAnnotation_Shape_hasTarget_range .
+    :QualityAnnotation_Shape_hasBody_range .
+  
 :QualityAnnotation_Shape_hasBody_range
   a sh:PropertyShape ;
   sh:path oa:hasBody ; sh:nodeKind sh:BlankNodeOrIRI ;
-  sh:severity sh:Info .
-:QualityAnnotation_Shape_hasTarget_range
-  a sh:PropertyShape ;
-  sh:path oa:hasTarget ; sh:nodeKind sh:BlankNodeOrIRI ; sh:class dcat:Dataset ;
   sh:severity sh:Info .
 #---------------------------------------------------------------------------
 # RIGHTS STATEMENT  (conditions-for-access CV -> nodeKind IRI)
