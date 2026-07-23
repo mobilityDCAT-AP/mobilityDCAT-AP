@@ -7,15 +7,6 @@
 # mobilityDCAT-AP v3.0.0 -- recommended controlled-vocabulary imports.
 # Extends DCAT-AP 3.0.1. Populates https://w3id.org/mobilitydcat-ap/codelist_imports.
 # Mirrors the DCAT-AP 3.0.1 mdr_imports.ttl design.
-#
-# NOTE on resolution: per DCAT-AP, these owl:imports are "not transitive". The ITB
-# validator loads each listed URL directly but does NOT follow imports-of-imports.
-# Therefore this file lists ONLY the mobility-specific vocabularies. The EU NAL
-# codelists (language, frequency, file-type, media-type, data-theme, country,
-# continent, place, corporate-body, etc.) are inherited by loading DCAT-AP's own
-# mdr_imports.ttl as a sibling import in the ITB validation profile -- not restated
-# here, and not chained via owl:imports (which would not resolve transitively).
-#
 # Deprecated CVs are intentionally NOT imported (changelog / Phase 8-9):
 #   - update-frequency : dropped in favour of the EU Frequency NAL table (issue #11).
 #   - grammar          : mobilitydcatap:grammar deprecated (issue #90).
