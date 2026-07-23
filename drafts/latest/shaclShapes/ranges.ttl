@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#> .
 @prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
@@ -50,11 +50,11 @@
 #   downloadURL; Location geometry (locn:Geometry - DCAT-AP 3.0.1
 #   changelog issues 177/247).
 #===========================================================================
-<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges>
   a owl:Ontology ;
-  owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.1/html/shacl/range.ttl> ;
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/range.ttl> ;
   owl:versionInfo "3.0.0" ;
-  dct:modified "2026-06-28"^^xsd:date ;
+  dct:modified "2026-07-23"^^xsd:date ;
   dct:title "mobilityDCAT-AP 3.0.0 SHACL - Range Constraints"@en ;
   dct:description "Adds mobilityDCAT-AP-specific node-kind / class range constraints, extending DCAT-AP 3.0.1. CV-code and external-IRI references use sh:nodeKind sh:IRI; CV membership is checked in the MDR file. DCAT-AP ranges are inherited via owl:imports and not restated."@en .
 #---------------------------------------------------------------------------

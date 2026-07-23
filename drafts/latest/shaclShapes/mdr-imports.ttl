@@ -3,15 +3,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 #
-# mobilityDCAT-AP v3.0.0 -- recommended controlled-vocabulary imports.
-# Extends DCAT-AP 3.0.1. Populates https://w3id.org/mobilitydcat-ap/codelist_imports.
+# mobilityDCAT-AP v3.0.0 - applied controlled-vocabulary imports.
+# Extends DCAT-AP 3.0.1. Populates https://w3id.org/mobilitydcat-ap/releases/3.0.0.
 # Mirrors the DCAT-AP 3.0.1 mdr_imports.ttl design.
-# Deprecated CVs are intentionally NOT imported (changelog / Phase 8-9):
-#   - update-frequency : dropped in favour of the EU Frequency NAL table (issue #11).
-#   - grammar          : mobilitydcatap:grammar deprecated (issue #90).
 #
-<https://w3id.org/mobilitydcat-ap/codelist_imports>
+# The grammar CV is intentionally NOT imported: mobilitydcatap:grammar is
+# deprecated (issue #90) and the vocabulary is no longer maintained (spec 10.2.2).
+#
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0>
   rdf:type owl:Ontology ;
   rdfs:label "mobilityDCAT-AP applied controlled-vocabulary imports"@en ;
   dct:title "mobilityDCAT-AP 3.0.0 Applied Controlled-Vocabulary Imports"@en ;

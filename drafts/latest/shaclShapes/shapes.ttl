@@ -1,5 +1,5 @@
-@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
-@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .  
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cnt: <http://www.w3.org/2011/content#> .
@@ -49,9 +49,6 @@
 # NOTES:
 #   - Property locn:geometry changed range to locn:Geometry in DCAT-AP 3.0.1
 #     (cf. DCAT-AP issues 177/247). The same is applied to mobilityDCAT-AP,
-#     but the corresponding shape is not restated here.
-#     DCAT-AP 3.0.1 (DCAT-AP changelog issues 177/247 made the same
-#     change), so no mobility shape is restated here.
 #   - PeriodOfTime start/endDate: the "Temporal Literal" datatype equals
 #     DCAT-AP's DateOrDateTimeDataType (date/dateTime/gYear/gYearMonth),
 #     so it is inherited; no PeriodOfTime shape is restated here.
@@ -61,9 +58,9 @@
 #     by a delta). DCAT-AP's SHACL is not aligned with the text in their
 #     ReSpec page here; to be reported to the DCAT-AP maintainers.
 #=========================================================================
-<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes>
   a owl:Ontology , adms:Asset ;
-  owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/refs/heads/master/releases/3.0.1/html/shacl/shapes.ttl> ;
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/shapes.ttl> ;
   owl:versionInfo "3.0.0" ;
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
   dcatap:availability dcatap:stable ;
@@ -99,7 +96,7 @@
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ,
                <http://www.w3.org/ns/formats/data/Turtle> ;
     dct:title "SHACL Basic Validation (Turtle)"@en ;
-    dcat:downloadURL <https://w3id.org/mobilityDCAT-AP/releases/3.0.0/mobilitydcat-ap_3.0.0_shacl_shapes.ttl> ;
+    dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes.ttl> ;
     dcat:mediaType "text/turtle"^^dct:IMT
   ] .
 #---------------------------------------------------------------------------

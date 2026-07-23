@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------
 # mobilityDCAT-AP 3.0.0 — Ontology imports (extends DCAT-AP 3.0.1)
 #-------------------------------------------------------------------------
-<https://w3id.org/mobilitydcat-ap/imports>
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0>
   rdf:type owl:Ontology ;
   # DCAT-AP vocabulary. 3.0.1 did not republish the vocabulary, so 3.0.0 is current.
   owl:imports <https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/voc/r5r.ttl> ;

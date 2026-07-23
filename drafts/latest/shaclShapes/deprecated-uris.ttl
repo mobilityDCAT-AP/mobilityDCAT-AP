@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mobilitydcat-ap/drafts/latest#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#> .
 @prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -37,7 +37,15 @@
 #   dct:isVersionOf on Dataset is also flagged by DCAT-AP; it is restated
 #   here because it is a mobilityDCAT-AP A.2 item. The overlap is intentional
 #   (a dataset using it draws a warning from both files).
+#     Rights Statement       rdfs:label              (replaced by dct:description)
+#     Quality Annotation     oa:hasTarget            (inverse property)
 #-------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris>
+    a owl:Ontology ;
+    dct:title "Deprecated URIs of mobilityDCAT-AP"@en ;
+    dct:description "Warning shapes for properties deprecated in mobilityDCAT-AP 3.0.0 (spec Appendix A.2)."@en ;
+    owl:versionInfo "3.0.0" .
+
 #--- Catalogue: dct:isPartOf deprecated (inverse of dct:hasPart)
 :CatalogueDeprecation_Shape
     a sh:NodeShape ;

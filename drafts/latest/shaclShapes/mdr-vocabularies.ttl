@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0#> .
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#> .
 @prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -22,14 +22,6 @@
 # :Class_MobilityShapeCV via sh:node. Severity reflects obligation
 # (Violation = mandatory CV in 10.2, Warning = recommended/optional).
 #
-#     network-coverage) and apply the pattern.
-#     use each CV's base IRI (e.g. .../network-coverage). Confirm against
-#     the published controlled-vocabularies repo that each CV's
-#     skos:ConceptScheme IRI is exactly that base IRI (not a versioned or
-#     /scheme-suffixed one). If the scheme IRI differs, sh:hasValue must be
-#     updated to match, or every CV check fails. Verify one CV (e.g.
-#     network-coverage) and apply the pattern.
-#
 # NOT encoded (deprecated in v3): mobilitydcatap:grammar (#90),
 #   dct:identifier on Licence Document (#165).
 # NOT encoded here (external register, no SKOS scheme):
@@ -37,7 +29,7 @@
 #   IRI + skos:Concept is checked in range.ttl; register membership is not
 #   SKOS-checkable here.
 #-------------------------------------------------------------------------
-<https://w3id.org/mobilitydcat-ap/releases/3.0.0#>
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies>
     a owl:Ontology ;
     dct:title "Controlled Vocabulary Constraints of mobilityDCAT-AP"@en ;
     dct:description "Controlled vocabulary constraints on mobility-specific properties expressed by mobilityDCAT-AP in SHACL, extending DCAT-AP 3.0.1."@en ;
