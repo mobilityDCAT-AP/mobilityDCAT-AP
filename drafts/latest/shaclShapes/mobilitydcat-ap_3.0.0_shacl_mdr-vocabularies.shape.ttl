@@ -22,7 +22,7 @@
 # :Class_MobilityShapeCV via sh:node. Severity reflects obligation
 # (Violation = mandatory CV in 10.2, Warning = recommended/optional).
 #
-# >>> VERIFICATION REQUIRED before release: the skos:inScheme values below
+#     network-coverage) and apply the pattern.
 #     use each CV's base IRI (e.g. .../network-coverage). Confirm against
 #     the published controlled-vocabularies repo that each CV's
 #     skos:ConceptScheme IRI is exactly that base IRI (not a versioned or
@@ -31,7 +31,7 @@
 #     network-coverage) and apply the pattern.
 #
 # NOT encoded (deprecated in v3): mobilitydcatap:grammar (#90),
-#   update-frequency CV, dct:identifier on Licence Document (#165).
+#   dct:identifier on Licence Document (#165).
 # NOT encoded here (external register, no SKOS scheme):
 #   geodcatap:referenceSystem points to the OGC EPSG register - node-kind
 #   IRI + skos:Concept is checked in range.ttl; register membership is not

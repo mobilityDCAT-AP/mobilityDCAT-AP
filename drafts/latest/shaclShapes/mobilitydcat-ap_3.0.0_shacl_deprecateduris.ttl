@@ -6,6 +6,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
 #-------------------------------------------------------------------------
 # mobilityDCAT-AP 3.0.0 — Deprecated URIs
 #
@@ -95,6 +97,29 @@
         sh:maxCount 0 ;
         sh:severity sh:Warning ;
         sh:message "rdfs:label on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."@en
+    ] .
+#--- Rights Statement: rdfs:label deprecated (replaced by dct:description)
+:RightsStatementDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Rights Statement deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dct:RightsStatement ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:maxCount 0 ;
+        sh:severity sh:Warning ;
+        sh:message "rdfs:label on dct:RightsStatement is deprecated in mobilityDCAT-AP 3.0.0; use dct:description."@en
+    ] .
+
+#--- Quality Annotation: oa:hasTarget deprecated (inverse of dqv:hasQualityAnnotation)
+:QualityAnnotationDeprecation_Shape
+    a sh:NodeShape ;
+    rdfs:label "Quality Annotation deprecated properties (mobilityDCAT-AP 3.0.0)"@en ;
+    sh:targetClass dqv:QualityAnnotation ;
+    sh:property [
+        sh:path oa:hasTarget ;
+        sh:maxCount 0 ;
+        sh:severity sh:Warning ;
+        sh:message "oa:hasTarget is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dqv:hasQualityAnnotation on the Dataset."@en
     ] .
 #--- Mobility Data Standard: mobilitydcatap:schema deprecated;
 #    owl:versionInfo -> dcat:version (URI migration, mobility class)
