@@ -13,11 +13,11 @@
 #
 <https://w3id.org/mobilitydcat-ap/codelist_imports>
   rdf:type owl:Ontology ;
-  rdfs:label "mobilityDCAT-AP recommended controlled-vocabulary imports"@en ;
-  dct:title "mobilityDCAT-AP 3.0.0 Recommended Controlled-Vocabulary Imports"@en ;
-  dct:description "owl:imports of the mobilityDCAT-AP controlled vocabularies for ITB validation, extending DCAT-AP 3.0.1. EU NAL codelists are inherited via DCAT-AP's mdr_imports.ttl and not restated here."@en ;
+  rdfs:label "mobilityDCAT-AP applied controlled-vocabulary imports"@en ;
+  dct:title "mobilityDCAT-AP 3.0.0 Applied Controlled-Vocabulary Imports"@en ;
+  dct:description "owl:imports of the controlled vocabularies applied by mobilityDCAT-AP 3.0.0 (spec section 10.2): those created and maintained by mobilityDCAT-AP, and those maintained by external organisations."@en ;
   owl:versionInfo "3.0.0" ;
-  dct:modified "2026-06-21"^^xsd:date ;
+  dct:modified "2026-07-23"^^xsd:date ;
   owl:imports <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
   owl:imports <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ;
   owl:imports <https://w3id.org/mobilitydcat-ap/network-coverage> ;
@@ -26,5 +26,17 @@
   owl:imports <https://w3id.org/mobilitydcat-ap/intended-information-service> ;
   owl:imports <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ;
   owl:imports <https://w3id.org/mobilitydcat-ap/communication-method> ;
-  owl:imports <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage>
+  owl:imports <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> ;
+  # Codelists recommended by mobilityDCAT-AP but maintained elsewhere (spec 10.2)
+  owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
+  owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
+  owl:imports <http://publications.europa.eu/resource/authority/language> ;
+  owl:imports <http://publications.europa.eu/resource/authority/distribution-status> ;
+  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
+  owl:imports <http://publications.europa.eu/resource/authority/continent> ;
+  owl:imports <http://publications.europa.eu/resource/authority/country> ;
+  owl:imports <http://publications.europa.eu/resource/authority/place> ;
+  owl:imports <http://publications.europa.eu/resource/authority/corporate-body> ;
+  owl:imports <http://publications.europa.eu/resource/authority/licence> ;
+  owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ;
   .
