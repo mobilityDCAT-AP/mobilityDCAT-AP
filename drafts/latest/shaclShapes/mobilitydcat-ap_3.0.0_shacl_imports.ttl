@@ -4,19 +4,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 #-------------------------------------------------------------------------
 # mobilityDCAT-AP 3.0.0 — Ontology imports (extends DCAT-AP 3.0.1)
-#
-# Provides the imports implicitly required by reusing terms from the base
-# vocabularies in the mobilityDCAT-AP application profile. URLs point to RDF
-# serialisations (Turtle / RDF-XML), since not all ontology IRIs implement
-# content negotiation; the RDF format is required for the ISA testbed (ITB)
-# validator. All URLs verified to return 200 + an RDF content type, and
-# resolved to their final location (no reliance on redirects).
-# Vocabularies follow the namespace table in spec section 5.4. SPDX and PROV
-# are intentionally NOT imported: spdx:Checksum and prov:Activity /
-# prov:Attribution are "not used from DCAT-AP" (see Appendix A.3).
-# ODRL is excluded (as in DCAT-AP): the Concept shape applies to all
-# skos:Concept instances and ODRL's skos:Concepts do not comply.
-# NOTE: locn and adms are served by w3.org under "legacy_" paths.
 #-------------------------------------------------------------------------
 <https://w3id.org/mobilitydcat-ap/imports>
   rdf:type owl:Ontology ;

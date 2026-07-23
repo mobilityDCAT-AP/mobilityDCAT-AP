@@ -12,11 +12,10 @@
 # mobilityDCAT-AP 3.0.0 - Controlled-vocabulary constraints (mobility deltas)
 # Extends DCAT-AP 3.0.1.
 #
-# Encodes ONLY the mobility-specific CV bindings from spec section 10.2.
-# The EU NAL bindings (Frequency, Language, FileType, CorporateBody,
-# Country/Place/Continent, Distribution-Status, ADMS publisher-type, etc.)
-# are inherited by loading DCAT-AP's own mdr-vocabularies.shape.ttl as a
-# sibling in the ITB profile - not restated here.
+# Focuses on the controlled vocabularies recommended in mobilityDCAT-AP
+# (spec section 10.2). Bindings inherited from DCAT-AP (Frequency, Language,
+# FileType, CorporateBody, Country/Place/Continent, Distribution-Status,
+# ADMS publisher-type, etc.) are not restated here.
 #
 # Restriction pattern follows DCAT-AP: a :XxxRestriction NodeShape checks
 # skos:inScheme of the value; bound to a property inside a per-class
