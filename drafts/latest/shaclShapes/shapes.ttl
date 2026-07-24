@@ -846,9 +846,29 @@
   sh:description "Version of the mobility data standard as applied (path changed from owl:versionInfo to dcat:version) (0..1)."@en ;
   sh:message "Version must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
+
+#---------------------------------------------------------------------------
+# IDENTIFIER SHAPE  (no DCAT-AP shape; range of adms:identifier)
+#---------------------------------------------------------------------------
+:Identifier_Shape
+  a sh:NodeShape ;
+  sh:targetClass adms:Identifier ;
+  sh:name "Identifier (mobilityDCAT-AP)"@en ;
+  sh:description "An identifier in a particular context, used as the range of adms:identifier."@en ;
+  sh:property :Identifier_Shape_notation .
+
+:Identifier_Shape_notation
+  a sh:PropertyShape ;
+  sh:path skos:notation ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:Literal ;
+  sh:name "notation"@en ;
+  sh:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype (1..1)."@en ;
+  sh:message "An Identifier must have exactly one skos:notation"@en ;
+  sh:severity sh:Violation .
+
 #---------------------------------------------------------------------------
 # QUALITY ANNOTATION SHAPE  (no DCAT-AP shape; mobility/DQV)
 #---------------------------------------------------------------------------
+
 :QualityAnnotation_Shape
   a sh:NodeShape ;
   sh:targetClass dqv:QualityAnnotation ;
@@ -856,6 +876,7 @@
   sh:description "An annotation about quality aspects of the delivered content."@en ;
   sh:property
     :QualityAnnotation_Shape_hasBody .
+
 :QualityAnnotation_Shape_hasBody
   a sh:PropertyShape ;
   sh:path oa:hasBody ; sh:maxCount 1 ;
