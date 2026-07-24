@@ -470,9 +470,8 @@
   a sh:PropertyShape ;
   sh:path mobilitydcatap:georeferencingMethod ;
   sh:name "georeferencing method"@en ;
-  sh:description "Georeferencing method used in the dataset (0..n)."@en ;
-  sh:message "Georeferencing method must be from the controlled vocabulary"@en ;
-  sh:severity sh:Warning .
+  sh:description "Georeferencing method used in the dataset (0..n)."@en .
+
 :Dataset_Shape_keyword
   a sh:PropertyShape ;
   sh:path dcat:keyword ; sh:nodeKind sh:Literal ;
@@ -482,34 +481,31 @@
   sh:description "Keyword or tag describing the dataset (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."@en ;
   sh:message "Keywords must have valid EU language tags and cannot be empty"@en ;
   sh:severity sh:Warning .
+
 :Dataset_Shape_networkCoverage
   a sh:PropertyShape ;
   sh:path mobilitydcatap:networkCoverage ;
   sh:name "network coverage"@en ;
-  sh:description "Part of the transport network covered by the delivered content (0..n)."@en ;
-  sh:message "Network coverage must be from the controlled vocabulary"@en ;
-  sh:severity sh:Warning .
+  sh:description "Part of the transport network covered by the delivered content (0..n)."@en .
+
 :Dataset_Shape_referenceSystem
   a sh:PropertyShape ;
   sh:path geodcatap:referenceSystem ;
   sh:name "reference system"@en ;
-  sh:description "Spatial reference system used in the dataset (OGC EPSG register). Sub-property of dct:conformsTo. geoDCAT-AP addition (0..n)."@en ;
-  sh:message "Reference system must be from the OGC EPSG register"@en ;
-  sh:severity sh:Warning .
+  sh:description "Spatial reference system used in the dataset (OGC EPSG register). Sub-property of dct:conformsTo. geoDCAT-AP addition (0..n)."@en .
+
 :Dataset_Shape_rightsHolder
   a sh:PropertyShape ;
   sh:path dct:rightsHolder ;
   sh:name "rights holder"@en ;
-  sh:description "Entity that legally owns or holds the rights of the data. geoDCAT-AP addition (not in DCAT-AP Dataset) (0..n)."@en ;
-  sh:message "Rights holder must be a foaf:Agent instance"@en ;
-  sh:severity sh:Warning .
+  sh:description "Entity that legally owns or holds the rights of the data. geoDCAT-AP addition (not in DCAT-AP Dataset) (0..n)."@en .
+
 :Dataset_Shape_transportMode
   a sh:PropertyShape ;
   sh:path mobilitydcatap:transportMode ;
   sh:name "transport mode"@en ;
-  sh:description "Transport mode covered by the delivered content (0..n)."@en ;
-  sh:message "Transport mode must be from the controlled vocabulary"@en ;
-  sh:severity sh:Warning .
+  sh:description "Transport mode covered by the delivered content (0..n)."@en .
+
 # --- OPTIONAL (mobility/geoDCAT-specific) ---
 :Dataset_Shape_assessmentResult
   a sh:PropertyShape ;
@@ -518,6 +514,7 @@
   sh:description "Results from an assessment process by an external organisation (0..1)."@en ;
   sh:message "Assessment result can appear at most once"@en ;
   sh:severity sh:Info .
+
 :Dataset_Shape_identifier
   a sh:PropertyShape ;
   sh:path dct:identifier ; sh:maxCount 1 ; sh:nodeKind sh:Literal ;
@@ -525,20 +522,18 @@
   sh:description "Identifier for the dataset. Restricted to 0..1 in mobilityDCAT-AP (DCAT-AP allows 0..*). SHOULD be the URI from rdf:about."@en ;
   sh:message "Identifier must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
+
 :Dataset_Shape_intendedInformationService
   a sh:PropertyShape ;
   sh:path mobilitydcatap:intendedInformationService ;
   sh:name "intended information service"@en ;
-  sh:description "Information services the data content is intended to support (0..n)."@en ;
-  sh:message "Intended information service must be from the controlled vocabulary"@en ;
-  sh:severity sh:Info .
+  sh:description "Information services the data content is intended to support (0..n)."@en .
+
 :Dataset_Shape_hasQualityAnnotation
   a sh:PropertyShape ;
   sh:path dqv:hasQualityAnnotation ;
   sh:name "quality description"@en ;
-  sh:description "Quality aspects regarding the delivered content. mobility/DQV addition (not in DCAT-AP Dataset) (0..n)."@en ;
-  sh:message "Quality annotation must be a dqv:QualityAnnotation instance"@en ;
-  sh:severity sh:Info .
+  sh:description "Quality aspects regarding the delivered content. mobility/DQV addition (not in DCAT-AP Dataset) (0..n)."@en .
 #---------------------------------------------------------------------------
 # DATASET SERIES SHAPE  (deltas only; Phase 4 new class)
 #  Raises publisher to mandatory; adds EU-language checks on
@@ -556,6 +551,7 @@
     :DatasetSeries_Shape_publisher ,
     :DatasetSeries_Shape_title ,
     :DatasetSeries_Shape_mobilityTheme .
+
 :DatasetSeries_Shape_description
   a sh:PropertyShape ;
   sh:path dct:description ; sh:minCount 1 ; sh:nodeKind sh:Literal ;
@@ -565,6 +561,7 @@
   sh:description "Free-text description of the dataset series (§12)."@en ;
   sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
   sh:severity sh:Violation .
+
 :DatasetSeries_Shape_publisher
   a sh:PropertyShape ;
   sh:path dct:publisher ; sh:minCount 1 ; sh:maxCount 1 ;
@@ -572,6 +569,7 @@
   sh:description "Entity that publishes the dataset series. Raised to mandatory (1..1)."@en ;
   sh:message "Publisher is mandatory. Exactly one publisher must be provided"@en ;
   sh:severity sh:Violation .
+
 :DatasetSeries_Shape_title
   a sh:PropertyShape ;
   sh:path dct:title ; sh:minCount 1 ; sh:nodeKind sh:Literal ;
@@ -581,13 +579,12 @@
   sh:description "Name of the dataset series (§12)."@en ;
   sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
   sh:severity sh:Violation .
+
 :DatasetSeries_Shape_mobilityTheme
   a sh:PropertyShape ;
   sh:path mobilitydcatap:mobilityTheme ;
   sh:name "mobility theme"@en ;
-  sh:description "Mobility-related theme of the dataset series (0..n)."@en ;
-  sh:message "Mobility theme must be from the controlled vocabulary"@en ;
-  sh:severity sh:Info .
+  sh:description "Mobility-related theme of the dataset series (0..n)."@en .
 #---------------------------------------------------------------------------
 # DISTRIBUTION SHAPE  (deltas only)
 #  Raises format, rights to mandatory; adds maxCount on accessURL /
@@ -692,13 +689,13 @@
   sh:description "Direct link to a downloadable file. mobilityDCAT-AP adds maxCount 1 (0..1)."@en ;
   sh:message "Download URL can appear at most once"@en ;
   sh:severity sh:Info .
+
 :Distribution_Shape_sample
   a sh:PropertyShape ;
   sh:path adms:sample ;
   sh:name "sample"@en ;
-  sh:description "Sample of the delivered content. mobilityDCAT-AP places adms:sample on Distribution (0..*)."@en ;
-  sh:message "Sample must be a resource"@en ;
-  sh:severity sh:Info .
+  sh:description "Sample of the delivered content. mobilityDCAT-AP places adms:sample on Distribution (0..*)."@en .
+
 :Distribution_Shape_temporal
   a sh:PropertyShape ;
   sh:path dct:temporal ; sh:maxCount 1 ;
@@ -706,6 +703,7 @@
   sh:description "Time interval when the distribution is facilitated technically. mobilityDCAT-AP addition on Distribution (0..1)."@en ;
   sh:message "Temporal coverage can appear at most once"@en ;
   sh:severity sh:Info .
+
 :Distribution_Shape_title
   a sh:PropertyShape ;
   sh:path dct:title ; sh:nodeKind sh:Literal ;
@@ -832,9 +830,8 @@
   a sh:PropertyShape ;
   sh:path dct:conformsTo ;
   sh:name "conforms to"@en ;
-  sh:description "Reference to the applied mobility data standard and to individual/national/content-specific profiles (range dct:Standard) (0..*)."@en ;
-  sh:message "Conforms to must be a dct:Standard instance"@en ;
-  sh:severity sh:Info .
+  sh:description "Reference to the applied mobility data standard and to individual/national/content-specific profiles (range dct:Standard) (0..*)."@en .
+
 :MobilityDataStandard_Shape_title
   a sh:PropertyShape ;
   sh:path dct:title ; sh:nodeKind sh:Literal ;

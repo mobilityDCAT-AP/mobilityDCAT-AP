@@ -29,12 +29,28 @@ var respecConfig = {
       uri: "./mobilitydcat-ap.jsonld",
     },
     {
-      label: "SHACL basic validation (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap-shacl.ttl",
+      label: "SHACL shapes (Turtle)",
+      uri: "./shaclShapes/shapes.ttl",
     },
     {
       label: "SHACL range constraints (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl",
+      uri: "./shaclShapes/ranges.ttl",
+    },
+    {
+      label: "SHACL controlled-vocabulary constraints (Turtle)",
+      uri: "./shaclShapes/mdr-vocabularies.ttl",
+    },
+    {
+      label: "SHACL deprecated URIs (Turtle)",
+      uri: "./shaclShapes/deprecated-uris.ttl",
+    },
+    {
+      label: "SHACL imports (Turtle)",
+      uri: "./shaclShapes/imports.ttl",
+    },
+    {
+      label: "SHACL codelist imports (Turtle)",
+      uri: "./shaclShapes/mdr-imports.ttl",
     }
     ],
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
