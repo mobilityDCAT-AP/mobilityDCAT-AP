@@ -320,6 +320,7 @@
     :CatalogueRecord_Shape_language ,
     :CatalogueRecord_Shape_listingDate ,
     :CatalogueRecord_Shape_publisher .
+  
 :CatalogueRecord_Shape_language
   a sh:PropertyShape ;
   sh:path dct:language ; sh:minCount 1 ;
@@ -327,14 +328,15 @@
   sh:description "Language of the textual metadata. Raised to mandatory (1..n)."@en ;
   sh:message "Language is mandatory. At least one language must be provided"@en ;
   sh:severity sh:Violation .
+
 :CatalogueRecord_Shape_listingDate
   a sh:PropertyShape ;
   sh:path dct:issued ; sh:minCount 1 ; sh:maxCount 1 ;
-  sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
   sh:name "listing date"@en ;
-  sh:description "Date on which the metadata entry was included in the Catalogue (replaces dct:created). Mandatory (1..1)."@en ;
-  sh:message "Listing date is mandatory. Exactly one xsd:date or xsd:dateTime value must be provided"@en ;
+  sh:description "Date on which the metadata entry was included in the Catalogue (replaces dct:created). Raised to mandatory (1..1); the Temporal Literal datatype is inherited from DCAT-AP's DateOrDateTimeDataType shape."@en ;
+  sh:message "Listing date is mandatory. Exactly one value must be provided"@en ;
   sh:severity sh:Violation .
+
 :CatalogueRecord_Shape_publisher
   a sh:PropertyShape ;
   sh:path dct:publisher ; sh:maxCount 1 ;
@@ -859,7 +861,7 @@
 
 :Identifier_Shape_notation
   a sh:PropertyShape ;
-  sh:path skos:notation ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:Literal ;
+  sh:path skos:notation ; sh:minCount 1 ; sh:nodeKind sh:Literal ;
   sh:name "notation"@en ;
   sh:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype (1..1)."@en ;
   sh:message "An Identifier must have exactly one skos:notation"@en ;
