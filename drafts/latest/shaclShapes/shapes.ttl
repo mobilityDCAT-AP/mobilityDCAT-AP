@@ -362,19 +362,20 @@
   sh:description "The Concept Scheme to which the Concept belongs."@en ;
   sh:message "Concept scheme can appear at most once"@en ;
   sh:severity sh:Info .
-:ConceptScheme_Shape
-  a sh:NodeShape ;
-  sh:targetObjectsOf dcat:themeTaxonomy ;
-  sh:name "Concept Scheme (mobilityDCAT-AP)"@en ;
-  sh:description "A concept scheme listing all potential concepts (renamed from Category Scheme). Adds mandatory title."@en ;
-  sh:property :ConceptScheme_Shape_title .
-:ConceptScheme_Shape_title
-  a sh:PropertyShape ;
-  sh:path dct:title ; sh:minCount 1 ; sh:nodeKind sh:Literal ;
-  sh:name "title"@en ;
-  sh:description "Name of the Concept Scheme. Repeated for parallel language versions (§12)."@en ;
-  sh:message "Title is mandatory. At least one literal must be provided"@en ;
-  sh:severity sh:Violation .
+
+# :ConceptScheme_Shape
+#   a sh:NodeShape ;
+#   sh:targetObjectsOf dcat:themeTaxonomy ;
+#   sh:name "Concept Scheme (mobilityDCAT-AP)"@en ;
+#   sh:description "A concept scheme listing all potential concepts (renamed from Category Scheme). Adds mandatory title."@en ;
+#   sh:property :ConceptScheme_Shape_title .
+# :ConceptScheme_Shape_title
+#   a sh:PropertyShape ;
+#   sh:path dct:title ; sh:minCount 1 ; sh:nodeKind sh:Literal ;
+#   sh:name "title"@en ;
+#   sh:description "Name of the Concept Scheme. Repeated for parallel language versions (§12)."@en ;
+#   sh:message "Title is mandatory. At least one literal must be provided"@en ;
+#   sh:severity sh:Violation .
 #---------------------------------------------------------------------------
 # DATASET SHAPE  (deltas only)
 #  Raises distribution, frequency, spatial, publisher to mandatory; adds
