@@ -718,12 +718,14 @@
   sh:severity sh:Warning .
 #---------------------------------------------------------------------------
 # KIND SHAPE  (no DCAT-AP shape; Phase 6: hasEmail/fn -> 1..1)
+# Targets dcat:contactPoint objects, not the vcard:Kind class, so the
+# obligation applies to contact points regardless of their vCard subtype.
 #---------------------------------------------------------------------------
 :Kind_Shape
   a sh:NodeShape ;
-  sh:targetClass vcard:Kind ;
+  sh:targetObjectsOf dcat:contactPoint ;
   sh:name "Kind (mobilityDCAT-AP)"@en ;
-  sh:description "Contact information following the vCard specification. Properties analogous to geoDCAT-AP v3.0.0 additions."@en ;
+  sh:description "Contact information following the vCard specification, used as the range of dcat:contactPoint. Properties analogous to geoDCAT-AP v3.0.0 additions."@en ;
   sh:property
     :Kind_Shape_email ,
     :Kind_Shape_fn ,
