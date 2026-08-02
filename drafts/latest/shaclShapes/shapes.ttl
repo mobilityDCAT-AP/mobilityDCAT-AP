@@ -655,6 +655,7 @@
   sh:description "Transmitting channel of the distribution (0..1)."@en ;
   sh:message "Application layer protocol can appear at most once"@en ;
   sh:severity sh:Warning .
+
 :Distribution_Shape_description
   a sh:PropertyShape ;
   sh:path dct:description ; sh:nodeKind sh:Literal ;
@@ -664,6 +665,7 @@
   sh:description "Free-text account of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."@en ;
   sh:message "Description must have valid EU language tag, cannot be empty, each language only once"@en ;
   sh:severity sh:Warning .
+
 :Distribution_Shape_characterEncoding
   a sh:PropertyShape ;
   sh:path cnt:characterEncoding ; sh:maxCount 1 ; sh:nodeKind sh:Literal ;
@@ -695,9 +697,11 @@
 
 :Distribution_Shape_sample
   a sh:PropertyShape ;
-  sh:path adms:sample ;
+  sh:path adms:sample ; sh:nodeKind sh:BlankNodeOrIRI ;
   sh:name "sample"@en ;
-  sh:description "Sample of the delivered content. mobilityDCAT-AP places adms:sample on Distribution (0..*)."@en .
+  sh:description "Sample of the delivered content. mobilityDCAT-AP places adms:sample on Distribution (0..*)."@en ;
+  sh:message "Sample must be a blank node or IRI"@en ;
+  sh:severity sh:Info .
 
 :Distribution_Shape_temporal
   a sh:PropertyShape ;
@@ -902,6 +906,7 @@
   sh:property
     :RightsStatement_Shape_type ,
     :RightsStatement_Shape_description .
+  
 :RightsStatement_Shape_type
   a sh:PropertyShape ;
   sh:path dct:type ; sh:minCount 1 ;
@@ -909,6 +914,7 @@
   sh:description "Conditions for access and usage from the mobilityDCAT-AP controlled vocabulary (1..n)."@en ;
   sh:message "Conditions for access and usage is mandatory. At least one value must be provided"@en ;
   sh:severity sh:Violation .
+
 :RightsStatement_Shape_description
   a sh:PropertyShape ;
   sh:path dct:description ; sh:nodeKind sh:Literal ;
