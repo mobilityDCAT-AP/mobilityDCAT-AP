@@ -99,6 +99,7 @@
     dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes.ttl> ;
     dcat:mediaType "text/turtle"^^dct:IMT
   ] .
+
 #---------------------------------------------------------------------------
 # AGENT SHAPE
 # DCAT-AP constrains only foaf:name + dct:type. All properties below are
@@ -119,42 +120,49 @@
     :Agent_Shape_surname ,
     :Agent_Shape_workplaceHomepage .
 :Agent_Shape_address
+  a sh:PropertyShape ;
   sh:path locn:address ; sh:nodeKind sh:BlankNodeOrIRI ; sh:maxCount 1 ;
   sh:name "address"@en ;
   sh:description "The postal address of the Agent. Analogous to a geoDCAT-AP v3.0.0 addition."@en ;
   sh:message "Address must be a blank node or IRI and can appear at most once"@en ;
   sh:severity sh:Info .
 :Agent_Shape_affiliation
+  a sh:PropertyShape ;
   sh:path org:memberOf ; sh:nodeKind sh:BlankNodeOrIRI ; sh:maxCount 1 ;
   sh:name "affiliation"@en ;
   sh:description "Organizational affiliation of the Agent. Analogous to a geoDCAT-AP v3.0.0 addition."@en ;
   sh:message "Affiliation must be a blank node or IRI and can appear at most once"@en ;
   sh:severity sh:Info .
 :Agent_Shape_email
+  a sh:PropertyShape ;
   sh:path foaf:mbox ; sh:nodeKind sh:IRI ; sh:maxCount 1 ;
   sh:name "email"@en ;
   sh:description "The email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]."@en ;
   sh:message "Email must be an IRI using the mailto: scheme and can appear at most once"@en ;
   sh:severity sh:Info .
 :Agent_Shape_firstName
+  a sh:PropertyShape ;
   sh:path foaf:firstName ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "first name"@en ;
   sh:description "If the agent is a person, this property specifies their first name."@en ;
   sh:message "First name must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
 :Agent_Shape_phone
+  a sh:PropertyShape ;
   sh:path foaf:phone ; sh:nodeKind sh:IRI ; sh:maxCount 1 ;
   sh:name "phone"@en ;
   sh:description "The phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. Analogous to a geoDCAT-AP v3.0.0 addition."@en ;
   sh:message "Phone must be an IRI using the tel: scheme and can appear at most once"@en ;
   sh:severity sh:Info .
 :Agent_Shape_surname
+  a sh:PropertyShape ;
   sh:path foaf:surname ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "surname"@en ;
   sh:description "If the agent is a person, this property specifies their surname."@en ;
   sh:message "Surname must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
 :Agent_Shape_workplaceHomepage
+  a sh:PropertyShape ;
   sh:path foaf:workplaceHomepage ; sh:nodeKind sh:IRI ; sh:maxCount 1 ;
   sh:name "workplace homepage"@en ;
   sh:description "The website of the Agent."@en ;
@@ -175,30 +183,35 @@
     :Address_Shape_postName ,
     :Address_Shape_thoroughfare .
 :Address_Shape_adminUnitL1
+  a sh:PropertyShape ;
   sh:path locn:adminUnitL1 ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "country"@en ;
   sh:description "The country of an Address."@en ;
   sh:message "Country must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
 :Address_Shape_adminUnitL2
+  a sh:PropertyShape ;
   sh:path locn:adminUnitL2 ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "administrative area"@en ;
   sh:description "The administrative area of an Address (province, county, region, or state)."@en ;
   sh:message "Administrative area must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
 :Address_Shape_postCode
+  a sh:PropertyShape ;
   sh:path locn:postCode ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "postal code"@en ;
   sh:description "The postal code of an Address."@en ;
   sh:message "Postal code must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
 :Address_Shape_postName
+  a sh:PropertyShape ;
   sh:path locn:postName ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "city"@en ;
   sh:description "The city of an Address."@en ;
   sh:message "City must be a literal and can appear at most once"@en ;
   sh:severity sh:Info .
 :Address_Shape_thoroughfare
+  a sh:PropertyShape ;
   sh:path locn:thoroughfare ; sh:nodeKind sh:Literal ; sh:maxCount 1 ;
   sh:name "street address"@en ;
   sh:description "The street name and civic number of an Address."@en ;
@@ -626,6 +639,7 @@
   sh:description "URL giving access to the Distribution. mobilityDCAT-AP adds maxCount 1 (1..1)."@en ;
   sh:message "Access URL is mandatory. Exactly one must be provided"@en ;
   sh:severity sh:Violation .
+
 :Distribution_Shape_mobilityDataStandard
   a sh:PropertyShape ;
   sh:path mobilitydcatap:mobilityDataStandard ; sh:minCount 1 ;
@@ -633,6 +647,7 @@
   sh:description "Mobility data standard applied for the delivered content. Mandatory, sub-property of dct:conformsTo (1..*)."@en ;
   sh:message "Mobility data standard is mandatory. At least one must be provided"@en ;
   sh:severity sh:Violation .
+
 :Distribution_Shape_format
   a sh:PropertyShape ;
   sh:path dct:format ; sh:minCount 1 ; sh:maxCount 1 ;
@@ -640,6 +655,7 @@
   sh:description "Technical syntax of the delivered content. Raised to mandatory (1..1)."@en ;
   sh:message "Format is mandatory. Exactly one must be provided"@en ;
   sh:severity sh:Violation .
+
 :Distribution_Shape_rights
   a sh:PropertyShape ;
   sh:path dct:rights ; sh:minCount 1 ; sh:maxCount 1 ;
