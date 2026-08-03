@@ -119,6 +119,14 @@ var respecConfig = {
       }
       ]
     },
+    {
+	  key: "Previous version:",
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/" } ]
+	},
+    {
+	  key: "This version:",
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
+	}       
   ],
     wg: "NAPCORE Sub-Working Group (SWG) 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
