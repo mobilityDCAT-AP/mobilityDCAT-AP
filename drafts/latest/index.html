@@ -1215,7 +1215,9 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
     Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
   <li>Property <a href="#dataset-has-version"><code>dcat:hasVersion</code></a> of class Dataset: URI changed from previously <code>dct:hasVersion</code> to <code>dcat:hasVersion</code>.</li>
   <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: 
+    property added (reason: compliance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+  <li>Property <a href="#distribution-rights"><code>dct:rights</code></a> of class Distribution: cardinality relaxed from previously "1..1" to "1..*".</li>
   <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
       "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
   <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
