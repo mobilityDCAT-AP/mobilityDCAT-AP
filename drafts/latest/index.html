@@ -1207,20 +1207,21 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
   
 <li>Properties aligned with the [[DCAT-AP-v3.0.1]] data model:</li>
   <ul>
-  <li>Property <a href="#class-catalogue"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
+  <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
     <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
-  <li>Property <a href="#class-catalogue"><code>dcat:dataset</code></a> of class Catalogue: cardinality relaxed from previously "1..*" to "0..*".</li>
-  <li>Property <a href="#class-catalogue"><code>dct:spatial</code></a> of class Catalogue: label changed from previously "spatial/geographic" to "geographical coverage".</li>
-  <li>Property <a href="#class-dataset"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
+  <li>Property <a href="#catalogue-dataset"><code>dcat:dataset</code></a> of class Catalogue: cardinality relaxed from previously "1..*" to "0..*".</li>
+  <li>Property <a href="#catalogue-geographical-coverage"><code>dct:spatial</code></a> of class Catalogue: label changed from previously "spatial/geographic" to "geographical coverage".</li>
+  <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
     Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
-  <li>Property <a href="#class-dataset"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#class-distribution"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
-  <li>Property <a href="#class-location"><code>locn:geometry</code></a> of class Location: range changed from previously 
+  <li>Property <a href="#dataset-has-version"><code>dcat:hasVersion</code></a> of class Dataset: URI changed from previously <code>dct:hasVersion</code> to <code>dcat:hasVersion</code>.</li>
+  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+  <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
       "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
-  <li>Property <a href="#class-mobility-data-standard"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#class-period-of-time"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
+  <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#datatypes">Temporal Literal</a>.</li>
-  <li>Property <a href="#class-period-of-time"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
+  <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#datatypes">Temporal Literal</a>.</li>
   </ul> 
   
