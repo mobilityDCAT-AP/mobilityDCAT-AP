@@ -228,14 +228,19 @@
   sh:property
     :Assessment_Shape_assessmentDate ,
     :Assessment_Shape_assessmentResult .
+
 :Assessment_Shape_assessmentDate
   a sh:PropertyShape ;
   sh:path dct:issued ; sh:maxCount 1 ;
-  sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+  sh:or ( [ sh:datatype xsd:date ]
+          [ sh:datatype xsd:dateTime ]
+          [ sh:datatype xsd:gYear ]
+          [ sh:datatype xsd:gYearMonth ] ) ;
   sh:name "assessment date"@en ;
   sh:description "The date of the latest assessment procedure."@en ;
-  sh:message "Assessment date must be xsd:date or xsd:dateTime and can appear at most once"@en ;
+  sh:message "Assessment date must be a temporal literal (xsd:date, xsd:dateTime, xsd:gYear or xsd:gYearMonth) and can appear at most once"@en ;
   sh:severity sh:Info .
+
 :Assessment_Shape_assessmentResult
   a sh:PropertyShape ;
   sh:path oa:hasBody ; sh:maxCount 1 ;
