@@ -111,7 +111,7 @@ Information about the dataset series as a free-text description.</p>
 <p>Describes how often the dataset series is updated.</p>
 </td>
 <td valign=top>
-  <p>The frequency of a dataset series is understood differently to the frequency of the dataset in the collection, as declared via property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</p>
+  <p>The frequency of a dataset series is understood differently to the frequency of the dataset in the series, as declared via property <a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a>.</p>
   <p>See the examples no. 5 and 6 in the [[DCAT-AP-v3.0.1-Examples-for-Dataset-Series]].</p>
   <p>A <a href="#vocab-update-frequency">controlled vocabulary</a> is provided.</p>
 </td>
@@ -135,8 +135,8 @@ Information about the dataset series as a free-text description.</p>
 <p>A geographic region that is covered by the dataset series.</p>
 </td>
 <td valign=top>
-  <p>When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in the collection should be part of the spatial coverage of the dataset series. 
-     In that case, the value of the spatial coverage of the dataset series should be as wide as possible. E.g., if datasets in a collection are about different regions in a country, the spatial coverage of the dataset series should note the entire country. 
+  <p>When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset in the series should be part of the spatial coverage of the dataset series. 
+     In that case, the value of the spatial coverage of the dataset series should be as wide as possible. E.g., if datasets in a series are about different regions in a country, the spatial coverage of the dataset series should note the entire country. 
     See also the examples no. 7 and 8 in the [[DCAT-AP-v3.0.1-Examples-for-Dataset-Series]].</p>
   <p></p>
 </td>
@@ -159,7 +159,7 @@ Information about the dataset series as a free-text description.</p>
 <td valign=top>
   <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the dataset series. 
     See the definition of property with the same name <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a> of class Dataset.
-  It is recommended that the theme does not change among datasets in the collection, i.e., the theme of the dataset series should be equal to the theme of each dataset in the collection.</p> 
+  It is recommended that the theme does not change among datasets in the series, i.e., the theme of the dataset series should be equal to the theme of each dataset in the series.</p> 
 </td>
 <td valign=top>
   <p>A corresponding <a href="#vocab-mobility-theme">controlled vocabulary</a> is provided.</p>
@@ -186,7 +186,7 @@ Information about the dataset series as a free-text description.</p>
 <p>The most recent date on which the dataset series was changed or modified.</p>
 </td>
 <td valign=top>
-  <p>This should correspond to the most recent modification date of all datasets in the collection, 
+  <p>This should correspond to the most recent modification date of all datasets in the series, 
     as declared via property <a href="#dataset-modification-date"><code>dct:modified</code></a>.</p>
    <p> See also the example no. 11 in the [[DCAT-AP-v3.0.1-Examples-for-Dataset-Series]].</p></td>
 <td valign=top>
@@ -203,14 +203,15 @@ Information about the dataset series as a free-text description.</p>
 <p><a href="#class-agent"><code>foaf:Agent</code></a></p>
 </td>
 <td valign=top>
-<p>1..1</p>
+<p>0..1</p>
 </td>
 <td valign=top>
 <p>An entity (company and person) that publishes the dataset series. This entity is also responsible for ensuring the coherency of the dataset series.</p>
 </td>
 <td valign=top>
-  <p>The publisher of the dataset series may or may be not the publisher of all datasets, as declared via property <a href="#dataset-publisher"><code>dct:publisher</code></a>. E.g. a digital archive could take over the publishing of older datasets in the series.</p>
-  <p>The obligation of this property is raised to “mandatory”, comparing to [[DCAT-AP-v3.0.1]].</p>
+  <p>The publisher of the dataset series may be (but does not need to be) the publisher of datasets in the series, as declared via property <a href="#dataset-publisher"><code>dct:publisher</code></a>. 
+    An example for a case where the publisher is different from the publisher of datasets in the series:
+    a digital archive could take over the publishing of older datasets in the series.</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries.publisher">E</a></p>
@@ -234,7 +235,7 @@ Information about the dataset series as a free-text description.</p>
 </td>
 <td valign=top>
   <p>The moment when the dataset series was established as a managed resource. 
-    This might correspond to the earliest release date of the dataset in the collection, as declared via property <a href="#dataset-release-date"><code>dct:issued</code></a>.
+    This might correspond to the earliest release date of the dataset in the series, as declared via property <a href="#dataset-release-date"><code>dct:issued</code></a>.
      See also the examples no. 9 and 10 in the [[DCAT-AP-v3.0.1-Examples-for-Dataset-Series]].</p>
 </td>
 <td valign=top>
@@ -258,7 +259,7 @@ Information about the dataset series as a free-text description.</p>
 </td>
 <td valign=top>
   <p>When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset 
-    in the collection should be part of the temporal coverage. In that case, an open ended value is recommended, e.g. "after 2012".</p>
+    in the series should be part of the temporal coverage. In that case, an open ended value is recommended, e.g. "after 2012".</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries.temporalcoverage">E</a></p>
