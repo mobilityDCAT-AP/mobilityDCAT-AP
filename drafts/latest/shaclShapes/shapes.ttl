@@ -75,14 +75,16 @@
   rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
   bibo:editor [
     a foaf:Person ;
-    owl:sameAs <https://orcid.org/0000-0001-5446-6947> ;
-    foaf:name "Lina Molinas Comet"
-  ] ;
-  bibo:editor [
-    a foaf:Person ;
-    owl:sameAs <https://github.com/Daham-Mustaf> ;
     owl:sameAs <https://orcid.org/0000-0003-1867-4428> ;
     foaf:name "Daham Mustafa"
+  ] , [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0001-5446-6947> ;
+    foaf:name "Lina Molinas Comet"
+  ] , [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0002-8235-7331> ;
+    foaf:name "Mario Scrocca"
   ] ;
   dct:creator [
     a foaf:Group ;
