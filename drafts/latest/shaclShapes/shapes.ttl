@@ -42,13 +42,12 @@
 #        in DCAT-AP (mobilityTheme, Assessment, MobilityDataStandard,
 #        Kind, Address, QualityAnnotation, RightsStatement, etc.).
 #
-#   Range/class constraints -> range.ttl; controlled-vocabulary
-#   constraints -> mdr-vocabularies.shape.ttl; deprecations ->
-#   deprecateduris.ttl; base vocabulary owl:imports -> imports.ttl.
+#   Range/class constraints -> ranges.ttl; controlled-vocabulary
+#   constraints -> mdr-vocabularies.ttl; deprecations ->
+#   deprecated-uris.ttl; base vocabulary owl:imports -> imports.ttl.
 #
 # NOTES:
 #   - Property locn:geometry changed range to locn:Geometry in DCAT-AP 3.0.1
-#     (cf. DCAT-AP issues 177/247). The same is applied to mobilityDCAT-AP,
 #   - PeriodOfTime start/endDate: the "Temporal Literal" datatype equals
 #     DCAT-AP's DateOrDateTimeDataType (date/dateTime/gYear/gYearMonth),
 #     so it is inherited; no PeriodOfTime shape is restated here.
@@ -65,7 +64,7 @@
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
   dcatap:availability dcatap:stable ;
   dct:conformsTo <https://www.w3.org/TR/shacl> ;
-  dct:license <https://creativecommons.org/licenses/by/4.0> ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
   dct:created "2023-08-14"^^xsd:date ;
   dct:issued "2023-08-14"^^xsd:date ;
   dct:modified "2026-06-21"^^xsd:date ;
@@ -99,7 +98,7 @@
                <http://www.w3.org/ns/formats/data/Turtle> ;
     dct:title "SHACL Basic Validation (Turtle)"@en ;
     dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes.ttl> ;
-    dcat:mediaType "text/turtle"^^dct:IMT
+    dcat:mediaType "text/turtle"
   ] .
 
 #---------------------------------------------------------------------------
@@ -110,7 +109,6 @@
 :Agent_Shape
   a sh:NodeShape ;
   sh:targetClass foaf:Agent ;
-  sh:targetClass foaf:Organization ;
   sh:name "Agent (mobilityDCAT-AP) - Extensions"@en ;
   sh:description "Extends DCAT-AP 3.0.1 Agent with mobility/geoDCAT contact and organizational properties. Base properties (foaf:name, dct:type) are inherited from DCAT-AP."@en ;
   sh:property
@@ -383,19 +381,7 @@
   sh:message "Concept scheme can appear at most once"@en ;
   sh:severity sh:Info .
 
-# :ConceptScheme_Shape
-#   a sh:NodeShape ;
-#   sh:targetObjectsOf dcat:themeTaxonomy ;
-#   sh:name "Concept Scheme (mobilityDCAT-AP)"@en ;
-#   sh:description "A concept scheme listing all potential concepts (renamed from Category Scheme). Adds mandatory title."@en ;
-#   sh:property :ConceptScheme_Shape_title .
-# :ConceptScheme_Shape_title
-#   a sh:PropertyShape ;
-#   sh:path dct:title ; sh:minCount 1 ; sh:nodeKind sh:Literal ;
-#   sh:name "title"@en ;
-#   sh:description "Name of the Concept Scheme. Repeated for parallel language versions (§12)."@en ;
-#   sh:message "Title is mandatory. At least one literal must be provided"@en ;
-#   sh:severity sh:Violation .
+
 #---------------------------------------------------------------------------
 # DATASET SHAPE  (deltas only)
 #  Raises distribution, frequency, spatial, publisher to mandatory; adds
@@ -488,7 +474,7 @@
   sh:description "Entity that publishes the dataset. Raised to mandatory (1..1)."@en ;
   sh:message "Publisher is mandatory. Exactly one publisher must be provided"@en ;
   sh:severity sh:Violation .
-# --- RECOMMENDED (mobility/geoDCAT properties; range in range.ttl, CV in mdr-vocabularies) ---
+# --- RECOMMENDED (mobility/geoDCAT properties; range in ranges.ttl, CV in mdr-vocabularies) ---
 :Dataset_Shape_georeferencingMethod
   a sh:PropertyShape ;
   sh:path mobilitydcatap:georeferencingMethod ;
@@ -811,7 +797,6 @@
 #  geographic name (prefLabel). Inherited from DCAT-AP: bbox, centroid.
 #  NOTE: locn:geometry maxCount is inherited from DCAT-AP, but DCAT-AP
 #  enforces nodeKind Literal while v3 changes the range to locn:Geometry
-#  (range.ttl). This conflict needs resolution (see header OPEN ITEMS).
 #---------------------------------------------------------------------------
 :Location_Shape
   a sh:NodeShape ;
