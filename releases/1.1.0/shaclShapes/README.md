@@ -7,9 +7,9 @@ All shapes extend and inherit from **DCAT-AP 2.0.1** SHACL shapes.
 
 | File | Purpose |
 |---|---|
-| `mobilitydcat-ap_1.1.0_shacl_shapes.ttl` | Basic validation — cardinality, datatype, literal constraints |
-| `mobilitydcat-ap_1.1.0_shacl_range.ttl` | Range validation — nodeKind and class membership for object properties |
-| `mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl` | Controlled vocabulary validation — property values must be from correct vocabularies per §5.2 |
+| [`mobilitydcat-ap_1.1.0_shacl_shapes.ttl`](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl) | Basic validation — cardinality, datatype, literal constraints |
+| [`mobilitydcat-ap_1.1.0_shacl_range.ttl`](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl) | Range validation — nodeKind and class membership for object properties |
+| [`mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl`](https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl) | Controlled vocabulary validation — property values must be from correct vocabularies per §5.2 |
 
 ## Inheritance
 
