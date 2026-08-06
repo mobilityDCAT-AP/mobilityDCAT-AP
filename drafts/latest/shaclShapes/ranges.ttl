@@ -19,6 +19,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 #===========================================================================
 # mobilityDCAT-AP 3.0.0 - SHACL Range Constraints (range.ttl)
 # Extends DCAT-AP 3.0.1.
@@ -56,24 +57,53 @@
   owl:versionInfo "3.0.0" ;
   dct:modified "2026-07-23"^^xsd:date ;
   dct:title "mobilityDCAT-AP 3.0.0 SHACL - Range Constraints"@en ;
-  dct:description "Adds mobilityDCAT-AP-specific node-kind / class range constraints, extending DCAT-AP 3.0.1. CV-code and external-IRI references use sh:nodeKind sh:IRI; CV membership is checked in the MDR file. DCAT-AP ranges are inherited via owl:imports and not restated."@en .
+  dct:description "Adds mobilityDCAT-AP-specific node-kind / class range constraints, extending DCAT-AP 3.0.1. CV-code and external-IRI references use sh:nodeKind sh:IRI; CV membership is checked in the MDR file. DCAT-AP ranges are inherited via owl:imports and not restated."@en ;
+  bibo:editor [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0003-1867-4428> ;
+    foaf:name "Daham Mustafa"
+  ] , [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0001-5446-6947> ;
+    foaf:name "Lina Molinas Comet"
+  ] , [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0002-8235-7331> ;
+    foaf:name "Mario Scrocca"
+  ] ;
+  dct:creator [
+    a foaf:Group ;
+    foaf:name "NAPCORE SWG 4.4" ;
+    foaf:page <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP>
+  ] ;
+  dct:publisher <https://napcore.eu/> ;
+  dct:rightsHolder <https://napcore.eu/> ;
+  dcat:distribution [
+    a adms:AssetDistribution ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ,
+               <http://www.w3.org/ns/formats/data/Turtle> ;
+    dct:title "SHACL Range Constraints (Turtle)"@en ;
+    dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges.ttl> ;
+    dcat:mediaType "text/turtle"
+  ] .
 #---------------------------------------------------------------------------
 # AGENT  (geoDCAT additions; address/affiliation are inline-typed structures)
 #---------------------------------------------------------------------------
 :Agent_Shape_ranges
   a sh:NodeShape ;
   sh:targetClass foaf:Agent ;
-  sh:targetClass foaf:Organization ;
   sh:name "Agent (mobilityDCAT-AP) - Range Constraints"@en ;
   sh:property
     :Agent_Shape_address_range ,
     :Agent_Shape_affiliation_range .
 :Agent_Shape_address_range
+  a sh:PropertyShape ;
   sh:path locn:address ; sh:class locn:Address ;
   sh:name "address (range)"@en ;
   sh:message "Address must be a locn:Address instance"@en ;
   sh:severity sh:Info .
 :Agent_Shape_affiliation_range
+  a sh:PropertyShape ;
   sh:path org:memberOf ; sh:class org:Organization ;
   sh:name "affiliation (range)"@en ;
   sh:message "Affiliation must be an org:Organization instance"@en ;
@@ -262,7 +292,7 @@
 #---------------------------------------------------------------------------
 :Kind_Shape
   a sh:NodeShape ;
-  sh:targetClass vcard:Kind ;
+  sh:targetObjectsOf dcat:contactPoint ;
   sh:name "Kind (mobilityDCAT-AP) - Range Constraints"@en ;
   sh:property
     :Kind_Shape_email_range ,
