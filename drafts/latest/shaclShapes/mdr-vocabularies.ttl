@@ -165,6 +165,7 @@
     sh:property [
         sh:path dct:language ;
         sh:node :LanguageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en ;
         sh:message "language value must be a concept from the EU Language table (skos:inScheme)."@en ;
         sh:severity sh:Violation
     ] .
@@ -175,6 +176,7 @@
     sh:property [
         sh:path dct:language ;
         sh:node :LanguageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en ;
         sh:message "language value must be a concept from the EU Language table (skos:inScheme)."@en ;
         sh:severity sh:Violation
     ] .
@@ -185,18 +187,21 @@
     sh:property [
         sh:path dct:accrualPeriodicity ;
         sh:node :FrequencyRestriction ; sh:nodeKind sh:IRI ;
-        sh:message "accrualPeriodicity value must be a concept from the EU Frequency table (skos:inScheme)."@en ;
+        sh:description "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "accrualPeriodicity value must be a concept from the EU Frequency table."@en ;
         sh:severity sh:Violation
     ] ;
     sh:property [
         sh:path dct:language ;
         sh:node :LanguageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en ;
         sh:message "language value must be a concept from the EU Language table (skos:inScheme)."@en ;
         sh:severity sh:Violation
     ] ;
     sh:property [
         sh:path geodcatap:referenceSystem ;
         sh:node :ReferenceSystemRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The spatial reference system used in the dataset, identified by a coordinate reference system URI from the OGC EPSG register. This register is not a SKOS scheme, so membership is checked by URI pattern rather than skos:inScheme. The value space is closed: only EPSG URIs are allowed."@en ;
         sh:message "referenceSystem value must be an OGC EPSG coordinate reference system URI."@en ;
         sh:severity sh:Violation
     ] .
@@ -207,7 +212,8 @@
     sh:property [
         sh:path dct:accrualPeriodicity ;
         sh:node :FrequencyRestriction ; sh:nodeKind sh:IRI ;
-        sh:message "accrualPeriodicity value must be a concept from the EU Frequency table (skos:inScheme)."@en ;
+        sh:description "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "accrualPeriodicity value must be a concept from the EU Frequency table."@en ;
         sh:severity sh:Violation
     ] .
 
@@ -217,16 +223,17 @@
     sh:property [
         sh:path dct:format ;
         sh:node :FileTypeRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The technical syntax of the delivered content, taken from the EU File type authority table (http://publications.europa.eu/resource/authority/file-type). The value space is closed: only concepts from this vocabulary are allowed."@en ;
         sh:message "format value must be a concept from the EU File Type table (skos:inScheme)."@en ;
         sh:severity sh:Violation
     ] ;
-    sh:property [
+        sh:property [
         sh:path adms:status ;
         sh:node :DistributionStatusRestriction ; sh:nodeKind sh:IRI ;
-        sh:message "status value must be a concept from the EU Distribution Status table (skos:inScheme)."@en ;
+        sh:description "The status of the distribution in its maturity lifecycle, taken from the EU Distribution status authority table (http://publications.europa.eu/resource/authority/distribution-status). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "status value must be a concept from the EU Distribution status table."@en ;
         sh:severity sh:Violation
     ] .
-
 
 
 #=========================================================================
@@ -239,7 +246,8 @@
         [ sh:path dct:publisher ; sh:maxCount 0 ]
         [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "publisher should include at least one EU Corporate Body concept; other vocabularies tolerated (10.2.3)."@en ;
+    sh:description "The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
     sh:severity sh:Warning .
 
 
@@ -249,7 +257,8 @@
         [ sh:path dct:spatial ; sh:maxCount 0 ]
         [ sh:path dct:spatial ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "spatial should include at least one EU Authority Table or GeoNames value; others tolerated (10.2.3)."@en ;
+    sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
     sh:severity sh:Warning .
 
 
@@ -259,9 +268,9 @@
         [ sh:path dct:publisher ; sh:maxCount 0 ]
         [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "publisher should include at least one EU Corporate Body concept; other vocabularies tolerated (10.2.3)."@en ;
+    sh:description "The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
     sh:severity sh:Warning .
-
 
 :Dataset_MobilityTheme_CV a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -269,9 +278,9 @@
         [ sh:path mobilitydcatap:mobilityTheme ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:mobilityTheme ; sh:qualifiedValueShape :MobilityThemeRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "mobilityTheme should include at least one Mobility Theme concept; use 'other' if none applies, extras tolerated (10.2.2)."@en ;
+    sh:description "Values classify the theme of a mobility dataset using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
-
 
 :Dataset_Theme_CV a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -279,9 +288,9 @@
         [ sh:path dcat:theme ; sh:maxCount 0 ]
         [ sh:path dcat:theme ; sh:qualifiedValueShape :DataThemeRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "dcat:theme should include at least one EU Data Theme concept; extras tolerated (10.2.2)."@en ;
+    sh:description "Values categorise the dataset using the EU Data theme authority table (http://publications.europa.eu/resource/authority/data-theme). At least one value must come from this vocabulary. Values outside the vocabulary are tolerated."@en ;
+    sh:message "dcat:theme should include at least one concept from the EU Data theme table."@en ;
     sh:severity sh:Warning .
-
 
 :Dataset_GeoreferencingMethod_CV a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -289,9 +298,9 @@
         [ sh:path mobilitydcatap:georeferencingMethod ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:georeferencingMethod ; sh:qualifiedValueShape :GeoreferencingMethodRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "georeferencingMethod should include at least one Georeferencing Method concept; extras tolerated (10.2.2)."@en ;
+    sh:description "Values state the georeferencing method of the resource, using the Georeferencing Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/georeferencing-method). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/georeferencing-method/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "georeferencingMethod should include at least one concept from the Georeferencing Method vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
-
 
 :Dataset_NetworkCoverage_CV a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -299,7 +308,8 @@
         [ sh:path mobilitydcatap:networkCoverage ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:networkCoverage ; sh:qualifiedValueShape :NetworkCoverageRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "networkCoverage should include at least one Network Coverage concept; extras tolerated (10.2.2)."@en ;
+    sh:description "Values state the transport network coverage of the dataset, using the Network Coverage controlled vocabulary (https://w3id.org/mobilitydcat-ap/network-coverage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/network-coverage/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "networkCoverage should include at least one concept from the Network Coverage vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
 
 
@@ -309,9 +319,9 @@
         [ sh:path mobilitydcatap:transportMode ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:transportMode ; sh:qualifiedValueShape :TransportModeRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "transportMode should include at least one Transport Mode concept; extras tolerated (10.2.2)."@en ;
+    sh:description "Values state the transport modes covered by the dataset, using the Transport Mode controlled vocabulary (https://w3id.org/mobilitydcat-ap/transport-mode). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/transport-mode/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "transportMode should include at least one concept from the Transport Mode vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
-
 
 :Dataset_IntendedInformationService_CV a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -319,9 +329,9 @@
         [ sh:path mobilitydcatap:intendedInformationService ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:intendedInformationService ; sh:qualifiedValueShape :IntendedInformationServiceRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "intendedInformationService should include at least one Intended Information Service concept; extras tolerated (10.2.2)."@en ;
+    sh:description "Values describe the intended information service for the dataset, using the Intended information service controlled vocabulary (https://w3id.org/mobilitydcat-ap/intended-information-service). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/intended-information-service/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "intendedInformationService should include at least one concept from the Intended information service vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
-
 
 :Dataset_Publisher_CV a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -329,7 +339,8 @@
         [ sh:path dct:publisher ; sh:maxCount 0 ]
         [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "publisher should include at least one EU Corporate Body concept; other vocabularies tolerated (10.2.3)."@en ;
+    sh:description "The entity responsible for publishing the dataset, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
     sh:severity sh:Warning .
 
 
@@ -339,9 +350,9 @@
         [ sh:path dct:spatial ; sh:maxCount 0 ]
         [ sh:path dct:spatial ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "spatial should include at least one EU Authority Table or GeoNames value; others tolerated (10.2.3)."@en ;
+    sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
     sh:severity sh:Warning .
-
 
 :DatasetSeries_MobilityTheme_CV a sh:NodeShape ;
     sh:targetClass dcat:DatasetSeries ;
@@ -349,9 +360,9 @@
         [ sh:path mobilitydcatap:mobilityTheme ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:mobilityTheme ; sh:qualifiedValueShape :MobilityThemeRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "mobilityTheme should include at least one Mobility Theme concept; use 'other' if none applies, extras tolerated (10.2.2)."@en ;
+    sh:description "Values classify the theme of a mobility dataset series using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
-
 
 :DatasetSeries_Spatial_CV a sh:NodeShape ;
     sh:targetClass dcat:DatasetSeries ;
@@ -359,9 +370,9 @@
         [ sh:path dct:spatial ; sh:maxCount 0 ]
         [ sh:path dct:spatial ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "spatial should include at least one EU Authority Table or GeoNames value; others tolerated (10.2.3)."@en ;
+    sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
     sh:severity sh:Warning .
-
 
 :Distribution_MobilityDataStandard_CV a sh:NodeShape ;
     sh:targetClass dcat:Distribution ;
@@ -369,7 +380,8 @@
         [ sh:path mobilitydcatap:mobilityDataStandard ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:mobilityDataStandard ; sh:qualifiedValueShape :MobilityDataStandardRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "mobilityDataStandard should include at least one Mobility Data Standard concept; use 'other' if none applies, extras tolerated (10.2.2)."@en ;
+    sh:description "Values identify the mobility data standard adopted by the distribution, using the Mobility data standard controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-data-standard). At least one value must come from this vocabulary; if no suitable standard is listed, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-data-standard/other). Values outside the vocabulary are tolerated, for example a custom mobilitydcatap:MobilityDataStandard instance giving a version or a national profile."@en ;
+    sh:message "mobilityDataStandard should include at least one concept from the Mobility data standard vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
 
 
@@ -379,7 +391,8 @@
         [ sh:path mobilitydcatap:applicationLayerProtocol ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:applicationLayerProtocol ; sh:qualifiedValueShape :ApplicationLayerProtocolRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "applicationLayerProtocol should include at least one Application Layer Protocol concept; extras tolerated (10.2.2)."@en ;
+    sh:description "Values state the application layer protocol of the distribution, using the Application layer protocol controlled vocabulary (https://w3id.org/mobilitydcat-ap/application-layer-protocol). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/application-layer-protocol/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "applicationLayerProtocol should include at least one concept from the Application layer protocol vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
 
 
@@ -389,7 +402,8 @@
         [ sh:path mobilitydcatap:communicationMethod ; sh:maxCount 0 ]
         [ sh:path mobilitydcatap:communicationMethod ; sh:qualifiedValueShape :CommunicationMethodRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "communicationMethod should include at least one Communication Method concept; others tolerated (10.2.3)."@en ;
+    sh:description "Values state the communication method of the distribution, using the Communication Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/communication-method), which distinguishes push and pull. Use of this vocabulary is recommended; other values are tolerated."@en ;
+    sh:message "communicationMethod should include at least one concept from the Communication Method vocabulary."@en ;
     sh:severity sh:Warning .
 
 
@@ -399,7 +413,8 @@
         [ sh:path dct:license ; sh:maxCount 0 ]
         [ sh:path dct:license ; sh:qualifiedValueShape :LicenceRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "license should include at least one EU Licence concept; others tolerated (10.2.3)."@en ;
+    sh:description "The licence under which the distribution is made available, referencing a concrete standard licence from the EU Licence authority table (http://publications.europa.eu/resource/authority/licence). Use of this vocabulary is recommended; other values are tolerated."@en ;
+    sh:message "license should include at least one concept from the EU Licence table."@en ;
     sh:severity sh:Warning .
 
 
@@ -409,7 +424,8 @@
         [ sh:path dct:type ; sh:maxCount 0 ]
         [ sh:path dct:type ; sh:qualifiedValueShape :PublisherTypeRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "publisher type (dct:type) should include at least one ADMS Publisher Type concept; others tolerated (10.2.3)."@en ;
+    sh:description "The type of the publishing organisation, taken from the ADMS Publisher Type vocabulary (http://purl.org/adms/publishertype/1.0), which distinguishes national, regional and local authorities, companies, academic and standardisation bodies and similar. Use of this vocabulary is recommended; other values are tolerated."@en ;
+    sh:message "publisher type (dct:type) should include at least one concept from the ADMS Publisher Type vocabulary."@en ;
     sh:severity sh:Warning .
 
 
@@ -419,6 +435,7 @@
         [ sh:path dct:type ; sh:maxCount 0 ]
         [ sh:path dct:type ; sh:qualifiedValueShape :ConditionsForAccessAndUsageRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:message "conditions for access and usage (dct:type) should include at least one Conditions concept; use 'other' if none applies, extras tolerated (10.2.2)."@en ;
+    sh:description "Values state the conditions for access and usage of a Rights Statement, using the Conditions for access and usage controlled vocabulary (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "conditions for access and usage (dct:type) should include at least one concept from the Conditions for access and usage vocabulary; use 'other' if none applies."@en ;
     sh:severity sh:Warning .
 
