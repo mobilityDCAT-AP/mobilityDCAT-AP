@@ -301,7 +301,7 @@
     :Kind_Shape_hasTelephone_range .
 :Kind_Shape_email_range
   a sh:PropertyShape ;
-  sh:path vcard:hasEmail ; sh:nodeKind sh:IRI ; sh:class vcard:Email ;
+  sh:path vcard:hasEmail ; sh:nodeKind sh:IRI ;
   sh:severity sh:Violation .
 :Kind_Shape_hasURL_range
   a sh:PropertyShape ;
