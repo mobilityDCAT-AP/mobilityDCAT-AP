@@ -1022,7 +1022,9 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Serialisation Files</h2>
 
-<p>Serialisation files the allow for IT implementations of mobilityDCAT-AP are available as RDF/XML, Turtle, and JSON-LD syntaxes at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases">this Github subfolder</a>.</p>
+<p>To support IT implementations of the mobilityDCAT-AP specification, machine-readable serialisations of the specification are provided in three standard RDF syntaxes. RDF/XML is the original XML-based syntax for RDF, widely supported by older tools and libraries. Turtle offers a more compact, human-readable format often preferred for manual inspection or editing. JSON-LD expresses RDF as JSON, integrating naturally with web applications and modern JavaScript/API-based tooling. Together, these formats give developers a ready-to-use, machine-readable version of the specification, so they can work directly with the data model in their applications rather than encoding it by hand.
+
+The serialisation files are available in the releases subfolder of the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases">mobilityDCAT-AP GitHub repository</a>.</p>
 
 </section>
 
@@ -1033,13 +1035,71 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Validation Guidance</h2>
 
-<p>SHACL validation files for mobilityDCAT-AP are available at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/shaclShapes">this Github subfolder</a>. It  contains the following files:
-<li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl"><code>mobilitydcat-ap_shacl_shapes.ttl</code></a> (cardinality / nodeKind constraints (import + deltas over DCAT-AP 3.0.1)).</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_shacl_ranges.ttl"><code>mobilitydcat-ap_shacl_ranges.ttl</code></a> (sh:class / nodeKind range constraints (import + deltas)).</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_shacl_imports.ttl"><code>mobilitydcat-ap_shacl_imports.ttl</code></a> (owl:imports for base vocabularies; pulls in DCAT-AP 3.0.1).</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_mdr_vocabularies.ttl"><code>mobilitydcat-ap_mdr_vocabularies.ttl</code></a> (controlled-vocabulary (skos:inScheme) constraints).</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_mdr_deprecateduris.ttl"><code>mobilitydcat-ap_mdr_deprecateduris.ttl</code></a> (sh:Warning shapes for properties deprecated in v3.0.0 (Appendix A.2)).</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_shacl_mdr_imports.ttl"><code>mobilitydcat-ap_shacl_mdr_imports.ttl</code></a> (owl:imports of the mobility controlled vocabularies).</li>
+<p>This section is non-normative.</p>
+
+<p>The technical conformance of the data exchange to mobilityDCAT-AP can be verified using the provided SHACL shapes. SHACL ([[SHACL]]) is a W3C Recommendation for expressing constraints on RDF knowledge graphs. The shapes validate whether an RDF representation of a mobilityDCAT-AP catalogue conforms to the specification. As mobilityDCAT-AP-conformant data can be transformed into RDF, the shapes can be applied across different data exchange contexts.</p>
+
+<p>Every constraint in this specification that can be expressed in SHACL is provided as a shape, so that a mobilityDCAT-AP catalogue in RDF can be checked for technical conformance. The shapes extend the DCAT-AP 3.0.1 SHACL shapes: DCAT-AP's constraints are reused through <code>owl:imports</code>, and mobilityDCAT-AP adds only the constraints that differ from DCAT-AP. All files are available in <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/3.0.0/shacl">this GitHub folder.</a></p>
+
+<h2>Rationale: extend DCAT-AP, do not re-encode it</h2>
+
+<p>mobilityDCAT-AP does not repeat constraints that DCAT-AP 3.0.1 already defines. Where DCAT-AP constrains a property as mobilityDCAT-AP requires, that constraint is inherited and left in DCAT-AP. A constraint appears in the mobilityDCAT-AP shapes only where mobilityDCAT-AP is stricter than, or adds to, DCAT-AP — that is, to make an optional property mandatory, tighten a cardinality, add a check such as an EU language tag, or introduce a class or property DCAT-AP does not have. This keeps the shapes focused on what is specific to mobilityDCAT-AP and avoids reporting the same issue twice.</p>
+
+<p>Because imported and local constraints apply together, the shapes can make a rule stricter but cannot loosen an inherited one. In the few cases where the DCAT-AP shapes are stricter than the mobilityDCAT-AP text intends, the inherited rule prevails; these are noted in the specification and raised with the DCAT-AP maintainers rather than worked around.</p>
+
+<p>The controlled-vocabulary constraints are the one exception: they are kept in their own self-contained file rather than importing DCAT-AP's, because DCAT-AP's controlled-vocabulary shapes cover a different set of properties than mobilityDCAT-AP uses.</p>
+
+<h2>The shape files</h2>
+
+<p>The shapes are organised by the kind of check each file performs, so that an implementer can apply the checks relevant to a given data exchange.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>What it checks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>shapes.ttl</code></td>
+      <td>Whether required properties are present, how many times they may occur, and what kind of value they take.</td>
+    </tr>
+    <tr>
+      <td><code>ranges.ttl</code></td>
+      <td>What class the value of a property belongs to.</td>
+    </tr>
+    <tr>
+      <td><code>mdr-vocabularies.ttl</code></td>
+      <td>Whether a value comes from the controlled vocabulary required for that property (<a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>).</td>
+    </tr>
+    <tr>
+      <td><code>deprecated-uris.ttl</code></td>
+      <td>Whether a property deprecated in v3.0.0 is being used (<a class="no-sectionRef" href="#properties-deprecated"></a>); reported as a warning.</td>
+    </tr>
+    <tr>
+      <td><code>imports.ttl</code></td>
+      <td>Loads the base vocabularies, including the DCAT-AP 3.0.1 shapes.</td>
+    </tr>
+    <tr>
+      <td><code>mdr-imports.ttl</code></td>
+      <td>Loads the controlled vocabularies used in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The same property may be checked in more than one file. Update frequency, for instance, is checked for presence in <code>shapes.ttl</code>, for its value type in <code>ranges.ttl</code>, and for membership of the EU Frequency vocabulary in <code>mdr-vocabularies.ttl</code>.</p>
+
+<h2>Applying the shapes</h2>
+<p>Because the shapes reuse DCAT-AP and reference external controlled vocabularies, validation needs more than the mobilityDCAT-AP files alone. The DCAT-AP 3.0.1 shapes and the controlled vocabularies listed in the imports files have to be available to the validator; otherwise valid data can be reported as failing and some checks will not run at all. The <code>imports.ttl</code> and <code>mdr-imports.ttl</code> files list what is needed. A validator that supports these imports — such as the <a href="https://www.itb.ec.europa.eu/shacl/dcat-ap/upload">SEMIC SHACL validator</a> of the Interoperable Europe Testbed — will load them and produce a complete result; the mobilityDCAT-AP shapes have been validated there against real National Access Point records.</p>
+
+<h2>Integrating the results</h2>
+
+<p>As DCAT-AP notes, the shapes are a starting point rather than a fixed rule set. Each data exchange has its own context, and a reported constraint may not be relevant to it. Where publishers are identified by a dereferenceable URI and their details live in a separate register, for example, a check requiring an inline organisation name may not apply, even though a strict run reports it. Implementers should decide which constraints are in scope for their exchange.</p>
+
+<p>The shapes distinguish two levels of result. A violation marks a mandatory requirement and should be treated as an error. A warning marks a recommended or optional requirement, or a controlled vocabulary where values from outside are tolerated, and indicates something to review rather than a failure. A validation setup should act on this distinction rather than treating every result as an error.</p>
+
+<p>Further material, including worked examples and the validation workflow, is maintained in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-4:-Validating-mobilityDCAT%E2%80%90AP-metadata">mobilityDCAT-AP validation Wiki</a>.</p>
 </section>
   
 
