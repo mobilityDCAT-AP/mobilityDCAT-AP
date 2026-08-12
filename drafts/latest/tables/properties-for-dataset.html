@@ -41,7 +41,7 @@
 <td valign=top>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.applicablelegislation">E</a></p>
 </td>
 </tr>
 
@@ -64,7 +64,7 @@
   <p>The difference to the property <a href="dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a> is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation.</p>
 </td>
 <td valign=top>
-<p>A</p>
+<p>P</p>
 </td>
 </tr>
 
@@ -86,13 +86,13 @@
   Used for questions or issues about a dataset and its provisioning, as raised by a platform user or a platform operator.</p>
 </td>
 <td valign=top>
-  <p>When providing contact information, data publishers SHOULD prioritize organizational information over personal details.</p>
+  <p>When providing contact information, data publishers should prioritize organizational information over personal details.</p>
   <p>The exposure of personal information, such as a personal name and email address, may be restricted to the public. 
     Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See <a class="no-sectionRef" href="#privsec"></a>.</p>
-   <p>The contact point might be populated with the same information as for property <a href="#dataset-publisher"><code>dct:publisher</code></a>. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
+   <p>The contact point might be populated with the same information as for property <a href="#dataset-publisher"><code>dct:publisher</code></a>.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.contactpoint">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.contactpoint">E</a></p>
 </td>
 </tr>
 
@@ -111,10 +111,11 @@
 <p>An available Distribution for the Dataset.</p>
 </td>
 <td valign=top>
-  <p>In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, the obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+  <p>In mobilityDCAT-AP, it is mandatory that each dataset has at least one distribution. Thus, the obligation of this property is raised to “mandatory”, 
+    compared to [[DCAT-AP-v3.0.1]].</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.datasetdistribution">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.datasetdistribution">E</a></p>
 </td>
 </tr>
 
@@ -139,7 +140,7 @@ Information about the dataset as a free-text description.
     The language version should correspond to property <a href="catalogue-record-language"><code>dct:language</code></a> of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.description">E</a></p>
 </td>
 </tr>
 
@@ -164,7 +165,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
     Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.documentation">A</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.documentation">A</a></p>
 </td>
 </tr>
 
@@ -183,16 +184,16 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>1..1</p>
 </td>
 <td valign=top>
-<p>Describes how often the delivered content is updated. This information tells a data consumer, how often it is updated on the on the data platform, so the data consumer might align the frequency of data retrieval accordingly.</p>
+<p>Describes how often the delivered content is updated. This information tells a data consumer how often it is updated on the data platform, so the data consumer might align the frequency of data retrieval accordingly.</p>
 </td>
 <td valign=top>
   <p>For dynamic data feeds, the frequency should correspond to the technical upload / data push frequency. For static datasets, it should correspond to the expected change frequency (see property <a href="#dataset-modification-date"><code>dct:modified</code></a>). 
     The frequency might be a specific time interval, or a general remark such as “updated on occurrence”. </p>
     <p>A <a href="#vocab-update-frequency">controlled vocabulary</a> is provided.</p>
-  <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+  <p>The obligation of this property is raised to “mandatory”, compared to [[DCAT-AP-v3.0.1]].</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.description">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.frequency">E</a></p>
 </td>
 </tr>
 
@@ -206,16 +207,16 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-location"><code>dct:Location</code></a></p>
 </td>
 <td valign=top>
-<p>1..n</p>
+<p>1..*</p>
 </td>
 <td valign=top>
 <p>A geographic region that is covered by the delivered content.</p>
 </td>
 <td valign=top>
-  <p>The obligation of this property is raised to “mandatory”, compared to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+  <p>The obligation of this property is raised to “mandatory”, compared to [[DCAT-AP-v3.0.1]].</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.geographicalcoverage">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.geographicalcoverage">E</a></p>
 </td>
 </tr>
 
@@ -228,7 +229,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>The georeferencing method used in the delivered content.</p>
@@ -252,7 +253,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-dataset"><code>dcat:Dataset</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
 <p>A related dataset that is a version, edition, or adaptation of the described dataset </p>
@@ -262,7 +263,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
     Multiple versions should be differentiated via the properties <a href="#dataset-version"><code>dcat:version</code></a> and <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.hasversion">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.hasversion">E</a></p>
 </td>
 </tr>
 
@@ -282,10 +283,10 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>The main identifier for the dataset, e.g. the URI or other unique identifier. Allows a unique identification of the individual dataset and is used for referencing, e.g., when exchanging metadata between mobility data portals.</p>
 </td>
 <td valign=top>
-<p>This property should populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
+<p>This property should be populated by the URI used within the RDF statement (via <code>rdf:about</code>).</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.identifier">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.identifier">E</a></p>
 </td>
 </tr>
 
@@ -306,7 +307,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <td valign=top>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.inseries">A</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.inseries">A</a></p>
 </td>
 </tr>
 
@@ -319,10 +320,11 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
-  <p>A type of information service, which the data content is intended to support. Such services may be, e.g., information services for multimodal mobility, as specified by <a href="https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng">EC Delegated Regulation 2024/490</a>.</p>
+  <p>A type of information service, which the data content is intended to support. Such services may be, e.g., information services for multimodal mobility, 
+    as specified by [[EC-Regulation-2024/490-on-MMTIS]].</p>
   <p>Examples of such services include “location search”, which is based on a datasets with address identifiers, or “trip plan computation”, which is based on datasets on timetables.</p>
 </td>
 <td valign=top>
@@ -348,12 +350,15 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>A keyword or tag describing the Dataset.</p>
 </td>
 <td valign=top>
-  <p>For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependend and make data search difficult.</p>
-  <p>Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, <a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a and <a href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a.</p>
+  <p>For the purposes of mobility data portals, it is not recommended to use keywords, as they might be ambiguous, language-dependent and make data search difficult.</p>
+  <p>Instead, usage of mobility-related properties with Controlled Vocabularies is recommended, in particular 
+    <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a>, 
+    <a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a> and
+    <a href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a>.</p>
   <p>If there are relevant keywords that are not part of such Controlled Vocabularies, please contact the authors of mobilityDCAT-AP, in order to update the Controlled Vocabularies.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.keyword">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.keyword">E</a></p>
 </td>
 </tr>
 
@@ -373,9 +378,10 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 </td>
 <td valign=top>
   <p>This property can be repeated if there are multiple languages in the dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a></p>
- </td>
+  <p>A corresponding <a href="#vocab-language">controlled vocabulary</a> is provided.</p>
+</td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.language">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.language">E</a></p>
 </td>
 </tr> 
 
@@ -388,7 +394,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>1..n</p>
+<p>1..*</p>
 </td>
 <td valign=top>
   <p>This property refers to the mobility-related theme (i.e., a specific subject, category, or type) of the delivered content. A dataset may be associated with multiple themes. A theme is important for data seekers who are interested in a particular type of data content.</p>
@@ -412,6 +418,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 </td>
 <td valign=top>
 <p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+<p>(Datatype: Temporal Literal)</p>
 </td>
 <td valign=top>
 <p>0..1</p>
@@ -423,7 +430,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
   <p>This is redundant for high-frequency data feeds (e.g., DATEX II feeds), where the change date can be derived from the time stamp within the data feed.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.modificationdate">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.modificationdate">E</a></p>
 </td>
 </tr>    
 
@@ -436,7 +443,7 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>This property describes the part of the transport network that is covered by the delivered content.</p>
@@ -469,11 +476,11 @@ In contrast, the property <a href="#dataset-description"><code>dct:description</
 <p>This property may be used as an additional identifier, besides <a href="#dataset-identifier"><code>dct:identifier</code></a>.</p>
 </td>
 <td valign=top>
-<p>This property may be referring to a dedicated, EU-wide identificator system of NAP datasets, to be introduced in the future,
-or other identificator systems such as <a href="https://schema.datacite.org/">DataCite</a>, <a href="http://www.doi.org/">DOI</a>, or <a href="https://w3id.org/">W3ID</a>.</p>
+<p>This property may be referring to a dedicated, EU-wide identifier system of NAP datasets, to be introduced in the future,
+or other identifier systems such as [[DataCite-Metadata-Schema]], [[DOI]], or [[W3ID]].</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.otheridentifier">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.otheridentifier">E</a></p>
 </td>
 </tr>  
 
@@ -497,11 +504,11 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <td valign=top>
   <p>This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a> of class Catalogue Record and/or <a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a> of class Dataset.</p>
   <p>To establish a contact with a company or person responsible for the dataset, the property <a href="#dataset-contact-point"><code>dcat:contactPoint</code></a> should be used.</p>
-    <p>However, the publisher and the contact point might be populated with the same information. See <a class="no-sectionRef" href="#agent-roles"></a> for further usage notes on that matter.</p>
-  <p>The obligation of this property is raised to “mandatory”, comparing to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP v3.0.0</a>.</p>
+    <p>However, the publisher and the contact point might be populated with the same information.</p>
+  <p>The obligation of this property is raised to “mandatory”, comparing to [[DCAT-AP-v3.0.1]].</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.publisher">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.publisher">E</a></p>
 </td>
 </tr>  
 
@@ -514,14 +521,14 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p><a href="#class-quality-annotation"><code>dqv:QualityAnnotation</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>Any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment. This information should assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information should be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations.</p>
 </td>
 <td valign=top>
   <p>Quality aspects should be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note “quality information is unknown” should be given.</p>
-  <p>If existing quality frameworks have been applied in the quality assessment, e.g., the <a href="https://napcore.eu/quality/">Quality Frameworks from the NAPCORE project</a>, these frameworks should be referenced.</p>
+  <p>If existing quality frameworks have been applied in the quality assessment, e.g., the [[NAPCORE-Quality-Frameworks]], these frameworks should be referenced.</p>
 </td>
 <td valign=top>
 <p>A</p>
@@ -531,13 +538,13 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <tr class="property" id="dataset-reference-system">
 <td valign=top>
 <p>+reference system</p>
-<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>geodcatap:referenceSystem</code></a></p>
+<p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.referencesystem"><code>geodcatap:referenceSystem</code></a></p>
 </td>
 <td valign=top>
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>The spatial reference system used in the delivered content. To be specified via the <a href="http://www.opengis.net/def/crs/EPSG/">“EPSG coordinate reference systems” register</a> operated by OGC.</p>
@@ -545,7 +552,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <td valign=top>
   <p>A corresponding <a href="#vocab-reference-system">controlled vocabulary</a> is provided.</p>
   <p>This is a sub-property of <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"><code>dct:conformsTo</code></a>.</p>
-  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+  <p>This property corresponds to an addition by [[GeoDCAT-AP-v3.0.0]].</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.referencesystem">GA</a></p>
@@ -571,7 +578,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
   <p>It may be a link between two individual datasets that complement each other, e.g. one dataset with static parking data, and one with dynamic parking data, both covering the same parking facilities.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.relatedresource">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.relatedresource">E</a></p>
 </td>
 </tr>  
 
@@ -582,6 +589,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 </td>
 <td valign=top>
 <p><a href="#class-temporal-literal"><code>rdfs:Literal</code></a></p>
+<p>(Datatype: Temporal Literal)</p>
 </td>
 <td valign=top>
 <p>0..1</p>
@@ -590,31 +598,32 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p>The date of formal issuance (e.g., publication) of the dataset.</p>
 </td>
 <td valign=top>
-  <p>There might a difference to the creation date of the metadata entry, see the property <a href="#catalogue-record-creation-date"><code>dct:created</code></a> of Class Catalogue Record. 
-    Imagine the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, leading to two different dates. However, both dates can also be the same.</p>
+  <p>There might a difference in the listing date of the metadata entry; see the property <a href="#catalogue-record-listing-date"><code>dct:issued</code></a> of class Catalogue Record.
+   Imagine the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, 
+    leading to two different dates. However, both dates can also be the same.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.releasedate">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.releasedate">E</a></p>
 </td>
 </tr>  
 
 <tr class="property" id="dataset-rights-holder">
 <td valign=top>
 <p>+rights holder</p>
-<p><code>dct:rightsHolder</code></p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder"><code>dct:rightsHolder</code></a></p>
 </td>
 <td valign=top>
 <p><a href="#class-agent"><code>foaf:Agent</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</p>
 </td>
 <td valign=top>
   <p>The rights holder will be in many cases identical with the publisher of the dataset (see property <a href="#dataset-publisher"><code>dct:publisher</code></a>) and/or of the catalogue record (see property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a>). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.</p>
-  <p>This property is analogue to an addition by <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP v3.0.0</a>.</p>
+  <p>This property corresponds to an addition by [[GeoDCAT-AP-v3.0.0]].</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset.rightsholder">GE</a></p>
@@ -640,7 +649,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
   <p>There is the same property <a href="#catalogue-record-source-metadata"><code>dct:source</code></a> on the Catalogue Record level. The source of a dataset relates to the content data, whereas the source of a catalogue record relates to the metadata.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset.source">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.source">E</a></p>
 </td>
 </tr>
   
@@ -655,7 +664,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
 <p>A temporal period, i.e., the beginning and the end, of the time reference of the delivered content (e.g., validity time of a public-transport time table).</p>
@@ -663,7 +672,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <td valign=top>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.temporalcoverage">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.temporalcoverage">E</a></p>
 </td>
 </tr>
 
@@ -687,7 +696,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
  <p>A <a href="#vocab-theme">controlled vocabulary</a> is provided.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.theme">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.theme">E</a></p>
 </td>
 </tr>  
 
@@ -710,7 +719,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
  The language version should correspond to property <a href="catalogue-record-language"><code>dct:language</code></a> of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.title">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.title">E</a></p>
 </td>
 </tr>    
 
@@ -724,7 +733,7 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p><a href="#class-concept"><code>skos:Concept</code></a></p>
 </td>
 <td valign=top>
-<p>0..n</p>
+<p>0..*</p>
 </td>
 <td valign=top>
   <p>The transport mode that is covered by the delivered content.</p>
@@ -756,10 +765,9 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <td valign=top>
  <p>The version number should be updated, whenever there are changes to the dataset noted by the property <a href="#dataset-modification-date"><code>dct:modified</code></a>.</p>
  <p>Together with property <a href="#dataset-version-notes"><code>adms:versionNotes</code></a>, this may also enable a change history (or version history) of the corresponding dataset, which could be hosted and published on the data platform.</p>
- <p>The property URI has been replaced from <code>owl:versionInfo</code>, comparing to DCAT-AP-v2.0.1 and mobilityDCAT-AP-v-1.0.1. </p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.version">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.version">E</a></p>
 </td>
 </tr>  
 
@@ -778,11 +786,11 @@ or other identificator systems such as <a href="https://schema.datacite.org/">Da
 <p>A textual description of the differences between this version and a previous version of the dataset.</p>
 </td>
 <td valign=top>
- <p>This property should be an addition to the property <a href="#dataset-version"><code><code>dcat:version</code></a>.</p>
+ <p>This property should be an addition to the property <a href="#dataset-version"><code>dcat:version</code></a>.</p>
  <p>This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td valign=top>
-<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.versionnotes">E</a></p>
+<p><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset.versionnotes">E</a></p>
 </td>
 </tr>  
   

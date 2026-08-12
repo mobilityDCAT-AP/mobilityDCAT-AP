@@ -13,7 +13,7 @@ var respecConfig = {
   }
       ],
     copyrightStart: 2023,
-    publishDate: "2025-04-02",
+    publishDate: "2026-10-01",
 
     alternateFormats: [
     {
@@ -58,11 +58,12 @@ var respecConfig = {
     issueBase:            "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/",
     github:               "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP",
     editors: [
+
       {
-        name:    "Daham Mohammed Mustafa",
-        company: "Fraunhofer Institute for Applied Information Technology FIT",
-        orcid:   "0000-0003-1867-4428"
-      },
+        name:    "Valentina Carriero",
+        company: "Cefriel",
+        orcid:   "0000-0003-1427-3723"
+      }, 
       {
         name:    "Lina Molinas Comet",
         company: "Fraunhofer Institute for Applied Information Technology FIT",
@@ -70,15 +71,32 @@ var respecConfig = {
       },
       {
         name: "Peter Lubrich",
-        company: "Federal Highway Research Institute (BASt)",
+        company: "Federal Highway and Transport Research Institute (BASt)",
         orcid: "0000-0002-0023-1234"
+      },
+        {
+        name: "Julien Martineau",
+        company: "Nationaal Geografisch Instituut"
+      },
+      {
+        name:    "Daham Mohammed Mustafa",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
+        orcid:   "0000-0003-1867-4428"
+      }, 
+       {
+        name: "Ed Ooms",
+        company: "Nationaal Dataportaal Wegverkeer"
       },
       {
         name: "Mario Scrocca",
         company: "Cefriel",
         orcid: "0000-0002-8235-7331"
+      },
+     {
+        name: "Andrej Tibaut",
+        company: "University of Maribor",
+        orcid: "0000-0002-1706-5981"
       }
-
     ],
     authors: [
     {
@@ -105,6 +123,14 @@ var respecConfig = {
       }
       ]
     },
+    {
+	  key: "Previous version:",
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/" } ]
+	},
+    {
+	  key: "This version:",
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
+	}       
   ],
     wg: "NAPCORE Sub-Working Group (SWG) 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
@@ -140,10 +166,10 @@ var respecConfig = {
         "date":"2 February 2017",
       },
       "CORE-LOCATION-VOCABULARY":{
-        "href":"https://www.w3.org/TR/Content-in-RDF/",
-        "title":"ISA Programme Location Core Vocabulary",
-        "authors":["EU ISA Programme Core Vocabularies Working Group (Location Task Force)"],
-        "date":"23 March 2015",
+        "href":"https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/",
+        "title":"Core Location Vocabulary",
+        "publisher":"SEMIC",
+        "date":"06 May 2024",
       },
       "LOCN-MAPPING": {
         "href": "https://semiceu.github.io/locn-mapping/",
@@ -166,6 +192,20 @@ var respecConfig = {
         "authors":["Silvio Peroni","David Shotton","Jan Ashton","Amy Barton","Egbert Gramsbergen","Marie-Christine Jacquemot"],
         "date":"2016"
       },
+     "DataCite-Metadata-Schema": {
+        "href":"https://schema.datacite.org/",
+        "title":"DataCite-Metadata-Schema3",
+         "publisher":"DataCite",
+        "date":"3 March 2026"
+      },  
+
+     "Data-Quality-Vocabulary":{
+        "href":"https://www.w3.org/TR/vocab-dqv/",
+        "title":"Data Quality Vocabulary",
+        "publisher":"W3C",
+        "date":"15 December 2016"
+      },
+        
       "DC2AP": {
         "href":"https://groups.google.com/a/datacite.org/group/dc2map/attach/624ec3cd533a3/DataCite%20Dublin%20Core%20AP%20-%20Draft%201_8.pdf",
         "title":"DataCite Dublin Core Application Profile (DC2AP). Version 1.8",
@@ -178,12 +218,6 @@ var respecConfig = {
         "publisher":"W3C Recommendation",
         "date":"22 August 2024"
        },
-      "DCAT-AP-v3.0.0":{
-        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0",
-        "title":"DCAT Application Profile for data portals in Europe. Version 3.0.0.",
-        "publisher":"European Commission",
-        "date":"14 June 2024"
-       },
 
       "DCAT-AP-v2.0.1":{
         "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0",
@@ -191,11 +225,74 @@ var respecConfig = {
         "publisher":"European Commission",
         "date":"08 June 2020"
        },
-
-      "DCAT-AP-v2.1.0-Guideline-Dataservices":{
+    
+        
+        "DCAT-AP-v2.1.0-Guideline-Dataservices":{
         "href":"https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/usageguide-dataset-distribution-dataservice.md",
         "title":"DCAT-AP Usage guide on Datasets, Distributions and Data Services",
         "publisher":"European Commission"
+       },
+
+       "DCAT-AP":{
+        "href":"https://op.europa.eu/de/web/eu-vocabularies/dcat-ap",
+        "title":"DCAT-AP",
+        "publisher":"European Commission"
+       },
+
+      "DCAT-AP-v3.0.1":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
+        "title":"DCAT-AP 3.0.1",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+              
+    "DCAT-AP-v3.0.1-Examples-for-Dataset-Series":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+        "title":"DCAT-AP v3.0.1 Examples for Dataset Series",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+
+    "DCAT-AP-v3.0.1-Usage-guide-on-Dataset-Series":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#usage-guide-on-dataset-series",
+        "title":"DCAT-AP v3.0.1 Usage guide on Dataset Series",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },   
+
+    "DCAT-AP-v3.0.1-Note-on-Inverse-Properties":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties",
+        "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+
+    "DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#requirements-for-controlled-vocabularies",
+        "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+
+   
+   "DCAT-AP-Implementation-Guidelines":{
+        "href":"https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
+        "title":"DCAT-AP implementation guidelines",
+        "publisher":"SEMIC",
+        "date":"11 December 2015"
+       },
+
+    "SEMIC-Style-Guide-for-Semantic-Engineers":{
+        "href":"https://semiceu.github.io/style-guide/1.0.0/index.html",
+        "title":"SEMIC Style Guide for Semantic Engineers",
+        "publisher":"SEMIC"
+       },
+  
+    "DCAT-AP-Reuse-Guidelines":{
+        "href":"https://semiceu.github.io/DCAT-AP-reuse-guidelines/",
+        "title":"DCAT-AP Reuse Guidelines",
+        "publisher":"SEMIC",
+        "date":"17 June 2026"
        },
 
       "DCAT-AP-SDO": {
@@ -211,11 +308,11 @@ var respecConfig = {
         "title":"Joinup. DCAT application profile implementation guidelines",
         "publisher":"European Commission"
       },
-      "DCAT-AP-HVD": {
+      "DCAT-AP-High-Value-Datasets": {
         "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
-        "title":"Usage guidelines of DCAT-AP for High-Value Datasets",
-        "publisher":"European Commission",
-        "date":"19 June 2023"
+        "title":"DCAT-AP High Value Datasets",
+        "publisher":"SEMIC",
+        "date":"25 October 2024"
       },
     "DC-UG-PM": {
         "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
@@ -223,9 +320,15 @@ var respecConfig = {
         "authors":["Stefanie Rühle","Tom Baker","Pete Johnston"],
         "publisher":"Dublin Core Metadata Initiative"
       },
-      "ELI": {
-        "href":"https://eur-lex.europa.eu/eli-register/eu_publications_office.html",
-        "title":"European Legislation Identifier (ELI) system",
+      "ELI-Standard": {
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/eli",
+        "title":"European Legislation Identifier (ELI) Standard",
+        "publisher":"EU Publications Office"
+      },
+
+        "ELI-Ontology": {
+        "href":"https://op.europa.eu/documents/3938058/11669184/eli.owl/",
+        "title":"European Legislation Identifier (ELI) Standard",
         "publisher":"EU Publications Office"
       },
 
@@ -250,21 +353,23 @@ var respecConfig = {
         "title":"Information about the Coordinated Metadata Catalogue (CMC) by EU EIP",
         "publisher":"EU EIP Consortium"
       },
-      "EU-EIP-QP": {
-        "href":"https://www.its-platform.eu/achievement/quality-of-european-its-services-and-their-data/",
-        "title":"Information about the Quality Frameworks by EU EIP",
-        "publisher":"EU EIP Consortium"
-      },
       "EC-ITS-Directive": {
         "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010L0040",
         "title":"Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance",
         "publisher":"European Commission"
       },
-      "EC-MMTIS-DR": {
-        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32017R1926",
-        "title":"Commission Delegated Regulation (EU) 2017/1926 of 31 May 2017 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services (Text with EEA relevance.)",
+      "EC-Regulation-2024/490-on-MMTIS": {
+        "href":"https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng",
+        "title":"Commission Delegated Regulation (EU) 2024/490 of 29 November 2023 amending Delegated Regulation (EU) 2017/1926 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services",
         "publisher":"European Commission"
       },
+
+    "EC-Regulation-2013/138-on-HVD": {
+        "href":"https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng",
+        "title":"Commission Implementing Regulation (EU) 2023/138 of 21 December 2022 laying down a list of specific high-value datasets and the arrangements for their publication and re-use",
+        "publisher":"European Commission"
+      },
+        
       "EU-TEN-T": {
         "href":"https://transport.ec.europa.eu/transport-themes/infrastructure-and-investment/trans-european-transport-network-ten-t_en",
         "title":"Information about Trans-European Transport Network (TEN-T)",
@@ -305,7 +410,7 @@ var respecConfig = {
         "publisher":"European Commission",
         "date":"23 December 2020"
       },
-      "GEODCAT-AP-v3.0.0":{
+      "GeoDCAT-AP-v3.0.0":{
         "href":"https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
         "title":"GeoDCAT-AP - Version 3.0.0",
         "publisher":"European Commission",
@@ -344,6 +449,11 @@ var respecConfig = {
       "IANA-CHARACTER-SETS":{
         "href":"https://www.iana.org/assignments/character-sets/",
         "title":"Character Sets",
+        "publisher":"IANA"
+       },
+        "IANA-Media-Types":{
+        "href":"https://www.iana.org/assignments/media-types/media-types.xhtml",
+        "title":"IANA Media Types",
         "publisher":"IANA"
        },
       "iiWAS17-JRC": {
@@ -470,12 +580,12 @@ var respecConfig = {
         "authors": [
             "ISO/TC 154"
         ],
-        "href": "https://www.iso.org/standard/40874.html",
-        "title": "Data elements and interchange formats -- Information interchange -- Representation of dates and times",
+        "href": "https://www.iso.org/standard/70907.html",
+        "title": "Date and time — Representations for information interchange",
         "publisher": "ISO",
         "status": "International Standard",
-        "date": "2004",
-        "isoNumber": "ISO 8061:2004"
+        "date": "2019",
+        "isoNumber": "ISO 8601-1:2019"
       },
       "JRC-DP": {
         "href": "https://doi.org/10.2788/607378",
@@ -505,13 +615,20 @@ var respecConfig = {
         "publisher":"OSGeo"
       },
 
+     "mobilityDCAT-AP-v1.1.0":{
+        "href":"https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html",
+        "title":"mobilityDCAT-AP v1.1.0",
+        "publisher":"NAPCORE Consortium",
+        "date": "17 January 2025"
+      }, 
+
       "NAPCORE":{
         "href":"https://napcore.eu/",
         "title":"Website of the NAPCORE project",
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-Metadata-preparatory-activities":{
+      "NAPCORE-Metadata-Preparatory-Activities":{
         "href":"https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/",
         "title":"Documentation about preparatory activities for mobilityDCAT-AP",
         "publisher":"NAPCORE Consortium"
@@ -523,17 +640,24 @@ var respecConfig = {
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-NAPs":{
+      "NAPCORE-Information-about-NAPs":{
         "href":"https://napcore.eu/description-naps/",
         "title":"NAPCORE information about National Access Points (NAPs)",
         "publisher":"NAPCORE Consortium"
       },
 
-      "NAPCORE-NB":{
-        "href":"https://napcore.eu/national-bodies/",
-        "title":"NAPCORE information about National Bodies (NAPs)",
+      "NAPCORE-Information-about-National-Bodies":{
+        "href":"https://napcore.eu/national-bodies-3/",
+        "title":"NAPCORE information about National Bodies",
         "publisher":"NAPCORE Consortium"
       },
+
+     "NAPCORE-Quality-Frameworks":{
+        "href":"https://napcore.eu/quality/",
+        "title":"NAPCORE-Quality-Frameworks",
+        "publisher":"NAPCORE Consortium"
+      },
+        
 
       "NUTS-CODES":{
         "href":"https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/nuts",
@@ -639,6 +763,14 @@ var respecConfig = {
          "date":"17 April 2018",
          "publisher":"OpenSearch"
       },
+     
+    "RDF-Primer":{
+        "href":"https://www.w3.org/TR/rdf11-primer/",
+        "title":"RDF Primer",
+        "date":"24 June 2014",
+        "publisher":"W3C Working Group"
+      },
+        
       "SCHEMA-ORG":{
         "href":"http://schema.org/",
         "title":"Schema.org"
@@ -691,7 +823,7 @@ var respecConfig = {
        "DCAT-AP-guideline-spatial":{
         "href":"https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used",
         "title":"How should dct:spatial and dct:Location be used?",
-        "publisher":"European Commission"
+        "publisher":"SEMIC"
        },
       "DXWG":{
         "href":"https://www.w3.org/2017/dxwg/",
@@ -766,7 +898,15 @@ var respecConfig = {
         "title":"Core organization ontology",
         "date":"16 January 2014"
       },
-      "WEB-ANOTATION-ONTOLOGY": {
+        
+    "vCard-Ontology": {
+        "href":"https://www.w3.org/TR/vcard-rdf/",
+        "title":"vCard Ontology",
+        "date":"22 May 2014",
+       "publisher":"W3C "
+      },
+        
+      "WEB-ANNOTATION-ONTOLOGY": {
         "href":"https://www.w3.org/TR/annotation-vocab/",
         "title":"Web Annotation Ontology",
         "date":"23 February 2017",

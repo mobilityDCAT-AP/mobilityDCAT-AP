@@ -8,13 +8,13 @@
 <p>CMC element name</p>
 </th>
 <th>
-<p>Class</p>
+<p>Class Name</p>
 </th>
 <th>
 <p>Class URI</p>
 </th>
 <th>
-<p>Property</p>
+<p>Property Name</p>
 </th>
 <th>
 <p>Property URI</p>
@@ -30,15 +30,15 @@
 <td>
 <p>Metadata date</p>
 </td>
-<td><a href="#catalogue-record">Catalogue Record</a></td>
+<td><a href="#class-catalogue-record">Catalogue Record</a></td>
 <td><code>dcat:CatalogRecord</code></td>
 <td>
-<p>creation date</p>
-<p>update / modification date</p>
+<p>listing date</p>
+<p>modification date</p>
 </td>
 <td>
-<p><a title="creation date" href="#catalogue-record-creation-date"><code>dct:created</code></a></p>
-<p><a title="update / modification date" href="#catalogue-record-modification-date"><code>dct:modified</code></a></p>
+<p><a title="listing date" href="#catalogue-record-listing-date"><code>dct:issued</code></a></p>
+<p><a title="modification date" href="#catalogue-record-modification-date"><code>dct:modified</code></a></p>
 </td>
 </tr>
 
@@ -49,7 +49,7 @@
 <td>
 <p>Metadata language</p>
 </td>
-<td><a href="#catalogue-record">Catalogue Record</a></td>
+<td><a href="#class-catalogue-record">Catalogue Record</a></td>
 <td><code>dcat:CatalogRecord</code></td>
 <td>
 <p>language</p>
@@ -67,8 +67,8 @@
 <p>Metadata point of contact</p>
 </td>
 <td>
-<p> <a href="#catalogue-record">Catalogue Record</a></p>
-<p><a href="#dataset">Dataset</a></p>
+<p> <a href="#class-catalogue-record">Catalogue Record</a></p>
+<p><a href="#class-dataset">Dataset</a></p>
 </td>
 <td>
 <p> <code>dcat:CatalogRecord</code></p>
@@ -93,7 +93,7 @@
 <td>
 <p>Name of dataset</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>title</p>
@@ -110,7 +110,7 @@
 <td>
 <p>Description of dataset </p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>description</p>
@@ -145,7 +145,7 @@
 <td>
 <p>Dataset type category</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>theme / category</p>
@@ -162,7 +162,7 @@
 <td>
 <p>Dataset detailed type</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>theme / category</p>
@@ -179,13 +179,13 @@
 <td>
 <p>Service type category</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>theme / category</p>
 </td>
 <td>
-<p><a title="intended information service" href="#dataset-intended-information-service"><code>mobilitydcatap:intentedInformationService</code></a></p>
+<p><a title="intended information service" href="#dataset-intended-information-service"><code>mobilitydcatap:intendedInformationService</code></a></p>
 </td>
 </tr>  
 
@@ -196,7 +196,7 @@
 <td>
 <p>Dataset language</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>language</p>
@@ -213,14 +213,14 @@
 <td>
 <p>Georeferencing method</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>reference system</p>
 <p>georeferencing method</p>
 </td>
 <td>
-<p>+<a title="reference system" href="#dataset-reference-system"><code>dct:conformsTo</code></a></p>
+<p>+<a title="reference system" href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a></p>
 <p>+<a title="georeferencing method" href="#dataset-georeferencing-method"><code>mobilitydcatap:georeferencingMethod</code></a></p>
 </td>
 </tr>   
@@ -233,8 +233,8 @@
 <p>Valid from</p>
 </td>
 <td>
-<p><a href="#dataset">Dataset</a></p>
-<p><a href="#distribution">Distribution</a></p>
+<p><a href="#class-dataset">Dataset</a></p>
+<p><a href="#class-distribution">Distribution</a></p>
 </td>
 <td>
 <p><code>dcat:Dataset</code></p>
@@ -258,8 +258,8 @@
 <p>Valid to</p>
 </td>
 <td>
-<p><a href="#dataset">Dataset</a></p>
-<p><a href="#distribution">Distribution</a></p>
+<p><a href="#class-dataset">Dataset</a></p>
+<p><a href="#class-distribution">Distribution</a></p>
 </td>
 <td>
 <p><code>dcat:Dataset</code></p>
@@ -282,13 +282,13 @@
 <td>
 <p>Area covered by publication</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
-<p>spatial / geographic coverage</p>
+<p>geographical coverage</p>
 </td>
 <td>
-<p><a title="spatial / geographic coverage" href="#dataset-spatial-coverage"><code>dct:spatial</code></a></p>
+<p><a title="geographical coverage" href="#dataset-geographical-coverage"><code>dct:spatial</code></a></p>
 </td>
 </tr>   
 
@@ -299,10 +299,10 @@
 <td>
 <p>Network coverage</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
-<p>spatial / geographic coverage</p>
+<p>network coverage</p>
 </td>
 <td>
 <p><a title="network coverage" href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a></p>
@@ -334,13 +334,13 @@
 <td>
 <p>Transportation modes covered</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
-<p>transportation mode</p>
+<p>transport mode</p>
 </td>
 <td>
-<p><a title="network coverage" href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a></p>
+<p><a title="transport mode" href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a></p>
 </td>
 </tr>   
 
@@ -351,7 +351,7 @@
 <td>
 <p>Publisher</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>publisher</p>
@@ -368,7 +368,7 @@
 <td>
 <p>Data owner</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>rights holder</p>
@@ -385,7 +385,7 @@
 <td>
 <p>Contract or licence</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>rights</p>
@@ -402,7 +402,7 @@
 <td>
 <p>Condition for use</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>licence</p>
@@ -419,7 +419,7 @@
 <td>
 <p>Data Format- Encoding</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>character encoding</p>
@@ -436,7 +436,7 @@
 <td>
 <p>Data Format- Syntax</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>format</p>
@@ -453,10 +453,10 @@
 <td>
 <p>Data Format- Grammar</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
-<td><code>dcat:Distribution</code></td>
+<td></td>
+<td></td>
 <td>
-<p>grammar</p>
+<p>grammar (deprecated property)</p>
 </td>
 <td>
 <p><a title="grammar" href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a></p>
@@ -470,7 +470,7 @@
 <td>
 <p>Data Format- Data Model</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>mobility data standard</p>
@@ -487,13 +487,13 @@
 <td>
 <p>Data format description</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>data format notes</p>
 </td>
 <td>
-<p><a title="data format notes" href="#distribution-dataformatnotes"><code>mobilitydcatap:dataFormatNotes</code></a></p>
+<p><a title="data format notes" href="#distribution-data-format-notes"><code>mobilitydcatap:dataFormatNotes</code></a></p>
 </td>
 </tr>  
 
@@ -504,13 +504,13 @@
 <td>
 <p>Access interface / application layer protocol</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>application layer protocol</p>
 </td>
 <td>
-<p><a title="application layer protocol" href="#distribution-applicationlayerprotocol"><code>mobilitydcatap:applicationLayerProtocol</code></a></p>
+<p><a title="application layer protocol" href="#distribution-application-layer-protocol"><code>mobilitydcatap:applicationLayerProtocol</code></a></p>
 </td>
 </tr> 
 
@@ -521,13 +521,13 @@
 <td>
 <p>Communication method</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>communication method</p>
 </td>
 <td>
-<p><a title="communication method" href="#distribution-communicationmethod"><code>mobilitydcatap:communicationMethod</code></a></p>
+<p><a title="communication method" href="#distribution-communication-method"><code>mobilitydcatap:communicationMethod</code></a></p>
 </td>
 </tr> 
 
@@ -538,7 +538,7 @@
 <td>
 <p>Access URL</p>
 </td>
-<td><a href="#distribution">Distribution</a></td>
+<td><a href="#class-distribution">Distribution</a></td>
 <td><code>dcat:Distribution</code></td>
 <td>
 <p>access URL</p>
@@ -557,7 +557,7 @@
 <td>
 <p>Update frequency</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>frequency</p>
@@ -574,7 +574,7 @@
 <td>
 <p>Quality Description</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>quality description</p>
@@ -591,7 +591,7 @@
 <td>
 <p>National Body assessment status</p>
 </td>
-<td><a href="#dataset">Dataset</a></td>
+<td><a href="#class-dataset">Dataset</a></td>
 <td><code>dcat:Dataset</code></td>
 <td>
 <p>assessment result</p>

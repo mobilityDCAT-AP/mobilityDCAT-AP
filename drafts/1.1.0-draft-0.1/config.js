@@ -62,8 +62,16 @@ var respecConfig = {
       uri: "./mobilitydcat-ap.jsonld",
     },
     {
-       label: "SHACL (Turtle)",
-       uri: "./validationFiles/mobilitydcat-ap_shacl_shapes.ttl",
+      label: "SHACL Basic Validation (Turtle)",
+      uri: "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl",
+    },
+    {
+      label: "SHACL Range Constraints (Turtle)",
+      uri: "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl",
+    },
+    {
+      label: "SHACL Controlled Vocabulary Constraints (Turtle)",
+      uri: "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl",
     }
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
@@ -109,7 +117,12 @@ var respecConfig = {
         company: "Cefriel",
         orcid: "0000-0002-8235-7331",
 //        companyURL: ""
-      }
+      },
+      {
+        name:    "Daham Mohammed Mustafa",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
+        orcid:   "0000-0003-1867-4428",
+      },
 
     ],
     authors: [

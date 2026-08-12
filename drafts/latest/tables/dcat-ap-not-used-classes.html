@@ -1,8 +1,8 @@
 <table class="simple" id="table-not-used-classes"> 
 <thead>
 <tr>
-<th>Class</th>
-<th>URI</th>
+<th>Class Name</th>
+<th>Class URI</th>
 <th>Reference DCAT-AP</th>
 <th>Note</th>
 </tr>
@@ -15,8 +15,8 @@
 <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Resource"><code>dcat:Resource</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#CataloguedResource">Link</a></td>
 <td>
-<p>According to DCAT-AP-v3.0.0, this as an abstract class. Only subclasses should be used in a data exchange, such as <a href="#class-dataset"><code>dcat:Dataset</code></a>. 
-  Thus, the Catalogued Resource is not listed expilicitely in mobilityDCAT-AP.</p>
+<p>According to DCAT-AP-v3.0.1, this as an abstract class. Only subclasses should be used in a data exchange, such as <a href="#class-dataset"><code>dcat:Dataset</code></a>. 
+  Thus, the Catalogued Resource is not listed explicitly in mobilityDCAT-AP.</p>
 </td>
 </tr>
   
@@ -25,7 +25,7 @@
 <td><a href="http://spdx.org/rdf/terms#Checksum"><code>spdx:Checksum</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Checksum">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range for the optional property 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range for the optional property 
   <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.checksum"><code>spdx:checksum</code></a> of class Distribution. 
   However, in mobilityDCAT-AP, this property is not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
@@ -36,11 +36,12 @@
 <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service"><code>dcat:DataService</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#DataService">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, a Data Service is a collection of operations that provides access to one or more datasets or data processing functions.</p>
-  <p>After discussions in mobility DCAT-AP and an analysis of potential use cases of this class in DCAT-AP-v3.0.0, it has been decided not to introduce Data Service for the following reasons.</p>
+<p>In DCAT-AP-v3.0.1, a Data Service is a collection of operations that provides access to one or more datasets or data processing functions.</p>
+  <p>After discussions in mobility DCAT-AP and an analysis of potential use cases of this class in DCAT-AP-v3.0.1, it has been decided not to introduce Data Service for the following reasons.</p>
   <p>1. Potential use as the range to property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Distribution.accessservice"><code>dcat:accessService</code></a> of class Distribution.</p>
   <p>This property might describe additional information about an end point of one distribution. 
-  However, looking at today's set-ups of NAPs and mobility data portals, the characteristics and mechanisms of a distribution's end point are sufficiently described via property <a href="#distribution-access-URL"><code>dcat:accessURL</code></a> of class Distribution.</p>
+  However, looking at today's set-ups of NAPs and mobility data portals, the characteristics and mechanisms of a distribution's end point are sufficiently described
+    via property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> of class Distribution.</p>
   <p>2. Potential use as the range to property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#CatalogueRecord.primarytopic"><code>foaf:primaryTopic</code></a> of class Catalogue Record</p>
   <p>This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about datasets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP as of today, but might be used in the future when such portals also explicitely list data services.</p>
   <p></p>
@@ -52,7 +53,7 @@
 <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Relationship"><code>dcat:Relationship</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.qualifiedrelation"><code>dcat:qualifiedRelation</code></a> of class Dataset. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.qualifiedrelation"><code>dcat:qualifiedRelation</code></a> of class Dataset. 
   In mobilityDCAT-AP, this property is not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
 </tr>  
@@ -62,7 +63,7 @@
 <td><a href="https://www.w3.org/ns/prov#Activity"><code>prov:Activity</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Activity">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.wasgeneratedby"><code>prov:wasGeneratedBy</code></a> of class Dataset. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.wasgeneratedby"><code>prov:wasGeneratedBy</code></a> of class Dataset. 
   In mobilityDCAT-AP, this property is not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
 </tr>    
@@ -72,7 +73,7 @@
 <td><a href="https://www.w3.org/ns/prov#Attribution"><code>prov:Attribution</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Attribution">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.qualifiedattribution"><code>prov:qualifiedAttribution</code></a> of class Dataset. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.qualifiedattribution"><code>prov:qualifiedAttribution</code></a> of class Dataset. 
   In mobilityDCAT-AP, this property is not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
 </tr>     
@@ -82,7 +83,7 @@
 <td><a href="https://spdx.org/rdf/terms/#d4e2129"><code>spdx:ChecksumAlgorithm</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ChecksumAlgorithm">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm"><code>spdx:algorithm</code></a> of class Checksum. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Checksum.algorithm"><code>spdx:algorithm</code></a> of class Checksum. 
   In mobilityDCAT-AP, the entire class Checksum is not used (see above). So, the class Checksum Algorithm is without function in mobilityDCAT-AP.</p>
 </td>
 </tr>    
@@ -92,10 +93,10 @@
 <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#MediaType"><code>dct:MediaType</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#MediaType">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional properties 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional properties 
   <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#Distribution.compressionformat"><code>dcat:compressFormat</code></a>,
     <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#Distribution.mediatype"><code>dcat:mediaType</code></a> and
-    <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#Distribution.packagingformat"><code>dcat:packageFormat"</code></a>.
+    <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#Distribution.packagingformat"><code>dcat:packageFormat</code></a>.
   of class Distribution. 
   In mobilityDCAT-AP, these properties are not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
@@ -106,7 +107,7 @@
 <td><a href="https://www.w3.org/TR/odrl-model/#policy"><code>odrl:Policy</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Policy">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.haspolicy"><code>odrl:hasPolicy</code></a> of class Distribution. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Distribution.haspolicy"><code>odrl:hasPolicy</code></a> of class Distribution. 
   In mobilityDCAT-AP, this property is not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
 </tr> 
@@ -116,7 +117,7 @@
 <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#ProvenanceStatement"><code>dct:ProvenanceStatement</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#ProvenanceStatement">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.provenance"><code>dct:provenance</code></a> of class Dataset. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.provenance"><code>dct:provenance</code></a> of class Dataset. 
   In mobilityDCAT-AP, this property is not used. So, the class is without function in mobilityDCAT-AP.</p>
 </td>
 </tr> 
@@ -126,7 +127,7 @@
 <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role"><code>dcat:Role</code></a></td>
 <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Role">Link</a></td>
 <td>
-<p>In DCAT-AP-v3.0.0, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship.hadrole"><code>dcat:hadRole</code></a> of class Relationship. 
+<p>In DCAT-AP-v3.0.1, this class is only used as the range of the optional property <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Relationship.hadrole"><code>dcat:hadRole</code></a> of class Relationship. 
   In mobilityDCAT-AP, the entire class Relationship is not used (see above). So, the class Role is without function in mobilityDCAT-AP.</p>
 </td>
 </tr>  

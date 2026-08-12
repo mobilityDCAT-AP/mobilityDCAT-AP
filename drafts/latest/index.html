@@ -40,10 +40,11 @@
 
 <h2>Abstract</h2>
 
-<p>mobilityDCAT-AP is a mobility-related extension of the "DCAT Application profile for data portals in Europe" (<a href="https://op.europa.eu/de/web/eu-vocabularies/dcat-ap">DCAT-AP)</a>. 
-  It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance. </p>
+<p>mobilityDCAT-AP is a mobility-related extension of the "DCAT Application profile for data portals in Europe" ([[DCAT-AP]]). 
+  It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance.
+It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDCAT-AP-v3.0.0]].</p>
 
-<p>This document is a product of the <a href="https://napcore.eu/metadata/">NAPCORE Metadata Working Group</a>.</p>
+<p>This document is a product of the [[NAPCORE-Metadata-Working-Group]].</p>
 
 <p>Comments and queries should be sent via <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
 
@@ -64,56 +65,59 @@
 
 <h3>Context</h3>
 
-<p>This document presents version 3.0.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the "DCAT Application profile for data portals in Europe" (<a href="https://op.europa.eu/de/web/eu-vocabularies/dcat-ap">DCAT-AP)</a>. 
-  mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
+<p>This document presents version 3.0.0 of the specification for mobilityDCAT-AP, a mobility-related extension of the "DCAT Application profile for data portals in Europe" ([[DCAT-AP]]). 
+  mobilityDCAT-AP aims to provide a structured, interoperable and harmonised approach to describing and exchanging metadata about datasets and about access for such datasets related to mobility, and in particular related to Intelligent Transport Systems (ITS). 
+  Its primary goal is to enhance the cross-border and cross-sectorial discoverability of ITS- and mobility-related datasets published on relevant data portals.</p>
 
-<p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1 specification</a>, while extending and customizing it for the mobility sector.</p>
+<p>For this purpose, mobilityDCAT-AP introduces an RDF vocabulary and the corresponding RDF syntax, building upon the foundations of the original [[DCAT-AP-v3.0.1]] specification, while extending and customizing it for the mobility sector.</p>
   
 <p>Digitalisation in the mobility domain often implies that various data assets from various actors in the mobility system are made discoverable and accessible. Accordingly, internet portals for mobility data have been developed all over the world in recent years. These portals often have specific spatial or thematic coverage, e.g., exposing public-transport timetable data for one specific region. 
-  In addition, legal obligations, such as those established through the <a href="https://napcore.eu/description-naps/">European Union's National Access Points (NAPs)</a>, mandate the creation and population of such portals.</p>
+  In addition, legal obligations, such as those established through the European Union's National Access Points (NAPs, [[NAPCORE-Information-about-NAPs]]), mandate the creation and population of such portals.</p>
 
 <p>Metadata is a crucial building block for the accessibility and reusability of datasets within NAPs and other mobility data portals. A common metadata approach can act as an important infrastructure and reference basis for providing harmonious and homogenous ITS- and mobility-related data descriptions across Europe, thus accelerating the easiness of searching, discovering, and accessing the proper data resources through the operated relevant data portals.</p>
 
-<p>To serve this need, the <a href="https://napcore.eu/metadata/">NAPCORE Metadata Working Group</a> has developed a formal metadata specification called mobilityDCAT-AP. </p>
+<p>To serve this need, the [[NAPCORE-Metadata-Working-Group]] has developed a formal metadata specification called mobilityDCAT-AP. </p>
 
 <p>mobilityDCAT-AP enables harmonised, platform-independent metadata descriptions in the mobility domain both in human-readable and machine-readable formats. The latter one ensures seamless integration of mobility-related platforms with third party systems by enabling the automated import and export of metadata via, for example, an API. As a specification based on the Resource Description Framework (RDF), mobilityDCAT-AP leverages semantic technologies, enabling advanced querying and inference capabilities based on metadata.</p>
 
 <p>mobilityDCAT-AP provides precise and unambiguous metadata designations for any data offering with mobility relevance, e.g. for representing the data topic, the data provider or the data format. It is highly recommended that the metadata management of National Access Points (NAPs) in Europe, or any other mobility data portals, is based on mobilityDCAT-AP in order to harmonise their data descriptions and ease the exchange of metadata in the mobility data ecosystem. Furthermore, this will ensure the basis for extended interoperability, among others, with other NAPs or data portals.</p>
 
-<p>This work has been carried out in the context of sub-working group 4.4 of the <a href="https://napcore.eu/">NAPCORE project</a>. 
+<p>mobilityDCAT-AP is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDCAT-AP-v3.0.0]].</p>
+
+<p>This work has been carried out in the context of sub-working group 4.4 of the [[NAPCORE]] project. 
   NAPCORE is an EU-cofunded Programme Support Action under the GRANT AGREEMENT No 101234721-25-EU-TG-NAPCORE-X.</p>
 
 </section>
 
 <section id="scope">
 
-<h3>Scope of this DCAT-AP extension: Enhancing DCAT-AP for Mobility</h3>
+<h3>Scope description</h3>
 
-<p> mobilityDCAT-AP is designed as an extension of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a> 
-  in conformance with <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines/release-1">guidelines for creating of DCAT-AP extensions</a>
- and the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide for Semantic Engineers</a>.</p>
+<p>mobilityDCAT-AP is designed as an extension of [[DCAT-AP-v3.0.1]]
+  in conformance with the [[DCAT-AP-Implementation-Guidelines]], the [[SEMIC-Style-Guide-for-Semantic-Engineers]]
+  and the [[DCAT-AP-Reuse-Guidelines]].</p>
 
-<p>The scope description of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a> is also valid for this version of mobilityDCAT-AP. In particular, the purpose of this specification is to facilitate data exchange. 
+<p>The scope description of [[DCAT-AP-v3.0.1]] is also valid for this version of mobilityDCAT-AP. In particular, the purpose of this specification is to facilitate data exchange. 
   Therefore, the classes and properties defined in this document are only relevant for the data to be exchanged. There are no specific requirements for the systems involved in the data exchange process to implement particular technical environments, as long as they can export and import metadata in RDF, in conformance with mobilityDCAT-AP. 
   Further, this specification, beyond what is defined in <a class="no-sectionRef" href="#conformance">Conformance Statement</a>, does not cover implementation issues such as data exchange mechanisms and the expected behavior of systems implementing mobilityDCAT-AP.</p>
   
 <p>It is important to consider this dependency on the DCAT-AP specifications when reading and implementing mobilityDCAT-AP. The corresponding specifications should be consulted to address any gaps or missing information in this document.</p>
 
-<p>Comparing mobilityDCAT-AP to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>, the following edits have been made:</p>
+<p>Comparing mobilityDCAT-AP v3.0.0 to [[DCAT-AP-v3.0.1]], the following edits have been made:</p>
 
 <ul>
-<li>Addition of classes, including reusage of classes from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new classes under the mobilityDCAT-AP namespace</li>
-<li>Removal of optional classes from DCAT-AP, see <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a></li>
-<li>Addition of properties to existing classes in DCAT-AP, including reusage of properties from <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, and the creation of new properties under the mobilityDCAT-AP namespace</li>
-<li>Change to obligation levels for some existing properties in DCAT-AP</li>
-<li>Removal of optional properties from DCAT-AP, see <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a></li>
-<li>Refinement of usage notes for existing classes and properties from DCAT-AP</li>
+<li>Addition of classes, including reusage of classes from [[GeoDCAT-AP-v3.0.0]], and the creation of new classes under the mobilityDCAT-AP namespace</li>
+<li>Non-usage of optional classes from [[DCAT-AP-v3.0.1]], see <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a></li>
+<li>Addition of properties to existing classes in [[DCAT-AP-v3.0.1]], including reusage of properties from [[GeoDCAT-AP-v3.0.0]], and the creation of new properties under the mobilityDCAT-AP namespace</li>
+<li>Change to obligation levels for some existing properties in [[DCAT-AP-v3.0.1]]</li>
+<li>Non-usage of optional properties from [[DCAT-AP-v3.0.1]], see <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a></li>
+<li>Refinement of usage notes for existing classes and properties from [[DCAT-AP-v3.0.1]]</li>
 <li>Reference to additional controlled vocabularies, including the creation of new controlled vocabularies under the mobilityDCAT-AP namespace</li>
 </ul>
 
-<p>Some of the class and property additions align with the parallel DCAT-AP extension <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/">geoDCAT-AP-v3.0.0</a>, enabling compatibility between the two extensions in terms of class and property additions. 
+<p>Some of the class and property additions align with the parallel DCAT-AP extension [[GeoDCAT-AP-v3.0.0]], enabling compatibility between the two extensions in terms of class and property additions. 
   All classes and property additions are marked with a prepended &ldquo;plus&rdquo; sign (+) in this document.</p>
-<p>The removal of optional classes or properties from DCAT-AP aims to minimise the vocabulary size of mobilityDCAT-AP, avoiding any misinterpretations and multiple usage of properties among data senders.</p>
+<p>The non-usage of optional classes or properties from DCAT-AP aims to minimise the vocabulary size of mobilityDCAT-AP, avoiding any misinterpretations and multiple usage of properties among data senders.</p>
 
 <p>These edits aim to capture some specific characteristics and features of mobility data, when exposed on NAPs and mobility data portals. Thus, they are meant to provide a DCAT-AP-conformant representation of metadata specific to mobility data.</p>
   
@@ -121,7 +125,7 @@
 
 
 
-<section id="revision history">
+<section id="revision-history">
 
 <h3>Revision history</h3>
 
@@ -138,7 +142,7 @@
 
 <h2>Status</h2>
 
-<p>This application profile is currently published as an Editor's Draft and may change before publication as a NAPCORE Recommendation.</p>
+<p>This version is currently published as an Editor's Draft and may change before publication as a NAPCORE Recommendation.</p>
 
 <p>Information about the process and the decisions involved in the creation of this specification are consultable at the Changelog - see <a class="no-secRef" href="#change-log"></a>.</p>
 
@@ -150,7 +154,7 @@
 
 <h2>License</h2>
 
-<p>Copyright © 2025 NAPCORE. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.</p>
+<p>Copyright © 2023-2026 NAPCORE. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.</p>
 
 </section>
 
@@ -169,16 +173,21 @@
 <p>In order to conform to mobilityDCAT-AP, an application that provides metadata must:</p>
 
 <ul>
-<li>Provide a description of the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue"><code>dcat:Catalog</code></a>.</li>
-<li>Provide a description of the Catalogue Records in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>.</li>
+<li>Provide a description of the Catalogue (i.e., a concrete mobility data portal), including at least the mandatory properties specified for the class <a href="#class-catalogue"><code>dcat:Catalog</code></a>.</li>
+<li>Provide descriptiona of the Catalogue Records in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>.</li>
 <li>Provide descriptions of Datasets in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-dataset"><code>dcat:Dataset</code></a>.</li>
 <li>Provide descriptions of Distributions of Datasets in the Catalogue, including at least the mandatory properties specified for the class <a href="#class-distribution"><code>dcat:Distribution</code></a>.</li>
-<li>Provide descriptions of persons or organisations involved in the descriptions of Catalogue and Datasets, including at least the mandatory properties for the class <a href="#class-agent"><code>foaf:Agent</code></a>.</li>
+<li>Provide descriptions of persons or organisations involved in the descriptions of the Catalogue, Catalogue Records, Datasets, and Dataset Series, including at least the mandatory properties for the class <a href="#class-agent"><code>foaf:Agent</code></a>.</li>
+<li>Provide other mandatory properties defined for classes that are used as ranges of properties of the above-mentioned classes.</li>
 <li>Apply the publication requirements for the controlled vocabularies as mentioned in section <a class="no-secRef" href="#controlled-vocabularies"></a>.</li>
 </ul>
 
+<p>In addition to the mandatory properties, any of the optional properties defined in mobilityDCAT-AP may be provided. </p>
+  
+ <p> All properties are specified in the sections <a class="no-sectionRef" href="#main-entities"></a> and <a class="no-sectionRef" href="#supportive-entities"></a>,
+  and also summarised in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li></p>
+
 <p>For the properties listed in the table in section <a class="no-secRef" href="#controlled-vocabularies"></a>, the associated controlled vocabularies must be used. Additional controlled vocabularies may be used.</p>
-<p>In addition to the mandatory properties, any of the optional properties defined in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a> may be provided.</p>
 
 </section>
 
@@ -186,10 +195,12 @@
 
 <h2>Receiver requirements</h2>
 
-<p>In order to conform to this mobilityDCAT-AP, an application that receives metadata must be able to:</p>
+<p>In order to conform to mobilityDCAT-AP, an application that receives metadata must be able to:</p>
 
 <ul>
-<li>Process information for all classes and properties specified in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li>
+<li>Process information for all classes and properties defined in mobilityDCAT-AP.
+  These classes and properties are specified in the sections <a class="no-sectionRef" href="#main-entities"></a> and <a class="no-sectionRef" href="#supportive-entities"></a>,
+  and also summarised in section <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</li>
 <li>Process information for all controlled vocabularies specified in section <a class="no-secRef" href="#controlled-vocabularies"></a>.</li>
 </ul>
 
@@ -210,7 +221,8 @@
 
 <h3>RDF core definitions</h3>
 
-<p>mobilityDCAT-AP builds on core RDF definitions and familiarity with these concepts is assumed in this document. An introduction to the main concepts can be found in the <a href="http://w3.org/TR/rdf11-primer">RDF Primer</a>.</p>
+<p>mobilityDCAT-AP builds on core RDF definitions and familiarity with these concepts is assumed in this document. 
+  An introduction to the main concepts can be found in the [[RDF-Primer]].</p>
 
 </section>
   
@@ -218,14 +230,15 @@
 
 <h3>SEMIC core definitions</h3>
 
-<p>mobilityDCAT-AP follows the terminology defined in the <a href="https://semiceu.github.io/style-guide/">SEMIC Style Guide</a>. Key concepts are reported below.</p> 
+<p>mobilityDCAT-AP follows the terminology defined in the [[SEMIC-Style-Guide-for-Semantic-Engineers]]. Key concepts are reported below.</p> 
 
 <p>An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, 
   as well as recommendations for controlled vocabularies to be used. Application refers to the usage context of the specification. It may cover a data theme such as mobility data with mobilityDCAT-AP.
   It also may refer to specific tools like open data portals. For DCAT-AP the usage scope is broad and in the first place taking into account the European legal context.</p>
 
 <p>An <strong>Extension</strong> is further specifying a given Application Profile like DCAT-AP. Many groups, who are interested in sharing Datasets related to very specific application domains, 
-  or within a certain European country, found the need to define application profiles that are more specific than DCAT-AP. As a result, there exist a number of DCAT-AP extensions (or synonymously derivatives). mobilityDCAT-AP is such an extension for the mobility domain.</p>
+  or within a certain European country, found the need to define application profiles that are more specific than DCAT-AP. As a result, there exist a number of DCAT-AP extensions (or synonymously derivatives). 
+  mobilityDCAT-AP is such an extension for the mobility domain.</p>
   
 </section>  
 
@@ -233,7 +246,7 @@
 
 <h3>mobilityDCAT-AP core definitions</h3>
 
-<p><i>Part of the following text has been reused from <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a> and the <a href="https://napcore.eu/description-naps/">NAPCORE website</a>.</i></p>
+<p><i>Part of the following text has been reused from [[DCAT-AP-v3.0.1]] and the [[NAPCORE-Information-about-NAPs]].</i></p>
 
 <p>A <strong>Dataset</strong> is a collection of data published or curated by a single source and available for access or download in one or more formats. 
   In the mobility context, this might be, e.g., a data collection about static parking information for truck drivers published by a road authority. This data collection might be published in parallel in  DATEX II and APDS formats.</p>
@@ -257,7 +270,7 @@
 
 <p>The suggested namespace prefix is: <code>mobilitydcatap</code></p>
 
-<p>The Application Profile reuses terms from various existing specifications, following <a data-cite="?DWBP#dataVocabularies">established best practices</a> [[?DWBP]]. The following table indicates the full list of corresponding namespaces used in this document.</p>
+<p>mobilityDCAT-AP reuses terms from various existing specifications, following <a data-cite="?DWBP#dataVocabularies">established best practices</a> [[?DWBP]]. The following table indicates the full list of corresponding namespaces used in this document.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/namespaces.html"></div>
 
@@ -271,14 +284,15 @@
 
 <section id="application-profile-diagram">
 
-<h3>Application profile diagram</h3>
+<h3>mobilityDCAT-AP UML diagram</h3>
 
-<p>For a first orientation in mobilityDCAT-AP, these four central classes should be considered: <a href="#class-catalogue"><code>dcat:Catalogue</code></a>, <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>, <a href="#class-dataset"><code>dcat:Dataset</code></a> and <a href="#class-distribution"><code>dcat:Distribution</code></a>; as well as the properties connecting these four classes. </p>
+<p>For a first orientation in mobilityDCAT-AP, these four central classes should be considered: <a href="#class-catalogue"><code>dcat:Catalog</code></a>, <a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a>, <a href="#class-dataset"><code>dcat:Dataset</code></a> and <a href="#class-distribution"><code>dcat:Distribution</code></a>; as well as the properties connecting these four classes. </p>
 
-<p><a href="#fig-mobilitydcat-ap-uml-class-diagram-centralClasses"></a> shows an excerpt of the UML diagram of the mobilityDCAT-AP model, showing these four central classes and their connecting properties. </p>
+<p><a href="#Fig1_UMLdiagram_CentralClasses"></a> shows an excerpt of the UML diagram of the mobilityDCAT-AP model, showing these four central classes and their connecting properties. </p>
 
-<figure id="fig-mobilitydcat-ap-uml-class-diagram-centralClasses">
-<a href="./figures/mobilityDCAT-AP_uml-diagramm_240816_centralClasses.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240816_centralClasses.png" alt="Excerpt of mobilityDCAT-AP UML Class Diagram with central classes"/></a>
+<figure id="Fig1_UMLdiagram_CentralClasses">
+<a href="./figures/Fig1_UMLdiagram_CentralClasses.jpg" title="view full-size image"><img src="./figures/Fig1_UMLdiagram_CentralClasses.jpg" 
+    alt="Excerpt of mobilityDCAT-AP UML Class Diagram with central classes"/></a>
 <figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on central classes</figcaption>
 </figure>
 
@@ -286,27 +300,35 @@
   Secondly, there is the Catalogue Record, which describes the metadata entry, including its publication date. 
   Thirdly, the Dataset is described. In fact, most metadata elements are covered here, including the content theme; the spatial and temporal context; quality information and others. 
   Finally, the distribution describes a technical and organisational way to access the Dataset. In addition to the data format (e.g., a machine-readable syntax standard), the licensing terms are described here. </p>
-<p>Please note that two of the connecting properties, <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#class-distribution"><code>dcat:distribution</code></a>, are mandatory, in contrast to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>.
+<p>Please note that two of the connecting properties, <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#class-distribution"><code>dcat:distribution</code></a>, are mandatory, in contrast to [[DCAT-AP-v3.0.1]].
   Thus, a complete metadata set in accordance with mobilityDCAT-AP should contain at least one instance of these four classes. See also the usage notes for properties <a href="#class-catalogue-record"><code>dcat:record</code></a> and <a href="#class-distribution"><code>dcat:distribution</code></a>. </p>
 
-<p><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> shows a more complex UML diagram with selected classes and properties included in mobilityDCAT-AP.</p>
+<p><a href="#Fig2_UMLdiagram_mobilityDCAT-AP_v3_AddedClasses_Properties"></a> shows a more complex UML diagram with selected classes and properties included in mobilityDCAT-AP.</p>
 <p>It shows the four central classes (marked in orange), as explained above, as well as some supportive classes (marked in yellow).</p>
-<p>In this diagram, the focus is on classes and properties which have been added in mobilityDCAT-AP in comparison to <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>. 
+<p>In this diagram, the focus is on classes and properties which have been added in mobilityDCAT-AP in comparison to [[DCAT-AP-v3.0.1]]. 
   All additions are marked with a prepended &ldquo;plus&rdquo; sign (+).</p>
 
-<figure id="fig-mobilitydcat-ap-uml-class-diagram">
-<a href="./figures/mobilityDCAT-AP_uml-diagramm_240816.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240816.png" alt="mobilityDCAT-AP UML Class Diagram"/></a>
+<figure id="Fig2_UMLdiagram_mobilityDCAT-AP_v3_AddedClasses_Properties">
+<a href="./figures/Fig2_UMLdiagram_mobilityDCAT-AP_v3_AddedClasses_Properties.jpg" title="view full-size image"><img src="./figures/Fig2_UMLdiagram_mobilityDCAT-AP_v3_AddedClasses_Properties.jpg" 
+    alt="Excerpt of mobilityDCAT-AP UML Class Diagram with focus on added classes and properties"/></a>
 <figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on added classes and properties</figcaption>
 </figure>
 
-<p><a href="#fig-mobilitydcat-ap-uml-minimum-class-diagram"></a> shows a reduced UML diagram with classes and properties that are declared mandatory in mobilityDCAT-AP.</p>
+<p><a href="#Fig3_UMLdiagram_mobilityDCAT-AP_v3_MandatoryClasses_Properties"></a> shows a reduced UML diagram with classes and properties that are declared mandatory in mobilityDCAT-AP.</p>
 
-<figure id="fig-mobilitydcat-ap-uml-minimum-class-diagram">
-<a href="./figures/mobilityDCAT-AP_uml-diagramm_240816_minimum elements.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240816_minimum elements.png" alt="mobilityDCAT-AP UML Minimum Class Diagram"/></a>
+<figure id="Fig3_UMLdiagram_mobilityDCAT-AP_v3_MandatoryClasses_Properties">
+<a href="./figures/Fig3_UMLdiagram_mobilityDCAT-AP_v3_MandatoryClasses_Properties.jpg" title="view full-size image"><img src="./figures/Fig3_UMLdiagram_mobilityDCAT-AP_v3_MandatoryClasses_Properties.jpg" 
+    alt="mobilityDCAT-AP UML Minimum Class Diagram"/></a>
 <figcaption>Excerpt of mobilityDCAT-AP UML Class Diagram with focus on mandatory classes and properties</figcaption>
 </figure>
 
-<p>A complete UML diagram with all elements is not shown here, but can be reconstructed from the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#application-profile-diagram">DCAT-AP v3.0.1 UML diagram</a>.</p>
+<p><a href="#Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete"></a> shows a complete UML diagram with all elements used in mobilityDCAT-AP.</p>
+
+<figure id="Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete">
+<a href="./figures/Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete.jpg" title="view full-size image"><img src="./figures/Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete.jpg" 
+    alt="mobilityDCAT-AP Complete UML Class Diagram"/></a>
+<figcaption>Complete mobilityDCAT-AP UML Class Diagram</figcaption>
+</figure>
 
 </section>
 
@@ -318,7 +340,21 @@
 
 <h2>Main entities</h2>
 
-<p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</p>
+<p>The main entities are those that form the core of mobilityDCAT-AP.
+  The properties and their associated constraints that apply in the context of this profile are listed in a tabular form. Each row corresponds to one property. 
+  In addition, cross-references are provided for reused properties (i.e., their parallel definitions in [[DCAT-AP-v3.0.1]] and [[GeoDCAT-AP-v3.0.0]]), with the following abbreviations:</p>
+
+<ul>
+  <li><strong>A</strong>: reused as-is defined and expressed in [[DCAT-AP-v3.0.1]]</li>
+  <li><strong>E</strong>: reused with additional usage notes or additional restrictions compared to [[DCAT-AP-v3.0.1]]</li>
+  <li><strong>GA</strong>: reused as-is defined and expressed in [[GeoDCAT-AP-v3.0.0]]</li>
+  <li><strong>GE</strong>: reused with additional usage notes or additional restrictions compared to [[GeoDCAT-AP-v3.0.0]]</li>
+  <li><strong>P</strong>: proprietary definition (i.e., mobilityDCAT-AP extension, no previous definitions by neither [[DCAT-AP-v3.0.1]] nor [[GeoDCAT-AP-v3.0.0]]) </li>
+</ul>    
+  
+<p>This reuse qualification assessement is with respect to a specific version of DCAT. Therefore it may vary over time when new versions of DCAT-AP are created.</p>
+
+<p>A  table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>.</p>
 
 <!-- Agent-->
 <section id="class-agent">
@@ -414,11 +450,11 @@
 
 </section>
 
-<!-- Licence Document --> 
+<!-- License Document --> 
 
 <section id="class-licence-document">
 
-<h3>Licence Document</h3>
+<h3>License Document</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-licence-document.html"></div>
 
@@ -443,7 +479,7 @@
 
 <h3>+Mobility Data Standard</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-mobility-data-standard"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-mobility-data-standard.html"></div>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/properties-for-mobility-data-standard.html"></div> 
 
@@ -468,7 +504,9 @@
 
 <h2>Supportive entities</h2>
 
-  <!-- Address (Core Location)-->
+<p>The supportive entities are supporting the main entities in mobilityDCAT-AP. They are included because they form the range of properties.</p>  
+
+<!-- Address (Core Location)-->
 
 <section id="class-address-core-location">
 
@@ -676,68 +714,67 @@
 
 <h3>Requirements for controlled vocabularies</h3>
 
-<p>The following is a list of requirements that were identified for the controlled vocabularies to be recommended in this Application Profile.</p>
+<p>mobilityDCAT-AP makes use of several controlled vocabularies for selected properties introduced above. 
+  These define harmonised value spaces, or, more concretely, harmonised URI sets to be used as ranges for the related properties. 
+  The selection of the applied controlled vocabularies adheres to requirements defined by [[DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies]].</p>
 
-<p>Controlled vocabularies SHOULD:</p>
-
-<ul>
-<li>Be published under an open licence.</li>
-<li>Be operated and/or maintained by an institution of the European Union, by a recognised standards organisation or another trusted organisation.</li>
-<li>Be properly documented.</li>
-<li>Have labels in multiple languages, ideally in all official languages of the European Union.</li>
-<li>Contain a relatively small number of terms (e.g. 10-25) that are general enough to enable a wide range of resources to be classified.</li>
-<li>Have terms that are identified by URIs, with each URI resolving to documentation about the term.</li>
-<li>Have associated persistence and versioning policies.</li>
-</ul>
-
-<p>These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for this Application Profile.</p>
-
-</section>
+</section>    
 
 <section id="controlled-vocabularies-to-be-used">
 
-<h3>Controlled vocabularies to be used</h3>
+<h3>Applied controlled vocabularies</h3>
 
-<p>In the table below, some properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
+<p>The tables below list controlled vocabularies, as applied for properties defined by mobilityDCAT-AP.</p>
 
-<p>Compared with [[DCAT-AP-v2.0.1]], mobilityDCAT-AP makes use of additional controlled vocabularies. External organisations maintain some of these additional controlled vocabularies, and others are created and maintained by mobilityDCAT-AP.</p>
-<p>Further, mobilityDCAT-AP is removing some recommended and properties from [[DCAT-AP-v2.0.1]], which are linked with controlled vocabularies. Thus, these controlled vocabularies are not relevant for mobilityDCAT-AP and are not listed in the following table.</p>
+<p>The tables are separated by three categories with different usage expectations, following a similar categorisation by [[DCAT-AP-v3.0.1]].</p>
+  
+<p>Compared with [[DCAT-AP-v3.0.1]], mobilityDCAT-AP makes use of additional controlled vocabularies. 
+  These are either maintained by external organisations, or created and maintained by mobilityDCAT-AP.</p>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used.html"></div>
+<section id="properties-with-controlled-vocabularies-must">
+<h4>Properties with controlled vocabularies that MUST be used for the listed properties</h4>
+  <p>Usage expectation:</p>
+  <p>The property MUST use as range values codes from the controlled vocabulary. This means the value space is closed under the controlled vocabularies. Validation systems SHOULD produce errors.</p>
+  <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used-must.html"></div>
+</section>
+
+<section id="properties-with-controlled-vocabularies-at-least-1-value">
+<h4>Properties with AT LEAST 1 value from the controlled vocabularies</h4>
+  <p>Usage expectation:</p>
+  <p>The property MUST have at least one value from the controlled vocabulary. This means the value space is minimally constrained. 
+  If no applicable value is found in the controlled vocabulary, the "other" value SHOULD be used.
+    Validation systems SHOULD produce warnings. In addition, values not included in the controlled vocabulary are tolerated.</p>  
+  <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used-at-least-1-value.html"></div>
+</section>  
+
+<section id="properties-with-controlled-vocabularies-recommended">
+<h4>Properties with a RECOMMENDED use of controlled vocabularies</h4>
+  <p>Usage expectation:</p>
+  <p>The property is RECOMMENDED to use as range values codes from the controlled vocabulary.
+  This means other values are tolerated. Validation systems SHOULD produce warnings.</p>
+   <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used-recommended.html"></div>
+</section>
+
 
 </section>
 
-<section id="other-controlled-vocabularies">
-
-<h3>Other controlled vocabularies</h3>
-
-<p>In [[DCAT-AP-v2.0.1]], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and sevaral licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p>
-<p>Regarding license-related vocabularies, [[DCAT-AP-v2.0.1]] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]], which seems rather complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [[ODRS]]. This vocabulary is introducing a central class called <code>odrs:RightsStatement</code>, which is semantically equal to class <a href="#class-rights-statement"><code>dct:RightsStatement</code></a> from [[DCAT-AP-v2.0.1]]; and reusing some properties from [[DCAT-AP-v2.0.1]], such as <a href="#class-distribution"><code>dct:rights</code></a>. Again, no explicit recommendation for the usage of such license-related vocabularies is given. </p>
-
 </section>
-
-</section>
-
-
-
-<!-- Agent types, agent roles and agent properties -->
-
-<section id="agent-roles" class="informative">
-
-<h2>Agent Types, Agent Roles and Contact Information</h2>
-
-
-</section>
-
+  
 <!-- Accessibility and Multilingual Aspects -->
 
-<section id="accessibility-and-multilingual-aspects" class="informative">
+<section id="accessibility-and-multilingual-aspects">
 
 <h2>Accessibility and Multilingual Aspects</h2>
 
-<p><strong>Accessibility</strong> in the context of this Application Profile is limited to information about the technical format of distributions of datasets. The properties <code>dcat:mediaType</code> and <code>dct:format</code> provide information that can be used to determine what software can be deployed to process the data. The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of this Application Profile.</p>
+<p>This section aligns with the section of the same name in [[DCAT-AP-v3.0.1]].</p>
+  
+<p><strong>Accessibility</strong> in the context of mobilityDCAT-AP is limited to information about the technical format of distributions of datasets. 
+  There are three format-related properties <code>cnt:characterEncoding</code>, <code>dct:format</code> and <code>mobilitydcatap:mobilityDataStandard</code> providing information that can be used to determine what software can be deployed to process the data. 
+  See the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#3-format-information">Wiki page on Format information</a> for further guidance on these three properties.
+  The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of mobilityDCAT-AP.</p>
 
-<p><strong>Multilingual aspects</strong> related to this Application Profile concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. Wherever such properties are used, the string values are of one of two types:</p>
+<p><strong>Multilingual aspects</strong> related to mobilityDCAT-AP concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. 
+  Wherever such properties are used, the string values are of one of two types:</p>
 
 <ul>
 <li>The string is free text. Examples are descriptions and labels. Such text may be translated into several languages.</li>
@@ -756,9 +793,10 @@
 
 <p>All the occurrences of the property <code>dct:language</code>, which can be repeated if the metadata is provided in multiple languages, must have a URI as their object, not a literal string from the [[ISO-639]] code list.</p>
 
-<p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of this Application Profile.</p>
+<p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of mobilityDCAT-AP.</p>
 
 </section>
+  
 
 <section id='privsec'>
 
@@ -782,38 +820,53 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <p> Editors of ReSpec documentation:</p>
 <ul>
-<li>Daham Mohammed Mustafa, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
+<li>Valentina Carriero, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
 <li>Lina Teresa Molinas Comet, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
-<li>Peter Lubrich, <a href="https://www.bast.de/EN/Home/home_node.html">Federal Highway Research Institute (BASt)</a>, Bergisch Gladbach, Germany</li>
+<li>Peter Lubrich, <a href="https://www.bast.de/EN/Home/home_node.html">Federal Highway and Transport Research Institute BASt</a>, Bergisch Gladbach, Germany</li>
+<li>Julien Martineau, <a href="https://www.ngi.be/website/">Nationaal Geografisch Instituut</a>, Brussels, Belgium</li>
+<li>Daham Mohammed Mustafa, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
+<li>Ed Ooms, <a href="https://www.ndw.nu/">Nationaal Dataportaal Wegverkeer</a>, Utrecht, the Netherlands</li>
 <li>Mario Scrocca, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
+<li>Andrej Tibaut, <a href="https://www.fgpa.um.si/en/studij-eng/civil-engineering/">University of Maribor</a>, Maribor, Slovenia</li>
 </ul>
 
-<p> Reviewers of ReSpec documentation and contributors to preparatory activities:</p>
+<p> Reviewers of ReSpec documentation, producers of technical artifacts and contributors to preparatory activities:</p>
 <ul>
 <li>Hilde Austlid, <a href="https://www.vegvesen.no/en/">Norwegian Public Roads Administration</a>, Trondheim, Norway</li>
 <li>Antonia Azzini, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
 <li>Jasper Beernaerts, <a href="https://www.ngi.be/website/">Nationaal Geografisch Instituut</a>, Brussels, Belgium</li>
+<li>Tina Bollmann-Dodd, <a href="https://www.austriatech.at/en/">AustriaTech – Gesellschaft des Bundes für technologiepolitische Maßnahmen GmbH</a>, Vienna, Austria</li>
+<li>Julija Buzinske, <a href="https://vialietuva.lt/en">Via Lietuva</a>, Vilnius, Lithuania</li>
 <li>Petr Bureš, <a href="https://www.cvut.cz/en">Czech Technical University in Prague</a>, Prague, Czech Republic</li>
 <li>Marco Comerio, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
+<li>Darko Ilić, <a href="https://www.astra.admin.ch/en">Bundesamt für Strassen ASTRA</a>, Ittigen, Switzerland</li>
+<li>Elena Eikari, <a href="https://bransch.trafikverket.se/en/startpage/">Swedish Transport Administration</a>, Sweden</li>
 <li>Jörg Freudenstein, <a href="https://albrechtconsult.com/en/">AlbrechtConsult GmbH</a>, Aachen, Germany</li>
+<li>Mohanad Ismail, <a href="https://www.wsp.com/en-gl/">WSP</a>, London, UK</li>
 <li>Jonas Jäderberg, <a href="https://www.viati.se/in-english/">Viati</a>, Sweden</li>
+<li>Arthur Keesen, <a href="https://www.ndw.nu/">Nationaal Dataportaal Wegverkeer</a>, Utrecht, the Netherlands</li>
 <li>Christoph Lange-Bever, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
-<li>Chrysostomos Mylonas, <a href="https://www.certh.gr/root.en.aspx">Centre for Research and Technology Hellas (CERTH)/Hellenic Institute of Transport (HIT)</a>, Thessaloniki Greece</li>
+<li>Chrysostomos Mylonas, <a href="https://www.certh.gr/root.en.aspx">Centre for Research and Technology Hellas (CERTH)/Hellenic Institute of Transport (HIT)</a>, Thessaloniki, Greece</li>
+<li>Sara Filipa Guerra De Oliveira, <a href="https://www.fgpa.um.si/en/studij-eng/civil-engineering/">University of Maribor</a>, Maribor, Slovenia</li>
+<li>Ludger Rinsche, <a href="https://www.init.de">]init[ AG für digitale Kommunikation </a>, Berlin, Germany</li>
 <li>Rodolfo Da Silva, <a href="https://www.kios.ucy.ac.cy/">KIOS Research and Innovation Center of Excellence</a>, Nicosia, Cyprus</li>
-<li>Benjamin Witsch, <a href="https://www.austriatech.at/en/">AustriaTech – Gesellschaft des Bundes für technologiepolitische Maßnahmen GmbH</a>, Vienna, Austria</li>
+<li>Benjamin Witsch-Kovács, <a href="https://www.austriatech.at/en/">AustriaTech – Gesellschaft des Bundes für technologiepolitische Maßnahmen GmbH</a>, Vienna, Austria</li>
+<li>Jan Vlčinský, <a href="https://tamtamresearch.com">TamTam Research s.r.o.</a>, Karviná-Ráj, Czech Republic</li>
 </ul>
 
 <p>Other contributors and followers:</p>
 <ul>
-<li> Nighat John Akhtar, Malta</li>
+<li>Nighat John Akhtar, Malta</li>
 <li>Cosmin Bigică, <a href=" ">National Company of Road Infrastructure Administration (NCRIA)</a>, Romania</li>
+<li>Christina Faßbender, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
 <li>Lars-Olof Hjärp, <a href="https://bransch.trafikverket.se/en/startpage/">Swedish Transport Administration</a>, Sweden</li>
 <li>Christian Rantzow von Huth, <a href="https://www.vejdirektoratet.dk/english/sektion/information-english">Vejdirektoratet</a>, Copenhagen, Denmark</li>
 <li>Tomasz Karnafel, Poland</li>
 <li>Raivis Liepa, <a href="https://lvceli.lv/en/about-lsr/page/">Latvian State Roads</a>, Latvia</li>
 <li>Sara Linhas, <a href="https://www.armisgroup.com/">ARMIS</a>, Porto, Portugal</li>
-<li>Ed Ooms, <a href="https://www.ndw.nu/">Nationaal Dataportaal Wegverkeer</a>, Utrecht, the Netherlands</li>
-<li>András Selmeczy, Budapest, Hungary</li>
+<li>Sebastian Pretzsch, <a href="https://www.ivi.fraunhofer.de/en.html">Fraunhofer Institute for Transportation and Infrastructure Systems IVI</a>, Dresden, Germany</li>
+<li>András Selmeczy, <a href="https://internet.kozut.hu/en/">Hungarian Public Roads</a>, Budapest, Hungary</li>
+<li>Kenneth Sørensen, <a href="https://www.vejdirektoratet.dk/english/sektion/information-english">Vejdirektoratet</a>, Copenhagen, Denmark</li>
 <li>Eva Thelisson, <a href="https://www.admin.ch/gov/en/start/departments/department-of-environment-transport-energy-communications-detec.html">The Federal Department of the Environment, Transport, Energy and Communications (DETEC)</a>, Bern, Switzerland</li>
 <li>Stephen T'Siobbel, <a href="https://ertico.com/">ERTICO</a>, Brussels, Belgium</li>
 </ul>
@@ -835,16 +888,14 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <h2>Classes and Properties used in mobilityDCAT-AP</h2>
 
-  <p>This section provides a condensed tabular overview of the mentioned classes and properties in mobilityDCAT-AP. 
-    The properties are grouped under headings mandatory, recommended, optional and deprecated. These terms have the following meaning.</p>
-
-<ul>
-<li><strong>Mandatory property</strong>: a receiver must be able to process the information for that property; a sender must provide the information for that property.</li>
-<li><strong>Recommended property</strong>: a receiver must be able to process the information for that property; a sender should provide information for that property if such information is available.</li>
-<li><strong>Optional property</strong>: a receiver must be able to process the information for that property; a sender may provide the information for that property but is not obliged to do so.</li>
-<li><strong>Deprecated property</strong>: a receiver should be able to process information about instances of that property; a sender should not provide the information about instances of that property.</li>
-</ul>
-
+  <p>This section provides a tabular overview of the mentioned classes and properties in mobilityDCAT-AP. 
+    These are listed as class and property URIs, which are linked to detailed specifications in sections <a class="no-sectionRef" href="#main-entities"></a> and <a class="no-sectionRef" href="#supportive-entities"></a>.</p>
+    
+  <p>The properties are grouped under headings "mandatory" and "optional". Properties are "mandatory", if their cardinalities are defined as "1..1" or "1..*", otherwise they are "optional".
+    This classification has implications on the conformance requirements, see the <a class="no-sectionRef" href="#conformance">Conformance Statement</a>.</p>
+  
+  <p>For classes without further definitions of properties, only the class URI is mentioned. </p>
+  
 <div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
 
 </section>
@@ -856,8 +907,8 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <h2>Properties deprecated from previous version of mobilityDCAT-AP</h2>
 
-<p>The following properties from <a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/index.html#distribution-grammar/">mobilityDCAT-AP v.1.1.0</a> have been deprecated.</p>
-  <p>Elements that are deprecated will continue to be accepted until an upcoming major release of mobilityDCAT-AP. However, it is not recommended to introduce them at new mobilityDCAT-AP deplyoments.</p>
+<p>The following properties from [[mobilityDCAT-AP-v1.1.0]] have been deprecated.</p>
+  <p>Elements that are deprecated will continue to be accepted until an upcoming major release of mobilityDCAT-AP. However, it is not recommended to introduce them at new mobilityDCAT-AP deployments.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/properties-deprecated.html"></div>
 
@@ -871,17 +922,23 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
  
 <h2>Classes and properties not used from DCAT-AP</h2>
 
-<p>mobilityDCAT-AP is reusing many of the DCAT-AP classes and properties. 
+<p>mobilityDCAT-AP is reusing many of the classes and properties defined by [[DCAT-AP-v3.0.1]]. 
   The selection of the used classes and properties is based on the mobilityDCAT-AP Conceptual Model, defining essential metadata elements for NAPs and mobility data portals, 
-  see the <a href="https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/">Documentation of the preparatory activities</a>. 
+  see the documentation of the [[NAPCORE-Metadata-Preparatory-Activities]]. 
   Thus, mobilityDCAT-AP is leaving out many classes/properties from DCAT-AP model, also keeping the data model compact.
-  The following tables show an overview of classes/properties that are not used from DCAT-AP, with addional notes on the reasoning and alternative approaches.
+  The following tables show an overview of classes/properties that are not used from DCAT-AP, with additional notes on the reasoning and alternative approaches.
 </p>
 
+<section id="classes-not-used-from-DCAT-AP">
+<h4>Classes not used from DCAT-AP</h4>  
 <div data-include-format="html" data-include-replace="true" data-include="./tables/dcat-ap-not-used-classes.html"></div>
-
+</section>
+  
+<section id="properties-not-used-from-DCAT-AP">
+<h4>Properties not used from DCAT-AP</h4>
 <div data-include-format="html" data-include-replace="true" data-include="./tables/dcat-ap-not-used-properties.html"></div>
-
+</section>
+  
 </section>  
   
 </section>
@@ -927,7 +984,15 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 <p>To show how mobilityDCAT-AP can be deployed in practice, some example files have been produced. These denote how metadata descriptions can be populated using the mobilityDCAT-AP data vocabulary. </p>
 <p>The first example is related to a real-life NAP data offering from the Swedish NAP. See the corresponding human-readable <a href="https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"> metadata description on the NAP portal</a>.</p>
 <p>The Swedish NAP also provides machine-readable representations of its metadata records in a proprietary DCAT-AP dialect, see the <a href="https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits.xml"> RDF/XML file for the example above</a>.</p>
-<p>This RDF/XML was converted into metadata descriptions according to the mobilityDCAT-AP v3.0.0 specification. Two example populations are provided: a maximum population fulfilling all mandatory plus several recommended and optional elements, and a minimum population considering only mandatory elements from mobilityDCAT-AP v3.0.0. Each is provided in Turtle, RDF/XML, and JSON-LD serialisations.</p>
+<p>This RDF/XML was converted into a metadata description according to the mobilityDCAT-AP v3.0.0 specification. It is fulfilling all mandatory and some recommended and optional elements from mobilityDCAT-AP v3.0.0. Within the RDF/XML example file, several comments are given regarding the original RDF/XML as follows:</p>
+<ul>
+<li>OK = this element can remain from the original</li>
+<li>PROPOSAL = this element can remain from the original; however, a proposal is given following the usage notes of mobilityDCAT-AP</li>
+<li>MODIFIED = changed element</li>
+<li>ADDED = new element</li>
+</ul>
+
+<p>The above RDF/XML example population was further formatted as a TTL file. Lastly, a reduced example population is provided, only considering mandatory elements from mobilityDCAT-AP v3.0.0.</p>
 <p>Altogether, the following files are provided as example population:</p>
 <ul>
 <li>mobilityDCAT-AP example, minimum population (<a href="./examples/mobilitydcat-ap_3.0.0_example_minimum.ttl">Turtle</a>, <a href="./examples/mobilitydcat-ap_3.0.0_example_minimum.rdf">RDF/XML</a>, <a href="./examples/mobilitydcat-ap_3.0.0_example_minimum.jsonld">JSON-LD</a>)</li>
@@ -944,7 +1009,8 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <h2>mobilityDCAT-AP Wikipage</h2>
 
-<p>As an addition to this specification, a "mobilityDCAT-AP Wiki" has been published. This serves as a practical orientation for users of mobilityDCAT-AP. In particular, it guides deployers (e.g., developers and operators of NAPs and data platforms) in the implementation phasis of mobilityDCAT-AP​.
+<p>As an addition to this specification, a "mobilityDCAT-AP Wiki" has been published. This serves as a practical orientation for users of mobilityDCAT-AP. 
+  In particular, it guides deployers (e.g., developers and operators of NAPs and data platforms) in the implementation phase of mobilityDCAT-AP​.
 This includes additional explanations and examples for specific vocabulary elements, recommendations for metadata handling and exposure on individual IT systems, as well as advice on metadata quality and validation processes.</p>
 <p>The Wiki page can be retrieved in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki"> Wiki section of the GitHub repository</a></p>
 </section>
@@ -956,7 +1022,7 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Serialisation Files</h2>
 
-<p>Serialisation files the allow for IT implementations of mobilityDCAT-AP are available as RDF/XML, Turtle, and JSON-LD syntaxes at <a href="./">this Github subfolder</a>.</p>
+<p>Serialisation files the allow for IT implementations of mobilityDCAT-AP are available as RDF/XML, Turtle, and JSON-LD syntaxes at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases">this Github subfolder</a>.</p>
 
 </section>
 
@@ -967,12 +1033,13 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <h2>mobilityDCAT-AP Validation Guidance</h2>
 
-<p>SHACL validation files for mobilityDCAT-AP are available at <a href="./shaclShapes">this Github subfolder</a>:
-  <a href="./shaclShapes/mobilitydcat-ap_3.0.0_shacl_shapes.ttl"><code>mobilitydcat-ap_3.0.0_shacl_shapes.ttl</code></a> (basic validation),
-  <a href="./shaclShapes/mobilitydcat-ap_3.0.0_shacl_range.ttl"><code>mobilitydcat-ap_3.0.0_shacl_range.ttl</code></a> (range constraints), and
-  <a href="./shaclShapes/mobilitydcat-ap_3.0.0_shacl_mdr-vocabularies.shape.ttl"><code>mobilitydcat-ap_3.0.0_shacl_mdr-vocabularies.shape.ttl</code></a> (controlled-vocabulary constraints).
-  A full validation toolkit with Docker, Python scripts and test cases is available at the 
-  <a href="https://github.com/mobilityDCAT-AP/validation">dedicated validation repository</a>.</p>
+<p>SHACL validation files for mobilityDCAT-AP are available at <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/shaclShapes">this Github subfolder</a>. It  contains the following files:
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl"><code>mobilitydcat-ap_shacl_shapes.ttl</code></a> (cardinality / nodeKind constraints (import + deltas over DCAT-AP 3.0.1)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_ranges.ttl"><code>mobilitydcat-ap_shacl_ranges.ttl</code></a> (sh:class / nodeKind range constraints (import + deltas)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_imports.ttl"><code>mobilitydcat-ap_shacl_imports.ttl</code></a> (owl:imports for base vocabularies; pulls in DCAT-AP 3.0.1).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_mdr_vocabularies.ttl"><code>mobilitydcat-ap_mdr_vocabularies.ttl</code></a> (controlled-vocabulary (skos:inScheme) constraints).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_mdr_deprecateduris.ttl"><code>mobilitydcat-ap_mdr_deprecateduris.ttl</code></a> (sh:Warning shapes for properties deprecated in v3.0.0 (Appendix A.2)).</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_shacl_mdr_imports.ttl"><code>mobilitydcat-ap_shacl_mdr_imports.ttl</code></a> (owl:imports of the mobility controlled vocabularies).</li>
 </section>
   
 
@@ -983,8 +1050,9 @@ This includes additional explanations and examples for specific vocabulary eleme
 <h2>mobilityDCAT-AP Enterprise Architect files</h2>
 
 <p>Enterprise Architect files describing the mobilityDCAT-AP data model are available at <a href="./enterpriseArchitectFiles">this Github subfolder</a>.</p>
-
 </section>
+  
+
 
 <!-- Change log --> 
 
@@ -995,34 +1063,72 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <section id="changes-since-20250119">
 
-<h2>Changes since mobilityDCAT-AP 1.1.0 (17 January 2025)</h2>
+<h2>Changes since [[mobilityDCAT-AP-v1.1.0]] (17 January 2025)</h2>
 
 <ul>
 <li>Section <a class="no-sectionRef" href="#introduction"></a> is shortened .
 Generic description about mobilityDCAT-AP is now compiled at the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-1:-Introduction-and-Overview">Wikipage</a>.
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/59">#59</a>.</li>
   
-<li>Section <a class="no-sectionRef" href="#terminology"></a> is restructured with several subsections and cleaned up, removing ambigous terms like "Publication".
+<li>Section <a class="no-sectionRef" href="#terminology"></a> is restructured with several subsections and cleaned up, removing ambiguous terms like "Publication".
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/51">#51</a> and <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/52">#52</a>.</li>
   
-<li>The organisation and the layout of the elements of the ReSpec documentation are modified, with the goal of alignment with the ReSpec pages of DCAT-AP v3 and geoDCAT-AP v3.
+<li>Section "Agent Types, Agent Roles and Contact Information" is removed. All guidance and detailed information about using organisation/personal information (including agent roles etc.)
+  is now compiled in a new <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information">Wiki page "Organisational and personal information"</a>.
+  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/228">#228</a>.</li>
+
+<li>The Wiki section <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties">"Chapter 3: Extra explanations on specific classes and properties"</a> has been expanded, 
+  with additional usage notes, background information and example codes. 
+This way, the usage notes in the original class/property definitions are kept short, but refer to the relevant Wiki pages for more information.
+Specific Wiki references are made for classes <a href="#class-agent"><code>foaf:Agent</code></a>, <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a>, 
+  <a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a>, <a href="#class-licence-document"><code>dct:LicenseDocument</code></a>,                                                                                              
+  <a href="#class-location"><code>dct:Location</code></a>, and <a href="#class-rights-statement"><code>dct:RightsStatement</code></a>.</li>
+  
+<li>The organisation and the layout of the elements of the ReSpec documentation are modified, with the goal of alignment with the ReSpec pages of [[DCAT-AP-v3.0.1]] and [[GeoDCAT-AP-v3.0.0]].
 In particular, the class and property definitions are now under new sections <a class="no-sectionRef" href="#main-entities"></a>, <a class="no-sectionRef" href="#supportive-entities"></a> and <a class="no-sectionRef" href="#datatypes"></a>. 
   Further, all property tables are reformatted with new columns for "Definition", "Usage notes" and "Reusage".
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/108">#108</a>.</li>
 
+<li>Reorganisation of obligation settings for classes and properties.
+  In [[mobilityDCAT-AP-v1.1.0]], classes and properties were classified as "mandatory", "recommended" and "optional", similar to previous versions of [[DCAT-AP]]. This is reorganised as follows:
+  <ul>
+    <li>Classes are not classified any longer, adopting the approach of [[DCAT-AP-v3.0.1]].</li>
+    <li>Properties are only classified as "mandatory" and "optional", thus dropping the "recommended" option. Even in [[DCAT-AP-v3.0.1]], the "recommended" option is only used at parts of the documentation.
+      Without the "recommended" option, the mobilityDCAT-AP specification is simplified, also avoiding lenghty discussions how to classify individual properties.</li>
+  </ul> 
+  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/155">#155</a>.</li> 
+
+
+<li>Section <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a> considers a new categorisation on the expected usage of the applied controlled vocabularies, according to [[DCAT-AP-v3.0.1]].
+    Thus, new sub-sections are provided, with different usage categories each.
+    See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/229">#229</a>.
+  </li>
+  
+<li>New notion about classes and properties "not used from DCAT-AP".
+    In [[mobilityDCAT-AP-v1.1.0]], several classes and properties from the original [[DCAT-AP]] were declared as "removed", following the former Guidelines for DCAT-AP Extensions [[[DCAT-AP-EG]].
+    The term "removed" caused some confusion, so it is replaced with "not used from DCAT-AP". 
+    This terms refers to classes and properties that are defined in [[DCAT-AP-v3.0.1]], but are not defined in mobilityDCAT-AP. 
+    These classes are compiled in a new annex <a class="no-sectionRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.
+    The implications of elements "not used from DCAT-AP" are further explained in a special <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-2:-Recommendations-for-the-deployment-of-mobilityDCAT%E2%80%90AP#8-why-does-mobilitydcat-ap-not-take-over-all-classes-and-properties-from-the-parallel-dcat-ap-specification">Wiki page</a>. 
+    See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/130">#130</a>.
+  </li>
+  
+<li>Appendix H (mobilityDCAT-AP Enterprise Architect files), as provided in [[mobilityDCAT-AP-v1.1.0]], is not provided any longer. 
+  This is due to lacking resources to maintain such files, and also the current lack of interest of stakeholders to have such files available. 
+See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/163">#163</a>.</li>
+
+  
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP.
-These classes have been already defined in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>, but now are also explicitly used in mobilityDCAT-AP.</li>
+These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
 <ul>
-    <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in DCAT 3.
+    <li>Class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a> is added to reflect the new notions in [[VOCAB-DCAT-3]].
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
-      <li>Class <a href="#class-standard"><code>dct:Standard</code></a> is added to allow the necessary ranges for
-       property <a href="#distribution-linked-schemas"><code>dct:conformsTo</code></a> of class Distribution 
-       and property <a href="#mobility-data-standard-conforms-to"><code>dct:conformsTo</code></a> of class Mobility Data Standard.
-    See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
+    <li>Class <a href="#class-address-vcard"><code>vcard:Address</code></a> is added to allow the necessary range for
+       property <a href="#kind-address"><code>vcard:hasAddress</code></a> of class Kind.</li>
 </ul> 
   
 <li>Property additions with the goal to expand the expressiveness of mobilityDCAT-AP. 
-  These properties have been already defined in <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP v3.0.1</a>, but now are also explicitly used in mobilityDCAT-AP.</li>
+  These properties have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
 <ul>
   <li>Property <a href="#catalogue-record-application-profile"><code>dct:conformsTo</code></a> of class Catalogue Record added.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/82">#82</a>.</li>
@@ -1051,6 +1157,11 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
    <li>Property <a href="#class-rights-statement"><code>dct:description</code></a> of class Rights Statement added.
       See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
+    <li>All 10 properties of class <a href="#class-dataset-series"><code>dcat:DatasetSeries</code></a>, as defined for the same class <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#DatasetSeries"><code>dcat:DatasetSeries</code></a> in [[DCAT-AP-v3.0.1]], added.
+   Also, property <a href="#dataset-series-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a> of class Dataset Series added, 
+      corresponding to the same property <a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a> of class Dataset.
+      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/115">#115</a>.</li>
+    <li>All 5 properties of class <a href="#class-address-vcard"><code>vcard:Address</code></a>, as defined for the same class <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(vCard)"><code>vcard:Address</code></a> in [[GeoDCAT-AP-v3.0.0]], added.</li>
 </ul> 
 
 <li>Other changes of existing classes:</li>
@@ -1078,83 +1189,94 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
         Range changed from <code>skos:Concept</code> to <code>dct:Standard</code>.
         Cardinality changed from "0..1" to "0..*". Usage notes revised. 
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
+  <li>Range for property <a href="#quality-annotation-quality-annotation-resource"><code>oa:hasBody</code></a> of class Quality Annotation: changed from previously <code>rdfs:Literal</code> to <code>rdfs:Resource</code>.
+     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/230">#230</a>.</li>
 </ul> 
   
-  <li>Changes in classes and properties, with the goal of alignment with the DCAT-AP v3 and geoDCAT-AP v3 data models. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
+  <li>Changes in classes and properties, with the goal of alignment with the [[DCAT-AP-v3.0.1]] and [[GeoDCAT-AP-v3.0.0]] data models. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/18">#18</a>.</li>
 <ul>
   
-  <li>Classes aligned with the DCAT-AP v3 data model:</li>
+  <li>Classes aligned with the [[DCAT-AP-v3.0.1]] data model:</li>
    <ul>
    <li>Class <a href="#class-concept"><code>skos:Concept</code></a> is renamed from previously "Category".</li>
    <li>Class <a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a> is renamed from previously "Category Scheme".</li>
    </ul> 
   
-<li>Properties aligned with the DCAT-AP v3 data model:</li>
+<li>Properties aligned with the [[DCAT-AP-v3.0.1]] data model:</li>
   <ul>
-  <li>Property <a href="#class-catalogue"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
+  <li>Property <a href="#catalogue-homepage"><code>foaf:homepage</code></a> of class Catalogue: range changed from previously
     <code>rdfs:Resource</code> to <code>foaf:Document</code>.</li>
-  <li>Property <a href="#class-catalogue"><code>dcat:dataset</code></a> of class Catalogue: cardinality relaxed from previously "1..*" to "0..*".</li>
-  <li>Property <a href="#class-catalogue"><code>dct:spatial</code></a> of class Catalogue: label changed from previously "spatial/geographic" to "geographical coverage".</li>
-  <li>Property <a href="#class-dataset"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
+  <li>Property <a href="#catalogue-dataset"><code>dcat:dataset</code></a> of class Catalogue: cardinality relaxed from previously "1..*" to "0..*".</li>
+  <li>Property <a href="#catalogue-geographical-coverage"><code>dct:spatial</code></a> of class Catalogue: label changed from previously "spatial/geographic" to "geographical coverage".</li>
+  <li>Property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Dataset: property is now directly reused from DCAT-AP v3.
     Previously it was an addition by mobilityDCAT-AP. In this context, the range of this property is changed from previously <code>skos:Concept</code> to <code>eli:LegalResource</code>.</li>
-  <li>Property <a href="#class-dataset"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#class-distribution"><code>dcatap:applicableLegislation</code></a> of class Distribution: property added (reason: accordance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
-  <li>Property <a href="#class-location"><code>locn:geometry</code></a> of class Location: range changed from previously 
+  <li>Property <a href="#dataset-has-version"><code>dcat:hasVersion</code></a> of class Dataset: URI changed from previously <code>dct:hasVersion</code> to <code>dcat:hasVersion</code>.</li>
+  <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: 
+    property added (reason: compliance with the <a href="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+  <li>Property <a href="#distribution-rights"><code>dct:rights</code></a> of class Distribution: cardinality relaxed from previously "1..1" to "1..*".</li>
+  <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
       "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
-  <li>Property <a href="#class-mobility-data-standard"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
-  <li>Property <a href="#class-period-of-time"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
+  <li>Property <a href="#mobility-data-standard-version"><code>dcat:version</code></a> of class Mobility Data Standard: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
+  <li>Property <a href="#period-of-time-end-date"><code>dcat:endDate</code></a> of class Period of Time: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#datatypes">Temporal Literal</a>.</li>
-  <li>Property <a href="#class-period-of-time"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
+  <li>Property <a href="#period-of-time-start-date"><code>dcat:startDate</code></a> of class Period of Time: range changed from previously
     "<code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code>" to a new datatype <a href="#datatypes">Temporal Literal</a>.</li>
   </ul> 
   
-<li>Properties aligned with the geoDCAT-AP v3 data model:</li>
+<li>Properties aligned with the [[GeoDCAT-AP-v3.0.0]] data model:</li>
   <ul>
-     <li>Property <a href="#class-agent"><code>locn:address</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
-    <li>Property <a href="#class-agent"><code>org:memberOf</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
-    <li>Property <a href="#class-agent"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1", 
-       at the same time range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
-    <li>Property <a href="#class-agent"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1",
-     at the same time range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
-  <li>Property <a href="#class-catalogue"><code>dct:identifier</code></a> of class Catalogue: cardinality relaxed from previously "0..1" to "0..*".</li>
-   <li>Property <a href="#class-dataset"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>, 
-   at the same time range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
-  <li>Property <a href="#class-kind"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
-  <li>Property <a href="#class-kind"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
-  <li>Property <a href="#class-kind"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
-  <li>Property <a href="#class-kind"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+     <li>Property <a href="#agent-address"><code>locn:address</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#agent-affiliation"><code>org:memberOf</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".</li>
+    <li>Property <a href="#agent-email"><code>foaf:mbox</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1". 
+       Also, the range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+    <li>Property <a href="#agent-phone"><code>foaf:phone</code></a> of class Agent: cardinality fixed from previously "0..*" to "0..1".
+      Also, the range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+  <li>Property <a href="#catalogue-identifier"><code>dct:identifier</code></a> of class Catalogue: cardinality relaxed from previously "0..1" to "0..*".</li>
+   <li>Property <a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a> of class Dataset: URI changed from previously <code>dct:conformsTo</code>. 
+    Also, the range changed from previously <code>dct:Standard</code> to <code>skos:Concept</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>vcard:Email</code>.</li>
+  <li>Property <a href="#kind-email"><code>vcard:hasEmail</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-name"><code>vcard:fn</code></a> of class Kind: cardinality fixed from previously "1..*" to "1..1".</li>
+  <li>Property <a href="#kind-URL"><code>vcard:hasURL</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
+  <li>Property <a href="#kind-phone"><code>vcard:hasTelephone</code></a> of class Kind: range changed from previously <code>owl:Thing</code> to <code>rdfs:Resource</code>.</li>
   </ul>   
 </ul>  
   
 <li>Deprecations of properties:</li>
 <ul>
   <li>Property <a href="#catalogue-is-part-of"><code>dct:isPartOf</code></a> of class Catalogue is deprecated, being an inverse property to <a href="#class-catalogue"><code>dct:hasPart</code></a>.
-    This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>  
+    This adheres to the [[DCAT-AP-v3.0.1-Note-on-Inverse-Properties]], recommending not to use the inverse of properties.</li>  
   <li>Property <a href="#dataset-is-version-of"><code>dct:isVersionOf</code></a> of class Dataset is deprecated, being an inverse property to <a href="#class-dataset"><code>dcat:hasVersion</code></a>.
-    This adheres to the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#inverse-properties">rule of DCAT-AP v3</a> not to use the inverse of properties.</li>
+    This adheres to the [[DCAT-AP-v3.0.1-Note-on-Inverse-Properties]], recommending not to use the inverse of properties.</li>
+  <li>Property <a href="#quality-annotation-quality-annotation-target"><code>oa:hasTarget</code></a> of class Quality Annotation is deprecated, 
+    being an inverse property to <a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a>.
+    This adheres to the [[DCAT-AP-v3.0.1-Note-on-Inverse-Properties]], recommending not to use the inverse of properties.</li>
   <li>Property <a href="#catalogue-record-creation-date"><code>dct:created</code></a> of class Catalogue Record is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/167">#167</a>.</li>
   <li>Property <a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a> of class Distribution is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/90">#90</a>.</li>
   <li>Property <a href="#mobility-data-standard-schema"><code>mobilitydcatap:schema</code></a> of class Mobility Data Standard is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/153">#153</a>.</li>
-  <li>Property <a href="#licence-document-standard-licence"><code>dct:identifier</code></a> of class Licence Document is deprecated.
+  <li>Property <a href="#license-document-standard-license"><code>dct:identifier</code></a> of class License Document is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
-  <li>Property <a href="#licence-document-licence-text"><code>rdfs:label</code></a> of class Licence Document is deprecated.
+  <li>Property <a href="#licence-document-licence-text"><code>rdfs:label</code></a> of class License Document is deprecated.
+     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
+   <li>Property <a href="#rights-statement-additional-information-for-access-and-usage"><code>rdfs:label</code></a> of class Rights Statementt is deprecated.
      See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/165">#165</a>.</li>
 </ul> 
 
 <li>Relabeling of classes and properties as "not used from DCAT-AP":</li>
 <ul>
   <li>Classes <code>spdx:Checksum</code>, <code>dcat:DataService</code>, <code>dct:MediaType</code>, <code>dct:ProvenanceStatement</code>, 
-    <code>dcat:Relationship</code> do exist in DCAT-AP v3, and were also listed in mobilityDCAT-AP v1 for compatibility reasons.
-    However, they are without function in mobilityDCAT-AP, so they are labeled as "not used from DCAT-AP". 
+    <code>dcat:Relationship</code> do exist in [[DCAT-AP-v3.0.1]], and were also listed in [[mobilityDCAT-AP-v1.1.0]] for compatibility reasons.
+    However, they are without function in mobilityDCAT-AP, so they are labeled as "not used from DCAT-AP". This also applies to all properties belonging to the above classes.
    See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
-  <li>Property <code>dcat:accessService</code> of class Distribution does exist in DCAT-AP v3, and was also listed in mobilityDCAT-AP v1 for compatibility reasons.
+  <li>Property <code>dcat:accessService</code> of class Distribution does exist in [[DCAT-AP-v3.0.1]], and was also listed in [[mobilityDCAT-AP-v1.1.0]] for compatibility reasons.
     However, the class <code>dcat:DataService</code>, as well as all properties using this class as a range, 
     are without function in mobilityDCAT-AP, so they are labeled as "not used from DCAT-AP". 
     See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.</li>
-  <li>Property <a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a> of class Dataset does exist in DCAT-AP v3 and was also listed in mobilityDCAT-AP v1.
+  <li>Property <code>dct:isReferencedBy</code> of class Dataset does exist in [[DCAT-AP-v3.0.1]] and was also listed in [[mobilityDCAT-AP-v1.1.0]].
     For ambiguity reasons, it is not used  in mobilityDCAT-AP v3, so it is labeled as "not used from DCAT-AP". 
     See <a class="no-secRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/193">#193</a>.</li>
@@ -1180,7 +1302,7 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
 <li>Property <a href="#class-mobility-data-standard"><code>dct:conformsTo</code></a> added under <a href="#class-mobility-data-standard">optional properties for Class Mobility Data Standard</a>. This property describes the name of the mobility data standard. This property is used when a custom instance of class <code>mobilitydcatap:MobilityDataStandard</code> is defined, see the usage note for this property.  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/65">#65.</a> </li>
 <li>Errata and editorial improvements:</li>
 <ul>
-  <li>Corrected usage note for property <a href="#class-distribution"><code>cnt:characterEncoding</code></a> (now linking to IANA register [[IANA-CHARSETS]]). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/34">#34</a>.</li>
+  <li>Corrected usage note for property <a href="#class-distribution"><code>cnt:characterEncoding</code></a> (now linking to IANA register [[IANA-CHARACTER-SETS]]). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/34">#34</a>.</li>
   <li>Corrected all figures showing UML diagrams (new arrow types). See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/37">#37</a>.</li>
   <li>Corrected reference to [[NUTS-CODES]] under <a href="#controlled-vocabularies-to-be-used">controlled vocabularies for property <code>dct:spatial</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/58">#58</a>.</li>
   <li>All controlled vocabularies that are referenced at class and property descriptions are now directly hyperlinked to the specific controlled vocabulary. Before, a generic link to <a href="#controlled-vocabularies-to-be-used">chapter 5.2 Controlled Vocabularies</a> was only given.</li>
@@ -1188,12 +1310,12 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
 </ul>
 <li><a href="#serialisation-files">Appendix F (mobilityDCAT-AP Serialisation Files)</a> added.</li>
 <li><a href="#validation-guidance">Appendix G (mobilityDCAT-AP Validation Guidance)</a> added.</li>
-<li><a href="#eap-files">Appendix H (mobilityDCAT-AP Enterprise Architect files)</a> added.</li>
+<li>Appendix H (mobilityDCAT-AP Enterprise Architect files) added.</li>
 <li>Changes in controlled vocabularies: </li>
 <ul>
   <li><a href="#controlled-vocabularies-to-be-used">Frequency:</a> The <a href="https://w3id.org/mobilitydcat-ap/update-frequency">original controlled vocabulary "update frequency" by mobilityDCAT-AP </a> is deprecated, as it is not needed any longer. Only the EU Authority Table "Frequency" is now used, as it now contains all necessary values. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/11">#11</a>.</li>
   <li><a href="#controlled-vocabularies-to-be-used">Mobility Theme:</a> Added references to EC Delegated Regulations via additional <code>dcatap:applicableLegislation</code> properties for all values used in this vocabulary. This allows for an automated tagging of EC Regulations to individual datasets. See issue <a href="https://github.com/mobilityDCAT-AP/controlled-vocabularies/issues/8">#8</a>.</li>
-  <li><a href="#controlled-vocabularies-to-be-used">Conditions for access and usage:</a> Value list extended to allow for constellations such as "Licence provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> </li>
+  <li><a href="#controlled-vocabularies-to-be-used">Conditions for access and usage:</a> Value list extended to allow for constellations such as "License provided, free of charge". See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/27">#27</a> </li>
 </ul>  
 <li>Ongoing refinements and additions in <a href="#wikipage">mobilityDCAT-AP Wikipage</a> </li>
 </ul>
@@ -1208,7 +1330,7 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
 <ul>
 <li>Errata: </li>
 <li><ul>
-  <li><a href="#fig-mobilitydcat-ap-uml-class-diagram"></a> corrected</li>
+  <li>UML class diagram corrected</li>
   <li>Class <code>mobilitydcatap:MobilityDataStandard</code> was sometimes misspelled as <code>mobilitydcatap:mobilityDataStandard</code>, corrected </li>
   <li>Property <code>mobilitydcatap:mobilityDataStandard</code> of class <code>dcat:Distribution</code> had the range <code>skos:Concept</code> instead of <code>mobilitydcatap:MobilityDataStandard</code>, corrected </li>
   <li>URL linking to Controlled Vocabulary "http://publications.europa.eu/resource/authority/licence" repaired</li>

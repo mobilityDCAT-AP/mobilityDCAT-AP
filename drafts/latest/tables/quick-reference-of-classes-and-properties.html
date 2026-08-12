@@ -1,316 +1,339 @@
-<table class="simple" id="table-quick-reference-of-classes-and-properties"> 
-<thead>
-<tr>
-<th>Class</th>
-<th>Mandatory prop.</th>
-<th>Optional prop.</th>
-</tr>
-</thead>
-<tbody>
-  
+<table class="simple" id="table-quick-reference-of-classes-and-properties">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Mandatory properties</th>
+      <th>Optional properties</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<tr>
-<td valign=top>+<a href="#class-address-core-location"><code>locn:Address</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-<p>+<a href="#address-administrative-area"><code>locn:adminUnitL2</code></a></p>
-<p>+<a href="#address-city"><code>locn:postName</code></a></p>
-<p>+<a href="#address-country"><code>locn:adminUnitL1</code></a></p>
-<p>+<a href="#address-postal-code"><code>locn:postCode</code></a></p>
-<p>+<a href="#address-street-address"><code>locn:thoroughfare</code></a></p>
-</td>
-</tr>
-  
-  
-<tr>
-<td valign=top><a href="#class-agent"><code>foaf:Agent</code></a></td>
-<td valign=top>
-<p><a href="#agent-name"><code>foaf:name</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#agent-address"><code>locn:address</code></a></p>
-<p>+<a href="#agent-affiliation"><code>org:memberOf</code></a></p>
-<p>+<a href="#agent-email"><code>foaf:mbox</code></a></p>
-<p>+<a href="#agent-first-name"><code>foaf:firstName</code></a></p>
-<p>+<a href="#agent-phone"><code>foaf:phone</code></a></p>
-<p>+<a href="#agent-surname"><code>foaf:surname</code></a></p>
-<p><a href="#agent-type"><code>dct:type</code></a></p>
-<p>+<a href="#agent-url"><code>foaf:workplaceHomepage</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top>+<a href="#class-assessment"><code>mobilitydcatap:Assessment</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-<p>+<a href="#assessment-assessment-date"><code>dct:issued</code></a></p>
-<p>+<a href="#assessment-assessment-result"><code>oa:hasBody</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-catalogue"><code>dcat:Catalog</code></a></td>
-<td valign=top>
-<p><a href="#catalogue-description"><code>dct:description</code></a></p>
-<p><a href="#catalogue-geographical-coverage"><code>dct:spatial</code></a></p>
-<p><a href="#catalogue-homepage"><code>foaf:homepage</code></a></p>
-<p><a href="#catalogue-publisher"><code>dct:publisher</code></a></p>
-<p><a href="#catalogue-record"><code>dcat:record</code></a></p>
-<p><a href="#catalogue-title"><code>dct:title</code></a></p>
-</td>
-<td valign=top>
-<p><a href="#catalogue-dataset"><code>dcat:dataset</code></a></p>
-<p><a href="#catalogue-has-part"><code>dct:hasPart</code></a></p>
-<p>+<a href="#catalogue-identifier"><code>dct:identifier</code></a></p>
-<p><a href="#catalogue-language"><code>dct:language</code></a></p>
-<p><a href="#catalogue-licence"><code>dct:license</code></a></p>
-<p><a href="#catalogue-modification-date"><code>dct:modified</code></a></p>
-<p>+<a href="#catalogue-other-identifier"><code>adms:identifier</code></a></p>
-<p><a href="#catalogue-release-date"><code>dct:issued</code></a></p>
-<p><a href="#catalogue-themes"><code>dcat:themeTaxonomy</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-catalogue-record"><code>dcat:CatalogRecord</code></a></td>
-<td valign=top>
-<p>+<a href="#catalogue-record-creation-date"><code>dct:created</code></a></p>
-<p><a href="#catalogue-record-language"><code>dct:language</code></a></p>
-<p><a href="#catalogue-record-modification-date"><code>dct:modified</code></a></p>
-<p><a href="#catalogue-record-primary-topic"><code>foaf:primaryTopic</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
-<p><a href="#catalogue-record-source-metadata"><code>dct:source</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-concept"><code>skos:Concept</code></a></td>
-<td valign=top>
-<p><a href="#concept-preferred-label"><code>skos:prefLabel</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#concept-category-scheme"><code>skos:inScheme</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-concept-scheme"><code>skos:ConceptScheme</code></a></td>
-<td valign=top>
-<p><a href="#category-scheme-title"><code>dct:title</code></a></p>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-  
-  
-<tr>
-<td valign=top><a href="#class-dataset"><code>dcat:Dataset</code></a></td>
-<td valign=top>
-<p><a href="#dataset-dataset-distribution"><code>dcat:distribution</code></a></p>
-<p><a href="#dataset-description"><code>dct:description</code></a></p>
-<p><a href="#dataset-frequency"><code>dct:accrualPeriodicity</code></a></p>
-<p><a href="#dataset-geographical-coverage"><code>dct:spatial</code></a></p>
-<p>+<a href="#dataset-mobility-theme"><code>mobilitydcatap:mobilityTheme</code></a></p>
-<p><a href="#dataset-publisher"><code>dct:publisher</code></a></p>
-<p><a href="#dataset-title"><code>dct:title</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a></p>
-<p>+<a href="#dataset-assessment-result"><code>mobilitydcatap:assessmentResult</code></a></p>
-<p><a href="#dataset-contact-point"><code>dcat:contactPoint</code></a></p>
-<p><a href="#dataset-documentation"><code>foaf:page</code></a></p>
-<p>+<a href="#dataset-georeferencing-method"><code>mobilitydcatap:georeferencingMethod</code></a></p>
-<p><a href="#dataset-has-version"><code>dct:hasVersion</code></a></p>
-<p><a href="#dataset-identifier"><code>dct:identifier</code></a></p>
-<p><a href="#dataset-in-series"><code>dcat:inSeries</code></a></p>
-<p>+<a href="#dataset-intended-information-service"><code>mobilitydcatap:intendedInformationService</code></a></p>
-<p><a href="#dataset-is-referenced-by"><code>dct:isReferencedBy</code></a></p>
-<p><a href="#dataset-keyword"><code>dcat:keyword</code></a></p>
-<p><a href="#dataset-language"><code>dct:language</code></a></p>
-<p><a href="#dataset-modification-date"><code>dct:modified</code></a></p>
-<p>+<a href="#dataset-network-coverage"><code>mobilitydcatap:networkCoverage</code></a></p>
-<p><a href="#dataset-other-identifier"><code>adms:identifier</code></a></p>
-<p>+<a href="#dataset-quality-description"><code>dqv:hasQualityAnnotation</code></a></p>
-<p>+<a href="#dataset-reference-system"><code>geodcatap:referenceSystem</code></a></p>
-<p><a href="#dataset-related-resource"><code>dct:relation</code></a></p>
-<p><a href="#dataset-release-date"><code>dct:issued</code></a></p>
-<p>+<a href="#dataset-rights-holder"><code>dct:rightsHolder</code></a></p>
-<p><a href="#dataset-theme"><code>dcat:theme</code></a></p>
-<p>+<a href="#dataset-transport-mode"><code>mobilitydcatap:transportMode</code></a></p>
-<p><a href="#dataset-version"><code>dcat:version</code></a></p>
-<p><a href="#dataset-version-notes"><code>adms:versionNotes</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-distribution"><code>dcat:Distribution</code></a></td>
-<td valign=top>
-<p><a href="#distribution-access-url"><code>dcat:accessURL</code></a></p>
-<p>+<a href="#distribution-mobility-data-standard"><code>mobilitydcatap:mobilityDataStandard</code></a></p>
-<p><a href="#distribution-format"><code>dct:format</code></a></p>
-<p><a href="#distribution-rights"><code>dct:rights</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="l#distribution-application-layer-protocol"><code>mobilitydcatap:applicationLayerProtocol</code></a></p>
-<p>+<a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a></p>
-<p>+<a href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a></p>
-<p>+<a href="#distribution-communication-method"><code>mobilitydcatap:communicationMethod</code></a></p>
-<p>+<a href="#distribution-data-format-notes"><code>mobilitydcatap:dataFormatNotes</code></a></p>
-<p><a href="#distribution-description"><code>dct:description</code></a></p>
-<p><a href="#distribution-documentation"><code>foaf:page</code></a></p>
-<p><a href="#distribution-download-url"><code>dcat:downloadURL</code></a></p>
-<p>+<a href="#distribution-grammar"><code>mobilitydcatap:grammar</code></a></p>
-<p><a href="#distribution-licence"><code>dct:license</code></a></p>
-<p>+<a href="#distribution-sample"><code>adms:sample</code></a></p>
-<p><a href="#distribution-status"><code>adms:status</code></a></p>
-<p>+<a href="#distribution-temporal-coverage"><code>dct:temporal</code></a></p>
-<p><a href="#distribution-title"><code>dct:title</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-document"><code>foaf:Document</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-frequency"><code>dct:Frequency</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-identifier"><code>adms:Identifier</code></a></td>
-<td valign=top>
-<p><a href="#identifier-notation"><code>skos:notation</code></a></p>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-kind"><code>vcard:Kind</code></a></td>
-<td valign=top>
-<p>+<a title="email" href="#kind-email"><code>vcard:hasEmail</code></a></p>
-<p>+<a title="name" href="#kind-name"><code>vcard:fn</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#kind-address"><code>vcard:hasAddress</code></a></p>
-<p>+<a href="#kind-affiliation"><code>vcard:organization-name</code></a></p>
-<p>+<a href="#kind-phone"><code>vcard:hasTelephone</code></a></p>
-<p>+<a href="#kind-has-url"><code>vcard:hasURL</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-licence-document"><code>dct:LicenseDocument</code></a></td>
-<td valign=top>
-<p>+<a href="#licence-document-standard-licence"><code>dct:identifier</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#licence-document-licence-text"><code>rdfs:label</code></a></p>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-linguistic-system"><code>dct:LinguisticSystem</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-literal"><code>rdfs:Literal</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-location"><code>dct:Location</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-<p><a href="#location-bounding-box"><code>dcat:bbox</code></a></p>
-<p><a href="#location-centroid"><code>dcat:centroid</code></a></p>
-<p>+<a href="#location-gazetteer"><code>skos:inScheme</code></a></p>
-<p>+<a href="#location-geographic-identifier"><code>dct:identifier</code></a></p>
-<p>+<a href="#location-geographic-name"><code>skos:prefLabel</code></a></p>
-<p><a href="#location-geometry"><code>locn:geometry</code></a></p>
-</td>
-</tr>
-  
+    <!-- +ADDRESS (locn) -->
+    <tr>
+      <td rowspan="5"><a href="#class-address-core-location">+locn:Address</a></td>
+      <td></td>
+      <td><a href="#address-core-location-administrative-area">+locn:adminUnitL2</a></td>
+    </tr>
+    <tr><td></td><td><a href="#address-core-location-city">+locn:postName</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-country">+locn:adminUnitL1</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-postal-code">+locn:postCode</a></td></tr>
+    <tr><td></td><td><a href="#address-core-location-street-address">+locn:thoroughfare</a></td></tr>
 
-<tr>
-<td valign=top>+<a href="#class-mobility-data-standard"><code>mobilitydcatap:MobilityDataStandard</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-<p>+<a href="#mobility-data-standard-conforms-to"><code>dct:conformsTo</code></a></p>
-<p>+<a href="#mobility-data-standard-title"><code>dct:title</code></a></p>
-<p>+<a href="#mobility-data-standard-version"><code>dcat:version</code></a></p>
-</td>
-</tr>
+    <!-- +ADDRESS (vcard) -->
+    <tr>
+      <td rowspan="5"><a href="#class-address-vcard">+vcard:Address</a></td>
+      <td></td>
+      <td><a href="#address-vcard-administrative-area">+vcard:region</a></td>
+    </tr>
+    <tr><td></td><td><a href="#address-vcard-city">+vcard:locality</a></td></tr>
+    <tr><td></td><td><a href="#address-vcard-country">+vcard:country-name</a></td></tr>
+    <tr><td></td><td><a href="#address-vcard-postal-code">+vcard:postal-code</a></td></tr>
+    <tr><td></td><td><a href="#address-vcard-street-address">+vcard:street-address</a></td></tr>
 
+    <!-- AGENT -->
+    <tr>
+      <td rowspan="9"><a href="#class-agent">foaf:Agent</a></td>
+      <td><a href="#agent-name">foaf:name</a></td>
+      <td></td>
+    </tr>
+    <tr><td></td><td><a href="#agent-address">+locn:address</a></td></tr>
+    <tr><td></td><td><a href="#agent-affiliation">+org:memberOf</a></td></tr>
+    <tr><td></td><td><a href="#agent-email">+foaf:mbox</a></td></tr>
+    <tr><td></td><td><a href="#agent-first-name">+foaf:firstName</a></td></tr>
+    <tr><td></td><td><a href="#agent-phone">+foaf:phone</a></td></tr>
+    <tr><td></td><td><a href="#agent-surname">+foaf:surname</a></td></tr>
+    <tr><td></td><td><a href="#agent-type">dct:type</a></td></tr>
+    <tr><td></td><td><a href="#agent-url">+foaf:workplaceHomepage</a></td></tr>
 
-  
-<tr>
-<td valign=top><a href="#class-period-of-time"><code>dct:PeriodOfTime</code></a></td>
-<td valign=top>
-<p><a href="#period-of-time-end-date"><code>dcat:endDate</code></a></p>
-<p><a href="#period-of-time-start-date"><code>dcat:startDate</code></a></p>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
+    <!-- +ASSESSMENT -->
+    <tr>
+      <td rowspan="2"><a href="#class-assessment">+mobilitydcatap:Assessment</a></td>
+      <td></td>
+      <td><a href="#assessment-assessment-date">+dct:issued</a></td>
+    </tr>
+    <tr><td></td><td><a href="#assessment-assessment-result">+oa:hasBody</a></td></tr>
 
-  
-<tr>
-<td valign=top>+<a href="#class-quality-annotation"><code>dqv:QualityAnnotation</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-<p>+<a href="#quality-annotation-quality-annotation-has-body"><code>oa:hasBody</code></a></p>
-<p>+<a href="#quality-annotation-quality-annotation-target"><code>oa:hasTarget</code></a></p>
-</td>
-</tr>
-  
-  
-<tr>
-<td valign=top><a href="#class-resource"><code>rdfs:Resource</code></a></td>
-<td valign=top>
-</td>
-<td valign=top>
-</td>
-</tr>
-  
-<tr>
-<td valign=top><a href="#class-rights-statement"><code>dct:RightsStatement</code></a></td>
-<td valign=top>
-<p>+<a href="#rights-statement-conditions-for-access-and-usage"><code>dct:type</code></a></p>
-</td>
-<td valign=top>
-<p>+<a href="#rights-statement-rights-statement-text"><code>dct:description</code></a></p>
-</td>
-</tr>
-  
-  
-  
+    <!-- CATALOGUE -->
+    <tr>
+      <td rowspan="15"><a href="#class-catalogue">dcat:Catalog</a></td>
+      <td><a href="#catalogue-description">dct:description</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#catalogue-homepage">foaf:homepage</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-publisher">dct:publisher</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record">dcat:record</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-geographical-coverage">dct:spatial</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-title">dct:title</a></td><td></td></tr>
+    <tr><td></td><td><a href="#catalogue-dataset">dcat:dataset</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-has-part">dct:hasPart</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-identifier">dct:identifier</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-other-identifier">adms:identifier</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-language">dct:language</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-licence">dct:license</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-modification-date">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-release-date">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-themes">dcat:themeTaxonomy</a></td></tr>
+
+    <!-- CATALOGUE RECORD -->
+    <tr>
+      <td rowspan="7"><a href="#class-catalogue-record">dcat:CatalogRecord</a></td>
+      <td><a href="#catalogue-record-listing-date">dct:issued</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#catalogue-record-language">dct:language</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record-modification-date">dct:modified</a></td><td></td></tr>
+    <tr><td><a href="#catalogue-record-primary-topic">foaf:primaryTopic</a></td><td></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-application-profile">dct:conformsTo</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-publisher">+dct:publisher</a></td></tr>
+    <tr><td></td><td><a href="#catalogue-record-source-metadata">dct:source</a></td></tr>
+
+    
+    <!-- CONCEPT -->
+    <tr>
+      <td rowspan="2"><a href="#class-concept">skos:Concept</a></td>
+      <td></td>
+      <td><a href="#concept-preferred-label">skos:prefLabel</a></td>
+    </tr>
+    <tr><td></td><td><a href="#concept-concept-scheme">skos:inScheme</a></td></tr>
+
+    <!-- CONCEPT SCHEME -->
+    <tr>
+      <td><a href="#class-concept-scheme">skos:ConceptScheme</a></td>
+      <td></td>
+      <td><a href="#concept-scheme-title">dct:title</a></td>
+    </tr>
+    
+    <!-- DATASET -->
+    <tr>
+      <td rowspan="32"><a href="#class-dataset">dcat:Dataset</a></td>
+      <td><a href="#dataset-frequency">dct:accrualPeriodicity</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#dataset-description">dct:description</a></td><td></td></tr>
+    <tr><td><a href="#dataset-dataset-distribution">dcat:distribution</a></td><td></td></tr>
+    <tr><td><a href="#dataset-mobility-theme">+mobilitydcatap:mobilityTheme</a></td><td></td></tr>
+    <tr><td><a href="#dataset-publisher">dct:publisher</a></td><td></td></tr>
+    <tr><td><a href="#dataset-geographical-coverage">dct:spatial</a></td><td></td></tr>
+    <tr><td><a href="#dataset-title">dct:title</a></td><td></td></tr>
+    <tr><td></td><td><a href="#dataset-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-assessment-result">+mobilitydcatap:assessmentResult</a></td></tr>
+    <tr><td></td><td><a href="#dataset-contact-point">dcat:contactPoint</a></td></tr>
+    <tr><td></td><td><a href="#dataset-georeferencing-method">+mobilitydcatap:georeferencingMethod</a></td></tr>
+    <tr><td></td><td><a href="#dataset-has-version">dcat:hasVersion</a></td></tr>
+    <tr><td></td><td><a href="#dataset-quality-description">+dqv:hasQualityAnnotation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-identifier">dct:identifier</a></td></tr>
+    <tr><td></td><td><a href="#dataset-in-series">dcat:inSeries</a></td></tr>
+    <tr><td></td><td><a href="#dataset-intended-information-service">+mobilitydcatap:intendedInformationService</a></td></tr>
+    <tr><td></td><td><a href="#dataset-release-date">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#dataset-keyword">dcat:keyword</a></td></tr>
+    <tr><td></td><td><a href="#dataset-language">dct:language</a></td></tr>
+    <tr><td></td><td><a href="#dataset-modification-date">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#dataset-network-coverage">+mobilitydcatap:networkCoverage</a></td></tr>
+    <tr><td></td><td><a href="#dataset-other-identifier">adms:identifier</a></td></tr>
+    <tr><td></td><td><a href="#dataset-documentation">foaf:page</a></td></tr>
+    <tr><td></td><td><a href="#dataset-reference-system">+geodcatap:referenceSystem</a></td></tr>
+    <tr><td></td><td><a href="#dataset-related-resource">dct:relation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-rights-holder">dct:rightsHolder</a></td></tr>
+    <tr><td></td><td><a href="#dataset-source">dct:source</a></td></tr>
+    <tr><td></td><td><a href="#dataset-temporal-coverage">dct:temporal</a></td></tr>
+    <tr><td></td><td><a href="#dataset-theme">dcat:theme</a></td></tr>
+    <tr><td></td><td><a href="#dataset-transport-mode">+mobilitydcatap:transportMode</a></td></tr>
+    <tr><td></td><td><a href="#dataset-version">dcat:version</a></td></tr>
+    <tr><td></td><td><a href="#dataset-version-notes">adms:versionNotes</a></td></tr>
+
+    <!-- DATASET SERIES -->
+    <tr>
+      <td rowspan="11"><a href="#class-dataset-series">dcat:DatasetSeries</a></td>
+      <td><a href="#dataset-series-description">dct:description</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#dataset-series-publisher">dct:publisher</a></td><td></td></tr>
+    <tr><td><a href="#dataset-series-title">dct:title</a></td><td></td></tr>
+    <tr><td></td><td><a href="#dataset-series-frequency">dct:accrualPeriodicity</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-contact-point">dcat:contactPoint</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-release-date">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-mobility-theme">+mobilitydcatap:mobilityTheme</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-modification-date">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-geographical-coverage">dct:spatial</a></td></tr>
+    <tr><td></td><td><a href="#dataset-series-temporal-coverage">dct:temporal</a></td></tr>
+
+    <!-- DISTRIBUTION -->
+    <tr>
+      <td rowspan="21"><a href="#class-distribution">dcat:Distribution</a></td>
+      <td><a href="#distribution-access-url">dcat:accessURL</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#distribution-format">dct:format</a></td><td></td></tr>
+    <tr><td><a href="#distribution-mobility-data-standard">+mobilitydcatap:mobilityDataStandard</a></td><td></td></tr>
+    <tr><td><a href="#distribution-rights">dct:rights</a></td><td></td></tr>
+    <tr><td></td><td><a href="#distribution-application-layer-protocol">+mobilitydcatap:applicationLayerProtocol</a></td></tr>
+    <tr><td></td><td><a href="#distribution-character-encoding">+cnt:characterEncoding</a></td></tr>
+    <tr><td></td><td><a href="#distribution-communication-method">+mobilitydcatap:communicationMethod</a></td></tr>
+    <tr><td></td><td><a href="#distribution-linked-schemas">dct:conformsTo</a></td></tr>
+    <tr><td></td><td><a href="#distribution-data-format-notes">+mobilitydcatap:dataFormatNotes</a></td></tr>
+    <tr><td></td><td><a href="#distribution-description">dct:description</a></td></tr>
+    <tr><td></td><td><a href="#distribution-documentation">foaf:page</a></td></tr>
+    <tr><td></td><td><a href="#distribution-download-url">dcat:downloadURL</a></td></tr>
+    <tr><td></td><td><a href="#distribution-release-date">dct:issued</a></td></tr>
+    <tr><td></td><td><a href="#distribution-language">dct:language</a></td></tr>
+    <tr><td></td><td><a href="#distribution-licence">dct:license</a></td></tr>
+    <tr><td></td><td><a href="#distribution-modification-date">dct:modified</a></td></tr>
+    <tr><td></td><td><a href="#distribution-applicable-legislation">dcatap:applicableLegislation</a></td></tr>
+    <tr><td></td><td><a href="#distribution-sample">adms:sample</a></td></tr>
+    <tr><td></td><td><a href="#distribution-status">adms:status</a></td></tr>
+    <tr><td></td><td><a href="#distribution-temporal-coverage">dct:temporal</a></td></tr>
+    <tr><td></td><td><a href="#distribution-title">dct:title</a></td></tr>
+
+    <!-- DOCUMENT -->
+    <tr>
+      <td><a href="#class-document">foaf:Document</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- EMAIL (VCARD) -->
+    <tr>
+      <td><a href="#class-email-vcard">+vcard:Email</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- FREQUENCY -->
+    <tr>
+      <td><a href="#class-frequency">dct:Frequency</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- GEOMETRY -->
+    <tr>
+      <td><a href="#class-geometry">locn:Geometry</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- IDENTIFIER -->
+    <tr>
+      <td><a href="#class-identifier">adms:Identifier</a></td>
+      <td><a href="#identifier-notation">skos:notation</a></td>
+      <td></td>
+    </tr>
+
+    <!-- KIND -->
+    <tr>
+      <td rowspan="6"><a href="#class-kind">vcard:Kind</a></td>
+      <td><a href="#kind-email">vcard:hasEmail</a></td>
+      <td></td>
+    </tr>
+    <tr><td><a href="#kind-name">vcard:fn</a></td><td></td></tr>
+    <tr><td></td><td><a href="#kind-address">vcard:hasAddress</a></td></tr>
+    <tr><td></td><td><a href="#kind-affiliation">vcard:organization-name</a></td></tr>
+    <tr><td></td><td><a href="#kind-phone">vcard:hasTelephone</a></td></tr>
+    <tr><td></td><td><a href="#kind-URL">vcard:hasURL</a></td></tr>
+
+    <!-- LEGAL RESOURCE-->
+    <tr>
+      <td><a href="#class-legal-resource">eli:LegalResource</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- LICENCE DOCUMENT -->
+    <tr>
+      <td><a href="#class-licence-document">dct:LicenseDocument</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+     <!-- LINGUISTIC SYSTEM-->
+    <tr>
+      <td><a href="#class-linguistic-system">dct:LinguisticSystem</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- LITERAL-->
+    <tr>
+      <td><a href="#class-literal">rdfs:Literal</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- LOCATION -->
+    <tr>
+      <td rowspan="6"><a href="#class-location">dct:Location</a></td>
+      <td></td>
+      <td><a href="#location-bounding-box">dcat:bbox</a></td>
+    </tr>
+    <tr><td></td><td><a href="#location-centroid">dcat:centroid</a></td></tr>
+    <tr><td></td><td><a href="#location-gazetteer">skos:inScheme</a></td></tr>
+    <tr><td></td><td><a href="#location-geographic-identifier">dct:identifier</a></td></tr>
+    <tr><td></td><td><a href="#location-geographic-name">skos:prefLabel</a></td></tr>
+    <tr><td></td><td><a href="#location-geometry">locn:geometry</a></td></tr>
 
 
-  
-</tbody>
+    <!-- MEDIA TYPE OR EXTENT-->
+    <tr>
+      <td><a href="#class-media-type-or-extent">dct:MediaTypeOrExtent</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- +MOBILITY DATA STANDARD -->
+    <tr>
+      <td rowspan="3"><a href="#class-mobility-data-standard">+mobilitydcatap:MobilityDataStandard</a></td>
+      <td></td>
+      <td><a href="#mobility-data-standard-conforms-to">dct:conformsTo</a></td>
+    </tr>
+    <tr><td></td><td><a href="#mobility-data-standard-title">dct:title</a></td></tr>
+    <tr><td></td><td><a href="#mobility-data-standard-version">dcat:version</a></td></tr>
+
+    <!-- ORGANISATION -->
+    <tr>
+      <td><a href="#class-organisation">+org:Organization</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- PERIOD OF TIME -->
+    <tr>
+      <td rowspan="2"><a href="#class-period-of-time">dct:PeriodOfTime</a></td>
+      <td></td>
+      <td><a href="#period-of-time-end-date">dcat:endDate</a></td>
+    </tr>
+    <tr><td></td><td><a href="#period-of-time-start-date">dcat:startDate</a></td></tr>
+
+    <!-- +QUALITY ANNOTATION -->
+    <tr>
+      <td><a href="#class-quality-annotation">+dqv:QualityAnnotation</a></td>
+      <td></td>
+      <td><a href="#quality-annotation-quality-annotation-resource">+oa:hasBody</a></td>
+    </tr>
+
+    <!-- RESOURCE -->
+    <tr>
+      <td><a href="#class-resource">rdfs:Resource</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <!-- RIGHTS STATEMENT -->
+    <tr>
+      <td rowspan="2"><a href="#class-rights-statement">dct:RightsStatement</a></td>
+      <td></td>
+      <td><a href="#rights-statement-conditions-for-access-and-usage">dct:type</a></td>
+    </tr>
+    <tr><td></td><td><a href="#rights-statement-rights-statement-text">dct:description</a></td></tr>
+
+    <!-- STANDARD -->
+    <tr>
+      <td><a href="#class-standard">dct:Standard</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  </tbody>
 </table>
+
+
