@@ -38,6 +38,10 @@
 #   sh:or ( [ sh:path P ; sh:maxCount 0 ]
 #           [ sh:path P ; sh:qualifiedValueShape R ; sh:qualifiedMinCount 1 ] )
 #
+# Exception: the three spatial rules traverse ( dct:spatial dct:identifier ),
+# since dct:spatial points at a dct:Location that carries the authority-table
+# concept as dct:identifier.
+#
 # referenceSystem (10.2.1 MUST): EPSG register is not SKOS -> URI pattern at
 # Violation. NUTS (10.2.3 spatial) not in SpatialRestriction -> NUTS warns.
 #=========================================================================
@@ -255,7 +259,7 @@
     sh:targetClass dcat:Catalog ;
     sh:or (
         [ sh:path dct:spatial ; sh:maxCount 0 ]
-        [ sh:path dct:spatial ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
+        [ sh:path ( dct:spatial dct:identifier ) ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
     sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
     sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
@@ -268,7 +272,7 @@
         [ sh:path dct:publisher ; sh:maxCount 0 ]
         [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:description "The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:description "The entity responsible for publishing the catalogue record, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
     sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
     sh:severity sh:Warning .
 
@@ -348,9 +352,9 @@
     sh:targetClass dcat:Dataset ;
     sh:or (
         [ sh:path dct:spatial ; sh:maxCount 0 ]
-        [ sh:path dct:spatial ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
+        [ sh:path ( dct:spatial dct:identifier ) ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:description "The geographical coverage of the dataset, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
     sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
     sh:severity sh:Warning .
 
@@ -368,9 +372,9 @@
     sh:targetClass dcat:DatasetSeries ;
     sh:or (
         [ sh:path dct:spatial ; sh:maxCount 0 ]
-        [ sh:path dct:spatial ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
+        [ sh:path ( dct:spatial dct:identifier ) ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
     ) ;
-    sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:description "The geographical coverage of the dataset series, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
     sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
     sh:severity sh:Warning .
 
