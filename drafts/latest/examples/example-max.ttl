@@ -39,13 +39,13 @@
   dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT> ;
   mobilitydcatap:networkCoverage
     <https://w3id.org/mobilitydcat-ap/network-coverage/motorways> ,
-    <https://w3id.org/mobilitydcat-ap/network-coverage/arterial-roads> ;
+    <https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads> ;
   dct:spatial [ a dct:Location ; dct:identifier <http://publications.europa.eu/resource/authority/country/SWE> ] ;
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   dct:issued "2017-05-09T11:49:47"^^xsd:dateTime ;
   dct:modified "2019-12-04T09:48:27"^^xsd:dateTime ;
   dct:publisher <https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> ;
-  dcat:contactPoint [ a vcard:Organization ; vcard:hasEmail <mailto:datex@trafikverket.se> ; vcard:fn "Trafikverket" ] ;
+  dcat:contactPoint [ a vcard:Kind, vcard:Organization ; vcard:hasEmail <mailto:datex@trafikverket.se> ; vcard:fn "Trafikverket" ] ;
   geodcatap:referenceSystem <http://www.opengis.net/def/crs/EPSG/0/4326> ;
   dcat:distribution <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> .
 <https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b>
