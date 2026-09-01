@@ -22,13 +22,13 @@
   dct:spatial <http://publications.europa.eu/resource/authority/country/SWE> ;
   dcat:dataset <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> ;
   dct:hasPart <https://www.dataportal.se> ;
-  dct:identifier "https://trafficdata.se" ;
+  dct:identifier "trafficdata.se" ;
   adms:identifier [ a adms:Identifier ; skos:notation "SE-NAP" ] ;
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   dct:license <http://publications.europa.eu/resource/authority/licence/CC0> ;
   dct:modified "2026-10-01T00:00:00"^^xsd:dateTime ;
   dct:issued "2016-10-01T00:00:00"^^xsd:dateTime ;
-  dcat:themeTaxonomy <https://w3id.org/mobilitydcat-ap/mobility-theme/1.1.1> ;
+  dcat:themeTaxonomy <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
   dcat:record <https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> .
 
 <https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits>
@@ -100,12 +100,13 @@
   dct:rights [ a dct:RightsStatement ; dct:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided> ] ;
   dct:license <http://publications.europa.eu/resource/authority/licence/CC0> ;
   dct:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
-  mobilitydcatap:mobilityDataStandard [ a mobilitydcatap:MobilityDataStandard ;
-    dct:conformsTo <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II> ; dcat:version "3.2" ] ;
+  mobilitydcatap:mobilityDataStandard
+    <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II> ,
+    <https://www.trafficdata.se/standard/datex-II-v3.2> ;
   mobilitydcatap:applicationLayerProtocol <https://w3id.org/mobilitydcat-ap/application-layer-protocol/http-https> ;
   cnt:characterEncoding "UTF-16" ;
   mobilitydcatap:communicationMethod <https://w3id.org/mobilitydcat-ap/communication-method/pull> ;
-  dct:conformsTo <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II> ;
+  dct:conformsTo <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d/schema> ;
   mobilitydcatap:dataFormatNotes "This distribution is formatted in DATEX II."@en ;
   foaf:page <https://data.trafikverket.se/documentation/datex/datamodel> ;
   dcat:downloadURL <http://www.trafikverket.se/tjanster/x/> ;
@@ -113,10 +114,16 @@
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   dct:modified "2019-12-04T09:48:27"^^xsd:dateTime ;
   dcatap:applicableLegislation <http://data.europa.eu/eli/reg_del/2022/670/oj> ;
-  adms:sample <http://www.trafikverket.se/tjanster/x/> ;
+  adms:sample <http://www.trafikverket.se/tjanster/x/sample.xml> ;
   adms:status <http://publications.europa.eu/resource/authority/distribution-status/ONGOING> ;
   dct:temporal [ a dct:PeriodOfTime ;
     dcat:startDate "2026-08-12T00:00:00"^^xsd:dateTime ;
     dcat:endDate "2030-12-31T23:59:59.999"^^xsd:dateTime ] .
+
+<https://www.trafficdata.se/standard/datex-II-v3.2>
+  a mobilitydcatap:MobilityDataStandard ;
+  dct:title "Datex II version 3.2"@en ;
+  dct:conformsTo <https://docs.datex2.eu/v3.2/_static/data/Exchange/2020/exchangexsd.zip> ;
+  dcat:version "3.2" .
 
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0> a dct:Standard .
