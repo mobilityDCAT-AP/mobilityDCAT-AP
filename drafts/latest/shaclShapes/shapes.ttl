@@ -545,7 +545,6 @@
   sh:description "Quality aspects regarding the delivered content. mobility/DQV addition (not in DCAT-AP Dataset) (0..n)."@en .
 #---------------------------------------------------------------------------
 # DATASET SERIES SHAPE  (deltas only; Phase 4 new class)
-#  Raises publisher to mandatory; adds EU-language checks on
 #  description/title; adds mobilityTheme. Inherited from DCAT-AP:
 #  inverse-inSeries, applicableLegislation, contactPoint, accrualPeriodicity,
 #  spatial, modified, issued, temporal.
@@ -573,11 +572,11 @@
 
 :DatasetSeries_Shape_publisher
   a sh:PropertyShape ;
-  sh:path dct:publisher ; sh:minCount 1 ; sh:maxCount 1 ;
+  sh:path dct:publisher ; sh:maxCount 1 ;
   sh:name "publisher"@en ;
-  sh:description "Entity that publishes the dataset series. Raised to mandatory (1..1)."@en ;
-  sh:message "Publisher is mandatory. Exactly one publisher must be provided"@en ;
-  sh:severity sh:Violation .
+  sh:description "Entity that publishes the dataset series (0..1), as in DCAT-AP."@en ;
+  sh:message "Publisher can appear at most once"@en ;
+  sh:severity sh:Info .
 
 :DatasetSeries_Shape_title
   a sh:PropertyShape ;
