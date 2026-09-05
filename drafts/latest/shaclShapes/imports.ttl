@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+#-------------------------------------------------------------------------
+# mobilityDCAT-AP 3.0.0 — Ontology imports (extends DCAT-AP 3.0.1)
+#-------------------------------------------------------------------------
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0>
+  rdf:type owl:Ontology ;
+  # DCAT-AP vocabulary. 3.0.1 did not republish the vocabulary, so 3.0.0 is current.
+  owl:imports <https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/voc/r5r.ttl> ;
+  owl:imports <https://www.w3.org/ns/dcat2.ttl> ;
+  owl:imports <https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl> ;
+  owl:imports <http://xmlns.com/foaf/spec/index.rdf> ;
+  owl:imports <https://www.w3.org/ns/locn.ttl> ;
+  owl:imports <https://www.w3.org/ns/org.ttl> ;
+  owl:imports <http://www.w3.org/ns/adms.ttl> ;
+  owl:imports <http://www.w3.org/2006/vcard/ns.ttl> ;
+  owl:imports <https://www.w3.org/ns/dqv.ttl> ;
+  owl:imports <https://www.w3.org/ns/oa.ttl> ;
+  owl:imports <https://www.w3.org/2011/content.rdf> ;
+  owl:imports <http://www.w3.org/2006/time.ttl> ;
+  owl:imports <https://schema.org/version/30.0/schemaorg-current-https.ttl> ;
+  owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
+  owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
+  # DCAT-AP's own deprecateduris.ttl, pulls in the upstream (PeriodOfTime,
+  # Dataset versioning, adms:status) deprecations so they are not restated
+  owl:imports <https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/deprecateduris.ttl> .

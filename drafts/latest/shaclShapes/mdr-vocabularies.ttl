@@ -1,0 +1,445 @@
+@prefix : <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .          
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
+#=========================================================================
+# mobilityDCAT-AP 3.0.0 - Controlled-vocabulary constraints (spec 10.2)
+#
+# SELF-CONTAINED: does NOT owl:imports DCAT-AP's CV shapes; every binding
+# restated (EU authority tables + mobility CVs). Rationale (#229): the
+# DCAT-AP CV import is not 1:1.
+#
+# Category is marked by severity:
+#   10.2.1 MUST      -> sh:node + Violation (closed value space)
+#   10.2.2 AT LEAST 1 / 10.2.3 RECOMMENDED -> Warning
+#
+# STRUCTURE. MUST bindings are sh:property on the per-class :X_MobilityShapeCV.
+# Each AT-LEAST-ONE / RECOMMENDED rule is its OWN NodeShape (suffix
+# _<prop>_CV) carrying one sh:or + one message + one severity, targeting the
+# class. This is deliberate: sh:message / sh:severity attach to the shape,
+# so putting several sh:or on one shape would merge their messages and
+# mis-report which property failed. One rule = one shape keeps each message
+# paired with exactly one constraint.
+#
+# The AT-LEAST-ONE sh:or is the EXACT spec form (extras tolerated, silent on
+# absence):
+#   sh:or ( [ sh:path P ; sh:maxCount 0 ]
+#           [ sh:path P ; sh:qualifiedValueShape R ; sh:qualifiedMinCount 1 ] )
+#
+# Exception: the three spatial rules traverse ( dct:spatial dct:identifier ),
+# since dct:spatial points at a dct:Location that carries the authority-table
+# concept as dct:identifier.
+#
+# referenceSystem (10.2.1 MUST): EPSG register is not SKOS -> URI pattern at
+# Violation. NUTS (10.2.3 spatial) not in SpatialRestriction -> NUTS warns.
+#=========================================================================
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies>
+  a owl:Ontology , adms:Asset ;
+  owl:versionInfo "3.0.0" ;
+  adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
+  dcatap:availability dcatap:stable ;
+  dct:conformsTo <https://www.w3.org/TR/shacl> ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:created "2023-08-14"^^xsd:date ;
+  dct:issued "2023-08-14"^^xsd:date ;
+  dct:modified "2026-08-06"^^xsd:date ;
+  dct:dateCopyrighted "2023"^^xsd:gYear ;
+  dct:title "mobilityDCAT-AP 3.0.0 SHACL Constraints - Controlled Vocabularies"@en ;
+  dct:description "Self-contained controlled-vocabulary constraints for mobilityDCAT-AP 3.0.0 (spec section 10.2). Restates the EU authority-table and mobility CV bindings rather than importing DCAT-AP's CV shapes, since that import is not 1:1. 10.2.1 MUST uses sh:node at Violation; 10.2.2/10.2.3 use the exact at-least-one-with-extras-tolerated form at Warning."@en ;
+  rdfs:isDefinedBy <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
+  bibo:editor [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0003-1867-4428> ;
+    foaf:name "Daham Mustafa"
+  ] , [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0001-5446-6947> ;
+    foaf:name "Lina Molinas Comet"
+  ] , [
+    a foaf:Person ;
+    owl:sameAs <https://orcid.org/0000-0002-8235-7331> ;
+    foaf:name "Mario Scrocca"
+  ] ;
+  dct:creator [
+    a foaf:Group ;
+    foaf:name "NAPCORE SWG 4.4" ;
+    foaf:page <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP>
+  ] ;
+  dct:publisher <https://napcore.eu/> ;
+  dct:rightsHolder <https://napcore.eu/> ;
+  dcat:distribution [
+    a adms:AssetDistribution ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ,
+               <http://www.w3.org/ns/formats/data/Turtle> ;
+    dct:title "SHACL Controlled Vocabularies (Turtle)"@en ;
+    dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies.ttl> ;
+    dcat:mediaType "text/turtle"
+  ] .
+
+#=========================================================================
+# RESTRICTION NODE SHAPES
+#=========================================================================
+
+:FrequencyRestriction a sh:NodeShape ; rdfs:label "FrequencyRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/frequency> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:FileTypeRestriction a sh:NodeShape ; rdfs:label "FileTypeRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:LanguageRestriction a sh:NodeShape ; rdfs:label "LanguageRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/language> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:DistributionStatusRestriction a sh:NodeShape ; rdfs:label "DistributionStatusRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/distribution-status> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:DataThemeRestriction a sh:NodeShape ; rdfs:label "DataThemeRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:PublisherTypeRestriction a sh:NodeShape ; rdfs:label "PublisherTypeRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://purl.org/adms/publishertype/1.0> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:CorporateBodyRestriction a sh:NodeShape ; rdfs:label "CorporateBodyRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/corporate-body> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:LicenceRestriction a sh:NodeShape ; rdfs:label "LicenceRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/licence> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:ContinentRestriction a sh:NodeShape ; rdfs:label "ContinentRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/continent> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:CountryRestriction a sh:NodeShape ; rdfs:label "CountryRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/country> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:PlaceRestriction a sh:NodeShape ; rdfs:label "PlaceRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <http://publications.europa.eu/resource/authority/place> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:MobilityThemeRestriction a sh:NodeShape ; rdfs:label "MobilityThemeRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-theme> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:TransportModeRestriction a sh:NodeShape ; rdfs:label "TransportModeRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/transport-mode> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:NetworkCoverageRestriction a sh:NodeShape ; rdfs:label "NetworkCoverageRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/network-coverage> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:GeoreferencingMethodRestriction a sh:NodeShape ; rdfs:label "GeoreferencingMethodRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/georeferencing-method> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:IntendedInformationServiceRestriction a sh:NodeShape ; rdfs:label "IntendedInformationServiceRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/intended-information-service> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:MobilityDataStandardRestriction a sh:NodeShape ; rdfs:label "MobilityDataStandardRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:ApplicationLayerProtocolRestriction a sh:NodeShape ; rdfs:label "ApplicationLayerProtocolRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:ConditionsForAccessAndUsageRestriction a sh:NodeShape ; rdfs:label "ConditionsForAccessAndUsageRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:CommunicationMethodRestriction a sh:NodeShape ; rdfs:label "CommunicationMethodRestriction"@en ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/mobilitydcat-ap/communication-method> ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+:GeoNamesRestrictionRegexURI a sh:NodeShape ; rdfs:label "GeoNames restriction"@en ;
+    sh:pattern "^https?://(sws\\.)?geonames\\.org" .
+:ReferenceSystemRestriction a sh:NodeShape ; rdfs:label "Reference System (EPSG) restriction"@en ;
+    sh:pattern "^https?://(www\\.opengis\\.net/def/crs/EPSG/|epsg\\.io/)" .
+:SpatialRestriction a sh:NodeShape ; rdfs:label "Spatial restriction (EU tables or GeoNames)"@en ;
+    sh:or ( :ContinentRestriction :CountryRestriction :PlaceRestriction :GeoNamesRestrictionRegexURI ) .
+
+
+#=========================================================================
+# 10.2.1 MUST bindings (one per-class shape, sh:node + Violation)
+#=========================================================================
+
+:Catalogue_MobilityShapeCV a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:property [
+        sh:path dct:language ;
+        sh:node :LanguageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en ;
+        sh:message "language value must be a concept from the EU Language table (skos:inScheme)."@en ;
+        sh:severity sh:Violation
+    ] .
+
+
+:CatalogueRecord_MobilityShapeCV a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:property [
+        sh:path dct:language ;
+        sh:node :LanguageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en ;
+        sh:message "language value must be a concept from the EU Language table (skos:inScheme)."@en ;
+        sh:severity sh:Violation
+    ] .
+
+
+:Dataset_MobilityShapeCV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [
+        sh:path dct:accrualPeriodicity ;
+        sh:node :FrequencyRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "accrualPeriodicity value must be a concept from the EU Frequency table."@en ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path dct:language ;
+        sh:node :LanguageRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en ;
+        sh:message "language value must be a concept from the EU Language table (skos:inScheme)."@en ;
+        sh:severity sh:Violation
+    ] ;
+    sh:property [
+        sh:path geodcatap:referenceSystem ;
+        sh:node :ReferenceSystemRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The spatial reference system used in the dataset, identified by a coordinate reference system URI from the OGC EPSG register. This register is not a SKOS scheme, so membership is checked by URI pattern rather than skos:inScheme. The value space is closed: only EPSG URIs are allowed."@en ;
+        sh:message "referenceSystem value must be an OGC EPSG coordinate reference system URI."@en ;
+        sh:severity sh:Violation
+    ] .
+
+
+:DatasetSeries_MobilityShapeCV a sh:NodeShape ;
+    sh:targetClass dcat:DatasetSeries ;
+    sh:property [
+        sh:path dct:accrualPeriodicity ;
+        sh:node :FrequencyRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "accrualPeriodicity value must be a concept from the EU Frequency table."@en ;
+        sh:severity sh:Violation
+    ] .
+
+
+:Distribution_MobilityShapeCV a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:property [
+        sh:path dct:format ;
+        sh:node :FileTypeRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The technical syntax of the delivered content, taken from the EU File type authority table (http://publications.europa.eu/resource/authority/file-type). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "format value must be a concept from the EU File Type table (skos:inScheme)."@en ;
+        sh:severity sh:Violation
+    ] ;
+        sh:property [
+        sh:path adms:status ;
+        sh:node :DistributionStatusRestriction ; sh:nodeKind sh:IRI ;
+        sh:description "The status of the distribution in its maturity lifecycle, taken from the EU Distribution status authority table (http://publications.europa.eu/resource/authority/distribution-status). The value space is closed: only concepts from this vocabulary are allowed."@en ;
+        sh:message "status value must be a concept from the EU Distribution status table."@en ;
+        sh:severity sh:Violation
+    ] .
+
+
+#=========================================================================
+# 10.2.2 AT LEAST 1 / 10.2.3 RECOMMENDED (one shape per rule, sh:or + Warning)
+#=========================================================================
+
+:Catalogue_Publisher_CV a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:or (
+        [ sh:path dct:publisher ; sh:maxCount 0 ]
+        [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
+    sh:severity sh:Warning .
+
+
+:Catalogue_Spatial_CV a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:or (
+        [ sh:path dct:spatial ; sh:maxCount 0 ]
+        [ sh:path ( dct:spatial dct:identifier ) ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
+    sh:severity sh:Warning .
+
+
+:CatalogueRecord_Publisher_CV a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:or (
+        [ sh:path dct:publisher ; sh:maxCount 0 ]
+        [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The entity responsible for publishing the catalogue record, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
+    sh:severity sh:Warning .
+
+:Dataset_MobilityTheme_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path mobilitydcatap:mobilityTheme ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:mobilityTheme ; sh:qualifiedValueShape :MobilityThemeRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values classify the theme of a mobility dataset using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+:Dataset_Theme_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path dcat:theme ; sh:maxCount 0 ]
+        [ sh:path dcat:theme ; sh:qualifiedValueShape :DataThemeRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values categorise the dataset using the EU Data theme authority table (http://publications.europa.eu/resource/authority/data-theme). At least one value must come from this vocabulary. Values outside the vocabulary are tolerated."@en ;
+    sh:message "dcat:theme should include at least one concept from the EU Data theme table."@en ;
+    sh:severity sh:Warning .
+
+:Dataset_GeoreferencingMethod_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path mobilitydcatap:georeferencingMethod ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:georeferencingMethod ; sh:qualifiedValueShape :GeoreferencingMethodRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values state the georeferencing method of the resource, using the Georeferencing Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/georeferencing-method). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/georeferencing-method/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "georeferencingMethod should include at least one concept from the Georeferencing Method vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+:Dataset_NetworkCoverage_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path mobilitydcatap:networkCoverage ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:networkCoverage ; sh:qualifiedValueShape :NetworkCoverageRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values state the transport network coverage of the dataset, using the Network Coverage controlled vocabulary (https://w3id.org/mobilitydcat-ap/network-coverage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/network-coverage/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "networkCoverage should include at least one concept from the Network Coverage vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+
+:Dataset_TransportMode_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path mobilitydcatap:transportMode ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:transportMode ; sh:qualifiedValueShape :TransportModeRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values state the transport modes covered by the dataset, using the Transport Mode controlled vocabulary (https://w3id.org/mobilitydcat-ap/transport-mode). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/transport-mode/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "transportMode should include at least one concept from the Transport Mode vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+:Dataset_IntendedInformationService_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path mobilitydcatap:intendedInformationService ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:intendedInformationService ; sh:qualifiedValueShape :IntendedInformationServiceRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values describe the intended information service for the dataset, using the Intended information service controlled vocabulary (https://w3id.org/mobilitydcat-ap/intended-information-service). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/intended-information-service/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "intendedInformationService should include at least one concept from the Intended information service vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+:Dataset_Publisher_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path dct:publisher ; sh:maxCount 0 ]
+        [ sh:path dct:publisher ; sh:qualifiedValueShape :CorporateBodyRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The entity responsible for publishing the dataset, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en ;
+    sh:message "publisher should include at least one concept from the EU Corporate body table."@en ;
+    sh:severity sh:Warning .
+
+
+:Dataset_Spatial_CV a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:or (
+        [ sh:path dct:spatial ; sh:maxCount 0 ]
+        [ sh:path ( dct:spatial dct:identifier ) ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The geographical coverage of the dataset, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
+    sh:severity sh:Warning .
+
+:DatasetSeries_MobilityTheme_CV a sh:NodeShape ;
+    sh:targetClass dcat:DatasetSeries ;
+    sh:or (
+        [ sh:path mobilitydcatap:mobilityTheme ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:mobilityTheme ; sh:qualifiedValueShape :MobilityThemeRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values classify the theme of a mobility dataset series using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+:DatasetSeries_Spatial_CV a sh:NodeShape ;
+    sh:targetClass dcat:DatasetSeries ;
+    sh:or (
+        [ sh:path dct:spatial ; sh:maxCount 0 ]
+        [ sh:path ( dct:spatial dct:identifier ) ; sh:qualifiedValueShape :SpatialRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The geographical coverage of the dataset series, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en ;
+    sh:message "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en ;
+    sh:severity sh:Warning .
+
+:Distribution_MobilityDataStandard_CV a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:or (
+        [ sh:path mobilitydcatap:mobilityDataStandard ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:mobilityDataStandard ; sh:qualifiedValueShape :MobilityDataStandardRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values identify the mobility data standard adopted by the distribution, using the Mobility data standard controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-data-standard). At least one value must come from this vocabulary; if no suitable standard is listed, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-data-standard/other). Values outside the vocabulary are tolerated, for example a custom mobilitydcatap:MobilityDataStandard instance giving a version or a national profile."@en ;
+    sh:message "mobilityDataStandard should include at least one concept from the Mobility data standard vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+
+:Distribution_ApplicationLayerProtocol_CV a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:or (
+        [ sh:path mobilitydcatap:applicationLayerProtocol ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:applicationLayerProtocol ; sh:qualifiedValueShape :ApplicationLayerProtocolRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values state the application layer protocol of the distribution, using the Application layer protocol controlled vocabulary (https://w3id.org/mobilitydcat-ap/application-layer-protocol). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/application-layer-protocol/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "applicationLayerProtocol should include at least one concept from the Application layer protocol vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
+
+:Distribution_CommunicationMethod_CV a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:or (
+        [ sh:path mobilitydcatap:communicationMethod ; sh:maxCount 0 ]
+        [ sh:path mobilitydcatap:communicationMethod ; sh:qualifiedValueShape :CommunicationMethodRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values state the communication method of the distribution, using the Communication Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/communication-method), which distinguishes push and pull. Use of this vocabulary is recommended; other values are tolerated."@en ;
+    sh:message "communicationMethod should include at least one concept from the Communication Method vocabulary."@en ;
+    sh:severity sh:Warning .
+
+
+:Distribution_License_CV a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:or (
+        [ sh:path dct:license ; sh:maxCount 0 ]
+        [ sh:path dct:license ; sh:qualifiedValueShape :LicenceRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The licence under which the distribution is made available, referencing a concrete standard licence from the EU Licence authority table (http://publications.europa.eu/resource/authority/licence). Use of this vocabulary is recommended; other values are tolerated."@en ;
+    sh:message "license should include at least one concept from the EU Licence table."@en ;
+    sh:severity sh:Warning .
+
+
+:Agent_PublisherType_CV a sh:NodeShape ;
+    sh:targetClass foaf:Agent ;
+    sh:or (
+        [ sh:path dct:type ; sh:maxCount 0 ]
+        [ sh:path dct:type ; sh:qualifiedValueShape :PublisherTypeRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "The type of the publishing organisation, taken from the ADMS Publisher Type vocabulary (http://purl.org/adms/publishertype/1.0), which distinguishes national, regional and local authorities, companies, academic and standardisation bodies and similar. Use of this vocabulary is recommended; other values are tolerated."@en ;
+    sh:message "publisher type (dct:type) should include at least one concept from the ADMS Publisher Type vocabulary."@en ;
+    sh:severity sh:Warning .
+
+
+:RightsStatement_Conditions_CV a sh:NodeShape ;
+    sh:targetClass dct:RightsStatement ;
+    sh:or (
+        [ sh:path dct:type ; sh:maxCount 0 ]
+        [ sh:path dct:type ; sh:qualifiedValueShape :ConditionsForAccessAndUsageRestriction ; sh:qualifiedMinCount 1 ]
+    ) ;
+    sh:description "Values state the conditions for access and usage of a Rights Statement, using the Conditions for access and usage controlled vocabulary (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other). Values outside the vocabulary are tolerated."@en ;
+    sh:message "conditions for access and usage (dct:type) should include at least one concept from the Conditions for access and usage vocabulary; use 'other' if none applies."@en ;
+    sh:severity sh:Warning .
+
