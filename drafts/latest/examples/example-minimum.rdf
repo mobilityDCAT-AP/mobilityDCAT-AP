@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:nodeID="n40bbbb7682b44a14a255799dbcdd553bb1">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://trafficdata.se/catalog">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <dct:title xml:lang="en">Trafficdata.se</dct:title>
+    <dct:description xml:lang="en">The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data.</dct:description>
+    <foaf:homepage rdf:resource="https://trafficdata.se/"/>
+    <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+    <dct:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dcat:record rdf:resource="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcat:accessURL rdf:resource="http://www.trafikverket.se/tjanster/x/"/>
+    <dct:rights rdf:nodeID="n40bbbb7682b44a14a255799dbcdd553bb1"/>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+    <mobilitydcatap:mobilityDataStandard rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <foaf:primaryTopic rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:modified>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dct:title xml:lang="en">Traffic signs expressing traffic regulations and identifying dangers, Speed limits</dct:title>
+    <dct:description xml:lang="en">Traffic signs from the Swedish Transport Administration. Datex II format.</dct:description>
+    <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"/>
+    <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
+    <dct:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+    <dcat:distribution rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name xml:lang="sv">Trafikverket</foaf:name>
+  </rdf:Description>
+</rdf:RDF>
