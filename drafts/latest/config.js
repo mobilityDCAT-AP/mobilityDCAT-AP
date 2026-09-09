@@ -13,6 +13,7 @@ var respecConfig = {
   }
       ],
     copyrightStart: 2023,
+    overrideCopyright: "<p>Copyright &copy; 2023-2026 NAPCORE. This document is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 License</a>.</p>",
     publishDate: "2026-10-01",
 
     alternateFormats: [
