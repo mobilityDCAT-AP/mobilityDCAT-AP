@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://www.trafikverket.se/",
+    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
     "@type": [
       "http://xmlns.com/foaf/0.1/Agent"
     ],
@@ -23,98 +23,28 @@
     ],
     "http://purl.org/dc/terms/rights": [
       {
-        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b3"
+        "@id": "_:n40bbbb7682b44a14a255799dbcdd553bb1"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
       {
-        "@id": "http://www.trafikverket.se/tjanster/Oppna_data/trafikinformation-i-realtid/Trafikinformation-vag-i-realtid/Sa-har-far-du-tillgang-till-data-for-trafikinformation-i-realtid/"
+        "@id": "http://www.trafikverket.se/tjanster/x/"
       }
     ],
     "https://w3id.org/mobilitydcat-ap#mobilityDataStandard": [
       {
-        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b4"
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"
       }
     ]
   },
   {
-    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b3",
+    "@id": "_:n40bbbb7682b44a14a255799dbcdd553bb1",
     "@type": [
       "http://purl.org/dc/terms/RightsStatement"
     ],
     "http://purl.org/dc/terms/type": [
       {
         "@id": "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b4",
-    "@type": [
-      "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
-    ],
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#version": [
-      {
-        "@value": "3.2"
-      }
-    ]
-  },
-  {
-    "@id": "https://trafficdata.se/",
-    "@type": [
-      "http://www.w3.org/ns/dcat#Catalog"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."
-      }
-    ],
-    "http://purl.org/dc/terms/publisher": [
-      {
-        "@id": "https://www.trafikverket.se/"
-      }
-    ],
-    "http://purl.org/dc/terms/spatial": [
-      {
-        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b1"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "Trafficdata.se"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#dataset": [
-      {
-        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#record": [
-      {
-        "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/homepage": [
-      {
-        "@id": "https://trafficdata.se/"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b1",
-    "@type": [
-      "http://purl.org/dc/terms/Location"
-    ],
-    "http://purl.org/dc/terms/identifier": [
-      {
-        "@id": "http://publications.europa.eu/resource/authority/country/SWE"
       }
     ]
   },
@@ -131,7 +61,7 @@
     "http://purl.org/dc/terms/description": [
       {
         "@language": "en",
-        "@value": "Traffic signs expressing traffic regulations and identifying dangers from the Swedish Transport Administration. Datex II format."
+        "@value": "Traffic signs from the Swedish Transport Administration. Datex II format."
       }
     ],
     "http://purl.org/dc/terms/publisher": [
@@ -141,7 +71,7 @@
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-        "@id": "_:nb7137586c4bb47fbb4e59c275317e228b2"
+        "@id": "http://publications.europa.eu/resource/authority/country/SWE"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -165,35 +95,40 @@
     ]
   },
   {
-    "@id": "_:nb7137586c4bb47fbb4e59c275317e228b2",
+    "@id": "https://trafficdata.se/catalog",
     "@type": [
-      "http://purl.org/dc/terms/Location"
+      "http://www.w3.org/ns/dcat#Catalog"
     ],
-    "http://purl.org/dc/terms/identifier": [
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
       {
         "@id": "http://publications.europa.eu/resource/authority/country/SWE"
       }
-    ]
-  },
-  {
-    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Agent"
     ],
-    "http://xmlns.com/foaf/0.1/mbox": [
+    "http://purl.org/dc/terms/title": [
       {
-        "@id": "mailto:datex@trafikverket.se"
+        "@language": "en",
+        "@value": "Trafficdata.se"
       }
     ],
-    "http://xmlns.com/foaf/0.1/name": [
+    "http://www.w3.org/ns/dcat#record": [
       {
-        "@language": "sv",
-        "@value": "Trafikverket"
+        "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"
       }
     ],
-    "http://xmlns.com/foaf/0.1/workplaceHomepage": [
+    "http://xmlns.com/foaf/0.1/homepage": [
       {
-        "@id": "https://www.trafikverket.se"
+        "@id": "https://trafficdata.se/"
       }
     ]
   },
@@ -202,7 +137,7 @@
     "@type": [
       "http://www.w3.org/ns/dcat#CatalogRecord"
     ],
-    "http://purl.org/dc/terms/created": [
+    "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
         "@value": "2019-12-04"

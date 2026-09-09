@@ -24,7 +24,7 @@ var respecConfig = {
       label: "Turtle",
       uri: "./mobilitydcat-ap.ttl",
     },
-    {
+      {
       label: "JSON-LD",
       uri: "./mobilitydcat-ap.jsonld",
     },

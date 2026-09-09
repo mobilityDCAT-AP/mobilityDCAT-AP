@@ -1,0 +1,638 @@
+[
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0",
+    "@type": [
+      "http://purl.org/dc/terms/Standard"
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@id": "mailto:datex@trafikverket.se"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "sv",
+        "@value": "Trafikverket"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/workplaceHomepage": [
+      {
+        "@id": "https://www.trafikverket.se"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://data.europa.eu/r5r/applicableLegislation": [
+      {
+        "@id": "http://data.europa.eu/eli/reg_del/2022/670/oj"
+      }
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d/schema"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Datex is the Swedish Transport Administration resource."
+      }
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/XML"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2017-05-09T11:49:47"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/licence/CC0"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2019-12-04T09:48:27"
+      }
+    ],
+    "http://purl.org/dc/terms/rights": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb10"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb11"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Datex"
+      }
+    ],
+    "http://www.w3.org/2011/content#characterEncoding": [
+      {
+        "@value": "UTF-16"
+      }
+    ],
+    "http://www.w3.org/ns/adms#sample": [
+      {
+        "@id": "http://www.trafikverket.se/tjanster/x/sample.xml"
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/distribution-status/ONGOING"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "http://www.trafikverket.se/tjanster/x/"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+        "@id": "http://www.trafikverket.se/tjanster/x/"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/page": [
+      {
+        "@id": "https://data.trafikverket.se/documentation/datex/datamodel"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#applicationLayerProtocol": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/application-layer-protocol/http-https"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#communicationMethod": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/communication-method/pull"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#dataFormatNotes": [
+      {
+        "@language": "en",
+        "@value": "This distribution is formatted in DATEX II."
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#mobilityDataStandard": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"
+      },
+      {
+        "@id": "https://www.trafficdata.se/standard/datex-II-v3.2"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb10",
+    "@type": [
+      "http://purl.org/dc/terms/RightsStatement"
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb11",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/ns/dcat#endDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2030-12-31T23:59:59.999000"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#startDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-08-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://data.europa.eu/930/referenceSystem": [
+      {
+        "@id": "http://www.opengis.net/def/crs/EPSG/0/4326"
+      }
+    ],
+    "http://data.europa.eu/r5r/applicableLegislation": [
+      {
+        "@id": "http://data.europa.eu/eli/reg_del/2022/670/oj"
+      }
+    ],
+    "http://purl.org/dc/terms/accrualPeriodicity": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Traffic signs from the Swedish Transport Administration. Datex II format."
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "ec459578-a11f-4728-acaa-16b08ae45cfa"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2017-05-09T11:49:47"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2019-12-04T09:48:27"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
+      }
+    ],
+    "http://purl.org/dc/terms/relation": [
+      {
+        "@id": "https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"
+      }
+    ],
+    "http://purl.org/dc/terms/rightsHolder": [
+      {
+        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/country/SWE"
+      }
+    ],
+    "http://purl.org/dc/terms/temporal": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb9"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Traffic signs expressing traffic regulations and identifying dangers, Speed limits"
+      }
+    ],
+    "http://www.w3.org/ns/adms#identifier": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb8"
+      }
+    ],
+    "http://www.w3.org/ns/adms#versionNotes": [
+      {
+        "@language": "en",
+        "@value": "This is version 2.1 of this dataset."
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb2"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#hasVersion": [
+      {
+        "@id": "https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#inSeries": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb7"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@language": "en",
+        "@value": "Datex"
+      },
+      {
+        "@language": "en",
+        "@value": "Act B"
+      },
+      {
+        "@language": "en",
+        "@value": "Speed limits"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#version": [
+      {
+        "@value": "2.1"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#hasQualityAnnotation": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb5"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/page": [
+      {
+        "@id": "https://data.trafikverket.se/documentation/datex/datamodel"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#assessmentResult": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb3"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#georeferencingMethod": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/georeferencing-method/alert-c"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#intendedInformationService": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/intended-information-service/information-service"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#mobilityTheme": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#networkCoverage": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/network-coverage/motorways"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads"
+      }
+    ],
+    "https://w3id.org/mobilitydcat-ap#transportMode": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/transport-mode/car"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/transport-mode/truck"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb2",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Kind",
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Trafikverket"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:datex@trafikverket.se"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb3",
+    "@type": [
+      "https://w3id.org/mobilitydcat-ap#Assessment"
+    ],
+    "http://www.w3.org/ns/oa#hasBody": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb4"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb4",
+    "@type": [
+      "http://www.w3.org/ns/oa#TextualBody"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@language": "en",
+        "@value": "Assessment results available upon request"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb5",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityAnnotation"
+    ],
+    "http://www.w3.org/ns/oa#hasBody": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb6"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb6",
+    "@type": [
+      "http://www.w3.org/ns/oa#TextualBody"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@language": "en",
+        "@value": "Best effort"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb7",
+    "@type": [
+      "http://www.w3.org/ns/dcat#DatasetSeries"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "This is a dataset series for the Speed Limits data."
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Speed limit dataset series"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb8",
+    "@type": [
+      "http://www.w3.org/ns/adms#Identifier"
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "SE-NAP-RTTI-Speed-limits"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb9",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/ns/dcat#endDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2030-12-31T23:59:59.999000"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#startDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-08-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "@id": "https://trafficdata.se/catalog",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Catalog"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."
+      }
+    ],
+    "http://purl.org/dc/terms/hasPart": [
+      {
+        "@id": "https://www.dataportal.se"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "trafficdata.se"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2016-10-01T00:00:00"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/licence/CC0"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-10-01T00:00:00"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/country/SWE"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Trafficdata.se"
+      }
+    ],
+    "http://www.w3.org/ns/adms#identifier": [
+      {
+        "@id": "_:nd63c06358ba64f6e9050de791308b35bb1"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#dataset": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#record": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#themeTaxonomy": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@id": "https://trafficdata.se/"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd63c06358ba64f6e9050de791308b35bb1",
+    "@type": [
+      "http://www.w3.org/ns/adms#Identifier"
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "SE-NAP"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/standard/datex-II-v3.2",
+    "@type": [
+      "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://docs.datex2.eu/v3.2/_static/data/Exchange/2020/exchangexsd.zip"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Datex II version 3.2"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#version": [
+      {
+        "@value": "3.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits",
+    "@type": [
+      "http://www.w3.org/ns/dcat#CatalogRecord"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-12-04"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-12-04"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.dataportal.se/en/dataservice/50_7006"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/primaryTopic": [
+      {
+        "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"
+      }
+    ]
+  }
+]
