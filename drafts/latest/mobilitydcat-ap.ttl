@@ -1310,11 +1310,11 @@ foaf:name rdf:type owl:DatatypeProperty ;
 ###  http://xmlns.com/foaf/spec/#term_page
 foaf:page a owl:ObjectProperty ;
     rdfs:comment """For Dataset, it describes a page or document about this dataset.
-    This property is meant to link to other ressources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    This property is meant to link to other resources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.
 
     For Distribution, it describes a page or document about the distribution.
-    This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    This property is meant to link to other resources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the dataset level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Dataset and Distribution."@en ;
     vs:term_status "stable" ;

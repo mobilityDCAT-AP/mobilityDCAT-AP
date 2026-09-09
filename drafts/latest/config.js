@@ -376,7 +376,7 @@ var respecConfig = {
         "publisher":"European Commission"
       },
 
-    "EC-Regulation-2013/138-on-HVD": {
+    "EC-Regulation-2023/138-on-HVD": {
         "href":"https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng",
         "title":"Commission Implementing Regulation (EU) 2023/138 of 21 December 2022 laying down a list of specific high-value datasets and the arrangements for their publication and re-use",
         "publisher":"European Commission"
@@ -588,7 +588,7 @@ var respecConfig = {
         "title":"EPSG CRS Register",
         "publisher":"OGC"
       },
-      "ISO-8061": {
+      "ISO-8601": {
         "authors": [
             "ISO/TC 154"
         ],
