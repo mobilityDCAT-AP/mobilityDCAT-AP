@@ -3141,7 +3141,7 @@
   }, {
     "@id" : "https://www.w3.org/TR/vocab-org/#org:Organization"
   }, {
-    "@id" : "https://www.w3.org/ns/org#Organization"
+    "@id" : "http://www.w3.org/ns/org#Organization"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"

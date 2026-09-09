@@ -522,7 +522,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class ;
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-format> .
 
-### https://www.w3.org/ns/org#Organization
+### http://www.w3.org/ns/org#Organization
 org:Organization rdf:type owl:Class ;
     rdfs:comment """Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.
     See Organization in The Organization Ontology.
@@ -530,7 +530,7 @@ org:Organization rdf:type owl:Class ;
     This specification does not impose any additional requirements to properties for this entity."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    rdfs:seeAlso <https://www.w3.org/ns/org#Organization> ,
+    rdfs:seeAlso <http://www.w3.org/ns/org#Organization> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Organisation> ,
                 <https://www.w3.org/TR/vocab-org/#org:Organization> .
 

@@ -3534,7 +3534,7 @@
     This specification does not impose any additional requirements to properties for this entity.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Organisation"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-org/#org:Organization"/>
-        <rdfs:seeAlso rdf:resource="https://www.w3.org/ns/org#Organization"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/org#Organization"/>
         <vs:term_status>stable</vs:term_status>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/org#memberOf">
