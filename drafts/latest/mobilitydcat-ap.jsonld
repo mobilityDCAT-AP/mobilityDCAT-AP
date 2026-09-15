@@ -3141,7 +3141,7 @@
   }, {
     "@id" : "https://www.w3.org/TR/vocab-org/#org:Organization"
   }, {
-    "@id" : "https://www.w3.org/ns/org#Organization"
+    "@id" : "http://www.w3.org/ns/org#Organization"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
@@ -3377,7 +3377,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "For Dataset, it describes a page or document about this dataset.\r\n    This property is meant to link to other ressources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.\r\n    Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.\r\n\r\n    For Distribution, it describes a page or document about the distribution.\r\n    This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.\r\n    Please note there is also the same property foaf:page on the dataset level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level."
+    "@value" : "For Dataset, it describes a page or document about this dataset.\r\n    This property is meant to link to other resources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.\r\n    Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.\r\n\r\n    For Distribution, it describes a page or document about the distribution.\r\n    This property is meant to link to other resources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.\r\n    Please note there is also the same property foaf:page on the dataset level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://xmlns.com/foaf/spec/#term_page"

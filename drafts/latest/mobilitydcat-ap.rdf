@@ -3534,7 +3534,7 @@
     This specification does not impose any additional requirements to properties for this entity.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Organisation"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-org/#org:Organization"/>
-        <rdfs:seeAlso rdf:resource="https://www.w3.org/ns/org#Organization"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/org#Organization"/>
         <vs:term_status>stable</vs:term_status>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/org#memberOf">
@@ -3619,11 +3619,11 @@
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <rdfs:comment xml:lang="en">For Dataset, it describes a page or document about this dataset.
-    This property is meant to link to other ressources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    This property is meant to link to other resources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.
 
     For Distribution, it describes a page or document about the distribution.
-    This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    This property is meant to link to other resources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the dataset level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/#term_page"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-description"/>

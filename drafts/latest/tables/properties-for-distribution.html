@@ -88,7 +88,7 @@
 <td valign=top>
   <p>The legal framework is usually provided on the dataset level, see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>. 
     However, there is a special case of if a High Value Dataset (HVD) is provided. 
-    Here, the [[DCAT-AP-High-Value-Datasets]] specification stipulates that this property links to the [[EC-Regulation-2013/138-on-HVD]] both on the dataset and distribution levels.
+    Here, the [[DCAT-AP-High-Value-Datasets]] specification stipulates that this property links to the [[EC-Regulation-2023/138-on-HVD]] both on the dataset and distribution levels.
     In other words, a RDF statement <code><dcatap:applicableLegislation rdf:resource="http://data.europa.eu/eli/reg_impl/2023/138/oj"/></code> is required under the dataset and distribution class, if a HVD is published on the portal.
    For other cases outside HVD, the use of this property is not recommended.</p>
 </td>
@@ -114,7 +114,7 @@
 </td>
 <td valign=top>
   <p> It should be expressed using a character set name defined in the [[IANA-CHARACTER-SETS]] register.</p>
-  <p>This property is analogue to an addition by [[geoDCAT-AP-v3.0.0]].</p>
+  <p>This property is analogue to an addition by [[GeoDCAT-AP-v3.0.0]].</p>
 </td>
 <td valign=top>
 <p><a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Distribution.characterencoding">GE</a></p>
@@ -203,7 +203,7 @@
 <p>A page or document about the distribution.</p>
 </td>
 <td valign=top>
-  <p>This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar.
+  <p>This property is meant to link to other resources which document the data distribution, e.g., PDF manuals, other websites or similar.
 In contrast, the property <a href="#distribution-description"><code>dct:description</code></a> is meant to provide a textual documentation.</p>
     <p>Please note there is also the same property <a href="#dataset-documentation"><code>foaf:page</code></a> on the dataset level. 
     Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.</p>

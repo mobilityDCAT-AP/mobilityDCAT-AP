@@ -522,7 +522,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class ;
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-format> .
 
-### https://www.w3.org/ns/org#Organization
+### http://www.w3.org/ns/org#Organization
 org:Organization rdf:type owl:Class ;
     rdfs:comment """Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.
     See Organization in The Organization Ontology.
@@ -530,7 +530,7 @@ org:Organization rdf:type owl:Class ;
     This specification does not impose any additional requirements to properties for this entity."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    rdfs:seeAlso <https://www.w3.org/ns/org#Organization> ,
+    rdfs:seeAlso <http://www.w3.org/ns/org#Organization> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Organisation> ,
                 <https://www.w3.org/TR/vocab-org/#org:Organization> .
 
@@ -1310,11 +1310,11 @@ foaf:name rdf:type owl:DatatypeProperty ;
 ###  http://xmlns.com/foaf/spec/#term_page
 foaf:page a owl:ObjectProperty ;
     rdfs:comment """For Dataset, it describes a page or document about this dataset.
-    This property is meant to link to other ressources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    This property is meant to link to other resources which document the dataset, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the distribution level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level.
 
     For Distribution, it describes a page or document about the distribution.
-    This property is meant to link to other ressources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
+    This property is meant to link to other resources which document the data distribution, e.g., PDF manuals, other websites or similar. In contrast, the property dct:description is meant to provide a textual documentation.
     Please note there is also the same property foaf:page on the dataset level. Depending if the documentation is data set- or distribution-dependent, the property should be used on the data set or distribution level."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Dataset and Distribution."@en ;
     vs:term_status "stable" ;
