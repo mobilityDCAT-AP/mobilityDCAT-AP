@@ -371,6 +371,14 @@ var respecConfig = {
         "title":"Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance",
         "publisher":"European Commission"
       },
+
+	"EC-Regulation-2023/1804-on-AFIR": {
+        "href":"https://eur-lex.europa.eu/eli/reg/2023/1804/oj",
+        "title":"Regulation (EU) 2023/1804 of the European Parliament and of the Council of 13 September 2023 on the deployment of alternative fuels infrastructure, and repealing Directive 2014/94/EU",
+        "publisher":"European Commission"
+      },
+
+		
       "EC-Regulation-2024/490-on-MMTIS": {
         "href":"https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng",
         "title":"Commission Delegated Regulation (EU) 2024/490 of 29 November 2023 amending Delegated Regulation (EU) 2017/1926 supplementing Directive 2010/40/EU of the European Parliament and of the Council with regard to the provision of EU-wide multimodal travel information services",
