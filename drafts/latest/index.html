@@ -1114,13 +1114,26 @@ The serialisation files are available in the releases subfolder of the <a href="
 </section>
   
 
-<!-- mobilityDCAT-AP Enterprise Architect files -->
+<!-- mobilityDCAT-AP Migration Guide -->
 
-<section id="eap-files" class="appendix">
+<section id="migration-guide" class="appendix">
 
-<h2>mobilityDCAT-AP Enterprise Architect files</h2>
+<h2>Migration Guide from mobilityDCAT-AP v1.1.0 to v3.0.0</h2>
 
-<p>Enterprise Architect files describing the mobilityDCAT-AP data model are available at <a href="./enterpriseArchitectFiles">this Github subfolder</a>.</p>
+<p>This Migration Guide is addressing NAP and mobility data portal deployers who have already deployed [[mobilityDCAT-AP-v1.1.0]], 
+  and now intend to upgrade their metadata registries to this version mobilityDCAT-AP v3.0.0.</p>
+  <p>It is compiling the changes noted in the <a href="#changes-since-20250119">Change Log</a>, and interpreting them into concrete actions for deployers.</p>
+
+<p>This Guide is formatted as a "check list" with dedicated actions for these categories:</p>
+<ul>
+<li>MUST change — breaking, action required before go-live</li>
+<li>MUST stop using - do not add to new publications</li>
+<li>MAY stop using - may remove from new publications</li>
+<li>MAY now relax usage of existing elements</li>
+<li>MAY now add — new optional elements in v3.0.0</li>
+</ul>  
+
+<p>The Guide is available as a <a href="./migrationGuide/mobilityDCAT-AP_Migration Guide_v1.1.0-to-v3.0.0.xlsx">downloadable XLS file</a>.</p>
 </section>
   
 
@@ -1184,10 +1197,12 @@ In particular, the class and property definitions are now under new sections <a 
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/130">#130</a>.
   </li>
   
-<li>Appendix H (mobilityDCAT-AP Enterprise Architect files), as provided in [[mobilityDCAT-AP-v1.1.0]], is not provided any longer. 
+<li><a href="#migration-guide">Appendix H (mobilityDCAT-AP Migration Guide)</a> added.
+See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/166">#166</a>.</li>  
+
+<li>Previous Appendix H (mobilityDCAT-AP Enterprise Architect files), as provided in [[mobilityDCAT-AP-v1.1.0]], is not provided any longer. 
   This is due to lacking resources to maintain such files, and also the current lack of interest of stakeholders to have such files available. 
 See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/163">#163</a>.</li>
-
   
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP.
 These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
