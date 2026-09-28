@@ -260,7 +260,7 @@ var respecConfig = {
        },
               
     "DCAT-AP-v3.0.1-Examples-for-Dataset-Series":{
-        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series",
         "title":"DCAT-AP v3.0.1 Examples for Dataset Series",
         "publisher":"SEMIC",
         "date":"27 October 2025"
@@ -282,7 +282,7 @@ var respecConfig = {
 
     "DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies":{
         "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#requirements-for-controlled-vocabularies",
-        "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
+        "title":"DCAT-AP v3.0.1 Requirements for Controlled Vocabularies",
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
@@ -322,7 +322,7 @@ var respecConfig = {
         "publisher":"European Commission"
       },
       "DCAT-AP-High-Value-Datasets": {
-        "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
         "title":"DCAT-AP High Value Datasets",
         "publisher":"SEMIC",
         "date":"25 October 2024"
