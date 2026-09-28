@@ -36,7 +36,7 @@
         <dct:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2026</dct:dateCopyrighted>
         <bibo:editor rdf:nodeID="genid2"/>
         <vann:preferredNamespacePrefix>mobilitydcatap</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://w3id.org/mobilitydcat-ap/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/mobilitydcat-ap#</vann:preferredNamespaceUri>
         <voaf:reliesOn rdf:resource="http://data.europa.eu/eli/ontology#"/>
         <voaf:reliesOn rdf:resource="http://data.europa.eu/r5r/"/>
         <voaf:reliesOn rdf:resource="http://purl.org/dc/terms/"/>

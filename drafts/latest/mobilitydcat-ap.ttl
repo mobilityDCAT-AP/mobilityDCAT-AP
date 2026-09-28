@@ -59,7 +59,7 @@ mobilitydcatap: a voaf:Vocabulary,
     foaf:homepage <https://github.com/lcomet>
     ] ;
   vann:preferredNamespacePrefix "mobilitydcatap" ;
-  vann:preferredNamespaceUri "http://w3id.org/mobilitydcat-ap/"^^xsd:anyURI ;
+  vann:preferredNamespaceUri "https://w3id.org/mobilitydcat-ap#"^^xsd:anyURI ;
   voaf:reliesOn dcatap:,
     dct:,
     spdx:,

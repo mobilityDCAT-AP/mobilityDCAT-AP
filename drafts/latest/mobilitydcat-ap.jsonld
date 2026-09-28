@@ -3620,7 +3620,7 @@
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://w3id.org/mobilitydcat-ap/"
+    "@value" : "https://w3id.org/mobilitydcat-ap#"
   } ],
   "http://purl.org/vocommons/voaf#reliesOn" : [ {
     "@id" : "http://data.europa.eu/eli/ontology#"
