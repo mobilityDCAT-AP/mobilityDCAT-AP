@@ -2331,7 +2331,7 @@
         <rdfs:seeAlso rdf:resource="http://data.europa.eu/r5r/applicableLegislation"/>
         <rdfs:seeAlso rdf:resource="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation"/>
-        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/"/>
+        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Dataset, Dataset Series and Distribution.</skos:scopeNote>
     </rdf:Description>

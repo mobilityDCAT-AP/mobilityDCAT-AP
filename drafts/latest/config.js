@@ -207,7 +207,7 @@ var respecConfig = {
       },
      "DataCite-Metadata-Schema": {
         "href":"https://schema.datacite.org/",
-        "title":"DataCite-Metadata-Schema3",
+        "title":"DataCite Metadata Schema",
          "publisher":"DataCite",
         "date":"3 March 2026"
       },  
@@ -247,7 +247,7 @@ var respecConfig = {
        },
 
        "DCAT-AP":{
-        "href":"https://op.europa.eu/de/web/eu-vocabularies/dcat-ap",
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/dcat-ap",
         "title":"DCAT-AP",
         "publisher":"European Commission"
        },
@@ -260,7 +260,7 @@ var respecConfig = {
        },
               
     "DCAT-AP-v3.0.1-Examples-for-Dataset-Series":{
-        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series/",
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series",
         "title":"DCAT-AP v3.0.1 Examples for Dataset Series",
         "publisher":"SEMIC",
         "date":"27 October 2025"
@@ -282,7 +282,7 @@ var respecConfig = {
 
     "DCAT-AP-v3.0.1-Requirements-for-Controlled-Vocabularies":{
         "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#requirements-for-controlled-vocabularies",
-        "title":"DCAT-AP v3.0.1 Note on Inverse Properties",
+        "title":"DCAT-AP v3.0.1 Requirements for Controlled Vocabularies",
         "publisher":"SEMIC",
         "date":"27 October 2025"
        },
@@ -322,7 +322,7 @@ var respecConfig = {
         "publisher":"European Commission"
       },
       "DCAT-AP-High-Value-Datasets": {
-        "href":"https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/",
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
         "title":"DCAT-AP High Value Datasets",
         "publisher":"SEMIC",
         "date":"25 October 2024"
@@ -867,7 +867,7 @@ var respecConfig = {
         "publisher":"DataCite"
       },
       "CLDR": {
-        "href":"http://unicode.org/cldr/trac/browser/trunk/common/bcp47/transform_mt.xml",
+        "href":"https://github.com/unicode-org/cldr/blob/main/common/bcp47/transform_mt.xml",
         "title":"CLDR - Unicode Common Locale Data Repository. BCP47, transform_mt.xml",
         "publisher":"UNICODE Consortium"
       },
