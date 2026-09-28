@@ -206,7 +206,7 @@
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation"
   }, {
-    "@id" : "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/"
+    "@id" : "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0-hvd/"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"

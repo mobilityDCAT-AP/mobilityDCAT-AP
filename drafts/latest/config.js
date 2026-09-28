@@ -867,7 +867,7 @@ var respecConfig = {
         "publisher":"DataCite"
       },
       "CLDR": {
-        "href":"http://unicode.org/cldr/trac/browser/trunk/common/bcp47/transform_mt.xml",
+        "href":"https://github.com/unicode-org/cldr/blob/main/common/bcp47/transform_mt.xml",
         "title":"CLDR - Unicode Common Locale Data Repository. BCP47, transform_mt.xml",
         "publisher":"UNICODE Consortium"
       },

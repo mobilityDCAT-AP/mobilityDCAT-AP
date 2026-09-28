@@ -867,7 +867,7 @@ dcatap:applicableLegislation a rdf:Property,
     dcam:rangeIncludes eli:LegalResource ;
     rdfs:seeAlso <http://data.europa.eu/r5r/applicableLegislation>  ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-applicable-legislation> ,
-                <https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/> ,
+                <https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0-hvd/> ,
                 <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138> .
 
 
