@@ -207,7 +207,7 @@ var respecConfig = {
       },
      "DataCite-Metadata-Schema": {
         "href":"https://schema.datacite.org/",
-        "title":"DataCite-Metadata-Schema",
+        "title":"DataCite Metadata Schema",
          "publisher":"DataCite",
         "date":"3 March 2026"
       },  
@@ -247,7 +247,7 @@ var respecConfig = {
        },
 
        "DCAT-AP":{
-        "href":"https://op.europa.eu/de/web/eu-vocabularies/dcat-ap",
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/dcat-ap",
         "title":"DCAT-AP",
         "publisher":"European Commission"
        },
