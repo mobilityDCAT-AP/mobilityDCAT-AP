@@ -1051,7 +1051,7 @@ The serialisation files are available in the releases subfolder of the <a href="
 
 <p>The technical conformance of the data exchange to mobilityDCAT-AP can be verified using the provided SHACL shapes. SHACL ([[SHACL]]) is a W3C Recommendation for expressing constraints on RDF knowledge graphs. The shapes validate whether an RDF representation of a mobilityDCAT-AP catalogue conforms to the specification. As mobilityDCAT-AP-conformant data can be transformed into RDF, the shapes can be applied across different data exchange contexts.</p>
 
-<p>Every constraint in this specification that can be expressed in SHACL is provided as a shape, so that a mobilityDCAT-AP catalogue in RDF can be checked for technical conformance. The shapes extend the DCAT-AP 3.0.1 SHACL shapes: DCAT-AP's constraints are reused through <code>owl:imports</code>, and mobilityDCAT-AP adds only the constraints that differ from DCAT-AP. All files are available in <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/3.0.0/shacl">this GitHub folder.</a></p>
+<p>Every constraint in this specification that can be expressed in SHACL is provided as a shape, so that a mobilityDCAT-AP catalogue in RDF can be checked for technical conformance. The shapes extend the DCAT-AP 3.0.1 SHACL shapes: DCAT-AP's constraints are reused through <code>owl:imports</code>, and mobilityDCAT-AP adds only the constraints that differ from DCAT-AP. All files are available in <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/drafts/latest/shaclShapes">this GitHub folder</a>.</p>
 
 <h2>Rationale: extend DCAT-AP, do not re-encode it</h2>
 
@@ -1426,7 +1426,7 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
   <li>text at the beginning of the properties section was leading to a wrong directory with examples, removed (examples are now published under Appendix D)</li>
   <li>several typos corrected</li>
 </ul></li>
-<li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl">SHACL file</a> updated:</li>
+<li><a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.0.1/mobilitydcat-ap_shacl_shapes.ttl">SHACL file</a> updated:</li>
   <li><ul>
   <li>validations for the controlled vocabularies added (so that the user does not have to add such specifications to their metadata)</li>
   <li>all constraints (Mandatory, Recommended, Optional) added (previously only the Mandatory ones were covered)</li>
