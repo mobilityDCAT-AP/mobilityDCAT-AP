@@ -276,7 +276,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "description"@en ;
   sh:description "Free-text description of the mobility data platform. Repeated for parallel language versions (§12)."@en ;
-  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Violation .
 :Catalogue_Shape_homepage
   a sh:PropertyShape ;
@@ -306,7 +306,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "title"@en ;
   sh:description "Name of the mobility data portal. Repeated for parallel language versions (§12)."@en ;
-  sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Violation .
 :Catalogue_Shape_identifier
   a sh:PropertyShape ;
@@ -428,7 +428,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "description"@en ;
   sh:description "Free-text description of the dataset. Repeated for parallel language versions (§12)."@en ;
-  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Violation .
 :Dataset_Shape_distribution
   a sh:PropertyShape ;
@@ -465,7 +465,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "title"@en ;
   sh:description "Name of the dataset. Repeated for parallel language versions (§12)."@en ;
-  sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Violation .
 :Dataset_Shape_publisher
   a sh:PropertyShape ;
@@ -488,7 +488,7 @@
   sh:minLength 1 ;
   sh:name "keyword / tag"@en ;
   sh:description "Keyword or tag describing the dataset (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."@en ;
-  sh:message "Keywords must have valid EU language tags and cannot be empty"@en ;
+  sh:message "Keywords must not be empty and must have a valid EU language tag."@en ;
   sh:severity sh:Warning .
 
 :Dataset_Shape_networkCoverage
@@ -567,7 +567,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "description"@en ;
   sh:description "Free-text description of the dataset series (§12)."@en ;
-  sh:message "Description is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Violation .
 
 :DatasetSeries_Shape_publisher
@@ -585,7 +585,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "title"@en ;
   sh:description "Name of the dataset series (§12)."@en ;
-  sh:message "Title is mandatory, must have a valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Violation .
 
 :DatasetSeries_Shape_mobilityTheme
@@ -671,7 +671,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "description"@en ;
   sh:description "Free-text account of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."@en ;
-  sh:message "Description must have valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Description must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Warning .
 
 :Distribution_Shape_characterEncoding
@@ -726,7 +726,7 @@
   sh:uniqueLang true ; sh:minLength 1 ;
   sh:name "title"@en ;
   sh:description "Name of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."@en ;
-  sh:message "Title must be a literal with valid EU language tag, cannot be empty, each language only once"@en ;
+  sh:message "Title must be a literal, must not be empty, must have a valid EU language tag, and may have only one value per language"@en ;
   sh:severity sh:Warning .
 #---------------------------------------------------------------------------
 # KIND SHAPE  (no DCAT-AP shape; Phase 6: hasEmail/fn -> 1..1)
