@@ -25,4 +25,4 @@ Guidelines for the implementation of the mobilityDCAT-AP specification are avail
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest mobilityDCAT-AP release.
 
 ## Licence
-Copyright © 2023-2026 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the mobilityDCAT-AP repository on GitHub.
+Copyright © 2023-2026 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned.
