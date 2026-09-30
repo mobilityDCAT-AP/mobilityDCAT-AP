@@ -1236,6 +1236,14 @@ See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/166
 <li>Previous Appendix H (mobilityDCAT-AP Enterprise Architect files), as provided in [[mobilityDCAT-AP-v1.1.0]], is not provided any longer. 
   This is due to lacking resources to maintain such files, and also the current lack of interest of stakeholders to have such files available. 
 See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/163">#163</a>.</li>
+
+<li>The SHACL shapes are rebuilt: six files (shapes, ranges, mdr-vocabularies, deprecated-uris, imports, mdr-imports) with versioned namespaces per file. 
+  They extend the [[DCAT-AP-v3.0.1]]shapes and add only mobilityDCAT-AP-specific constraints. 
+  The File names changed, so validator configurations pointing to the [[mobilityDCAT-AP-v1.1.0]] files need updating. 
+  See <a href="#validation-guidance">Appendix G</a> and issues <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/207">#207</a> and <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/227">#227</a>.</li>
+  
+<li> The example populations are replaced by a minimum and a complete example, each in Turtle, RDF/XML and JSON-LD. 
+  See <a href="#examples">Appendix D</a> and issues <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/170">#170</a> and <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/226">#226</a>.</li>
   
 <li>Class additions with the goal to expand the expressiveness of mobilityDCAT-AP.
 These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3.0.0]], but now are also explicitly used in mobilityDCAT-AP.</li>
