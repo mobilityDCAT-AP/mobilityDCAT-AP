@@ -846,8 +846,8 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 <p>In light of the growing importance of data, the European Commission has adopted an implementing regulation focused on high-value datasets on 21 December 2022 [[EC-Regulation-2023/138-on-HVD]]. 
   The ambition of this regulation is to improve the quality, the accessibility and use of a selective number of core datasets within the public sector. 
   To achieve this the regulation sets, among others, requirements on the metadata associated with the disclosed datasets. 
-  These requirements can be expressed as additional constraints and usage notes on mobilityDCAT-AP and are collected in an annex of [[DCAT-AP-v3.0.1]] dedicated to the implementation of the HVD IR
-  [DCAT-AP-High-Value-Datasets]].</p>
+  These requirements can be expressed as additional constraints and usage notes on mobilityDCAT-AP and are collected in an annex of [[DCAT-AP-v3.0.1]] dedicated to the implementation of the HVD regulation
+  [[DCAT-AP-High-Value-Datasets]].</p>
 
 </section>
 
@@ -1334,7 +1334,7 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
   <li>Property <a href="#dataset-has-version"><code>dcat:hasVersion</code></a> of class Dataset: URI changed from previously <code>dct:hasVersion</code> to <code>dcat:hasVersion</code>.</li>
   <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
   <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: 
-    property added (reason: compliance with the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+    property added (reason: compliance with the spec [[DCAT-AP-High-Value-Datasets]]).</li>
   <li>Property <a href="#distribution-rights"><code>dct:rights</code></a> of class Distribution: cardinality relaxed from previously "1..1" to "1..*".</li>
   <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
       "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
