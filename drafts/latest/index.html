@@ -779,7 +779,7 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 
 <h2>Accessibility and Multilingual Aspects</h2>
 
-<p>This section aligns with the section of the same name in [[DCAT-AP-v3.0.1]].</p>
+<p><i>This section aligns with the section of the same name in [[DCAT-AP-v3.0.1]]</i>.</p>
   
 <p><strong>Accessibility</strong> in the context of mobilityDCAT-AP is limited to information about the technical format of distributions of datasets. 
   There are three format-related properties <code>cnt:characterEncoding</code>, <code>dct:format</code> and <code>mobilitydcatap:mobilityDataStandard</code> providing information that can be used to determine what software can be deployed to process the data. 
@@ -811,9 +811,20 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 </section>
   
 
+
+<!-- Legal information -->
+
+<section id="legal-information">
+
+<h2>Legal information</h2>
+
+<p><i>This section is non-normative. This section aligns with the section of the same name in [[GeoDCAT-AP-v3.0.0]].</i></p>
+
+<p>The considerations for expressing legal information follow the guidelines and approach of [[DCAT-AP-v3.0.1]]. Readers should consult the [[DCAT-AP-v3.0.1-section-on-legal-information]].</p>  
+
 <section id='privsec'>
 
-<h2>Privacy and security considerations </h2>
+<h3>Privacy and security considerations</h3>
 
 <p>The mobilityDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with catalogued Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as <a data-cite="VOCAB-ODRL#privacy-consideration">described</a> in [[VOCAB-ODRL]].</p>
 
@@ -821,9 +832,30 @@ It is compatible with the parallel specifications [[DCAT-AP-v3.0.1]] and [[GeoDC
 
 </section>
 
-<section id="ack">
+</section> 
+  
 
+<!-- High Value Datasets -->
+
+<section id="hvd">
+
+<h2>High Value Datasets</h2>
+
+<p><i>This section is non-normative. This section aligns with the section of the same name in [[DCAT-AP-v3.0.1]].</i></p>
+
+<p>In light of the growing importance of data, the European Commission has adopted an implementing regulation focused on high-value datasets on 21 December 2022 [[EC-Regulation-2023/138-on-HVD]]. 
+  The ambition of this regulation is to improve the quality, the accessibility and use of a selective number of core datasets within the public sector. 
+  To achieve this the regulation sets, among others, requirements on the metadata associated with the disclosed datasets. 
+  These requirements can be expressed as additional constraints and usage notes on mobilityDCAT-AP and are collected in an annex of [[DCAT-AP-v3.0.1]] dedicated to the implementation of the HVD regulation
+  [[DCAT-AP-High-Value-Datasets]].</p>
+
+</section>
+
+  
+  
 <!-- Acknowledgements -->
+  
+<section id="ack">
 
 <h2>Acknowledgements</h2>
 
@@ -1151,7 +1183,7 @@ The serialisation files are available in the releases subfolder of the <a href="
 <h2>Changes since [[mobilityDCAT-AP-v1.1.0]] (17 January 2025)</h2>
 
 <ul>
-<li>Section <a class="no-sectionRef" href="#introduction"></a> is shortened .
+<li>Section <a class="no-sectionRef" href="#introduction"></a> is shortened.
 Generic description about mobilityDCAT-AP is now compiled at the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-1:-Introduction-and-Overview">Wikipage</a>.
   See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/59">#59</a>.</li>
   
@@ -1190,9 +1222,9 @@ In particular, the class and property definitions are now under new sections <a 
   </li>
   
 <li>New notion about classes and properties "not used from DCAT-AP".
-    In [[mobilityDCAT-AP-v1.1.0]], several classes and properties from the original [[DCAT-AP]] were declared as "removed", following the former Guidelines for DCAT-AP Extensions [[[DCAT-AP-EG]].
+    In [[mobilityDCAT-AP-v1.1.0]], several classes and properties from the original [[DCAT-AP]] were declared as "removed", following the former Guidelines for DCAT-AP Extensions [[DCAT-AP-EG]].
     The term "removed" caused some confusion, so it is replaced with "not used from DCAT-AP". 
-    This terms refers to classes and properties that are defined in [[DCAT-AP-v3.0.1]], but are not defined in mobilityDCAT-AP. 
+    This term refers to classes and properties that are defined in [[DCAT-AP-v3.0.1]], but are not defined in mobilityDCAT-AP. 
     These classes are compiled in a new annex <a class="no-sectionRef" href="#classes-and-properties-not-used-from-DCAT-AP"></a>.
     The implications of elements "not used from DCAT-AP" are further explained in a special <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-2:-Recommendations-for-the-deployment-of-mobilityDCAT%E2%80%90AP#8-why-does-mobilitydcat-ap-not-take-over-all-classes-and-properties-from-the-parallel-dcat-ap-specification">Wiki page</a>. 
     See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/130">#130</a>.
@@ -1308,7 +1340,7 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
   <li>Property <a href="#dataset-has-version"><code>dcat:hasVersion</code></a> of class Dataset: URI changed from previously <code>dct:hasVersion</code> to <code>dcat:hasVersion</code>.</li>
   <li>Property <a href="#dataset-version"><code>dcat:version</code></a> of class Dataset: URI changed from previously <code>owl:versionInfo</code> to <code>dcat:version</code>.</li>
   <li>Property <a href="#distribution-applicable-legislation"><code>dcatap:applicableLegislation</code></a> of class Distribution: 
-    property added (reason: compliance with the <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/">DCAT-AP profile for HVD</a>).</li>
+    property added (reason: compliance with the spec [[DCAT-AP-High-Value-Datasets]]).</li>
   <li>Property <a href="#distribution-rights"><code>dct:rights</code></a> of class Distribution: cardinality relaxed from previously "1..1" to "1..*".</li>
   <li>Property <a href="#location-geometry"><code>locn:geometry</code></a> of class Location: range changed from previously 
       "<code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or gsp:gmlLiteral</code>" to <code>locn:Geometry</code>.</li>
