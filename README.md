@@ -5,9 +5,9 @@
 [![Prefix](https://img.shields.io/badge/Namespace-mobilitydcatap%3A-purple.svg)](https://prefix.cc/mobilitydcatap)
 [![Paper](https://img.shields.io/badge/arXiv-2506.03301-b31b1b.svg)](https://doi.org/10.48550/arXiv.2503.11535)
 
-This is the issue tracker for the maintenance of [mobilityDCAT-AP](https://napcore.eu/providing-a-baseline-for-a-new-metadata-scheme-for-european-naps/).
+This is a repository for the maintenance of the [mobilityDCAT-AP metadata specification](https://napcore.eu/metadata/).
 
-mobilityDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe) for describing mobility datasets and dataset series. It provides an RDF syntax binding for the union of metadata elements defined in the National Access Points across Europe. Its basic use case is to make mobility datasets and dataset series searchable on general data portals, thereby making mobility information better searchable across borders and sectors.
+mobilityDCAT-AP is a mobility-related extension of [DCAT-AP](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe). It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance.
 
 mobilityDCAT-AP is an initiative of the [NAPCORE (National Access Point Coordination Organisation for Europe)](https://napcore.eu/), a formed organisation to coordinate and harmonise more than 30 mobility data platforms across Europe.
 

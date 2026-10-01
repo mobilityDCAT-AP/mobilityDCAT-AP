@@ -287,6 +287,13 @@ var respecConfig = {
         "date":"27 October 2025"
        },
 
+    "DCAT-AP-v3.0.1-section-on-legal-information":{
+        "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/#legal-information",
+        "title":"DCAT-AP v3.0.1 Section on Legal Information",
+        "publisher":"SEMIC",
+        "date":"27 October 2025"
+       },
+		
    
    "DCAT-AP-Implementation-Guidelines":{
         "href":"https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-implementation-guidelines",
