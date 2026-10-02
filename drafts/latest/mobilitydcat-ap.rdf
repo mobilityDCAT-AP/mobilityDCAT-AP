@@ -2345,7 +2345,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
         <rdfs:comment xml:lang="en">A legal document, e.g., a concrete license, giving official permission to do something with a resource.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#6-rights-and-licenses"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenseDocument"/>
@@ -2366,7 +2366,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
         <rdfs:comment xml:lang="en">A spatial region or named place.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#5-geographical-coverage"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#5-geographical-coverage"/>
         <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-spatial"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Location"/>
@@ -2400,7 +2400,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RightsStatement">
         <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#6-rights-and-licenses"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement"/>
@@ -3194,7 +3194,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#DatasetSeries">
         <rdfs:comment xml:lang="en">A collection of datasets that are published separately, but share some characteristics that group them.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-dataset-series"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#7-dataset-series"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#usage-guide-on-dataset-series"/>
@@ -3549,7 +3549,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
         <rdfs:comment xml:lang="en">An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, Datasets, or Dataseries.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec#term_Agent"/>
+        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/#term_Agent"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec"/>
         <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent"/>
@@ -3778,7 +3778,7 @@
     Optionally, a new individual instance of class mobilitydcatap:MobilityDataStandard can be provided. This instance might be used to (a) reference a mobility data standard that is not listed in the controlled vocabulary; or (b) provide additional information on an applied mobility data standard (even if listed in the controlled vocabulary), such as version or schema details. See the Wiki page for a code example with a reference to a mobility data standard (listed in the controlled vocabulary), and detailed information via an individual instance of class mobilitydcatap:MobilityDataStandard.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
         <rdfs:label xml:lang="en">mobility data standard</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#4-mobility-data-standard"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-data-standard"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo"/>
