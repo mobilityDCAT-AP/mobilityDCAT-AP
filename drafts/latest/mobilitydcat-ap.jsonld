@@ -290,7 +290,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument"
   }, {
@@ -318,7 +318,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Linguisticsystem"
   }, {
-    "@id" : "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Linguisticsystemt"
+    "@id" : "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Linguisticsystem"
   }, {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LinguisticSystem"
   } ],
@@ -414,7 +414,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-license-document"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement"
   }, {
@@ -610,7 +610,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/description"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-language"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects"
   }, {
@@ -898,7 +898,7 @@
     "@value" : " For Catalogue, this property refers to the license under which the Catalogue can be used or reused.\r\n\r\n    For Distribution, it refers to the license under which the distribution is made available. This should be a reference to a concrete (standard) license.\r\n    A controlled vocabulary is provided."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"
   }, {
     "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license"
   } ],
@@ -936,7 +936,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/modified"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-creation-date"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-creation-date"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-modification-date"
   } ],
@@ -976,7 +976,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/publisher"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher"
   }, {
@@ -1040,7 +1040,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/rights"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-license"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/"
   } ],
@@ -1224,7 +1224,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://purl.org/dc/terms/title"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-language"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects"
   } ],
@@ -1560,7 +1560,7 @@
     "@value" : "A description following the VCARD-RDF specification, e.g. to provide telephone number and e-mail address for a contact point.\r\n    This class is the parent class for the four explicit types of vCards (vcard:Individual, vcard:Organization, vcard:Location, vcard:Group).\r\n    The contact point might be populated with the same information as for an agent, see class foaf:Agent. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.\r\n    When providing contact information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 13. Privacy and security considerations.\r\n    For this entity the following properties are defined: \"address (vcard:hasAddress)\", \"affiliation(vcard:organization-name)\", \"email(vcard:hasEmail)\", \"name (vcard:fn)\", \"phone (vcard:hasTelephone)\", \"URL (vcard:hasURL)\"."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-agent"
   }, {
@@ -2381,7 +2381,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://www.w3.org/ns/dcat#contactPoint"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher"
   }, {
@@ -3193,7 +3193,7 @@
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#agent-roles"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent"
   }, {
@@ -3262,7 +3262,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://xmlns.com/foaf/spec/#term_firstName"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
@@ -3475,7 +3475,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://xmlns.com/foaf/spec/#term_surname"
   }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
@@ -3708,7 +3708,7 @@
     "@id" : "_:genid6"
   } ],
   "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/mobilityDCAT-AP_uml-diagramm_230921.png"
+    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete.jpg"
   } ]
 }, {
   "@id" : "https://w3id.org/mobilitydcat-ap#Assessment",
@@ -3995,8 +3995,6 @@
     "@id" : "https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-intended-information-service"
-  }, {
-    "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service"
   }, {
     "@id" : "https://w3id.org/mobilitydcat-ap#intendedInformationService"
   } ],
