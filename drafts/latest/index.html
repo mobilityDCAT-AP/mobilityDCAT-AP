@@ -1083,7 +1083,7 @@ The serialisation files are available in the releases subfolder of the <a href="
 
 <p>The technical conformance of the data exchange to mobilityDCAT-AP can be verified using the provided SHACL shapes. SHACL ([[SHACL]]) is a W3C Recommendation for expressing constraints on RDF knowledge graphs. The shapes validate whether an RDF representation of a mobilityDCAT-AP catalogue conforms to the specification. As mobilityDCAT-AP-conformant data can be transformed into RDF, the shapes can be applied across different data exchange contexts.</p>
 
-<p>Every constraint in this specification that can be expressed in SHACL is provided as a shape, so that a mobilityDCAT-AP catalogue in RDF can be checked for technical conformance. The shapes extend the DCAT-AP 3.0.1 SHACL shapes: DCAT-AP's constraints are reused through <code>owl:imports</code>, and mobilityDCAT-AP adds only the constraints that differ from DCAT-AP. All files are available in <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/tree/gh-pages/releases/3.0.0/shacl">this GitHub folder.</a></p>
+<p>Every constraint in this specification that can be expressed in SHACL is provided as a shape, so that a mobilityDCAT-AP catalogue in RDF can be checked for technical conformance. The shapes extend the DCAT-AP 3.0.1 SHACL shapes: DCAT-AP's constraints are reused through <code>owl:imports</code>, and mobilityDCAT-AP adds only the constraints that differ from DCAT-AP. All files are linked from the table below.</p>
 
 <h2>Rationale: extend DCAT-AP, do not re-encode it</h2>
 
@@ -1106,27 +1106,27 @@ The serialisation files are available in the releases subfolder of the <a href="
   </thead>
   <tbody>
     <tr>
-      <td><code>shapes.ttl</code></td>
+      <td><a href="./shaclShapes/shapes.ttl"><code>shapes.ttl</code></a></td>
       <td>Whether required properties are present, how many times they may occur, and what kind of value they take.</td>
     </tr>
     <tr>
-      <td><code>ranges.ttl</code></td>
+      <td><a href="./shaclShapes/ranges.ttl"><code>ranges.ttl</code></a></td>
       <td>What class the value of a property belongs to.</td>
     </tr>
     <tr>
-      <td><code>mdr-vocabularies.ttl</code></td>
+      <td><a href="./shaclShapes/mdr-vocabularies.ttl"><code>mdr-vocabularies.ttl</code></a></td>
       <td>Whether a value comes from the controlled vocabulary required for that property (<a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>).</td>
     </tr>
     <tr>
-      <td><code>deprecated-uris.ttl</code></td>
+      <td><a href="./shaclShapes/deprecated-uris.ttl"><code>deprecated-uris.ttl</code></a></td>
       <td>Whether a property deprecated in v3.0.0 is being used (<a class="no-sectionRef" href="#properties-deprecated"></a>); reported as a warning.</td>
     </tr>
     <tr>
-      <td><code>imports.ttl</code></td>
+      <td><a href="./shaclShapes/imports.ttl"><code>imports.ttl</code></a></td>
       <td>Loads the base vocabularies, including the DCAT-AP 3.0.1 shapes.</td>
     </tr>
     <tr>
-      <td><code>mdr-imports.ttl</code></td>
+      <td><a href="./shaclShapes/mdr-imports.ttl"><code>mdr-imports.ttl</code></a></td>
       <td>Loads the controlled vocabularies used in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>.</td>
     </tr>
   </tbody>
@@ -1461,7 +1461,7 @@ These classes have been already defined in [[DCAT-AP-v3.0.1]] or [[GeoDCAT-AP-v3
   <li>text at the beginning of the properties section was leading to a wrong directory with examples, removed (examples are now published under Appendix D)</li>
   <li>several typos corrected</li>
 </ul></li>
-<li><a href="./shaclShapes/mobilitydcat-ap_shacl_shapes.ttl">SHACL file</a> updated:</li>
+<li><a href="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.0.1/mobilitydcat-ap_shacl_shapes.ttl">SHACL file</a> updated:</li>
   <li><ul>
   <li>validations for the controlled vocabularies added (so that the user does not have to add such specifications to their metadata)</li>
   <li>all constraints (Mandatory, Recommended, Optional) added (previously only the Mandatory ones were covered)</li>
