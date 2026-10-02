@@ -20,7 +20,6 @@
   owl:imports <https://www.w3.org/ns/oa.ttl> ;
   owl:imports <https://www.w3.org/2011/content.rdf> ;
   owl:imports <http://www.w3.org/2006/time.ttl> ;
-  owl:imports <https://schema.org/version/30.0/schemaorg-current-https.ttl> ;
   owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;
   owl:imports <http://www.w3.org/ns/prov-o.ttl> ;
   # DCAT-AP's own deprecateduris.ttl, pulls in the upstream (PeriodOfTime,
