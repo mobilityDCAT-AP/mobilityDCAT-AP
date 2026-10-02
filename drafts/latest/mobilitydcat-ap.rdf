@@ -61,7 +61,7 @@
         <skos:altLabel xml:lang="en">mobilityDCAT-AP - Version 3.0.0: A mobility extension for the DCAT application profile for data portals in Europe</skos:altLabel>
         <adms:last rdf:resource="https://w3id.org/mobilitydcat-ap#"/>
         <adms:prev rdf:resource="https://w3id.org/mobilitydcat-ap/releases/1.1.0"/>
-        <foaf:depiction rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/mobilityDCAT-AP_uml-diagramm_230921.png"/>
+        <foaf:depiction rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete.jpg"/>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
@@ -2346,7 +2346,7 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
         <rdfs:comment xml:lang="en">A legal document, e.g., a concrete license, giving official permission to do something with a resource.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenseDocument"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument"/>
@@ -2360,7 +2360,7 @@
         <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.
     This specification does not impose any additional requirements to properties for this entity.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Linguisticsystem"/>
-        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Linguisticsystemt"/>
+        <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Linguisticsystem"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LinguisticSystem"/>
         <vs:term_status>stable</vs:term_status>
     </rdf:Description>
@@ -2401,7 +2401,7 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/RightsStatement">
         <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-license-document"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#RightsStatement"/>
@@ -2500,7 +2500,7 @@
     This property can be repeated for parallel language versions of the information - see 12. Accessibility and Multilingual Aspects.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/description"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-language"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
@@ -2644,7 +2644,7 @@
 
     For Distribution, it refers to the license under which the distribution is made available. This should be a reference to a concrete (standard) license.
     A controlled vocabulary is provided.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"/>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Catalogue and Distribution.</skos:scopeNote>
@@ -2670,7 +2670,7 @@
     For Distribution, it contains the most recent date on which the Distribution was changed or modified. 
     There is the same property dct:modified under the Dataset level. Under the distribution level, this property describes temporal changes in the characteristics of a distribution, e.g., a new data format or similar.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/modified"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-creation-date"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-creation-date"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-modification-date"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue Record; and it is an optional property to be used for Catalogue, Dataset, Dataset Series, and Distribution.</skos:scopeNote>
@@ -2700,7 +2700,7 @@
     The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.</rdfs:comment>
         <rdfs:label xml:lang="en">publisher</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/publisher"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-contact-point"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher"/>
@@ -2726,7 +2726,7 @@
     A concrete (standard) license can be referred via the recommended property dct:license.
     The obligation of this property is raised to “mandatory”, compared to DCAT-AP v3.0.0.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/rights"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-license"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Distribution.</skos:scopeNote>
@@ -2825,7 +2825,7 @@
     For Mobility Data Standard, this property contains a name given to the mobility data standard.
     This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/title"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language"/>
+        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-language"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue, Dataset, Dataset Series, and Concept Scheme; and it is an optional property to be used for Distribution and Mobility Data Standard.</skos:scopeNote>
@@ -2955,7 +2955,7 @@
     The contact point might be populated with the same information as for an agent, see class foaf:Agent. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
     When providing contact information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 13. Privacy and security considerations.
     For this entity the following properties are defined: &quot;address (vcard:hasAddress)&quot;, &quot;affiliation(vcard:organization-name)&quot;, &quot;email(vcard:hasEmail)&quot;, &quot;name (vcard:fn)&quot;, &quot;phone (vcard:hasTelephone)&quot;, &quot;URL (vcard:hasURL)&quot;.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-agent"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Kind"/>
@@ -3257,7 +3257,7 @@
     When providing contact information, data publishers SHOULD prioritize organizational information over personal details.
     The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 13. Privacy and security considerations.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/dcat#contactPoint"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec"/>
         <vs:term_status>stable</vs:term_status>
@@ -3551,7 +3551,7 @@
         <rdfs:comment xml:lang="en">An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, Datasets, or Dataseries.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec#term_Agent"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#agent-roles"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent"/>
         <rdfs:seeAlso rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent"/>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person"/>
@@ -3580,7 +3580,7 @@
         <rdfs:comment xml:lang="en">The first name of the agent. To be used if the agent is of type person, see 11. Agent Types, Agent Roles and Contact Information.</rdfs:comment>
         <rdfs:label xml:lang="en">first name</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/#term_firstName"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent.</skos:scopeNote>
     </rdf:Description>
@@ -3656,7 +3656,7 @@
         <rdfs:comment xml:lang="en">The surname of the agent. To be used if the agent is of type person, see 11. Agent Types, Agent Roles and Contact Information.</rdfs:comment>
         <rdfs:label xml:lang="en">surname</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/#term_surname"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Agent.</skos:scopeNote>
     </rdf:Description>
@@ -3764,7 +3764,6 @@
         <rdfs:label xml:lang="en">intended information service</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng"/>
         <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-intended-information-service"/>
-        <rdfs:seeAlso rdf:resource="https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/mobilitydcat-ap#intendedInformationService"/>
         <vs:term_status>stable</vs:term_status>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Dataset.</skos:scopeNote>
