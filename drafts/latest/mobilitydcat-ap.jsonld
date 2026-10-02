@@ -288,7 +288,7 @@
     "@value" : "A legal document, e.g., a concrete license, giving official permission to do something with a resource."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#6-rights-and-licenses"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence"
   }, {
@@ -336,7 +336,7 @@
     "@value" : "A spatial region or named place."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#5-geographical-coverage"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#5-geographical-coverage"
   }, {
     "@id" : "https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used"
   }, {
@@ -412,7 +412,7 @@
     "@value" : "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#6-rights-and-licenses"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document"
   }, {
@@ -2237,7 +2237,7 @@
     "@value" : "A collection of datasets that are published separately, but share some characteristics that group them."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-dataset-series"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#7-dataset-series"
   }, {
     "@id" : "https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries"
   }, {
@@ -3189,7 +3189,7 @@
     "@value" : "An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, Datasets, or Dataseries."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://xmlns.com/foaf/spec#term_Agent"
+    "@id" : "http://xmlns.com/foaf/spec/#term_Agent"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec"
   }, {
@@ -4029,7 +4029,7 @@
     "@value" : "mobility data standard"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard"
+    "@id" : "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#4-mobility-data-standard"
   }, {
     "@id" : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-data-standard"
   }, {
