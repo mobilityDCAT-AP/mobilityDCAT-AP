@@ -116,7 +116,7 @@ mobilitydcatap: a voaf:Vocabulary,
       adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
       dcat:downloadURL <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> ;
       dcat:mediaType "text/html"^^dct:IMT ] ;
-      foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/mobilityDCAT-AP_uml-diagramm_230921.png> .
+      foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/figures/Fig4_UMLdiagram_mobilityDCAT-AP_v3_complete.jpg> .
 
 
 #################################################################
@@ -243,8 +243,8 @@ dct:LicenseDocument rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LicenseDocument> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#LicenseDocument> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#LicenseDocument> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license> ,
-                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence> ,
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#6-rights-and-licenses> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Location
 dct:Location rdf:type owl:Class ;
@@ -262,7 +262,7 @@ dct:Location rdf:type owl:Class ;
                  <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Location> ,
                  <https://joinup.ec.europa.eu/release/how-should-dctspatial-and-dctlocation-be-used> ,
                  <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-spatial> ,
-                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#5-geographical-coverage> .
+                 <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#5-geographical-coverage> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#PeriodOfTime
 dct:PeriodOfTime rdf:type owl:Class ;
@@ -286,8 +286,8 @@ dct:RightsStatement rdf:type owl:Class ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#RightsStatement> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Rightsstatement> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Rightsstatement> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-license-document> ,
-                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-rights-and-licenses> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-licence-document> ,
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#6-rights-and-licenses> .
 
 ### https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard
 dct:Standard rdf:type owl:Class ;
@@ -377,7 +377,7 @@ dcat:DatasetSeries rdf:type owl:Class ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#DatasetSeries> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#DatasetSeries> ,
-                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#6-dataset-series> ,
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#7-dataset-series> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#usage-guide-on-dataset-series> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.1/#example-dataset-series> .
 
@@ -393,7 +393,7 @@ dcat:Distribution rdf:type owl:Class ;
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Distribution> .
 
 
-### http://xmlns.com/foaf/spec#term_Agent
+### http://xmlns.com/foaf/spec/#term_Agent
 foaf:Agent rdf:type owl:Class ;
     rdfs:comment """An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue Records, Datasets, or Dataseries."""@en ;
     skos:scopeNote """According to [FOAF], an Agent may be of a type of a person (via sub-class foaf:Person), an organisation (via sub-class foaf:Organization), or a group (via sub-class foaf:Group).
@@ -406,9 +406,9 @@ foaf:Agent rdf:type owl:Class ;
     For this entity the following properties are defined: address, affiliation, email, first name, name, phone, surname, type, URL."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
-    rdfs:seeAlso <http://xmlns.com/foaf/spec#term_Agent> ,
+    rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_Agent> ,
                 <https://www.w3.org/TR/vocab-org/> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html#agent-roles> ,
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information> ,
                 <https://www.w3.org/TR/vocab-dcat-3/#Class:Organization_Person> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Agent> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Agent> ,
@@ -477,7 +477,7 @@ dct:LinguisticSystem rdf:type owl:Class ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LinguisticSystem> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Linguisticsystem> ,
-                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Linguisticsystemt> .
+                <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Linguisticsystem> .
 
 ### https://www.w3.org/TR/vcard-rdf/#d4e1819
 vcard:Kind rdf:type owl:Class ;
@@ -496,7 +496,7 @@ vcard:Kind rdf:type owl:Class ;
                 <https://www.w3.org/TR/vcard-rdf/#d4e1865> ,
                 <https://www.w3.org/TR/vcard-rdf/#d4e1667> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#class-agent> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> ,
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec> .
 
 ### https://www.w3.org/TR/rdf11-schema/#ch_literal
@@ -692,7 +692,7 @@ dct:publisher a rdf:Property,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-publisher> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-rights-holder> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-contact-point> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information> .
 
 
 ###  http://purl.org/dc/terms/source
@@ -899,7 +899,6 @@ mobilitydcatap:intendedInformationService a rdf:Property,
     dcam:rangeIncludes skos:Concept ;		
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#intendedInformationService> ,
                 <https://eur-lex.europa.eu/eli/reg_del/2024/490/oj/eng> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/index.html#vocab-information-service> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-intended-information-service> .
  		   
 ###  http://www.w3.org/ns/dqv#hasQualityAnnotation
@@ -937,7 +936,7 @@ mobilitydcatap:mobilityDataStandard a rdf:Property,
     rdfs:seeAlso <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> ,
                 <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-mobility-data-standard> ,
-                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-Metadata-elements#4-mobility-data-standard> .
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#4-mobility-data-standard> .
 
 		   
 ###  https://w3id.org/mobilitydcat-ap#applicationLayerProtocol
@@ -1390,7 +1389,7 @@ foaf:firstName rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes foaf:Agent ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_firstName> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information> .
 
 		   
 ### http://xmlns.com/foaf/spec/#term_surname
@@ -1403,7 +1402,7 @@ foaf:surname rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes foaf:Agent ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_surname> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information> .
 
 		   
 ###   http://purl.org/dc/terms/identifier
@@ -1576,7 +1575,7 @@ dct:description a owl:DatatypeProperty ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/description> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-language> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/> .
 
 ### http://purl.org/dc/terms/format 
@@ -1680,7 +1679,7 @@ dct:license a owl:ObjectProperty ;
                         dcat:Distribution ;
     dcam:rangeIncludes dct:LicenseDocument ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-license> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#vocab-standard-licence> .
 
 ### http://purl.org/dc/terms/modified
 dct:modified a owl:DatatypeProperty ;
@@ -1707,7 +1706,7 @@ dct:modified a owl:DatatypeProperty ;
                         dcat:Distribution ;
     dcam:rangeIncludes rdfs:Literal ;  
     rdfs:seeAlso <http://purl.org/dc/terms/modified> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-creation-date> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-creation-date> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-modification-date> .
 
 ### http://purl.org/dc/terms/relation
@@ -1733,7 +1732,7 @@ dct:rights a owl:ObjectProperty ;
     dcam:domainIncludes dcat:Distribution ;
     dcam:rangeIncludes dct:RightsStatement ;  
     rdfs:seeAlso <http://purl.org/dc/terms/rights> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-license> ,
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-licence> ,
                 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/> .
 
 
@@ -1791,7 +1790,7 @@ dct:title a owl:DatatypeProperty ;
     dcam:rangeIncludes rdfs:Literal ;
     rdfs:seeAlso <http://purl.org/dc/terms/title> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/catalogue-record-language> .
+                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#catalogue-record-language> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version
 dcat:version a owl:DatatypeProperty ;
@@ -2026,7 +2025,7 @@ dcat:contactPoint a owl:ObjectProperty ;
     rdfs:seeAlso <http://www.w3.org/ns/dcat#contactPoint> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#privsec> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#dataset-publisher> ,
-                <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#agent-roles> .
+                <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-3:-Extra-explanations-on-specific-classes-and-properties#8-organisational-and-personal-information> .
 
 ### https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/#referenceSystem
 geodcatap:referenceSystem a owl:ObjectProperty ;
