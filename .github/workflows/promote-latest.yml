@@ -1,0 +1,100 @@
+name: Promote release to releases/latest
+run-name: Promote ${{ inputs.version }} to releases/latest
+
+# Promotes a previously published release to releases/latest/;
+# https://w3id.org/mobilitydcat-ap/releases/ points there.
+# Does two things, after checking that releases/X.Y.Z/ exists on gh-pages:
+#   1. Updates LATEST_RELEASE on main — so future hotfixes to this release
+#      branch will automatically update releases/latest/.
+#   2. Copies the already-built releases/X.Y.Z/ to releases/latest/ on gh-pages
+#      immediately, without waiting for a re-build.
+#
+# Both checks run before anything is written, so a mistyped or unpublished
+# version changes nothing. Running it again for the current latest version is
+# harmless: unchanged files are not committed.
+#
+# Usage: Actions → "Promote release to releases/latest" → Run workflow → enter version (e.g. 3.0.0)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to promote (e.g. 3.0.0)'
+        required: true
+        type: string
+
+jobs:
+  promote:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    # Same group as a release build publishing releases/latest, so the two
+    # never write that directory at the same time
+    concurrency:
+      group: gh-pages-releases/latest
+      cancel-in-progress: false
+    env:
+      VERSION: ${{ inputs.version }}
+
+    steps:
+      - name: Validate version
+        run: |
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "ERROR: '$VERSION' is not a release version number, expected X.Y.Z." >&2
+            exit 1
+          fi
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: gh-pages-out
+
+      - name: Check releases/${{ inputs.version }} exists on gh-pages
+        working-directory: gh-pages-out
+        run: |
+          if [ ! -d "releases/$VERSION" ]; then
+            echo "ERROR: releases/$VERSION does not exist on gh-pages; publish the release first." >&2
+            exit 1
+          fi
+
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: main-out
+
+      - name: Write version to LATEST_RELEASE and push to main
+        working-directory: main-out
+        run: |
+          git config user.name  "github-actions"
+          git config user.email "github-actions@github.com"
+          echo "$VERSION" > LATEST_RELEASE
+          git add LATEST_RELEASE
+          if git diff --cached --quiet; then
+            echo "LATEST_RELEASE already reads $VERSION"
+          else
+            git commit -m "chore: mark $VERSION as latest release"
+            git push
+          fi
+
+      - name: Copy releases/${{ inputs.version }} to releases/latest
+        working-directory: gh-pages-out
+        run: |
+          git config user.name  "github-actions"
+          git config user.email "github-actions@github.com"
+          rm -rf releases/latest
+          cp -r "releases/$VERSION/." releases/latest/
+          git add -A
+          git commit -m "chore: promote releases/$VERSION to releases/latest" || echo "releases/latest already matches releases/$VERSION"
+          # Another workflow may have pushed to gh-pages since the checkout, for
+          # example publish and publish-latest in the same release run. They
+          # write different directories, so a rebase onto the new tip is clean.
+          for attempt in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "gh-pages moved since checkout; rebasing (attempt $attempt)"
+            git fetch origin gh-pages
+            git rebase origin/gh-pages
+          done
+          echo "ERROR: could not push to gh-pages after 5 attempts." >&2
+          exit 1

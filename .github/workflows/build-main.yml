@@ -1,0 +1,36 @@
+name: Build and publish — main (drafts/latest)
+run-name: Publish drafts/latest
+
+# Triggered on every push to main (= the living draft) or manually.
+# Publishes to gh-pages under drafts/latest/.
+
+on:
+  push:
+    branches: [main]
+    paths:                      # only run when these change
+      - 'src/**'                # source files
+      - 'package.json'          # Node (npm) packages
+      - 'package-lock.json'
+      - 'pyproject.toml'        # Python packages
+      - 'uv.lock'
+      - '.python-version'       # Python version
+      - '.mise.toml'            # tool versions and the build tasks CI runs
+      - '.github/workflows/build-main.yml'
+      - '.github/workflows/reusable-build.yml'
+      - '.github/workflows/reusable-publish-gh-pages.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      draft_label: the working draft
+
+  publish:
+    needs: build
+    permissions:
+      contents: write
+    uses: ./.github/workflows/reusable-publish-gh-pages.yml
+    with:
+      artifact_name: ${{ needs.build.outputs.artifact_name }}
+      destination_dir: drafts/latest

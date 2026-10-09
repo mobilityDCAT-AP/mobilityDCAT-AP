@@ -1,0 +1,62 @@
+name: Reusable — publish to gh-pages
+
+on:
+  workflow_call:
+    inputs:
+      artifact_name:
+        description: 'Name of the dist artifact to publish (use needs.build.outputs.artifact_name)'
+        type: string
+        required: true
+      destination_dir:
+        description: 'Target directory on gh-pages (e.g. drafts/latest, releases/1.0.0)'
+        type: string
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    # One writer per directory at a time; a newer publish of the same
+    # directory replaces a pending older one. Different directories run in
+    # parallel and are reconciled by the push retry below.
+    concurrency:
+      group: gh-pages-${{ inputs.destination_dir }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: dist
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: gh-pages-out
+
+      - name: Publish ${{ inputs.destination_dir }}
+        working-directory: gh-pages-out
+        env:
+          DEST: ${{ inputs.destination_dir }}
+        run: |
+          git config user.name  "github-actions"
+          git config user.email "github-actions@github.com"
+          rm -rf "$DEST"
+          mkdir -p "$DEST"
+          cp -r ../dist/. "$DEST/"
+          git add -A
+          git commit -m "chore: publish $DEST" || echo "Nothing to publish"
+          # Another workflow may have pushed to gh-pages since the checkout, for
+          # example publish and publish-latest in the same release run. They
+          # write different directories, so a rebase onto the new tip is clean.
+          for attempt in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "gh-pages moved since checkout; rebasing (attempt $attempt)"
+            git fetch origin gh-pages
+            git rebase origin/gh-pages
+          done
+          echo "ERROR: could not push to gh-pages after 5 attempts." >&2
+          exit 1

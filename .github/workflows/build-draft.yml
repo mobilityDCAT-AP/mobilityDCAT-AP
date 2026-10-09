@@ -1,0 +1,53 @@
+name: Build and publish — draft/* tag (drafts/X.Y.Z-draft.N)
+run-name: Publish snapshot ${{ github.ref_name }}
+
+# Triggered on push of any draft/* tag or manually.
+# Tag name convention: draft/X.Y.Z-draft.N — X.Y.Z is the version the draft
+# works towards, N is the review round, counting from 1. An optional second
+# number marks a correction within the same round.
+# Examples: draft/3.0.0-draft.1, draft/3.0.0-draft.1.1
+#
+# Publishes to gh-pages under:
+#   drafts/3.0.0-draft.1/
+#
+# Note: drafts/latest/ is managed by build-main.yml (push to main).
+# This workflow handles named, point-in-time draft snapshots.
+
+on:
+  push:
+    tags: ['draft/*']
+  workflow_dispatch:
+
+jobs:
+  extract-version:
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.extract.outputs.version }}
+    steps:
+      - name: Extract and validate version from tag
+        id: extract
+        run: |
+          VERSION="${GITHUB_REF_NAME#draft/}"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+-draft\.[0-9]+(\.[0-9]+)?$ ]]; then
+            echo "ERROR: '$VERSION' is not a valid draft version number."
+            echo "Expected a draft/X.Y.Z-draft.N tag, for example draft/3.0.0-draft.1,"
+            echo "optionally with a correction number: draft/3.0.0-draft.1.1."
+            echo "This workflow must be triggered from a draft/* tag, not from a branch."
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+  build:
+    needs: extract-version
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      draft_label: draft snapshot ${{ needs.extract-version.outputs.version }}
+
+  publish:
+    needs: [extract-version, build]
+    permissions:
+      contents: write
+    uses: ./.github/workflows/reusable-publish-gh-pages.yml
+    with:
+      artifact_name: ${{ needs.build.outputs.artifact_name }}
+      destination_dir: drafts/${{ needs.extract-version.outputs.version }}
