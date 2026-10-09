@@ -1,0 +1,6 @@
+# Line breaks inside RDF literals are content, not formatting. Checking these
+# files out with CRLF would change the data and make the generated RDF/XML and
+# JSON-LD differ between Windows and CI.
+*.ttl text eol=lf
+*.rdf text eol=lf
+*.jsonld text eol=lf

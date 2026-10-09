@@ -1,0 +1,8 @@
+{
+  "name": "mobilitydcat-ap",
+  "private": true,
+  "devDependencies": {
+    "html-validate": "10.13.1",
+    "respec": "36.0.0"
+  }
+}
