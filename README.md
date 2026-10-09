@@ -21,8 +21,9 @@ Guidelines for the implementation of the mobilityDCAT-AP specification are avail
 
 ## Structure of the repository
 
-- [Releases](./releases/): mobilityDCAT-AP releases (latest: v1.1.0); each release might have different distributions.
-- [Working Drafts](./drafts/): Working drafts including revisions to the latest mobilityDCAT-AP release.
+- [Releases](https://w3id.org/mobilitydcat-ap/releases/): mobilityDCAT-AP releases (latest: v1.1.0); each release might have different distributions.
+- [Working Drafts](https://w3id.org/mobilitydcat-ap/drafts/latest/): Working drafts including revisions to the latest mobilityDCAT-AP release.
+- [Sources](./src/): the sources of the working draft. How they are built and published is described in [REPOSITORY.md](./REPOSITORY.md).
 
 ## Licence
 Copyright © 2023-2026 NAPCORE. All material in this repository is published under the licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned.
