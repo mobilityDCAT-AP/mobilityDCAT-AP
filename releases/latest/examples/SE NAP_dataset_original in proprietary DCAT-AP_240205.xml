@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:ext="http://trafficdata.se/dcatext/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <dcat:Dataset rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa">
+    <dct:title>Traffic signs expressing traffic regulations and identifying dangers, Speed limits</dct:title>
+    <dct:identifier>ec459578-a11f-4728-acaa-16b08ae45cfa</dct:identifier>
+    <dcat:theme rdf:resource="http://trafficdata.se/definitions/category/traffic_signs_expressing_traffic_regulations_and_identifying_dangers/speed_limits"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/mdr/authority/frequency/UPDATE_CONT"/>
+    <ext:networkcoverage rdf:resource="http://trafficdata.se/definitions/networkcoverage/motorways"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-09T11:49:47.718613</dct:issued>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N81652eb8d2ea499d817fdab36534e1d6">
+        <vcard:hasEmail>datex@trafikverket</vcard:hasEmail>
+        <vcard:fn>Trafikverket</vcard:fn>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Organization rdf:about="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b">
+        <foaf:homepage>www.trafikverket.se</foaf:homepage>
+        <foaf:name>Trafikverket</foaf:name>
+        <foaf:mbox>datex@trafikverket.se</foaf:mbox>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TRAN"/>
+    <ext:networkcoverage rdf:resource="http://trafficdata.se/definitions/networkcoverage/arterial_roads"/>
+    <dct:conformsTo rdf:resource=""/>
+    <dct:spatial rdf:resource="http://sws.geonames.org/2661886"/>
+    <dcat:keyword>Datex</dcat:keyword>
+    <dcat:keyword>Act B</dcat:keyword>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-04T09:48:27.432387</dct:modified>
+    <dct:description>Traffic signs expressing traffic regulations and identifying dangers from the Swedish Transport Administration. Datex</dct:description>
+    <dcat:keyword>Speed limits</dcat:keyword>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d">
+        <dct:title>Datex</dct:title>
+        <dcat:accessURL>http://www.trafikverket.se/tjanster/Oppna_data/trafikinformation-i-realtid/Trafikinformation-vag-i-realtid/Sa-har-far-du-tillgang-till-data-for-trafikinformation-i-realtid/</dcat:accessURL>
+        <dct:license rdf:resource="http://www.opendefinition.org/licenses/cc-zero"/>
+        <dct:Format>application/xml</dct:Format>
+        <dct:description>Datex is the Swedish Transport Administration resource for Traffic signs expressing traffic regulations and identifying dangers</dct:description>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:Dataset>
+</rdf:RDF>
