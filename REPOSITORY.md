@@ -17,7 +17,7 @@ The ontology, `src/mobilitydcat-ap.ttl`, and the worked examples in
 `src/examples/` are written in Turtle, which is the source format. The RDF/XML
 and JSON-LD serialisations are produced by the build and never committed.
 
-The SHACL shapes in `src/shaclShapes/` are the validation constraints of the
+The SHACL shapes in `src/shacl/` are the validation constraints of the
 profile. They are also written in Turtle, and the build publishes them as
 RDF/XML and JSON-LD the same way. `mise run validate-examples` validates the
 examples against them. It is not part of `mise run check` for now, because of
@@ -35,7 +35,7 @@ src/
 ├── tables/                    # HTML property tables included by index.html
 ├── examples/                  # Worked examples
 ├── figures/                   # UML diagrams and logo
-├── shaclShapes/               # SHACL validation constraints
+├── shacl/                     # SHACL validation constraints
 ├── migrationGuide/            # Migration guide from 1.1.0 (spreadsheet)
 ├── js/                        # Custom JavaScript
 ├── scripts/                   # Build scripts (Python)

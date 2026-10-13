@@ -69,7 +69,7 @@ jobs:
         uses: actions/cache@v6
         with:
           path: .cache/shacl
-          key: shacl-imports-${{ hashFiles('src/shaclShapes/*.ttl') }}-${{ steps.month.outputs.month }}
+          key: shacl-imports-${{ hashFiles('src/shacl/*.ttl') }}-${{ steps.month.outputs.month }}
 
       # Reported, not enforced: a failed check does not stop a publish
       - name: Check

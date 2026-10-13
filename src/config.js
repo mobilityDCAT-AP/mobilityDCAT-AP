@@ -31,27 +31,27 @@ var respecConfig = {
     },
     {
       label: "SHACL shapes (Turtle)",
-      uri: "./shaclShapes/shapes.ttl",
+      uri: "./shacl/shapes.ttl",
     },
     {
       label: "SHACL range constraints (Turtle)",
-      uri: "./shaclShapes/ranges.ttl",
+      uri: "./shacl/ranges.ttl",
     },
     {
       label: "SHACL controlled-vocabulary constraints (Turtle)",
-      uri: "./shaclShapes/mdr-vocabularies.ttl",
+      uri: "./shacl/mdr-vocabularies.ttl",
     },
     {
       label: "SHACL deprecated URIs (Turtle)",
-      uri: "./shaclShapes/deprecated-uris.ttl",
+      uri: "./shacl/deprecated-uris.ttl",
     },
     {
       label: "SHACL imports (Turtle)",
-      uri: "./shaclShapes/imports.ttl",
+      uri: "./shacl/imports.ttl",
     },
     {
       label: "SHACL codelist imports (Turtle)",
-      uri: "./shaclShapes/mdr-imports.ttl",
+      uri: "./shacl/mdr-imports.ttl",
     }
     ],
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",

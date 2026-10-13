@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate the examples against the mobilityDCAT-AP SHACL shapes.
 
-The shapes are the four constraint files in src/shaclShapes/. What they
+The shapes are the four constraint files in src/shacl/. What they
 owl:imports is fetched once and kept in .cache/shacl/, so later runs work
 offline:
 
@@ -39,7 +39,7 @@ from pyshacl import validate
 from rdflib import OWL, RDF, Graph, Namespace
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SHAPES_DIR = REPO_ROOT / "src" / "shaclShapes"
+SHAPES_DIR = REPO_ROOT / "src" / "shacl"
 EXAMPLES_DIR = REPO_ROOT / "src" / "examples"
 CACHE_DIR = REPO_ROOT / ".cache" / "shacl"
 

@@ -22,7 +22,7 @@ def copy_glob(pattern: str, dest: Path) -> None:
 
 
 def main() -> None:
-    for sub in ["examples", "figures", "shaclShapes"]:
+    for sub in ["examples", "figures", "shacl"]:
         (DIST / sub).mkdir(parents=True, exist_ok=True)
 
     copy_glob("mobilitydcat-ap.ttl", DIST)
@@ -31,7 +31,7 @@ def main() -> None:
         if f.is_file():
             shutil.copy2(f, DIST / "examples" / f.name)
 
-    for sub in ["figures", "shaclShapes", "migrationGuide"]:
+    for sub in ["figures", "shacl", "migrationGuide"]:
         src_dir = SRC / sub
         if src_dir.exists():
             shutil.copytree(src_dir, DIST / sub, dirs_exist_ok=True)

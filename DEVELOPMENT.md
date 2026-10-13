@@ -82,7 +82,7 @@ Individual steps:
 
 ```sh
 mise run clean        # empty dist/ (run automatically at the start of mise run build)
-mise run serialise    # convert src/*.ttl, src/examples/*.ttl and src/shaclShapes/*.ttl -> .rdf + .jsonld in dist/
+mise run serialise    # convert src/*.ttl, src/examples/*.ttl and src/shacl/*.ttl -> .rdf + .jsonld in dist/
 mise run build-spec   # copy assets to dist/ and build dist/index.html via ReSpec
 ```
 
@@ -131,7 +131,7 @@ mise run validate-examples -- --offline     # use only the cached imports
 mise run validate-examples -- path/to/file.ttl
 ```
 
-The shapes are the four constraint files in `src/shaclShapes/`. What they
+The shapes are the four constraint files in `src/shacl/`. What they
 `owl:import` is downloaded on the first run (about 8 MB, 20 seconds) into
 `.cache/shacl/` and reused afterwards; `--refresh` downloads it again. The
 controlled vocabularies from `mdr-imports.ttl` go into the data graph, because
@@ -148,7 +148,7 @@ Validation runs without inference: RDFS inference over DCAT 2 makes every
 It is not part of `mise run check` for now, so it does not run in `mise run lint`
 or in CI, because of issues with the validation itself. Run it on demand with
 the commands above. CI still keeps `.cache/shacl/` between runs, under a key that changes each month and
-whenever a file in `src/shaclShapes/` changes.
+whenever a file in `src/shacl/` changes.
 
 ## Live preview
 
@@ -189,7 +189,7 @@ Turtle is the source format for the ontology, the examples and the SHACL shapes.
 | `src/config.js` | ReSpec configuration (version, editors, dates, bibliography) |
 | `src/tables/` | HTML property tables included by `index.html` via `data-include` |
 | `src/examples/` | Worked examples (Turtle) |
-| `src/shaclShapes/` | SHACL validation constraints |
+| `src/shacl/` | SHACL validation constraints |
 | `src/figures/` | UML diagrams |
 | `src/migrationGuide/` | Migration guide from 1.1.0 (spreadsheet), linked from `index.html` |
 | `src/catalog-v001.xml` | Protégé import catalog for editing the ontology; not published |

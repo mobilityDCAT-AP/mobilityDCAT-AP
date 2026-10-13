@@ -141,8 +141,8 @@ def main() -> None:
         serialise(f, dist / "examples")
 
     print("\n== Serialise SHACL shapes ==")
-    for f in sorted((REPO_ROOT / "src" / "shaclShapes").glob("*.ttl")):
-        serialise(f, dist / "shaclShapes")
+    for f in sorted((REPO_ROOT / "src" / "shacl").glob("*.ttl")):
+        serialise(f, dist / "shacl")
 
     print("\nSerialise Done.")
 
