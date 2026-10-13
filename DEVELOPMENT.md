@@ -158,7 +158,12 @@ To use ReSpec's interactive warnings panel in the browser:
 mise run serve        # starts HTTP server on http://localhost:8080
 ```
 
-Open `http://localhost:8080/src/index.html` in a browser. ReSpec runs live and shows a warnings badge at the top — click it to see all issues with locations. Stop with `Ctrl+C`.
+Open `http://localhost:8080/` in a browser. ReSpec runs live and shows a warnings badge at the top — click it to see all issues with locations. Stop with `Ctrl+C`.
+
+The server serves `src/` as the web root. A file missing from `src/` is served
+from `dist/` instead, so after a `mise run build` the links to the generated
+RDF/XML, JSON-LD and N-Triples files work in the preview too; without a build
+they are broken.
 
 The live preview uses the current ReSpec from w3.org, which `src/index.html`
 loads, while `mise run build` uses the version pinned in `package.json`. The two

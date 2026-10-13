@@ -197,12 +197,13 @@ local references. The first failure stops it, except the HTML validation, whose
 validation of the examples is disabled for now, because of issues with the
 validation itself; `mise run validate-examples` still runs it on demand.
 
-`mise run serve` is for editing. It builds nothing; it serves the repository
-files so that ReSpec can render `src/index.html` in the browser. Open
-`http://localhost:8080/src/index.html` and reload after each edit; the badge at
-the top lists ReSpec's warnings. The preview loads the current ReSpec from
-w3.org rather than the pinned version the build uses, so it needs internet
-access and can occasionally differ from the build.
+`mise run serve` is for editing. It builds nothing; it serves `src/` so that
+ReSpec can render `src/index.html` in the browser, and takes the generated
+files from `dist/` if a build has made them. Open `http://localhost:8080/` and
+reload after each edit; the badge at the top lists ReSpec's warnings. The
+preview loads the current ReSpec from w3.org rather than the pinned version the
+build uses, so it needs internet access and can occasionally differ from the
+build.
 
 The individual steps and the expected output of the checks are in
 [`DEVELOPMENT.md`](DEVELOPMENT.md).
