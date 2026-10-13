@@ -68,5 +68,10 @@ description = "Validate src/examples/*.ttl against the SHACL shapes (imports cac
 run = "uv run python src/scripts/validate-examples.py"
 
 [tasks.serve]
-description = "Serve repo over HTTP for live ReSpec preview with interactive warnings"
+description = "Serve src/ over HTTP for live ReSpec preview with interactive warnings"
 run = "uv run python src/scripts/serve.py"
+
+# No build dependency, like check: rebuild with mise run build when needed
+[tasks.serve-dist]
+description = "Serve dist/ over HTTP on port 8081 to view the built spec (requires a prior build)"
+run = "uv run python src/scripts/serve.py --dist"

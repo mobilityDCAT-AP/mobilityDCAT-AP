@@ -169,6 +169,17 @@ The live preview uses the current ReSpec from w3.org, which `src/index.html`
 loads, while `mise run build` uses the version pinned in `package.json`. The two
 can render slightly differently; the build is what gets published.
 
+To see the built spec as it will be published, serve `dist/` instead:
+
+```sh
+mise run build        # serve-dist does not build
+mise run serve-dist   # starts HTTP server on http://localhost:8081
+```
+
+It uses its own port, so it can run next to `mise run serve` for a side by side
+comparison. It serves only `dist/`, without a fallback, and reflects the last
+build: rebuild and reload to see an edit.
+
 ## How it works
 
 | Step | Script | What it does |

@@ -180,6 +180,7 @@ Publishing depends on five things outside the repository files:
 mise run build      # serialise the Turtle and build the ReSpec page into dist/
 mise run lint       # build, then HTML validation and broken reference check
 mise run serve      # static HTTP server on localhost:8080 for a live preview; no build
+mise run serve-dist # static HTTP server on localhost:8081 for the built dist/; no build
 ```
 
 `mise run build` produces what CI publishes. It empties `dist/`, serialises the
@@ -203,7 +204,8 @@ files from `dist/` if a build has made them. Open `http://localhost:8080/` and
 reload after each edit; the badge at the top lists ReSpec's warnings. The
 preview loads the current ReSpec from w3.org rather than the pinned version the
 build uses, so it needs internet access and can occasionally differ from the
-build.
+build. `mise run serve-dist` serves the last build from `dist/` on
+`http://localhost:8081/`, to check what will be published.
 
 The individual steps and the expected output of the checks are in
 [`DEVELOPMENT.md`](DEVELOPMENT.md).
