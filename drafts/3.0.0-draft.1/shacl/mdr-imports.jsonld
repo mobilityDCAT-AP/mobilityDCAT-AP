@@ -1,0 +1,99 @@
+[
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "owl:imports of the controlled vocabularies applied by mobilityDCAT-AP 3.0.0 (spec section 10.2): those created and maintained by mobilityDCAT-AP, and those maintained by external organisations."
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-07-23"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "mobilityDCAT-AP 3.0.0 Applied Controlled-Vocabulary Imports"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "mobilityDCAT-AP applied controlled-vocabulary imports"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/continent"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/country"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/distribution-status"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/file-type"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/frequency"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/licence"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/place"
+      },
+      {
+        "@id": "https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/application-layer-protocol"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/communication-method"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/georeferencing-method"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/intended-information-service"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/network-coverage"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/transport-mode"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "3.0.0"
+      }
+    ]
+  }
+]

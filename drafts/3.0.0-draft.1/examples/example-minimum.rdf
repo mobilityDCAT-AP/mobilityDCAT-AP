@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
+>
+  <dcat:Catalog rdf:about="https://trafficdata.se/catalog">
+    <dct:description xml:lang="en">The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data.</dct:description>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b">
+        <foaf:name xml:lang="sv">Trafikverket</foaf:name>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dct:title xml:lang="en">Trafficdata.se</dct:title>
+    <dcat:record>
+      <dcat:CatalogRecord rdf:about="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits">
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:modified>
+        <foaf:primaryTopic rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"/>
+      </dcat:CatalogRecord>
+    </dcat:record>
+    <foaf:homepage rdf:resource="https://trafficdata.se/"/>
+  </dcat:Catalog>
+  <dcat:Dataset rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa">
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
+    <dct:description xml:lang="en">Traffic signs from the Swedish Transport Administration. Datex II format.</dct:description>
+    <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+    <dct:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dct:title xml:lang="en">Traffic signs expressing traffic regulations and identifying dangers, Speed limits</dct:title>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d">
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+        <dct:rights>
+          <dct:RightsStatement rdf:nodeID="cb0">
+            <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/>
+          </dct:RightsStatement>
+        </dct:rights>
+        <dcat:accessURL rdf:resource="http://www.trafikverket.se/tjanster/x/"/>
+        <mobilitydcatap:mobilityDataStandard rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"/>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"/>
+    <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"/>
+  </dcat:Dataset>
+</rdf:RDF>

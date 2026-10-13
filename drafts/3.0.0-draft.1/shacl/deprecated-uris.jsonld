@@ -1,0 +1,457 @@
+[
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DatasetDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dataset deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "dct:isVersionOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dcat:hasVersion on the related Dataset."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/isVersionOf"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Warning shapes for properties deprecated in mobilityDCAT-AP 3.0.0 (spec Appendix A.2)."
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Deprecated URIs of mobilityDCAT-AP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "3.0.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Catalogue deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Catalog"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "dct:isPartOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dct:hasPart on the parent Catalogue."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/isPartOf"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rights Statement deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://purl.org/dc/terms/RightsStatement"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "rdfs:label on dct:RightsStatement is deprecated in mobilityDCAT-AP 3.0.0; use dct:description."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Catalogue Record deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#CatalogRecord"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "dct:created is deprecated in mobilityDCAT-AP 3.0.0; use dct:issued (#167)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/created"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Quality Annotation deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dqv#QualityAnnotation"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "oa:hasTarget is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dqv:hasQualityAnnotation on the Dataset."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/oa#hasTarget"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Distribution deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "mobilitydcatap:grammar is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#90)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#grammar"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Mobility Data Standard deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757"
+      },
+      {
+        "@id": "_:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "owl:versionInfo is deprecated on Mobility Data Standard; use dcat:version."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#versionInfo"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "mobilitydcatap:schema is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#153)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#schema"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#LicenseDocumentDeprecation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Licence Document deprecated properties (mobilityDCAT-AP 3.0.0)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31"
+      },
+      {
+        "@id": "_:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://purl.org/dc/terms/LicenseDocument"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "dct:identifier on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "rdfs:label on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  }
+]
