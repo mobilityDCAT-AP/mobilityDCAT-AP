@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:Ontology rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0">
+    <owl:imports rdf:resource="http://www.w3.org/2006/time.ttl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns.ttl"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/adms.ttl"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o.ttl"/>
+    <owl:imports rdf:resource="http://xmlns.com/foaf/spec/index.rdf"/>
+    <owl:imports rdf:resource="https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/voc/r5r.ttl"/>
+    <owl:imports rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/deprecateduris.ttl"/>
+    <owl:imports rdf:resource="https://spdx.org/rdf/terms/spdx-ontology.owl.xml"/>
+    <owl:imports rdf:resource="https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl"/>
+    <owl:imports rdf:resource="https://www.w3.org/2011/content.rdf"/>
+    <owl:imports rdf:resource="https://www.w3.org/ns/dcat2.ttl"/>
+    <owl:imports rdf:resource="https://www.w3.org/ns/dqv.ttl"/>
+    <owl:imports rdf:resource="https://www.w3.org/ns/locn.ttl"/>
+    <owl:imports rdf:resource="https://www.w3.org/ns/oa.ttl"/>
+    <owl:imports rdf:resource="https://www.w3.org/ns/org.ttl"/>
+  </owl:Ontology>
+</rdf:RDF>

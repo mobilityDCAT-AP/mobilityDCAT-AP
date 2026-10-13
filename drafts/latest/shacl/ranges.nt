@@ -1,0 +1,250 @@
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/locn#Address> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> <http://www.w3.org/ns/shacl#message> "Address must be a locn:Address instance"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> <http://www.w3.org/ns/shacl#name> "address (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/locn#address> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/org#Organization> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> <http://www.w3.org/ns/shacl#message> "Affiliation must be an org:Organization instance"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> <http://www.w3.org/ns/shacl#name> "affiliation (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/org#memberOf> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_ranges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_ranges> <http://www.w3.org/ns/shacl#name> "Agent (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_ranges> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_ranges> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_ranges> <http://www.w3.org/ns/shacl#targetClass> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape> <http://www.w3.org/ns/shacl#name> "Assessment (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape_assessmentResult_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/mobilitydcat-ap#Assessment> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape_assessmentResult_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/oa#hasBody> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape> <http://www.w3.org/ns/shacl#name> "Catalogue Record (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_publisher_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#CatalogRecord> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#name> "application profile (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/conformsTo> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_publisher_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_publisher_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_publisher_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_publisher_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape> <http://www.w3.org/ns/shacl#name> "Catalogue (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/ns/shacl#description> "Homepage range is foaf:Document in mobilityDCAT-AP (v3 changelog), enforced here as sh:nodeKind sh:IRI since homepages are referenced as bare IRIs, not inline-typed in instance data."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/ns/shacl#message> "Homepage must be an IRI"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/ns/shacl#name> "homepage (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/homepage> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range> <http://www.w3.org/ns/shacl#message> "Catalogue geographical coverage must be a blank node or an IRI (e.g. country code from EU authority table or Geonames)."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/spatial> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape> <http://www.w3.org/ns/shacl#name> "Concept (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape_inScheme_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape_inScheme_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape_inScheme_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape_inScheme_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape_inScheme_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape> <http://www.w3.org/ns/shacl#name> "Dataset Series (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape_mobilityTheme_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#DatasetSeries> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape_mobilityTheme_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape_mobilityTheme_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape_mobilityTheme_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityTheme> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape_mobilityTheme_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#name> "Dataset (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_georeferencingMethod_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_intendedInformationService_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_mobilityTheme_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_networkCoverage_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_rightsHolder_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_spatial_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_transportMode_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#class> <https://w3id.org/mobilitydcat-ap#Assessment> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#assessmentResult> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_georeferencingMethod_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_georeferencingMethod_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_georeferencingMethod_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#georeferencingMethod> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_georeferencingMethod_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/dqv#QualityAnnotation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/dqv#hasQualityAnnotation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_intendedInformationService_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_intendedInformationService_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_intendedInformationService_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#intendedInformationService> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_intendedInformationService_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_mobilityTheme_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_mobilityTheme_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_mobilityTheme_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityTheme> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_mobilityTheme_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_networkCoverage_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_networkCoverage_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_networkCoverage_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#networkCoverage> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_networkCoverage_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> <http://www.w3.org/ns/shacl#description> "Spatial reference system (OGC EPSG register). geoDCAT-AP addition. CV/register membership is checked separately."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> <http://www.w3.org/ns/shacl#name> "reference system (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> <http://www.w3.org/ns/shacl#path> <http://data.europa.eu/930/referenceSystem> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_rightsHolder_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_rightsHolder_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_rightsHolder_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/rightsHolder> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_rightsHolder_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_spatial_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_spatial_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_spatial_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/spatial> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_spatial_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_transportMode_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_transportMode_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_transportMode_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#transportMode> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_transportMode_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/ns/shacl#name> "Distribution (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_applicationLayerProtocol_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_communicationMethod_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_applicationLayerProtocol_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_applicationLayerProtocol_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_applicationLayerProtocol_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#applicationLayerProtocol> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_applicationLayerProtocol_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_communicationMethod_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_communicationMethod_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_communicationMethod_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#communicationMethod> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_communicationMethod_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> <http://www.w3.org/ns/shacl#message> "Mobility data standard must be a CV concept IRI or a mobilitydcatap:MobilityDataStandard instance"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> <http://www.w3.org/ns/shacl#name> "mobility data standard (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> <http://www.w3.org/ns/shacl#or> _:cb0 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range> <http://www.w3.org/ns/shacl#class> <http://purl.org/dc/terms/RightsStatement> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/rights> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/ns/shacl#name> "Kind (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_email_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasTelephone_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasURL_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape> <http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/ns/dcat#contactPoint> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_email_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_email_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_email_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2006/vcard/ns#hasEmail> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_email_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/2006/vcard/ns#Address> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2006/vcard/ns#hasAddress> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasTelephone_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasTelephone_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasTelephone_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2006/vcard/ns#hasTelephone> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasTelephone_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasURL_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasURL_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasURL_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2006/vcard/ns#hasURL> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasURL_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape> <http://www.w3.org/ns/shacl#name> "Location (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape_inScheme_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/dc/terms/Location> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape_inScheme_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape_inScheme_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape_inScheme_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape_inScheme_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape> <http://www.w3.org/ns/shacl#name> "Mobility Data Standard (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/mobilitydcat-ap#MobilityDataStandard> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#name> "conforms to (range)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/conformsTo> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape> <http://www.w3.org/ns/shacl#name> "Quality Annotation (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape_hasBody_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dqv#QualityAnnotation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape_hasBody_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape_hasBody_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape_hasBody_range> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/oa#hasBody> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape_hasBody_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Info> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape> <http://www.w3.org/ns/shacl#name> "Rights Statement (mobilityDCAT-AP) - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape> <http://www.w3.org/ns/shacl#property> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape_type_range> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/dc/terms/RightsStatement> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape_type_range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape_type_range> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape_type_range> <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/type> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape_type_range> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/dc/terms/creator> _:cbb7ba835447896e8fda285d5dc4b0aa0afb6fdebafbda714b9af0936be96f0333 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/dc/terms/description> "Adds mobilityDCAT-AP-specific node-kind / class range constraints, extending DCAT-AP 3.0.1. CV-code and external-IRI references use sh:nodeKind sh:IRI; CV membership is checked in the MDR file. DCAT-AP ranges are inherited via owl:imports and not restated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/dc/terms/modified> "2026-07-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/dc/terms/publisher> <https://napcore.eu/> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/dc/terms/rightsHolder> <https://napcore.eu/> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/dc/terms/title> "mobilityDCAT-AP 3.0.0 SHACL - Range Constraints"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/ontology/bibo/editor> _:cb4f1a592ae128e1d61c62ee165e5776accdfec1c87c8080dc084e5ff663320a2e .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/ontology/bibo/editor> _:cb7b2764b50c8108242a7c41bf4ad750a9465d47c311f5dcabf680f139b0ec3433 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://purl.org/ontology/bibo/editor> _:cb8d9d0e7b2c67a903c3710e7378c699c97592a5187f9229b0cbbe811856e7c47e .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://www.w3.org/2002/07/owl#imports> <https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/range.ttl> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0" .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges> <http://www.w3.org/ns/dcat#distribution> _:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e .
+_:cb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cbae1adc53ca0896bf94111afdd8851f0f1e3ab2b11827002645fa71483eb01a38 .
+_:cb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cbd7c96744b860be374134b6eeace4a6009e3d5947219e59b3c009836ad1012775 .
+_:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> .
+_:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e <http://purl.org/dc/terms/format> <http://www.w3.org/ns/formats/data/Turtle> .
+_:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e <http://purl.org/dc/terms/title> "SHACL Range Constraints (Turtle)"@en .
+_:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#AssetDistribution> .
+_:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e <http://www.w3.org/ns/dcat#downloadURL> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges.ttl> .
+_:cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e <http://www.w3.org/ns/dcat#mediaType> "text/turtle" .
+_:cb4f1a592ae128e1d61c62ee165e5776accdfec1c87c8080dc084e5ff663320a2e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:cb4f1a592ae128e1d61c62ee165e5776accdfec1c87c8080dc084e5ff663320a2e <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0001-5446-6947> .
+_:cb4f1a592ae128e1d61c62ee165e5776accdfec1c87c8080dc084e5ff663320a2e <http://xmlns.com/foaf/0.1/name> "Lina Molinas Comet" .
+_:cb7b2764b50c8108242a7c41bf4ad750a9465d47c311f5dcabf680f139b0ec3433 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:cb7b2764b50c8108242a7c41bf4ad750a9465d47c311f5dcabf680f139b0ec3433 <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0002-8235-7331> .
+_:cb7b2764b50c8108242a7c41bf4ad750a9465d47c311f5dcabf680f139b0ec3433 <http://xmlns.com/foaf/0.1/name> "Mario Scrocca" .
+_:cb8d9d0e7b2c67a903c3710e7378c699c97592a5187f9229b0cbbe811856e7c47e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:cb8d9d0e7b2c67a903c3710e7378c699c97592a5187f9229b0cbbe811856e7c47e <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0003-1867-4428> .
+_:cb8d9d0e7b2c67a903c3710e7378c699c97592a5187f9229b0cbbe811856e7c47e <http://xmlns.com/foaf/0.1/name> "Daham Mustafa" .
+_:cbae1adc53ca0896bf94111afdd8851f0f1e3ab2b11827002645fa71483eb01a38 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cbb7ba835447896e8fda285d5dc4b0aa0afb6fdebafbda714b9af0936be96f0333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
+_:cbb7ba835447896e8fda285d5dc4b0aa0afb6fdebafbda714b9af0936be96f0333 <http://xmlns.com/foaf/0.1/name> "NAPCORE SWG 4.4" .
+_:cbb7ba835447896e8fda285d5dc4b0aa0afb6fdebafbda714b9af0936be96f0333 <http://xmlns.com/foaf/0.1/page> <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> .
+_:cbd7c96744b860be374134b6eeace4a6009e3d5947219e59b3c009836ad1012775 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cbefe08107aff4bb9029ae68da48910c9b85f2884699b7883263192f8726f67d21 .
+_:cbd7c96744b860be374134b6eeace4a6009e3d5947219e59b3c009836ad1012775 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cbefe08107aff4bb9029ae68da48910c9b85f2884699b7883263192f8726f67d21 <http://www.w3.org/ns/shacl#class> <https://w3id.org/mobilitydcat-ap#MobilityDataStandard> .
+_:cbefe08107aff4bb9029ae68da48910c9b85f2884699b7883263192f8726f67d21 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .

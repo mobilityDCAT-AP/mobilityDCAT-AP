@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:sh="http://www.w3.org/ns/shacl#"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcatap="http://data.europa.eu/r5r/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV">
+    <sh:description xml:lang="en">Values state the georeferencing method of the resource, using the Georeferencing Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/georeferencing-method). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/georeferencing-method/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">georeferencingMethod should include at least one concept from the Georeferencing Method vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb1082b4047385ff993a1281822a5d7ff21d40360e145cbe28b7f570bc03b8b6a32">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#georeferencingMethod"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#georeferencingMethod"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction">
+            <rdfs:label xml:lang="en">GeoreferencingMethodRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/georeferencing-method"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityShapeCV">
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277">
+        <sh:description xml:lang="en">The technical syntax of the delivered content, taken from the EU File type authority table (http://publications.europa.eu/resource/authority/file-type). The value space is closed: only concepts from this vocabulary are allowed.</sh:description>
+        <sh:message xml:lang="en">format value must be a concept from the EU File Type table (skos:inScheme).</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/format"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0">
+        <sh:description xml:lang="en">The status of the distribution in its maturity lifecycle, taken from the EU Distribution status authority table (http://publications.europa.eu/resource/authority/distribution-status). The value space is closed: only concepts from this vocabulary are allowed.</sh:description>
+        <sh:message xml:lang="en">status value must be a concept from the EU Distribution status table.</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/adms#status"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV">
+    <sh:description xml:lang="en">The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated.</sh:description>
+    <sh:message xml:lang="en">publisher should include at least one concept from the EU Corporate body table.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb159f3e3ecd6adb0f89da4371af17a9d4c8cc1b2ec98dcfa2f477fc2caaa5f2508">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8">
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction">
+            <rdfs:label xml:lang="en">CorporateBodyRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555">
+                <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/corporate-body"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV">
+    <sh:description xml:lang="en">Values state the transport modes covered by the dataset, using the Transport Mode controlled vocabulary (https://w3id.org/mobilitydcat-ap/transport-mode). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/transport-mode/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">transportMode should include at least one concept from the Transport Mode vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb152785bc22ce0a90e01183ff875785a8a5c6d5db9c6690fae44bcf63e4b368179">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#transportMode"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#transportMode"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction">
+            <rdfs:label xml:lang="en">TransportModeRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/transport-mode"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV">
+    <sh:description xml:lang="en">The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated.</sh:description>
+    <sh:message xml:lang="en">spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb203133e0c3a21154097134451125d46a93957a8c6887890ff7bf1cd01b0442183">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b">
+        <sh:path rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/dc/terms/spatial"/>
+          <rdf:Description rdf:about="http://purl.org/dc/terms/identifier"/>
+        </sh:path>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction">
+            <rdfs:label xml:lang="en">Spatial restriction (EU tables or GeoNames)</rdfs:label>
+            <sh:or rdf:parseType="Collection">
+              <rdf:Description rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction"/>
+              <rdf:Description rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction"/>
+              <rdf:Description rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction"/>
+              <rdf:Description rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI"/>
+            </sh:or>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV">
+    <sh:description xml:lang="en">The licence under which the distribution is made available, referencing a concrete standard licence from the EU Licence authority table (http://publications.europa.eu/resource/authority/licence). Use of this vocabulary is recommended; other values are tolerated.</sh:description>
+    <sh:message xml:lang="en">license should include at least one concept from the EU Licence table.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb1260a4a70cb2f9acf2b131466c2687a38d5a338028f55ef4924cecc3ce04076ca">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/license"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1">
+        <sh:path rdf:resource="http://purl.org/dc/terms/license"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction">
+            <rdfs:label xml:lang="en">LicenceRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9">
+                <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/licence"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <owl:Ontology rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies">
+    <dcatap:availability rdf:resource="http://data.europa.eu/r5r/stable"/>
+    <dct:conformsTo rdf:resource="https://www.w3.org/TR/shacl"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-14</dct:created>
+    <dct:creator>
+      <foaf:Group rdf:nodeID="cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511">
+        <foaf:name>NAPCORE SWG 4.4</foaf:name>
+        <foaf:page rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"/>
+      </foaf:Group>
+    </dct:creator>
+    <dct:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2023</dct:dateCopyrighted>
+    <dct:description xml:lang="en">Self-contained controlled-vocabulary constraints for mobilityDCAT-AP 3.0.0 (spec section 10.2). Restates the EU authority-table and mobility CV bindings rather than importing DCAT-AP's CV shapes, since that import is not 1:1. 10.2.1 MUST uses sh:node at Violation; 10.2.2/10.2.3 use the exact at-least-one-with-extras-tolerated form at Warning.</dct:description>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-14</dct:issued>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-06</dct:modified>
+    <dct:publisher rdf:resource="https://napcore.eu/"/>
+    <dct:rightsHolder rdf:resource="https://napcore.eu/"/>
+    <dct:title xml:lang="en">mobilityDCAT-AP 3.0.0 SHACL Constraints - Controlled Vocabularies</dct:title>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0001-5446-6947"/>
+        <foaf:name>Lina Molinas Comet</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0002-8235-7331"/>
+        <foaf:name>Mario Scrocca</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0003-1867-4428"/>
+        <foaf:name>Daham Mustafa</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/"/>
+    <owl:versionInfo>3.0.0</owl:versionInfo>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"/>
+    <dcat:distribution>
+      <adms:AssetDistribution rdf:nodeID="cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56">
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:format rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
+        <dct:title xml:lang="en">SHACL Controlled Vocabularies (Turtle)</dct:title>
+        <dcat:downloadURL rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies.ttl"/>
+        <dcat:mediaType>text/turtle</dcat:mediaType>
+      </adms:AssetDistribution>
+    </dcat:distribution>
+  </owl:Ontology>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV">
+    <sh:description xml:lang="en">Values state the transport network coverage of the dataset, using the Network Coverage controlled vocabulary (https://w3id.org/mobilitydcat-ap/network-coverage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/network-coverage/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">networkCoverage should include at least one concept from the Network Coverage vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cbc5bbe7c869ee15279053a8e750bf681cc3ef231d18e62ece394b8bd068a7782f">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#networkCoverage"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#networkCoverage"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction">
+            <rdfs:label xml:lang="en">NetworkCoverageRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/network-coverage"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV">
+    <sh:description xml:lang="en">Values categorise the dataset using the EU Data theme authority table (http://publications.europa.eu/resource/authority/data-theme). At least one value must come from this vocabulary. Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">dcat:theme should include at least one concept from the EU Data theme table.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb1f2eef8f2a907a8daac6903d85a9da7e00951d1482cc2551f51ba18e306d110ba">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#theme"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0">
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#theme"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction">
+            <rdfs:label xml:lang="en">DataThemeRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f">
+                <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/data-theme"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV">
+    <sh:description xml:lang="en">Values state the application layer protocol of the distribution, using the Application layer protocol controlled vocabulary (https://w3id.org/mobilitydcat-ap/application-layer-protocol). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/application-layer-protocol/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">applicationLayerProtocol should include at least one concept from the Application layer protocol vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb18ed37baed7697a9e6787e2527b52426bf51ebadc67d19079b2458c6f65e30974">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction">
+            <rdfs:label xml:lang="en">ApplicationLayerProtocolRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/application-layer-protocol"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV">
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1">
+        <sh:description xml:lang="en">The spatial reference system used in the dataset, identified by a coordinate reference system URI from the OGC EPSG register. This register is not a SKOS scheme, so membership is checked by URI pattern rather than skos:inScheme. The value space is closed: only EPSG URIs are allowed.</sh:description>
+        <sh:message xml:lang="en">referenceSystem value must be an OGC EPSG coordinate reference system URI.</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://data.europa.eu/930/referenceSystem"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344">
+        <sh:description xml:lang="en">The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code.</sh:description>
+        <sh:message xml:lang="en">language value must be a concept from the EU Language table (skos:inScheme).</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/language"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894">
+        <sh:description xml:lang="en">The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed.</sh:description>
+        <sh:message xml:lang="en">accrualPeriodicity value must be a concept from the EU Frequency table.</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/accrualPeriodicity"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV">
+    <sh:description xml:lang="en">The entity responsible for publishing the catalogue record, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated.</sh:description>
+    <sh:message xml:lang="en">publisher should include at least one concept from the EU Corporate body table.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb1de64e4d027611d45f65ab362eca2174125950a5bae39db1b453e538739944620">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a">
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction"/>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV">
+    <sh:description xml:lang="en">Values describe the intended information service for the dataset, using the Intended information service controlled vocabulary (https://w3id.org/mobilitydcat-ap/intended-information-service). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/intended-information-service/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">intendedInformationService should include at least one concept from the Intended information service vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb23ff5862310ba11dd05132768d5f93522c3a0b022577629688dc5f377880dd6cf">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#intendedInformationService"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#intendedInformationService"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction">
+            <rdfs:label xml:lang="en">IntendedInformationServiceRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/intended-information-service"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV">
+    <sh:description xml:lang="en">The entity responsible for publishing the dataset, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated.</sh:description>
+    <sh:message xml:lang="en">publisher should include at least one concept from the EU Corporate body table.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb1e11026f9da350bd92bf05087297c7d42d9a30d8041ca7fe5e464b68bdf55c14a">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b">
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction"/>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV">
+    <sh:description xml:lang="en">Values classify the theme of a mobility dataset series using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb1705259fefd384d2f36911ffb79cea29549a939f30e64e7939350f92cc573dbda">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction">
+            <rdfs:label xml:lang="en">MobilityThemeRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#DatasetSeries"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV">
+    <sh:description xml:lang="en">The geographical coverage of the dataset, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated.</sh:description>
+    <sh:message xml:lang="en">spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb180c01298ff949ee3a0662297f410b4706c2c0596ad8f284a9149d27e318b80a6">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421">
+        <sh:path rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/dc/terms/spatial"/>
+          <rdf:Description rdf:about="http://purl.org/dc/terms/identifier"/>
+        </sh:path>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction"/>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV">
+    <sh:description xml:lang="en">Values classify the theme of a mobility dataset using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cbc9ea70964159a4f0fc0eddc3f5532887fe01190319e0ddf849d547cb2f927c5e">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction"/>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV">
+    <sh:description xml:lang="en">Values identify the mobility data standard adopted by the distribution, using the Mobility data standard controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-data-standard). At least one value must come from this vocabulary; if no suitable standard is listed, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-data-standard/other). Values outside the vocabulary are tolerated, for example a custom mobilitydcatap:MobilityDataStandard instance giving a version or a national profile.</sh:description>
+    <sh:message xml:lang="en">mobilityDataStandard should include at least one concept from the Mobility data standard vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb16a91a92e5af4eaa43e7849c07db15deca37e96eed1b88de0ace0d73432c1c2db">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction">
+            <rdfs:label xml:lang="en">MobilityDataStandardRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV">
+    <sh:description xml:lang="en">The geographical coverage of the dataset series, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated.</sh:description>
+    <sh:message xml:lang="en">spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb153722652c6a88aa9cff4163c0dcf06c5c20cd279d462255a17ac1cddfb67d596">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916">
+        <sh:path rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/dc/terms/spatial"/>
+          <rdf:Description rdf:about="http://purl.org/dc/terms/identifier"/>
+        </sh:path>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction"/>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#DatasetSeries"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV">
+    <sh:description xml:lang="en">Values state the conditions for access and usage of a Rights Statement, using the Conditions for access and usage controlled vocabulary (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other). Values outside the vocabulary are tolerated.</sh:description>
+    <sh:message xml:lang="en">conditions for access and usage (dct:type) should include at least one concept from the Conditions for access and usage vocabulary; use 'other' if none applies.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cbfffc0aed9b110bac8d0a72beaad3edff5db508732dfa7bf0f702e0999713a470">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9">
+        <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction">
+            <rdfs:label xml:lang="en">ConditionsForAccessAndUsageRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV">
+    <sh:description xml:lang="en">Values state the communication method of the distribution, using the Communication Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/communication-method), which distinguishes push and pull. Use of this vocabulary is recommended; other values are tolerated.</sh:description>
+    <sh:message xml:lang="en">communicationMethod should include at least one concept from the Communication Method vocabulary.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb17a3546f96d30cf2ffbcae5e6d18602b7b7c9a5d57d883f58f877058342390d36">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#communicationMethod"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#communicationMethod"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction">
+            <rdfs:label xml:lang="en">CommunicationMethodRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3">
+                <sh:hasValue rdf:resource="https://w3id.org/mobilitydcat-ap/communication-method"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV">
+    <sh:description xml:lang="en">The type of the publishing organisation, taken from the ADMS Publisher Type vocabulary (http://purl.org/adms/publishertype/1.0), which distinguishes national, regional and local authorities, companies, academic and standardisation bodies and similar. Use of this vocabulary is recommended; other values are tolerated.</sh:description>
+    <sh:message xml:lang="en">publisher type (dct:type) should include at least one concept from the ADMS Publisher Type vocabulary.</sh:message>
+    <sh:or rdf:parseType="Collection">
+      <rdf:Description rdf:nodeID="cb16b7c674f108d88e9d22eeee7ab5a7e6b9f892b76c9eddca88fb30adc334305b7">
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0">
+        <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+        <sh:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:qualifiedMinCount>
+        <sh:qualifiedValueShape>
+          <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction">
+            <rdfs:label xml:lang="en">PublisherTypeRestriction</rdfs:label>
+            <sh:property>
+              <rdf:Description rdf:nodeID="cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3">
+                <sh:hasValue rdf:resource="http://purl.org/adms/publishertype/1.0"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+                <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+                <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+              </rdf:Description>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:qualifiedValueShape>
+      </rdf:Description>
+    </sh:or>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+    <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_MobilityShapeCV">
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d">
+        <sh:description xml:lang="en">The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code.</sh:description>
+        <sh:message xml:lang="en">language value must be a concept from the EU Language table (skos:inScheme).</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/language"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityShapeCV">
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96">
+        <sh:description xml:lang="en">The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed.</sh:description>
+        <sh:message xml:lang="en">accrualPeriodicity value must be a concept from the EU Frequency table.</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/accrualPeriodicity"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#DatasetSeries"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_MobilityShapeCV">
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb">
+        <sh:description xml:lang="en">The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code.</sh:description>
+        <sh:message xml:lang="en">language value must be a concept from the EU Language table (skos:inScheme).</sh:message>
+        <sh:node rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/language"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </rdf:Description>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction">
+    <rdfs:label xml:lang="en">FileTypeRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/file-type"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction">
+    <rdfs:label xml:lang="en">CountryRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/country"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction">
+    <rdfs:label xml:lang="en">LanguageRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/language"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI">
+    <rdfs:label xml:lang="en">GeoNames restriction</rdfs:label>
+    <sh:pattern>^https?://(sws\.)?geonames\.org</sh:pattern>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction">
+    <rdfs:label xml:lang="en">ContinentRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/continent"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction">
+    <rdfs:label xml:lang="en">Reference System (EPSG) restriction</rdfs:label>
+    <sh:pattern>^https?://(www\.opengis\.net/def/crs/EPSG/|epsg\.io/)</sh:pattern>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction">
+    <rdfs:label xml:lang="en">FrequencyRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/frequency"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction">
+    <rdfs:label xml:lang="en">DistributionStatusRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/distribution-status"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction">
+    <rdfs:label xml:lang="en">PlaceRestriction</rdfs:label>
+    <sh:property>
+      <rdf:Description rdf:nodeID="cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72">
+        <sh:hasValue rdf:resource="http://publications.europa.eu/resource/authority/place"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+</rdf:RDF>

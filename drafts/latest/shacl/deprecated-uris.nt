@@ -1,0 +1,78 @@
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#CatalogRecord> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DatasetDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DatasetDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DatasetDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DatasetDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#LicenseDocumentDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#LicenseDocumentDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Licence Document deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#LicenseDocumentDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#LicenseDocumentDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#LicenseDocumentDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/dc/terms/LicenseDocument> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Mobility Data Standard deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/mobilitydcat-ap#MobilityDataStandard> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Annotation deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dqv#QualityAnnotation> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Statement deprecated properties (mobilityDCAT-AP 3.0.0)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape> <http://www.w3.org/ns/shacl#property> _:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape> <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/dc/terms/RightsStatement> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris> <http://purl.org/dc/terms/description> "Warning shapes for properties deprecated in mobilityDCAT-AP 3.0.0 (spec Appendix A.2)."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris> <http://purl.org/dc/terms/title> "Deprecated URIs of mobilityDCAT-AP"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0" .
+_:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de <http://www.w3.org/ns/shacl#message> "dct:isPartOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dct:hasPart on the parent Catalogue."@en .
+_:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/isPartOf> .
+_:cb106160eeb1d2575460a0beaabdb8db23df01674cccd07a7d8f7a5d0eec30d74de <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757 <http://www.w3.org/ns/shacl#message> "owl:versionInfo is deprecated on Mobility Data Standard; use dcat:version."@en .
+_:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2002/07/owl#versionInfo> .
+_:cb10bc3c26202e2f784c398e6f86ffe31fe28c2b51e98bc58b2351a3b64564f9757 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab <http://www.w3.org/ns/shacl#message> "mobilitydcatap:grammar is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#90)."@en .
+_:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#grammar> .
+_:cb125ae2da04bf85444360eafe45e035c576a08eda28e04e8e2eefc82adacddccab <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31 <http://www.w3.org/ns/shacl#message> "dct:identifier on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."@en .
+_:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/identifier> .
+_:cb12a495757259a672154be79738230c9e59b25bf17f2021d337697f6b153d8ba31 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13 <http://www.w3.org/ns/shacl#message> "rdfs:label on dct:RightsStatement is deprecated in mobilityDCAT-AP 3.0.0; use dct:description."@en .
+_:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:cb6e77f4aa63ea8bee4fafd8d52465583d3f05b18f731fa9dc068abbcc55d5ea13 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e <http://www.w3.org/ns/shacl#message> "dct:isVersionOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dcat:hasVersion on the related Dataset."@en .
+_:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/isVersionOf> .
+_:cb74f7aa82b9e49b096c6c535c507e6a13b783238f5e513924578f3fcf6494fc4e <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007 <http://www.w3.org/ns/shacl#message> "oa:hasTarget is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dqv:hasQualityAnnotation on the Dataset."@en .
+_:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/oa#hasTarget> .
+_:cb85c311edd83180ff8209e2b32b8d8960521361ec3fec82e79fa9ef068bbd3007 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f <http://www.w3.org/ns/shacl#message> "dct:created is deprecated in mobilityDCAT-AP 3.0.0; use dct:issued (#167)."@en .
+_:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/created> .
+_:cb9c997299869e6b2d89cf27bf3d8afc35ed420cbdcb85aa8e458b98dac480432f <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50 <http://www.w3.org/ns/shacl#message> "rdfs:label on dct:LicenseDocument is deprecated in mobilityDCAT-AP 3.0.0 (#165)."@en .
+_:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:cbd320bbcd75a8c56038f1b76e9c91ee262e496e12dad7ad197f7063da0afbfa50 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+_:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770 <http://www.w3.org/ns/shacl#message> "mobilitydcatap:schema is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#153)."@en .
+_:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#schema> .
+_:cbe5e99933e671bd5273c21e04348ade27e51ed6a860c0fca36576c3df39e0a770 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .

@@ -1,0 +1,2861 @@
+[
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ApplicationLayerProtocolRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/application-layer-protocol"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The geographical coverage of the dataset series, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb153722652c6a88aa9cff4163c0dcf06c5c20cd279d462255a17ac1cddfb67d596"
+          },
+          {
+            "@id": "_:cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#DatasetSeries"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb153722652c6a88aa9cff4163c0dcf06c5c20cd279d462255a17ac1cddfb67d596",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/spatial"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/dc/terms/spatial"
+          },
+          {
+            "@id": "http://purl.org/dc/terms/identifier"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/adms#Asset"
+    ],
+    "http://data.europa.eu/r5r/availability": [
+      {
+        "@id": "http://data.europa.eu/r5r/stable"
+      }
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://www.w3.org/TR/shacl"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-08-14"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511"
+      }
+    ],
+    "http://purl.org/dc/terms/dateCopyrighted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2023"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Self-contained controlled-vocabulary constraints for mobilityDCAT-AP 3.0.0 (spec section 10.2). Restates the EU authority-table and mobility CV bindings rather than importing DCAT-AP's CV shapes, since that import is not 1:1. 10.2.1 MUST uses sh:node at Violation; 10.2.2/10.2.3 use the exact at-least-one-with-extras-tolerated form at Warning."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-08-14"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-08-06"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://napcore.eu/"
+      }
+    ],
+    "http://purl.org/dc/terms/rightsHolder": [
+      {
+        "@id": "https://napcore.eu/"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "mobilityDCAT-AP 3.0.0 SHACL Constraints - Controlled Vocabularies"
+      }
+    ],
+    "http://purl.org/ontology/bibo/editor": [
+      {
+        "@id": "_:cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c"
+      },
+      {
+        "@id": "_:cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8"
+      },
+      {
+        "@id": "_:cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "3.0.0"
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+        "@id": "http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Group"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "NAPCORE SWG 4.4"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/page": [
+      {
+        "@id": "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://orcid.org/0000-0001-5446-6947"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Lina Molinas Comet"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://orcid.org/0000-0002-8235-7331"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Mario Scrocca"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://orcid.org/0000-0003-1867-4428"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Daham Mustafa"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56",
+    "@type": [
+      "http://www.w3.org/ns/adms#AssetDistribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+      },
+      {
+        "@id": "http://www.w3.org/ns/formats/data/Turtle"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "SHACL Controlled Vocabularies (Turtle)"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies.ttl"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "text/turtle"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "GeoNames restriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#pattern": [
+      {
+        "@value": "^https?://(sws\\.)?geonames\\.org"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NetworkCoverageRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/network-coverage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "MobilityDataStandardRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "FileTypeRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/file-type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Reference System (EPSG) restriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#pattern": [
+      {
+        "@value": "^https?://(www\\.opengis\\.net/def/crs/EPSG/|epsg\\.io/)"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_MobilityShapeCV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Catalog"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "language value must be a concept from the EU Language table (skos:inScheme)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values state the georeferencing method of the resource, using the Georeferencing Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/georeferencing-method). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/georeferencing-method/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "georeferencingMethod should include at least one concept from the Georeferencing Method vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1082b4047385ff993a1281822a5d7ff21d40360e145cbe28b7f570bc03b8b6a32"
+          },
+          {
+            "@id": "_:cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1082b4047385ff993a1281822a5d7ff21d40360e145cbe28b7f570bc03b8b6a32",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#georeferencingMethod"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#georeferencingMethod"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values state the application layer protocol of the distribution, using the Application layer protocol controlled vocabulary (https://w3id.org/mobilitydcat-ap/application-layer-protocol). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/application-layer-protocol/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "applicationLayerProtocol should include at least one concept from the Application layer protocol vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb18ed37baed7697a9e6787e2527b52426bf51ebadc67d19079b2458c6f65e30974"
+          },
+          {
+            "@id": "_:cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb18ed37baed7697a9e6787e2527b52426bf51ebadc67d19079b2458c6f65e30974",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "PublisherTypeRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://purl.org/adms/publishertype/1.0"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values describe the intended information service for the dataset, using the Intended information service controlled vocabulary (https://w3id.org/mobilitydcat-ap/intended-information-service). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/intended-information-service/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "intendedInformationService should include at least one concept from the Intended information service vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb23ff5862310ba11dd05132768d5f93522c3a0b022577629688dc5f377880dd6cf"
+          },
+          {
+            "@id": "_:cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb23ff5862310ba11dd05132768d5f93522c3a0b022577629688dc5f377880dd6cf",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#intendedInformationService"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#intendedInformationService"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityShapeCV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277"
+      },
+      {
+        "@id": "_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The technical syntax of the delivered content, taken from the EU File type authority table (http://publications.europa.eu/resource/authority/file-type). The value space is closed: only concepts from this vocabulary are allowed."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "format value must be a concept from the EU File Type table (skos:inScheme)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/format"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The status of the distribution in its maturity lifecycle, taken from the EU Distribution status authority table (http://publications.europa.eu/resource/authority/distribution-status). The value space is closed: only concepts from this vocabulary are allowed."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "status value must be a concept from the EU Distribution status table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/adms#status"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values classify the theme of a mobility dataset series using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1705259fefd384d2f36911ffb79cea29549a939f30e64e7939350f92cc573dbda"
+          },
+          {
+            "@id": "_:cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#DatasetSeries"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1705259fefd384d2f36911ffb79cea29549a939f30e64e7939350f92cc573dbda",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityTheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityTheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "MobilityThemeRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "IntendedInformationServiceRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/intended-information-service"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values state the conditions for access and usage of a Rights Statement, using the Conditions for access and usage controlled vocabulary (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "conditions for access and usage (dct:type) should include at least one concept from the Conditions for access and usage vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cbfffc0aed9b110bac8d0a72beaad3edff5db508732dfa7bf0f702e0999713a470"
+          },
+          {
+            "@id": "_:cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://purl.org/dc/terms/RightsStatement"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbfffc0aed9b110bac8d0a72beaad3edff5db508732dfa7bf0f702e0999713a470",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb203133e0c3a21154097134451125d46a93957a8c6887890ff7bf1cd01b0442183"
+          },
+          {
+            "@id": "_:cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Catalog"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb203133e0c3a21154097134451125d46a93957a8c6887890ff7bf1cd01b0442183",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/spatial"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/dc/terms/spatial"
+          },
+          {
+            "@id": "http://purl.org/dc/terms/identifier"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Spatial restriction (EU tables or GeoNames)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction"
+          },
+          {
+            "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction"
+          },
+          {
+            "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction"
+          },
+          {
+            "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The licence under which the distribution is made available, referencing a concrete standard licence from the EU Licence authority table (http://publications.europa.eu/resource/authority/licence). Use of this vocabulary is recommended; other values are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "license should include at least one concept from the EU Licence table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1260a4a70cb2f9acf2b131466c2687a38d5a338028f55ef4924cecc3ce04076ca"
+          },
+          {
+            "@id": "_:cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1260a4a70cb2f9acf2b131466c2687a38d5a338028f55ef4924cecc3ce04076ca",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/license"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/license"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "CountryRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/country"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values categorise the dataset using the EU Data theme authority table (http://publications.europa.eu/resource/authority/data-theme). At least one value must come from this vocabulary. Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "dcat:theme should include at least one concept from the EU Data theme table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1f2eef8f2a907a8daac6903d85a9da7e00951d1482cc2551f51ba18e306d110ba"
+          },
+          {
+            "@id": "_:cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1f2eef8f2a907a8daac6903d85a9da7e00951d1482cc2551f51ba18e306d110ba",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#theme"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#theme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The entity responsible for publishing the catalogue record, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "publisher should include at least one concept from the EU Corporate body table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1de64e4d027611d45f65ab362eca2174125950a5bae39db1b453e538739944620"
+          },
+          {
+            "@id": "_:cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#CatalogRecord"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1de64e4d027611d45f65ab362eca2174125950a5bae39db1b453e538739944620",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values state the transport network coverage of the dataset, using the Network Coverage controlled vocabulary (https://w3id.org/mobilitydcat-ap/network-coverage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/network-coverage/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "networkCoverage should include at least one concept from the Network Coverage vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cbc5bbe7c869ee15279053a8e750bf681cc3ef231d18e62ece394b8bd068a7782f"
+          },
+          {
+            "@id": "_:cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbc5bbe7c869ee15279053a8e750bf681cc3ef231d18e62ece394b8bd068a7782f",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#networkCoverage"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#networkCoverage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "publisher should include at least one concept from the EU Corporate body table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb159f3e3ecd6adb0f89da4371af17a9d4c8cc1b2ec98dcfa2f477fc2caaa5f2508"
+          },
+          {
+            "@id": "_:cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Catalog"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb159f3e3ecd6adb0f89da4371af17a9d4c8cc1b2ec98dcfa2f477fc2caaa5f2508",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The type of the publishing organisation, taken from the ADMS Publisher Type vocabulary (http://purl.org/adms/publishertype/1.0), which distinguishes national, regional and local authorities, companies, academic and standardisation bodies and similar. Use of this vocabulary is recommended; other values are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "publisher type (dct:type) should include at least one concept from the ADMS Publisher Type vocabulary."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb16b7c674f108d88e9d22eeee7ab5a7e6b9f892b76c9eddca88fb30adc334305b7"
+          },
+          {
+            "@id": "_:cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb16b7c674f108d88e9d22eeee7ab5a7e6b9f892b76c9eddca88fb30adc334305b7",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "CorporateBodyRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values identify the mobility data standard adopted by the distribution, using the Mobility data standard controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-data-standard). At least one value must come from this vocabulary; if no suitable standard is listed, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-data-standard/other). Values outside the vocabulary are tolerated, for example a custom mobilitydcatap:MobilityDataStandard instance giving a version or a national profile."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "mobilityDataStandard should include at least one concept from the Mobility data standard vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb16a91a92e5af4eaa43e7849c07db15deca37e96eed1b88de0ace0d73432c1c2db"
+          },
+          {
+            "@id": "_:cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb16a91a92e5af4eaa43e7849c07db15deca37e96eed1b88de0ace0d73432c1c2db",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityDataStandard"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityDataStandard"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values classify the theme of a mobility dataset using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cbc9ea70964159a4f0fc0eddc3f5532887fe01190319e0ddf849d547cb2f927c5e"
+          },
+          {
+            "@id": "_:cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbc9ea70964159a4f0fc0eddc3f5532887fe01190319e0ddf849d547cb2f927c5e",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityTheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityTheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ContinentRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/continent"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "FrequencyRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/frequency"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "DataThemeRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "TransportModeRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/transport-mode"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1"
+      },
+      {
+        "@id": "_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344"
+      },
+      {
+        "@id": "_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The spatial reference system used in the dataset, identified by a coordinate reference system URI from the OGC EPSG register. This register is not a SKOS scheme, so membership is checked by URI pattern rather than skos:inScheme. The value space is closed: only EPSG URIs are allowed."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "referenceSystem value must be an OGC EPSG coordinate reference system URI."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://data.europa.eu/930/referenceSystem"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "language value must be a concept from the EU Language table (skos:inScheme)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "accrualPeriodicity value must be a concept from the EU Frequency table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/accrualPeriodicity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The entity responsible for publishing the dataset, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "publisher should include at least one concept from the EU Corporate body table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1e11026f9da350bd92bf05087297c7d42d9a30d8041ca7fe5e464b68bdf55c14a"
+          },
+          {
+            "@id": "_:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1e11026f9da350bd92bf05087297c7d42d9a30d8041ca7fe5e464b68bdf55c14a",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "LicenceRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/licence"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_MobilityShapeCV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#CatalogRecord"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "language value must be a concept from the EU Language table (skos:inScheme)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "CommunicationMethodRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/communication-method"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "GeoreferencingMethodRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/georeferencing-method"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The geographical coverage of the dataset, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb180c01298ff949ee3a0662297f410b4706c2c0596ad8f284a9149d27e318b80a6"
+          },
+          {
+            "@id": "_:cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb180c01298ff949ee3a0662297f410b4706c2c0596ad8f284a9149d27e318b80a6",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/spatial"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/dc/terms/spatial"
+          },
+          {
+            "@id": "http://purl.org/dc/terms/identifier"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ConditionsForAccessAndUsageRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values state the communication method of the distribution, using the Communication Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/communication-method), which distinguishes push and pull. Use of this vocabulary is recommended; other values are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "communicationMethod should include at least one concept from the Communication Method vocabulary."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb17a3546f96d30cf2ffbcae5e6d18602b7b7c9a5d57d883f58f877058342390d36"
+          },
+          {
+            "@id": "_:cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb17a3546f96d30cf2ffbcae5e6d18602b7b7c9a5d57d883f58f877058342390d36",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#communicationMethod"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#communicationMethod"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityShapeCV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#DatasetSeries"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "accrualPeriodicity value must be a concept from the EU Frequency table."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/accrualPeriodicity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Values state the transport modes covered by the dataset, using the Transport Mode controlled vocabulary (https://w3id.org/mobilitydcat-ap/transport-mode). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/transport-mode/other). Values outside the vocabulary are tolerated."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "transportMode should include at least one concept from the Transport Mode vocabulary; use 'other' if none applies."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb152785bc22ce0a90e01183ff875785a8a5c6d5db9c6690fae44bcf63e4b368179"
+          },
+          {
+            "@id": "_:cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb152785bc22ce0a90e01183ff875785a8a5c6d5db9c6690fae44bcf63e4b368179",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#transportMode"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#transportMode"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMinCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "DistributionStatusRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/distribution-status"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "PlaceRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/place"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "LanguageRestriction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc",
+    "http://www.w3.org/ns/shacl#hasValue": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ]
+  }
+]

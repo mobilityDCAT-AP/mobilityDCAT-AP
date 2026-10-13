@@ -1,0 +1,26 @@
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://purl.org/dc/terms/description> "owl:imports of the controlled vocabularies applied by mobilityDCAT-AP 3.0.0 (spec section 10.2): those created and maintained by mobilityDCAT-AP, and those maintained by external organisations."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://purl.org/dc/terms/modified> "2026-07-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://purl.org/dc/terms/title> "mobilityDCAT-AP 3.0.0 Applied Controlled-Vocabulary Imports"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2000/01/rdf-schema#label> "mobilityDCAT-AP applied controlled-vocabulary imports"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/continent> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/corporate-body> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/country> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/data-theme> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/distribution-status> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/file-type> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/frequency> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/language> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/licence> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <http://publications.europa.eu/resource/authority/place> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/application-layer-protocol> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/communication-method> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/georeferencing-method> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/intended-information-service> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/mobility-data-standard> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/mobility-theme> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/network-coverage> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/mobilitydcat-ap/transport-mode> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0" .

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:sh="http://www.w3.org/ns/shacl#"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape">
+    <sh:name xml:lang="en">Dataset (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_assessmentResult_range">
+        <sh:class rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#assessmentResult"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_georeferencingMethod_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#georeferencingMethod"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_hasQualityAnnotation_range">
+        <sh:class rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/dqv#hasQualityAnnotation"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_intendedInformationService_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#intendedInformationService"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_mobilityTheme_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_networkCoverage_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#networkCoverage"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_referenceSystem_range">
+        <sh:description xml:lang="en">Spatial reference system (OGC EPSG register). geoDCAT-AP addition. CV/register membership is checked separately.</sh:description>
+        <sh:name xml:lang="en">reference system (range)</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://data.europa.eu/930/referenceSystem"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_rightsHolder_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/rightsHolder"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_spatial_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Dataset_Shape_transportMode_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#transportMode"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape">
+    <sh:name xml:lang="en">Catalogue (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_homepage_range">
+        <sh:description xml:lang="en">Homepage range is foaf:Document in mobilityDCAT-AP (v3 changelog), enforced here as sh:nodeKind sh:IRI since homepages are referenced as bare IRIs, not inline-typed in instance data.</sh:description>
+        <sh:message xml:lang="en">Homepage must be an IRI</sh:message>
+        <sh:name xml:lang="en">homepage (range)</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Catalogue_Shape_spatial_range">
+        <sh:message xml:lang="en">Catalogue geographical coverage must be a blank node or an IRI (e.g. country code from EU authority table or Geonames).</sh:message>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  </sh:NodeShape>
+  <owl:Ontology rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges">
+    <dct:creator>
+      <foaf:Group rdf:nodeID="cbb7ba835447896e8fda285d5dc4b0aa0afb6fdebafbda714b9af0936be96f0333">
+        <foaf:name>NAPCORE SWG 4.4</foaf:name>
+        <foaf:page rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"/>
+      </foaf:Group>
+    </dct:creator>
+    <dct:description xml:lang="en">Adds mobilityDCAT-AP-specific node-kind / class range constraints, extending DCAT-AP 3.0.1. CV-code and external-IRI references use sh:nodeKind sh:IRI; CV membership is checked in the MDR file. DCAT-AP ranges are inherited via owl:imports and not restated.</dct:description>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-23</dct:modified>
+    <dct:publisher rdf:resource="https://napcore.eu/"/>
+    <dct:rightsHolder rdf:resource="https://napcore.eu/"/>
+    <dct:title xml:lang="en">mobilityDCAT-AP 3.0.0 SHACL - Range Constraints</dct:title>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb4f1a592ae128e1d61c62ee165e5776accdfec1c87c8080dc084e5ff663320a2e">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0001-5446-6947"/>
+        <foaf:name>Lina Molinas Comet</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb7b2764b50c8108242a7c41bf4ad750a9465d47c311f5dcabf680f139b0ec3433">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0002-8235-7331"/>
+        <foaf:name>Mario Scrocca</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb8d9d0e7b2c67a903c3710e7378c699c97592a5187f9229b0cbbe811856e7c47e">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0003-1867-4428"/>
+        <foaf:name>Daham Mustafa</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <owl:imports rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/range.ttl"/>
+    <owl:versionInfo>3.0.0</owl:versionInfo>
+    <dcat:distribution>
+      <adms:AssetDistribution rdf:nodeID="cb3e2757051633d9ff230ba166312121889aeaf650bba2ca01d05b165034807134e">
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:format rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
+        <dct:title xml:lang="en">SHACL Range Constraints (Turtle)</dct:title>
+        <dcat:downloadURL rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges.ttl"/>
+        <dcat:mediaType>text/turtle</dcat:mediaType>
+      </adms:AssetDistribution>
+    </dcat:distribution>
+  </owl:Ontology>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape">
+    <sh:name xml:lang="en">Concept (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Concept_Shape_inScheme_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape">
+    <sh:name xml:lang="en">Dataset Series (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#DatasetSeries_Shape_mobilityTheme_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#DatasetSeries"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape">
+    <sh:name xml:lang="en">Catalogue Record (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_conformsTo_range">
+        <sh:name xml:lang="en">application profile (range)</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#CatalogueRecord_Shape_publisher_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape">
+    <sh:name xml:lang="en">Quality Annotation (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#QualityAnnotation_Shape_hasBody_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape">
+    <sh:name xml:lang="en">Mobility Data Standard (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#MobilityDataStandard_Shape_conformsTo_range">
+        <sh:name xml:lang="en">conforms to (range)</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape">
+    <sh:name xml:lang="en">Distribution (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_applicationLayerProtocol_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_communicationMethod_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#communicationMethod"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_mobilityDataStandard_range">
+        <sh:message xml:lang="en">Mobility data standard must be a CV concept IRI or a mobilitydcatap:MobilityDataStandard instance</sh:message>
+        <sh:name xml:lang="en">mobility data standard (range)</sh:name>
+        <sh:or rdf:parseType="Collection">
+          <rdf:Description rdf:nodeID="cbae1adc53ca0896bf94111afdd8851f0f1e3ab2b11827002645fa71483eb01a38">
+            <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+          </rdf:Description>
+          <rdf:Description rdf:nodeID="cbefe08107aff4bb9029ae68da48910c9b85f2884699b7883263192f8726f67d21">
+            <sh:class rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
+            <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+          </rdf:Description>
+        </sh:or>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Distribution_Shape_rights_range">
+        <sh:class rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/rights"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape">
+    <sh:name xml:lang="en">Location (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Location_Shape_inScheme_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://purl.org/dc/terms/Location"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape">
+    <sh:name xml:lang="en">Kind (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_email_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasAddress_range">
+        <sh:class rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasTelephone_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Kind_Shape_hasURL_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasURL"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetObjectsOf rdf:resource="http://www.w3.org/ns/dcat#contactPoint"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape">
+    <sh:name xml:lang="en">Rights Statement (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#RightsStatement_Shape_type_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape">
+    <sh:name xml:lang="en">Assessment (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Assessment_Shape_assessmentResult_range">
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_ranges">
+    <sh:name xml:lang="en">Agent (mobilityDCAT-AP) - Range Constraints</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_address_range">
+        <sh:class rdf:resource="http://www.w3.org/ns/locn#Address"/>
+        <sh:message xml:lang="en">Address must be a locn:Address instance</sh:message>
+        <sh:name xml:lang="en">address (range)</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#address"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges#Agent_Shape_affiliation_range">
+        <sh:class rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <sh:message xml:lang="en">Affiliation must be an org:Organization instance</sh:message>
+        <sh:name xml:lang="en">affiliation (range)</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </sh:NodeShape>
+</rdf:RDF>
