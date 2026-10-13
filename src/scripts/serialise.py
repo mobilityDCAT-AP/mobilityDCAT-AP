@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Serialise Turtle source files (.ttl) to RDF/XML and JSON-LD.
+"""Serialise Turtle source files (.ttl) to RDF/XML, JSON-LD and N-Triples.
 
-Turtle is the source of truth. The RDF/XML and JSON-LD serialisations are
-generated into dist/ on every build and are never committed.
+Turtle is the source of truth. The RDF/XML, JSON-LD and N-Triples
+serialisations are generated into dist/ on every build and are never
+committed.
 
 Run from repo root: python src/scripts/serialise.py
 """
@@ -119,7 +120,14 @@ def serialise(src: Path, out: Path) -> None:
     jsonld = json.dumps(json.loads(raw), indent=2, ensure_ascii=False)
     write(out / f"{stem}.jsonld", jsonld)
 
-    print(f"  {src.name} -> {out.relative_to(REPO_ROOT) / stem}.(rdf|jsonld)")
+    # One triple per line, sorted, so the file diffs line by line
+    lines = g.serialize(format="nt").splitlines()
+    nt = "".join(f"{line}\n" for line in sorted(set(lines)) if line)
+    if not isomorphic(g, rdflib.Graph().parse(data=nt, format="nt")):
+        sys.exit(f"  {src.name}: N-Triples does not round-trip")
+    write(out / f"{stem}.nt", nt)
+
+    print(f"  {src.name} -> {out.relative_to(REPO_ROOT) / stem}.(rdf|jsonld|nt)")
 
 
 def main() -> None:

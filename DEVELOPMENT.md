@@ -82,7 +82,7 @@ Individual steps:
 
 ```sh
 mise run clean        # empty dist/ (run automatically at the start of mise run build)
-mise run serialise    # convert src/*.ttl, src/examples/*.ttl and src/shacl/*.ttl -> .rdf + .jsonld in dist/
+mise run serialise    # convert src/*.ttl, src/examples/*.ttl and src/shacl/*.ttl -> .rdf + .jsonld + .nt in dist/
 mise run build-spec   # copy assets to dist/ and build dist/index.html via ReSpec
 ```
 
@@ -168,7 +168,7 @@ can render slightly differently; the build is what gets published.
 
 | Step | Script | What it does |
 |------|--------|-------------|
-| Serialise | `src/scripts/serialise.py` | Parses each `.ttl` with rdflib, keeping every literal as written (rdflib would otherwise rewrite typed literals such as `xsd:dateTime`), writes `.rdf` and `.jsonld` to `dist/`; writes lists of literals (`sh:languageIn`) as nested `rdf:first`/`rdf:rest`, which rdflib's pretty RDF/XML gets wrong, and falls back to flat RDF/XML if the output does not round-trip. Names blank nodes from their content, sorts the triples and fixes `PYTHONHASHSEED`, so the same Turtle always gives byte-identical files and a rebuild publishes no changes |
+| Serialise | `src/scripts/serialise.py` | Parses each `.ttl` with rdflib, keeping every literal as written (rdflib would otherwise rewrite typed literals such as `xsd:dateTime`), writes `.rdf`, `.jsonld` and `.nt` to `dist/`; writes lists of literals (`sh:languageIn`) as nested `rdf:first`/`rdf:rest`, which rdflib's pretty RDF/XML gets wrong, and falls back to flat RDF/XML if the output does not round-trip; writes N-Triples one triple per line, sorted, and stops if it does not round-trip. Names blank nodes from their content, sorts the triples and fixes `PYTHONHASHSEED`, so the same Turtle always gives byte-identical files and a rebuild publishes no changes |
 | Copy assets | `src/scripts/copy-assets.py` | Copies the Turtle sources, examples, figures, SHACL shapes and the migration guide to `dist/` |
 | Build spec | `src/scripts/build-spec.py` | Calls `respec --localhost`, which spins up its own HTTP server, builds `dist/index.html`, and shuts down |
 | Mark draft | `src/scripts/mark-draft.py` | Adds the draft notice, a "Draft" badge and a "Draft: " title prefix to `dist/index.html`; run by CI for every build except a release, not part of `mise run build` |
@@ -180,7 +180,7 @@ can render slightly differently; the build is what gets published.
 
 All hand-authored files live under `src/`. Never edit files in `dist/` — they are generated.
 
-Turtle is the source format for the ontology, the examples and the SHACL shapes. The `.rdf` and `.jsonld` serialisations are generated on every build and are never committed.
+Turtle is the source format for the ontology, the examples and the SHACL shapes. The `.rdf`, `.jsonld` and `.nt` serialisations are generated on every build and are never committed.
 
 | Path | Purpose |
 |------|---------|

@@ -20,7 +20,7 @@ description = "Empty dist/ before a fresh build"
 run = "uv run python src/scripts/clean.py"
 
 [tasks.serialise]
-description = "Serialise Turtle vocabulary, examples and SHACL shapes -> RDF/XML + JSON-LD"
+description = "Serialise Turtle vocabulary, examples and SHACL shapes -> RDF/XML + JSON-LD + N-Triples"
 depends = ["clean"]
 run = "uv run python src/scripts/serialise.py"
 

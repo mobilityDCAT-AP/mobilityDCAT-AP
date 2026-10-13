@@ -14,12 +14,13 @@ The specification document is a [ReSpec](https://respec.org/) page,
 HTML page at build time.
 
 The ontology, `src/mobilitydcat-ap.ttl`, and the worked examples in
-`src/examples/` are written in Turtle, which is the source format. The RDF/XML
-and JSON-LD serialisations are produced by the build and never committed.
+`src/examples/` are written in Turtle, which is the source format. The RDF/XML,
+JSON-LD and N-Triples serialisations are produced by the build and never
+committed.
 
 The SHACL shapes in `src/shacl/` are the validation constraints of the
 profile. They are also written in Turtle, and the build publishes them as
-RDF/XML and JSON-LD the same way. `mise run validate-examples` validates the
+RDF/XML, JSON-LD and N-Triples the same way. `mise run validate-examples` validates the
 examples against them. It is not part of `mise run check` for now, because of
 issues with the validation itself.
 
@@ -182,8 +183,8 @@ mise run serve      # static HTTP server on localhost:8080 for a live preview; n
 ```
 
 `mise run build` produces what CI publishes. It empties `dist/`, serialises the
-Turtle ontology, examples and SHACL shapes to RDF/XML and JSON-LD, copies the
-assets, and renders `src/index.html` with the ReSpec version pinned in
+Turtle ontology, examples and SHACL shapes to RDF/XML, JSON-LD and N-Triples,
+copies the assets, and renders `src/index.html` with the ReSpec version pinned in
 `package.json` into `dist/index.html`; open that file to see the result. ReSpec
 prints "Network error loading highlighter" on every build; it is harmless,
 because the document has no code blocks to highlight.

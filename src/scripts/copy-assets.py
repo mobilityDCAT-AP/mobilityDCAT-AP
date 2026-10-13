@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Copy source assets to dist/ before the ReSpec build.
 
-Only hand-authored files are copied. The RDF/XML and JSON-LD serialisations of
-the ontology, the examples and the SHACL shapes are produced by serialise.py.
+Only hand-authored files are copied. The RDF/XML, JSON-LD and N-Triples
+serialisations of the ontology, the examples and the SHACL shapes are produced
+by serialise.py.
 
 Run from repo root: python src/scripts/copy-assets.py
 """

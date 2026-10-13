@@ -4,3 +4,4 @@
 *.ttl text eol=lf
 *.rdf text eol=lf
 *.jsonld text eol=lf
+*.nt text eol=lf

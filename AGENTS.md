@@ -32,8 +32,8 @@ stale.
 applied there survives until the next build and no longer.
 
 **Never commit generated RDF.** Turtle is the source format for the ontology,
-the examples and the SHACL shapes. The `.rdf` and `.jsonld` serialisations are
-produced by `serialise.py` into `dist/` on every build.
+the examples and the SHACL shapes. The `.rdf`, `.jsonld` and `.nt`
+serialisations are produced by `serialise.py` into `dist/` on every build.
 
 **Never edit `gh-pages` for a version built here.** The workflows own it. The
 only hand edits there are corrections to the versions published before this
@@ -72,8 +72,8 @@ introduced by the change at hand:
 - Commit subjects carry a prefix matching the history: `CI:` for workflow
   changes, `Docs:` for documentation, `Dev:` for tooling and build scripts.
   Keep messages short and wrap them at 72 characters.
-- Text files use LF endings. `.gitattributes` forces `eol=lf` for `.ttl`, `.rdf`
-  and `.jsonld`, because a CRLF checkout on Windows changes the content of
+- Text files use LF endings. `.gitattributes` forces `eol=lf` for `.ttl`, `.rdf`,
+  `.jsonld` and `.nt`, because a CRLF checkout on Windows changes the content of
   multi-line RDF literals and makes a local build differ from CI.
 - Build scripts are Python and must run unchanged on Windows and Linux. No bash.
 
