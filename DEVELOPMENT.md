@@ -39,7 +39,8 @@ up. In CI (the `CI` environment variable is set) `build-spec.py` passes
 | | `main` (3.0.0 draft) | `release/1.1.0` |
 |-|----------------------|-----------------|
 | ReSpec profile | stock `respec-w3c` from w3.org, replaced at build time by the version pinned in `package.json` (`--use-local`) | the NAPCORE profile (ReSpec 25.16.5), kept in the repository as `src/js/respec-napcore.js` |
-| Serialised to RDF/XML, JSON-LD, N-Triples | ontology, examples, SHACL shapes | ontology only; the examples (Turtle and RDF/XML) and the SHACL shapes (Turtle) are published as they are |
+| Source of the ontology | Turtle, `src/mobilitydcat-ap.ttl`; RDF/XML, JSON-LD and N-Triples are generated | RDF/XML, `src/mobilitydcat-ap.rdf`, as 1.1.0 was maintained (in Protégé); Turtle, JSON-LD and N-Triples are generated |
+| Serialised by the build | ontology, examples, SHACL shapes | ontology only; the examples (Turtle and RDF/XML) and the SHACL shapes (Turtle) are published as they are |
 | SHACL directory | `src/shacl/` | `src/shaclShapes/`, the name 1.1.0 was published with |
 | `validate-examples` | yes | no: the script is written for the 3.0.0 shapes, which import DCAT-AP 3.0.1; the 1.1.0 shapes import DCAT-AP 2.0.1 |
 
@@ -84,7 +85,7 @@ to them; only `/releases/1.1.0/` leads to what this branch publishes.
 |------|---------|
 | `src/index.html` | ReSpec specification document |
 | `src/config.js` | ReSpec configuration, with the release values of 1.1.0 |
-| `src/mobilitydcat-ap.ttl` | Ontology, the source of its RDF/XML, JSON-LD and N-Triples |
+| `src/mobilitydcat-ap.rdf` | Ontology in RDF/XML, published as it is and the source of its Turtle, JSON-LD and N-Triples |
 | `src/tables/` | HTML tables included by `index.html` |
 | `src/examples/` | Examples, Turtle and RDF/XML, both maintained by hand |
 | `src/shaclShapes/` | SHACL shapes |

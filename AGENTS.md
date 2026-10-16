@@ -17,8 +17,9 @@ reads `1.1.0`. Work on another branch and open a pull request against
 
 **Never edit `dist/`.** It is regenerated on every build.
 
-**Never commit generated RDF.** The RDF/XML, JSON-LD and N-Triples of the
-ontology are generated from `src/mobilitydcat-ap.ttl`. The examples in
+**Never commit generated RDF.** The ontology is edited in RDF/XML,
+`src/mobilitydcat-ap.rdf`, as 1.1.0 always was (unlike `main`, where Turtle is
+the source); its Turtle, JSON-LD and N-Triples are generated. The examples in
 `src/examples/` are the exception: their Turtle and RDF/XML are both
 maintained by hand.
 
