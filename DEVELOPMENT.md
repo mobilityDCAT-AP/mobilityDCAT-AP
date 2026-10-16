@@ -11,6 +11,9 @@ publishes them to `releases/1.1.0/` on `gh-pages`. It uses the build tooling of
 | Which workflow publishes where, the branch naming convention | `REPOSITORY.md` |
 | How to hotfix a published release | `PROCEDURES.md`, section "Hotfix a published release" |
 
+How the 1.1.0 sources were converted to this tooling, step by step, is
+recorded in `CONVERSION-1.1.0.md`.
+
 ## Build
 
 ```sh
