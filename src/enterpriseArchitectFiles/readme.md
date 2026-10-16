@@ -4,3 +4,10 @@ The [mobilityDCAT-AP Enterprise Architect file](mobilityDCAT-AP.qea) contains th
 It contains an architecture diagram of mobilityDCAT-AP, a complete model as well as an overview containing only the mandatory properties.
 
 It has been provided by [NDW](https://www.ndw.nu/) partners in mobilityDCAT-AP.
+
+## Reconstructed documentation page
+
+A repaired HTML documentation page has been added here:
+[mobilityDCAT-AP-model-documentation.html](mobilityDCAT-AP-model-documentation.html)
+
+This page summarizes the expected EA model contents and links to the canonical release artifacts.
