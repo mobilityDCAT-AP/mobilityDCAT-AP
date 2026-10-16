@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Copy source assets to dist/ before the ReSpec build.
 
-Only hand-authored files are copied. The RDF/XML, JSON-LD and N-Triples
-serialisations of the ontology are produced by serialise.py.
+Only hand-authored files are copied, the RDF/XML ontology among them. Its
+Turtle, JSON-LD and N-Triples serialisations are produced by serialise.py.
 
 The directory names are the ones 1.1.0 was published with, so the URLs under
 releases/1.1.0/ stay as they are.
@@ -25,7 +25,7 @@ def copy_glob(pattern: str, dest: Path) -> None:
 
 
 def main() -> None:
-    copy_glob("mobilitydcat-ap.ttl", DIST)
+    copy_glob("mobilitydcat-ap.rdf", DIST)
 
     for sub in ["examples", "figures", "shaclShapes", "enterpriseArchitectFiles"]:
         src_dir = SRC / sub
