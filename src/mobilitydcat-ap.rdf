@@ -298,6 +298,7 @@
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:domainIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -454,6 +455,7 @@
     <!-- http://data.europa.eu/r5r/applicableLegislation -->
 
     <owl:ObjectProperty rdf:about="http://data.europa.eu/r5r/applicableLegislation">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property MAY refer to one or several legal frameworks being relevant for the dataset, e.g., an EC Delegated Regulation which constitutes the purpose of the corresponding data platform (here called National Access Point/NAP), or some other international or national frameworks, e.g., Open Data regulations. For European legal frameworks, it is recommended to use the European Legislation Identifier [ELI] to refer to legislation whenever possible. This property is derived from the DCAT-AP HVD extension [DCAT-AP-HVD].</rdfs:comment>
@@ -504,6 +506,7 @@
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
         <rdfs:comment xml:lang="en">This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property SHOULD link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested.</rdfs:comment>
@@ -519,6 +522,7 @@
     <!-- http://purl.org/dc/terms/temporal -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/temporal">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
@@ -535,6 +539,7 @@
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/Location"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -552,6 +557,7 @@
     <!-- http://www.w3.org/2006/vcard/ns#hasAddress -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
         <rdfs:comment xml:lang="en">This property MAY be used to specify the postal address of the Kind. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -568,6 +574,7 @@
     <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property contains an email address of the Kind, specified using fully qualified mailto: URI scheme [RFC6068]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -585,6 +592,7 @@
     <!-- http://www.w3.org/2006/vcard/ns#hasTelephone -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property MAY be used to provide the phone number of the Kind, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -601,6 +609,7 @@
     <!-- http://www.w3.org/2006/vcard/ns#hasURL -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasURL">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property points to a Web site of the Kind. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -617,6 +626,7 @@
     <!-- http://www.w3.org/ns/adms#identifier -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#identifier">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
@@ -638,6 +648,7 @@
     <!-- http://www.w3.org/ns/adms#sample -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#sample">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">This property refers to a sample Distribution of the Dataset. A data sample allows data users to investigate the data content and data structure, without subscribing to a data feed or downloading a complete data set. In [DCAT-AP-v2.0.1], there is a property adms:sample under the class dcat:Dataset , with a range of dcat:Distribution. This implies, that all mandatory properties from dcat:Distribution, e.g., mobilitydcatap:mobilityDataStandard, must be applied. To simplify the description of the Sample, mobilityDCAT-AP recommends to describe the Sample via a property under class dcat:Distribution. It is assumed that all other properties, as already populated for dcat:Distribution, e.g., mobilitydcatap:mobilityDataStandard, also apply for the description of the data sample.</rdfs:comment>
@@ -654,6 +665,7 @@
     <!-- http://www.w3.org/ns/dcat#distribution -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#distribution">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdfs:comment xml:lang="en">This property links the dataset to an available distribution. 
@@ -684,6 +696,7 @@
     <!-- http://www.w3.org/ns/dqv#hasQualityAnnotation -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#hasQualityAnnotation">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
         <rdfs:comment xml:lang="en">This property MAY describe any quality aspects regarding the delivered content, in particular methods, metrics/indicators and results of a quality assessment in the responsibility of the Rights Holder (see property dct:rightsHolder). This information SHOULD assist data consumers in determining the value of data, before actually accessing and processing it. Thus, the information SHOULD be publicly available. Furthermore, it can be helpful for validation processes by 3rd parties, e.g., a National Body in context of EU Delegated Regulations. Quality aspects SHOULD be noted via a free text and/or via URLs linking to further quality information. If there is absolutely no quality information, at least a note &quot;quality information is unknown&quot; SHOULD be given. If existing quality frameworks have been applied in the quality assessment, e.g., the Quality Packages from the EU EIP and NAPCORE projects [EU-EIP-QP], these frameworks should be referenced. </rdfs:comment>
@@ -700,6 +713,7 @@
     <!-- http://www.w3.org/ns/locn#address -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/locn#address">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <rdfs:comment xml:lang="en">This property MAY be used to specify the postal address of the Agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -715,6 +729,7 @@
     <!-- http://www.w3.org/ns/oa#hasTarget -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:comment xml:lang="en">This property MAY be used to describe the target of the quality annotation, referring back to the dataset being described. I.e., it is the inverse property of &quot;dqv:hasQualityAnnotation&quot; for class Dataset.</rdfs:comment>
@@ -729,6 +744,7 @@
     <!-- http://www.w3.org/ns/org#memberOf -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/ns/org#Organization"/>
         <rdfs:comment xml:lang="en">If the agent is of type person, this property SHOULD be used to specify the affiliation of the Agent, see § 7. Agent Types, Agent Roles and Contact Information. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -745,6 +761,7 @@
     <!-- http://xmlns.com/foaf/0.1/mbox -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]. The email SHOULD be used to establish a communication channel to the agent. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -761,6 +778,7 @@
     <!-- http://xmlns.com/foaf/0.1/phone -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/phone">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">This property MAY be used to provide the phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -776,6 +794,7 @@
     <!-- http://xmlns.com/foaf/0.1/workplaceHomepage -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/workplaceHomepage">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/locn#Address"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">This property MAY be used to specify the Web site of the Agent.</rdfs:comment>
@@ -790,6 +809,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#applicationLayerProtocol -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property describes the transmitting channel, i.e., the Application Layer Protocol, of the distribution. A controlled vocabulary is provided. </rdfs:comment>
@@ -806,6 +826,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#assessmentResult -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#assessmentResult">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
         <rdfs:comment xml:lang="en">This property MAY refer to the results and outcomes from an assessment process by some organisation, e.g., a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance of the Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [NAPCORE-NB] and installed individually in each Member State. The property MAY point to the most recent assessment procedure, including its date, its result as a free-text and/or a link referring to an assessment report online. The difference to the property dqv:hasQualityAnnotation is that the latter one is provided by the data provider, while the assessment results are provided by an external organisation.</rdfs:comment>
@@ -822,6 +843,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#communicationMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#communicationMethod">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property indicates for data services, e.g., data feeds, if the data interface of the data provider system functions in a push or pull mode. A controlled vocabulary is provided.</rdfs:comment>
@@ -838,6 +860,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#georeferencingMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#georeferencingMethod">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property SHOULD be used to specify the georeferencing method used in the dataset. A controlled vocabulary is provided, denoting commonly used georeferencing methods for mobility data.</rdfs:comment>
@@ -854,6 +877,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#grammar -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#grammar">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -871,6 +895,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#intendedInformationService -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#intendedInformationService">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property MAY describe predefined information services, which the data content is intended to support. Such services MAY be, e.g., information services for multimodal mobility, as specified by EC Delegated Regulation 2017/1926 [EC-MMTIS-DR]. Examples of such services include &quot;location search&quot;, which is based on a datasets with address identifiers, or &quot;trip plan computation&quot;, which is based on datasets about a road network. A controlled vocabulary is provided.</rdfs:comment>
@@ -888,6 +913,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#mobilityDataStandard -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#mobilityDataStandard">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <dcam:rangeIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
@@ -905,6 +931,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#mobilityTheme -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#mobilityTheme">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#theme"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -921,6 +948,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#networkCoverage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#networkCoverage">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property describes the part of the transport network that is covered by the delivered content. For road traffic, the property SHOULD refer to the network classification for which the data is provided. As a minimum, an international or higher-level classification, e.g., via functional road classes, is recommended to allow data search across different countries. In addition, national classifications are allowed. For other transport modes, the property is meant to refer to the physical infrastructure which is used by the services covered by the data. For all modes, the property SHOULD also indicate if the data content relates to the EU’s trans-European transport network [EU-TEN-T]. A controlled vocabulary is provided, denoting commonly used road and infrastructure network classes.</rdfs:comment>
@@ -938,6 +966,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#schema -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#schema">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
         <dcam:domainIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
@@ -954,6 +983,7 @@
     <!-- https://w3id.org/mobilitydcat-ap#transportMode -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mobilitydcat-ap#transportMode">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">This property describes the transport mode that is covered by the delivered content. Data can be valid for more than one mode, so a multiple choice should be applied. A controlled vocabulary is provided, denoting commonly used transport modes.</rdfs:comment>
@@ -1564,6 +1594,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Datasets.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:domainIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Standard"/>
@@ -1604,6 +1635,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Datasets.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/Location"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
@@ -1673,6 +1705,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Catalogues, it is a mandatory property to be used for Catalogue Records, and it is an optional property to be used for Datasets.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
@@ -1704,6 +1737,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a mandatory property to be used for Distributions.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/rightsHolder">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <dcam:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment xml:lang="en">This property refers to an entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data. It is also responsible for any statements about the data quality (if applicable, see property dqv:hasQualityAnnotation) and/or the relevance to legal frameworks (if applicable, see property dcatap:applicableLegislation). This entity is the direct contact for the platform operator or data consumers, who have questions or issues about the contents of a dataset. The Rights Holder will be in many cases identical with the Publisher information for class Dataset (see property dct:publisher) and/or for class Catalogue Record (see property dct:publisher). In this case, the contact data MAY be copied from the corresponding Publisher entries. There might be also cases with non-identical entities: e.g., when one or several Rights Holders contract a third-party Publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset. This property is analogue to an addition by [GEODCAT-AP-v2.0.0].</rdfs:comment>
@@ -1943,6 +1977,7 @@
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is an optional property to be used for Locations.</skos:scopeNote>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
         <dcam:domainIncludes rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
