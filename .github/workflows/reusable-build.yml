@@ -1,0 +1,71 @@
+name: Reusable — build spec
+
+on:
+  workflow_call:
+    inputs:
+      artifact_name:
+        description: 'Name for the uploaded dist artifact'
+        type: string
+        default: 'spec-dist'
+      draft_label:
+        description: 'What the build is, for the draft notice (see src/scripts/mark-draft.py); empty for a release, which gets no notice'
+        type: string
+        default: ''
+    outputs:
+      artifact_name:
+        description: 'Name of the uploaded dist artifact (pass to reusable-publish-gh-pages)'
+        value: ${{ jobs.build.outputs.artifact_name }}
+
+jobs:
+  build:
+    # A fixed image, not ubuntu-latest: the runner changes only with a commit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      artifact_name: ${{ inputs.artifact_name }}
+    env:
+      # Also stops puppeteer from downloading its own Chrome
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      # Installs the Node and uv versions pinned in .mise.toml. From here on
+      # every step is a mise task, so CI runs what `mise run lint` runs locally.
+      - name: Set up mise
+        uses: jdx/mise-action@v4
+
+      # Download caches only, not node_modules or .venv: both are content
+      # addressed, so a stale entry is harmless and restore-keys are safe
+      - name: Restore npm and uv download caches
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/uv
+          key: deps-${{ runner.os }}-${{ hashFiles('package-lock.json', 'uv.lock') }}
+          restore-keys: deps-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: mise run install
+
+      - name: Build
+        run: mise run build
+
+      - name: Mark as draft
+        if: inputs.draft_label != ''
+        env:
+          DRAFT_LABEL: ${{ inputs.draft_label }}
+        run: mise run mark-draft
+
+      # Reported, not enforced: a failed check does not stop a publish
+      - name: Check
+        run: mise run check
+        continue-on-error: true
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: dist/

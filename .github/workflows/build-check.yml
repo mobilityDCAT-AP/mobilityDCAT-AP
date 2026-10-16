@@ -1,0 +1,56 @@
+name: Build check — branches and pull requests (no publish)
+run-name: "Check ${{ github.event_name == 'pull_request' && format('PR #{0} ({1})', github.event.number, github.head_ref) || github.ref_name }}"
+
+# Runs the full build pipeline on work that is not yet on main, without
+# publishing anything to gh-pages. The built dist/ is uploaded as an
+# artifact, so the rendered spec can be downloaded and reviewed.
+#
+# Triggered on:
+#   - push to any branch except main and release/* (those have their own
+#     build-and-publish workflows)
+#   - pull requests targeting main or a release/* branch
+#   - manual run from any branch
+#
+# A push to a branch with an open pull request would otherwise build twice;
+# the concurrency group keys on the branch name so the newer run cancels the
+# older one.
+
+on:
+  push:
+    branches-ignore: [main, 'release/*', gh-pages]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
+      - '.mise.toml'
+      - '.github/workflows/build-check.yml'
+      - '.github/workflows/reusable-build.yml'
+  pull_request:
+    branches: [main, 'release/*']
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
+      - '.mise.toml'
+      - '.github/workflows/build-check.yml'
+      - '.github/workflows/reusable-build.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: build-check-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      draft_label: "an unpublished build of ${{ github.event_name == 'pull_request' && format('pull request #{0}', github.event.number) || github.ref_name }}"
