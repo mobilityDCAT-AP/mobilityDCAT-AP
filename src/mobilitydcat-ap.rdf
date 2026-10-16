@@ -1930,9 +1930,6 @@
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-dcat-3/#Property:period_start_date"/>
         <skos:scopeNote xml:lang="en">In mobilityDCAT-AP, this is a recommended property to be used for Periods of Time.</skos:scopeNote>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution">
-        <rdfs:comment xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#themeTaxonomy">
         <dcam:domainIncludes rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <dcam:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
