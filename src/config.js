@@ -62,16 +62,8 @@ var respecConfig = {
       uri: "./mobilitydcat-ap.jsonld",
     },
     {
-      label: "SHACL Basic Validation (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl",
-    },
-    {
-      label: "SHACL Range Constraints (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl",
-    },
-    {
-      label: "SHACL Controlled Vocabulary Constraints (Turtle)",
-      uri: "./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl",
+      label: "SHACL (Turtle)",
+      uri: "./shaclShapes/",
     }
     ],
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
@@ -101,6 +93,11 @@ var respecConfig = {
     github:               "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP",
     editors: [
       {
+        name:    "Daham Mohammed Mustafa",
+        company: "Fraunhofer Institute for Applied Information Technology FIT",
+        orcid:   "0000-0003-1867-4428",
+      },
+      {
         name:    "Lina Molinas Comet",
         company: "Fraunhofer Institute for Applied Information Technology FIT",
         orcid:   "0000-0001-5446-6947",
@@ -117,11 +114,6 @@ var respecConfig = {
         company: "Cefriel",
         orcid: "0000-0002-8235-7331",
 //        companyURL: ""
-      },
-      {
-        name:    "Daham Mohammed Mustafa",
-        company: "Fraunhofer Institute for Applied Information Technology FIT",
-        orcid:   "0000-0003-1867-4428",
       },
 
     ],
@@ -152,36 +144,29 @@ var respecConfig = {
       }
       ]
     },
+    {
+      key: "Reviewed by",
+      data: [
+      {
+        value: "NAPCORE SWG 4.4"
+      },
+      {
+        value: "European NAP operators"
+      },
+      {
+        value: "Editors of DCAT-AP/SEMIC Team"
+      },
+      ]
+    },
+    {
+      key: "Approved by",
+      data: [
+      {
+        value: "NAPCORE SWG 4.4"
+      },
+      ]
+    },
   ],
-
-//    {
-//      key: "Reviewed by",
-//      data: [
-//      {
-//        value: "Someone (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      {
-//        value: "Someone Else (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      ]
-//    },
-//    {
-//     key: "Approved by",
-//      data: [
-//      {
-//        value: "Someone (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      {
-//        value: "Someone Else (Some Organization)",
-//        href: "https://ec.europa.eu/"
-//      },
-//      ]
-//    }
-
-//    ],
     wg: "NAPCORE Sub-Working Group (SWG) 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
 //    wgURI: "https://joinup.ec.europa.eu/solution/geodcat-ap",
@@ -714,7 +699,7 @@ var respecConfig = {
       "Web-Annotation-Data-Model": {
         "href": "https://www.w3.org/TR/annotation-model/",
         "title": "Web Annotation Data Model",
-        "publisher":"World Wide Web Consortium. W3C",
+        "publisher":"W3C",
         "date": "23 February 2017"
       },
       "OpenSearch": {
@@ -783,17 +768,17 @@ var respecConfig = {
       "DXWG":{
         "href":"https://www.w3.org/2017/dxwg/",
         "title":"Dataset Exchange Working Group (DXWG)",
-        "publisher":"World Wide Web Consortium. W3C"
+        "publisher":"W3C"
        },
       "GLD":{
         "href":"https://www.w3.org/2011/gld/",
         "title":"Government Linked Data (GLD) Working Group",
-        "publisher":"World Wide Web Consortium. W3C"
+        "publisher":"W3C"
        },
       "VOCAB-DCAT-QA": {
         "title":"Data Catalog Vocabulary (DCAT) - Version 2. Section 13.1",
         "href":"https://www.w3.org/TR/vocab-dcat-2/#qualified-attribution",
-        "publisher":"World Wide Web Consortium. W3C"
+        "publisher":"W3C"
       },
       "DataCite-Types": {
         "href":"https://schema.datacite.org/meta/kernel-3/doc/DataCite-MetadataKernel_v3.1.pdf",
@@ -858,10 +843,77 @@ var respecConfig = {
         "title":"Web Annotation Ontology",
         "date":"23 February 2017",
       },
-      "DCAT": {
-        "title":"Data Catalog Vocabulary (DCAT) - Version 3",
-        "href":"https://www.w3.org/TR/vocab-dcat-3/",
-        "publisher":"World Wide Web Consortium. W3C",
+      // Specref entries as they were when 1.1.0 was published. Specref is
+      // looked up at build time and has changed since; these keep the
+      // bibliography of the published page.
+      "DCAT-AP": {
+        "href":"https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe",
+        "title":"DCAT Application Profile for data portals in Europe. Version 2.0.1",
+        "publisher":"European Commission",
+        "date":"8 June 2020"
+      },
+      "VOCAB-DCAT-2": {
+        "href":"https://www.w3.org/TR/vocab-dcat-2/",
+        "title":"Data Catalog Vocabulary (DCAT) - Version 2",
+        "authors":["Riccardo Albertoni","David Browning","Simon Cox","Alejandra Gonzalez Beltran","Andrea Perego","Peter Winstanley"],
+        "publisher":"W3C",
+        "date":"4 February 2020",
+        "status":"REC"
+      },
+      "FOAF": {
+        "href":"http://xmlns.com/foaf/spec",
+        "title":"FOAF Vocabulary Specification 0.99 (Paddington Edition)",
+        "authors":["Dan Brickley","Libby Miller"],
+        "publisher":"FOAF project",
+        "date":"14 January 2014"
+      },
+      "BCP47": {
+        "href":"https://www.rfc-editor.org/rfc/rfc5646",
+        "title":"Tags for Identifying Languages",
+        "authors":["A. Phillips, Ed.","M. Davis, Ed."],
+        "publisher":"IETF",
+        "date":"September 2009",
+        "status":"Best Current Practice"
+      },
+      "RFC2119": {
+        "href":"https://www.rfc-editor.org/rfc/rfc2119",
+        "title":"Key words for use in RFCs to Indicate Requirement Levels",
+        "authors":["S. Bradner"],
+        "publisher":"IETF",
+        "date":"March 1997",
+        "status":"Best Current Practice"
+      },
+      "RFC3966": {
+        "href":"https://www.rfc-editor.org/rfc/rfc3966",
+        "title":"The tel URI for Telephone Numbers",
+        "authors":["H. Schulzrinne"],
+        "publisher":"IETF",
+        "date":"December 2004",
+        "status":"Proposed Standard"
+      },
+      "RFC6068": {
+        "href":"https://www.rfc-editor.org/rfc/rfc6068",
+        "title":"The 'mailto' URI Scheme",
+        "authors":["M. Duerst","L. Masinter","J. Zawinski"],
+        "publisher":"IETF",
+        "date":"October 2010",
+        "status":"Proposed Standard"
+      },
+      "RFC6497": {
+        "href":"https://www.rfc-editor.org/rfc/rfc6497",
+        "title":"BCP 47 Extension T - Transformed Content",
+        "authors":["M. Davis","A. Phillips","Y. Umaoka","C. Falk"],
+        "publisher":"IETF",
+        "date":"February 2012",
+        "status":"Informational"
+      },
+      "RFC8174": {
+        "href":"https://www.rfc-editor.org/rfc/rfc8174",
+        "title":"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
+        "authors":["B. Leiba"],
+        "publisher":"IETF",
+        "date":"May 2017",
+        "status":"Best Current Practice"
       }
 
     }
