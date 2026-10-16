@@ -1,1 +1,15 @@
-.DS_Store*.bak*
+# Build output, produced by mise run build
+dist/
+
+# Node.js
+node_modules/
+
+# Python virtual environment (managed by uv)
+.venv/
+
+# Downloaded SHACL imports, reused by validate-examples.py
+.cache/
+
+# Editor and OS leftovers
+.DS_Store
+*.bak

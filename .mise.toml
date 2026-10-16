@@ -1,0 +1,70 @@
+[tools]
+node = "24"
+uv   = "latest"
+
+# Makes node_modules/.bin available without a global install
+[env]
+_.path = ["{{cwd}}/node_modules/.bin"]
+
+# ── Tasks ────────────────────────────────────────────────────────────────────
+
+[tasks.install]
+description = "Install all project dependencies (npm + uv sync)"
+run = [
+  "npm install",
+  "uv sync",
+]
+
+[tasks.clean]
+description = "Empty dist/ before a fresh build"
+run = "uv run python src/scripts/clean.py"
+
+[tasks.serialise]
+description = "Serialise the Turtle ontology -> RDF/XML + JSON-LD + N-Triples"
+depends = ["clean"]
+run = "uv run python src/scripts/serialise.py"
+
+# Depends on serialise so dist/ is always filled in the same order
+[tasks.build-spec]
+description = "Copy assets and build ReSpec HTML spec -> dist/index.html"
+depends = ["serialise"]
+run = [
+  "uv run python src/scripts/copy-assets.py",
+  "uv run python src/scripts/build-spec.py",
+]
+
+[tasks.build]
+description = "Full build: clean dist/, serialise Turtle, build ReSpec spec"
+depends = ["build-spec"]
+
+# Not part of build: CI runs it for every build except a release
+[tasks.mark-draft]
+description = "Mark dist/index.html as a draft; DRAFT_LABEL says what the build is (requires a prior build)"
+run = "uv run python src/scripts/mark-draft.py"
+
+[tasks.validate]
+description = "Validate dist/index.html markup with html-validate"
+run = "html-validate dist/index.html"
+
+# No build dependency, so CI can run the build and the checks as separate steps:
+# a failed build must stop a publish, a failed check is only reported there.
+[tasks.check]
+description = "Validate markup, list broken local references (requires a prior build)"
+run = [
+  "html-validate dist/index.html || true",
+  "uv run python src/scripts/check-refs.py",
+]
+
+[tasks.lint]
+description = "Full build, then all checks"
+depends = ["build"]
+run = [{ task = "check" }]
+
+[tasks.serve]
+description = "Serve src/ over HTTP for live ReSpec preview with interactive warnings"
+run = "uv run python src/scripts/serve.py"
+
+# No build dependency, like check: rebuild with mise run build when needed
+[tasks.serve-dist]
+description = "Serve dist/ over HTTP on port 8081 to view the built spec (requires a prior build)"
+run = "uv run python src/scripts/serve.py --dist"
