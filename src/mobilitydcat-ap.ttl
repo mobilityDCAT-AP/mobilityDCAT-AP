@@ -363,7 +363,7 @@ dcat:Dataset rdf:type owl:Class ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset> ,
-                <https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series
@@ -518,7 +518,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#MediaTypeOrExtent> ,
-                <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#MediaTypeorExtent> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-format> .
 
@@ -1520,7 +1520,7 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes dct:Location ,
                         skos:Concept ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/2012/09/odrl/semantic/draft/doco/skos_prefLabel.html> ,
+    rdfs:seeAlso <https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/> .		   
 
