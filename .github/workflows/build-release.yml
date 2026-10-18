@@ -1,0 +1,84 @@
+name: Build and publish — release/* (releases/X.Y.Z)
+run-name: Publish release ${{ github.ref_name }}
+
+# Triggered on push to any release/* branch or manually.
+# Branch name convention: release/X.Y.Z — no pre-release suffix; a draft
+# snapshot is a draft/X.Y.Z-draft.N tag instead. Example: release/3.0.0
+#
+# Publishes to gh-pages under:
+#   releases/3.0.0/   — the versioned copy
+#
+# If LATEST_RELEASE on main contains the same version as this branch,
+# also publishes to releases/latest/ automatically.
+#
+# This means hotfixes to the current latest release branch update
+# releases/latest/ automatically, just like any other push to that branch.
+# Hotfixes to older release branches only update their versioned directory.
+#
+# To promote a version to latest, run promote-latest.yml (workflow_dispatch).
+
+on:
+  push:
+    branches: ['release/*']
+  workflow_dispatch:
+
+jobs:
+  extract-version:
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.extract.outputs.version }}
+      is_latest: ${{ steps.check_latest.outputs.is_latest }}
+    steps:
+      - name: Extract and validate version from branch name
+        id: extract
+        run: |
+          VERSION="${GITHUB_REF_NAME#release/}"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "ERROR: '$VERSION' is not a valid release version number."
+            echo "Expected a release/X.Y.Z branch, for example release/3.0.0."
+            echo "This workflow must be triggered from a release/* branch, not from another branch."
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Checkout LATEST_RELEASE from main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          sparse-checkout: |
+            LATEST_RELEASE
+          sparse-checkout-cone-mode: false
+
+      - name: Check if this is the latest release
+        id: check_latest
+        run: |
+          LATEST=$(grep -v '^#' LATEST_RELEASE | tr -d '[:space:]')
+          if [ "$LATEST" = "${{ steps.extract.outputs.version }}" ]; then
+            echo "is_latest=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_latest=false" >> $GITHUB_OUTPUT
+          fi
+
+  # No draft_label: a release gets no draft notice
+  build:
+    needs: extract-version
+    uses: ./.github/workflows/reusable-build.yml
+
+  publish:
+    needs: [extract-version, build]
+    permissions:
+      contents: write
+    uses: ./.github/workflows/reusable-publish-gh-pages.yml
+    with:
+      artifact_name: ${{ needs.build.outputs.artifact_name }}
+      destination_dir: releases/${{ needs.extract-version.outputs.version }}
+
+  publish-latest:
+    needs: [extract-version, build]
+    if: needs.extract-version.outputs.is_latest == 'true'
+    permissions:
+      contents: write
+    uses: ./.github/workflows/reusable-publish-gh-pages.yml
+    with:
+      artifact_name: ${{ needs.build.outputs.artifact_name }}
+      destination_dir: releases/latest
