@@ -10,6 +10,17 @@ node_modules/
 # Downloaded SHACL imports, reused by validate-examples.py
 .cache/
 
+# Personal mise overrides
+mise.local.toml
+.mise.local.toml
+
+# Python bytecode
+__pycache__/
+
 # Editor and OS leftovers
 .DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
 *.bak
