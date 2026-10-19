@@ -163,7 +163,7 @@ foaf:depiction rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  https://w3id.org/mobilitydcatap#MobilityDataStandard
+###  https://w3id.org/mobilitydcat-ap#MobilityDataStandard
 mobilitydcatap:MobilityDataStandard rdf:type owl:Class ;
 	rdfs:subClassOf dct:Standard;
     rdfs:comment """The mobility data standard applied for the delivered content. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange.
@@ -197,13 +197,13 @@ vcard:Address rdf:type owl:Class ;
     rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1292> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Address(vCard)> .
 		   
-###  https://w3id.org/mobilitydcatap#Assessment
+###  https://w3id.org/mobilitydcat-ap#Assessment
 mobilitydcatap:Assessment rdf:type owl:Class ;
     rdfs:comment """An assessment procedure by an external organisation. This organisation may be a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance with the applicable Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies and installed individually in each Member State."""@en ;
     rdfs:label "Assessment"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     skos:scopeNote """The information is optional and needed for the documentation of the assessment procedure. It may be an internal information, only visible for assessment organisations or other authorised users.
-    For this entity the following properties are defined: "assessment date (dct:issued)" and "assessment result(oa:hasBody)."""@en ;
+    For this entity the following properties are defined: "assessment date (dct:issued)" and "assessment result (oa:hasBody)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://napcore.eu/national-bodies-3/> .
@@ -280,7 +280,7 @@ dct:RightsStatement rdf:type owl:Class ;
     rdfs:comment """A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."""@en ;
     skos:scopeNote """Reference to concrete (standard) licenses can be provided via another class dct:LicenseDocument.
     See the Wiki page on Rights and Licenses for further guidance.
-    For this entity the following properties are defined: "conditions for access and usage dct:type)", "rights statement text (dct:description)"."""@en ;
+    For this entity the following properties are defined: "conditions for access and usage (dct:type)", "rights statement text (dct:description)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#RightsStatement> ,
@@ -363,7 +363,7 @@ dcat:Dataset rdf:type owl:Class ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset> ,
-                <https://semiceu.github.io/DCAT-AP/releases/3.0.0-draft/#Dataset> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Dataset> .
 
 ### https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series
@@ -450,7 +450,7 @@ dct:Frequency rdf:type owl:Class ;
 eli:LegalResource rdf:type owl:Class ;
     rdfs:comment """The legislation, policy or policies that lie behind the rules that govern the service.
     The definition and properties of the Legal Resource class are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (ELI)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the ELI ontology. In this data specification the use is restricted to instances of this class that follow the ELI URI guidelines.
-    This specification does not impose any additional requirements to properties for this entity,"""@en ;
+    This specification does not impose any additional requirements to properties for this entity."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <http://data.europa.eu/eli/ontology#LegalResource> ,
@@ -485,7 +485,7 @@ vcard:Kind rdf:type owl:Class ;
     This class is the parent class for the four explicit types of vCards (vcard:Individual, vcard:Organization, vcard:Location, vcard:Group).
     The contact point might be populated with the same information as for an agent, see class foaf:Agent. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
     When providing contact information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 13. Privacy and security considerations.
-    For this entity the following properties are defined: "address (vcard:hasAddress)", "affiliation(vcard:organization-name)", "email(vcard:hasEmail)", "name (vcard:fn)", "phone (vcard:hasTelephone)", "URL (vcard:hasURL)"."""@en ;
+    For this entity the following properties are defined: "address (vcard:hasAddress)", "affiliation (vcard:organization-name)", "email (vcard:hasEmail)", "name (vcard:fn)", "phone (vcard:hasTelephone)", "URL (vcard:hasURL)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.w3.org/TR/vcard-rdf/#d4e1819> ,
@@ -518,7 +518,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#MediaTypeOrExtent> ,
-                <https://semiceu.github.io/DCAT-AP/releases/3.0.1-draft/#MediaTypeorExtent> ,
+                <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#MediaTypeorExtent> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#distribution-format> .
 
@@ -1520,7 +1520,7 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
     dcam:domainIncludes dct:Location ,
                         skos:Concept ;
     dcam:rangeIncludes rdfs:Literal ;
-    rdfs:seeAlso <https://www.w3.org/2012/09/odrl/semantic/draft/doco/skos_prefLabel.html> ,
+    rdfs:seeAlso <https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel> ,
                 <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/#accessibility-and-multilingual-aspects> ,
                 <https://semiceu.github.io/GeoDCAT-AP/releases/> .		   
 
@@ -2073,16 +2073,6 @@ geodcatap:referenceSystem a owl:ObjectProperty ;
 
 ###  https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap
 <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap> rdf:type owl:NamedIndividual .
-
-
-###  https://w3id.org/mobilitydcatap/
-<https://w3id.org/mobilitydcatap/> rdf:type owl:NamedIndividual ;
-                                   dct:conformsTo <http://data.europa.eu/r5r/> ,
-                                                <https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24> ,
-                                                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements> ,
-                                                <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap> ,
-                                                <https://www.w3.org/TR/vocab-dcat-3/> ;
-                                   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> .
 
 
 ###  https://www.w3.org/TR/vocab-dcat-3/
