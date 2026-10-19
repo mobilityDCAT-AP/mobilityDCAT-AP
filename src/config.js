@@ -57,16 +57,16 @@ var respecConfig = {
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
     // Statuses for specStatus https://respec.org/docs/#specStatus
     // Status for drafts is set to "unofficial" as it is visually more explicit that the spec is not stable
-    // Status for the specification: "base" to avoid W3C boilerplate.
-    specStatus: "base",
+    // Status for the released specifications is set to "base" to avoid W3C boilerplate.
+    specStatus: "unofficial",
     // Latest published version should point to releases, not the editor's draft
     latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
     shortName: "mobilitydcat-ap",
-    canonicalURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
+    canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
     prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
 /* MOBILITYDCAT-AP specific - start */
-    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
-    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
+    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.1-draft.1/",
+    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
     latestVersionURI:     "https://w3id.org/mobilitydcat-ap/releases/",
 /* MOBILITYDCAT-AP specific - end   */
     edDraftURI:           "https://w3id.org/mobilitydcat-ap/drafts/latest/",
@@ -134,17 +134,17 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "3.0.0"
+        value: "3.0.1-draft.1"
       }
       ]
     },
     {
 	  key: "Previous version:",
-	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/" } ]
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
 	},
     {
 	  key: "This version:",
-	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/" } ]
 	}       
   ],
     wg: "NAPCORE Task 4.4",
