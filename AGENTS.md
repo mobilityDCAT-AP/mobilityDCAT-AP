@@ -22,9 +22,9 @@ stale.
 | Question | Document |
 |----------|----------|
 | What mobilityDCAT-AP is, where it is published, where to report issues | `README.md` |
-| What is in the repository, which workflow publishes where, the branch and tag naming convention, a summary of each procedure | `REPOSITORY.md` |
-| How to install the toolchain, build, lint, preview | `DEVELOPMENT.md` |
-| How to edit the draft, publish a snapshot, cut a release, promote it, hotfix it, and what to set in `config.js` | `PROCEDURES.md` |
+| What is in the repository, which workflow publishes where, the branch and tag naming convention, a summary of each procedure | `docs/REPOSITORY.md` |
+| How to install the toolchain, build, lint, preview | `docs/DEVELOPMENT.md` |
+| How to edit the draft, publish a snapshot, cut a release, promote it, hotfix it, and what to set in `config.js` | `docs/PROCEDURES.md` |
 
 ## Hard rules
 
@@ -37,11 +37,11 @@ serialisations are produced by `serialise.py` into `dist/` on every build.
 
 **Never edit `gh-pages` for a version built here.** The workflows own it. The
 only hand edits there are corrections to the versions published before this
-layout (1.0.0, 1.0.1, 1.1.0 and their drafts); see `REPOSITORY.md`.
+layout (1.0.0, 1.0.1, 1.1.0 and their drafts); see `docs/REPOSITORY.md`.
 
 **Keep the draft values in `src/config.js` on `main`.** Release values belong
 on the `release/X.Y.Z` branch only; see the `config.js` checklist in
-`PROCEDURES.md`. The draft notice on published drafts comes from CI
+`docs/PROCEDURES.md`. The draft notice on published drafts comes from CI
 (`src/scripts/mark-draft.py`), not from `config.js`; do not add one to the
 source.
 
