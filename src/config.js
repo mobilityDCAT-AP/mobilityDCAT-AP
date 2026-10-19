@@ -55,7 +55,9 @@ var respecConfig = {
     }
     ],
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
-    // Status for drafts is set to "unofficial" as it is visually more explicit that the spec is not stable: https://respec.org/docs/#specStatus
+    // Statuses for specStatus https://respec.org/docs/#specStatus
+    // Status for drafts is set to "unofficial" as it is visually more explicit that the spec is not stable
+    // Status for the released specifications is set to "base" to avoid W3C boilerplate.
     specStatus: "unofficial",
     // Latest published version should point to releases, not the editor's draft
     latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
