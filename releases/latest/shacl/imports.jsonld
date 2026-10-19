@@ -1,0 +1,55 @@
+[
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/2006/time.ttl"
+      },
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns.ttl"
+      },
+      {
+        "@id": "http://www.w3.org/ns/adms.ttl"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov-o.ttl"
+      },
+      {
+        "@id": "http://xmlns.com/foaf/spec/index.rdf"
+      },
+      {
+        "@id": "https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/voc/r5r.ttl"
+      },
+      {
+        "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/deprecateduris.ttl"
+      },
+      {
+        "@id": "https://spdx.org/rdf/terms/spdx-ontology.owl.xml"
+      },
+      {
+        "@id": "https://www.dublincore.org/2020/01/20/dublin_core_terms.ttl"
+      },
+      {
+        "@id": "https://www.w3.org/2011/content.rdf"
+      },
+      {
+        "@id": "https://www.w3.org/ns/dcat2.ttl"
+      },
+      {
+        "@id": "https://www.w3.org/ns/dqv.ttl"
+      },
+      {
+        "@id": "https://www.w3.org/ns/locn.ttl"
+      },
+      {
+        "@id": "https://www.w3.org/ns/oa.ttl"
+      },
+      {
+        "@id": "https://www.w3.org/ns/org.ttl"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4693 @@
+[
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_mobilityTheme",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Mobility-related theme of the delivered content. Mandatory (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Mobility theme is mandatory. At least one value must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "mobility theme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityTheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape_assessmentDate",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The date of the latest assessment procedure."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Assessment date must be a temporal literal (xsd:date, xsd:dateTime, xsd:gYear or xsd:gYearMonth) and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "assessment date"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cbd21386f60abdd689527742c7aff4543f4234a720f16b83ce50e5af133f2c4005"
+          },
+          {
+            "@id": "_:cb6eb3773ad80e4348baec96cf29f9f092222cc6f446d10e5df5b63db0baa320c2"
+          },
+          {
+            "@id": "_:cb79732ee390175663c316de28a940eff32a9a8c88358655936152a7d53bc2f085"
+          },
+          {
+            "@id": "_:cbc0188f38d01ef29391da4609bbf2b38b9909a5f09b2d34db85b5c2ca1410bd13"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/issued"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbd21386f60abdd689527742c7aff4543f4234a720f16b83ce50e5af133f2c4005",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb6eb3773ad80e4348baec96cf29f9f092222cc6f446d10e5df5b63db0baa320c2",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb79732ee390175663c316de28a940eff32a9a8c88358655936152a7d53bc2f085",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#gYear"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbc0188f38d01ef29391da4609bbf2b38b9909a5f09b2d34db85b5c2ca1410bd13",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#gYearMonth"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Identifier_Shape_notation",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "A string that is an identifier in the context of the identifier scheme referenced by its datatype (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "An Identifier must have exactly one skos:notation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "notation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#notation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Concept_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "A concept used in context of dcat:theme (renamed from Category)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Concept (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Concept_Shape_inScheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#theme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_inScheme",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Gazetteer to which the Location belongs. geoDCAT-AP addition (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Gazetteer can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "gazetteer"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape_type",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Conditions for access and usage from the mobilityDCAT-AP controlled vocabulary (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Conditions for access and usage is mandatory. At least one value must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "conditions for access and usage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#QualityAnnotation_Shape_hasBody",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "URL or Embedded Textual Body with quality details (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Quality annotation resource can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "quality annotation resource"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/oa#hasBody"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_record",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Metadata record that is part of the Catalogue. Raised to mandatory (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Catalogue must have at least one catalogue record"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "catalogue record"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#record"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_temporal",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Time interval when the distribution is facilitated technically. mobilityDCAT-AP addition on Distribution (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Temporal coverage can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "temporal coverage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/temporal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_title",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Name of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Title must be a literal, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_postCode",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The postal code of an Address."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Postal code must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "postal code"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/locn#postCode"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_fn",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Name of the Kind (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Name is mandatory and must appear exactly once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "name"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns#fn"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_intendedInformationService",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Information services the data content is intended to support (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "intended information service"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#intendedInformationService"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "A statement about intellectual property rights. Adds mandatory conditions for access and usage."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Rights Statement (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape_description"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape_type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://purl.org/dc/terms/RightsStatement"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape_description",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Free-text rights statement (path changed from rdfs:label to dct:description). Repeated for parallel language versions (§12) (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Rights statement text must be a literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "rights statement text"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_surname",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "If the agent is a person, this property specifies their surname."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Surname must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "surname"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/surname"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Extends DCAT-AP 3.0.1 Distribution. Raises format, rights to mandatory. Adds mobilityDataStandard."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Distribution (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_accessURL"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_applicationLayerProtocol"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_characterEncoding"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_communicationMethod"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_dataFormatNotes"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_description"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_downloadURL"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_format"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_mobilityDataStandard"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_rights"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_sample"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_temporal"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_mobilityDataStandard",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Mobility data standard applied for the delivered content. Mandatory, sub-property of dct:conformsTo (1..*)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Mobility data standard is mandatory. At least one must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "mobility data standard"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityDataStandard"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/adms#Asset"
+    ],
+    "http://data.europa.eu/r5r/availability": [
+      {
+        "@id": "http://data.europa.eu/r5r/stable"
+      }
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://www.w3.org/TR/shacl"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-08-14"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b"
+      }
+    ],
+    "http://purl.org/dc/terms/dateCopyrighted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2023"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "SHACL validation constraints for mobilityDCAT-AP 3.0.0, extending DCAT-AP 3.0.1. Contains only the mobilityDCAT-AP-specific cardinality, nodeKind and datatype deltas; properties unchanged from DCAT-AP are inherited via owl:imports. Range constraints are in the range file. Controlled vocabulary constraints are in the MDR file."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-08-14"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-06-21"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://napcore.eu/"
+      }
+    ],
+    "http://purl.org/dc/terms/rightsHolder": [
+      {
+        "@id": "https://napcore.eu/"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "mobilityDCAT-AP 3.0.0 SHACL Constraints - Basic Validation"
+      }
+    ],
+    "http://purl.org/ontology/bibo/editor": [
+      {
+        "@id": "_:cb2c9ac7d3ade8c6dded4e58120f93708756f1218ff6eb4777718395c9e81d45cb9"
+      },
+      {
+        "@id": "_:cb33997f405c7d94fb44453a9dc8ce72cef9c4cc2f758c622ae6d4bccbe2ae1b875"
+      },
+      {
+        "@id": "_:cb36703b5212ad95a09cfeda138e9933936ca091eafb61f42412440c9ab927688d4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/shapes.ttl"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "3.0.0"
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+        "@id": "http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "_:cb4d72f2e7dba970b04456a3eafb418bd80eb6ca408c4ae18762e5b2fa7e37412ad"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Group"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "NAPCORE SWG 4.4"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/page": [
+      {
+        "@id": "https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2c9ac7d3ade8c6dded4e58120f93708756f1218ff6eb4777718395c9e81d45cb9",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://orcid.org/0000-0001-5446-6947"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Lina Molinas Comet"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb33997f405c7d94fb44453a9dc8ce72cef9c4cc2f758c622ae6d4bccbe2ae1b875",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://orcid.org/0000-0002-8235-7331"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Mario Scrocca"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb36703b5212ad95a09cfeda138e9933936ca091eafb61f42412440c9ab927688d4",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://orcid.org/0000-0003-1867-4428"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Daham Mustafa"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb4d72f2e7dba970b04456a3eafb418bd80eb6ca408c4ae18762e5b2fa7e37412ad",
+    "@type": [
+      "http://www.w3.org/ns/adms#AssetDistribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+      },
+      {
+        "@id": "http://www.w3.org/ns/formats/data/Turtle"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "SHACL Basic Validation (Turtle)"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes.ttl"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "text/turtle"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_sample",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Sample of the delivered content. mobilityDCAT-AP places adms:sample on Distribution (0..*)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Sample must be a blank node or IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "sample"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/adms#sample"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_title",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Name of the mobility data portal. Repeated for parallel language versions (§12)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Contact information following the vCard specification, used as the range of dcat:contactPoint. Properties analogous to geoDCAT-AP v3.0.0 additions."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Kind (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_email"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_fn"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasAddress"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasTelephone"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasURL"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_organizationName"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#contactPoint"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_accessURL",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "URL giving access to the Distribution. mobilityDCAT-AP adds maxCount 1 (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Access URL is mandatory. Exactly one must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "access URL"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#accessURL"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_otherIdentifier",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Additional identifier besides dct:identifier (mobilityDCAT-AP addition; not in DCAT-AP Catalogue)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Other identifier can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "other identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/adms#identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasAddress",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Postal address of the Kind (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Address can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "address"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns#hasAddress"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_georeferencingMethod",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Georeferencing method used in the dataset (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "georeferencing method"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#georeferencingMethod"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Identifier_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "An identifier in a particular context, used as the range of adms:identifier."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Identifier (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Identifier_Shape_notation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/adms#Identifier"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_version",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Version of the mobility data standard as applied (path changed from owl:versionInfo to dcat:version) (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Version must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "version"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#version"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_description",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Free-text description of the dataset series (§12)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Extends DCAT-AP 3.0.1 Catalogue Record. Raises language and listing date to mandatory."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Catalogue Record (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_language"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_listingDate"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#CatalogRecord"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_description",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Free-text account of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Description must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_accrualPeriodicity",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "How often the delivered content is updated. Raised to mandatory (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Frequency is mandatory. Exactly one value must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "frequency"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/accrualPeriodicity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_adminUnitL1",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The country of an Address."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Country must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "country"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/locn#adminUnitL1"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_publisher",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Entity that publishes the dataset. Raised to mandatory (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Publisher is mandatory. Exactly one publisher must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_language",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Language of the textual metadata. Raised to mandatory (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Language is mandatory. At least one language must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_thoroughfare",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The street name and civic number of an Address."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Street address must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "street address"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/locn#thoroughfare"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_email",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068]."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Email must be an IRI using the mailto: scheme and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "email"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/mbox"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_networkCoverage",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Part of the transport network covered by the delivered content (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "network coverage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#networkCoverage"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_hasQualityAnnotation",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Quality aspects regarding the delivered content. mobility/DQV addition (not in DCAT-AP Dataset) (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "quality description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_referenceSystem",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Spatial reference system used in the dataset (OGC EPSG register). Sub-property of dct:conformsTo. geoDCAT-AP addition (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "reference system"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://data.europa.eu/930/referenceSystem"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_conformsTo",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Reference to the applied mobility data standard and to individual/national/content-specific profiles (range dct:Standard) (0..*)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "conforms to"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/conformsTo"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_identifier",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Identifier for the dataset. Restricted to 0..1 in mobilityDCAT-AP (DCAT-AP allows 0..*). SHOULD be the URI from rdf:about."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Identifier must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_email",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Email address of the Kind using fully qualified mailto: URI scheme [RFC6068] (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Email is mandatory and must appear exactly once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "email"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns#hasEmail"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_address",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The postal address of the Agent. Analogous to a geoDCAT-AP v3.0.0 addition."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Address must be a blank node or IRI and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "address"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/locn#address"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape_assessmentResult",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The result of the latest assessment procedure, as a URL or Embedded Textual Body."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Assessment result can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "assessment result"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/oa#hasBody"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasTelephone",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Phone number of the Kind using fully qualified tel: URI scheme [RFC3966] (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Phone can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "phone"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns#hasTelephone"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_firstName",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "If the agent is a person, this property specifies their first name."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "First name must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "first name"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/firstName"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_organizationName",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Affiliation of the Kind (§12) (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Affiliation must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "affiliation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns#organization-name"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_description",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Free-text description of the mobility data platform. Repeated for parallel language versions (§12)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_identifier",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Geographic identifier for the Location (EU authority tables, NUTS or GeoNames). geoDCAT-AP addition (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Geographic identifier must be a literal or IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "geographic identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb2a50b10e0188b670f09c3a768d636e19e19411b131b4fe687c376363e06a8d7"
+          },
+          {
+            "@id": "_:cb13c5c33494cdc68e8288ece8b650325e309616a1a58fa0c8e8fdd1890ad547d52"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2a50b10e0188b670f09c3a768d636e19e19411b131b4fe687c376363e06a8d7",
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb13c5c33494cdc68e8288ece8b650325e309616a1a58fa0c8e8fdd1890ad547d52",
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "A collection of datasets published separately but sharing characteristics. Reused from DCAT-AP v3; mobilityDCAT-AP raises publisher to mandatory and adds mobilityTheme."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Dataset Series (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_description"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_mobilityTheme"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_publisher"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#DatasetSeries"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_workplaceHomepage",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The website of the Agent."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Workplace homepage must be an IRI and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "workplace homepage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/workplaceHomepage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasURL",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Web site of the Kind (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "URL can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "URL"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2006/vcard/ns#hasURL"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_communicationMethod",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Push or pull mode of the data interface (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Communication method can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "communication method"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#communicationMethod"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_keyword",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Keyword or tag describing the dataset (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Keywords must not be empty and must have a valid EU language tag."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "keyword / tag"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#keyword"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_title",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Name of the dataset series (§12)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_phone",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. Analogous to a geoDCAT-AP v3.0.0 addition."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Phone must be an IRI using the tel: scheme and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "phone"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/phone"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_rights",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Rights statement about intellectual property rights. Raised to mandatory (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Rights is mandatory. Exactly one rights statement must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "rights"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/rights"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_title",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "A name given to the mobility data standard (§12) (0..*)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Title must be a literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_identifier",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Identifier for the mobility data portal (0..*). SHOULD be the URI from rdf:about. geoDCAT-AP addition (not in DCAT-AP Catalogue)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Identifier must be a literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/identifier"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Postal address of an Agent. Analogous to geoDCAT-AP v3.0.0 additions."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Address (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_adminUnitL1"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_adminUnitL2"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_postCode"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_postName"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_thoroughfare"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/locn#Address"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Extends DCAT-AP 3.0.1 Catalogue. Raises homepage, spatial, record to mandatory."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Catalogue (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_description"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_homepage"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_identifier"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_otherIdentifier"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_record"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_spatial"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Catalog"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_homepage",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Main web page of the mobility data portal. Raised to mandatory (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Homepage is mandatory and must appear exactly once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "homepage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/homepage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_title",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Name of the dataset. Repeated for parallel language versions (§12)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_distribution",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Links the dataset to an available distribution. Raised to mandatory (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Distribution is mandatory. At least one distribution must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "dataset distribution"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#distribution"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_downloadURL",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Direct link to a downloadable file. mobilityDCAT-AP adds maxCount 1 (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Download URL can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "download URL"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#downloadURL"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_assessmentResult",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Results from an assessment process by an external organisation (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Assessment result can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "assessment result"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#assessmentResult"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_dataFormatNotes",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Additional textual information about the format. Repeated for parallel language versions (§12) (0..*)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Data format notes must be a literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "data format notes"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#dataFormatNotes"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_description",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Free-text description of the dataset. Repeated for parallel language versions (§12)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#languageIn": [
+      {
+        "@list": [
+          {
+            "@value": "bg"
+          },
+          {
+            "@value": "cs"
+          },
+          {
+            "@value": "da"
+          },
+          {
+            "@value": "de"
+          },
+          {
+            "@value": "el"
+          },
+          {
+            "@value": "en"
+          },
+          {
+            "@value": "es"
+          },
+          {
+            "@value": "et"
+          },
+          {
+            "@value": "fi"
+          },
+          {
+            "@value": "fr"
+          },
+          {
+            "@value": "ga"
+          },
+          {
+            "@value": "hr"
+          },
+          {
+            "@value": "hu"
+          },
+          {
+            "@value": "it"
+          },
+          {
+            "@value": "lt"
+          },
+          {
+            "@value": "lv"
+          },
+          {
+            "@value": "mt"
+          },
+          {
+            "@value": "nl"
+          },
+          {
+            "@value": "pl"
+          },
+          {
+            "@value": "pt"
+          },
+          {
+            "@value": "ro"
+          },
+          {
+            "@value": "sk"
+          },
+          {
+            "@value": "sl"
+          },
+          {
+            "@value": "sv"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minLength": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#uniqueLang": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_mobilityTheme",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Mobility-related theme of the dataset series (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "mobility theme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#mobilityTheme"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_spatial",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Country where the data platform is hosted. Raised to mandatory (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Geographical coverage is mandatory. At least one location must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "geographical coverage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/spatial"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_characterEncoding",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Technical encoding format of the delivered content. geoDCAT-AP addition (not in DCAT-AP Distribution) (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Character encoding must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "character encoding"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2011/content#characterEncoding"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_transportMode",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Transport mode covered by the delivered content (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "transport mode"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#transportMode"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_adminUnitL2",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The administrative area of an Address (province, county, region, or state)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Administrative area must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "administrative area"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/locn#adminUnitL2"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_listingDate",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Date on which the metadata entry was included in the Catalogue (replaces dct:created). Raised to mandatory (1..1); the Temporal Literal datatype is inherited from DCAT-AP's DateOrDateTimeDataType shape."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Listing date is mandatory. Exactly one value must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "listing date"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/issued"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "An assessment procedure by an external organisation (e.g. a National Body under EU Delegated Regulations)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Assessment (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape_assessmentDate"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape_assessmentResult"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#Assessment"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "A spatial region or named place. Adds geoDCAT-AP gazetteer, geographic identifier and geographic name."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Location (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_identifier"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_inScheme"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_prefLabel"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://purl.org/dc/terms/Location"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Extends DCAT-AP 3.0.1 Dataset. Raises distribution, frequency, spatial, publisher to mandatory. Adds mobilityTheme."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Dataset (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_accrualPeriodicity"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_assessmentResult"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_description"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_distribution"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_georeferencingMethod"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_hasQualityAnnotation"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_identifier"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_intendedInformationService"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_keyword"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_mobilityTheme"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_networkCoverage"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_publisher"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_referenceSystem"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_rightsHolder"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_spatial"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_title"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_transportMode"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_postName",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The city of an Address."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "City must be a literal and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "city"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/locn#postName"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Concept_Shape_inScheme",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The Concept Scheme to which the Concept belongs."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Concept scheme can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "concept scheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Extends DCAT-AP 3.0.1 Agent with mobility/geoDCAT contact and organizational properties. Base properties (foaf:name, dct:type) are inherited from DCAT-AP."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Agent (mobilityDCAT-AP) - Extensions"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_address"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_affiliation"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_email"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_firstName"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_phone"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_surname"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_workplaceHomepage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_publisher",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Entity that publishes the dataset series (0..1), as in DCAT-AP."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Publisher can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_affiliation",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Organizational affiliation of the Agent. Analogous to a geoDCAT-AP v3.0.0 addition."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Affiliation must be a blank node or IRI and can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "affiliation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/org#memberOf"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_rightsHolder",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Entity that legally owns or holds the rights of the data. geoDCAT-AP addition (not in DCAT-AP Dataset) (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "rights holder"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/rightsHolder"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_applicationLayerProtocol",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Transmitting channel of the distribution (0..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Application layer protocol can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "application layer protocol"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Warning"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "The mobility data standard applied for the delivered content. Sub-class of dct:Standard."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Mobility Data Standard (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_conformsTo"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_title"
+      },
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_version"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_prefLabel",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Preferred label of the Location (§12). geoDCAT-AP addition (0..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Geographic name must be a literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "geographic name"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#prefLabel"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_format",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Technical syntax of the delivered content. Raised to mandatory (1..1)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Format is mandatory. Exactly one must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "format"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/format"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_publisher",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Entity responsible for creation and maintenance of the metadata entry (geoDCAT addition; not in DCAT-AP Catalogue Record)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Publisher can appear at most once"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/publisher"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Info"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_spatial",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "Geographic region covered by the delivered content. Raised to mandatory (1..n)."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@language": "en",
+        "@value": "Geographical coverage is mandatory. At least one location must be provided"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "geographical coverage"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://purl.org/dc/terms/spatial"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#severity": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Violation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#QualityAnnotation_Shape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@language": "en",
+        "@value": "An annotation about quality aspects of the delivered content."
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@language": "en",
+        "@value": "Quality Annotation (mobilityDCAT-AP)"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#QualityAnnotation_Shape_hasBody"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/dqv#QualityAnnotation"
+      }
+    ]
+  }
+]

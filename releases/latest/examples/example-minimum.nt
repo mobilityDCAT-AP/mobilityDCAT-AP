@@ -1,0 +1,30 @@
+<https://trafficdata.se/catalog> <http://purl.org/dc/terms/description> "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."@en .
+<https://trafficdata.se/catalog> <http://purl.org/dc/terms/publisher> <https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> .
+<https://trafficdata.se/catalog> <http://purl.org/dc/terms/spatial> <http://publications.europa.eu/resource/authority/country/SWE> .
+<https://trafficdata.se/catalog> <http://purl.org/dc/terms/title> "Trafficdata.se"@en .
+<https://trafficdata.se/catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Catalog> .
+<https://trafficdata.se/catalog> <http://www.w3.org/ns/dcat#record> <https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> .
+<https://trafficdata.se/catalog> <http://xmlns.com/foaf/0.1/homepage> <https://trafficdata.se/> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/XML> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> <http://purl.org/dc/terms/rights> _:cb0 .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> <http://www.w3.org/ns/dcat#accessURL> <http://www.trafikverket.se/tjanster/x/> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://purl.org/dc/terms/accrualPeriodicity> <http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://purl.org/dc/terms/description> "Traffic signs from the Swedish Transport Administration. Datex II format."@en .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://purl.org/dc/terms/publisher> <https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://purl.org/dc/terms/spatial> <http://publications.europa.eu/resource/authority/country/SWE> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://purl.org/dc/terms/title> "Traffic signs expressing traffic regulations and identifying dangers, Speed limits"@en .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Dataset> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <http://www.w3.org/ns/dcat#distribution> <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <https://w3id.org/mobilitydcat-ap#mobilityTheme> <https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits> .
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> <https://w3id.org/mobilitydcat-ap#mobilityTheme> <https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations> .
+<https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> <http://purl.org/dc/terms/issued> "2019-12-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> <http://purl.org/dc/terms/language> <http://publications.europa.eu/resource/authority/language/ENG> .
+<https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> <http://purl.org/dc/terms/modified> "2019-12-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> .
+<https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> <http://xmlns.com/foaf/0.1/primaryTopic> <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> .
+<https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> <http://xmlns.com/foaf/0.1/name> "Trafikverket"@sv .
+_:cb0 <http://purl.org/dc/terms/type> <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided> .
+_:cb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/RightsStatement> .

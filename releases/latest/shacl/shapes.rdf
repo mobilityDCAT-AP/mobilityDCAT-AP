@@ -1,0 +1,1591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:sh="http://www.w3.org/ns/shacl#"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dcatap="http://data.europa.eu/r5r/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Identifier_Shape">
+    <sh:description xml:lang="en">An identifier in a particular context, used as the range of adms:identifier.</sh:description>
+    <sh:name xml:lang="en">Identifier (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Identifier_Shape_notation">
+        <sh:description xml:lang="en">A string that is an identifier in the context of the identifier scheme referenced by its datatype (1..1).</sh:description>
+        <sh:message xml:lang="en">An Identifier must have exactly one skos:notation</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">notation</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape">
+    <sh:description xml:lang="en">Extends DCAT-AP 3.0.1 Agent with mobility/geoDCAT contact and organizational properties. Base properties (foaf:name, dct:type) are inherited from DCAT-AP.</sh:description>
+    <sh:name xml:lang="en">Agent (mobilityDCAT-AP) - Extensions</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_address">
+        <sh:description xml:lang="en">The postal address of the Agent. Analogous to a geoDCAT-AP v3.0.0 addition.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Address must be a blank node or IRI and can appear at most once</sh:message>
+        <sh:name xml:lang="en">address</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#address"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_affiliation">
+        <sh:description xml:lang="en">Organizational affiliation of the Agent. Analogous to a geoDCAT-AP v3.0.0 addition.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Affiliation must be a blank node or IRI and can appear at most once</sh:message>
+        <sh:name xml:lang="en">affiliation</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_email">
+        <sh:description xml:lang="en">The email address of the Agent, specified using fully qualified mailto: URI scheme [RFC6068].</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Email must be an IRI using the mailto: scheme and can appear at most once</sh:message>
+        <sh:name xml:lang="en">email</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_firstName">
+        <sh:description xml:lang="en">If the agent is a person, this property specifies their first name.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">First name must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">first name</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_phone">
+        <sh:description xml:lang="en">The phone number of the Agent, specified using fully qualified tel: URI scheme [RFC3966]. Analogous to a geoDCAT-AP v3.0.0 addition.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Phone must be an IRI using the tel: scheme and can appear at most once</sh:message>
+        <sh:name xml:lang="en">phone</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/phone"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_surname">
+        <sh:description xml:lang="en">If the agent is a person, this property specifies their surname.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Surname must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">surname</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/surname"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Agent_Shape_workplaceHomepage">
+        <sh:description xml:lang="en">The website of the Agent.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Workplace homepage must be an IRI and can appear at most once</sh:message>
+        <sh:name xml:lang="en">workplace homepage</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/workplaceHomepage"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape">
+    <sh:description xml:lang="en">Extends DCAT-AP 3.0.1 Catalogue. Raises homepage, spatial, record to mandatory.</sh:description>
+    <sh:name xml:lang="en">Catalogue (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_description">
+        <sh:description xml:lang="en">Free-text description of the mobility data platform. Repeated for parallel language versions (§12).</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">description</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_homepage">
+        <sh:description xml:lang="en">Main web page of the mobility data portal. Raised to mandatory (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Homepage is mandatory and must appear exactly once</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">homepage</sh:name>
+        <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_identifier">
+        <sh:description xml:lang="en">Identifier for the mobility data portal (0..*). SHOULD be the URI from rdf:about. geoDCAT-AP addition (not in DCAT-AP Catalogue).</sh:description>
+        <sh:message xml:lang="en">Identifier must be a literal</sh:message>
+        <sh:name xml:lang="en">identifier</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_otherIdentifier">
+        <sh:description xml:lang="en">Additional identifier besides dct:identifier (mobilityDCAT-AP addition; not in DCAT-AP Catalogue).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Other identifier can appear at most once</sh:message>
+        <sh:name xml:lang="en">other identifier</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_record">
+        <sh:description xml:lang="en">Metadata record that is part of the Catalogue. Raised to mandatory (1..n).</sh:description>
+        <sh:message xml:lang="en">Catalogue must have at least one catalogue record</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">catalogue record</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#record"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_spatial">
+        <sh:description xml:lang="en">Country where the data platform is hosted. Raised to mandatory (1..n).</sh:description>
+        <sh:message xml:lang="en">Geographical coverage is mandatory. At least one location must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">geographical coverage</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Catalogue_Shape_title">
+        <sh:description xml:lang="en">Name of the mobility data portal. Repeated for parallel language versions (§12).</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">title</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape">
+    <sh:description xml:lang="en">A spatial region or named place. Adds geoDCAT-AP gazetteer, geographic identifier and geographic name.</sh:description>
+    <sh:name xml:lang="en">Location (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_identifier">
+        <sh:description xml:lang="en">Geographic identifier for the Location (EU authority tables, NUTS or GeoNames). geoDCAT-AP addition (0..n).</sh:description>
+        <sh:message xml:lang="en">Geographic identifier must be a literal or IRI</sh:message>
+        <sh:name xml:lang="en">geographic identifier</sh:name>
+        <sh:or rdf:parseType="Collection">
+          <rdf:Description rdf:nodeID="cb2a50b10e0188b670f09c3a768d636e19e19411b131b4fe687c376363e06a8d7">
+            <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+          </rdf:Description>
+          <rdf:Description rdf:nodeID="cb13c5c33494cdc68e8288ece8b650325e309616a1a58fa0c8e8fdd1890ad547d52">
+            <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+          </rdf:Description>
+        </sh:or>
+        <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_inScheme">
+        <sh:description xml:lang="en">Gazetteer to which the Location belongs. geoDCAT-AP addition (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Gazetteer can appear at most once</sh:message>
+        <sh:name xml:lang="en">gazetteer</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Location_Shape_prefLabel">
+        <sh:description xml:lang="en">Preferred label of the Location (§12). geoDCAT-AP addition (0..n).</sh:description>
+        <sh:message xml:lang="en">Geographic name must be a literal</sh:message>
+        <sh:name xml:lang="en">geographic name</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://purl.org/dc/terms/Location"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape">
+    <sh:description xml:lang="en">Extends DCAT-AP 3.0.1 Dataset. Raises distribution, frequency, spatial, publisher to mandatory. Adds mobilityTheme.</sh:description>
+    <sh:name xml:lang="en">Dataset (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_accrualPeriodicity">
+        <sh:description xml:lang="en">How often the delivered content is updated. Raised to mandatory (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Frequency is mandatory. Exactly one value must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">frequency</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/accrualPeriodicity"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_assessmentResult">
+        <sh:description xml:lang="en">Results from an assessment process by an external organisation (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Assessment result can appear at most once</sh:message>
+        <sh:name xml:lang="en">assessment result</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#assessmentResult"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_description">
+        <sh:description xml:lang="en">Free-text description of the dataset. Repeated for parallel language versions (§12).</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">description</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_distribution">
+        <sh:description xml:lang="en">Links the dataset to an available distribution. Raised to mandatory (1..n).</sh:description>
+        <sh:message xml:lang="en">Distribution is mandatory. At least one distribution must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">dataset distribution</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_georeferencingMethod">
+        <sh:description xml:lang="en">Georeferencing method used in the dataset (0..n).</sh:description>
+        <sh:name xml:lang="en">georeferencing method</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#georeferencingMethod"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_hasQualityAnnotation">
+        <sh:description xml:lang="en">Quality aspects regarding the delivered content. mobility/DQV addition (not in DCAT-AP Dataset) (0..n).</sh:description>
+        <sh:name xml:lang="en">quality description</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/dqv#hasQualityAnnotation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_identifier">
+        <sh:description xml:lang="en">Identifier for the dataset. Restricted to 0..1 in mobilityDCAT-AP (DCAT-AP allows 0..*). SHOULD be the URI from rdf:about.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Identifier must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">identifier</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_intendedInformationService">
+        <sh:description xml:lang="en">Information services the data content is intended to support (0..n).</sh:description>
+        <sh:name xml:lang="en">intended information service</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#intendedInformationService"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_keyword">
+        <sh:description xml:lang="en">Keyword or tag describing the dataset (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint.</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Keywords must not be empty and must have a valid EU language tag.</sh:message>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">keyword / tag</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#keyword"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_mobilityTheme">
+        <sh:description xml:lang="en">Mobility-related theme of the delivered content. Mandatory (1..n).</sh:description>
+        <sh:message xml:lang="en">Mobility theme is mandatory. At least one value must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">mobility theme</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_networkCoverage">
+        <sh:description xml:lang="en">Part of the transport network covered by the delivered content (0..n).</sh:description>
+        <sh:name xml:lang="en">network coverage</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#networkCoverage"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_publisher">
+        <sh:description xml:lang="en">Entity that publishes the dataset. Raised to mandatory (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Publisher is mandatory. Exactly one publisher must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">publisher</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_referenceSystem">
+        <sh:description xml:lang="en">Spatial reference system used in the dataset (OGC EPSG register). Sub-property of dct:conformsTo. geoDCAT-AP addition (0..n).</sh:description>
+        <sh:name xml:lang="en">reference system</sh:name>
+        <sh:path rdf:resource="http://data.europa.eu/930/referenceSystem"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_rightsHolder">
+        <sh:description xml:lang="en">Entity that legally owns or holds the rights of the data. geoDCAT-AP addition (not in DCAT-AP Dataset) (0..n).</sh:description>
+        <sh:name xml:lang="en">rights holder</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/rightsHolder"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_spatial">
+        <sh:description xml:lang="en">Geographic region covered by the delivered content. Raised to mandatory (1..n).</sh:description>
+        <sh:message xml:lang="en">Geographical coverage is mandatory. At least one location must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">geographical coverage</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_title">
+        <sh:description xml:lang="en">Name of the dataset. Repeated for parallel language versions (§12).</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">title</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Dataset_Shape_transportMode">
+        <sh:description xml:lang="en">Transport mode covered by the delivered content (0..n).</sh:description>
+        <sh:name xml:lang="en">transport mode</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#transportMode"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape">
+    <sh:description xml:lang="en">Contact information following the vCard specification, used as the range of dcat:contactPoint. Properties analogous to geoDCAT-AP v3.0.0 additions.</sh:description>
+    <sh:name xml:lang="en">Kind (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_email">
+        <sh:description xml:lang="en">Email address of the Kind using fully qualified mailto: URI scheme [RFC6068] (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Email is mandatory and must appear exactly once</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">email</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_fn">
+        <sh:description xml:lang="en">Name of the Kind (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Name is mandatory and must appear exactly once</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">name</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#fn"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasAddress">
+        <sh:description xml:lang="en">Postal address of the Kind (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Address can appear at most once</sh:message>
+        <sh:name xml:lang="en">address</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasTelephone">
+        <sh:description xml:lang="en">Phone number of the Kind using fully qualified tel: URI scheme [RFC3966] (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Phone can appear at most once</sh:message>
+        <sh:name xml:lang="en">phone</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_hasURL">
+        <sh:description xml:lang="en">Web site of the Kind (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">URL can appear at most once</sh:message>
+        <sh:name xml:lang="en">URL</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasURL"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Kind_Shape_organizationName">
+        <sh:description xml:lang="en">Affiliation of the Kind (§12) (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Affiliation must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">affiliation</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#organization-name"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetObjectsOf rdf:resource="http://www.w3.org/ns/dcat#contactPoint"/>
+  </sh:NodeShape>
+  <owl:Ontology rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes">
+    <dcatap:availability rdf:resource="http://data.europa.eu/r5r/stable"/>
+    <dct:conformsTo rdf:resource="https://www.w3.org/TR/shacl"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-14</dct:created>
+    <dct:creator>
+      <foaf:Group rdf:nodeID="cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b">
+        <foaf:name>NAPCORE SWG 4.4</foaf:name>
+        <foaf:page rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"/>
+      </foaf:Group>
+    </dct:creator>
+    <dct:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2023</dct:dateCopyrighted>
+    <dct:description xml:lang="en">SHACL validation constraints for mobilityDCAT-AP 3.0.0, extending DCAT-AP 3.0.1. Contains only the mobilityDCAT-AP-specific cardinality, nodeKind and datatype deltas; properties unchanged from DCAT-AP are inherited via owl:imports. Range constraints are in the range file. Controlled vocabulary constraints are in the MDR file.</dct:description>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-14</dct:issued>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-21</dct:modified>
+    <dct:publisher rdf:resource="https://napcore.eu/"/>
+    <dct:rightsHolder rdf:resource="https://napcore.eu/"/>
+    <dct:title xml:lang="en">mobilityDCAT-AP 3.0.0 SHACL Constraints - Basic Validation</dct:title>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb2c9ac7d3ade8c6dded4e58120f93708756f1218ff6eb4777718395c9e81d45cb9">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0001-5446-6947"/>
+        <foaf:name>Lina Molinas Comet</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb33997f405c7d94fb44453a9dc8ce72cef9c4cc2f758c622ae6d4bccbe2ae1b875">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0002-8235-7331"/>
+        <foaf:name>Mario Scrocca</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person rdf:nodeID="cb36703b5212ad95a09cfeda138e9933936ca091eafb61f42412440c9ab927688d4">
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0003-1867-4428"/>
+        <foaf:name>Daham Mustafa</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/"/>
+    <owl:imports rdf:resource="https://semiceu.github.io/DCAT-AP/releases/3.0.1/html/shacl/shapes.ttl"/>
+    <owl:versionInfo>3.0.0</owl:versionInfo>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"/>
+    <dcat:distribution>
+      <adms:AssetDistribution rdf:nodeID="cb4d72f2e7dba970b04456a3eafb418bd80eb6ca408c4ae18762e5b2fa7e37412ad">
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:format rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
+        <dct:title xml:lang="en">SHACL Basic Validation (Turtle)</dct:title>
+        <dcat:downloadURL rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes.ttl"/>
+        <dcat:mediaType>text/turtle</dcat:mediaType>
+      </adms:AssetDistribution>
+    </dcat:distribution>
+  </owl:Ontology>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape">
+    <sh:description xml:lang="en">A statement about intellectual property rights. Adds mandatory conditions for access and usage.</sh:description>
+    <sh:name xml:lang="en">Rights Statement (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape_description">
+        <sh:description xml:lang="en">Free-text rights statement (path changed from rdfs:label to dct:description). Repeated for parallel language versions (§12) (0..n).</sh:description>
+        <sh:message xml:lang="en">Rights statement text must be a literal</sh:message>
+        <sh:name xml:lang="en">rights statement text</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#RightsStatement_Shape_type">
+        <sh:description xml:lang="en">Conditions for access and usage from the mobilityDCAT-AP controlled vocabulary (1..n).</sh:description>
+        <sh:message xml:lang="en">Conditions for access and usage is mandatory. At least one value must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">conditions for access and usage</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape">
+    <sh:description xml:lang="en">Extends DCAT-AP 3.0.1 Distribution. Raises format, rights to mandatory. Adds mobilityDataStandard.</sh:description>
+    <sh:name xml:lang="en">Distribution (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_accessURL">
+        <sh:description xml:lang="en">URL giving access to the Distribution. mobilityDCAT-AP adds maxCount 1 (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Access URL is mandatory. Exactly one must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">access URL</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_applicationLayerProtocol">
+        <sh:description xml:lang="en">Transmitting channel of the distribution (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Application layer protocol can appear at most once</sh:message>
+        <sh:name xml:lang="en">application layer protocol</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#applicationLayerProtocol"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_characterEncoding">
+        <sh:description xml:lang="en">Technical encoding format of the delivered content. geoDCAT-AP addition (not in DCAT-AP Distribution) (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Character encoding must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">character encoding</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/2011/content#characterEncoding"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_communicationMethod">
+        <sh:description xml:lang="en">Push or pull mode of the data interface (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Communication method can appear at most once</sh:message>
+        <sh:name xml:lang="en">communication method</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#communicationMethod"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_dataFormatNotes">
+        <sh:description xml:lang="en">Additional textual information about the format. Repeated for parallel language versions (§12) (0..*).</sh:description>
+        <sh:message xml:lang="en">Data format notes must be a literal</sh:message>
+        <sh:name xml:lang="en">data format notes</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#dataFormatNotes"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_description">
+        <sh:description xml:lang="en">Free-text account of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint.</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Description must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">description</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_downloadURL">
+        <sh:description xml:lang="en">Direct link to a downloadable file. mobilityDCAT-AP adds maxCount 1 (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Download URL can appear at most once</sh:message>
+        <sh:name xml:lang="en">download URL</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_format">
+        <sh:description xml:lang="en">Technical syntax of the delivered content. Raised to mandatory (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Format is mandatory. Exactly one must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">format</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/format"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_mobilityDataStandard">
+        <sh:description xml:lang="en">Mobility data standard applied for the delivered content. Mandatory, sub-property of dct:conformsTo (1..*).</sh:description>
+        <sh:message xml:lang="en">Mobility data standard is mandatory. At least one must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">mobility data standard</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityDataStandard"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_rights">
+        <sh:description xml:lang="en">Rights statement about intellectual property rights. Raised to mandatory (1..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Rights is mandatory. Exactly one rights statement must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">rights</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/rights"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_sample">
+        <sh:description xml:lang="en">Sample of the delivered content. mobilityDCAT-AP places adms:sample on Distribution (0..*).</sh:description>
+        <sh:message xml:lang="en">Sample must be a blank node or IRI</sh:message>
+        <sh:name xml:lang="en">sample</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/adms#sample"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_temporal">
+        <sh:description xml:lang="en">Time interval when the distribution is facilitated technically. mobilityDCAT-AP addition on Distribution (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Temporal coverage can appear at most once</sh:message>
+        <sh:name xml:lang="en">temporal coverage</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Distribution_Shape_title">
+        <sh:description xml:lang="en">Name of the Distribution (§12) (0..n). Adds EU-language-tag check over the inherited DCAT-AP constraint.</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Title must be a literal, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">title</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape">
+    <sh:description xml:lang="en">A collection of datasets published separately but sharing characteristics. Reused from DCAT-AP v3; mobilityDCAT-AP raises publisher to mandatory and adds mobilityTheme.</sh:description>
+    <sh:name xml:lang="en">Dataset Series (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_description">
+        <sh:description xml:lang="en">Free-text description of the dataset series (§12).</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Description is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">description</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_mobilityTheme">
+        <sh:description xml:lang="en">Mobility-related theme of the dataset series (0..n).</sh:description>
+        <sh:name xml:lang="en">mobility theme</sh:name>
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#mobilityTheme"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_publisher">
+        <sh:description xml:lang="en">Entity that publishes the dataset series (0..1), as in DCAT-AP.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Publisher can appear at most once</sh:message>
+        <sh:name xml:lang="en">publisher</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#DatasetSeries_Shape_title">
+        <sh:description xml:lang="en">Name of the dataset series (§12).</sh:description>
+        <sh:languageIn rdf:parseType="Resource">
+          <rdf:first>bg</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>cs</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>da</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>de</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>el</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>en</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>es</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>et</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>fi</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>fr</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>ga</rdf:first>
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:first>hr</rdf:first>
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:first>hu</rdf:first>
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first>it</rdf:first>
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:first>lt</rdf:first>
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first>lv</rdf:first>
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:first>mt</rdf:first>
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first>nl</rdf:first>
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:first>pl</rdf:first>
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first>pt</rdf:first>
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:first>ro</rdf:first>
+                                                  <rdf:rest rdf:parseType="Resource">
+                                                    <rdf:first>sk</rdf:first>
+                                                    <rdf:rest rdf:parseType="Resource">
+                                                      <rdf:first>sl</rdf:first>
+                                                      <rdf:rest rdf:parseType="Resource">
+                                                        <rdf:first>sv</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </rdf:rest>
+                                                    </rdf:rest>
+                                                  </rdf:rest>
+                                                </rdf:rest>
+                                              </rdf:rest>
+                                            </rdf:rest>
+                                          </rdf:rest>
+                                        </rdf:rest>
+                                      </rdf:rest>
+                                    </rdf:rest>
+                                  </rdf:rest>
+                                </rdf:rest>
+                              </rdf:rest>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </sh:languageIn>
+        <sh:message xml:lang="en">Title is mandatory, must not be empty, must have a valid EU language tag, and may have only one value per language</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
+        <sh:name xml:lang="en">title</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+        <sh:uniqueLang rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sh:uniqueLang>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#DatasetSeries"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape">
+    <sh:description xml:lang="en">The mobility data standard applied for the delivered content. Sub-class of dct:Standard.</sh:description>
+    <sh:name xml:lang="en">Mobility Data Standard (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_conformsTo">
+        <sh:description xml:lang="en">Reference to the applied mobility data standard and to individual/national/content-specific profiles (range dct:Standard) (0..*).</sh:description>
+        <sh:name xml:lang="en">conforms to</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_title">
+        <sh:description xml:lang="en">A name given to the mobility data standard (§12) (0..*).</sh:description>
+        <sh:message xml:lang="en">Title must be a literal</sh:message>
+        <sh:name xml:lang="en">title</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#MobilityDataStandard_Shape_version">
+        <sh:description xml:lang="en">Version of the mobility data standard as applied (path changed from owl:versionInfo to dcat:version) (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Version must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">version</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/dcat#version"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#QualityAnnotation_Shape">
+    <sh:description xml:lang="en">An annotation about quality aspects of the delivered content.</sh:description>
+    <sh:name xml:lang="en">Quality Annotation (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#QualityAnnotation_Shape_hasBody">
+        <sh:description xml:lang="en">URL or Embedded Textual Body with quality details (0..1).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Quality annotation resource can appear at most once</sh:message>
+        <sh:name xml:lang="en">quality annotation resource</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape">
+    <sh:description xml:lang="en">Postal address of an Agent. Analogous to geoDCAT-AP v3.0.0 additions.</sh:description>
+    <sh:name xml:lang="en">Address (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_adminUnitL1">
+        <sh:description xml:lang="en">The country of an Address.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Country must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">country</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_adminUnitL2">
+        <sh:description xml:lang="en">The administrative area of an Address (province, county, region, or state).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Administrative area must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">administrative area</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_postCode">
+        <sh:description xml:lang="en">The postal code of an Address.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Postal code must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">postal code</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_postName">
+        <sh:description xml:lang="en">The city of an Address.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">City must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">city</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#postName"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Address_Shape_thoroughfare">
+        <sh:description xml:lang="en">The street name and civic number of an Address.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Street address must be a literal and can appear at most once</sh:message>
+        <sh:name xml:lang="en">street address</sh:name>
+        <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <sh:path rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/locn#Address"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape">
+    <sh:description xml:lang="en">An assessment procedure by an external organisation (e.g. a National Body under EU Delegated Regulations).</sh:description>
+    <sh:name xml:lang="en">Assessment (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape_assessmentDate">
+        <sh:description xml:lang="en">The date of the latest assessment procedure.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Assessment date must be a temporal literal (xsd:date, xsd:dateTime, xsd:gYear or xsd:gYearMonth) and can appear at most once</sh:message>
+        <sh:name xml:lang="en">assessment date</sh:name>
+        <sh:or rdf:parseType="Collection">
+          <rdf:Description rdf:nodeID="cbd21386f60abdd689527742c7aff4543f4234a720f16b83ce50e5af133f2c4005">
+            <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+          </rdf:Description>
+          <rdf:Description rdf:nodeID="cb6eb3773ad80e4348baec96cf29f9f092222cc6f446d10e5df5b63db0baa320c2">
+            <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+          </rdf:Description>
+          <rdf:Description rdf:nodeID="cb79732ee390175663c316de28a940eff32a9a8c88358655936152a7d53bc2f085">
+            <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+          </rdf:Description>
+          <rdf:Description rdf:nodeID="cbc0188f38d01ef29391da4609bbf2b38b9909a5f09b2d34db85b5c2ca1410bd13">
+            <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+          </rdf:Description>
+        </sh:or>
+        <sh:path rdf:resource="http://purl.org/dc/terms/issued"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Assessment_Shape_assessmentResult">
+        <sh:description xml:lang="en">The result of the latest assessment procedure, as a URL or Embedded Textual Body.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Assessment result can appear at most once</sh:message>
+        <sh:name xml:lang="en">assessment result</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="https://w3id.org/mobilitydcat-ap#Assessment"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Concept_Shape">
+    <sh:description xml:lang="en">A concept used in context of dcat:theme (renamed from Category).</sh:description>
+    <sh:name xml:lang="en">Concept (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#Concept_Shape_inScheme">
+        <sh:description xml:lang="en">The Concept Scheme to which the Concept belongs.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Concept scheme can appear at most once</sh:message>
+        <sh:name xml:lang="en">concept scheme</sh:name>
+        <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetObjectsOf rdf:resource="http://www.w3.org/ns/dcat#theme"/>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape">
+    <sh:description xml:lang="en">Extends DCAT-AP 3.0.1 Catalogue Record. Raises language and listing date to mandatory.</sh:description>
+    <sh:name xml:lang="en">Catalogue Record (mobilityDCAT-AP)</sh:name>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_language">
+        <sh:description xml:lang="en">Language of the textual metadata. Raised to mandatory (1..n).</sh:description>
+        <sh:message xml:lang="en">Language is mandatory. At least one language must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">language</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/language"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_listingDate">
+        <sh:description xml:lang="en">Date on which the metadata entry was included in the Catalogue (replaces dct:created). Raised to mandatory (1..1); the Temporal Literal datatype is inherited from DCAT-AP's DateOrDateTimeDataType shape.</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Listing date is mandatory. Exactly one value must be provided</sh:message>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name xml:lang="en">listing date</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/issued"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes#CatalogueRecord_Shape_publisher">
+        <sh:description xml:lang="en">Entity responsible for creation and maintenance of the metadata entry (geoDCAT addition; not in DCAT-AP Catalogue Record).</sh:description>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:message xml:lang="en">Publisher can appear at most once</sh:message>
+        <sh:name xml:lang="en">publisher</sh:name>
+        <sh:path rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Info"/>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+  </sh:NodeShape>
+</rdf:RDF>
