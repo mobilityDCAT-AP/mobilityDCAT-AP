@@ -1,7 +1,7 @@
 # Agent instructions
 
 Guidance for coding agents working in this repository. Vendor-neutral by
-design: `CLAUDE.md` imports this file rather than restating it.
+design: one file for every agent, with no tool-specific copies.
 
 ## What this project is
 
