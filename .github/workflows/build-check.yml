@@ -11,9 +11,11 @@ run-name: "Check ${{ github.event_name == 'pull_request' && format('PR #{0} ({1}
 #   - pull requests targeting main or a release/* branch
 #   - manual run from any branch
 #
-# A push to a branch with an open pull request would otherwise build twice;
-# the concurrency group keys on the branch name so the newer run cancels the
-# older one.
+# A push to a branch with an open pull request builds twice, once for the
+# push and once for the pull request. The concurrency group keys on the event
+# as well as the branch, so the two runs do not cancel each other; a cancelled
+# run shows on the pull request as a failed check. A newer run of the same
+# event still cancels the older one on that branch.
 
 on:
   push:
@@ -43,7 +45,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: build-check-${{ github.head_ref || github.ref_name }}
+  group: build-check-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 permissions:
