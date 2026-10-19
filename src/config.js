@@ -60,7 +60,7 @@ var respecConfig = {
     latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
     shortName: "mobilitydcat-ap",
     canonicalURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
-    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
+    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
 /* MOBILITYDCAT-AP specific - start */
     thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
     prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
