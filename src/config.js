@@ -14,8 +14,7 @@ var respecConfig = {
       ],
     copyrightStart: 2023,
     overrideCopyright: "<p>Copyright &copy; 2023-2026 NAPCORE. This document is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 License</a>.</p>",
-    publishDate: "2026-10-01",
-
+    publishDate: "2026-10-19",
     alternateFormats: [
     {
       label: "RDF/XML",
@@ -56,11 +55,11 @@ var respecConfig = {
     ],
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
     // Status for drafts is set to "unofficial" as it is visually more explicit that the spec is not stable: https://respec.org/docs/#specStatus
-    specStatus: "unofficial",
+    specStatus: "REC",
     // Latest published version should point to releases, not the editor's draft
     latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
     shortName: "mobilitydcat-ap",
-    canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
+    canonicalURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
     prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
 /* MOBILITYDCAT-AP specific - start */
     thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
@@ -113,7 +112,7 @@ var respecConfig = {
     ],
     authors: [
     {
-      name: "NAPCORE Sub-Working Group (SWG) 4.4",
+      name: "NAPCORE Task 4.4",
       url: "https://github.com/mobilityDCAT-AP/",
       company: "NAPCORE (National Access Point Coordination Organisation for Europe) Organization",
       companyURL: "https://napcore.eu/"
@@ -145,7 +144,7 @@ var respecConfig = {
 	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
 	}       
   ],
-    wg: "NAPCORE Sub-Working Group (SWG) 4.4",
+    wg: "NAPCORE Task 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
     inlineCSS: "true",
     lint: "false",
