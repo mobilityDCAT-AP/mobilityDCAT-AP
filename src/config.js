@@ -14,7 +14,7 @@ var respecConfig = {
       ],
     copyrightStart: 2023,
     overrideCopyright: "<p>Copyright &copy; 2023-2026 NAPCORE. This document is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 License</a>.</p>",
-    publishDate: "2026-10-01",
+    publishDate: "2026-10-19",
 
     alternateFormats: [
     {
@@ -61,10 +61,10 @@ var respecConfig = {
     latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
     shortName: "mobilitydcat-ap",
     canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
-    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
+    prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
 /* MOBILITYDCAT-AP specific - start */
-    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
-    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
+    thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.1-draft.1/",
+    prevVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
     latestVersionURI:     "https://w3id.org/mobilitydcat-ap/releases/",
 /* MOBILITYDCAT-AP specific - end   */
     edDraftURI:           "https://w3id.org/mobilitydcat-ap/drafts/latest/",
@@ -113,7 +113,7 @@ var respecConfig = {
     ],
     authors: [
     {
-      name: "NAPCORE Sub-Working Group (SWG) 4.4",
+      name: "NAPCORE Task 4.4",
       url: "https://github.com/mobilityDCAT-AP/",
       company: "NAPCORE (National Access Point Coordination Organisation for Europe) Organization",
       companyURL: "https://napcore.eu/"
@@ -132,20 +132,20 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "3.0.0"
+        value: "3.0.1-draft.1"
       }
       ]
     },
     {
 	  key: "Previous version:",
-	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/1.1.0/" } ]
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
 	},
     {
 	  key: "This version:",
-	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/3.0.0/" } ]
+	  data: [ { value : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/", href : "https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/" } ]
 	}       
   ],
-    wg: "NAPCORE Sub-Working Group (SWG) 4.4",
+    wg: "NAPCORE Task 4.4",
     wgURI: "https://github.com/mobilityDCAT-AP/",
     inlineCSS: "true",
     lint: "false",
