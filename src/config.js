@@ -28,6 +28,7 @@ var respecConfig = {
       label: "JSON-LD",
       uri: "./mobilitydcat-ap.jsonld",
     },
+    { label: "N-Triples", uri: "./mobilitydcat-ap.nt" },
     {
       label: "SHACL shapes (Turtle)",
       uri: "./shacl/shapes.ttl",
