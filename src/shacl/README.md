@@ -36,4 +36,4 @@ For validation, see: **https://github.com/mobilityDCAT-AP/validation**
 
 ## Previous version
 
-SHACL shapes for v1.1.0 are in `drafts/1.1.0-draft-0.1/shaclShapes`.
+SHACL shapes for v1.1.0 are in `releases/1.1.0/shaclShapes`.
