@@ -144,7 +144,7 @@
     ],
     "http://purl.org/dc/terms/creator": [
       {
-        "@id": "_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511"
+        "@id": "_:cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d"
       }
     ],
     "http://purl.org/dc/terms/dateCopyrighted": [
@@ -225,13 +225,13 @@
     ]
   },
   {
-    "@id": "_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511",
+    "@id": "_:cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d",
     "@type": [
       "http://xmlns.com/foaf/0.1/Group"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
-        "@value": "NAPCORE SWG 4.4"
+        "@value": "NAPCORE Task 4.4"
       }
     ],
     "http://xmlns.com/foaf/0.1/page": [
