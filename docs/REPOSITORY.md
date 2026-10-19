@@ -3,7 +3,7 @@
 This document describes the source layout, the versioning convention and the
 GitHub Actions publishing workflow of the
 [mobilityDCAT-AP](https://w3id.org/mobilitydcat-ap/releases/) repository. What
-mobilityDCAT-AP is, and where to report issues, is in [`README.md`](README.md).
+mobilityDCAT-AP is, and where to report issues, is in [`README.md`](../README.md).
 
 # Concepts
 
