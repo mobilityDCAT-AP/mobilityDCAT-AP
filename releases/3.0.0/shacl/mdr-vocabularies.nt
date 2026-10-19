@@ -1,0 +1,559 @@
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV> <http://www.w3.org/ns/shacl#description> "The type of the publishing organisation, taken from the ADMS Publisher Type vocabulary (http://purl.org/adms/publishertype/1.0), which distinguishes national, regional and local authorities, companies, academic and standardisation bodies and similar. Use of this vocabulary is recommended; other values are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV> <http://www.w3.org/ns/shacl#message> "publisher type (dct:type) should include at least one concept from the ADMS Publisher Type vocabulary."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV> <http://www.w3.org/ns/shacl#or> _:cb2899859faac76757791d14c60544a54f4c3913a9c0644b66f4f6723d1a7749bb5 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Agent_PublisherType_CV> <http://www.w3.org/ns/shacl#targetClass> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationLayerProtocolRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction> <http://www.w3.org/ns/shacl#property> _:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_MobilityShapeCV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_MobilityShapeCV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#CatalogRecord> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV> <http://www.w3.org/ns/shacl#description> "The entity responsible for publishing the catalogue record, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV> <http://www.w3.org/ns/shacl#message> "publisher should include at least one concept from the EU Corporate body table."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV> <http://www.w3.org/ns/shacl#or> _:cb31a56482758e18e0542110a28e1d11aab053a72022e47025c3c03dbd7a652084f .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CatalogueRecord_Publisher_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#CatalogRecord> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_MobilityShapeCV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_MobilityShapeCV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV> <http://www.w3.org/ns/shacl#description> "The entity responsible for publishing the catalogue, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV> <http://www.w3.org/ns/shacl#message> "publisher should include at least one concept from the EU Corporate body table."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV> <http://www.w3.org/ns/shacl#or> _:cb1bfd01932a7fea0771423c80c453f1b10ab08e67b6bbae529e9931b0fe381a8bd .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Publisher_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV> <http://www.w3.org/ns/shacl#description> "The geographical coverage of the catalogue, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV> <http://www.w3.org/ns/shacl#message> "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV> <http://www.w3.org/ns/shacl#or> _:cb2c4b5f670f7cfdd3db8a0cb78265caae8406d0c6f5abd9651af963a4f5be65213 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Catalogue_Spatial_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Catalog> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "CommunicationMethodRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction> <http://www.w3.org/ns/shacl#property> _:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "ConditionsForAccessAndUsageRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction> <http://www.w3.org/ns/shacl#property> _:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "ContinentRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction> <http://www.w3.org/ns/shacl#property> _:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "CorporateBodyRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> <http://www.w3.org/ns/shacl#property> _:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "CountryRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction> <http://www.w3.org/ns/shacl#property> _:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "DataThemeRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction> <http://www.w3.org/ns/shacl#property> _:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityShapeCV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityShapeCV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#DatasetSeries> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV> <http://www.w3.org/ns/shacl#description> "Values classify the theme of a mobility dataset series using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV> <http://www.w3.org/ns/shacl#message> "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV> <http://www.w3.org/ns/shacl#or> _:cb24491d2bf34a6a40d0666f1314226324b96805642fd91480bb246dc47ba84457b .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_MobilityTheme_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#DatasetSeries> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV> <http://www.w3.org/ns/shacl#description> "The geographical coverage of the dataset series, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV> <http://www.w3.org/ns/shacl#message> "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV> <http://www.w3.org/ns/shacl#or> _:cb1ccccad0b53117a8f21f3a948c0f946e53ea0c2ee890df0109a4aff43638ecf27 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DatasetSeries_Spatial_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#DatasetSeries> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV> <http://www.w3.org/ns/shacl#description> "Values state the georeferencing method of the resource, using the Georeferencing Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/georeferencing-method). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/georeferencing-method/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV> <http://www.w3.org/ns/shacl#message> "georeferencingMethod should include at least one concept from the Georeferencing Method vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV> <http://www.w3.org/ns/shacl#or> _:cb15387cc315efbeed901daec1135139482b9d7c327eda5cb70b8177d4cc2a95371 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_GeoreferencingMethod_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV> <http://www.w3.org/ns/shacl#description> "Values describe the intended information service for the dataset, using the Intended information service controlled vocabulary (https://w3id.org/mobilitydcat-ap/intended-information-service). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/intended-information-service/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV> <http://www.w3.org/ns/shacl#message> "intendedInformationService should include at least one concept from the Intended information service vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV> <http://www.w3.org/ns/shacl#or> _:cb293e38ef2a76328111e1d5f79061ca43159bf44da4218743807ef5948b9b301a2 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_IntendedInformationService_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityShapeCV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV> <http://www.w3.org/ns/shacl#description> "Values classify the theme of a mobility dataset using the Mobility Theme controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-theme), which is organised in two hierarchy levels: data content category and data content sub-category. At least one value must come from this vocabulary; if no applicable concept exists, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-theme/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV> <http://www.w3.org/ns/shacl#message> "mobilityTheme should include at least one concept from the Mobility Theme vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV> <http://www.w3.org/ns/shacl#or> _:cb18d91513f425aa37881f7b8d5b738a2f2d47384ae42ad237bcc521881684e91d4 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_MobilityTheme_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV> <http://www.w3.org/ns/shacl#description> "Values state the transport network coverage of the dataset, using the Network Coverage controlled vocabulary (https://w3id.org/mobilitydcat-ap/network-coverage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/network-coverage/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV> <http://www.w3.org/ns/shacl#message> "networkCoverage should include at least one concept from the Network Coverage vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV> <http://www.w3.org/ns/shacl#or> _:cb25e2b6fa323382afefad8b089309d9b770385ae0c230a7ff9b93b2aa1e6fc4300 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_NetworkCoverage_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV> <http://www.w3.org/ns/shacl#description> "The entity responsible for publishing the dataset, referenced from the EU Corporate body authority table (http://publications.europa.eu/resource/authority/corporate-body). Use of this vocabulary is recommended; other values, such as a national organisation not listed there, are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV> <http://www.w3.org/ns/shacl#message> "publisher should include at least one concept from the EU Corporate body table."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV> <http://www.w3.org/ns/shacl#or> _:cb2d2d1d83cee4f34011b17ebfe05e8c60cd73e197eaf5eb8cfe851cc0f71f745fd .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Publisher_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV> <http://www.w3.org/ns/shacl#description> "The geographical coverage of the dataset, taken from the EU authority tables for Continent (http://publications.europa.eu/resource/authority/continent), Countries and territories (http://publications.europa.eu/resource/authority/country) or Place (http://publications.europa.eu/resource/authority/place), or from GeoNames. Use of these vocabularies is recommended; other values are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV> <http://www.w3.org/ns/shacl#message> "spatial should include at least one value from the EU Continent, Country or Place tables, or from GeoNames."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV> <http://www.w3.org/ns/shacl#or> _:cb38bff5d780d3fb5b896707b67a13c897dfd6f051faf9c80465ee959a923aa6d78 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Spatial_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV> <http://www.w3.org/ns/shacl#description> "Values categorise the dataset using the EU Data theme authority table (http://publications.europa.eu/resource/authority/data-theme). At least one value must come from this vocabulary. Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV> <http://www.w3.org/ns/shacl#message> "dcat:theme should include at least one concept from the EU Data theme table."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV> <http://www.w3.org/ns/shacl#or> _:cb1c42565739a986290f209505d7d01ff20e52bed2fef9c5f336fda67579a48905d .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_Theme_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV> <http://www.w3.org/ns/shacl#description> "Values state the transport modes covered by the dataset, using the Transport Mode controlled vocabulary (https://w3id.org/mobilitydcat-ap/transport-mode). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/transport-mode/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV> <http://www.w3.org/ns/shacl#message> "transportMode should include at least one concept from the Transport Mode vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV> <http://www.w3.org/ns/shacl#or> _:cb1ac70960193ce3893012cf8f7664ee56acad2905c3cd46407f0a3e2a3435e6a27 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Dataset_TransportMode_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "DistributionStatusRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction> <http://www.w3.org/ns/shacl#property> _:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV> <http://www.w3.org/ns/shacl#description> "Values state the application layer protocol of the distribution, using the Application layer protocol controlled vocabulary (https://w3id.org/mobilitydcat-ap/application-layer-protocol). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/application-layer-protocol/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV> <http://www.w3.org/ns/shacl#message> "applicationLayerProtocol should include at least one concept from the Application layer protocol vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV> <http://www.w3.org/ns/shacl#or> _:cb130c02f3f695569f2852771dbd9aeb657210dc4d7f1ca8d35052e5444ae867254 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_ApplicationLayerProtocol_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV> <http://www.w3.org/ns/shacl#description> "Values state the communication method of the distribution, using the Communication Method controlled vocabulary (https://w3id.org/mobilitydcat-ap/communication-method), which distinguishes push and pull. Use of this vocabulary is recommended; other values are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV> <http://www.w3.org/ns/shacl#message> "communicationMethod should include at least one concept from the Communication Method vocabulary."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV> <http://www.w3.org/ns/shacl#or> _:cb126a217e6cadea5e5b5c99e79d12a88c85ed02ee84bd51f501a93b1870fa9c82c .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_CommunicationMethod_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV> <http://www.w3.org/ns/shacl#description> "The licence under which the distribution is made available, referencing a concrete standard licence from the EU Licence authority table (http://publications.europa.eu/resource/authority/licence). Use of this vocabulary is recommended; other values are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV> <http://www.w3.org/ns/shacl#message> "license should include at least one concept from the EU Licence table."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV> <http://www.w3.org/ns/shacl#or> _:cb1583810ef5343f9c0fd9102486a5a296ab9893c31f6351ced794f09e781d81fa7 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_License_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV> <http://www.w3.org/ns/shacl#description> "Values identify the mobility data standard adopted by the distribution, using the Mobility data standard controlled vocabulary (https://w3id.org/mobilitydcat-ap/mobility-data-standard). At least one value must come from this vocabulary; if no suitable standard is listed, use the 'other' value (https://w3id.org/mobilitydcat-ap/mobility-data-standard/other). Values outside the vocabulary are tolerated, for example a custom mobilitydcatap:MobilityDataStandard instance giving a version or a national profile."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV> <http://www.w3.org/ns/shacl#message> "mobilityDataStandard should include at least one concept from the Mobility data standard vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV> <http://www.w3.org/ns/shacl#or> _:cb17e8bb7f0ef26d6719f16729ed6c85e65f27c2eb6dbd20802649b468675ae3fb6 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityDataStandard_CV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityShapeCV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityShapeCV> <http://www.w3.org/ns/shacl#property> _:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#Distribution_MobilityShapeCV> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "FileTypeRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction> <http://www.w3.org/ns/shacl#property> _:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "FrequencyRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction> <http://www.w3.org/ns/shacl#property> _:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI> <http://www.w3.org/2000/01/rdf-schema#label> "GeoNames restriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI> <http://www.w3.org/ns/shacl#pattern> "^https?://(sws\\.)?geonames\\.org" .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "GeoreferencingMethodRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction> <http://www.w3.org/ns/shacl#property> _:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "IntendedInformationServiceRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction> <http://www.w3.org/ns/shacl#property> _:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "LanguageRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction> <http://www.w3.org/ns/shacl#property> _:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "LicenceRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction> <http://www.w3.org/ns/shacl#property> _:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "MobilityDataStandardRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction> <http://www.w3.org/ns/shacl#property> _:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "MobilityThemeRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction> <http://www.w3.org/ns/shacl#property> _:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "NetworkCoverageRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction> <http://www.w3.org/ns/shacl#property> _:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction> <http://www.w3.org/ns/shacl#property> _:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "PublisherTypeRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction> <http://www.w3.org/ns/shacl#property> _:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "Reference System (EPSG) restriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction> <http://www.w3.org/ns/shacl#pattern> "^https?://(www\\.opengis\\.net/def/crs/EPSG/|epsg\\.io/)" .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV> <http://www.w3.org/ns/shacl#description> "Values state the conditions for access and usage of a Rights Statement, using the Conditions for access and usage controlled vocabulary (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage). At least one value must come from this vocabulary; if none applies, use the 'other' value (https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other). Values outside the vocabulary are tolerated."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV> <http://www.w3.org/ns/shacl#message> "conditions for access and usage (dct:type) should include at least one concept from the Conditions for access and usage vocabulary; use 'other' if none applies."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV> <http://www.w3.org/ns/shacl#or> _:cb15ea3b1bf92c39add719c1a818cb1f95a93b2088616274ddc412ae0da39f0ce15 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV> <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Warning> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#RightsStatement_Conditions_CV> <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/dc/terms/RightsStatement> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial restriction (EU tables or GeoNames)"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction> <http://www.w3.org/ns/shacl#or> _:cb1e416c4a834ec0a936a40cc9dfcb9c9d3a9afc3929b1bdf99f6c06e93e45bf186 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "TransportModeRestriction"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction> <http://www.w3.org/ns/shacl#property> _:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://data.europa.eu/r5r/availability> <http://data.europa.eu/r5r/stable> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/conformsTo> <https://www.w3.org/TR/shacl> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/created> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/creator> _:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/dateCopyrighted> "2023"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/description> "Self-contained controlled-vocabulary constraints for mobilityDCAT-AP 3.0.0 (spec section 10.2). Restates the EU authority-table and mobility CV bindings rather than importing DCAT-AP's CV shapes, since that import is not 1:1. 10.2.1 MUST uses sh:node at Violation; 10.2.2/10.2.3 use the exact at-least-one-with-extras-tolerated form at Warning."@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/issued> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/modified> "2026-08-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/publisher> <https://napcore.eu/> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/rightsHolder> <https://napcore.eu/> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/title> "mobilityDCAT-AP 3.0.0 SHACL Constraints - Controlled Vocabularies"@en .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/ontology/bibo/editor> _:cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/ontology/bibo/editor> _:cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/ontology/bibo/editor> _:cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#Asset> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0" .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://www.w3.org/ns/adms#status> <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://www.w3.org/ns/dcat#distribution> _:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 .
+_:cb1082b4047385ff993a1281822a5d7ff21d40360e145cbe28b7f570bc03b8b6a32 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1082b4047385ff993a1281822a5d7ff21d40360e145cbe28b7f570bc03b8b6a32 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#georeferencingMethod> .
+_:cb11bbd6072e70c36f99b05a0903b824adbfdef0cadb0d2df9131bfa6e36a141725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1 .
+_:cb11bbd6072e70c36f99b05a0903b824adbfdef0cadb0d2df9131bfa6e36a141725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1260a4a70cb2f9acf2b131466c2687a38d5a338028f55ef4924cecc3ce04076ca <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1260a4a70cb2f9acf2b131466c2687a38d5a338028f55ef4924cecc3ce04076ca <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/license> .
+_:cb126a217e6cadea5e5b5c99e79d12a88c85ed02ee84bd51f501a93b1870fa9c82c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb17a3546f96d30cf2ffbcae5e6d18602b7b7c9a5d57d883f58f877058342390d36 .
+_:cb126a217e6cadea5e5b5c99e79d12a88c85ed02ee84bd51f501a93b1870fa9c82c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1944a1d7aaa332173ff09a09e1b8594351f4c33e949af25939a39b578bb0cbfa4 .
+_:cb130c02f3f695569f2852771dbd9aeb657210dc4d7f1ca8d35052e5444ae867254 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb18ed37baed7697a9e6787e2527b52426bf51ebadc67d19079b2458c6f65e30974 .
+_:cb130c02f3f695569f2852771dbd9aeb657210dc4d7f1ca8d35052e5444ae867254 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb182aad35f22d851a986ae5b61eca60118ffebfa2067e0d319557e09139e3203d3 .
+_:cb13210136c39bed691c04b7a1991b675220231f4fe95a87822d4ed0deea990acb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042 .
+_:cb13210136c39bed691c04b7a1991b675220231f4fe95a87822d4ed0deea990acb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb13536aeacb4ae882454208d2fd9c33892988562bc58922d75b330cbb2a1810892 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b .
+_:cb13536aeacb4ae882454208d2fd9c33892988562bc58922d75b330cbb2a1810892 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb13cd6266b61cead8e4a9c0a97a916609cf02285a9662e01ab8a2522fb2ea8c1b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421 .
+_:cb13cd6266b61cead8e4a9c0a97a916609cf02285a9662e01ab8a2522fb2ea8c1b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1436163e225e8117f77445b731b4a4fa5c45a223950c9d7ca5b4c735b6c33143c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0 .
+_:cb1436163e225e8117f77445b731b4a4fa5c45a223950c9d7ca5b4c735b6c33143c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916 <http://www.w3.org/ns/shacl#path> _:cb27b4e001951d6c3fe4cd1ab3842f588febc7865acbb0a263c863cc3751e131e72 .
+_:cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction> .
+_:cb152785bc22ce0a90e01183ff875785a8a5c6d5db9c6690fae44bcf63e4b368179 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb152785bc22ce0a90e01183ff875785a8a5c6d5db9c6690fae44bcf63e4b368179 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#transportMode> .
+_:cb153722652c6a88aa9cff4163c0dcf06c5c20cd279d462255a17ac1cddfb67d596 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb153722652c6a88aa9cff4163c0dcf06c5c20cd279d462255a17ac1cddfb67d596 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/spatial> .
+_:cb15387cc315efbeed901daec1135139482b9d7c327eda5cb70b8177d4cc2a95371 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1082b4047385ff993a1281822a5d7ff21d40360e145cbe28b7f570bc03b8b6a32 .
+_:cb15387cc315efbeed901daec1135139482b9d7c327eda5cb70b8177d4cc2a95371 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb25775f9680a93366457e5011dd1f71a39cbc618f12ee81c44571012a03e3d9880 .
+_:cb1583810ef5343f9c0fd9102486a5a296ab9893c31f6351ced794f09e781d81fa7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1260a4a70cb2f9acf2b131466c2687a38d5a338028f55ef4924cecc3ce04076ca .
+_:cb1583810ef5343f9c0fd9102486a5a296ab9893c31f6351ced794f09e781d81fa7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb11bbd6072e70c36f99b05a0903b824adbfdef0cadb0d2df9131bfa6e36a141725 .
+_:cb159f3e3ecd6adb0f89da4371af17a9d4c8cc1b2ec98dcfa2f477fc2caaa5f2508 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb159f3e3ecd6adb0f89da4371af17a9d4c8cc1b2ec98dcfa2f477fc2caaa5f2508 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+_:cb15da80f82e251a8bc637f3e79a61ee778223682d5e43504bec78143d0fca0f879 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb143a92659874d93a26ec6df205df3516fe4948b0d91061870c792829ea0ae1916 .
+_:cb15da80f82e251a8bc637f3e79a61ee778223682d5e43504bec78143d0fca0f879 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb15ea3b1bf92c39add719c1a818cb1f95a93b2088616274ddc412ae0da39f0ce15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cbfffc0aed9b110bac8d0a72beaad3edff5db508732dfa7bf0f702e0999713a470 .
+_:cb15ea3b1bf92c39add719c1a818cb1f95a93b2088616274ddc412ae0da39f0ce15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb190fa57ade8fc5c057286c3bd33f5cfed85e4e42b57fdd8c555f43f2a20f1bdbf .
+_:cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityTheme> .
+_:cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction> .
+_:cb16a91a92e5af4eaa43e7849c07db15deca37e96eed1b88de0ace0d73432c1c2db <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb16a91a92e5af4eaa43e7849c07db15deca37e96eed1b88de0ace0d73432c1c2db <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> .
+_:cb16b7c674f108d88e9d22eeee7ab5a7e6b9f892b76c9eddca88fb30adc334305b7 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb16b7c674f108d88e9d22eeee7ab5a7e6b9f892b76c9eddca88fb30adc334305b7 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/type> .
+_:cb1705259fefd384d2f36911ffb79cea29549a939f30e64e7939350f92cc573dbda <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1705259fefd384d2f36911ffb79cea29549a939f30e64e7939350f92cc573dbda <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityTheme> .
+_:cb17a3546f96d30cf2ffbcae5e6d18602b7b7c9a5d57d883f58f877058342390d36 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb17a3546f96d30cf2ffbcae5e6d18602b7b7c9a5d57d883f58f877058342390d36 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#communicationMethod> .
+_:cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/dcat#theme> .
+_:cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DataThemeRestriction> .
+_:cb17e8bb7f0ef26d6719f16729ed6c85e65f27c2eb6dbd20802649b468675ae3fb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb16a91a92e5af4eaa43e7849c07db15deca37e96eed1b88de0ace0d73432c1c2db .
+_:cb17e8bb7f0ef26d6719f16729ed6c85e65f27c2eb6dbd20802649b468675ae3fb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb13210136c39bed691c04b7a1991b675220231f4fe95a87822d4ed0deea990acb0 .
+_:cb180c01298ff949ee3a0662297f410b4706c2c0596ad8f284a9149d27e318b80a6 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb180c01298ff949ee3a0662297f410b4706c2c0596ad8f284a9149d27e318b80a6 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/spatial> .
+_:cb182aad35f22d851a986ae5b61eca60118ffebfa2067e0d319557e09139e3203d3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc .
+_:cb182aad35f22d851a986ae5b61eca60118ffebfa2067e0d319557e09139e3203d3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb18c4639e42e951739e16e9d466765dfc9526a981577a9e2ebaa83a909d8d8faf6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PlaceRestriction> .
+_:cb18c4639e42e951739e16e9d466765dfc9526a981577a9e2ebaa83a909d8d8faf6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb207cb800eebc2dfcb39c845f9daf7c4658bc7f3ea2fa7094da4f7439527bce289 .
+_:cb18d91513f425aa37881f7b8d5b738a2f2d47384ae42ad237bcc521881684e91d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cbc9ea70964159a4f0fc0eddc3f5532887fe01190319e0ddf849d547cb2f927c5e .
+_:cb18d91513f425aa37881f7b8d5b738a2f2d47384ae42ad237bcc521881684e91d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1c22212ae824b9fa0272375db7c63a77470bf7c57b724a92fa73cb65f398b8e10 .
+_:cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+_:cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> .
+_:cb18ed37baed7697a9e6787e2527b52426bf51ebadc67d19079b2458c6f65e30974 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb18ed37baed7697a9e6787e2527b52426bf51ebadc67d19079b2458c6f65e30974 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#applicationLayerProtocol> .
+_:cb190fa57ade8fc5c057286c3bd33f5cfed85e4e42b57fdd8c555f43f2a20f1bdbf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9 .
+_:cb190fa57ade8fc5c057286c3bd33f5cfed85e4e42b57fdd8c555f43f2a20f1bdbf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1944a1d7aaa332173ff09a09e1b8594351f4c33e949af25939a39b578bb0cbfa4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1 .
+_:cb1944a1d7aaa332173ff09a09e1b8594351f4c33e949af25939a39b578bb0cbfa4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1986cb22d9d393c8be986556d5f5061320b8f33809760ecbeeb0c0cf0e49abb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105 .
+_:cb1986cb22d9d393c8be986556d5f5061320b8f33809760ecbeeb0c0cf0e49abb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#georeferencingMethod> .
+_:cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoreferencingMethodRestriction> .
+_:cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#applicationLayerProtocol> .
+_:cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb19bc11c32893658a5aff7ce5bfa119021ac038cd512bf1c9c6a5a5569fceb92dc <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ApplicationLayerProtocolRestriction> .
+_:cb1ac70960193ce3893012cf8f7664ee56acad2905c3cd46407f0a3e2a3435e6a27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb152785bc22ce0a90e01183ff875785a8a5c6d5db9c6690fae44bcf63e4b368179 .
+_:cb1ac70960193ce3893012cf8f7664ee56acad2905c3cd46407f0a3e2a3435e6a27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb27ecf2719f6e7ee3fd61a77e1b82f21e565c64dcd2dfd36cadca3e0125f7cad82 .
+_:cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#transportMode> .
+_:cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#TransportModeRestriction> .
+_:cb1bfd01932a7fea0771423c80c453f1b10ab08e67b6bbae529e9931b0fe381a8bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb159f3e3ecd6adb0f89da4371af17a9d4c8cc1b2ec98dcfa2f477fc2caaa5f2508 .
+_:cb1bfd01932a7fea0771423c80c453f1b10ab08e67b6bbae529e9931b0fe381a8bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb283dbc956487027a7cfd72295f3cfd4934a017158530bd1fb010101937216fa6a .
+_:cb1c22212ae824b9fa0272375db7c63a77470bf7c57b724a92fa73cb65f398b8e10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74 .
+_:cb1c22212ae824b9fa0272375db7c63a77470bf7c57b724a92fa73cb65f398b8e10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1c42565739a986290f209505d7d01ff20e52bed2fef9c5f336fda67579a48905d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1f2eef8f2a907a8daac6903d85a9da7e00951d1482cc2551f51ba18e306d110ba .
+_:cb1c42565739a986290f209505d7d01ff20e52bed2fef9c5f336fda67579a48905d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb253b074b71b29ce62ce963ac42c1559db447c27987ae9ceb3855463c173c1ca86 .
+_:cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#networkCoverage> .
+_:cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1c4ed87bbd12550afcf5d11263d0c9aaf60662bab80c260c6ee7f5cb7bc9c8105 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#NetworkCoverageRestriction> .
+_:cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/type> .
+_:cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1c5d30ebcdf084a4480e686869b905c8b0d0f86e48d89237b43bd44550bdc6cb0 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#PublisherTypeRestriction> .
+_:cb1ccccad0b53117a8f21f3a948c0f946e53ea0c2ee890df0109a4aff43638ecf27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb153722652c6a88aa9cff4163c0dcf06c5c20cd279d462255a17ac1cddfb67d596 .
+_:cb1ccccad0b53117a8f21f3a948c0f946e53ea0c2ee890df0109a4aff43638ecf27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb15da80f82e251a8bc637f3e79a61ee778223682d5e43504bec78143d0fca0f879 .
+_:cb1d5d9c7bc01524494face9cc5181b94e8d5cfc093ab9deb33a91cbe31c34a2f22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b .
+_:cb1d5d9c7bc01524494face9cc5181b94e8d5cfc093ab9deb33a91cbe31c34a2f22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1d6394b9a7d547cd30847286448e7504b78e5efa4847c18047190aafb19a4c5af <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127 .
+_:cb1d6394b9a7d547cd30847286448e7504b78e5efa4847c18047190aafb19a4c5af <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb1de64e4d027611d45f65ab362eca2174125950a5bae39db1b453e538739944620 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1de64e4d027611d45f65ab362eca2174125950a5bae39db1b453e538739944620 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+_:cb1e015b10c15f34d86f34bf35a7a0853e51d5abf41b35da3475ab4da7426558b3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/terms/spatial> .
+_:cb1e015b10c15f34d86f34bf35a7a0853e51d5abf41b35da3475ab4da7426558b3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb3624f7b1944eb16883ec3083419e4241276d6c10c1e94b1da068f3a76c33ef8a2 .
+_:cb1e11026f9da350bd92bf05087297c7d42d9a30d8041ca7fe5e464b68bdf55c14a <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1e11026f9da350bd92bf05087297c7d42d9a30d8041ca7fe5e464b68bdf55c14a <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+_:cb1e416c4a834ec0a936a40cc9dfcb9c9d3a9afc3929b1bdf99f6c06e93e45bf186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ContinentRestriction> .
+_:cb1e416c4a834ec0a936a40cc9dfcb9c9d3a9afc3929b1bdf99f6c06e93e45bf186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb213c8330231b30c34c473c01f4a1e756415c8b5432b89ed6e074ac6a8bb513575 .
+_:cb1ed7cbc5d86e82ad71a1709fa06167ecfea8c29890856fe20f803272bcf739c3a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/terms/spatial> .
+_:cb1ed7cbc5d86e82ad71a1709fa06167ecfea8c29890856fe20f803272bcf739c3a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb30073e6a5a3ba55f4b492de9a84e4f79bca54d073d6c4e9c2a068efe3e0384111 .
+_:cb1f2eef8f2a907a8daac6903d85a9da7e00951d1482cc2551f51ba18e306d110ba <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1f2eef8f2a907a8daac6903d85a9da7e00951d1482cc2551f51ba18e306d110ba <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/dcat#theme> .
+_:cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityTheme> .
+_:cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1f5cc5f18cbc9f436baffd67bc21ddfa7b4fbba816f2c01d446999543415d2b74 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityThemeRestriction> .
+_:cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/license> .
+_:cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb1fe572668f32b560b339ecd931ca6c9c5cfb95c6a44920b4f61b85491d17065c1 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LicenceRestriction> .
+_:cb203133e0c3a21154097134451125d46a93957a8c6887890ff7bf1cd01b0442183 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb203133e0c3a21154097134451125d46a93957a8c6887890ff7bf1cd01b0442183 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/spatial> .
+_:cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+_:cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> .
+_:cb207cb800eebc2dfcb39c845f9daf7c4658bc7f3ea2fa7094da4f7439527bce289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#GeoNamesRestrictionRegexURI> .
+_:cb207cb800eebc2dfcb39c845f9daf7c4658bc7f3ea2fa7094da4f7439527bce289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb213c8330231b30c34c473c01f4a1e756415c8b5432b89ed6e074ac6a8bb513575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CountryRestriction> .
+_:cb213c8330231b30c34c473c01f4a1e756415c8b5432b89ed6e074ac6a8bb513575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb18c4639e42e951739e16e9d466765dfc9526a981577a9e2ebaa83a909d8d8faf6 .
+_:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/distribution-status> .
+_:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
+_:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> .
+_:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/network-coverage> .
+_:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2372c6b7aed3ae1841d35e45679a0de4d0576e839fceccd3f8aadf45563a3fc8d <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3 <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/communication-method> .
+_:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb23eba98e06ca5c9cc7b24c3fa7776d8c997e05180e0fdd301ac38676e275285e3 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb23ff5862310ba11dd05132768d5f93522c3a0b022577629688dc5f377880dd6cf <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb23ff5862310ba11dd05132768d5f93522c3a0b022577629688dc5f377880dd6cf <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#intendedInformationService> .
+_:cb24491d2bf34a6a40d0666f1314226324b96805642fd91480bb246dc47ba84457b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1705259fefd384d2f36911ffb79cea29549a939f30e64e7939350f92cc573dbda .
+_:cb24491d2bf34a6a40d0666f1314226324b96805642fd91480bb246dc47ba84457b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb27b1bf29888382c125c539b977dadb8a84ffe2faeb5bc1346f6ee7a2fbde8270f .
+_:cb253b074b71b29ce62ce963ac42c1559db447c27987ae9ceb3855463c173c1ca86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb17a573fc09bddd0546922205f217284527beb52496bd7da1cc6a33a939ae4a5a0 .
+_:cb253b074b71b29ce62ce963ac42c1559db447c27987ae9ceb3855463c173c1ca86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb25775f9680a93366457e5011dd1f71a39cbc618f12ee81c44571012a03e3d9880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb19a95e22947cf09700904c3eef923695017d09ddd188ff4ff49d3d5ccd54654e9 .
+_:cb25775f9680a93366457e5011dd1f71a39cbc618f12ee81c44571012a03e3d9880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773 <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/application-layer-protocol> .
+_:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2582bbef0750bb64d54c963d94f146b983f25eade92bd29bc1b3ea2c2af458773 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3 <http://www.w3.org/ns/shacl#hasValue> <http://purl.org/adms/publishertype/1.0> .
+_:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb25a17fba2db6360af0e312a0594ca88166644db7c2edba3e5a165049252de99d3 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb25e2b6fa323382afefad8b089309d9b770385ae0c230a7ff9b93b2aa1e6fc4300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cbc5bbe7c869ee15279053a8e750bf681cc3ef231d18e62ece394b8bd068a7782f .
+_:cb25e2b6fa323382afefad8b089309d9b770385ae0c230a7ff9b93b2aa1e6fc4300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1986cb22d9d393c8be986556d5f5061320b8f33809760ecbeeb0c0cf0e49abb12 .
+_:cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421 <http://www.w3.org/ns/shacl#path> _:cb1e015b10c15f34d86f34bf35a7a0853e51d5abf41b35da3475ab4da7426558b3b .
+_:cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb264b8b97ecec8bf65ebe0ca25a2197058d3a2adacf0e8c2fb43cd7ea2eaa3e421 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction> .
+_:cb268d06b0ea60ea1c4057f2cefdc5466ca17ea0de6e042f49edad08208568105df <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/terms/identifier> .
+_:cb268d06b0ea60ea1c4057f2cefdc5466ca17ea0de6e042f49edad08208568105df <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/georeferencing-method> .
+_:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb26cbc208c04e2eddf50aa31e31cbed865197cd8e4ed0eea8a116be87b2595042c <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb27b1bf29888382c125c539b977dadb8a84ffe2faeb5bc1346f6ee7a2fbde8270f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb168090dbc47a0ec0c9ca72ce45d7020232d07a8be7dbba24193bb483dade2cc7e .
+_:cb27b1bf29888382c125c539b977dadb8a84ffe2faeb5bc1346f6ee7a2fbde8270f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb27b4e001951d6c3fe4cd1ab3842f588febc7865acbb0a263c863cc3751e131e72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/terms/spatial> .
+_:cb27b4e001951d6c3fe4cd1ab3842f588febc7865acbb0a263c863cc3751e131e72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb268d06b0ea60ea1c4057f2cefdc5466ca17ea0de6e042f49edad08208568105df .
+_:cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#communicationMethod> .
+_:cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb27d911ce9ba68c6db9d117f275cf2d3562a002e8dd1770f8dc8bb51d00f3a97d1 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CommunicationMethodRestriction> .
+_:cb27ecf2719f6e7ee3fd61a77e1b82f21e565c64dcd2dfd36cadca3e0125f7cad82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1b44be5c98a0aaeb352c0e59dddeae60d35761c1e7d39a0f02894c1beb2b3009a .
+_:cb27ecf2719f6e7ee3fd61a77e1b82f21e565c64dcd2dfd36cadca3e0125f7cad82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb283dbc956487027a7cfd72295f3cfd4934a017158530bd1fb010101937216fa6a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb18dad1a5c34cb78b89bce6ca6bc07aa14dd0f9be0b801cce21005770dff523fa8 .
+_:cb283dbc956487027a7cfd72295f3cfd4934a017158530bd1fb010101937216fa6a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/type> .
+_:cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2847bb73329194f511fe2496d2395db61e2d33d1c4993659d29ed99e22ac26fc9 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ConditionsForAccessAndUsageRestriction> .
+_:cb2899859faac76757791d14c60544a54f4c3913a9c0644b66f4f6723d1a7749bb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb16b7c674f108d88e9d22eeee7ab5a7e6b9f892b76c9eddca88fb30adc334305b7 .
+_:cb2899859faac76757791d14c60544a54f4c3913a9c0644b66f4f6723d1a7749bb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1436163e225e8117f77445b731b4a4fa5c45a223950c9d7ca5b4c735b6c33143c .
+_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 <http://www.w3.org/ns/shacl#description> "The spatial reference system used in the dataset, identified by a coordinate reference system URI from the OGC EPSG register. This register is not a SKOS scheme, so membership is checked by URI pattern rather than skos:inScheme. The value space is closed: only EPSG URIs are allowed."@en .
+_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 <http://www.w3.org/ns/shacl#message> "referenceSystem value must be an OGC EPSG coordinate reference system URI."@en .
+_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#ReferenceSystemRestriction> .
+_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 <http://www.w3.org/ns/shacl#path> <http://data.europa.eu/930/referenceSystem> .
+_:cb28d738387b42e1a855ac7705393991fc2190950835015d13a18bd71a87fdde3b1 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb293e38ef2a76328111e1d5f79061ca43159bf44da4218743807ef5948b9b301a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb23ff5862310ba11dd05132768d5f93522c3a0b022577629688dc5f377880dd6cf .
+_:cb293e38ef2a76328111e1d5f79061ca43159bf44da4218743807ef5948b9b301a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1d6394b9a7d547cd30847286448e7504b78e5efa4847c18047190aafb19a4c5af .
+_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 <http://www.w3.org/ns/shacl#description> "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en .
+_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 <http://www.w3.org/ns/shacl#message> "language value must be a concept from the EU Language table (skos:inScheme)."@en .
+_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction> .
+_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/language> .
+_:cb296bcaac5cc7c9881f13bc4f2136a0f1b2bab1daa4c19b995c3d15e455d5bc344 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0001-5446-6947> .
+_:cb29ee59b48a451b5114192ef3167148ce4e7ceaaeb66b1d392f62ca8b4d35e3c1c <http://xmlns.com/foaf/0.1/name> "Lina Molinas Comet" .
+_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#description> "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en .
+_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#message> "language value must be a concept from the EU Language table (skos:inScheme)."@en .
+_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction> .
+_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/language> .
+_:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
+_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 <http://xmlns.com/foaf/0.1/name> "NAPCORE SWG 4.4" .
+_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 <http://xmlns.com/foaf/0.1/page> <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> .
+_:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/file-type> .
+_:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb2c4b5f670f7cfdd3db8a0cb78265caae8406d0c6f5abd9651af963a4f5be65213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb203133e0c3a21154097134451125d46a93957a8c6887890ff7bf1cd01b0442183 .
+_:cb2c4b5f670f7cfdd3db8a0cb78265caae8406d0c6f5abd9651af963a4f5be65213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1d5d9c7bc01524494face9cc5181b94e8d5cfc093ab9deb33a91cbe31c34a2f22 .
+_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb <http://www.w3.org/ns/shacl#description> "The language of the textual metadata, taken from the EU Language authority table (http://publications.europa.eu/resource/authority/language). The value space is closed: only concepts from this vocabulary are allowed, and the value must be a URI rather than a literal code."@en .
+_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb <http://www.w3.org/ns/shacl#message> "language value must be a concept from the EU Language table (skos:inScheme)."@en .
+_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#LanguageRestriction> .
+_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/language> .
+_:cb2cdf35972134bf57aa3c66023f2cb2eeeefdee46bde80ab15e25bee93c5d6bceb <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityDataStandard> .
+_:cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2d04c5df7dcee95379dded117d23f6cc66902e7c1c6d8ea108a0539a38e530042 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#MobilityDataStandardRestriction> .
+_:cb2d2d1d83cee4f34011b17ebfe05e8c60cd73e197eaf5eb8cfe851cc0f71f745fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1e11026f9da350bd92bf05087297c7d42d9a30d8041ca7fe5e464b68bdf55c14a .
+_:cb2d2d1d83cee4f34011b17ebfe05e8c60cd73e197eaf5eb8cfe851cc0f71f745fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb13536aeacb4ae882454208d2fd9c33892988562bc58922d75b330cbb2a1810892 .
+_:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016 <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> .
+_:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2d892392cf295853b43a20f5da37ab12b7f05b6447876398c2f92e2baffe7c016 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/frequency> .
+_:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2dec958890d979bc1b8be70b1f682acd5b99b8e8b862f8862cf63f41ab095a51e <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/language> .
+_:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2e7571a34f9373d98b3661f266325987af1d4a015d59a6b1408196d805296a8fc <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72 <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/place> .
+_:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2ed0576cbc8afbc79ad10acbe71fa47db946dd3e6ba78a19ed53660caad3b3e72 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3 <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/country> .
+_:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb2f57b0864e0164f06ecdd15204007e9c7768c983c32c8afbe55d142b198eac8b3 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb30073e6a5a3ba55f4b492de9a84e4f79bca54d073d6c4e9c2a068efe3e0384111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/terms/identifier> .
+_:cb30073e6a5a3ba55f4b492de9a84e4f79bca54d073d6c4e9c2a068efe3e0384111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb3063117b4bcb052128c50d823330ad4eb3cd028a1462faa7b4a61b06c2df58f0f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb207126c23fb6447a08f5313b083672aec46a1eb9f75a9536e60b4175a589f6d0a .
+_:cb3063117b4bcb052128c50d823330ad4eb3cd028a1462faa7b4a61b06c2df58f0f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127 <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#intendedInformationService> .
+_:cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127 <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb30c0740ae267f55287852625c042695a004205877fbe4cfe1b0d61c96acbdd127 <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#IntendedInformationServiceRestriction> .
+_:cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8 <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0002-8235-7331> .
+_:cb30ed112138d9e96e6b10117ecfac4b15f150954e350c37eca4b3f18d47c6b97d8 <http://xmlns.com/foaf/0.1/name> "Mario Scrocca" .
+_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 <http://www.w3.org/ns/shacl#description> "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."@en .
+_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 <http://www.w3.org/ns/shacl#message> "accrualPeriodicity value must be a concept from the EU Frequency table."@en .
+_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction> .
+_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/accrualPeriodicity> .
+_:cb314deaa13a57106cc60a1ae054844205330f98dc5e59d822b4992be2297c27894 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9 <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/licence> .
+_:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb3158c4f0a9d25682e4f8f5073c93c0e8327048af03f822627608bab4410d360e9 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb31a56482758e18e0542110a28e1d11aab053a72022e47025c3c03dbd7a652084f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb1de64e4d027611d45f65ab362eca2174125950a5bae39db1b453e538739944620 .
+_:cb31a56482758e18e0542110a28e1d11aab053a72022e47025c3c03dbd7a652084f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb3063117b4bcb052128c50d823330ad4eb3cd028a1462faa7b4a61b06c2df58f0f .
+_:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/mobility-theme> .
+_:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb31de3c755ff4ee0706772f23dbc25ba35195bd94df48b22dd3caea3fd5b508a1c <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b <http://www.w3.org/ns/shacl#path> _:cb1ed7cbc5d86e82ad71a1709fa06167ecfea8c29890856fe20f803272bcf739c3a .
+_:cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb3235a721b49bfce8ad8bb1b2c88351b44cc605b38e0239c4bdb587a39bb534f6b <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#SpatialRestriction> .
+_:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/data-theme> .
+_:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb32646baaaaf710fab3c2b255b0f95eeeb445eeb2fd1e020eee41d1a70f17acd5f <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/transport-mode> .
+_:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb32db45cdb7bbc21fcb929c24f1fe0aacb4f1ccb89f2486b06d41afe3aa47d137c <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837 <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0003-1867-4428> .
+_:cb33c3cd32ef09ea13c3c9b0f495770bda642c5b09bae1c9e5d023415c1e4006837 <http://xmlns.com/foaf/0.1/name> "Daham Mustafa" .
+_:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555 <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/corporate-body> .
+_:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb33f1b3d488fb3b0f3a3dbf55feccf864602ac4d5303c81d7c295f455bc5473555 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 <http://www.w3.org/ns/shacl#description> "The technical syntax of the delivered content, taken from the EU File type authority table (http://publications.europa.eu/resource/authority/file-type). The value space is closed: only concepts from this vocabulary are allowed."@en .
+_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 <http://www.w3.org/ns/shacl#message> "format value must be a concept from the EU File Type table (skos:inScheme)."@en .
+_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FileTypeRestriction> .
+_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/format> .
+_:cb3427e47c17c74ffab35039aff315d7558106dea18590a32640e2bca01c085d277 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/continent> .
+_:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb3594eb64aac1e00a1c490202918220c8d109232c0bc6e8325d0281c98bbc312eb <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb3624f7b1944eb16883ec3083419e4241276d6c10c1e94b1da068f3a76c33ef8a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/terms/identifier> .
+_:cb3624f7b1944eb16883ec3083419e4241276d6c10c1e94b1da068f3a76c33ef8a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:cb38bff5d780d3fb5b896707b67a13c897dfd6f051faf9c80465ee959a923aa6d78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:cb180c01298ff949ee3a0662297f410b4706c2c0596ad8f284a9149d27e318b80a6 .
+_:cb38bff5d780d3fb5b896707b67a13c897dfd6f051faf9c80465ee959a923aa6d78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb13cd6266b61cead8e4a9c0a97a916609cf02285a9662e01ab8a2522fb2ea8c1b0 .
+_:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/mobility-data-standard> .
+_:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb3a970456b1c946b7813d6c783e14362d353748a8e6e63d349e3ca157daac8349e <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4 <http://www.w3.org/ns/shacl#hasValue> <https://w3id.org/mobilitydcat-ap/intended-information-service> .
+_:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb3afb145663ce0928bba4a88c5363c65f2b1b965fa89e74b948c4704d92f40b6d4 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 <http://www.w3.org/ns/shacl#description> "The update frequency of the delivered content, taken from the EU Frequency authority table (http://publications.europa.eu/resource/authority/frequency). The value space is closed: only concepts from this vocabulary are allowed."@en .
+_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 <http://www.w3.org/ns/shacl#message> "accrualPeriodicity value must be a concept from the EU Frequency table."@en .
+_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#FrequencyRestriction> .
+_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/accrualPeriodicity> .
+_:cb3fc860c2658a3bc5a2e57505296e5b6be277d8b19c99a78ac30928ae8375fff96 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 <http://www.w3.org/ns/shacl#description> "The status of the distribution in its maturity lifecycle, taken from the EU Distribution status authority table (http://publications.europa.eu/resource/authority/distribution-status). The value space is closed: only concepts from this vocabulary are allowed."@en .
+_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 <http://www.w3.org/ns/shacl#message> "status value must be a concept from the EU Distribution status table."@en .
+_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 <http://www.w3.org/ns/shacl#node> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#DistributionStatusRestriction> .
+_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/adms#status> .
+_:cb47af483ac4c953d66a87af1635a745108325ec91117d1910e18a978be2c9aa9b0 <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
+_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> .
+_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 <http://purl.org/dc/terms/format> <http://www.w3.org/ns/formats/data/Turtle> .
+_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 <http://purl.org/dc/terms/title> "SHACL Controlled Vocabularies (Turtle)"@en .
+_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#AssetDistribution> .
+_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 <http://www.w3.org/ns/dcat#downloadURL> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies.ttl> .
+_:cb52268742c06ee0e767d307d2b3c2ef8466cde0d8e93386509926676471cbe4c56 <http://www.w3.org/ns/dcat#mediaType> "text/turtle" .
+_:cbc5bbe7c869ee15279053a8e750bf681cc3ef231d18e62ece394b8bd068a7782f <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cbc5bbe7c869ee15279053a8e750bf681cc3ef231d18e62ece394b8bd068a7782f <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#networkCoverage> .
+_:cbc9ea70964159a4f0fc0eddc3f5532887fe01190319e0ddf849d547cb2f927c5e <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cbc9ea70964159a4f0fc0eddc3f5532887fe01190319e0ddf849d547cb2f927c5e <http://www.w3.org/ns/shacl#path> <https://w3id.org/mobilitydcat-ap#mobilityTheme> .
+_:cbfffc0aed9b110bac8d0a72beaad3edff5db508732dfa7bf0f702e0999713a470 <http://www.w3.org/ns/shacl#maxCount> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:cbfffc0aed9b110bac8d0a72beaad3edff5db508732dfa7bf0f702e0999713a470 <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/type> .

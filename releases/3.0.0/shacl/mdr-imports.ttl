@@ -1,0 +1,43 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#
+# mobilityDCAT-AP v3.0.0 - applied controlled-vocabulary imports.
+# Extends DCAT-AP 3.0.1. Populates https://w3id.org/mobilitydcat-ap/releases/3.0.0.
+# Mirrors the DCAT-AP 3.0.1 mdr_imports.ttl design.
+#
+# The grammar CV is intentionally NOT imported: mobilitydcatap:grammar is
+# deprecated (issue #90) and the vocabulary is no longer maintained (spec 10.2.2).
+#
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0>
+  rdf:type owl:Ontology ;
+  rdfs:label "mobilityDCAT-AP applied controlled-vocabulary imports"@en ;
+  dct:title "mobilityDCAT-AP 3.0.0 Applied Controlled-Vocabulary Imports"@en ;
+  dct:description "owl:imports of the controlled vocabularies applied by mobilityDCAT-AP 3.0.0 (spec section 10.2): those created and maintained by mobilityDCAT-AP, and those maintained by external organisations."@en ;
+  owl:versionInfo "3.0.0" ;
+  dct:modified "2026-07-23"^^xsd:date ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/mobility-theme> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/mobility-data-standard> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/network-coverage> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/transport-mode> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/georeferencing-method> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/intended-information-service> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/application-layer-protocol> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/communication-method> ;
+  owl:imports <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage> ;
+  # Codelists recommended by mobilityDCAT-AP but maintained elsewhere (spec 10.2)
+  owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
+  owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
+  owl:imports <http://publications.europa.eu/resource/authority/language> ;
+  owl:imports <http://publications.europa.eu/resource/authority/distribution-status> ;
+  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
+  owl:imports <http://publications.europa.eu/resource/authority/continent> ;
+  owl:imports <http://publications.europa.eu/resource/authority/country> ;
+  owl:imports <http://publications.europa.eu/resource/authority/place> ;
+  owl:imports <http://publications.europa.eu/resource/authority/corporate-body> ;
+  owl:imports <http://publications.europa.eu/resource/authority/licence> ;
+  owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ;
+  .
