@@ -694,7 +694,7 @@
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://data.europa.eu/r5r/availability> <http://data.europa.eu/r5r/stable> .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/conformsTo> <https://www.w3.org/TR/shacl> .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/created> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/creator> _:cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/creator> _:cb1ccae714e6c78543005b0059e7ec49219a5dbc6cc61bfe37c22940d1cbf3cdb77 .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/dateCopyrighted> "2023"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/description> "SHACL validation constraints for mobilityDCAT-AP 3.0.0, extending DCAT-AP 3.0.1. Contains only the mobilityDCAT-AP-specific cardinality, nodeKind and datatype deltas; properties unchanged from DCAT-AP are inherited via owl:imports. Range constraints are in the range file. Controlled vocabulary constraints are in the MDR file."@en .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/shapes> <http://purl.org/dc/terms/issued> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -970,6 +970,9 @@ _:cb1cb98ac4e54f4aaced15191185b403d8ae3cd178ff2acc922d85c66a9429e5b24 <http://ww
 _:cb1cb98ac4e54f4aaced15191185b403d8ae3cd178ff2acc922d85c66a9429e5b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:cb1cc3559b5ab261e1d1654581ff3344084f3361dd8b76aff1145940b56213f5288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "sk" .
 _:cb1cc3559b5ab261e1d1654581ff3344084f3361dd8b76aff1145940b56213f5288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb139fc6b142e993578daee600f4ca5a330ef73daae42cc685e4a06fda61afed689 .
+_:cb1ccae714e6c78543005b0059e7ec49219a5dbc6cc61bfe37c22940d1cbf3cdb77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
+_:cb1ccae714e6c78543005b0059e7ec49219a5dbc6cc61bfe37c22940d1cbf3cdb77 <http://xmlns.com/foaf/0.1/name> "NAPCORE Task 4.4" .
+_:cb1ccae714e6c78543005b0059e7ec49219a5dbc6cc61bfe37c22940d1cbf3cdb77 <http://xmlns.com/foaf/0.1/page> <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> .
 _:cb1d6dd7b99145905556873c5ea4d47e234fbba5022feed1483e58fb51457d90db2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "el" .
 _:cb1d6dd7b99145905556873c5ea4d47e234fbba5022feed1483e58fb51457d90db2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb165ca39a3b4404a405b0bc01f9cbe7680883b2611229276cc789c6bfb34d37320 .
 _:cb1d861988d8df0bc9c75a5eeebeb83b60b4c1d0b2366fc06ff3593fe27e825ee34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "nl" .
@@ -1060,9 +1063,6 @@ _:cb235f45859544d649412fbea9840dbb21c2ce049b5235abf4becfdb0f2ff93379f <http://ww
 _:cb235f45859544d649412fbea9840dbb21c2ce049b5235abf4becfdb0f2ff93379f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb196193b83fc7b1fa19fa00116e560090773013724655ab67876be33be6d36d7a5 .
 _:cb24192af43489ab0da2fe55fe748ac9f42f424fabef040ee1b01c7bc92033edf5c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ro" .
 _:cb24192af43489ab0da2fe55fe748ac9f42f424fabef040ee1b01c7bc92033edf5c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cbe2294fa13242ec083ebcc73fce51f182a543981d70e3ab518ca6fb284e2631be .
-_:cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
-_:cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b <http://xmlns.com/foaf/0.1/name> "NAPCORE SWG 4.4" .
-_:cb2503e1466647c2e1889d9fbbfab431af4576d6235aa1de8e7e7b67f8a1d20631b <http://xmlns.com/foaf/0.1/page> <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> .
 _:cb251c9fde03bcf0aeb9979a30b94798ad865fed2c7fdede12787cc939f241ea383 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "pl" .
 _:cb251c9fde03bcf0aeb9979a30b94798ad865fed2c7fdede12787cc939f241ea383 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb12167ab5c76a0729bc77695afb8160fbb861485adf64ae9e1b217d9e99622b4aa .
 _:cb25c48595b5d919c00e48f60f3ad5f76dc9ccaa3bb058fad5e2c2aa751a4d7707b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "el" .

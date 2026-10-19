@@ -202,7 +202,7 @@
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://data.europa.eu/r5r/availability> <http://data.europa.eu/r5r/stable> .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/conformsTo> <https://www.w3.org/TR/shacl> .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/created> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/creator> _:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 .
+<https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/creator> _:cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/dateCopyrighted> "2023"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/description> "Self-contained controlled-vocabulary constraints for mobilityDCAT-AP 3.0.0 (spec section 10.2). Restates the EU authority-table and mobility CV bindings rather than importing DCAT-AP's CV shapes, since that import is not 1:1. 10.2.1 MUST uses sh:node at Violation; 10.2.2/10.2.3 use the exact at-least-one-with-extras-tolerated form at Warning."@en .
 <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies> <http://purl.org/dc/terms/issued> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -350,6 +350,9 @@ _:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://ww
 _:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 _:cb223f1834eb4de6406d5c54ffb4d876742aaf2248efcf33dec8f7c80e5cce5d542 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
+_:cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d <http://xmlns.com/foaf/0.1/name> "NAPCORE Task 4.4" .
+_:cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d <http://xmlns.com/foaf/0.1/page> <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> .
 _:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/publisher> .
 _:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:cb2364994e854d22ae1713a1d8d2acb0b61b7f21dc84d28d8213e0ff016f95ce84b <http://www.w3.org/ns/shacl#qualifiedValueShape> <https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/mdr-vocabularies#CorporateBodyRestriction> .
@@ -427,9 +430,6 @@ _:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://ww
 _:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 _:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#path> <http://purl.org/dc/terms/language> .
 _:cb2a81c99872b09bfd1e859ab4f233ee332448723a1a24e8b2dbd50e323637c926d <http://www.w3.org/ns/shacl#severity> <http://www.w3.org/ns/shacl#Violation> .
-_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
-_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 <http://xmlns.com/foaf/0.1/name> "NAPCORE SWG 4.4" .
-_:cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511 <http://xmlns.com/foaf/0.1/page> <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> .
 _:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#hasValue> <http://publications.europa.eu/resource/authority/file-type> .
 _:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:cb2ac99fb5565b61cecc45b192ba9a64cbb9db0703e388fd642e2e728e8437cbcee <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .

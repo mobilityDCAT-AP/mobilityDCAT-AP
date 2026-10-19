@@ -111,8 +111,8 @@
   </sh:NodeShape>
   <owl:Ontology rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/ranges">
     <dct:creator>
-      <foaf:Group rdf:nodeID="cbb7ba835447896e8fda285d5dc4b0aa0afb6fdebafbda714b9af0936be96f0333">
-        <foaf:name>NAPCORE SWG 4.4</foaf:name>
+      <foaf:Group rdf:nodeID="cb342ae03c4f8594a755fe673c9832213049de4351b37c6bdfd5ce20fe8b8b7b8f">
+        <foaf:name>NAPCORE Task 4.4</foaf:name>
         <foaf:page rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"/>
       </foaf:Group>
     </dct:creator>

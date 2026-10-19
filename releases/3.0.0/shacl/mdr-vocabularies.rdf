@@ -185,8 +185,8 @@
     <dct:conformsTo rdf:resource="https://www.w3.org/TR/shacl"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-14</dct:created>
     <dct:creator>
-      <foaf:Group rdf:nodeID="cb2aa67c3cbf23e7c5449f2892296732c92eb7f916e2c7e7ddbb75401550f41a511">
-        <foaf:name>NAPCORE SWG 4.4</foaf:name>
+      <foaf:Group rdf:nodeID="cb226d820b3fa3aa26bc5c8930169f4a3b839edf604e420786ff2318ee7b15e1d6d">
+        <foaf:name>NAPCORE Task 4.4</foaf:name>
         <foaf:page rdf:resource="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP"/>
       </foaf:Group>
     </dct:creator>

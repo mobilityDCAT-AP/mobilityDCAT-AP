@@ -302,6 +302,34 @@ It is compatible with the parallel specifications [DCAT-AP-v3.0.1] and [GeoDCAT-
       }
     },
     {
+      "id": "https://www.rfc-editor.org/info/rfc2119/",
+      "type": "TechArticle",
+      "name": "Key words for use in RFCs to Indicate Requirement Levels",
+      "url": "https://www.rfc-editor.org/info/rfc2119/",
+      "creator": [
+        {
+          "name": "S. Bradner"
+        }
+      ],
+      "publisher": {
+        "name": "IETF"
+      }
+    },
+    {
+      "id": "https://www.rfc-editor.org/info/rfc8174/",
+      "type": "TechArticle",
+      "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
+      "url": "https://www.rfc-editor.org/info/rfc8174/",
+      "creator": [
+        {
+          "name": "B. Leiba"
+        }
+      ],
+      "publisher": {
+        "name": "IETF"
+      }
+    },
+    {
       "id": "https://www.w3.org/TR/rdf11-primer/",
       "type": "TechArticle",
       "name": "RDF Primer",
@@ -993,6 +1021,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     {
       "label": "JSON-LD",
       "uri": "./mobilitydcat-ap.jsonld"
+    },
+    {
+      "label": "N-Triples",
+      "uri": "./mobilitydcat-ap.nt"
     },
     {
       "label": "SHACL shapes (Turtle)",
@@ -2099,7 +2131,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <p>
           This document is also available in these non-normative formats:
-          <a rel="alternate" href="./mobilitydcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./mobilitydcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./mobilitydcat-ap.jsonld">JSON-LD</a>, <a rel="alternate" href="./shacl/shapes.ttl">SHACL shapes (Turtle)</a>, <a rel="alternate" href="./shacl/ranges.ttl">SHACL range constraints (Turtle)</a>, <a rel="alternate" href="./shacl/mdr-vocabularies.ttl">SHACL controlled-vocabulary constraints (Turtle)</a>, <a rel="alternate" href="./shacl/deprecated-uris.ttl">SHACL deprecated URIs (Turtle)</a>, <a rel="alternate" href="./shacl/imports.ttl">SHACL imports (Turtle)</a> and <a rel="alternate" href="./shacl/mdr-imports.ttl">SHACL codelist imports (Turtle)</a>
+          <a rel="alternate" href="./mobilitydcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./mobilitydcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./mobilitydcat-ap.jsonld">JSON-LD</a>, <a rel="alternate" href="./mobilitydcat-ap.nt">N-Triples</a>, <a rel="alternate" href="./shacl/shapes.ttl">SHACL shapes (Turtle)</a>, <a rel="alternate" href="./shacl/ranges.ttl">SHACL range constraints (Turtle)</a>, <a rel="alternate" href="./shacl/mdr-vocabularies.ttl">SHACL controlled-vocabulary constraints (Turtle)</a>, <a rel="alternate" href="./shacl/deprecated-uris.ttl">SHACL deprecated URIs (Turtle)</a>, <a rel="alternate" href="./shacl/imports.ttl">SHACL imports (Turtle)</a> and <a rel="alternate" href="./shacl/mdr-imports.ttl">SHACL codelist imports (Turtle)</a>
         </p>
     <p class="copyright">
   Copyright © 2023-2026 NAPCORE. This document is licensed under a
@@ -2156,7 +2188,7 @@ It is compatible with the parallel specifications [<cite><a class="bibref" data-
 
 <p>mobilityDCAT-AP is compatible with the parallel specifications [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v3-0-1" title="DCAT-AP 3.0.1">DCAT-AP-v3.0.1</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-geodcat-ap-v3-0-0" title="GeoDCAT-AP - Version 3.0.0">GeoDCAT-AP-v3.0.0</a></cite>].</p>
 
-<p>This work has been carried out in the context of sub-working group 4.4 of the [<cite><a class="bibref" data-link-type="biblio" href="#bib-napcore" title="Website of the NAPCORE project">NAPCORE</a></cite>] project. 
+<p>This work has been carried out in the context of Task 4.4 of the [<cite><a class="bibref" data-link-type="biblio" href="#bib-napcore" title="Website of the NAPCORE project">NAPCORE</a></cite>] project. 
   NAPCORE is an EU-cofunded Programme Support Action under the GRANT AGREEMENT No 101234721-25-EU-TG-NAPCORE-X.</p>
 
 </section>
@@ -2291,6 +2323,10 @@ It is compatible with the parallel specifications [<cite><a class="bibref" data-
 <section id="conformance" class="override" data-alias="conformance"><div class="header-wrapper"><h2 id="x4-conformance-statement"><bdi class="secno">4. </bdi>Conformance Statement</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div>
 
 
+
+<p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p>
+
+<p>The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">RECOMMENDED</em>, and <em class="rfc2119">SHOULD</em> in this document are to be interpreted as described in BCP 14 [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>] when, and only when, they appear in all capitals, as shown here.</p>
 
 <section id="provider-requirements"><div class="header-wrapper"><h3 id="x4-1-provider-requirements"><bdi class="secno">4.1 </bdi>Provider requirements</h3><a class="self-link" href="#provider-requirements" aria-label="Permalink for Section 4.1"></a></div>
 
@@ -3642,7 +3678,7 @@ geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Catalo
 </td>
 <td valign="top">
   <p>Used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. 
-    With these property, a data user can see, if the metadata was harvested, and from where.
+    With this property, a data user can see, if the metadata was harvested, and from where.
      The property should link to a public URL of the dataset description on the original data portal, from where the metadata was harvested.</p>
 </td>
 <td valign="top">
@@ -4373,7 +4409,7 @@ or other identifier systems such as [<cite><a class="bibref" data-link-type="bib
 <p>The date of formal issuance (e.g., publication) of the dataset.</p>
 </td>
 <td valign="top">
-  <p>There might a difference in the listing date of the metadata entry; see the property <a href="#catalogue-record-listing-date"><code>dct:issued</code></a> of class Catalogue Record.
+  <p>There might be a difference in the listing date of the metadata entry; see the property <a href="#catalogue-record-listing-date"><code>dct:issued</code></a> of class Catalogue Record.
    Imagine the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, 
     leading to two different dates. However, both dates can also be the same.</p>
 </td>
@@ -4394,7 +4430,7 @@ or other identifier systems such as [<cite><a class="bibref" data-link-type="bib
 <p>0..*</p>
 </td>
 <td valign="top">
-  <p>An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>.</p>
+  <p>An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property <a href="#dataset-applicable-legislation"><code>dcatap:applicableLegislation</code></a>).</p>
 </td>
 <td valign="top">
   <p>The rights holder will be in many cases identical with the publisher of the dataset (see property <a href="#dataset-publisher"><code>dct:publisher</code></a>) and/or of the catalogue record (see property <a href="#catalogue-record-publisher"><code>dct:publisher</code></a>). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.</p>
@@ -8352,7 +8388,7 @@ geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Standa
 
 
 <p>
-This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a class="bibref" data-link-type="biblio" href="#bib-napcore-metadata-working-group" title="Information about the NAPCORE Sub-Working Group on Metadata">NAPCORE-Metadata-Working-Group</a></cite>].
+This work was elaborated by NAPCORE Task 4.4 [<cite><a class="bibref" data-link-type="biblio" href="#bib-napcore-metadata-working-group" title="Information about the NAPCORE Sub-Working Group on Metadata">NAPCORE-Metadata-Working-Group</a></cite>].
 </p>
 
 <p> Editors of ReSpec documentation:</p>
@@ -9590,7 +9626,7 @@ This property may refer to a related dataset of which the described dataset is a
 
 
 
-<p>A previous European activity to harmonise metadata at National Access Point was the Coordinated Metadata Catalogue (CMC) [<cite><a class="bibref" data-link-type="biblio" href="#bib-eu-eip-cmc" title="Information about the Coordinated Metadata Catalogue (CMC) by EU EIP">EU-EIP-CMC</a></cite>].) This Catalogue describes a common minimum metadata set for NAP. The most recent version from 2019 contains definitions for 32 Metadata elements, including their description, types and obligation levels. These definitions are in a proprietary, human-readable format only.</p>
+<p>A previous European activity to harmonise metadata at National Access Point was the Coordinated Metadata Catalogue (CMC) [<cite><a class="bibref" data-link-type="biblio" href="#bib-eu-eip-cmc" title="Information about the Coordinated Metadata Catalogue (CMC) by EU EIP">EU-EIP-CMC</a></cite>]. This Catalogue describes a common minimum metadata set for NAP. The most recent version from 2019 contains definitions for 32 Metadata elements, including their description, types and obligation levels. These definitions are in a proprietary, human-readable format only.</p>
 <p>The following mapping table has been prepared to show how the Metadata elements from the original Coordinated Metadata Catalogue compare to the classes and properties of mobilityDCAT-AP.</p>
 <p>Please note that some CMC elements are mapped to 2 properties of mobilityDCAT-AP, due to semantic ambiguities of some CMC elements. When mapping such elements, the correct semantics need to be considered.</p>
 
@@ -10788,8 +10824,12 @@ These classes have been already defined in [<cite><a class="bibref" data-link-ty
       <a href="https://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. Dan Brickley; Ramanathan Guha.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
     </dd><dt id="bib-rdf11-concepts">[RDF11-CONCEPTS]</dt><dd>
       <a href="https://www.w3.org/TR/rdf11-concepts/"><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a>. Richard Cyganiak; David Wood; Markus Lanthaler.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>
+    </dd><dt id="bib-rfc2119">[RFC2119]</dt><dd>
+      <a href="https://www.rfc-editor.org/info/rfc2119/"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/info/rfc2119/">https://www.rfc-editor.org/info/rfc2119/</a>
     </dd><dt id="bib-rfc6497">[RFC6497]</dt><dd>
       <a href="https://www.rfc-editor.org/info/rfc6497/"><cite>BCP 47 Extension T - Transformed Content</cite></a>. M. Davis; A. Phillips; Y. Umaoka; C. Falk.  IETF. February 2012. Informational. URL: <a href="https://www.rfc-editor.org/info/rfc6497/">https://www.rfc-editor.org/info/rfc6497/</a>
+    </dd><dt id="bib-rfc8174">[RFC8174]</dt><dd>
+      <a href="https://www.rfc-editor.org/info/rfc8174/"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/info/rfc8174/">https://www.rfc-editor.org/info/rfc8174/</a>
     </dd><dt id="bib-semic-style-guide-for-semantic-engineers">[SEMIC-Style-Guide-for-Semantic-Engineers]</dt><dd>
       <a href="https://semiceu.github.io/style-guide/1.0.0/index.html"><cite>SEMIC Style Guide for Semantic Engineers</cite></a>.  SEMIC. URL: <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">https://semiceu.github.io/style-guide/1.0.0/index.html</a>
     </dd><dt id="bib-shacl">[SHACL]</dt><dd>

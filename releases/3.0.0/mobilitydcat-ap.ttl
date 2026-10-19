@@ -40,13 +40,13 @@ mobilitydcatap: a voaf:Vocabulary,
     <https://semiceu.github.io/DCAT-AP/releases/3.0.0> ;
   dct:created "2026-06-17"^^xsd:date ;
   dct:creator [ a foaf:Group ;
-      foaf:name "NAPCORE SWG 4.4" ;
+      foaf:name "NAPCORE Task 4.4" ;
       foaf:page <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP> ] ;
   dct:dateCopyrighted "2026"^^xsd:gYear ;
   dct:description "mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance."@en ;
-  dct:issued "2026-06-17"^^xsd:date ;
+  dct:issued "2026-10-19"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2026-07-06"^^xsd:date ;
+  dct:modified "2026-10-19"^^xsd:date ;
   dct:publisher <https://napcore.eu/> ;
   dct:rightsHolder <https://napcore.eu/> ;
   dct:title "mobilityDCAT-AP"@en ;
@@ -400,7 +400,7 @@ foaf:Agent rdf:type owl:Class ;
     For mobility data portals, it is expected that organisations are the main data actors, so the type organisation is preferred. In such case, the use of the Organization Ontology is recommended.
     If a person is mentioned as an agent, he or she should be attributed to an organisation via the property org:memberOf, and, additionally, attributed with the personal name via properties foaf:firstName and foaf:surname.
     The agent might be populated with the same information as for a kind, see class vcard:Kind.
-    When providing agent information, data publishers should prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 12. Privacy and security considerations.
+    When providing agent information, data publishers should prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 12.1 Privacy and security considerations.
     See also the Wiki page with more recommendations on the usage of organisational and personal information.
 
     For this entity the following properties are defined: address, affiliation, email, first name, name, phone, surname, type, URL."""@en ;
@@ -483,8 +483,8 @@ dct:LinguisticSystem rdf:type owl:Class ;
 vcard:Kind rdf:type owl:Class ;
     rdfs:comment """A description following the VCARD-RDF specification, e.g. to provide telephone number and e-mail address for a contact point.
     This class is the parent class for the four explicit types of vCards (vcard:Individual, vcard:Organization, vcard:Location, vcard:Group).
-    The contact point might be populated with the same information as for an agent, see class foaf:Agent. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
-    When providing contact information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 13. Privacy and security considerations.
+    The contact point might be populated with the same information as for an agent, see class foaf:Agent.
+    When providing contact information, data publishers SHOULD prioritize organizational information over personal details. The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the agent. See 12.1 Privacy and security considerations.
     For this entity the following properties are defined: "address (vcard:hasAddress)", "affiliation (vcard:organization-name)", "email (vcard:hasEmail)", "name (vcard:fn)", "phone (vcard:hasTelephone)", "URL (vcard:hasURL)"."""@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -671,7 +671,7 @@ dct:publisher a rdf:Property,
     For Dataset, this property refers to an entity (company and person) that publishes the dataset. This entity is responsible for the provisioning of a dataset. The entity also concludes a contract, if applicable.
     This information can be natively created by a data platform, then corresponding to the entity that is registered to the data platform and has the role of a data publisher. The information might be identical to the property dct:publisher of class Catalogue Record and/or dct:rightsHolder of class Dataset.
     To establish a contact with a company or person responsible for the dataset, the property dcat:contactPoint should be used.
-    However, the publisher and the contact point might be populated with the same information. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
+    However, the publisher and the contact point might be populated with the same information.
     The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.
 
     For Dataset Series, it refers to an entity (company and person) that publishes the dataset series. This entity is also responsible for ensuring the coherency of the dataset series.
@@ -699,7 +699,7 @@ dct:publisher a rdf:Property,
 dct:source a rdf:Property,
     owl:ObjectProperty ;
     rdfs:comment """For Catalogue Records, it refers to the original metadata record that was used in creating the metadata record.
-    Used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With these property, a data user can see, if the metadata was harvested, and from where. The property should link to a public URL of the dataset description on the original data portal, from where the metadata was harvested.
+    Used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs. With this property, a data user can see, if the metadata was harvested, and from where. The property should link to a public URL of the dataset description on the original data portal, from where the metadata was harvested.
 
     For Datasets, it refers to a related Dataset from which the described Dataset is derived.
     There is the same property dct:source on the Catalogue Record level. The source of a dataset relates to the content data, whereas the source of a catalogue record relates to the metadata."""@en ;
@@ -798,7 +798,7 @@ dct:conformsTo a rdf:Property,
 ###  http://purl.org/dc/terms/rightsHolder
 dct:rightsHolder a rdf:Property,
     owl:ObjectProperty ;
-    rdfs:comment """An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property dcatap:applicableLegislation.
+    rdfs:comment """An entity that legally owns or holds the rights of the data provided in a dataset. This entity is legally responsible for the content of the data and (if applicable) for the relevance to legal frameworks (see property dcatap:applicableLegislation).
     The rights holder will be in many cases identical with the publisher of the dataset (see property dct:publisher) and/or of the catalogue record (see property dct:publisher). In such case, the rights holder data may be copied from the corresponding publisher entries. There might be also cases with non-identical entities: e.g., when one or several rights holders contract a third-party publisher (e.g., an IT service company), which is producing, hosting and publishing a dataset.
     This property corresponds to the addition by geoDCAT-AP v3.0.0."""@en ;
     rdfs:label "rights holder"@en ;
@@ -1297,7 +1297,7 @@ locn:thoroughfare rdf:type owl:DatatypeProperty ;
 
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:DatatypeProperty ;
-    rdfs:comment """A name of the agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see 12. Accessibility and Multilingual Aspects."""@en ;
+    rdfs:comment """A name of the agent. This property can be repeated for different versions of the name (e.g. the name in different languages) - see 11. Accessibility and Multilingual Aspects."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Agent."@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -1357,7 +1357,7 @@ dct:issued rdf:type owl:DatatypeProperty ;
     For Assessment, this property describes the date of the latest assessment procedure.
 
     For Dataset, this property contains the date of formal issuance (e.g., publication) of the dataset. 
-    There might be a difference in the creation date of the metadata entry; see the property dct:created of the Class Catalogue Record. Imagine the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, leading to two different dates. However, both dates can also be the same.
+    There might be a difference in the listing date of the metadata entry; see the property dct:issued of the Class Catalogue Record. Imagine the dataset is published outside the mobility data portal first, and afterwards published as a metadata entry on the portal, leading to two different dates. However, both dates can also be the same.
 
     For Dataset Series, this property indicates the date of formal issuance (e.g., publication) of the dataset series. 
     The moment when the dataset series was established as a managed resource. This might correspond to the earliest release date of the dataset in the collection, as declared via property dct:issued. See also the examples no. 9 and 10 in the Dataset Series examples section of DCAT-AP v3.0.0.
@@ -1381,7 +1381,7 @@ dct:issued rdf:type owl:DatatypeProperty ;
 
 ###  http://xmlns.com/foaf/spec/#term_firstName
 foaf:firstName rdf:type owl:DatatypeProperty ;
-    rdfs:comment """The first name of the agent. To be used if the agent is of type person, see 11. Agent Types, Agent Roles and Contact Information."""@en ;
+    rdfs:comment """The first name of the agent. To be used if the agent is of type person."""@en ;
     rdfs:label "first name"@en  ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Agent."@en ;
     vs:term_status "stable" ;
@@ -1394,7 +1394,7 @@ foaf:firstName rdf:type owl:DatatypeProperty ;
 		   
 ### http://xmlns.com/foaf/spec/#term_surname
 foaf:surname rdf:type owl:DatatypeProperty ;
-    rdfs:comment """The surname of the agent. To be used if the agent is of type person, see 11. Agent Types, Agent Roles and Contact Information."""@en ;
+    rdfs:comment """The surname of the agent. To be used if the agent is of type person."""@en ;
     rdfs:label "surname"@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Agent."@en ;
     vs:term_status "stable" ;
@@ -1444,7 +1444,7 @@ dct:created rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/mobilitydcat-ap#dataFormatNotes
 mobilitydcatap:dataFormatNotes rdf:type owl:DatatypeProperty ;
-    rdfs:comment """Any additional information about the format of the delivered content within the distribution in a textual format.This property can be repeated for parallel language versions of the data format notes - see 12. Accessibility and Multilingual Aspects."""@en ;
+    rdfs:comment """Any additional information about the format of the delivered content within the distribution in a textual format.This property can be repeated for parallel language versions of the data format notes - see 11. Accessibility and Multilingual Aspects."""@en ;
     rdfs:label "data format notes"@en ;
     rdfs:isDefinedBy mobilitydcatap:;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Distribution."@en ;
@@ -1509,11 +1509,11 @@ rdfs:label
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:DatatypeProperty ;
     rdfs:comment """For Location, it refers to a preferred label of the location.
-    This property can be repeated for parallel language versions of the label - see 12. Accessibility and Multilingual Aspects.
+    This property can be repeated for parallel language versions of the label - see 11. Accessibility and Multilingual Aspects.
     This property corresponds to the addition by geoDCAT-AP v3.0.0.
 
     For Concept, it refers to a preferred label of the concept.
-    This property can be repeated for parallel language versions of the label - see 12. Accessibility and Multilingual Aspects."""@en ;
+    This property can be repeated for parallel language versions of the label - see 11. Accessibility and Multilingual Aspects."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Location, and a mandatory property to be used for Concept."@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -1550,19 +1550,19 @@ dct:accrualPeriodicity a owl:ObjectProperty ;
 ### http://purl.org/dc/terms/description
 dct:description a owl:DatatypeProperty ;
     rdfs:comment """For Catalogue, it contains a free-text account of the Catalogue.
-    This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects.
+    This property can be repeated for parallel language versions of the description - see 11. Accessibility and Multilingual Aspects.
 
     For Dataset, it refers to the information about the dataset as a free-text description. It is used only for a brief overview, because free-text fields are unsuitable for searches, due to spelling mistakes, different wordings and other aspects. The categorisation and other aspects about the dataset are described within other properties of the dataset.
-    This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
+    This property can be repeated for parallel language versions of the description - see 11. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
 
     For Dataset Series, it contains information about the dataset series as a free-text description.
     It is recommended to provide an indication about the dimensions the Dataset Series evolves, e.g., if the dataset seriesevolves according to the time, geolocation or other dimensions.
-    This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
+    This property can be repeated for parallel language versions of the description - see 11. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the description.
 
-    For Distribution, it refers to a free-text account of the Distribution. This property can be repeated for parallel language versions of the description - see 12. Accessibility and Multilingual Aspects.
+    For Distribution, it refers to a free-text account of the Distribution. This property can be repeated for parallel language versions of the description - see 11. Accessibility and Multilingual Aspects.
 
     For Rights Statement, it contains the text of the Rights Statement. I.e., any textual information about access, usage or licensing conditions, beyond information given via other properties under classes dct:RightsStatement and dct:LicenseDocument.
-    This property can be repeated for parallel language versions of the information - see 12. Accessibility and Multilingual Aspects.
+    This property can be repeated for parallel language versions of the information - see 11. Accessibility and Multilingual Aspects.
     This property corresponds to the addition by geoDCAT-AP v3.0.0."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue, Dataset, and Dataset Series; and it is an optional property to be used for Distribution and Rights Statement."@en ;
     vs:term_status "stable" ;
@@ -1641,10 +1641,10 @@ dct:isVersionOf a owl:ObjectProperty ;
 
 ### http://purl.org/dc/terms/language
 dct:language a owl:ObjectProperty ;
-    rdfs:comment """For Catalogue, this property refers to a language used in the user interface of the mobility data portal, in particular the textual metadata describing the datasets registered in the portal. This property can be repeated if the user interface and textual metadata are provided in multiple languages - see 12. Accessibility and Multilingual Aspects.
+    rdfs:comment """For Catalogue, this property refers to a language used in the user interface of the mobility data portal, in particular the textual metadata describing the datasets registered in the portal. This property can be repeated if the user interface and textual metadata are provided in multiple languages - see 11. Accessibility and Multilingual Aspects.
 
     For Catalogue Record, it refers to the language used in the textual metadata describing titles, descriptions, etc. of the metadata entry.
-    The value may be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see 12. Accessibility and Multilingual Aspects.
+    The value may be generated automatically by the NAP system, corresponding to the currently used language in the user interface. Some portals offer multilingual user interfaces, e.g., in the local language and additionally in English. For multiple languages - see 11. Accessibility and Multilingual Aspects.
     The obligation of this property is raised to “mandatory”, comparing to DCAT-AP v3.0.0.
 
     For Dataset, it refers to the language of the content data in a dataset, if this content has a natural language embedded, such as text fields, addresses etc.
@@ -1652,7 +1652,7 @@ dct:language a owl:ObjectProperty ;
 
     For Distribution, it describes the language of the content data in a distribution, if this content has a natural language embedded, such as text fields, addresses etc.
     There is the same property dct:language under class Dataset. Language information on the distribution level is only recommended, if there are multiple distributions for the same dataset with a different language each.
-    This property can be repeated if there are multiple languages in the distribution - see 12. Accessibility and Multilingual Aspects"""@en ;
+    This property can be repeated if there are multiple languages in the distribution - see 11. Accessibility and Multilingual Aspects"""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue Records; and it is an optional property to be used for Catalogue, Dataset, and Distribution."@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -1686,7 +1686,7 @@ dct:modified a owl:DatatypeProperty ;
     rdfs:comment """For Catalogue, this property contains the most recent date on which the Catalogue was modified. It is recommended to indicate modifications of the portal system as such (e.g., major technical updates of the portal or its features), rather than modifications of the hosted datasets, since datasets on mobility data portals are updaded frequently.
 
     For Catalogue Record, this property contains the most recent date on which the metadata entry was changed or modified.
-    It should be generated by the system, whenever a platform user updates the metadata entry. If there has been no update yet, the value from the property dct:created should be taken.
+    It should be generated by the system, whenever a platform user updates the metadata entry. If there has been no update yet, the value from the property dct:issued should be taken.
 
     For Dataset, this property contains the most recent date on which the content of the dataset was changed or modified.
     This is redundant for high-frequency data feeds (e.g., DATEX II feeds), where the change date can be derived from the time stamp within the data feed.
@@ -1763,21 +1763,21 @@ dct:spatial a owl:ObjectProperty ;
 ### http://purl.org/dc/terms/title
 dct:title a owl:DatatypeProperty ;
     rdfs:comment """For Catalogue, this property contains a name given to the mobility data portal.
-    This property can be repeated for parallel language versions of the name - see 12. Accessibility and Multilingual Aspects.
+    This property can be repeated for parallel language versions of the name - see 11. Accessibility and Multilingual Aspects.
 
     For Concept Scheme, this property contains a name of the concept scheme.
-    This property can be repeated for parallel language versions of the name - see 12. Accessibility and Multilingual Aspects.
+    This property can be repeated for parallel language versions of the name - see 11. Accessibility and Multilingual Aspects.
 
     For Dataset, this property contains a the name given to the dataset in a generic term. The name should be a meaningful, unique and unambiguous label.
-    This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.
+    This property can be repeated for parallel language versions of the title - see 11. Accessibility and Multilingual Aspects. The language version should correspond to property dct:language of class Catalogue Record. I.e., if more than one language is provided as a metadata language, there should be as many language versions for the title.
 
     For Dataset Series, this property contains the name given to the dataset series in a generic term. The name should be a meaningful, unique and unambiguous label.
-    This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects.
+    This property can be repeated for parallel language versions of the title - see 11. Accessibility and Multilingual Aspects.
 
-    For Distribution, this property contains a name given to the Distribution. This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects.
+    For Distribution, this property contains a name given to the Distribution. This property can be repeated for parallel language versions of the title - see 11. Accessibility and Multilingual Aspects.
 
     For Mobility Data Standard, this property contains a name given to the mobility data standard.
-    This property can be repeated for parallel language versions of the title - see 12. Accessibility and Multilingual Aspects."""@en ;
+    This property can be repeated for parallel language versions of the title - see 11. Accessibility and Multilingual Aspects."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is a mandatory property to be used for Catalogue, Dataset, Dataset Series, and Concept Scheme; and it is an optional property to be used for Distribution and Mobility Data Standard."@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -1826,7 +1826,7 @@ skos:notation a owl:DatatypeProperty ;
 adms:versionNotes a owl:DatatypeProperty ;
     rdfs:comment """A textual description of the differences between this version and a previous version of the dataset.
     This property should be an addition to the property dcat:version.
-    This property can be repeated for parallel language versions of the version notes - see 12. Accessibility and Multilingual Aspects."""@en ;
+    This property can be repeated for parallel language versions of the version notes - see 11. Accessibility and Multilingual Aspects."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Dataset."@en ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
@@ -2010,12 +2010,12 @@ foaf:primaryTopic a owl:ObjectProperty ;
 dcat:contactPoint a owl:ObjectProperty ;
     rdfs:comment """For Dataset, it refers to a contact information that can be used for communication with a company or person responsible for the dataset. Used for questions or issues about a dataset and its provisioning, as raised by a platform user or a platform operator.
     When providing contact information, data publishers SHOULD prioritize organizational information over personal details.
-    The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 13. Privacy and security considerations.
-    The contact point might be populated with the same information as for property dct:publisher. See 11. Agent Types, Agent Roles and Contact Information for further usage notes on that matter.
+    The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 12.1 Privacy and security considerations.
+    The contact point might be populated with the same information as for property dct:publisher.
 
     For Dataset Series, it contains information about the contact information that can be used for communication with a company or person responsible for the dataset series. Used for questions or issues about a dataset series and its provisioning, as raised by a platform user or a platform operator.
     When providing contact information, data publishers SHOULD prioritize organizational information over personal details.
-    The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 13. Privacy and security considerations."""@en ;
+    The exposure of personal information, such as a personal name and email address, may be restricted to the public. Instead, there might be an anonymous contact channel, e.g. a contact button on the GUI that triggers an email to the contact point. See 12.1 Privacy and security considerations."""@en ;
     skos:scopeNote "In mobilityDCAT-AP, this is an optional property for Dataset and Dataset Series." ;
     vs:term_status "stable" ;
     adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> ;
