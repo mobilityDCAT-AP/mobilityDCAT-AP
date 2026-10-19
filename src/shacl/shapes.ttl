@@ -87,7 +87,7 @@
   ] ;
   dct:creator [
     a foaf:Group ;
-    foaf:name "NAPCORE SWG 4.4" ;
+    foaf:name "NAPCORE Task 4.4" ;
     foaf:page <https://github.com/mobilityDCAT-AP/mobilityDCAT-AP>
   ] ;
   dct:publisher <https://napcore.eu/> ;
