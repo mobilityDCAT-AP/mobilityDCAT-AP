@@ -81,8 +81,9 @@ normal, everyday case.
    ```
 
 4. Open a pull request against `main`. `build-check.yml` runs again for the pull
-   request; its concurrency group cancels the older run of the same branch. The
-   push run then shows as cancelled on the branch, which is expected.
+   request. While the pull request is open, each push to its branch builds
+   twice, once for the push and once for the pull request; both runs complete,
+   and both appear among the pull request's checks.
 
    From a fork, `gh pr create` targets the upstream repository by default. Pass
    `--repo` and `--base` to choose another one, or pick the base repository in
@@ -481,8 +482,8 @@ correction, or `release/*` is protected against direct pushes.
 
    `build-check.yml` builds the pull request and publishes nothing; the built
    `dist/` is attached to the run for review. As in
-   [Edit the current draft](#edit-the-current-draft), the earlier run for the
-   branch push shows as cancelled among the pull request's checks.
+   [Edit the current draft](#edit-the-current-draft), the run for the branch
+   push appears among the pull request's checks as well.
 
    With `gh`, set the base explicitly; from a fork, add `--repo` as well:
 
