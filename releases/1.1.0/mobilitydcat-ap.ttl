@@ -221,7 +221,7 @@ adms:versionNotes  rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  https://w3id.org/mobilitydcatap#MobilityDataStandard
+###  https://w3id.org/mobilitydcat-ap#MobilityDataStandard
 mobilitydcatap:MobilityDataStandard rdf:type owl:Class ;
 		   rdfs:subClassOf dct:Standard;
            rdfs:comment """The mobility data standard applied for the delivered content. A mobility data standard, e.g., DATEX II, combines syntax and semantic definitions of entities in a certain domain (e.g., for DATEX II: road traffic information), and optionally adds technical rules for data exchange. This is a sub-class of "dct:Standard".
@@ -245,7 +245,7 @@ locn:Address rdf:type owl:Class ;
                         <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0> ,
                         <https://semiceu.github.io/GeoDCAT-AP/releases/> .
 		   
-###  https://w3id.org/mobilitydcatap#Assessment
+###  https://w3id.org/mobilitydcat-ap#Assessment
 mobilitydcatap:Assessment rdf:type owl:Class ;
            rdfs:comment """An assessment procedure by an external organisation. This organisation MAY be a National Body in the context of EU Delegated Regulations. EU Delegated Regulations require Member States to set up procedures to assess the compliance with the applicable Delegated Regulations, e.g. regarding the provisioning of data via a NAP. These assessment processes are handled by National Bodies [NAPCORE-NB] and installed individually in each Member State. The information is optional and needed for the documentation of the assessment procedure. It MAY be an internal information, only visible for assessment organisations or other authorised users.
            The "assessment date (dct:issued)" and "assessment result(oa:hasBody)" optional properties are not included in [DCAT-AP-v2.0.1]."""@en ;
