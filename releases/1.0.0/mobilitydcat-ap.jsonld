@@ -2184,32 +2184,6 @@
       }
     },
     {
-      "@id": "https://w3id.org/mobilitydcatap/",
-      "rdf:type": {
-        "@id": "owl:NamedIndividual"
-      },
-      "dct:conformsTo": [
-        {
-          "@id": "http://data.europa.eu/r5r/"
-        },
-        {
-          "@id": "https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24"
-        },
-        {
-          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"
-        },
-        {
-          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"
-        },
-        {
-          "@id": "https://www.w3.org/TR/vocab-dcat-2/"
-        }
-      ],
-      "dct:publisher": {
-        "@id": "http://publications.europa.eu/resource/authority/corporate-body/COM"
-      }
-    },
-    {
       "@id": "https://www.w3.org/TR/vocab-dcat-2/",
       "rdf:type": {
         "@id": "owl:NamedIndividual"

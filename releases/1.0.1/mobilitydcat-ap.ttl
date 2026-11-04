@@ -870,16 +870,6 @@ rdfs:label rdf:type owl:DatatypeProperty ;
 <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap> rdf:type owl:NamedIndividual .
 
 
-###  https://w3id.org/mobilitydcatap/
-<https://w3id.org/mobilitydcatap/> rdf:type owl:NamedIndividual ;
-                                   dct:conformsTo <http://data.europa.eu/r5r/> ,
-                                                  <https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24> ,
-                                                  <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements> ,
-                                                  <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap> ,
-                                                  <https://www.w3.org/TR/vocab-dcat-2/> ;
-                                   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> .
-
-
 ###  https://www.w3.org/TR/vocab-dcat-2/
 <https://www.w3.org/TR/vocab-dcat-2/> rdf:type owl:NamedIndividual .
 

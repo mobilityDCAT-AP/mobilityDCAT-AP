@@ -1299,19 +1299,6 @@
 
 
 
-    <!-- https://w3id.org/mobilitydcatap/ -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/mobilitydcatap/">
-        <dct:conformsTo rdf:resource="http://data.europa.eu/r5r/"/>
-        <dct:conformsTo rdf:resource="https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24"/>
-        <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"/>
-        <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"/>
-        <dct:conformsTo rdf:resource="https://www.w3.org/TR/vocab-dcat-2/"/>
-        <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
-    </owl:NamedIndividual>
-
-
-
     <!-- https://www.w3.org/TR/vocab-dcat-2/ -->
 
     <owl:NamedIndividual rdf:about="https://www.w3.org/TR/vocab-dcat-2/"/>
