@@ -21,7 +21,7 @@ Guidelines for the implementation of the mobilityDCAT-AP specification are avail
 
 ## Structure of the repository
 
-- [Releases](https://w3id.org/mobilitydcat-ap/releases/): mobilityDCAT-AP releases (latest: v1.1.0); each release might have different distributions.
+- [Releases](https://w3id.org/mobilitydcat-ap/releases/): mobilityDCAT-AP releases (latest: v3.0.0); each release might have different distributions.
 - [Working Drafts](https://w3id.org/mobilitydcat-ap/drafts/latest/): Working drafts including revisions to the latest mobilityDCAT-AP release.
 - [Sources](./src/): the sources of the working draft. How they are built and published is described in [REPOSITORY.md](./REPOSITORY.md).
 
