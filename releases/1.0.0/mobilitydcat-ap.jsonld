@@ -11,7 +11,7 @@
     "dqv": "http://www.w3.org/ns/dqv#",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "locn": "http://www.w3.org/ns/locn#",
-    "mobilitydcatap": "http://w3id.org/mobilitydcat-ap#",
+    "mobilitydcatap": "https://w3id.org/mobilitydcat-ap#",
     "oa": "http://www.w3.org/ns/oa#",
     "org": "http://www.w3.org/ns/org#",
     "owl": "http://www.w3.org/2002/07/owl#",
@@ -2181,32 +2181,6 @@
       "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap",
       "rdf:type": {
         "@id": "owl:NamedIndividual"
-      }
-    },
-    {
-      "@id": "https://w3id.org/mobilitydcatap/",
-      "rdf:type": {
-        "@id": "owl:NamedIndividual"
-      },
-      "dct:conformsTo": [
-        {
-          "@id": "http://data.europa.eu/r5r/"
-        },
-        {
-          "@id": "https://eur-lex.europa.eu/eli/reg/2008/1205/2008-12-24"
-        },
-        {
-          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"
-        },
-        {
-          "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"
-        },
-        {
-          "@id": "https://www.w3.org/TR/vocab-dcat-2/"
-        }
-      ],
-      "dct:publisher": {
-        "@id": "http://publications.europa.eu/resource/authority/corporate-body/COM"
       }
     },
     {

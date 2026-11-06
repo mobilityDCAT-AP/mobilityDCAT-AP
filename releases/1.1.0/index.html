@@ -2108,20 +2108,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       document at the time of its publication. Other documents may supersede
       this document.</em></p>
 <p>
-    This document was published by the <a href="https://github.com/mobilityDCAT-AP/">NAPCORE Sub-Working Group (SWG) 4.4</a> as a recommendaton.
+    This document was published by the <a href="https://github.com/mobilityDCAT-AP/">NAPCORE Sub-Working Group (SWG) 4.4</a> as a Recommendation.
+
   </p><p>
     <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/">GitHub Issues</a> are preferred for
           discussion of this specification.
 
 
+        </p><p>
+
+            Publication as a Recommendation has received the endorsement of the Working Group.
+
+        </p><p> The Working Group recommends the wide deployment of this specification.
+
   </p><p>
-    </p><p>This is a draft document and may be updated, replaced
-  or obsoleted by other documents at any time. It is inappropriate to cite this
-  document as other than work in progress.
-  </p><p></p><p>
-                  This document is governed by the
-                  <a id="w3c_process_revision" href="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap">Change and Release Management Policy for DCAT-AP</a>.
-                </p></section>
+          This document is governed by the
+          <a id="w3c_process_revision" href="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap">Change and Release Management Policy for DCAT-AP</a>.
+          </p></section>
 
 <section id="document-history" class="introductory">
 
@@ -2164,7 +2167,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </tr>
 
   <tr>
-  <td><a href="https://w3id.org/mobilitydcat-ap/drafts/1.0.0-draft-0.1/">0.1</a></td>
+  <td>0.1</td>
   <td>11/05/2023</td>
   <td>First Public Working Draft</td>
   <td>Creation</td>
@@ -4391,8 +4394,8 @@ This property could be used to link the mobility data portal to another data por
 </td>
 <td>
 <p>This property is used for metadata records that are harvested from other portals. Harvesting, i.e., the automated import of metadata information from external portals, seems to be a common case for some NAPs.
-With these property, a data user can see, if the metadata was harvested, and from where.
-</p><p>The property <em class="rfc2119">SHOULD</em> link to a public URL of the dataset descripton on the original data portal, from where the metadata was harvested.</p>
+With this property, a data user can see, if the metadata was harvested, and from where.
+</p><p>The property <em class="rfc2119">SHOULD</em> link to a public URL of the dataset description on the original data portal, from where the metadata was harvested.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -4783,11 +4786,11 @@ With these property, a data user can see, if the metadata was harvested, and fro
 <p>1. As a range to class <a href="#distribution">dcat:Distribution</a> via property <a href="#distribution-access-service"><code>dcat:accessService</code></a>.</p>
 <p>This construct allows that class <code>dcat:DataService</code> describes additional information, e.g., about an end point, related to one distribution. This, in fact, <em class="rfc2119">MAY</em> be useful to describe a dedicated (but optional) data service related to one distribution. </p>
 <p>However, looking at today's set-ups of NAPs and mobility data portals, any metadata about the characteristics and mechanisms of a distribution channel <em class="rfc2119">MAY</em> ALSO be sufficiently described as properties of class <a href="#distribution">dcat:Distribution</a>. In particular, information provided by property <a href="#data-service-endpoint-description"><code>dcat:endpointDescription</code></a> (mandatory to class <code>dcat:DataService</code>) can be equally provided by the property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> (mandatory to class <a href="#distribution">dcat:Distribution</a>).
-</p><p>This advice contradicts somewhat to the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.1.0-guideline-dataservices" title="DCAT-AP Usage guide on Datasets, Distributions and Data Services">DCAT-AP-v2.1.0-Guideline-Dataservices</a></cite>], stating that "Anything that has not the intend to provide a downloadable representation of a dataset is a data service.", for cases in which mobility data is offered via APIs, broker services etc. However, the usage note for the property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> also includes "...information about how to get the Dataset", which could allow for a link to one ore more APIs, broker services etc. This way, the class <a href="#distribution">dcat:Distribution</a> is considered sufficient for such cases.</p>
+</p><p>This advice contradicts somewhat to the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.1.0-guideline-dataservices" title="DCAT-AP Usage guide on Datasets, Distributions and Data Services">DCAT-AP-v2.1.0-Guideline-Dataservices</a></cite>], stating that "Anything that has not the intend to provide a downloadable representation of a dataset is a data service.", for cases in which mobility data is offered via APIs, broker services etc. However, the usage note for the property <a href="#distribution-access-url"><code>dcat:accessURL</code></a> also includes "...information about how to get the Dataset", which could allow for a link to one or more APIs, broker services etc. This way, the class <a href="#distribution">dcat:Distribution</a> is considered sufficient for such cases.</p>
 
 <p>2. As a domain to class <a href="#dataset">dcat:Dataset</a> via property <a href="#data-service-serves-dataset"><code>dcat:servesDataset</code></a>.</p>
 <p>Class <code>dcat:DataService</code> would then linking to one or more datasets "...that this data service can distribute". Thus, this property connects the Data Service to the Dataset.</p>
-<p>The following figure shows how this contruct, containing above points 1. and 2., is represented in a UML diagram.</p>
+<p>The following figure shows how this construct, containing above points 1. and 2., is represented in a UML diagram.</p>
 
 <figure id="fig-mobilitydcat-ap-uml-class-diagram-withDataService">
 <a href="./figures/mobilityDCAT-AP_uml-diagramm_240816_DataServiceRelated.png" title="view full-size image"><img src="./figures/mobilityDCAT-AP_uml-diagramm_240816_DataServiceRelated.png" alt="mobilityDCAT-AP UML Class Diagram with DataService" height="314" width="1134"></a>
@@ -4795,10 +4798,10 @@ With these property, a data user can see, if the metadata was harvested, and fro
 </figure>
 
 <p>3. As a range to class <a href="#catalogue-record">dcat:CatalogueRecord</a> via property <a href="#catalogue-record-primary-topic"><code>foaf:primaryTopic</code></a> as 1:1 relationship.</p>
-<p>This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about datasets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP as of today. This construct might be used in the future when such portals also explicitely list data services. </p>
+<p>This implies a metadata entry about one Data Service. However, all analysed mobility data portals, including NAPs, store only metadata about datasets, and not about data services. Thus, such relationship is irrelevant for mobilityDCAT-AP as of today. This construct might be used in the future when such portals also explicitly list data services. </p>
 
 
-<p>Altogether, class <code>dcat:DataService</code> <em class="rfc2119">MAY</em> be used for the contruct explained above, but seems to be a rather unnecessary addition to the data model in NAPs and mobility data portals, looking at their set-ups today. It might be more relevant in the future, when data services are more explicit items to be exposed in NAPs or mobility data portals. For this reason, any properties, as associated to class <code>dcat:DataService</code> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>], are kept in mobilityDCAT-AP.</p>
+<p>Altogether, class <code>dcat:DataService</code> <em class="rfc2119">MAY</em> be used for the construct explained above, but seems to be a rather unnecessary addition to the data model in NAPs and mobility data portals, looking at their set-ups today. It might be more relevant in the future, when data services are more explicit items to be exposed in NAPs or mobility data portals. For this reason, any properties, as associated to class <code>dcat:DataService</code> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>], are kept in mobilityDCAT-AP.</p>
 </td></tr>
 <tr>
 <th>Reference</th>
@@ -5925,7 +5928,7 @@ With these property, a data user can see, if the metadata was harvested, and fro
 </td>
 <td>
 <p>This property contains a URL that gives access to a Distribution of the Dataset. Depending on the type of data provision, there are different options for describing the URL.</p>
-<p>For data services, e.g., API, broker services, data feeds, etc., the URL <em class="rfc2119">MAY</em> be the end point of such service. However, if some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a a subscription process. For data which can be downloaded directly, the download URL should be copied from the optional property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a>. For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL <em class="rfc2119">MAY</em> be a link to an external service or a website which enables access to the data.</p>
+<p>For data services, e.g., API, broker services, data feeds, etc., the URL <em class="rfc2119">MAY</em> be the end point of such service. However, if some agreements between the data provider and the data user need to be established first, the access URL may link to web page, where the access is further arranged, e.g., initiating a subscription process. For data which can be downloaded directly, the download URL should be copied from the optional property <a href="#distribution-download-url"><code>dcat:downloadURL</code></a>. For other cases, where data cannot be directly accessed or downloaded via the platform, the access URL <em class="rfc2119">MAY</em> be a link to an external service or a website which enables access to the data.</p>
 <p>This way, this property is the primary key to link to a data service. There is also specific class <a href="#data-service"><code>dcat:DataService</code></a>, which can be linked via property <a href="#distribution-access-service"><code>dcat:accessService</code></a>. See <a class="no-sectionRef sec-ref" href="#properties-for-data-service">§&nbsp;<bdi class="secno">4.9 </bdi>Data Service</a> for a usage note about the class Data Service.</p>
 </td>
 <td>
@@ -6862,7 +6865,7 @@ With these property, a data user can see, if the metadata was harvested, and fro
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property <em class="rfc2119">MAY</em> be be used to link to a concrete standard license. A <a href="#vocab-licence">controlled vocabulary</a> is provided. </p>
+<p>This property <em class="rfc2119">MAY</em> be used to link to a concrete standard license. A <a href="#vocab-licence">controlled vocabulary</a> is provided. </p>
 </td>
 <td>
 <p>0..1</p>
@@ -7570,7 +7573,7 @@ With these property, a data user can see, if the metadata was harvested, and fro
 <div class="note" role="note" id="issue-container-generatedID-39"><div role="heading" class="note-title marker" id="h-note-39" aria-level="5"><span>Note</span></div><aside class="">
 <p>The following optional properties are not included in [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>]:</p>
 <ul>
-<li>+<a href="#quality-annotation-quality-annotation-ressource">quality annotation ressource</a></li>
+<li>+<a href="#quality-annotation-quality-annotation-ressource">quality annotation resource</a></li>
 <li>+<a href="#quality-annotation-quality-annotation-target">quality annotation target</a></li>
 </ul>
 </aside></div>
@@ -8473,7 +8476,7 @@ With these property, a data user can see, if the metadata was harvested, and fro
 
 <h3 id="x5-3-other-controlled-vocabularies"><bdi class="secno">5.3 </bdi>Other controlled vocabularies<a class="self-link" aria-label="§" href="#other-controlled-vocabularies"></a></h3>
 
-<p>In [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and sevaral licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p>
+<p>In [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>], chapter 5.3 and 5.4, several other controlled vocabularies are recommended for consideration, including EuroVoc, CERIF standard vocabularies, the Dewey Decimal Classification and several licence-related vocabularies. For the scope of mobilityDCAT-AP, these other vocabularies have been analysed. However, none of such vocabularies has been found suitable or specific to mobility data portals, so no explicit recommendation for the usage of further vocabularies is given. </p>
 <p>Regarding license-related vocabularies, [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>] is referencing to the vocabulary by the Open Digital Rights Language (ODRL) Initiative [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-odrl" title="ODRL Vocabulary &amp; Expression 2.2">VOCAB-ODRL</a></cite>], which seems rather complex for the purpose of mobilityDCAT-AP. Further, it refers to the Open Data Rights Statement (ODRS) Vocabulary [<cite><a class="bibref" data-link-type="biblio" href="#bib-odrs" title="Open Data Rights Statement Vocabulary">ODRS</a></cite>]. This vocabulary is introducing a central class called <code>odrs:RightsStatement</code>, which is semantically equal to class <a href="#rights-statement"><code>dct:RightsStatement</code></a> from [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>]; and reusing some properties from [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-v2.0.1" title="DCAT Application Profile for data portals in Europe. Version 2.0.1.">DCAT-AP-v2.0.1</a></cite>], such as <a href="#distribution-rights"><code>dct:rights</code></a>. Again, no explicit recommendation for the usage of such license-related vocabularies is given. </p>
 
 </section>
@@ -9073,7 +9076,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a cl
 <td>
 </td>
 <td>
-<p>+<a title="quality annotation ressource" href="#quality-annotation-quality-annotation-ressource"><code>oa:hasBody</code></a></p>
+<p>+<a title="quality annotation resource" href="#quality-annotation-quality-annotation-ressource"><code>oa:hasBody</code></a></p>
 <p>+<a title="quality annotation target" href="#quality-annotation-quality-annotation-target"><code>oa:hasTarget</code></a></p>
 </td>
 </tr>
@@ -9374,7 +9377,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a cl
 <td>
 </td>
 <td>
-<p>+<a title="quality annotation ressource" href="#quality-annotation-quality-annotation-ressource"><code>oa:hasBody</code></a></p>
+<p>+<a title="quality annotation resource" href="#quality-annotation-quality-annotation-ressource"><code>oa:hasBody</code></a></p>
 <p>+<a title="quality annotation target" href="#quality-annotation-quality-annotation-target"><code>oa:hasTarget</code></a></p>
 </td>
 </tr>
@@ -9409,7 +9412,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a cl
 
 <h2 id="b-mapping-to-coordinated-metadata-catalogue-cmc"><bdi class="secno">B. </bdi>Mapping to Coordinated Metadata Catalogue (CMC)<a class="self-link" aria-label="§" href="#Mapping-to-Coordinated-Metadata-Catalogue"></a></h2>
 
-<p>A previous European activity to harmonise metadata at National Access Point was the Coordinated Metadata Catalogue (CMC) [<cite><a class="bibref" data-link-type="biblio" href="#bib-eu-eip-cmc" title="Information about the Coordinated Metadata Catalogue (CMC) by EU EIP">EU-EIP-CMC</a></cite>].) This Catalogue describes a common minimum metadata set for NAP. The most recent version from 2019 contains definitions for 32 Metadata elements, including their description, types and obligation levels. These definitions are in a proprietary, human-readable format only.</p>
+<p>A previous European activity to harmonise metadata at National Access Point was the Coordinated Metadata Catalogue (CMC) [<cite><a class="bibref" data-link-type="biblio" href="#bib-eu-eip-cmc" title="Information about the Coordinated Metadata Catalogue (CMC) by EU EIP">EU-EIP-CMC</a></cite>]. This Catalogue describes a common minimum metadata set for NAP. The most recent version from 2019 contains definitions for 32 Metadata elements, including their description, types and obligation levels. These definitions are in a proprietary, human-readable format only.</p>
 <p>The following mapping table has been prepared to show how the Metadata elements from the original Coordinated Metadata Catalogue compare to the classes and properties of mobilityDCAT-AP.</p>
 <p>Please note that some CMC elements are mapped to 2 properties of mobilityDCAT-AP, due to semantic ambiguities of some CMC elements. When mapping such elements, the correct semantics need to be considered.</p>
 
@@ -10049,7 +10052,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a cl
 <p>To show how mobilityDCAT-AP can be deployed in practice, some example files have been produced. These denote how metadata descriptions can be populated using the mobilityDCAT-AP data vocabulary. </p>
 <p>The first example is related to a real-life NAP data offering from the Swedish NAP. See the corresponding human-readable <a href="https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits"> metadata description on the NAP portal</a>.</p>
 <p>The Swedish NAP also provides machine-readable representations of its metadata records in a proprietary DCAT-AP dialect, see the <a href="https://trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits.xml"> RDF/XML file for the example above</a>.</p>
-<p>This RDF/XML was converted into a metadata description according to the mobilityDCAT-AP v1.1.0 specification. It is fullfilling all mandatory and some recommended and optional elements from mobilityDCAT-AP v1.1.0. Within the RDF/XML example file, several comments are given regarding the original RDF/XML as follows:</p>
+<p>This RDF/XML was converted into a metadata description according to the mobilityDCAT-AP v1.1.0 specification. It is fulfilling all mandatory and some recommended and optional elements from mobilityDCAT-AP v1.1.0. Within the RDF/XML example file, several comments are given regarding the original RDF/XML as follows:</p>
 <ul>
 <li>OK = this element can remain from the original</li>
 <li>PROPOSAL = this element can remain from the original; however, a proposal is given following the usage notes of mobilityDCAT-AP</li>
@@ -10077,7 +10080,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [<cite><a cl
 
 <h2 id="e-mobilitydcat-ap-wikipage"><bdi class="secno">E. </bdi>mobilityDCAT-AP Wikipage<a class="self-link" aria-label="§" href="#wikipage"></a></h2>
 
-<p>As an addition to this specification, a "mobilityDCAT-AP Wiki" has been published. This serves as a practical orientation for users of mobilityDCAT-AP. In particular, it guides deployers (e.g., developers and operators of NAPs and data platforms) in the implementation phasis of mobilityDCAT-AP​.
+<p>As an addition to this specification, a "mobilityDCAT-AP Wiki" has been published. This serves as a practical orientation for users of mobilityDCAT-AP. In particular, it guides deployers (e.g., developers and operators of NAPs and data platforms) in the implementation phase of mobilityDCAT-AP​.
 This includes additional explanations and examples for specific vocabulary elements, recommendations for metadata handling and exposure on individual IT systems, as well as advice on metadata quality and validation processes.</p>
 <p>The Wiki page can be retrieved in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki"> Wiki section of the GitHub repository</a></p>
 </section>
@@ -10128,7 +10131,7 @@ This includes additional explanations and examples for specific vocabulary eleme
 
 <ul>
 <li>Property <a href="#catalogue-record-source-metadata"><code>dct:source</code></a> added under <a href="#optional-properties-for-catalogue-record">optional properties for Class Catalogue Record</a>. This property was used at DCAT-AP v2.0.1, but removed in mobilityDCAT-AP 1.0.1. However, it is used again for harvesting use cases, see the usage note for <a href="#catalogue-record-source-metadata"><code>dct:source</code></a>. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/57">#57.</a> </li>
-<li>Cardinality of property <a href="#mobility-data-standard-schema">"schema"</a> changed from from 0..1 to 0..n. Reason: allow for naming multiple schemas. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/56">#56</a></li>
+<li>Cardinality of property <a href="#mobility-data-standard-schema">"schema"</a> changed from 0..1 to 0..n. Reason: allow for naming multiple schemas. See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/56">#56</a></li>
 <li>Property <a href="#mobility-data-standard-standard-name"><code>dct:conformsTo</code></a> added under <a href="#optional-properties-for-mobility-data-standard">optional properties for Class Mobility Data Standard</a>. This property describes the name of the mobility data standard. This property is used when a custom instance of class <code>mobilitydcatap:MobilityDataStandard</code> is defined, see the usage note for this property.  See issue <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues/65">#65.</a> </li>
 <li>Errata and editorial improvements:</li>
 <ul>
