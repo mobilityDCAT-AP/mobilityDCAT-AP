@@ -1,7 +1,7 @@
 # mobilityDCAT-AP
 
 [![Specification](https://img.shields.io/badge/Specification-w3id.org/mobilitydcat--ap-yellow.svg)](https://w3id.org/mobilitydcat-ap)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15913668.svg)](https://doi.org/10.5281/zenodo.15913668)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24017657.svg)](https://doi.org/10.5281/zenodo.24017657)
 [![Prefix](https://img.shields.io/badge/Namespace-mobilitydcatap%3A-purple.svg)](https://prefix.cc/mobilitydcatap)
 [![Paper](https://img.shields.io/badge/arXiv-2506.03301-b31b1b.svg)](https://doi.org/10.48550/arXiv.2503.11535)
 
